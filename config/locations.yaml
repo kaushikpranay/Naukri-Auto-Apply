@@ -1,0 +1,43 @@
+# =============================================================================
+# Naukri Job Collector — Search Configuration
+# =============================================================================
+
+keywords:
+  - display: "GenAI Engineer"
+    slug: "genai-engineer"
+  - display: "Generative AI Engineer"
+    slug: "generative-ai-engineer"
+  - display: "AI Engineer"
+    slug: "ai-engineer"
+  - display: "LLM Engineer"
+    slug: "llm-engineer"
+  - display: "RAG Engineer"
+    slug: "rag-engineer"
+  - display: "Agentic AI Engineer"
+    slug: "agentic-ai-engineer"
+  - display: "Python Backend Engineer"
+    slug: "python-backend-engineer"
+  - display: "FastAPI Developer"
+    slug: "fastapi-developer"
+
+locations:
+  - display: "Remote"
+    slug: "remote"
+  - display: "Noida"
+    slug: "noida"
+  - display: "Gurgaon"
+    slug: "gurgaon"
+  - display: "Kolkata"
+    slug: "kolkata"
+  - display: "Bangalore"
+    slug: "bangalore"
+  - display: "Pune"
+    slug: "pune"
+  - display: "Hyderabad"
+    slug: "hyderabad"
+  - display: "Chennai"
+    slug: "chennai"
+  - display: "Mumbai"
+    slug: "mumbai"
+  - display: "Indore"
+    slug: "indore"

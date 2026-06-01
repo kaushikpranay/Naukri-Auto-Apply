@@ -1,0 +1,45 @@
+# =============================================================================
+# Naukri Job Collector — CSS Selectors
+# =============================================================================
+# All selectors used for scraping. Update these when Naukri changes its DOM.
+# Never hardcode selectors in application code.
+
+login:
+  # Selector that indicates the user is on the login page
+  detection: "form.login-form, div.login-layer, input[placeholder='Enter your active Email ID / Username']"
+  # Selector that indicates the user is logged in
+  logged_in: "div.nI-gNb-drawer, a[href*='mnjuser/profile'], div.user-info"
+
+search_results:
+  # Container holding all job cards
+  container: "div.list, div.styles_jlc__main__VdwtF"
+  # Individual job card element
+  job_card: "article.jobTuple, div.srp-jobtuple-wrapper, div.cust-job-tuple"
+  # Job title link within a card
+  title: "a.title, a.title-href, a[class*='title']"
+  # Company name within a card
+  company: "a.subTitle, a.comp-name, span.comp-name"
+  # Experience within a card
+  experience: "span.expwdth, li.experience span, span[class*='experience']"
+  # Location within a card
+  location: "span.locWdth, li.location span, span[class*='location']"
+  # Posted date within a card
+  posted_date: "span.job-post-day, span[class*='job-post-day'], span.date"
+  # No results indicator
+  no_results: "div.no-result, div.styles_no-result__a3Wxx"
+
+pagination:
+  # Next page button
+  next_button: "a.fright.fs14.btn-secondary.br2, a[class*='styles_btn-secondary'], a.btn-secondary"
+  # Current page indicator
+  current_page: "a.selected, a[class*='selected']"
+
+job_detail:
+  # Full job description on detail page
+  description: "div.job-desc, section.job-desc, div[class*='job-desc'], div.styles_JDC__dang-inner-html__h0K4t"
+  # Apply button / URL
+  apply_button: "button#apply-button, button.apply-button, a#apply-button, div.apply-btn button"
+  # Recruiter info section
+  recruiter_section: "div.rec-info, div[class*='rec-info'], section.rec-details"
+  recruiter_name: "div.rec-name, span.rec-name, div[class*='rec-name']"
+  recruiter_email: "div.rec-email, span.rec-email, a[href^='mailto:']"

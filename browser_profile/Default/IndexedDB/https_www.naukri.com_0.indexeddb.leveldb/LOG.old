@@ -1,0 +1,26 @@
+2026/06/01-19:45:26.744 343c Creating DB C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb since it was missing.
+2026/06/01-19:45:26.757 343c Reusing MANIFEST C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/01-19:48:02.243 2048 Level-0 table #5: started
+2026/06/01-19:48:02.479 2048 Level-0 table #5: 1501538 bytes OK
+2026/06/01-19:48:02.488 2048 Delete type=0 #3
+2026/06/01-19:50:48.048 2048 Level-0 table #7: started
+2026/06/01-19:50:48.099 2048 Level-0 table #7: 1491589 bytes OK
+2026/06/01-19:50:48.118 2048 Delete type=0 #4
+2026/06/01-19:51:09.396 ad4 Compacting 1@1 + 1@2 files
+2026/06/01-19:51:09.410 ad4 Generated table #8@1: 87 keys, 46324 bytes
+2026/06/01-19:51:09.411 ad4 Compacted 1@1 + 1@2 files => 46324 bytes
+2026/06/01-19:51:09.413 ad4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-19:51:09.414 ad4 Delete type=2 #5
+2026/06/01-19:51:09.414 ad4 Delete type=2 #7
+2026/06/01-19:53:27.539 2048 Level-0 table #10: started
+2026/06/01-19:53:27.557 2048 Level-0 table #10: 1486450 bytes OK
+2026/06/01-19:53:27.559 2048 Delete type=0 #6
+2026/06/01-19:53:48.527 ad4 Compacting 1@1 + 1@2 files
+2026/06/01-19:53:48.535 ad4 Generated table #11@1: 87 keys, 46056 bytes
+2026/06/01-19:53:48.536 ad4 Compacted 1@1 + 1@2 files => 46056 bytes
+2026/06/01-19:53:48.536 ad4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-19:53:48.537 ad4 Delete type=2 #8
+2026/06/01-19:53:48.537 ad4 Delete type=2 #10
+2026/06/01-19:55:56.639 2048 Level-0 table #13: started
+2026/06/01-19:55:56.654 2048 Level-0 table #13: 1448940 bytes OK
+2026/06/01-19:55:56.656 2048 Delete type=0 #9

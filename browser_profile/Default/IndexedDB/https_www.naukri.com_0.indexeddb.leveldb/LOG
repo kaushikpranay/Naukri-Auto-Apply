@@ -1,0 +1,84 @@
+2026/06/01-21:24:59.774 2554 Reusing MANIFEST C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/01-21:24:59.776 2554 Recovering log #12
+2026/06/01-21:24:59.783 2554 Reusing old log C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb/000012.log 
+2026/06/01-21:25:10.769 2554 Compacting 1@1 + 1@2 files
+2026/06/01-21:25:10.783 2554 Generated table #15@1: 87 keys, 44410 bytes
+2026/06/01-21:25:10.783 2554 Compacted 1@1 + 1@2 files => 44410 bytes
+2026/06/01-21:25:10.786 2554 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:25:10.786 2554 Delete type=2 #11
+2026/06/01-21:25:10.787 2554 Delete type=2 #13
+2026/06/01-21:26:51.017 44fc Level-0 table #17: started
+2026/06/01-21:26:51.049 44fc Level-0 table #17: 1481551 bytes OK
+2026/06/01-21:26:51.053 44fc Delete type=0 #12
+2026/06/01-21:27:17.565 44fc Compacting 1@1 + 1@2 files
+2026/06/01-21:27:17.582 44fc Generated table #18@1: 90 keys, 47409 bytes
+2026/06/01-21:27:17.582 44fc Compacted 1@1 + 1@2 files => 47409 bytes
+2026/06/01-21:27:17.584 44fc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:27:17.585 44fc Delete type=2 #15
+2026/06/01-21:27:17.585 44fc Delete type=2 #17
+2026/06/01-21:28:48.653 44fc Level-0 table #20: started
+2026/06/01-21:28:48.682 44fc Level-0 table #20: 1447687 bytes OK
+2026/06/01-21:28:48.684 44fc Delete type=0 #16
+2026/06/01-21:29:09.427 44fc Compacting 1@1 + 1@2 files
+2026/06/01-21:29:09.444 44fc Generated table #21@1: 90 keys, 47410 bytes
+2026/06/01-21:29:09.445 44fc Compacted 1@1 + 1@2 files => 47410 bytes
+2026/06/01-21:29:09.446 44fc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:29:09.447 44fc Delete type=2 #18
+2026/06/01-21:29:09.448 44fc Delete type=2 #20
+2026/06/01-21:30:59.405 44fc Level-0 table #23: started
+2026/06/01-21:30:59.440 44fc Level-0 table #23: 1436338 bytes OK
+2026/06/01-21:30:59.443 44fc Delete type=0 #19
+2026/06/01-21:31:20.594 44fc Compacting 1@1 + 1@2 files
+2026/06/01-21:31:20.610 44fc Generated table #24@1: 90 keys, 47519 bytes
+2026/06/01-21:31:20.610 44fc Compacted 1@1 + 1@2 files => 47519 bytes
+2026/06/01-21:31:20.616 44fc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:31:20.617 44fc Delete type=2 #21
+2026/06/01-21:31:20.617 44fc Delete type=2 #23
+2026/06/01-21:33:02.649 44fc Level-0 table #26: started
+2026/06/01-21:33:02.684 44fc Level-0 table #26: 1442256 bytes OK
+2026/06/01-21:33:02.689 44fc Delete type=0 #22
+2026/06/01-21:33:20.358 44fc Compacting 1@1 + 1@2 files
+2026/06/01-21:33:20.374 44fc Generated table #27@1: 90 keys, 47524 bytes
+2026/06/01-21:33:20.375 44fc Compacted 1@1 + 1@2 files => 47524 bytes
+2026/06/01-21:33:20.376 44fc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:33:20.377 44fc Delete type=2 #24
+2026/06/01-21:33:20.377 44fc Delete type=2 #26
+2026/06/01-21:35:03.368 44fc Level-0 table #29: started
+2026/06/01-21:35:03.403 44fc Level-0 table #29: 1447695 bytes OK
+2026/06/01-21:35:03.408 44fc Delete type=0 #25
+2026/06/01-21:35:21.531 44fc Compacting 1@1 + 1@2 files
+2026/06/01-21:35:21.544 44fc Generated table #30@1: 90 keys, 47524 bytes
+2026/06/01-21:35:21.545 44fc Compacted 1@1 + 1@2 files => 47524 bytes
+2026/06/01-21:35:21.546 44fc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:35:21.548 44fc Delete type=2 #27
+2026/06/01-21:35:21.548 44fc Delete type=2 #29
+2026/06/01-21:37:15.004 44fc Level-0 table #32: started
+2026/06/01-21:37:15.036 44fc Level-0 table #32: 1465166 bytes OK
+2026/06/01-21:37:15.039 44fc Delete type=0 #28
+2026/06/01-21:37:32.728 44fc Compacting 1@1 + 1@2 files
+2026/06/01-21:37:32.744 44fc Generated table #33@1: 90 keys, 51000 bytes
+2026/06/01-21:37:32.744 44fc Compacted 1@1 + 1@2 files => 51000 bytes
+2026/06/01-21:37:32.746 44fc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:37:32.748 44fc Delete type=2 #30
+2026/06/01-21:37:32.748 44fc Delete type=2 #32
+2026/06/01-21:39:17.808 44fc Level-0 table #35: started
+2026/06/01-21:39:17.840 44fc Level-0 table #35: 1447716 bytes OK
+2026/06/01-21:39:17.843 44fc Delete type=0 #31
+2026/06/01-21:39:36.488 2554 Compacting 1@1 + 1@2 files
+2026/06/01-21:39:36.505 2554 Generated table #36@1: 90 keys, 51000 bytes
+2026/06/01-21:39:36.505 2554 Compacted 1@1 + 1@2 files => 51000 bytes
+2026/06/01-21:39:36.507 2554 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:41:19.346 44fc Level-0 table #38: started
+2026/06/01-21:41:19.378 44fc Level-0 table #38: 1447673 bytes OK
+2026/06/01-21:41:19.384 44fc Delete type=2 #33
+2026/06/01-21:41:19.385 44fc Delete type=0 #34
+2026/06/01-21:41:19.385 44fc Delete type=2 #35
+2026/06/01-21:41:41.051 2554 Compacting 1@1 + 1@2 files
+2026/06/01-21:41:41.070 2554 Generated table #39@1: 90 keys, 51000 bytes
+2026/06/01-21:41:41.070 2554 Compacted 1@1 + 1@2 files => 51000 bytes
+2026/06/01-21:41:41.072 2554 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/01-21:41:41.073 2554 Delete type=2 #36
+2026/06/01-21:41:41.073 2554 Delete type=2 #38
+2026/06/01-21:43:29.383 44fc Level-0 table #41: started
+2026/06/01-21:43:29.413 44fc Level-0 table #41: 1444847 bytes OK
+2026/06/01-21:43:29.416 44fc Delete type=0 #37

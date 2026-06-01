@@ -1,0 +1,1195 @@
+2026-06-01 19:38:42 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\exports
+2026-06-01 19:38:42 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\logs
+2026-06-01 19:38:42 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\screenshots
+2026-06-01 19:38:42 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 19:38:42 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\database
+2026-06-01 19:38:42 | INFO     | main:run:76 | Config loaded: 8 keywords × 10 locations = 80 search combinations
+2026-06-01 19:38:42 | INFO     | session:launch:64 | Launching browser with profile: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 19:38:47 | ERROR    | main:main:170 | Fatal error: BrowserType.launch_persistent_context: Executable doesn't exist at C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+
+  File "C:\Extra-stuffs\Naukri-Automation\main.py", line 176, in <module>
+    main()
+    └ <function main at 0x000002133FDAE6C0>
+
+> File "C:\Extra-stuffs\Naukri-Automation\main.py", line 165, in main
+    asyncio.run(run())
+    │       │   └ <function run at 0x000002133FDAC720>
+    │       └ <function run at 0x00000213262909E0>
+    └ <module 'asyncio' from 'C:\\Users\\prana\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\prana\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           │      │   └ <coroutine object run at 0x000002133FB9E440>
+           │      └ <function Runner.run at 0x0000021326290E00>
+           └ <asyncio.runners.Runner object at 0x000002133FC6DFD0>
+  File "C:\Users\prana\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │                        └ <Task finished name='Task-1' coro=<run() done, defined at C:\Extra-stuffs\Naukri-Automation\main.py:64> exception=Error("Brow...
+           │    └ None
+           └ <asyncio.runners.Runner object at 0x000002133FC6DFD0>
+  File "C:\Users\prana\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<run() done, defined at C:\Extra-stuffs\Naukri-Automation\main.py:64> exception=Error("Brow...
+
+  File "C:\Extra-stuffs\Naukri-Automation\main.py", line 87, in run
+    async with BrowserSession(settings, selectors) as session:
+               │              │         └ SelectorsConfig(login=LoginSelectors(detection="form.login-form, div.login-layer, input[placeholder='Enter your active Email ...
+               │              └ AppSettings(browser=BrowserConfig(headless=False, profile_dir='browser_profile', slow_mo=500, default_timeout=30000, viewport...
+               └ <class 'app.browser.session.BrowserSession'>
+
+  File "C:\Extra-stuffs\Naukri-Automation\app\browser\session.py", line 173, in __aenter__
+    await self.launch()
+          │    └ <function BrowserSession.launch at 0x00000213276A14E0>
+          └ <app.browser.session.BrowserSession object at 0x000002132649A3C0>
+
+  File "C:\Extra-stuffs\Naukri-Automation\app\browser\session.py", line 67, in launch
+    self._context = await self._playwright.chromium.launch_persistent_context(
+    │    │                │    │           └ <property object at 0x0000021327145EE0>
+    │    │                │    └ <playwright._impl._playwright.Playwright object at 0x000002133FDC92B0>
+    │    │                └ <app.browser.session.BrowserSession object at 0x000002132649A3C0>
+    │    └ None
+    └ <app.browser.session.BrowserSession object at 0x000002132649A3C0>
+
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\async_api\_generated.py", line 16606, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+          │    │         └ <function BrowserType.launch_persistent_context at 0x0000021327128B40>
+          │    └ <BrowserType name=chromium executable_path=C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe>
+          └ <BrowserType name=chromium executable_path=C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe>
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+                   │    │        └ <function Channel.send_return_as_dict at 0x00000213266709E0>
+                   │    └ <playwright._impl._connection.Channel object at 0x000002133FD6A0D0>
+                   └ <BrowserType name=chromium executable_path=C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe>
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+                 │    │           └ <function Connection.wrap_api_call at 0x00000213266731C0>
+                 │    └ <playwright._impl._connection.Connection object at 0x000002132649A7B0>
+                 └ <playwright._impl._connection.Channel object at 0x000002133FD6A0D0>
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+          │                       └ {'frames': [{'file': 'C:\\Extra-stuffs\\Naukri-Automation\\app\\browser\\session.py', 'line': 67, 'column': 0, 'function': 'B...
+          └ <function rewrite_error at 0x000002132657E820>
+
+playwright._impl._errors.Error: BrowserType.launch_persistent_context: Executable doesn't exist at C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-06-01 19:41:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\exports
+2026-06-01 19:41:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\logs
+2026-06-01 19:41:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\screenshots
+2026-06-01 19:41:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 19:41:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\database
+2026-06-01 19:41:57 | INFO     | main:run:76 | Config loaded: 8 keywords × 10 locations = 80 search combinations
+2026-06-01 19:41:57 | INFO     | session:launch:64 | Launching browser with profile: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 19:41:59 | ERROR    | main:main:170 | Fatal error: BrowserType.launch_persistent_context: Executable doesn't exist at C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+
+  File "C:\Extra-stuffs\Naukri-Automation\main.py", line 176, in <module>
+    main()
+    └ <function main at 0x0000022D4480E560>
+
+> File "C:\Extra-stuffs\Naukri-Automation\main.py", line 165, in main
+    asyncio.run(run())
+    │       │   └ <function run at 0x0000022D4480C5C0>
+    │       └ <function run at 0x0000022D296909E0>
+    └ <module 'asyncio' from 'C:\\Users\\prana\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\prana\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           │      │   └ <coroutine object run at 0x0000022D446022C0>
+           │      └ <function Runner.run at 0x0000022D29690E00>
+           └ <asyncio.runners.Runner object at 0x0000022D446CDFD0>
+  File "C:\Users\prana\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │                        └ <Task finished name='Task-1' coro=<run() done, defined at C:\Extra-stuffs\Naukri-Automation\main.py:64> exception=Error("Brow...
+           │    └ None
+           └ <asyncio.runners.Runner object at 0x0000022D446CDFD0>
+  File "C:\Users\prana\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<run() done, defined at C:\Extra-stuffs\Naukri-Automation\main.py:64> exception=Error("Brow...
+
+  File "C:\Extra-stuffs\Naukri-Automation\main.py", line 87, in run
+    async with BrowserSession(settings, selectors) as session:
+               │              │         └ SelectorsConfig(login=LoginSelectors(detection="form.login-form, div.login-layer, input[placeholder='Enter your active Email ...
+               │              └ AppSettings(browser=BrowserConfig(headless=False, profile_dir='browser_profile', slow_mo=500, default_timeout=30000, viewport...
+               └ <class 'app.browser.session.BrowserSession'>
+
+  File "C:\Extra-stuffs\Naukri-Automation\app\browser\session.py", line 173, in __aenter__
+    await self.launch()
+          │    └ <function BrowserSession.launch at 0x0000022D2C0B12D0>
+          └ <app.browser.session.BrowserSession object at 0x0000022D2AE7A3C0>
+
+  File "C:\Extra-stuffs\Naukri-Automation\app\browser\session.py", line 67, in launch
+    self._context = await self._playwright.chromium.launch_persistent_context(
+    │    │                │    │           └ <property object at 0x0000022D2BB55D50>
+    │    │                │    └ <playwright._impl._playwright.Playwright object at 0x0000022D448292B0>
+    │    │                └ <app.browser.session.BrowserSession object at 0x0000022D2AE7A3C0>
+    │    └ None
+    └ <app.browser.session.BrowserSession object at 0x0000022D2AE7A3C0>
+
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\async_api\_generated.py", line 16606, in launch_persistent_context
+    await self._impl_obj.launch_persistent_context(
+          │    │         └ <function BrowserType.launch_persistent_context at 0x0000022D2BB38930>
+          │    └ <BrowserType name=chromium executable_path=C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe>
+          └ <BrowserType name=chromium executable_path=C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe>
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\_impl\_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+                   │    │        └ <function Channel.send_return_as_dict at 0x0000022D2B0807D0>
+                   │    └ <playwright._impl._connection.Channel object at 0x0000022D447CA210>
+                   └ <BrowserType name=chromium executable_path=C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe>
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+                 │    │           └ <function Connection.wrap_api_call at 0x0000022D2B082FB0>
+                 │    └ <playwright._impl._connection.Connection object at 0x0000022D2AE7A7B0>
+                 └ <playwright._impl._connection.Channel object at 0x0000022D447CA210>
+  File "C:\Extra-stuffs\Naukri-Automation\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+          │                       └ {'frames': [{'file': 'C:\\Extra-stuffs\\Naukri-Automation\\app\\browser\\session.py', 'line': 67, 'column': 0, 'function': 'B...
+          └ <function rewrite_error at 0x0000022D2AF7E610>
+
+playwright._impl._errors.Error: BrowserType.launch_persistent_context: Executable doesn't exist at C:\Users\prana\AppData\Local\ms-playwright\chromium-1223\chrome-win64\chrome.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+2026-06-01 19:45:08 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\exports
+2026-06-01 19:45:08 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\logs
+2026-06-01 19:45:08 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\screenshots
+2026-06-01 19:45:08 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 19:45:08 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\database
+2026-06-01 19:45:08 | INFO     | main:run:76 | Config loaded: 8 keywords × 10 locations = 80 search combinations
+2026-06-01 19:45:08 | INFO     | session:launch:64 | Launching browser with profile: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 19:45:22 | INFO     | session:launch:83 | Browser launched successfully
+2026-06-01 19:45:22 | INFO     | session:validate_session:100 | Navigating to Naukri to validate session...
+2026-06-01 19:45:30 | INFO     | session:validate_session:138 | Session is valid — user is logged in
+2026-06-01 19:45:30 | INFO     | main:run:104 | Starting job collection...
+2026-06-01 19:45:30 | INFO     | job_collector:collect_all:62 | [1/80] Searching: 'GenAI Engineer' in 'Remote'
+2026-06-01 19:45:30 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer
+2026-06-01 19:45:34 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:45:36 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:45:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:45:41 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:45:45 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:45:46 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:45:49 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:45:51 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:45:55 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:45:56 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Remote'
+2026-06-01 19:45:56 | INFO     | job_collector:collect_all:62 | [2/80] Searching: 'GenAI Engineer' in 'Bangalore'
+2026-06-01 19:45:56 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer
+2026-06-01 19:45:59 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:00 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:46:04 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:05 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:46:09 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:10 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:46:14 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:15 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:46:19 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:20 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Bangalore'
+2026-06-01 19:46:20 | INFO     | job_collector:collect_all:62 | [3/80] Searching: 'GenAI Engineer' in 'Hyderabad'
+2026-06-01 19:46:20 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer
+2026-06-01 19:46:24 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:25 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:46:29 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:30 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:46:34 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:35 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:46:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:40 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:46:45 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:46 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Hyderabad'
+2026-06-01 19:46:46 | INFO     | job_collector:collect_all:62 | [4/80] Searching: 'GenAI Engineer' in 'Pune'
+2026-06-01 19:46:46 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer
+2026-06-01 19:46:49 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:51 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:46:54 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:46:55 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:46:59 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:00 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:47:04 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:05 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:47:09 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:10 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Pune'
+2026-06-01 19:47:10 | INFO     | job_collector:collect_all:62 | [5/80] Searching: 'GenAI Engineer' in 'Noida'
+2026-06-01 19:47:10 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-noida?k=GenAI+Engineer
+2026-06-01 19:47:14 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:15 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-noida?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:47:19 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:20 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-noida?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:47:24 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:25 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-noida?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:47:29 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:30 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-noida?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:47:34 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:35 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Noida'
+2026-06-01 19:47:35 | INFO     | job_collector:collect_all:62 | [6/80] Searching: 'GenAI Engineer' in 'Gurgaon'
+2026-06-01 19:47:35 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-gurgaon?k=GenAI+Engineer
+2026-06-01 19:47:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:40 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-gurgaon?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:47:44 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:45 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-gurgaon?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:47:49 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:50 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-gurgaon?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:47:54 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:47:55 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-gurgaon?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:47:59 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:01 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Gurgaon'
+2026-06-01 19:48:01 | INFO     | job_collector:collect_all:62 | [7/80] Searching: 'GenAI Engineer' in 'Kolkata'
+2026-06-01 19:48:01 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-kolkata?k=GenAI+Engineer
+2026-06-01 19:48:05 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:07 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-kolkata?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:48:11 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:13 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-kolkata?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:48:17 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:19 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-kolkata?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:48:22 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:24 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-kolkata?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:48:28 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:30 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Kolkata'
+2026-06-01 19:48:30 | INFO     | job_collector:collect_all:62 | [8/80] Searching: 'GenAI Engineer' in 'Chennai'
+2026-06-01 19:48:30 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-chennai?k=GenAI+Engineer
+2026-06-01 19:48:33 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:35 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-chennai?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:48:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:41 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-chennai?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:48:45 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:46 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-chennai?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:48:50 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:52 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-chennai?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:48:56 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:48:57 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Chennai'
+2026-06-01 19:48:57 | INFO     | job_collector:collect_all:62 | [9/80] Searching: 'GenAI Engineer' in 'Mumbai'
+2026-06-01 19:48:57 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-mumbai?k=GenAI+Engineer
+2026-06-01 19:49:01 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:03 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-mumbai?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:49:07 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:09 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-mumbai?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:49:13 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:15 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-mumbai?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:49:18 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:20 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-mumbai?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:49:24 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:25 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Mumbai'
+2026-06-01 19:49:25 | INFO     | job_collector:collect_all:62 | [10/80] Searching: 'GenAI Engineer' in 'Indore'
+2026-06-01 19:49:25 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-indore?k=GenAI+Engineer
+2026-06-01 19:49:29 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:31 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-indore?k=GenAI+Engineer&pageNo=2
+2026-06-01 19:49:35 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:37 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-indore?k=GenAI+Engineer&pageNo=3
+2026-06-01 19:49:40 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:42 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-indore?k=GenAI+Engineer&pageNo=4
+2026-06-01 19:49:46 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:47 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-indore?k=GenAI+Engineer&pageNo=5
+2026-06-01 19:49:51 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:52 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'GenAI Engineer' in 'Indore'
+2026-06-01 19:49:52 | INFO     | job_collector:collect_all:62 | [11/80] Searching: 'Generative AI Engineer' in 'Remote'
+2026-06-01 19:49:52 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-remote?k=Generative+AI+Engineer
+2026-06-01 19:49:56 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:49:58 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-remote?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:50:02 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:03 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-remote?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:50:07 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:09 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-remote?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:50:13 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:14 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-remote?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:50:18 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:20 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Remote'
+2026-06-01 19:50:20 | INFO     | job_collector:collect_all:62 | [12/80] Searching: 'Generative AI Engineer' in 'Bangalore'
+2026-06-01 19:50:20 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-bangalore?k=Generative+AI+Engineer
+2026-06-01 19:50:24 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:25 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-bangalore?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:50:29 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:31 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-bangalore?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:50:35 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:36 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-bangalore?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:50:40 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:41 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-bangalore?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:50:45 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:46 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Bangalore'
+2026-06-01 19:50:46 | INFO     | job_collector:collect_all:62 | [13/80] Searching: 'Generative AI Engineer' in 'Hyderabad'
+2026-06-01 19:50:46 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-hyderabad?k=Generative+AI+Engineer
+2026-06-01 19:50:50 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:52 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-hyderabad?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:50:56 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:50:57 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-hyderabad?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:51:01 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:03 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-hyderabad?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:51:07 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:08 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-hyderabad?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:51:12 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:14 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Hyderabad'
+2026-06-01 19:51:14 | INFO     | job_collector:collect_all:62 | [14/80] Searching: 'Generative AI Engineer' in 'Pune'
+2026-06-01 19:51:14 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-pune?k=Generative+AI+Engineer
+2026-06-01 19:51:18 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:19 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-pune?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:51:23 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:24 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-pune?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:51:28 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:29 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-pune?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:51:33 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:35 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-pune?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:51:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:40 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Pune'
+2026-06-01 19:51:40 | INFO     | job_collector:collect_all:62 | [15/80] Searching: 'Generative AI Engineer' in 'Noida'
+2026-06-01 19:51:40 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-noida?k=Generative+AI+Engineer
+2026-06-01 19:51:44 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:46 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-noida?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:51:50 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 19 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:51 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-noida?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:51:55 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:51:57 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-noida?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:52:00 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:02 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-noida?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:52:06 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:07 | INFO     | job_collector:collect_all:75 |   → Found 99 jobs for 'Generative AI Engineer' in 'Noida'
+2026-06-01 19:52:07 | INFO     | job_collector:collect_all:62 | [16/80] Searching: 'Generative AI Engineer' in 'Gurgaon'
+2026-06-01 19:52:07 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-gurgaon?k=Generative+AI+Engineer
+2026-06-01 19:52:11 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:13 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-gurgaon?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:52:17 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:18 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-gurgaon?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:52:22 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:24 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-gurgaon?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:52:28 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:29 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-gurgaon?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:52:33 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:35 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Gurgaon'
+2026-06-01 19:52:35 | INFO     | job_collector:collect_all:62 | [17/80] Searching: 'Generative AI Engineer' in 'Kolkata'
+2026-06-01 19:52:35 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-kolkata?k=Generative+AI+Engineer
+2026-06-01 19:52:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:40 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-kolkata?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:52:44 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:45 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-kolkata?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:52:49 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:51 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-kolkata?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:52:55 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:52:56 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-kolkata?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:53:00 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:01 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Kolkata'
+2026-06-01 19:53:01 | INFO     | job_collector:collect_all:62 | [18/80] Searching: 'Generative AI Engineer' in 'Chennai'
+2026-06-01 19:53:01 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-chennai?k=Generative+AI+Engineer
+2026-06-01 19:53:05 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:06 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-chennai?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:53:10 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:11 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-chennai?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:53:15 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:16 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-chennai?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:53:20 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:21 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-chennai?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:53:25 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:26 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Chennai'
+2026-06-01 19:53:26 | INFO     | job_collector:collect_all:62 | [19/80] Searching: 'Generative AI Engineer' in 'Mumbai'
+2026-06-01 19:53:26 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-mumbai?k=Generative+AI+Engineer
+2026-06-01 19:53:30 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:31 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-mumbai?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:53:35 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:36 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-mumbai?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:53:40 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:41 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-mumbai?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:53:45 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:46 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-mumbai?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:53:50 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:51 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Mumbai'
+2026-06-01 19:53:51 | INFO     | job_collector:collect_all:62 | [20/80] Searching: 'Generative AI Engineer' in 'Indore'
+2026-06-01 19:53:51 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/generative-ai-engineer-jobs-in-indore?k=Generative+AI+Engineer
+2026-06-01 19:53:55 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:53:57 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/generative-ai-engineer-jobs-in-indore?k=Generative+AI+Engineer&pageNo=2
+2026-06-01 19:54:01 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:02 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/generative-ai-engineer-jobs-in-indore?k=Generative+AI+Engineer&pageNo=3
+2026-06-01 19:54:06 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:07 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/generative-ai-engineer-jobs-in-indore?k=Generative+AI+Engineer&pageNo=4
+2026-06-01 19:54:11 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:12 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/generative-ai-engineer-jobs-in-indore?k=Generative+AI+Engineer&pageNo=5
+2026-06-01 19:54:16 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:18 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'Generative AI Engineer' in 'Indore'
+2026-06-01 19:54:18 | INFO     | job_collector:collect_all:62 | [21/80] Searching: 'AI Engineer' in 'Remote'
+2026-06-01 19:54:18 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/ai-engineer-jobs-in-remote?k=AI+Engineer
+2026-06-01 19:54:22 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:23 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/ai-engineer-jobs-in-remote?k=AI+Engineer&pageNo=2
+2026-06-01 19:54:27 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:28 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/ai-engineer-jobs-in-remote?k=AI+Engineer&pageNo=3
+2026-06-01 19:54:32 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:33 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/ai-engineer-jobs-in-remote?k=AI+Engineer&pageNo=4
+2026-06-01 19:54:37 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:38 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/ai-engineer-jobs-in-remote?k=AI+Engineer&pageNo=5
+2026-06-01 19:54:42 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:43 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'AI Engineer' in 'Remote'
+2026-06-01 19:54:43 | INFO     | job_collector:collect_all:62 | [22/80] Searching: 'AI Engineer' in 'Bangalore'
+2026-06-01 19:54:43 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/ai-engineer-jobs-in-bangalore?k=AI+Engineer
+2026-06-01 19:54:47 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:48 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/ai-engineer-jobs-in-bangalore?k=AI+Engineer&pageNo=2
+2026-06-01 19:54:52 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:53 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/ai-engineer-jobs-in-bangalore?k=AI+Engineer&pageNo=3
+2026-06-01 19:54:57 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:54:58 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/ai-engineer-jobs-in-bangalore?k=AI+Engineer&pageNo=4
+2026-06-01 19:55:02 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:03 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/ai-engineer-jobs-in-bangalore?k=AI+Engineer&pageNo=5
+2026-06-01 19:55:07 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:08 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'AI Engineer' in 'Bangalore'
+2026-06-01 19:55:08 | INFO     | job_collector:collect_all:62 | [23/80] Searching: 'AI Engineer' in 'Hyderabad'
+2026-06-01 19:55:08 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/ai-engineer-jobs-in-hyderabad?k=AI+Engineer
+2026-06-01 19:55:13 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:14 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/ai-engineer-jobs-in-hyderabad?k=AI+Engineer&pageNo=2
+2026-06-01 19:55:18 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:19 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/ai-engineer-jobs-in-hyderabad?k=AI+Engineer&pageNo=3
+2026-06-01 19:55:23 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:25 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/ai-engineer-jobs-in-hyderabad?k=AI+Engineer&pageNo=4
+2026-06-01 19:55:29 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:30 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/ai-engineer-jobs-in-hyderabad?k=AI+Engineer&pageNo=5
+2026-06-01 19:55:34 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:35 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'AI Engineer' in 'Hyderabad'
+2026-06-01 19:55:35 | INFO     | job_collector:collect_all:62 | [24/80] Searching: 'AI Engineer' in 'Pune'
+2026-06-01 19:55:35 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/ai-engineer-jobs-in-pune?k=AI+Engineer
+2026-06-01 19:55:39 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:40 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/ai-engineer-jobs-in-pune?k=AI+Engineer&pageNo=2
+2026-06-01 19:55:44 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:45 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/ai-engineer-jobs-in-pune?k=AI+Engineer&pageNo=3
+2026-06-01 19:55:49 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:50 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/ai-engineer-jobs-in-pune?k=AI+Engineer&pageNo=4
+2026-06-01 19:55:54 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:55:55 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/ai-engineer-jobs-in-pune?k=AI+Engineer&pageNo=5
+2026-06-01 19:55:59 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:56:00 | INFO     | job_collector:collect_all:75 |   → Found 100 jobs for 'AI Engineer' in 'Pune'
+2026-06-01 19:56:00 | INFO     | job_collector:collect_all:62 | [25/80] Searching: 'AI Engineer' in 'Noida'
+2026-06-01 19:56:00 | DEBUG    | job_collector:_collect_for_search:111 |   Page 1: https://www.naukri.com/ai-engineer-jobs-in-noida?k=AI+Engineer
+2026-06-01 19:56:04 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:56:05 | DEBUG    | job_collector:_collect_for_search:111 |   Page 2: https://www.naukri.com/ai-engineer-jobs-in-noida?k=AI+Engineer&pageNo=2
+2026-06-01 19:56:09 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:56:10 | DEBUG    | job_collector:_collect_for_search:111 |   Page 3: https://www.naukri.com/ai-engineer-jobs-in-noida?k=AI+Engineer&pageNo=3
+2026-06-01 19:56:14 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:56:16 | DEBUG    | job_collector:_collect_for_search:111 |   Page 4: https://www.naukri.com/ai-engineer-jobs-in-noida?k=AI+Engineer&pageNo=4
+2026-06-01 19:56:20 | DEBUG    | job_collector:_extract_job_cards:192 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 19:56:21 | DEBUG    | job_collector:_collect_for_search:111 |   Page 5: https://www.naukri.com/ai-engineer-jobs-in-noida?k=AI+Engineer&pageNo=5
+2026-06-01 19:56:23 | WARNING  | session:close:154 | Error closing browser context: BrowserContext.close: Target page, context or browser has been closed
+2026-06-01 19:56:23 | DEBUG    | session:close:160 | Playwright stopped
+2026-06-01 19:56:23 | INFO     | main:main:168 | Interrupted by user
+2026-06-01 21:24:56 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\exports
+2026-06-01 21:24:56 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\logs
+2026-06-01 21:24:56 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\screenshots
+2026-06-01 21:24:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 21:24:57 | DEBUG    | config_loader:ensure_directories:93 | Ensured directory: C:\Extra-stuffs\Naukri-Automation\database
+2026-06-01 21:24:57 | INFO     | main:run:76 | Config loaded: 8 keywords × 10 locations = 80 search combinations
+2026-06-01 21:24:57 | INFO     | session:launch:64 | Launching browser with profile: C:\Extra-stuffs\Naukri-Automation\browser_profile
+2026-06-01 21:24:58 | INFO     | session:launch:83 | Browser launched successfully
+2026-06-01 21:24:58 | INFO     | session:validate_session:100 | Navigating to Naukri to validate session...
+2026-06-01 21:25:03 | INFO     | session:validate_session:138 | Session is valid — user is logged in
+2026-06-01 21:25:03 | INFO     | main:run:104 | Initializing database...
+2026-06-01 21:25:03 | DEBUG    | repository:_init_schema:74 | Database schema verified
+2026-06-01 21:25:03 | INFO     | repository:__init__:67 | Database initialized: C:\Extra-stuffs\Naukri-Automation\database\jobs.db
+2026-06-01 21:25:03 | INFO     | main:run:109 | Starting progressive job collection...
+2026-06-01 21:25:03 | INFO     | main:run:124 | [1/80] Searching: 'GenAI Engineer' in 'Remote'
+2026-06-01 21:25:03 | DEBUG    | job_collector:collect_for_search:58 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer
+2026-06-01 21:25:07 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:25:10 | DEBUG    | job_collector:collect_for_search:58 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=2
+2026-06-01 21:25:14 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:25:16 | DEBUG    | job_collector:collect_for_search:58 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=3
+2026-06-01 21:25:20 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:25:23 | DEBUG    | job_collector:collect_for_search:58 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=4
+2026-06-01 21:25:27 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:25:30 | DEBUG    | job_collector:collect_for_search:58 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-remote?k=GenAI+Engineer&pageNo=5
+2026-06-01 21:25:34 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:25:36 | INFO     | main:run:132 |   → Found 100 jobs. Enriching details...
+2026-06-01 21:25:36 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [1/100]: Agentic AI and GenAI Engineer
+2026-06-01 21:25:39 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [2/100]: MLOps Engineer
+2026-06-01 21:25:42 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [3/100]: Lead AI Engineer GCP & GenAI
+2026-06-01 21:25:45 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [4/100]: Principal GenAI Systems Engineer
+2026-06-01 21:25:48 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [5/100]: Senior Full-Stack Machine Learning Engineer (GenAI / Agentic
+2026-06-01 21:25:51 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [6/100]: Java + GenAI - Engineer -Digital Banking
+2026-06-01 21:25:54 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [7/100]: Data Cloud Engineer
+2026-06-01 21:25:57 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [8/100]: ServiceNow HRSD Developer
+2026-06-01 21:26:00 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [9/100]: Senior AI Engineering Lead
+2026-06-01 21:26:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [10/100]: AEM Sites Professional
+2026-06-01 21:26:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [11/100]: Modern Engineering Market lead
+2026-06-01 21:26:08 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [12/100]: Guidewire Solution Architect
+2026-06-01 21:26:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [13/100]: CLM Consultant
+2026-06-01 21:26:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [14/100]: Senior SDET
+2026-06-01 21:26:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [15/100]: Senior Data Engineer
+2026-06-01 21:26:20 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [16/100]: Forward Deployed Engineer / AI Solutions Architect u2014 RAG
+2026-06-01 21:26:23 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [17/100]: GenAI Full Stack Developer- (PL854)
+2026-06-01 21:26:26 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [18/100]: Infrastructure Automation Engineer
+2026-06-01 21:26:29 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [19/100]: AI Architect Enterprise Strategy
+2026-06-01 21:26:32 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [20/100]: Expert AI Engineer
+2026-06-01 21:26:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [21/100]: Senior Knowledge Management Specialist
+2026-06-01 21:26:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [22/100]: Soundscaper Professional
+2026-06-01 21:26:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [23/100]: Knowledge Management Lead
+2026-06-01 21:26:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [24/100]: Senior Knowledge Management Specialist
+2026-06-01 21:26:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [25/100]: AI Engineer
+2026-06-01 21:26:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [26/100]: Visionscaper Professional
+2026-06-01 21:26:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [27/100]: Knowledge Management Lead
+2026-06-01 21:26:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [28/100]: Creative Technologist
+2026-06-01 21:26:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [29/100]: Insurance Product Solution Architect
+2026-06-01 21:27:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [30/100]: Senior Manager, Software Engineering
+2026-06-01 21:27:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [31/100]: Digital Solution Architect
+2026-06-01 21:27:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [32/100]: Data Scientist -NLP, Deep Learning, GenAI
+2026-06-01 21:27:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [33/100]: Senior Pre Sales Professional
+2026-06-01 21:27:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [34/100]: Software Developer (Full Stack) - Remote, India
+2026-06-01 21:27:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [35/100]: Trainee - Product Marketing - Remote,India
+2026-06-01 21:27:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [36/100]: Visual Mixmaster professionals
+2026-06-01 21:27:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [37/100]: Narrative Storytelling Lead
+2026-06-01 21:27:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [38/100]: Visual Storytelling Lead
+2026-06-01 21:27:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [39/100]: Team Lead/Senior Specialist - AI
+2026-06-01 21:27:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [40/100]: Data Scientist(india)
+2026-06-01 21:27:34 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [41/100]: Customer Success & Support Specialist
+2026-06-01 21:27:37 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [42/100]: ML / LLM Engineer
+2026-06-01 21:27:40 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [43/100]: Forward Deployment Engineer
+2026-06-01 21:27:43 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [44/100]: Product Owner - AI Projects
+2026-06-01 21:27:46 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [45/100]: AI Architect
+2026-06-01 21:27:49 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [46/100]: Senior Agentic Engineer
+2026-06-01 21:27:52 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [47/100]: Senior ServiceNow Engineer
+2026-06-01 21:27:55 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [48/100]: AI Scout - Sr Software Dev Engr
+2026-06-01 21:27:58 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [49/100]: AWS Solution Architect - Agentic AI (Life Sciences, US Domai
+2026-06-01 21:28:01 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [50/100]: Senior Staff Engineer, Python & LLM
+2026-06-01 21:28:04 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [51/100]: AI Technical Mentor - Independent Contractor
+2026-06-01 21:28:06 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [52/100]: Senior ServiceNow ITSM Architect with AI & ITAM exposure
+2026-06-01 21:28:09 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [53/100]: Principal Account Strategist
+2026-06-01 21:28:12 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [54/100]: Senior Data Engineer
+2026-06-01 21:28:15 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [55/100]: Engineering Manager
+2026-06-01 21:28:18 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [56/100]: Senior Software Development Manager
+2026-06-01 21:28:21 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [57/100]: Expert Artificial Intelligence/Machine Learning Engineer
+2026-06-01 21:28:24 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [58/100]: Senior Manager, Software Engineering
+2026-06-01 21:28:27 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [59/100]: Engagement Manager
+2026-06-01 21:28:30 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [60/100]: Senior Full Stack Engineer Java & AI
+2026-06-01 21:28:33 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [61/100]: Senior AIOps Engineer I
+2026-06-01 21:28:36 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [62/100]: Cloud and Observability Engineer
+2026-06-01 21:28:39 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [63/100]: GSI Client Director - India
+2026-06-01 21:28:42 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [64/100]: Solutions Engineer
+2026-06-01 21:28:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [65/100]: AI/ML Lead
+2026-06-01 21:28:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [66/100]: AI Engineer REG
+2026-06-01 21:28:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [67/100]: AI Builder
+2026-06-01 21:28:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [68/100]: ServiceNow Engineer
+2026-06-01 21:28:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [69/100]: Data Science Lead
+2026-06-01 21:28:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [70/100]: SAP Automation Pilot
+2026-06-01 21:29:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [71/100]: Data & AI Architect
+2026-06-01 21:29:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [72/100]: AI Architect
+2026-06-01 21:29:08 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [73/100]: Principal Architect - AI
+2026-06-01 21:29:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [74/100]: Data Science- Technical Lead / Associate Technical Lead
+2026-06-01 21:29:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [75/100]: Senior Performance Software Engineer (Python and Go)
+2026-06-01 21:29:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [76/100]: Sr AI Engineer
+2026-06-01 21:29:20 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [77/100]: SAP Automation Pilot Engineer
+2026-06-01 21:29:23 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [78/100]: Gen AI Architect
+2026-06-01 21:29:26 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [79/100]: Gen AI (architect) - Data Modeling
+2026-06-01 21:29:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [80/100]: Account Executive
+2026-06-01 21:29:32 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [81/100]: Cloud and Observability Engineer
+2026-06-01 21:29:34 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [82/100]: Senior AI/ML Engineer
+2026-06-01 21:29:37 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [83/100]: Architecture Senior Advisor AI Principal
+2026-06-01 21:29:40 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [84/100]: ServiceNow Architect
+2026-06-01 21:29:43 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [85/100]: Architecture Senior Advisor AI Principal
+2026-06-01 21:29:46 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [86/100]: Product Owner - AI products & projects
+2026-06-01 21:29:49 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [87/100]: Lead AI Engineer Gemini & Vertex AI
+2026-06-01 21:29:52 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [88/100]: Head of Engineering - Agentic AI Healthcare SaaS | Zenara He
+2026-06-01 21:29:55 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [89/100]: Senior Manager, Software Engineering
+2026-06-01 21:29:58 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [90/100]: Data & AI Professional
+2026-06-01 21:30:01 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [91/100]: Snowflake Data Warehouse
+2026-06-01 21:30:04 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [92/100]: Large Language Models LLMs Professional
+2026-06-01 21:30:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [93/100]: Senior Member Technical Staff
+2026-06-01 21:30:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [94/100]: Sr AI Platform Engineer
+2026-06-01 21:30:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [95/100]: Partner Growth Manager - Hyperscalers & Strategic Alliances
+2026-06-01 21:30:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [96/100]: Senior Software Engineer
+2026-06-01 21:30:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [97/100]: Senior Specialist - Product
+2026-06-01 21:30:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [98/100]: Ruby on Rails Backend Developer
+2026-06-01 21:30:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [99/100]: Sr Design Technologist
+2026-06-01 21:30:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [100/100]: Sales Solutions Engineer - India
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Agentic AI and GenAI Engineer at Sparix Global
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: MLOps Engineer at Pairsoft Technologies
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Lead AI Engineer GCP & GenAI at Opplane
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Principal GenAI Systems Engineer at Infraveo Technologies
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Senior Full-Stack Machine Learning Engineer (GenAI at Poppulo
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Java + GenAI - Engineer -Digital Banking at Sparix Global
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Data Cloud Engineer at Bluesoft Software Solution
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: ServiceNow HRSD Developer at Marktine
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Senior AI Engineering Lead at The Plum Tree Group
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: AEM Sites Professional at Dentsu Webchutney
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Modern Engineering Market lead at Exavalu
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Guidewire Solution Architect at Exavalu
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: CLM Consultant at TESTQ
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Senior SDET at 4labs Technologies
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Senior Data Engineer at Comfrt
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Forward Deployed Engineer / AI Solutions Architect at Embrace Software
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Full Stack Developer- (PL854) at Paralucent
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Infrastructure Automation Engineer at Replicon
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: AI Architect Enterprise Strategy at Kognitiv
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Expert AI Engineer at Marktine
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Senior Knowledge Management Specialist at Replicon
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Soundscaper Professional at Proximity Works
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Knowledge Management Lead at Replicon
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Senior Knowledge Management Specialist at Deltek
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: AI Engineer at Keywords Studios
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Visionscaper Professional at Proximity Works
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Knowledge Management Lead at Deltek
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Creative Technologist at Proximity Works
+2026-06-01 21:30:31 | DEBUG    | repository:insert_job:108 | Inserted: Insurance Product Solution Architect at Exavalu
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Manager, Software Engineering at Deltek
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Digital Solution Architect at Exavalu
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Data Scientist -NLP, Deep Learning, GenAI at Enable Data Incorporated
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Pre Sales Professional at Exavalu
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Software Developer (Full Stack) - Remote, India at Leewayhertz Technologies
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Trainee - Product Marketing - Remote,India at Leewayhertz Technologies
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Visual Mixmaster professionals at Proximity Works
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Narrative Storytelling Lead at Proximity Works
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Visual Storytelling Lead at Proximity Works
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Team Lead/Senior Specialist - AI at BuzzBoard, Inc.
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Data Scientist(india) at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Customer Success & Support Specialist at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: ML / LLM Engineer at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Forward Deployment Engineer at Typeface
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Product Owner - AI Projects at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI Architect at Cambium Learning Group
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Agentic Engineer at Ciklum
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior ServiceNow Engineer at XO Health Inc
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI Scout - Sr Software Dev Engr at CSG
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AWS Solution Architect - Agentic AI (Life Sciences at Tomorrow World Technology
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Staff Engineer, Python & LLM at Nagarro
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI Technical Mentor - Independent Contractor at Udacity
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior ServiceNow ITSM Architect with AI & ITAM ex at Mullers Solutions
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Principal Account Strategist at Netomi
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Data Engineer at Flexm
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Engineering Manager at Salesintel
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Software Development Manager at CSG
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Expert Artificial Intelligence/Machine Learning En at Ciklum
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Manager, Software Engineering at Replicon
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Engagement Manager at Typeface
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Full Stack Engineer Java & AI at Everbridge, Inc.
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior AIOps Engineer I at Porch
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Cloud and Observability Engineer at Coralogix
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: GSI Client Director - India at Sonarsource
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Solutions Engineer at Devrev
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI/ML Lead at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI Engineer REG at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI Builder at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: ServiceNow Engineer at XO Health Inc
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Data Science Lead at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: SAP Automation Pilot at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Data & AI Architect at Pairsoft Technologies
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: AI Architect at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Principal Architect - AI at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Data Science- Technical Lead / Associate Technical at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Performance Software Engineer (Python and G at Infraveo Technologies
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Sr AI Engineer at The Plum Tree Group
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: SAP Automation Pilot Engineer at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Gen AI Architect at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Gen AI (architect) - Data Modeling at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Account Executive at NICE
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Cloud and Observability Engineer at Coralogix
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior AI/ML Engineer at Egen
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Architecture Senior Advisor AI Principal at Highbrow Technology Inc
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: ServiceNow Architect at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Architecture Senior Advisor AI Principal at Highbrow Technology Inc
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Product Owner - AI products & projects at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Lead AI Engineer Gemini & Vertex AI at Opplane
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Head of Engineering - Agentic AI Healthcare SaaS | at 2070 Health
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Manager, Software Engineering at Oportun
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Data & AI Professional at Logic Planet
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Snowflake Data Warehouse at Logic Planet
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Large Language Models LLMs Professional at Logic Planet
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Member Technical Staff at Airo Digital Labs
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Sr AI Platform Engineer at Sparix Global
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Partner Growth Manager - Hyperscalers & Strategic  at Codvo
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Software Engineer at Forage Ai
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Senior Specialist - Product at Udhyam Learning Foundation
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Ruby on Rails Backend Developer at Niyati
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Sr Design Technologist at Freelancer
+2026-06-01 21:30:32 | DEBUG    | repository:insert_job:108 | Inserted: Sales Solutions Engineer - India at Sonarsource
+2026-06-01 21:30:32 | INFO     | repository:insert_many:133 | Batch insert complete: 100 inserted, 0 duplicates
+2026-06-01 21:30:32 | INFO     | main:run:124 | [2/80] Searching: 'GenAI Engineer' in 'Bangalore'
+2026-06-01 21:30:32 | DEBUG    | job_collector:collect_for_search:58 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer
+2026-06-01 21:30:36 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:30:39 | DEBUG    | job_collector:collect_for_search:58 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=2
+2026-06-01 21:30:43 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:30:45 | DEBUG    | job_collector:collect_for_search:58 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=3
+2026-06-01 21:30:49 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:30:52 | DEBUG    | job_collector:collect_for_search:58 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=4
+2026-06-01 21:30:56 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:30:58 | DEBUG    | job_collector:collect_for_search:58 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-bangalore?k=GenAI+Engineer&pageNo=5
+2026-06-01 21:31:02 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:31:04 | INFO     | main:run:132 |   → Found 100 jobs. Enriching details...
+2026-06-01 21:31:04 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [1/100]: MLOps Engineer
+2026-06-01 21:31:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [2/100]: AI Engineering Architect
+2026-06-01 21:31:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [3/100]: Python Engineer exposure To AI/GenAI
+2026-06-01 21:31:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [4/100]: Engineer
+2026-06-01 21:31:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [5/100]: GenAI Engineer _ DXC Luxoft
+2026-06-01 21:31:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [6/100]: GenAI Engineer
+2026-06-01 21:31:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [7/100]: GenAI & LLM Engineer
+2026-06-01 21:31:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [8/100]: GenAI Engineer
+2026-06-01 21:31:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [9/100]: GenAI Engineer
+2026-06-01 21:31:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [10/100]: GenAI Engineer
+2026-06-01 21:31:34 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [11/100]: GenAI Engineer
+2026-06-01 21:31:37 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [12/100]: GenAI Engineer
+2026-06-01 21:31:40 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [13/100]: GenAI Engineer
+2026-06-01 21:31:43 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [14/100]: GenAI Engineer
+2026-06-01 21:31:46 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [15/100]: GenAI Engineer
+2026-06-01 21:31:49 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [16/100]: GenAI Engineer
+2026-06-01 21:31:52 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [17/100]: GenAI Engineer
+2026-06-01 21:31:55 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [18/100]: Genai Engineer
+2026-06-01 21:31:58 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [19/100]: GenAI Engineer
+2026-06-01 21:32:01 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [20/100]: GenAI Engineer
+2026-06-01 21:32:04 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [21/100]: Junior GenAI Engineer
+2026-06-01 21:32:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [22/100]: MLOps Engineer
+2026-06-01 21:32:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [23/100]: Principal GenAI Engineer / Graph & Semantic Systems
+2026-06-01 21:32:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [24/100]: Demo Engineer
+2026-06-01 21:32:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [25/100]: AIOps Engineer
+2026-06-01 21:32:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [26/100]: GenAI Engineer Agentic AI & RAG
+2026-06-01 21:32:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [27/100]: AI ML GenAI engineer-Chennai/BLR/Gurgaon- 5yrs+
+2026-06-01 21:32:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [28/100]: Senior GenAI Engineer - Advanced RAG
+2026-06-01 21:32:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [29/100]: Principal GenAI Engineer
+2026-06-01 21:32:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [30/100]: GenAI Engineer / GenAI Senior Lead Engineer
+2026-06-01 21:32:34 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [31/100]: Sprinklr Prompt Engineer
+2026-06-01 21:32:37 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [32/100]: Principal Analyst GenAI Engineer
+2026-06-01 21:32:40 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [33/100]: Lead GenAI Engineer (Immediate Joiner)
+2026-06-01 21:32:43 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [34/100]: Python AI Engineer (GenAI / Agentic AI)
+2026-06-01 21:32:46 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [35/100]: MLOps Engineer
+2026-06-01 21:32:49 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [36/100]: GTM Engineer
+2026-06-01 21:32:52 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [37/100]: Senior GenAI Engineer
+2026-06-01 21:32:55 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [38/100]: Senior GenAI Engineer (TypeScript & AWS Bedrock)
+2026-06-01 21:32:58 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [39/100]: RAI Engineer
+2026-06-01 21:33:01 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [40/100]: LLMOps Engineer
+2026-06-01 21:33:04 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [41/100]: LLM Model Developer
+2026-06-01 21:33:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [42/100]: LLM Model Developer
+2026-06-01 21:33:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [43/100]: LLM Model Developer
+2026-06-01 21:33:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [44/100]: LLM Model Developer
+2026-06-01 21:33:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [45/100]: LLM Model Developer
+2026-06-01 21:33:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [46/100]: LLM Model Developer
+2026-06-01 21:33:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [47/100]: LLM Model Developer
+2026-06-01 21:33:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [48/100]: LLM Model Developer
+2026-06-01 21:33:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [49/100]: LLM Model Developer
+2026-06-01 21:33:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [50/100]: LLM Model Developer
+2026-06-01 21:33:34 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [51/100]: LLM Model Developer
+2026-06-01 21:33:37 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [52/100]: LLM Model Developer
+2026-06-01 21:33:40 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [53/100]: LLM Model Developer
+2026-06-01 21:33:43 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [54/100]: LLM Model Developer
+2026-06-01 21:33:46 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [55/100]: LLM Model Developer
+2026-06-01 21:33:49 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [56/100]: GenAI Developer
+2026-06-01 21:33:52 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [57/100]: GenAI / Agentic AI Engineer
+2026-06-01 21:33:55 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [58/100]: GenAI Developer
+2026-06-01 21:33:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [59/100]: GenAI Developer
+2026-06-01 21:34:01 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [60/100]: GenAI Developer
+2026-06-01 21:34:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [61/100]: GenAI Developer
+2026-06-01 21:34:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [62/100]: Opening For LLM Developer | GenAI | Pan India
+2026-06-01 21:34:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [63/100]: GenAI or AI or ML Engineer
+2026-06-01 21:34:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [64/100]: Azure Data Engineer - GenAI
+2026-06-01 21:34:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [65/100]: LLM Model Developer
+2026-06-01 21:34:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [66/100]: LLM Model Developer
+2026-06-01 21:34:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [67/100]: LLM Model Developer
+2026-06-01 21:34:26 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [68/100]: LLM Model Developer
+2026-06-01 21:34:29 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [69/100]: LLM Model Developer
+2026-06-01 21:34:32 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [70/100]: LLM Model Developer
+2026-06-01 21:34:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [71/100]: LLM Model Developer
+2026-06-01 21:34:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [72/100]: AI Engineer (Python + GenAI)
+2026-06-01 21:34:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [73/100]: GenAI Developer
+2026-06-01 21:34:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [74/100]: Consultant
+2026-06-01 21:34:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [75/100]: Principal Machine Learning Engineer-AgenticAI, GenAi/LLM
+2026-06-01 21:34:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [76/100]: Saviynt Developer
+2026-06-01 21:34:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [77/100]: LLMOps Engineer GenAI Platforms
+2026-06-01 21:34:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [78/100]: Data Engineer - AI, GenAI
+2026-06-01 21:34:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [79/100]: GenAI Devops Engineer
+2026-06-01 21:35:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [80/100]: Tech Lead / Senior Engineer - Python + AWS & GenAI
+2026-06-01 21:35:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [81/100]: Staff Engineer GenAI Developer
+2026-06-01 21:35:08 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [82/100]: Principal Engineer - AI / ML ( Speech, Voice & GenAI Archite
+2026-06-01 21:35:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [83/100]: Lead - GenAI Developer
+2026-06-01 21:35:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [84/100]: Senior Machine Learning Engineer GenAI / Agentic Systems
+2026-06-01 21:35:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [85/100]: GenAI Developer
+2026-06-01 21:35:20 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [86/100]: Senior Software Engineer- Python, LLM, GenAI
+2026-06-01 21:35:23 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [87/100]: LLM Model Developer
+2026-06-01 21:35:26 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [88/100]: GenAI Developer
+2026-06-01 21:35:29 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [89/100]: Software Engineer - GenAI/Agentic AI
+2026-06-01 21:35:32 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [90/100]: Software Engineer - GenAI/Agentic AI
+2026-06-01 21:35:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [91/100]: Senior Software Engineer-Agentic AI/GenAI-Guidewire Bengalur
+2026-06-01 21:35:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [92/100]: Home Connect GenAI Use Case developer
+2026-06-01 21:35:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [93/100]: Lead Data Engineer (GenAI / LLM Applications)
+2026-06-01 21:35:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [94/100]: Sr. SW Engineer (Full-stack Developer, Java, Angular / React
+2026-06-01 21:35:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [95/100]: GenAI & LLM Developer
+2026-06-01 21:35:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [96/100]: AI Engineer - Full Stack (GenAI & Insurance) - 4+ Years - PA
+2026-06-01 21:35:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [97/100]: Growth Consultant
+2026-06-01 21:35:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [98/100]: GenAI Staff Engineer
+2026-06-01 21:35:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [99/100]: Software Engineering Senior Manager- Data Engineering and Ge
+2026-06-01 21:36:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [100/100]: Principal Engineer - Java, GenAI
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: MLOps Engineer at Infosys
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: AI Engineering Architect at Deloitte US-India Offices
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: Python Engineer exposure To AI/GenAI at Tata Consultancy Services
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: Engineer at Synopsys
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer _ DXC Luxoft at Luxoft
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Trisys It Services
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI & LLM Engineer at Covalensedigital
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at DXC Technology
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at GLOINNT
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Saarthee
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Qloron Technology
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Mobile Programming
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Coderound Ai
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Ascendion Engineering
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at KPI Partners
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Indegene
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Ielektron Technologies Engineering
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: Genai Engineer at Leading Client
+2026-06-01 21:36:05 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at British Telecom
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Persistent
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Junior GenAI Engineer at Coderound Ai
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: MLOps Engineer at Guidewire Software
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Principal GenAI Engineer / Graph & Semantic System at Amrutha Business Solutions
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Demo Engineer at Cresta
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: AIOps Engineer at ti Steps
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer Agentic AI & RAG at 360DigiTMG
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: AI ML GenAI engineer-Chennai/BLR/Gurgaon- 5yrs+ at anagha@wizecareers.com
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Senior GenAI Engineer - Advanced RAG at Millennium Management
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Principal GenAI Engineer at Vbeyond Corporation
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer / GenAI Senior Lead Engineer at Vayavya Labs
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Sprinklr Prompt Engineer at V Group Inc.
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Principal Analyst GenAI Engineer at Factspan Inc.
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Lead GenAI Engineer (Immediate Joiner) at Straive
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Python AI Engineer (GenAI / Agentic AI) at Orcapod Consulting Services
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: MLOps Engineer at Infosys
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GTM Engineer at Intellectyx Data Science India
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Senior GenAI Engineer at Tredence
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Senior GenAI Engineer (TypeScript & AWS Bedrock) at Bounteous x Accolite
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: RAI Engineer at Ecolab Global Services
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLMOps Engineer at Tekskills India
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Infosys
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI / Agentic AI Engineer at Infosys
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Infosys
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Infosys
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Capgemini
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Capgemini
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Opening For LLM Developer | GenAI | Pan India at It is confidential
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI or AI or ML Engineer at Muthoot FinCorp (MFL)
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Azure Data Engineer - GenAI at Supreme Consulting
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: AI Engineer (Python + GenAI) at Etalent Services Bareilly
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Lericon Informatics
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Consultant at Evalueserve
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Principal Machine Learning Engineer-AgenticAI, Gen at Red Hat
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Saviynt Developer at Consulting Firm
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLMOps Engineer GenAI Platforms at Top B2B MNC in Management Consulting Domain
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Data Engineer - AI, GenAI at Naukri Expert Assist
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Devops Engineer at PwC Service Delivery Center
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Tech Lead / Senior Engineer - Python + AWS & GenAI at Bounteous x Accolite
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Staff Engineer GenAI Developer at Visa Consolidated Support Services India
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Principal Engineer - AI / ML ( Speech, Voice & Gen at Stryker
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Lead - GenAI Developer at Sapiens
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Senior Machine Learning Engineer GenAI / Agentic S at Poppulo
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Tata Consultancy Services
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Senior Software Engineer- Python, LLM, GenAI at Talworx
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: LLM Model Developer at Accenture
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Infosys
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Software Engineer - GenAI/Agentic AI at Flexera Software
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Software Engineer - GenAI/Agentic AI at Revenera
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Senior Software Engineer-Agentic AI/GenAI-Guidewir at Guidewire Software
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Home Connect GenAI Use Case developer at BSH Household
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Lead Data Engineer (GenAI / LLM Applications) at Clario
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Sr. SW Engineer (Full-stack Developer, Java, Angul at Visa Consolidated Support Services India
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI & LLM Developer at Synechron
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: AI Engineer - Full Stack (GenAI & Insurance) - 4+  at Crescendo Global
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Growth Consultant at Genai People
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Staff Engineer at Vayavya Labs
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Software Engineering Senior Manager- Data Engineer at Wells Fargo
+2026-06-01 21:36:06 | DEBUG    | repository:insert_job:108 | Inserted: Principal Engineer - Java, GenAI at Wells Fargo
+2026-06-01 21:36:06 | INFO     | repository:insert_many:133 | Batch insert complete: 100 inserted, 0 duplicates
+2026-06-01 21:36:06 | INFO     | main:run:124 | [3/80] Searching: 'GenAI Engineer' in 'Hyderabad'
+2026-06-01 21:36:06 | DEBUG    | job_collector:collect_for_search:58 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer
+2026-06-01 21:36:10 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:36:13 | DEBUG    | job_collector:collect_for_search:58 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=2
+2026-06-01 21:36:17 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:36:19 | DEBUG    | job_collector:collect_for_search:58 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=3
+2026-06-01 21:36:23 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:36:26 | DEBUG    | job_collector:collect_for_search:58 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=4
+2026-06-01 21:36:29 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:36:32 | DEBUG    | job_collector:collect_for_search:58 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-hyderabad?k=GenAI+Engineer&pageNo=5
+2026-06-01 21:36:36 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:36:38 | INFO     | main:run:132 |   → Found 100 jobs. Enriching details...
+2026-06-01 21:36:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [1/100]: AI Engineering Architect
+2026-06-01 21:36:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [2/100]: Python Engineer exposure To AI/GenAI
+2026-06-01 21:36:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [3/100]: GenAI Engineer Agentic AI & RAG
+2026-06-01 21:36:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [4/100]: Senior GenAI Engineer
+2026-06-01 21:36:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [5/100]: S&C GN AI - Insurance GenAI Engineer - Analyst
+2026-06-01 21:36:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [6/100]: GenAI Engineer
+2026-06-01 21:36:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [7/100]: Principal Analyst GenAI Engineer
+2026-06-01 21:36:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [8/100]: Lead GenAI Engineer (Immediate Joiner)
+2026-06-01 21:37:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [9/100]: GenAI Engineer Agentic ERP Platform
+2026-06-01 21:37:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [10/100]: Senior Developer GenAi Engineer
+2026-06-01 21:37:08 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [11/100]: GenAI Engineer
+2026-06-01 21:37:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [12/100]: Quality Engineer - GenAI and Data Platforms
+2026-06-01 21:37:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [13/100]: GenAI Engineer - Graph Database
+2026-06-01 21:37:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [14/100]: GenAI Engineer - Immediate hiring with Innominds Software - 
+2026-06-01 21:37:20 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [15/100]: Genai Solution Engineer
+2026-06-01 21:37:23 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [16/100]: GenAI Developer
+2026-06-01 21:37:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [17/100]: GenAI Developer
+2026-06-01 21:37:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [18/100]: GenAI developer
+2026-06-01 21:37:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [19/100]: GenAI Engineer
+2026-06-01 21:37:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [20/100]: GenAI Engineer
+2026-06-01 21:37:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [21/100]: Staff Software Engineer - GenAI _ Hyderabad @ Fulltime role 
+2026-06-01 21:37:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [22/100]: Associate MLOps / GenAI Ops Engineer
+2026-06-01 21:37:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [23/100]: AI/ML Engineer (Azure experience, GenAI, python, Github, cop
+2026-06-01 21:37:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [24/100]: Jr Data Engineer with GenAI
+2026-06-01 21:37:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [25/100]: Senior AI/ML Engineer GenAI, LLM & RAG
+2026-06-01 21:37:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [26/100]: ML Engineer GenAI & AI Solutions
+2026-06-01 21:37:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [27/100]: Senior Python Engineer (FastAPI & GenAI)
+2026-06-01 21:37:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [28/100]: GenAI Developer
+2026-06-01 21:38:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [29/100]: Sr Data Engineer with GenAI
+2026-06-01 21:38:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [30/100]: Product Engineer – GenAI-Powered Apps
+2026-06-01 21:38:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [31/100]: Principal Engineer - .NET Core / GenAI
+2026-06-01 21:38:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [32/100]: Azure Data Engineer - GenAI
+2026-06-01 21:38:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [33/100]: Software Developer
+2026-06-01 21:38:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [34/100]: Staff Engineer C/C++, GenAI, LLM, LVM, CPU/GPU/NPU
+2026-06-01 21:38:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [35/100]: Copilot Developer
+2026-06-01 21:38:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [36/100]: GenAI Developer
+2026-06-01 21:38:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [37/100]: Saviynt Developer
+2026-06-01 21:38:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [38/100]: Senior Software Engineer: Data Engineering, Gcp, Genai
+2026-06-01 21:38:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [39/100]: Lead Specialty Software Engineer Java, Angular & GenAI
+2026-06-01 21:38:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [40/100]: GenAI Devops Engineer
+2026-06-01 21:38:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [41/100]: Enterprise AI Architect
+2026-06-01 21:38:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [42/100]: Software Engineer III, AI/ML GenAI, Google Cloud
+2026-06-01 21:38:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [43/100]: ML & GenAI Platform Engineer
+2026-06-01 21:38:47 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [44/100]: Software Engineer III, AI/ML GenAI, Google Cloud
+2026-06-01 21:38:50 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [45/100]: SRE DevOps Engineer
+2026-06-01 21:38:53 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [46/100]: Servicenow Developer
+2026-06-01 21:38:56 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [47/100]: RPA UiPath Developer
+2026-06-01 21:38:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [48/100]: Specialist Software Engineer - Full Stack AI / ML/GenAI
+2026-06-01 21:39:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [49/100]: Sap Consultant
+2026-06-01 21:39:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [50/100]: SailPoint Consultant
+2026-06-01 21:39:08 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [51/100]: TOP MNC Looking For Salesforce LWC /Workday/Camunda/Mendix -
+2026-06-01 21:39:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [52/100]: TOP MNC Looking For SAP-ABAP/RAP/BTP/CAP/BASIS/GTS/IBP/RAR/S
+2026-06-01 21:39:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [53/100]: Data Scientist GenAI
+2026-06-01 21:39:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [54/100]: .NET Full Stack
+2026-06-01 21:39:20 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [55/100]: AI / ML Engineer
+2026-06-01 21:39:23 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [56/100]: AI Engineer
+2026-06-01 21:39:26 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [57/100]: Sr Gen AI Developer
+2026-06-01 21:39:29 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [58/100]: GCP AI Engineer
+2026-06-01 21:39:32 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [59/100]: Gen AI Engineer
+2026-06-01 21:39:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [60/100]: Senior Software Engineer
+2026-06-01 21:39:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [61/100]: Data Platform Engineer
+2026-06-01 21:39:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [62/100]: Custom Software Engineer
+2026-06-01 21:39:45 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [63/100]: Custom Software Engineer
+2026-06-01 21:39:48 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [64/100]: Custom Software Engineer
+2026-06-01 21:39:51 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [65/100]: Custom Software Engineer
+2026-06-01 21:39:54 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [66/100]: Custom Software Engineer
+2026-06-01 21:39:57 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [67/100]: Custom Software Engineer
+2026-06-01 21:39:59 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [68/100]: Custom Software Engineer
+2026-06-01 21:40:02 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [69/100]: Custom Software Engineer
+2026-06-01 21:40:05 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [70/100]: Custom Software Engineer
+2026-06-01 21:40:08 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [71/100]: Custom Software Engineer
+2026-06-01 21:40:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [72/100]: Custom Software Engineer
+2026-06-01 21:40:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [73/100]: Data Platform Engineer
+2026-06-01 21:40:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [74/100]: Custom Software Engineer
+2026-06-01 21:40:21 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [75/100]: Custom Software Engineer
+2026-06-01 21:40:24 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [76/100]: Custom Software Engineer
+2026-06-01 21:40:27 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [77/100]: AI Architect
+2026-06-01 21:40:30 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [78/100]: Custom Software Engineer
+2026-06-01 21:40:33 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [79/100]: Custom Software Engineer
+2026-06-01 21:40:36 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [80/100]: Lead Infrastructure Engineer
+2026-06-01 21:40:39 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [81/100]: Custom Software Engineer
+2026-06-01 21:40:42 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [82/100]: Custom Software Engineer
+2026-06-01 21:40:45 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [83/100]: Custom Software Engineer
+2026-06-01 21:40:48 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [84/100]: AI / ML Engineer
+2026-06-01 21:40:51 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [85/100]: Data Platform Engineer
+2026-06-01 21:40:54 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [86/100]: Custom Software Engineer
+2026-06-01 21:40:57 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [87/100]: Custom Software Engineer
+2026-06-01 21:41:00 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [88/100]: Security Architect
+2026-06-01 21:41:03 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [89/100]: Security Architect
+2026-06-01 21:41:06 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [90/100]: Security Architect
+2026-06-01 21:41:09 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [91/100]: Security Architect
+2026-06-01 21:41:12 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [92/100]: Security Architect
+2026-06-01 21:41:15 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [93/100]: Security Architect
+2026-06-01 21:41:18 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [94/100]: Security Architect
+2026-06-01 21:41:21 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [95/100]: Security Architect
+2026-06-01 21:41:24 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [96/100]: Custom Software Engineer
+2026-06-01 21:41:27 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [97/100]: Custom Software Engineer
+2026-06-01 21:41:30 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [98/100]: Custom Software Engineer
+2026-06-01 21:41:33 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [99/100]: Custom Software Engineer
+2026-06-01 21:41:36 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [100/100]: Custom Software Engineer
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-ai-engineering-architect-deloitte-consulting
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-python-engineer-exposure-to-ai-genai-tata-co
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer Agentic AI & RAG at 360DigiTMG
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Senior GenAI Engineer at Feuji Inc
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: S&C GN AI - Insurance GenAI Engineer - Analyst at Accenture
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Aubrant Digital
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-principal-analyst-genai-engineer-factspan-in
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-lead-genai-engineer-immediate-joiner-straive
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer Agentic ERP Platform at Rimini Street
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Senior Developer GenAi Engineer at Multivac India
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-genai-engineer-kpi-partners-hyderabad-pune-b
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Quality Engineer - GenAI and Data Platforms at Optum
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer - Graph Database at Data Economy
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer - Immediate hiring with Innominds S at Innominds Software
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Genai Solution Engineer at Leading Client
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Infosys
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-genai-developer-infosys-hyderabad-chennai-be
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI developer at Infosys
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Engineer at Vipany Global Solutions
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-genai-engineer-persistent-hyderabad-bengalur
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Staff Software Engineer - GenAI _ Hyderabad @ Full at Techouts
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Associate MLOps / GenAI Ops Engineer at 360DigiTMG
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: AI/ML Engineer (Azure experience, GenAI, python, G at Tech Mahindra
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Jr Data Engineer with GenAI at CGI
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Senior AI/ML Engineer GenAI, LLM & RAG at A Client of Anlage
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: ML Engineer GenAI & AI Solutions at Codevian Technologies
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Senior Python Engineer (FastAPI & GenAI) at Crate Infotech
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: GenAI Developer at Service based company
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Sr Data Engineer with GenAI at CGI
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Product Engineer – GenAI-Powered Apps at Vybetech Innovations
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Principal Engineer - .NET Core / GenAI at Wells Fargo
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-azure-data-engineer-genai-supreme-consulting
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Software Developer at Apidel Technologies
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Staff Engineer C/C++, GenAI, LLM, LVM, CPU/GPU/NPU at Vitestork Consulting
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Copilot Developer at Leading Client
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-genai-developer-lericon-informatics-pvt-ltd-
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-saviynt-developer-anlage-infotech-hyderabad-
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Senior Software Engineer: Data Engineering, Gcp, G at Wells Fargo
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Lead Specialty Software Engineer Java, Angular & G at Wells Fargo
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:110 | Duplicate skipped: https://www.naukri.com/job-listings-genai-devops-engineer-pwc-service-delivery-c
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Enterprise AI Architect at Cognizant
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Software Engineer III, AI/ML GenAI, Google Cloud at Google
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: ML & GenAI Platform Engineer at Nisum
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: Software Engineer III, AI/ML GenAI, Google Cloud at Google
+2026-06-01 21:41:39 | DEBUG    | repository:insert_job:108 | Inserted: SRE DevOps Engineer at Capgemini
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Servicenow Developer at Cloudxtreme
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: RPA UiPath Developer at Capgemini
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Specialist Software Engineer - Full Stack AI / ML/ at Amgen Inc
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Sap Consultant at Cloudxtreme
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: SailPoint Consultant at MNC
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: TOP MNC Looking For Salesforce LWC /Workday/Camund at Connexial Digital Technology
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: TOP MNC Looking For SAP-ABAP/RAP/BTP/CAP/BASIS/GTS at Connexial Digital Technology
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Data Scientist GenAI at Affine Analytics
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: .NET Full Stack at Cloudxtreme
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: AI / ML Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: AI Engineer at Insight Global Technologies
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Sr Gen AI Developer at Persistent
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: GCP AI Engineer at HCLTech
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Gen AI Engineer at Experian
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Senior Software Engineer at Wells Fargo
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Data Platform Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Data Platform Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: AI Architect at Grid Dynamics
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Lead Infrastructure Engineer at Wells Fargo
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: AI / ML Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Data Platform Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Security Architect at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | DEBUG    | repository:insert_job:108 | Inserted: Custom Software Engineer at Accenture
+2026-06-01 21:41:40 | INFO     | repository:insert_many:133 | Batch insert complete: 89 inserted, 11 duplicates
+2026-06-01 21:41:40 | INFO     | main:run:124 | [4/80] Searching: 'GenAI Engineer' in 'Pune'
+2026-06-01 21:41:40 | DEBUG    | job_collector:collect_for_search:58 |   Page 1: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer
+2026-06-01 21:41:44 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:41:46 | DEBUG    | job_collector:collect_for_search:58 |   Page 2: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=2
+2026-06-01 21:41:50 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:41:52 | DEBUG    | job_collector:collect_for_search:58 |   Page 3: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=3
+2026-06-01 21:41:56 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:41:58 | DEBUG    | job_collector:collect_for_search:58 |   Page 4: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=4
+2026-06-01 21:42:02 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:42:05 | DEBUG    | job_collector:collect_for_search:58 |   Page 5: https://www.naukri.com/genai-engineer-jobs-in-pune?k=GenAI+Engineer&pageNo=5
+2026-06-01 21:42:08 | DEBUG    | job_collector:_extract_job_cards:139 |   Found 20 cards with selector: div.srp-jobtuple-wrapper
+2026-06-01 21:42:11 | INFO     | main:run:132 |   → Found 100 jobs. Enriching details...
+2026-06-01 21:42:11 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [1/100]: MLOps Engineer
+2026-06-01 21:42:14 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [2/100]: Python Engineer exposure To AI/GenAI
+2026-06-01 21:42:17 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [3/100]: GenAI Engineer
+2026-06-01 21:42:20 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [4/100]: MLOps + LLMOps Engineer
+2026-06-01 21:42:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [5/100]: Senior GenAI Engineer
+2026-06-01 21:42:26 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [6/100]: GenAi Engineer
+2026-06-01 21:42:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [7/100]: Cisco PCCE & Finesse Workflow Engineer
+2026-06-01 21:42:32 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [8/100]: MLSecOps Engineer
+2026-06-01 21:42:35 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [9/100]: GenAI Engineer
+2026-06-01 21:42:38 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [10/100]: MLOps Engineer
+2026-06-01 21:42:41 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [11/100]: GenAI Engineer
+2026-06-01 21:42:44 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [12/100]: Principal Analyst GenAI Engineer
+2026-06-01 21:42:46 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [13/100]: Senior AI Architect /GenAI Engineer (GenAI & Agentic Systems
+2026-06-01 21:42:49 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [14/100]: Lead GenAI Engineer (Immediate Joiner)
+2026-06-01 21:42:52 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [15/100]: GenAI Engineer
+2026-06-01 21:42:55 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [16/100]: GenAI Engineer - Application Developer
+2026-06-01 21:42:58 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [17/100]: GenAI Engineer - Graph Database
+2026-06-01 21:43:01 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [18/100]: Lead AI Engineer – GenAI Engineering
+2026-06-01 21:43:04 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [19/100]: Dynamics 365 Engineer
+2026-06-01 21:43:07 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [20/100]: GenAI Engineer
+2026-06-01 21:43:10 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [21/100]: AIOPS Engineer
+2026-06-01 21:43:13 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [22/100]: AI Engineer GenAI Solutions
+2026-06-01 21:43:16 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [23/100]: GenAI Developer
+2026-06-01 21:43:19 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [24/100]: AI Engineer (GenAI & GCP Specialist)
+2026-06-01 21:43:22 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [25/100]: AI/ML Engineer (Azure experience, GenAI, python, Github, cop
+2026-06-01 21:43:25 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [26/100]: Senior Consultant AI Engineer (GenAI / Rapid Prototyping)
+2026-06-01 21:43:28 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [27/100]: . Senior Consultant - AI Engineer (GenAI / Rapid Prototyping
+2026-06-01 21:43:31 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [28/100]: Gen AI+Python Engineer (Meghna POC)
+2026-06-01 21:43:34 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [29/100]: AI Engineer - Full Stack (GenAI & Insurance) - 4+ Years - PA
+2026-06-01 21:43:37 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [30/100]: GenAI / AI Engineer
+2026-06-01 21:43:40 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [31/100]: GenAI Developer
+2026-06-01 21:43:43 | DEBUG    | job_collector:enrich_with_details:282 |   Enriching [32/100]: GenAI Developer
+2026-06-01 21:43:45 | DEBUG    | repository:close:163 | Database connection closed
+2026-06-01 21:43:47 | WARNING  | session:close:154 | Error closing browser context: BrowserContext.close: Connection closed while reading from the driver
+2026-06-01 21:43:47 | DEBUG    | session:close:160 | Playwright stopped
+2026-06-01 21:43:47 | INFO     | main:main:186 | Interrupted by user
