@@ -1,6 +1,6 @@
-2026/06/01-21:24:58.557 3a24 Reusing MANIFEST C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/06/01-21:24:58.566 3a24 Recovering log #3
-2026/06/01-21:24:58.571 3a24 Reusing old log C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\Local Storage\leveldb/000003.log 
-2026/06/01-21:26:59.496 152c Level-0 table #5: started
-2026/06/01-21:26:59.508 152c Level-0 table #5: 11924 bytes OK
-2026/06/01-21:26:59.512 152c Delete type=0 #3
+2026/06/02-22:42:43.801 39bc Reusing MANIFEST C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/06/02-22:42:43.883 39bc Recovering log #7
+2026/06/02-22:42:43.939 39bc Reusing old log C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\Local Storage\leveldb/000007.log 
+2026/06/02-22:50:44.420 2e18 Level-0 table #11: started
+2026/06/02-22:50:44.436 2e18 Level-0 table #11: 11415 bytes OK
+2026/06/02-22:50:44.440 2e18 Delete type=0 #7

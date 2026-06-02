@@ -89,6 +89,8 @@ class TestAppSettings:
         settings = AppSettings()
         assert settings.browser.headless is False
         assert settings.paths.database == "database/jobs.db"
+        assert settings.evaluation.max_ai_evaluations_per_run == 5
+        assert settings.evaluation.max_retry_count == 3
 
     def test_custom_values(self) -> None:
         """AppSettings should accept custom values."""

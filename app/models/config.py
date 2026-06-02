@@ -55,6 +55,13 @@ class LoggingConfig(BaseModel):
     )
 
 
+class EvaluationConfig(BaseModel):
+    """Evaluation queue limits."""
+
+    max_ai_evaluations_per_run: int = Field(default=5)
+    max_retry_count: int = Field(default=3)
+
+
 class AppSettings(BaseModel):
     """Root settings model loaded from settings.yaml."""
 
@@ -62,6 +69,7 @@ class AppSettings(BaseModel):
     paths: PathsConfig = Field(default_factory=PathsConfig)
     naukri: NaukriConfig = Field(default_factory=NaukriConfig)
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
+    evaluation: EvaluationConfig = Field(default_factory=EvaluationConfig)
 
 
 # ---------------------------------------------------------------------------

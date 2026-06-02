@@ -2,3 +2,8 @@
 .env
 __pycache__/
 *.pyc
+logs/
+database/
+exports/
+.env
+browser_profile/

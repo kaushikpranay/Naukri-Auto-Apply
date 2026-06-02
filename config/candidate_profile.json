@@ -1,0 +1,16 @@
+{
+  "experience_years": 1.5,
+  "current_role": "AI Engineer",
+  "skills": [
+    "Python",
+    "FastAPI",
+    "AWS",
+    "Bedrock",
+    "LangGraph",
+    "LangChain",
+    "RAG",
+    "PostgreSQL",
+    "DynamoDB",
+    "LLM Applications"
+  ]
+}

@@ -70,7 +70,10 @@ def resolve_path(relative_path: str) -> Path:
     Returns:
         Absolute Path object.
     """
-    return PROJECT_ROOT / relative_path
+    candidate = Path(relative_path)
+    if candidate.is_absolute():
+        return candidate
+    return PROJECT_ROOT / candidate
 
 
 def ensure_directories(settings: AppSettings) -> None:

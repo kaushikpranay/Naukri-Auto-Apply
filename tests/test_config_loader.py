@@ -51,7 +51,7 @@ class TestConfigLoader:
         """resolve_path should return absolute path relative to project root."""
         result = resolve_path("database/jobs.db")
         assert result.is_absolute()
-        assert str(result).endswith("jobs.db")
+        assert str(result).endswith("database\\jobs.db") or str(result).endswith("database/jobs.db")
 
     def test_project_root_exists(self) -> None:
         """PROJECT_ROOT should point to an existing directory."""

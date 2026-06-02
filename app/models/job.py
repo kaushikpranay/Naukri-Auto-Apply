@@ -11,6 +11,7 @@ from pydantic import BaseModel, Field, HttpUrl
 class JobData(BaseModel):
     """Represents a single job listing collected from Naukri."""
 
+    id: int | None = Field(default=None, description="Database row identifier")
     job_title: str = Field(..., description="Job title / role name")
     company_name: str = Field(..., description="Hiring company name")
     job_description: str = Field(default="", description="Full job description text")
@@ -22,6 +23,16 @@ class JobData(BaseModel):
     posted_date: str = Field(default="", description="When the job was posted")
     recruiter_name: str = Field(default="", description="Recruiter / contact name")
     recruiter_email: str = Field(default="", description="Recruiter email address")
+    status: str = Field(default="pending", description="Queue state for evaluation")
+    retry_count: int = Field(default=0, description="Number of failed evaluation attempts")
+    search_keyword: str | None = Field(
+        default=None,
+        description="Search keyword used to collect the job",
+    )
+    search_location: str | None = Field(
+        default=None,
+        description="Search location used to collect the job",
+    )
 
 
 class CollectionSummary(BaseModel):

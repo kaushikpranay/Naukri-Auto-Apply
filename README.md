@@ -97,7 +97,7 @@ The app will reuse your saved session and collect jobs automatically.
 │   └── locations.yaml    # Keywords & locations
 │
 ├── browser_profile/      # Persistent browser data (auto-created)
-├── database/             # SQLite database (auto-created)
+├── database/             # Legacy database location kept for migration support
 ├── exports/              # Excel exports (auto-created)
 ├── logs/                 # Log files (auto-created)
 ├── screenshots/          # Error screenshots (auto-created)
@@ -121,7 +121,7 @@ Search keywords and locations with their URL slugs.
 
 ## Database
 
-SQLite database at `database/jobs.db`:
+SQLite database at `jobs.db`:
 
 | Field | Type | Constraint |
 |---|---|---|

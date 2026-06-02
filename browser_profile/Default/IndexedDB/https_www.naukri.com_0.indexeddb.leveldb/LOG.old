@@ -1,26 +1,57 @@
-2026/06/01-19:45:26.744 343c Creating DB C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb since it was missing.
-2026/06/01-19:45:26.757 343c Reusing MANIFEST C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/06/01-19:48:02.243 2048 Level-0 table #5: started
-2026/06/01-19:48:02.479 2048 Level-0 table #5: 1501538 bytes OK
-2026/06/01-19:48:02.488 2048 Delete type=0 #3
-2026/06/01-19:50:48.048 2048 Level-0 table #7: started
-2026/06/01-19:50:48.099 2048 Level-0 table #7: 1491589 bytes OK
-2026/06/01-19:50:48.118 2048 Delete type=0 #4
-2026/06/01-19:51:09.396 ad4 Compacting 1@1 + 1@2 files
-2026/06/01-19:51:09.410 ad4 Generated table #8@1: 87 keys, 46324 bytes
-2026/06/01-19:51:09.411 ad4 Compacted 1@1 + 1@2 files => 46324 bytes
-2026/06/01-19:51:09.413 ad4 compacted to: files[ 0 0 1 0 0 0 0 ]
-2026/06/01-19:51:09.414 ad4 Delete type=2 #5
-2026/06/01-19:51:09.414 ad4 Delete type=2 #7
-2026/06/01-19:53:27.539 2048 Level-0 table #10: started
-2026/06/01-19:53:27.557 2048 Level-0 table #10: 1486450 bytes OK
-2026/06/01-19:53:27.559 2048 Delete type=0 #6
-2026/06/01-19:53:48.527 ad4 Compacting 1@1 + 1@2 files
-2026/06/01-19:53:48.535 ad4 Generated table #11@1: 87 keys, 46056 bytes
-2026/06/01-19:53:48.536 ad4 Compacted 1@1 + 1@2 files => 46056 bytes
-2026/06/01-19:53:48.536 ad4 compacted to: files[ 0 0 1 0 0 0 0 ]
-2026/06/01-19:53:48.537 ad4 Delete type=2 #8
-2026/06/01-19:53:48.537 ad4 Delete type=2 #10
-2026/06/01-19:55:56.639 2048 Level-0 table #13: started
-2026/06/01-19:55:56.654 2048 Level-0 table #13: 1448940 bytes OK
-2026/06/01-19:55:56.656 2048 Delete type=0 #9
+2026/06/02-19:03:24.306 518 Reusing MANIFEST C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/02-19:03:24.307 518 Recovering log #57
+2026/06/02-19:03:24.315 518 Reusing old log C:\Extra-stuffs\Naukri-Automation\browser_profile\Default\IndexedDB\https_www.naukri.com_0.indexeddb.leveldb/000057.log 
+2026/06/02-19:03:54.981 3ce0 Level-0 table #62: started
+2026/06/02-19:03:55.008 3ce0 Level-0 table #62: 1481928 bytes OK
+2026/06/02-19:03:55.011 3ce0 Delete type=0 #57
+2026/06/02-19:04:08.927 518 Compacting 1@1 + 1@2 files
+2026/06/02-19:04:08.938 518 Generated table #63@1: 90 keys, 49319 bytes
+2026/06/02-19:04:08.938 518 Compacted 1@1 + 1@2 files => 49319 bytes
+2026/06/02-19:04:08.940 518 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/02-19:05:48.226 3ce0 Level-0 table #65: started
+2026/06/02-19:05:48.246 3ce0 Level-0 table #65: 1450591 bytes OK
+2026/06/02-19:05:48.249 3ce0 Delete type=2 #59
+2026/06/02-19:05:48.249 3ce0 Delete type=0 #61
+2026/06/02-19:05:48.249 3ce0 Delete type=2 #62
+2026/06/02-19:06:10.646 3ce0 Compacting 1@1 + 1@2 files
+2026/06/02-19:06:10.656 3ce0 Generated table #66@1: 90 keys, 49337 bytes
+2026/06/02-19:06:10.656 3ce0 Compacted 1@1 + 1@2 files => 49337 bytes
+2026/06/02-19:06:10.657 3ce0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/02-19:06:10.658 3ce0 Delete type=2 #63
+2026/06/02-19:06:10.658 3ce0 Delete type=2 #65
+2026/06/02-19:07:44.236 3ce0 Level-0 table #68: started
+2026/06/02-19:07:44.257 3ce0 Level-0 table #68: 1447861 bytes OK
+2026/06/02-19:07:44.259 3ce0 Delete type=0 #64
+2026/06/02-19:08:01.319 3ce0 Compacting 1@1 + 1@2 files
+2026/06/02-19:08:01.334 3ce0 Generated table #69@1: 90 keys, 49338 bytes
+2026/06/02-19:08:01.334 3ce0 Compacted 1@1 + 1@2 files => 49338 bytes
+2026/06/02-19:08:01.338 3ce0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/02-19:09:47.793 3ce0 Level-0 table #71: started
+2026/06/02-19:09:47.818 3ce0 Level-0 table #71: 1459223 bytes OK
+2026/06/02-19:09:47.820 3ce0 Delete type=2 #66
+2026/06/02-19:09:47.820 3ce0 Delete type=0 #67
+2026/06/02-19:09:47.820 3ce0 Delete type=2 #68
+2026/06/02-19:10:05.211 518 Compacting 1@1 + 1@2 files
+2026/06/02-19:10:05.232 518 Generated table #72@1: 90 keys, 49321 bytes
+2026/06/02-19:10:05.232 518 Compacted 1@1 + 1@2 files => 49321 bytes
+2026/06/02-19:10:05.234 518 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/02-19:10:05.235 518 Delete type=2 #69
+2026/06/02-19:10:05.235 518 Delete type=2 #71
+2026/06/02-19:11:43.049 3ce0 Level-0 table #74: started
+2026/06/02-19:11:43.072 3ce0 Level-0 table #74: 1447418 bytes OK
+2026/06/02-19:11:43.074 3ce0 Delete type=0 #70
+2026/06/02-19:11:59.890 3ce0 Compacting 1@1 + 1@2 files
+2026/06/02-19:11:59.901 3ce0 Generated table #75@1: 90 keys, 49319 bytes
+2026/06/02-19:11:59.902 3ce0 Compacted 1@1 + 1@2 files => 49319 bytes
+2026/06/02-19:11:59.902 3ce0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/02-19:11:59.903 3ce0 Delete type=2 #72
+2026/06/02-19:11:59.903 3ce0 Delete type=2 #74
+2026/06/02-19:13:39.970 3ce0 Level-0 table #77: started
+2026/06/02-19:13:39.993 3ce0 Level-0 table #77: 1448130 bytes OK
+2026/06/02-19:13:39.995 3ce0 Delete type=0 #73
+2026/06/02-19:14:01.792 518 Compacting 1@1 + 1@2 files
+2026/06/02-19:14:01.802 518 Generated table #78@1: 90 keys, 49321 bytes
+2026/06/02-19:14:01.802 518 Compacted 1@1 + 1@2 files => 49321 bytes
+2026/06/02-19:14:01.802 518 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/06/02-19:14:01.803 518 Delete type=2 #75
+2026/06/02-19:14:01.803 518 Delete type=2 #77
