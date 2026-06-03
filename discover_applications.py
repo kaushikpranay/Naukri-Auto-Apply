@@ -1,9 +1,16 @@
 """
-POC-3A entrypoint for apply discovery.
+POC-3A / POC-3B entrypoint for apply discovery and question bank lookup.
 
 Usage:
     python discover_applications.py
     python discover_applications.py --job-id 1 --force
+
+POC-3B Phase 1 additions:
+    - Seeds the question_bank table from the canonical answer registry.
+    - After discovery, resolves every detected question against the bank.
+    - Generates exports/question_bank_report.xlsx with three sheets:
+        Known Questions / Unknown Questions / Suggested Answers.
+    - Does NOT fill forms, submit applications, or click any submit button.
 """
 
 from __future__ import annotations
@@ -19,8 +26,14 @@ from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExp
 from app.discovery.repository import ApplyDiscoveryRepository
 from app.discovery.service import ApplyDiscoveryService
 from app.export.apply_discovery_exporter import ApplyDiscoveryExporter
+from app.export.application_review_exporter import ApplicationReviewExporter
+from app.export.form_fill_report_exporter import FormFillReportExporter
+from app.export.question_bank_report_exporter import QuestionBankReportExporter
+from app.models.application_review import build_review_record
 from app.models.config import AppSettings, SelectorsConfig
 from app.models.discovery import DiscoverySummary
+from app.question_bank.lookup_service import QuestionBankLookupService
+from app.question_bank.seeder import QuestionBankSeeder
 from app.utils.config_loader import (
     ensure_directories,
     load_selectors,
@@ -100,6 +113,12 @@ async def run(args: argparse.Namespace) -> None:
 
     repo = ApplyDiscoveryRepository(db_path)
 
+    # ── POC-3B: seed question bank ───────────────────────────────────────────
+    logger.info("Seeding question bank from candidate answer registry...")
+    seeder = QuestionBankSeeder(repo)
+    seeded_count = seeder.seed()
+    logger.info("Question bank seed complete: {} entries.", seeded_count)
+
     try:
         async with BrowserSession(settings, selectors) as session:
             try:
@@ -130,6 +149,48 @@ async def run(args: argparse.Namespace) -> None:
     except Exception as exc:  # noqa: BLE001
         logger.error("Failed to export apply discovery workbook: {}", exc)
 
+    # ── POC-3B: question bank lookup + report ────────────────────────────────
+    logger.info("Running question bank lookup...")
+    qb_report = None
+    try:
+        lookup_service = QuestionBankLookupService(db_path)
+        qb_report = lookup_service.run()
+        lookup_service.close()
+    except Exception as exc:  # noqa: BLE001
+        logger.error("Question bank lookup failed: {}", exc)
+
+    if qb_report is not None:
+        logger.info("Exporting question bank report...")
+        try:
+            report_exporter = QuestionBankReportExporter(export_dir)
+            report_path = report_exporter.export(qb_report)
+            logger.info("Question bank report exported: {}", report_path)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Failed to export question bank report: {}", exc)
+
+    # ── POC-3B Phase 2: export form fill report ──────────────────────────────
+    from app.question_bank.form_filler import DRY_RUN as FORM_FILL_DRY_RUN
+    ff_reports = summary.form_fill_reports
+    if ff_reports:
+        logger.info("Exporting form fill report ({} job(s))...", len(ff_reports))
+        try:
+            ff_exporter = FormFillReportExporter(export_dir)
+            ff_path = ff_exporter.export(ff_reports)
+            logger.info("Form fill report exported: {}", ff_path)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Failed to export form fill report: {}", exc)
+
+    # ── POC-3C: application review ─────────────────────────────────────
+    review_records = [build_review_record(r) for r in ff_reports]
+    if review_records:
+        logger.info("Exporting application review ({} job(s))...", len(review_records))
+        try:
+            review_exporter = ApplicationReviewExporter(export_dir)
+            review_path = review_exporter.export(review_records)
+            logger.info("Application review exported: {}", review_path)
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Failed to export application review: {}", exc)
+
     print("\n" + "=" * 40)
     print("APPLY DISCOVERY SUMMARY")
     print("=" * 40)
@@ -146,6 +207,88 @@ async def run(args: argparse.Namespace) -> None:
     print(f"Failed:           {summary.failed}")
     print("=" * 40)
 
+    if qb_report is not None:
+        print("\n" + "=" * 40)
+        print("QUESTION BANK REPORT - POC-3B Phase 1")
+        print("=" * 40)
+        print(f"Total Questions:  {qb_report.total_questions}")
+        print(f"Known:            {len(qb_report.known)}")
+        print(f"Unknown:          {len(qb_report.unknown)}")
+        print(f"Coverage:         {qb_report.coverage_pct}%")
+        if qb_report.known:
+            print("\n-- Known Questions --")
+            for q in qb_report.known:
+                marker = "[REQUIRED]" if q.required else ""
+                print(f"  [OK] [{q.question_key}] {q.question_text[:60]} {marker}")
+                print(f"    Answer: {q.stored_answer[:80]}")
+        if qb_report.unknown:
+            print("\n-- Unknown Questions --")
+            for q in qb_report.unknown:
+                marker = "[REQUIRED]" if q.required else ""
+                print(f"  [?] [{q.question_key}] {q.question_text[:60]} {marker}")
+                if q.suggested_answer:
+                    print(f"    Suggested: {q.suggested_answer[:80]}")
+                else:
+                    print("    Suggested: - none -")
+        print("=" * 40)
+
+    if ff_reports:
+        total_filled  = sum(len(r.filled)  for r in ff_reports)
+        total_unknown = sum(len(r.unknown) for r in ff_reports)
+        total_fields  = total_filled + total_unknown
+        fill_pct = round(total_filled / total_fields * 100, 1) if total_fields else 0.0
+        mode_label = "DRY_RUN (no DOM changes)" if FORM_FILL_DRY_RUN else "LIVE"
+        print("\n" + "=" * 40)
+        print(f"FORM FILL REPORT - POC-3B Phase 2 [{mode_label}]")
+        print("=" * 40)
+        print(f"Jobs Processed:  {len(ff_reports)}")
+        print(f"Total Fields:    {total_fields}")
+        print(f"Filled:          {total_filled}")
+        print(f"Unknown:         {total_unknown}")
+        print(f"Fill Rate:       {fill_pct}%")
+        for rep in ff_reports:
+            print(f"\n  Job {rep.job_id} | {rep.company} | {rep.role}")
+            if rep.filled:
+                print("    Filled Fields:")
+                for f in rep.filled:
+                    marker = "[REQUIRED]" if f.required else ""
+                    status = "WOULD_FILL" if f.status == "skipped_dry_run" else f.status.upper()
+                    print(f"      [{status}] {f.question_key}: {str(f.answer_used or '')[:50]} {marker}")
+            if rep.unknown:
+                print("    Unknown Fields:")
+                for u in rep.unknown:
+                    marker = "[REQUIRED]" if u.required else ""
+                    print(f"      [UNKNOWN] {u.question_key}: {u.question_text[:50]} {marker}")
+        print("=" * 40)
+
+    if review_records:
+        ready_jobs = [r for r in review_records if r.ready_to_submit]
+        not_ready  = [r for r in review_records if not r.ready_to_submit]
+        mode_label = "DRY_RUN" if FORM_FILL_DRY_RUN else "LIVE"
+        print("\n" + "=" * 40)
+        print(f"APPLICATION REVIEW - POC-3C [{mode_label}]")
+        print("=" * 40)
+        print(f"Jobs Reviewed:       {len(review_records)}")
+        print(f"Ready To Submit:     {len(ready_jobs)}")
+        print(f"Not Ready:           {len(not_ready)}")
+        print()
+        for r in review_records:
+            verdict = "YES" if r.ready_to_submit else "NO"
+            print(f"  [{verdict}] Job {r.job_id} | {r.company} | {r.job_title}")
+            print(f"       Total Fields:     {r.total_fields}")
+            print(f"       Filled:           {r.filled_count}  ({r.fill_rate_pct}%)")
+            print(f"       Unknown:          {r.unknown_count}")
+            print(f"       Required Missing: {r.missing_required_count}")
+            if r.values_used:
+                print("       Values Used:")
+                for key, val in r.values_used.items():
+                    print(f"         {key}: {str(val)[:50]}")
+            if r.required_fields_missing:
+                print("       BLOCKING (required - no answer in bank):")
+                for m in r.required_fields_missing:
+                    print(f"         ! {m.question_key}: {m.question_text[:50]}")
+        print("=" * 40)
+
 
 def main() -> None:
     """CLI entrypoint for apply discovery."""
@@ -158,7 +301,7 @@ def main() -> None:
     args = parse_args()
 
     if args.force:
-        print(f"  FORCE MODE — reprocessing job_id={args.job_id}")
+        print(f"  FORCE MODE - reprocessing job_id={args.job_id}")
         print()
 
     try:
@@ -168,7 +311,7 @@ def main() -> None:
         logger.info("Interrupted by user")
     except Exception as exc:  # noqa: BLE001
         logger.exception("Fatal error: {}", exc)
-        print(f"\n✗ Fatal error: {exc}")
+        print(f"\n[ERROR] Fatal error: {exc}")
         sys.exit(1)
 
 

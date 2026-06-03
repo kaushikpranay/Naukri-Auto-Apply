@@ -51,16 +51,16 @@ job_detail:
 
 discovery:
   apply_flow:
-    trigger: "button:has-text('Apply'), a:has-text('Apply'), button[class*='apply'], a[class*='apply'], button[aria-label*='apply'], a[aria-label*='apply']"
-    already_applied: "text=Already Applied, text=Applied, text=You have already applied"
-    easy_apply_marker: "text=Easy Apply, text=Quick Apply, div.easy-apply, section.easy-apply, button:has-text('Easy Apply')"
+    trigger: "button:has-text('Apply'), a:has-text('Apply'), button:has-text('Quick Apply'), a:has-text('Quick Apply'), button:has-text('Easy Apply'), a:has-text('Easy Apply'), button:has-text('Apply on company site'), a:has-text('Apply on company site'), button[class*='apply'], a[class*='apply'], [role='button']:has-text('Apply')"
+    already_applied: "#already-applied, .already-applied, span[class*='already-applied'], [id*='already-applied'], button:has-text('Already Applied'), span:has-text('Already Applied')"
+    easy_apply_marker: "text=Easy Apply, text=Quick Apply, div.easy-apply, section.easy-apply, button:has-text('Easy Apply'), .chatbot_Drawer, .chatbot_Overlay, .modal, .modal-dialog, [class*='chatbot'], [class*='modal'], [class*='popup'], [class*='drawer'], [class*='dialog'], [class*='overlay']"
     external_portal_marker: "text=Apply on company site, text=External Application, text=Go to company site"
     email_link: "a[href^='mailto:'], text=@"
     final_submit: "button:has-text('Submit Application'), button:has-text('Confirm Application'), button:has-text('Apply Now')"
   questions:
     page_body: "body"
-    container: "div[class*='question'], section[class*='question'], div[class*='form-field'], li[class*='question'], fieldset"
-    text: "label, span[class*='question'], div[class*='question-text'], p[class*='question']"
+    container: "div[class*='question'], section[class*='question'], div[class*='form-field'], li[class*='question'], fieldset, li[class*='botItem'], div[class*='botMsg'], div[class*='chatbot']"
+    text: "label, span[class*='question'], div[class*='question-text'], p[class*='question'], div[class*='botMsg'] span, div[class*='botMsg']"
     field: "input, textarea, select, [role='radio'], [role='radiogroup'], [contenteditable='true']"
     option: "label, option, button, [role='radio']"
     required_marker: "[required], [aria-required='true']"

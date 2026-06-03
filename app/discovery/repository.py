@@ -36,6 +36,13 @@ CREATE TABLE IF NOT EXISTS job_applications (
     html_path TEXT,
     elements_path TEXT,
     detected_at TEXT NOT NULL,
+    page_title TEXT,
+    modal_detected INTEGER DEFAULT 0,
+    forms_count INTEGER DEFAULT 0,
+    inputs_count INTEGER DEFAULT 0,
+    radio_count INTEGER DEFAULT 0,
+    dropdown_count INTEGER DEFAULT 0,
+    buttons_count INTEGER DEFAULT 0,
     FOREIGN KEY(job_id) REFERENCES jobs(id)
 );
 """
@@ -47,7 +54,10 @@ CREATE TABLE IF NOT EXISTS question_bank (
     question_text TEXT NOT NULL,
     answer TEXT,
     usage_count INTEGER NOT NULL DEFAULT 0,
-    last_used TEXT
+    last_used TEXT,
+    field_type TEXT,
+    created_at TEXT,
+    last_used_at TEXT
 );
 """
 
@@ -89,6 +99,16 @@ class ApplyDiscoveryRepository:
         "ALTER TABLE job_applications ADD COLUMN html_before_path TEXT",
         "ALTER TABLE job_applications ADD COLUMN elements_path TEXT",
         "ALTER TABLE job_applications ADD COLUMN redirect_chain TEXT",
+        "ALTER TABLE job_applications ADD COLUMN page_title TEXT",
+        "ALTER TABLE job_applications ADD COLUMN modal_detected INTEGER DEFAULT 0",
+        "ALTER TABLE job_applications ADD COLUMN forms_count INTEGER DEFAULT 0",
+        "ALTER TABLE job_applications ADD COLUMN inputs_count INTEGER DEFAULT 0",
+        "ALTER TABLE job_applications ADD COLUMN radio_count INTEGER DEFAULT 0",
+        "ALTER TABLE job_applications ADD COLUMN dropdown_count INTEGER DEFAULT 0",
+        "ALTER TABLE job_applications ADD COLUMN buttons_count INTEGER DEFAULT 0",
+        "ALTER TABLE question_bank ADD COLUMN field_type TEXT",
+        "ALTER TABLE question_bank ADD COLUMN created_at TEXT",
+        "ALTER TABLE question_bank ADD COLUMN last_used_at TEXT",
     ]
 
     def _init_schema(self) -> None:
@@ -178,8 +198,9 @@ class ApplyDiscoveryRepository:
                 button_selector, url_before, url_after, redirect_count,
                 redirect_chain, status, screenshot_before, screenshot_after,
                 screenshot_modal, html_before_path, html_path, elements_path,
-                detected_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                detected_at, page_title, modal_detected, forms_count,
+                inputs_count, radio_count, dropdown_count, buttons_count
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(job_id) DO UPDATE SET
                 apply_type = excluded.apply_type,
                 apply_url = excluded.apply_url,
@@ -198,7 +219,14 @@ class ApplyDiscoveryRepository:
                 html_before_path = excluded.html_before_path,
                 html_path = excluded.html_path,
                 elements_path = excluded.elements_path,
-                detected_at = excluded.detected_at
+                detected_at = excluded.detected_at,
+                page_title = excluded.page_title,
+                modal_detected = excluded.modal_detected,
+                forms_count = excluded.forms_count,
+                inputs_count = excluded.inputs_count,
+                radio_count = excluded.radio_count,
+                dropdown_count = excluded.dropdown_count,
+                buttons_count = excluded.buttons_count
             """,
             (
                 record.job_id,
@@ -220,6 +248,13 @@ class ApplyDiscoveryRepository:
                 record.html_path,
                 record.elements_path,
                 detected_at,
+                record.page_title,
+                1 if record.modal_detected else 0,
+                record.forms_count,
+                record.inputs_count,
+                record.radio_count,
+                record.dropdown_count,
+                record.buttons_count,
             ),
         )
         self._conn.commit()
@@ -235,18 +270,24 @@ class ApplyDiscoveryRepository:
         cursor.execute(
             """
             INSERT INTO question_bank (
-                question_key, question_text, answer, usage_count, last_used
-            ) VALUES (?, ?, ?, 1, ?)
+                question_key, question_text, answer, usage_count, last_used,
+                field_type, created_at, last_used_at
+            ) VALUES (?, ?, ?, 1, ?, ?, ?, ?)
             ON CONFLICT(question_key) DO UPDATE SET
                 question_text = excluded.question_text,
-                answer = excluded.answer,
+                answer = COALESCE(NULLIF(excluded.answer, ''), question_bank.answer),
                 usage_count = question_bank.usage_count + 1,
-                last_used = excluded.last_used
+                last_used = excluded.last_used,
+                field_type = COALESCE(NULLIF(excluded.field_type, ''), question_bank.field_type),
+                last_used_at = excluded.last_used_at
             """,
             (
                 question.question_key,
                 question.question_text,
                 question.answer,
+                now,
+                question.field_type,
+                now,
                 now,
             ),
         )
