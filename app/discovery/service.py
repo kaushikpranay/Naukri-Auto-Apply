@@ -27,7 +27,9 @@ from app.models.discovery import (
     DiscoverySummary,
     DiscoveredQuestion,
 )
+from app.models.form_fill import FormFillReport
 from app.models.job import JobData
+from app.question_bank.form_filler import FormFiller
 from app.utils.config_loader import resolve_path
 
 
@@ -35,6 +37,7 @@ from app.utils.config_loader import resolve_path
 class _DiscoveryOutcome:
     record: ApplicationDiscoveryRecord
     questions: list[DiscoveredQuestion]
+    form_fill_report: FormFillReport | None = None
 
 
 class ApplyDiscoveryService:
@@ -68,6 +71,7 @@ class ApplyDiscoveryService:
         self._selectors = selectors
         self._screenshots_dir: Path = resolve_path(settings.paths.screenshots)
         self._artifacts_dir: Path = resolve_path(settings.paths.artifacts)
+        self._form_filler = FormFiller(settings, selectors, self._screenshots_dir, self._repo)
 
     async def run(
         self,
@@ -112,6 +116,9 @@ class ApplyDiscoveryService:
                 for question in outcome.questions:
                     self._repo.save_question(job.id or 0, question)
                 self._log_outcome(outcome, job, summary)
+                # Accumulate Phase 2 form fill reports
+                if outcome.form_fill_report is not None:
+                    summary.form_fill_reports.append(outcome.form_fill_report)
                 logger.info(
                     "Discovery Finished: job_id={} apply_type={} duration={:.2f}s",
                     job.id,
@@ -202,28 +209,26 @@ class ApplyDiscoveryService:
 
         elements_path = await self._log_all_apply_elements(page, job_id)
 
-        if await self._selector_exists(page, self._selectors.discovery.apply_flow.already_applied):
-            return _DiscoveryOutcome(
-                record=ApplicationDiscoveryRecord(
-                    job_id=job_id,
-                    apply_type="already_applied",
-                    apply_url=job.apply_url or None,
-                    email=recruiter_email,
-                    hr_name=hr_name,
-                    url_before=url_before,
-                    status="discovered",
-                    screenshot_before=screenshot_before,
-                    html_before_path=html_before_path,
-                    elements_path=elements_path,
-                    detected_at=datetime.now().isoformat(),
-                ),
-                questions=[],
-            )
+        trigger_locator = await self._find_apply_trigger(page)
 
-        trigger_locator = await self._first_visible_locator(
-            page, self._selectors.discovery.apply_flow.trigger
-        )
         if trigger_locator is None:
+            if await self._is_already_applied_visible(page):
+                return _DiscoveryOutcome(
+                    record=ApplicationDiscoveryRecord(
+                        job_id=job_id,
+                        apply_type="already_applied",
+                        apply_url=job.apply_url or None,
+                        email=recruiter_email,
+                        hr_name=hr_name,
+                        url_before=url_before,
+                        status="discovered",
+                        screenshot_before=screenshot_before,
+                        html_before_path=html_before_path,
+                        elements_path=elements_path,
+                        detected_at=datetime.now().isoformat(),
+                    ),
+                    questions=[],
+                )
             return _DiscoveryOutcome(
                 record=ApplicationDiscoveryRecord(
                     job_id=job_id,
@@ -375,87 +380,43 @@ class ApplyDiscoveryService:
 
         redirect_json = json.dumps(redirect_chain)
 
+        # Compute debug values
+        page_title = await active_page.title()
+        modal_detected = await self._is_easy_apply_modal_visible(active_page)
+
+        forms_count = 0
+        inputs_count = 0
+        radio_count = 0
+        dropdown_count = 0
+        buttons_count = 0
+        try:
+            counts = await active_page.evaluate("""
+                () => {
+                    const isVisible = (el) => {
+                        if (!el) return false;
+                        const style = window.getComputedStyle(el);
+                        return style.display !== 'none' && style.visibility !== 'hidden' && el.offsetWidth > 0 && el.offsetHeight > 0;
+                    };
+                    
+                    const forms = Array.from(document.querySelectorAll('form')).filter(isVisible).length;
+                    const inputs = Array.from(document.querySelectorAll('input:not([type="radio"]):not([type="checkbox"]), textarea')).filter(isVisible).length;
+                    const radios = Array.from(document.querySelectorAll('input[type="radio"], [role="radio"]')).filter(isVisible).length;
+                    const dropdowns = Array.from(document.querySelectorAll('select, [role="listbox"]')).filter(isVisible).length;
+                    const buttons = Array.from(document.querySelectorAll('button, input[type="button"], input[type="submit"], [role="button"]')).filter(isVisible).length;
+                    
+                    return { forms, inputs, radios, dropdowns, buttons };
+                }
+            """)
+            forms_count = counts.get("forms", 0)
+            inputs_count = counts.get("inputs", 0)
+            radio_count = counts.get("radios", 0)
+            dropdown_count = counts.get("dropdowns", 0)
+            buttons_count = counts.get("buttons", 0)
+        except Exception as e:
+            logger.error("Failed to calculate debug element counts: {}", e)
+
         # ── Post-Click Classification ─────────────────────────────────
-        if await self._selector_exists(active_page, self._selectors.discovery.apply_flow.already_applied):
-            return _DiscoveryOutcome(
-                record=ApplicationDiscoveryRecord(
-                    job_id=job_id,
-                    apply_type="already_applied",
-                    apply_url=url_after,
-                    email=recruiter_email,
-                    hr_name=hr_name,
-                    button_text=button_text,
-                    button_selector=button_selector_str,
-                    url_before=url_before,
-                    url_after=url_after,
-                    redirect_count=redirect_count,
-                    redirect_chain=redirect_json,
-                    status="discovered",
-                    screenshot_before=screenshot_before,
-                    screenshot_after=screenshot_after,
-                    html_before_path=html_before_path,
-                    html_path=html_path,
-                    elements_path=elements_path,
-                    detected_at=datetime.now().isoformat(),
-                ),
-                questions=[],
-            )
-
-        detected_type = self._detect_apply_type_by_url(url_after)
-        if detected_type:
-            logger.info("Apply type detected by URL (post-click): {}", detected_type)
-            return _DiscoveryOutcome(
-                record=ApplicationDiscoveryRecord(
-                    job_id=job_id,
-                    apply_type=detected_type,
-                    apply_url=url_after,
-                    email=recruiter_email,
-                    hr_name=hr_name,
-                    button_text=button_text,
-                    button_selector=button_selector_str,
-                    url_before=url_before,
-                    url_after=url_after,
-                    redirect_count=redirect_count,
-                    redirect_chain=redirect_json,
-                    status="discovered",
-                    screenshot_before=screenshot_before,
-                    screenshot_after=screenshot_after,
-                    html_before_path=html_before_path,
-                    html_path=html_path,
-                    elements_path=elements_path,
-                    detected_at=datetime.now().isoformat(),
-                ),
-                questions=[],
-            )
-
-        if await self._selector_exists(active_page, self._selectors.discovery.apply_flow.easy_apply_marker):
-            screenshot_modal = await self._capture_screenshot(active_page, f"job_{job_id}_apply_modal")
-            questions = await self._discover_questions_readonly(active_page, job)
-            return _DiscoveryOutcome(
-                record=ApplicationDiscoveryRecord(
-                    job_id=job_id,
-                    apply_type="easy_apply",
-                    apply_url=url_after,
-                    email=recruiter_email,
-                    hr_name=hr_name,
-                    button_text=button_text,
-                    button_selector=button_selector_str,
-                    url_before=url_before,
-                    url_after=url_after,
-                    redirect_count=redirect_count,
-                    redirect_chain=redirect_json,
-                    status="discovered",
-                    screenshot_before=screenshot_before,
-                    screenshot_after=screenshot_after,
-                    screenshot_modal=screenshot_modal,
-                    html_before_path=html_before_path,
-                    html_path=html_path,
-                    elements_path=elements_path,
-                    detected_at=datetime.now().isoformat(),
-                ),
-                questions=questions,
-            )
-
+        # 1. IF external company URL detected: external_portal
         if self._is_external_link(url_after, job.job_url) or await self._selector_exists(
             active_page, self._selectors.discovery.apply_flow.external_portal_marker
         ):
@@ -479,10 +440,137 @@ class ApplyDiscoveryService:
                     html_path=html_path,
                     elements_path=elements_path,
                     detected_at=datetime.now().isoformat(),
+                    page_title=page_title,
+                    modal_detected=modal_detected,
+                    forms_count=forms_count,
+                    inputs_count=inputs_count,
+                    radio_count=radio_count,
+                    dropdown_count=dropdown_count,
+                    buttons_count=buttons_count,
                 ),
                 questions=[],
             )
 
+        # 2. ELIF saveApply confirmation page detected: applied_successfully
+        page_text = await active_page.locator("body").inner_text()
+        if (
+            "/myapply/saveApply" in url_after
+            or "Apply Confirmation" in page_title
+            or "Applied to" in page_text
+        ):
+            logger.info("Applied successfully: job_id={} title={}", job_id, job.job_title)
+            return _DiscoveryOutcome(
+                record=ApplicationDiscoveryRecord(
+                    job_id=job_id,
+                    apply_type="applied_successfully",
+                    apply_url=url_after,
+                    email=recruiter_email,
+                    hr_name=hr_name,
+                    button_text=button_text,
+                    button_selector=button_selector_str,
+                    url_before=url_before,
+                    url_after=url_after,
+                    redirect_count=redirect_count,
+                    redirect_chain=redirect_json,
+                    status="discovered",
+                    screenshot_before=screenshot_before,
+                    screenshot_after=screenshot_after,
+                    html_before_path=html_before_path,
+                    html_path=html_path,
+                    elements_path=elements_path,
+                    detected_at=datetime.now().isoformat(),
+                    page_title=page_title,
+                    modal_detected=modal_detected,
+                    forms_count=forms_count,
+                    inputs_count=inputs_count,
+                    radio_count=radio_count,
+                    dropdown_count=dropdown_count,
+                    buttons_count=buttons_count,
+                ),
+                questions=[],
+            )
+
+        # 3. ELIF question modal/form detected: easy_apply
+        if modal_detected:
+            screenshot_modal = await self._capture_screenshot(active_page, f"job_{job_id}_apply_modal")
+            questions = await self._discover_questions_readonly(active_page, job)
+
+            # ── POC-3B Phase 2: fill known answers ──────────────────────────
+            form_fill_report = await self._form_filler.fill_form(
+                page=active_page,
+                job_id=job_id,
+                company=job.company_name or "",
+                role=job.job_title or "",
+                questions=questions,
+            )
+
+            return _DiscoveryOutcome(
+                record=ApplicationDiscoveryRecord(
+                    job_id=job_id,
+                    apply_type="easy_apply",
+                    apply_url=url_after,
+                    email=recruiter_email,
+                    hr_name=hr_name,
+                    button_text=button_text,
+                    button_selector=button_selector_str,
+                    url_before=url_before,
+                    url_after=url_after,
+                    redirect_count=redirect_count,
+                    redirect_chain=redirect_json,
+                    status="discovered",
+                    screenshot_before=screenshot_before,
+                    screenshot_after=screenshot_after,
+                    screenshot_modal=screenshot_modal,
+                    html_before_path=html_before_path,
+                    html_path=html_path,
+                    elements_path=elements_path,
+                    detected_at=datetime.now().isoformat(),
+                    page_title=page_title,
+                    modal_detected=modal_detected,
+                    forms_count=forms_count,
+                    inputs_count=inputs_count,
+                    radio_count=radio_count,
+                    dropdown_count=dropdown_count,
+                    buttons_count=buttons_count,
+                ),
+                questions=questions,
+                form_fill_report=form_fill_report,
+            )
+
+        # 4. ELIF job-specific applied indicator detected: already_applied
+        if await self._is_already_applied_visible(active_page):
+            return _DiscoveryOutcome(
+                record=ApplicationDiscoveryRecord(
+                    job_id=job_id,
+                    apply_type="already_applied",
+                    apply_url=url_after,
+                    email=recruiter_email,
+                    hr_name=hr_name,
+                    button_text=button_text,
+                    button_selector=button_selector_str,
+                    url_before=url_before,
+                    url_after=url_after,
+                    redirect_count=redirect_count,
+                    redirect_chain=redirect_json,
+                    status="discovered",
+                    screenshot_before=screenshot_before,
+                    screenshot_after=screenshot_after,
+                    html_before_path=html_before_path,
+                    html_path=html_path,
+                    elements_path=elements_path,
+                    detected_at=datetime.now().isoformat(),
+                    page_title=page_title,
+                    modal_detected=modal_detected,
+                    forms_count=forms_count,
+                    inputs_count=inputs_count,
+                    radio_count=radio_count,
+                    dropdown_count=dropdown_count,
+                    buttons_count=buttons_count,
+                ),
+                questions=[],
+            )
+
+        # 5. ELSE: unknown (or check registration/login)
         post_click_type = await self._detect_post_click_apply_type(active_page, button_text)
         if post_click_type in ("register", "login_required"):
             return _DiscoveryOutcome(
@@ -505,6 +593,13 @@ class ApplyDiscoveryService:
                     html_path=html_path,
                     elements_path=elements_path,
                     detected_at=datetime.now().isoformat(),
+                    page_title=page_title,
+                    modal_detected=modal_detected,
+                    forms_count=forms_count,
+                    inputs_count=inputs_count,
+                    radio_count=radio_count,
+                    dropdown_count=dropdown_count,
+                    buttons_count=buttons_count,
                 ),
                 questions=[],
             )
@@ -528,6 +623,13 @@ class ApplyDiscoveryService:
                 html_path=html_path,
                 elements_path=elements_path,
                 detected_at=datetime.now().isoformat(),
+                page_title=page_title,
+                modal_detected=modal_detected,
+                forms_count=forms_count,
+                inputs_count=inputs_count,
+                radio_count=radio_count,
+                dropdown_count=dropdown_count,
+                buttons_count=buttons_count,
             ),
             questions=[],
         )
@@ -785,6 +887,57 @@ class ApplyDiscoveryService:
                 continue
         return False
 
+    async def _is_already_applied_visible(self, page: Page) -> bool:
+        """Check if a job-specific 'already applied' indicator is visible, ignoring GNB/header/nav."""
+        selector_string = self._selectors.discovery.apply_flow.already_applied
+        for selector in self._split_selectors(selector_string):
+            try:
+                locators = page.locator(selector)
+                count = await locators.count()
+                for i in range(count):
+                    loc = locators.nth(i)
+                    if not await loc.is_visible():
+                        continue
+
+                    is_ignored = await loc.evaluate("""
+                        (el) => {
+                            const ignoredSelectors = [
+                                '.nI-gNb-header', '.nI-gNb-drawer', 'nav',
+                                '[class*="nI-gNb-"]', '[id*="nI-gNb-"]',
+                                '[class*="gnb"]', '[id*="gnb"]',
+                                '.nI-gNb-backdrop', '.naukri-drawer'
+                            ];
+                            
+                            for (const sel of ignoredSelectors) {
+                                if (el.closest(sel)) return true;
+                            }
+                            
+                            let parent = el;
+                            while (parent) {
+                                if (parent.tagName && parent.tagName.toLowerCase() === 'a') {
+                                    const href = parent.getAttribute('href') || '';
+                                    const hrefLower = href.toLowerCase();
+                                    if (
+                                        hrefLower.includes('historypage') || 
+                                        hrefLower.includes('myapply') ||
+                                        hrefLower.includes('savedjobs') || 
+                                        hrefLower.includes('recommended') ||
+                                        hrefLower.includes('nvites')
+                                    ) {
+                                        return true;
+                                    }
+                                }
+                                parent = parent.parentElement;
+                            }
+                            return false;
+                        }
+                    """)
+                    if not is_ignored:
+                        return True
+            except Exception:
+                continue
+        return False
+
     async def _first_visible_locator(self, page: Page, selector_string: str):
         for selector in self._split_selectors(selector_string):
             try:
@@ -817,3 +970,80 @@ class ApplyDiscoveryService:
 
     def _split_selectors(self, selector_string: str) -> list[str]:
         return [selector.strip() for selector in selector_string.split(",") if selector.strip()]
+
+    async def _find_apply_trigger(self, page: Page) -> Locator | None:
+        """Find the primary apply button/link on the page, ignoring header/nav and status links."""
+        selector_string = self._selectors.discovery.apply_flow.trigger
+        for selector in self._split_selectors(selector_string):
+            try:
+                locators = page.locator(selector)
+                count = await locators.count()
+                for i in range(count):
+                    loc = locators.nth(i)
+                    if not await loc.is_visible():
+                        continue
+                    
+                    text = (await loc.inner_text()).strip()
+                    lower_text = text.lower()
+                    
+                    # Ignore common navigation / status / agent texts
+                    ignored_texts = [
+                        "application status", "saved jobs", "recommended jobs", 
+                        "neo-ai job agent", "explore", "profile", "jobs"
+                    ]
+                    if any(t in lower_text for t in ignored_texts):
+                        continue
+                        
+                    is_ignored = await loc.evaluate("""
+                        (el) => {
+                            const ignoredSelectors = [
+                                '.nI-gNb-header', '.nI-gNb-drawer', 'nav',
+                                '[class*="nI-gNb-"]', '[id*="nI-gNb-"]',
+                                '[class*="gnb"]', '[id*="gnb"]',
+                                '.nI-gNb-backdrop', '.naukri-drawer'
+                            ];
+                            for (const sel of ignoredSelectors) {
+                                if (el.closest(sel)) return true;
+                            }
+                            return false;
+                        }
+                    """)
+                    if is_ignored:
+                        continue
+                        
+                    return loc
+            except Exception:
+                continue
+        return None
+
+    async def _is_easy_apply_modal_visible(self, page: Page) -> bool:
+        """Check if an easy apply modal, chatbot drawer, or application popup is visible, ignoring GNB."""
+        selector_string = self._selectors.discovery.apply_flow.easy_apply_marker
+        for selector in self._split_selectors(selector_string):
+            try:
+                locators = page.locator(selector)
+                count = await locators.count()
+                for i in range(count):
+                    loc = locators.nth(i)
+                    if not await loc.is_visible():
+                        continue
+                    
+                    is_ignored = await loc.evaluate("""
+                        (el) => {
+                            const ignoredSelectors = [
+                                '.nI-gNb-header', '.nI-gNb-drawer', 'nav',
+                                '[class*="nI-gNb-"]', '[id*="nI-gNb-"]',
+                                '[class*="gnb"]', '[id*="gnb"]',
+                                '.nI-gNb-backdrop', '.naukri-drawer'
+                            ];
+                            for (const sel of ignoredSelectors) {
+                                if (el.closest(sel)) return true;
+                            }
+                            return false;
+                        }
+                    """)
+                    if not is_ignored:
+                        return True
+            except Exception:
+                continue
+        return False

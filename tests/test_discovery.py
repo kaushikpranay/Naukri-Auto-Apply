@@ -287,6 +287,13 @@ def test_apply_discovery_debug_exporter_creates_expected_workbook(tmp_path: Path
         "HTML Before",
         "HTML After",
         "Elements JSON",
+        "Page Title",
+        "Modal Detected",
+        "Forms Count",
+        "Inputs Count",
+        "Radio Count",
+        "Dropdown Count",
+        "Buttons Count",
         "Detected At",
     ]
     assert list(df.columns) == expected_columns

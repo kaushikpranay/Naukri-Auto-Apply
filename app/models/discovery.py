@@ -2,7 +2,10 @@
 Models for apply discovery.
 """
 
+from __future__ import annotations
+
 from datetime import datetime
+from typing import Any
 
 from pydantic import BaseModel, Field
 
@@ -30,6 +33,13 @@ class ApplicationDiscoveryRecord(BaseModel):
     html_path: str | None = None
     elements_path: str | None = None
     detected_at: str | None = None
+    page_title: str | None = None
+    modal_detected: bool = False
+    forms_count: int = 0
+    inputs_count: int = 0
+    radio_count: int = 0
+    dropdown_count: int = 0
+    buttons_count: int = 0
 
 
 class DiscoveredQuestion(BaseModel):
@@ -56,5 +66,8 @@ class DiscoverySummary(BaseModel):
     needs_register: int = 0
     login_required: int = 0
     unknown_flow: int = 0
+    # POC-3B Phase 2: accumulated FormFillReport objects (typed as Any to
+    # avoid a circular import with app.models.form_fill)
+    form_fill_reports: list[Any] = Field(default_factory=list)
     started_at: datetime = Field(default_factory=datetime.now)
     completed_at: datetime | None = None

@@ -85,6 +85,13 @@ class ApplyDiscoveryExporter:
                 CASE WHEN a.html_before_path IS NOT NULL AND a.html_before_path != '' THEN COALESCE(a.html_before_path, '') ELSE '' END AS "HTML Before",
                 CASE WHEN a.html_path IS NOT NULL AND a.html_path != '' THEN COALESCE(a.html_path, '') ELSE '' END AS "HTML After",
                 COALESCE(a.elements_path, '') AS "Elements JSON",
+                COALESCE(a.page_title, '') AS "Page Title",
+                CASE WHEN a.modal_detected = 1 THEN 'TRUE' ELSE 'FALSE' END AS "Modal Detected",
+                a.forms_count AS "Forms Count",
+                a.inputs_count AS "Inputs Count",
+                a.radio_count AS "Radio Count",
+                a.dropdown_count AS "Dropdown Count",
+                a.buttons_count AS "Buttons Count",
                 a.detected_at AS "Detected At"
             FROM job_applications a
             JOIN jobs j ON j.id = a.job_id

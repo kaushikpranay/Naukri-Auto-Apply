@@ -1,11 +1,11 @@
 {
-  "job_id": 4,
+  "job_id": 41,
   "elements": [
     {
       "candidate_index": 0,
       "selector": "a[href*='apply']",
       "tag": "a",
-      "text": "Application status\n34 Updates",
+      "text": "Application status\n39 Updates",
       "href": "/myapply/historypage",
       "visible": true,
       "computed_selector": "a"
