@@ -19,7 +19,7 @@ from pathlib import Path
 
 from loguru import logger
 
-from app.browser.session import BrowserSession, SessionExpiredError
+from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExpiredError
 from app.collector.job_collector import JobCollector
 from app.database.repository import JobRepository
 from app.export.excel_exporter import ExcelExporter
@@ -89,16 +89,12 @@ async def run() -> None:
             page = await session.validate_session()
         except SessionExpiredError as e:
             logger.error(str(e))
-            print("\n" + "=" * 50)
-            print("  ⚠  SESSION EXPIRED")
-            print("=" * 50)
-            print("  Session expired. Please login manually.")
-            print("  1. Run: python main.py")
-            print("  2. Login in the browser window that opens")
-            print("  3. Close the browser")
-            print("  4. Re-run: python main.py")
-            print("=" * 50)
-            return
+            print(f"\nError: {e}")
+            sys.exit(1)
+        except ProfileNotFoundError as e:
+            logger.error(str(e))
+            print(f"\nError: {e}")
+            sys.exit(1)
 
         # ── 3. Initialize SQLite Repository ────────────────────────────
         logger.info("Initializing database...")

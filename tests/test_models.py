@@ -9,6 +9,9 @@ from app.models.job import JobData, CollectionSummary
 from app.models.config import (
     AppSettings,
     BrowserConfig,
+    DiscoveryConfig,
+    ApplyFlowSelectors,
+    QuestionSelectors,
     KeywordEntry,
     LocationEntry,
     SearchConfig,
@@ -91,6 +94,7 @@ class TestAppSettings:
         assert settings.paths.database == "database/jobs.db"
         assert settings.evaluation.max_ai_evaluations_per_run == 5
         assert settings.evaluation.max_retry_count == 3
+        assert settings.discovery.max_discovery_jobs_per_run == 20
 
     def test_custom_values(self) -> None:
         """AppSettings should accept custom values."""
@@ -117,3 +121,51 @@ class TestSearchConfig:
         assert len(config.keywords) == 1
         assert config.keywords[0].slug == "ai-engineer"
         assert config.locations[0].display == "Bangalore"
+
+
+class TestSelectorsConfig:
+    """Test suite for selector configuration models."""
+
+    def test_discovery_selectors_present(self) -> None:
+        """SelectorsConfig should include discovery selectors."""
+        selectors = SelectorsConfig(
+            login=LoginSelectors(detection="a", logged_in="b", authenticated="c"),
+            search_results=SearchResultSelectors(
+                container="a",
+                job_card="b",
+                title="c",
+                company="d",
+                experience="e",
+                location="f",
+                posted_date="g",
+                no_results="h",
+            ),
+            pagination=PaginationSelectors(next_button="a", current_page="b"),
+            job_detail=JobDetailSelectors(
+                description="a",
+                apply_button="b",
+                recruiter_section="c",
+                recruiter_name="d",
+                recruiter_email="e",
+            ),
+            discovery={
+                "apply_flow": {
+                    "trigger": "a",
+                    "already_applied": "b",
+                    "easy_apply_marker": "c",
+                    "external_portal_marker": "d",
+                    "email_link": "e",
+                    "final_submit": "f",
+                },
+                "questions": {
+                    "page_body": "body",
+                    "container": "c",
+                    "text": "t",
+                    "field": "f",
+                    "option": "o",
+                    "required_marker": "r",
+                },
+            },
+        )
+        assert selectors.discovery.apply_flow.trigger == "a"
+        assert selectors.discovery.questions.page_body == "body"

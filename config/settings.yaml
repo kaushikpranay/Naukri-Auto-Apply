@@ -15,6 +15,7 @@ paths:
   exports: "exports"
   logs: "logs"
   screenshots: "screenshots"
+  artifacts: "artifacts"
 
 naukri:
   base_url: "https://www.naukri.com"
@@ -33,3 +34,6 @@ logging:
 evaluation:
   max_ai_evaluations_per_run: 5
   max_retry_count: 3
+
+discovery:
+  max_discovery_jobs_per_run: 1

@@ -8,6 +8,16 @@ from pydantic import BaseModel, Field
 
 
 # ---------------------------------------------------------------------------
+# auth_selectors.yaml model
+# ---------------------------------------------------------------------------
+
+class AuthSelectors(BaseModel):
+    """Authentication selectors loaded from auth_selectors.yaml."""
+
+    authenticated: list[str] = Field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
 # settings.yaml models
 # ---------------------------------------------------------------------------
 
@@ -29,6 +39,7 @@ class PathsConfig(BaseModel):
     exports: str = Field(default="exports")
     logs: str = Field(default="logs")
     screenshots: str = Field(default="screenshots")
+    artifacts: str = Field(default="artifacts")
 
 
 class NaukriConfig(BaseModel):
@@ -62,6 +73,12 @@ class EvaluationConfig(BaseModel):
     max_retry_count: int = Field(default=3)
 
 
+class DiscoveryConfig(BaseModel):
+    """Apply-discovery limits."""
+
+    max_discovery_jobs_per_run: int = Field(default=20)
+
+
 class AppSettings(BaseModel):
     """Root settings model loaded from settings.yaml."""
 
@@ -70,6 +87,7 @@ class AppSettings(BaseModel):
     naukri: NaukriConfig = Field(default_factory=NaukriConfig)
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
     evaluation: EvaluationConfig = Field(default_factory=EvaluationConfig)
+    discovery: DiscoveryConfig = Field(default_factory=DiscoveryConfig)
 
 
 # ---------------------------------------------------------------------------
@@ -81,6 +99,7 @@ class LoginSelectors(BaseModel):
 
     detection: str = Field(...)
     logged_in: str = Field(...)
+    authenticated: str = Field(...)
 
 
 class SearchResultSelectors(BaseModel):
@@ -113,6 +132,35 @@ class JobDetailSelectors(BaseModel):
     recruiter_email: str = Field(...)
 
 
+class ApplyFlowSelectors(BaseModel):
+    """Selectors for apply-flow discovery."""
+
+    trigger: str = Field(...)
+    already_applied: str = Field(...)
+    easy_apply_marker: str = Field(...)
+    external_portal_marker: str = Field(...)
+    email_link: str = Field(...)
+    final_submit: str = Field(...)
+
+
+class QuestionSelectors(BaseModel):
+    """Selectors for question discovery and field detection."""
+
+    page_body: str = Field(...)
+    container: str = Field(...)
+    text: str = Field(...)
+    field: str = Field(...)
+    option: str = Field(...)
+    required_marker: str = Field(...)
+
+
+class DiscoverySelectors(BaseModel):
+    """Selectors for apply discovery pages."""
+
+    apply_flow: ApplyFlowSelectors
+    questions: QuestionSelectors
+
+
 class SelectorsConfig(BaseModel):
     """Root selectors model loaded from selectors.yaml."""
 
@@ -120,6 +168,7 @@ class SelectorsConfig(BaseModel):
     search_results: SearchResultSelectors
     pagination: PaginationSelectors
     job_detail: JobDetailSelectors
+    discovery: DiscoverySelectors
 
 
 # ---------------------------------------------------------------------------

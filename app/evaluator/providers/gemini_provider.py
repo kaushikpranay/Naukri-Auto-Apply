@@ -1,5 +1,5 @@
 """
-Gemini provider implementation.
+Gemini provider implementation using google.genai SDK.
 """
 
 from __future__ import annotations
@@ -8,7 +8,8 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 from app.evaluator.errors import (
     ProviderConfigurationError,
@@ -28,21 +29,21 @@ class GeminiEvaluator(BaseEvaluator):
         if not api_key:
             raise ProviderConfigurationError("GEMINI_API_KEY missing from .env")
 
-        genai.configure(api_key=api_key)
+        self._client = genai.Client(api_key=api_key)
         self.model_id = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
-        self._model = genai.GenerativeModel(model_name=self.model_id)
         super().__init__(prompt_path, profile_path)
 
     def _generate_response(self, prompt: str) -> str:
         try:
-            response = self._model.generate_content(
-                prompt,
-                generation_config=genai.GenerationConfig(
+            response = self._client.models.generate_content(
+                model=self.model_id,
+                contents=prompt,
+                config=types.GenerateContentConfig(
                     temperature=0.0,
                     response_mime_type="application/json",
                 ),
             )
-            return getattr(response, "text", "") or ""
+            return response.text or ""
         except Exception as exc:  # noqa: BLE001
             raise self._classify_exception(exc) from exc
 

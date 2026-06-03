@@ -24,6 +24,7 @@ class TestConfigLoader:
         assert settings.browser.profile_dir == "browser_profile"
         assert settings.paths.database == "database/jobs.db"
         assert settings.naukri.base_url == "https://www.naukri.com"
+        assert settings.discovery.max_discovery_jobs_per_run == 1
 
     def test_load_selectors(self) -> None:
         """selectors.yaml should load into SelectorsConfig."""
@@ -31,6 +32,8 @@ class TestConfigLoader:
         assert selectors.login.detection  # non-empty
         assert selectors.search_results.job_card  # non-empty
         assert selectors.job_detail.description  # non-empty
+        assert selectors.discovery.apply_flow.trigger  # non-empty
+        assert selectors.discovery.questions.page_body  # non-empty
 
     def test_load_search_config(self) -> None:
         """locations.yaml should load into SearchConfig."""

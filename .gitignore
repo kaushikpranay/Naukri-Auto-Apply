@@ -5,5 +5,5 @@ __pycache__/
 logs/
 database/
 exports/
-.env
 browser_profile/
+screenshots/

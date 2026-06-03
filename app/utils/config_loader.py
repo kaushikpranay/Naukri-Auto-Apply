@@ -11,7 +11,7 @@ from typing import Any
 import yaml
 from loguru import logger
 
-from app.models.config import AppSettings, SearchConfig, SelectorsConfig
+from app.models.config import AppSettings, AuthSelectors, SearchConfig, SelectorsConfig
 
 # Project root is two levels up from this file (app/utils/config_loader.py → project/)
 PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent.parent
@@ -54,6 +54,16 @@ def load_selectors() -> SelectorsConfig:
     return SelectorsConfig(**data)
 
 
+def load_auth_selectors() -> AuthSelectors:
+    """Load and validate auth_selectors.yaml."""
+    path = CONFIG_DIR / "auth_selectors.yaml"
+    if not path.exists():
+        logger.warning("auth_selectors.yaml not found, using empty defaults")
+        return AuthSelectors()
+    data: dict[str, Any] = _load_yaml(path)
+    return AuthSelectors(**data)
+
+
 def load_search_config() -> SearchConfig:
     """Load and validate locations.yaml (keywords + locations)."""
     data: dict[str, Any] = _load_yaml(CONFIG_DIR / "locations.yaml")
@@ -87,7 +97,7 @@ def ensure_directories(settings: AppSettings) -> None:
         resolve_path(settings.paths.exports),
         resolve_path(settings.paths.logs),
         resolve_path(settings.paths.screenshots),
-        resolve_path(settings.browser.profile_dir),
+        resolve_path(settings.paths.artifacts),
         resolve_path(settings.paths.database).parent,
     ]
 

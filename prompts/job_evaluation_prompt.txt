@@ -26,6 +26,15 @@ $experience_required
 Location:
 $location
 
+Evaluation Guidance:
+- Weight demonstrated production experience more heavily than years of experience alone.
+- Production RAG systems, LangGraph workflows, Agentic AI systems, FastAPI backends, AWS deployments, semantic search systems, and LLM applications are strong positive signals.
+- Candidates with strong project alignment may still be a good fit even when they have fewer years of experience than requested.
+- Focus on actual capability and relevance of experience rather than years alone.
+- Treat transferable skills as valid evidence of capability.
+- For AI, GenAI, LLM, RAG, Agentic AI, Applied AI, and AI Backend roles, prioritize demonstrated hands-on experience.
+- Do not heavily penalize candidates solely because they have fewer years of experience than requested.
+
 Rules:
 - Return JSON only.
 - Do not include markdown, comments, or code fences.

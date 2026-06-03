@@ -5,10 +5,15 @@
 # Never hardcode selectors in application code.
 
 login:
-  # Selector that indicates the user is on the login page
+  # Selectors that indicate the user is on the login page
   detection: "form.login-form, div.login-layer, input[placeholder='Enter your active Email ID / Username']"
-  # Selector that indicates the user is logged in
+  # Selectors that indicate the user is logged in
   logged_in: "div.nI-gNb-drawer, a[href*='mnjuser/profile'], div.user-info"
+  # Selectors for positive authentication — only visible for logged-in users
+  authenticated:
+    "div.nI-gNb-drawer, a[href*='mnjuser/profile'], div.user-info, \
+     img[alt*='profile'], span[class*='user-name'], a[href*='logout'], \
+     div[class*='userJumper'], a[href*='recruiter'], div[class*='profile-avatar']"
 
 search_results:
   # Container holding all job cards
@@ -43,3 +48,19 @@ job_detail:
   recruiter_section: "div.rec-info, div[class*='rec-info'], section.rec-details"
   recruiter_name: "div.rec-name, span.rec-name, div[class*='rec-name']"
   recruiter_email: "div.rec-email, span.rec-email, a[href^='mailto:']"
+
+discovery:
+  apply_flow:
+    trigger: "button:has-text('Apply'), a:has-text('Apply'), button[class*='apply'], a[class*='apply'], button[aria-label*='apply'], a[aria-label*='apply']"
+    already_applied: "text=Already Applied, text=Applied, text=You have already applied"
+    easy_apply_marker: "text=Easy Apply, text=Quick Apply, div.easy-apply, section.easy-apply, button:has-text('Easy Apply')"
+    external_portal_marker: "text=Apply on company site, text=External Application, text=Go to company site"
+    email_link: "a[href^='mailto:'], text=@"
+    final_submit: "button:has-text('Submit Application'), button:has-text('Confirm Application'), button:has-text('Apply Now')"
+  questions:
+    page_body: "body"
+    container: "div[class*='question'], section[class*='question'], div[class*='form-field'], li[class*='question'], fieldset"
+    text: "label, span[class*='question'], div[class*='question-text'], p[class*='question']"
+    field: "input, textarea, select, [role='radio'], [role='radiogroup'], [contenteditable='true']"
+    option: "label, option, button, [role='radio']"
+    required_marker: "[required], [aria-required='true']"

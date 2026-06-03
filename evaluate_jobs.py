@@ -1,14 +1,29 @@
+import asyncio
 import sys
 import uuid
 from pathlib import Path
 
 from loguru import logger
 
+from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExpiredError
 from app.database.evaluations_repo import EvaluationsRepository
 from app.evaluator.evaluation_service import EvaluationService
 from app.export.eval_exporter import EvaluatedJobsExporter
-from app.models.config import AppSettings
-from app.utils.config_loader import load_settings, resolve_path
+from app.models.config import AppSettings, SelectorsConfig
+from app.utils.config_loader import load_selectors, load_settings, resolve_path
+
+
+def _validate_session_sync(settings: AppSettings, selectors: SelectorsConfig) -> None:
+    """Validate Naukri session before running evaluations. Hard stop on failure."""
+    async def _check() -> None:
+        async with BrowserSession(settings, selectors) as session:
+            await session.validate_session()
+
+    try:
+        asyncio.run(_check())
+    except (ProfileNotFoundError, SessionExpiredError) as exc:
+        print(f"\nError: {exc}")
+        sys.exit(1)
 
 
 def setup_logging(settings: AppSettings) -> None:
@@ -64,7 +79,10 @@ def main():
     print()
 
     settings = load_settings()
+    selectors = load_selectors()
     setup_logging(settings)
+
+    _validate_session_sync(settings, selectors)
 
     run_id = str(uuid.uuid4())[:8]
     db_path = resolve_path(settings.paths.database)
@@ -143,6 +161,7 @@ def main():
         repo=repo,
         providers=providers,
         max_jobs_per_run=max_ai_evaluations,
+        profile_path=profile_path,
     )
 
     try:

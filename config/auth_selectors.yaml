@@ -1,0 +1,15 @@
+# =============================================================================
+# Naukri Job Collector — Authentication CSS Selectors
+# =============================================================================
+# These selectors positively verify that a user is logged in.
+# Authentication succeeds if ANY of these selectors exists on the page.
+# Independently loaded from selectors.yaml for focused maintenance.
+#
+# All selectors here should only be visible for authenticated users.
+
+authenticated:
+  - "div.nI-gNb-drawer"
+  - "a[href*='mnjuser/profile']"
+  - "div.user-info"
+  - "a[href*='logout']"
+  - "img[alt*='profile']"

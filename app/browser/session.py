@@ -2,8 +2,9 @@
 Browser session manager with persistent Playwright context.
 
 Manages a Chromium browser session that reuses cookies/storage
-across runs. Never performs automatic login — if the session has
-expired, it halts execution and asks the user to login manually.
+across runs. Authentication is positively verified — the system
+actively looks for logged-in selectors rather than assuming
+login based on the absence of login-page selectors.
 """
 
 from pathlib import Path
@@ -19,8 +20,13 @@ from playwright.async_api import (
 )
 
 from app.models.config import AppSettings, SelectorsConfig
-from app.utils.config_loader import resolve_path
+from app.utils.config_loader import load_auth_selectors, resolve_path
 from app.utils.screenshot import capture_screenshot
+
+
+class ProfileNotFoundError(Exception):
+    """Raised when the browser profile directory is missing or empty."""
+    pass
 
 
 class SessionExpiredError(Exception):
@@ -30,14 +36,14 @@ class SessionExpiredError(Exception):
 
 class BrowserSession:
     """
-    Persistent Playwright browser session.
+    Persistent Playwright browser session with positive authentication.
 
     Uses a profile directory to persist cookies, localStorage,
     and session data across runs.
 
     Usage:
         async with BrowserSession(settings, selectors) as session:
-            page = await session.new_page()
+            page = await session.validate_session()
             ...
     """
 
@@ -51,6 +57,7 @@ class BrowserSession:
         self._playwright: Optional[Playwright] = None
         self._context: Optional[BrowserContext] = None
         self._profile_path: Path = resolve_path(settings.browser.profile_dir)
+        self._profile_pre_existed: bool = self._profile_path.exists()
 
     async def launch(self) -> None:
         """
@@ -82,18 +89,54 @@ class BrowserSession:
         self._context.set_default_timeout(self._settings.browser.default_timeout)
         logger.info("Browser launched successfully")
 
+    def _validate_profile(self) -> None:
+        """
+        Verify that the browser profile directory exists and has content.
+
+        Raises:
+            ProfileNotFoundError: If the profile is missing or empty.
+        """
+        if not self._profile_pre_existed:
+            logger.error("Browser profile not found at: {}", self._profile_path)
+            raise ProfileNotFoundError(
+                "Browser profile not found.\n"
+                "Run login_setup.py first.\n"
+                "  python login_setup.py"
+            )
+
+        contents = list(self._profile_path.iterdir())
+        if not contents:
+            logger.error("Browser profile is empty: {}", self._profile_path)
+            raise ProfileNotFoundError(
+                "Browser profile is empty.\n"
+                "Run login_setup.py first.\n"
+                "  python login_setup.py"
+            )
+
+        logger.info("Browser profile validated: {} ({} entries)", self._profile_path, len(contents))
+
     async def validate_session(self) -> Page:
         """
-        Navigate to Naukri and verify the user is logged in.
+        Navigate to Naukri and positively verify authentication.
+
+        Flow:
+          1. Validate that the browser profile exists and has session data.
+          2. Navigate to Naukri homepage.
+          3. Positively search for authenticated-only selectors.
+          4. If found → session valid, return page.
+          5. If not found → session expired, raise SessionExpiredError.
 
         Returns:
             The active Page instance if session is valid.
 
         Raises:
-            SessionExpiredError: If the login page is detected.
+            ProfileNotFoundError: If the browser profile is missing.
+            SessionExpiredError: If no authenticated selectors are found.
         """
         if self._context is None:
             raise RuntimeError("Browser not launched. Call launch() first.")
+
+        self._validate_profile()
 
         page: Page = self._context.pages[0] if self._context.pages else await self._context.new_page()
 
@@ -103,40 +146,59 @@ class BrowserSession:
             wait_until="domcontentloaded",
         )
 
-        # Wait for page to settle
         await page.wait_for_timeout(self._settings.naukri.page_load_wait)
 
-        # Check for login page indicators
-        login_selectors: list[str] = [
-            s.strip()
-            for s in self._selectors.login.detection.split(",")
-        ]
+        current_url: str = page.url
+        logger.info("Current URL: {}", current_url)
 
-        for selector in login_selectors:
+        # ── Positive Authentication Check ────────────────────────────
+        auth_cfg = load_auth_selectors()
+        if auth_cfg.authenticated:
+            authenticated_selectors: list[str] = auth_cfg.authenticated
+        else:
+            authenticated_selectors = [
+                s.strip()
+                for s in self._selectors.login.authenticated.split(",")
+            ]
+
+        found_selector: Optional[str] = None
+        for selector in authenticated_selectors:
             try:
-                element = await page.query_selector(selector.strip())
+                element = await page.query_selector(selector)
                 if element:
-                    logger.warning("Login page detected (selector: {})", selector)
-                    await capture_screenshot(
-                        page,
-                        reason="login_detected",
-                        screenshots_dir=self._settings.paths.screenshots,
-                    )
-                    raise SessionExpiredError(
-                        "Session expired. Please login manually.\n"
-                        "1. Run: python main.py\n"
-                        "2. Login in the browser window that opens\n"
-                        "3. Close the browser\n"
-                        "4. Re-run: python main.py"
-                    )
-            except SessionExpiredError:
-                raise
+                    found_selector = selector
+                    break
             except Exception:
-                # Selector didn't match — continue checking
                 continue
 
-        logger.info("Session is valid — user is logged in")
-        return page
+        # ── Diagnostic Logging ───────────────────────────────────────
+        logger.info("Current URL: {}", current_url)
+        logger.info("Browser Profile Path: {}", self._profile_path)
+        logger.info("Authenticated Selector Found: {}", found_selector or "None")
+
+        if found_selector:
+            logger.info("Authenticated: TRUE")
+            logger.info("Reason: Authenticated selector found — {}", found_selector)
+            logger.info("Session is valid — user is logged in")
+            return page
+
+        # ── Authentication Failed — capture evidence, hard stop ──────
+        logger.warning("Authenticated: FALSE")
+        logger.warning("Reason: No authenticated selector found on the page")
+        logger.warning("No authenticated selectors detected — session is invalid")
+
+        await capture_screenshot(
+            page,
+            reason="auth_failed",
+            screenshots_dir=self._settings.paths.screenshots,
+        )
+
+        raise SessionExpiredError(
+            "Login required.\n"
+            "No valid Naukri session detected.\n"
+            "Run login_setup.py to create an authenticated profile:\n"
+            "  python login_setup.py"
+        )
 
     async def new_page(self) -> Page:
         """Create a new page in the persistent context."""
