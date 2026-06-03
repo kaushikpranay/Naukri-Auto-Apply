@@ -1,9 +1,6 @@
-"""
-Orchestration for AI job evaluations.
-"""
-
-from __future__ import annotations
-
+import json
+import re
+from pathlib import Path
 from dataclasses import dataclass
 from time import perf_counter
 
@@ -31,6 +28,21 @@ class EvaluationBatchStats:
     errors: int = 0
 
 
+def parse_min_experience(exp_str: str) -> int | None:
+    """Parse minimum experience required from a string (e.g. '3-8 Yrs', '2-5 years')."""
+    if not exp_str:
+        return None
+    # Match ranges like 3-8 or 3 - 8
+    match = re.search(r"(\d+)\s*-\s*\d+", exp_str)
+    if match:
+        return int(match.group(1))
+    # Fallback to single integer in string
+    match = re.search(r"(\d+)", exp_str)
+    if match:
+        return int(match.group(1))
+    return None
+
+
 class EvaluationService:
     """
     Evaluates pending jobs using a provider chain.
@@ -42,11 +54,24 @@ class EvaluationService:
         providers: list[BaseEvaluator],
         max_jobs_per_run: int,
         prompt_version: str = "v2.0",
+        profile_path: Path | None = None,
     ) -> None:
         self._repo = repo
         self._providers = providers
         self._max_jobs_per_run = max_jobs_per_run
         self._prompt_version = prompt_version
+        self._profile_path = profile_path
+
+        # Load candidate experience
+        self._candidate_exp = 2.0
+        self._max_target_min_exp = 4.0
+        if self._profile_path and self._profile_path.exists():
+            try:
+                profile_data = json.loads(self._profile_path.read_text(encoding="utf-8"))
+                self._candidate_exp = float(profile_data.get("experience_years", 2.0))
+                self._max_target_min_exp = float(profile_data.get("max_target_min_experience", 4.0))
+            except Exception as exc:
+                logger.warning("Failed to parse candidate profile for experience/threshold: {}", exc)
 
     def run(self, run_id: str) -> EvaluationBatchStats:
         """Evaluate at most ``max_jobs_per_run`` pending jobs."""
@@ -61,6 +86,50 @@ class EvaluationService:
 
         for index, job in enumerate(jobs, start=1):
             logger.info("Evaluating [{}/{}]: {}", index, len(jobs), job.job_title[:80])
+
+            # Apply eligibility logic
+            min_exp = parse_min_experience(job.experience_required)
+            if min_exp is not None:
+                if min_exp <= self._max_target_min_exp:
+                    eligible = True
+                else:
+                    eligible = False
+
+                decision = "evaluate" if eligible else "skip"
+                candidate_display = int(self._candidate_exp) if self._candidate_exp.is_integer() else self._candidate_exp
+                threshold_display = int(self._max_target_min_exp) if self._max_target_min_exp.is_integer() else self._max_target_min_exp
+                logger.info(
+                    "Experience evaluation: candidate_exp={}, job_min_exp={}, threshold={}, decision={}",
+                    candidate_display,
+                    min_exp,
+                    threshold_display,
+                    decision,
+                )
+            else:
+                eligible = True
+
+            if not eligible:
+                # Store skipped evaluation result directly
+                evaluation = EvaluationResult(
+                    interview_probability=0,
+                    recommended_resume="STARTUP",
+                    priority="low",
+                    action="skip",
+                    confidence=100,
+                    reason="Minimum experience exceeds target threshold",
+                    missing_skills=[],
+                )
+                self._store_result(job.id, run_id, evaluation, "ExperienceFilter")
+                self._repo.mark_job_evaluated(int(job.id))
+                stats.evaluated += 1
+                stats.skip += 1
+                logger.info(
+                    "Job {} skipped: experience requirement not met (required: {}, candidate: {})",
+                    job.id,
+                    min_exp,
+                    self._candidate_exp,
+                )
+                continue
 
             started_at = perf_counter()
             evaluation, provider_used = self._evaluate_with_fallback(job)
