@@ -64,12 +64,12 @@ _EXPERIENCE_KEYS: tuple[str, ...] = (
 _STATIC_ANSWERS: dict[str, str] = {
     # ── Experience by technology ───────────────────────────────────────────
     "python_experience":        "2",
-    "llm_experience":           "1.5",
-    "genai_experience":         "1.5",
+    "llm_experience":           "2",
+    "genai_experience":         "2",
     "rag_experience":           "1.5",
     "langchain_experience":     "1.5",
     "fastapi_experience":       "2",
-    "aws_experience":           "1.5",
+    "aws_experience":           "2",
     "ml_experience":            "2",
     "dl_experience":            "1",
     "nlp_experience":           "1",
@@ -77,7 +77,7 @@ _STATIC_ANSWERS: dict[str, str] = {
     "devops_experience":        "0.5",
     "web_framework_experience": "1",
     "ml_framework_experience":  "1",
-    "cloud_experience":         "1.5",
+    "cloud_experience":         "2",
     # ── Location preferences ───────────────────────────────────────────────
     "willing_to_relocate":      "Yes",
     "preferred_location":       "Noida, Gurugram, Pune, Kolkata, Hyderabad, Bangalore, Remote",

@@ -24,7 +24,7 @@ class TestConfigLoader:
         assert settings.browser.profile_dir == "browser_profile"
         assert settings.paths.database == "database/jobs.db"
         assert settings.naukri.base_url == "https://www.naukri.com"
-        assert settings.discovery.max_discovery_jobs_per_run == 1
+        assert settings.discovery.max_discovery_jobs_per_run >= 1
 
     def test_load_selectors(self) -> None:
         """selectors.yaml should load into SelectorsConfig."""

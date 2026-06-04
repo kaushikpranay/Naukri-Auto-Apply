@@ -16,13 +16,6 @@ _PRIORITY_MAP: dict[str, str] = {
     "MEDIUM": "medium",
     "LOW": "low",
 }
-_ACTION_MAP: dict[str, str] = {
-    "APPLY": "apply",
-    "REVIEW": "review",
-    "SKIP": "skip",
-}
-
-
 def _as_text(value: Any) -> str:
     if value is None:
         return ""
@@ -73,13 +66,6 @@ def _normalize_priority(value: Any) -> str:
     return _PRIORITY_MAP[normalized]
 
 
-def _normalize_action(value: Any) -> str:
-    normalized = _as_text(value).upper()
-    if normalized not in _ACTION_MAP:
-        raise ValueError(f"Invalid action value: {value!r}")
-    return _ACTION_MAP[normalized]
-
-
 def _normalize_missing_skills(value: Any) -> list[str]:
     if value is None:
         return []
@@ -99,7 +85,6 @@ def normalize_provider_payload(payload: dict[str, Any]) -> dict[str, Any]:
         "interview_probability",
         "recommended_resume",
         "priority",
-        "action",
         "confidence",
         "reason",
     ]
@@ -111,13 +96,22 @@ def normalize_provider_payload(payload: dict[str, Any]) -> dict[str, Any]:
     if not reason:
         raise ValueError("reason cannot be empty")
 
+    prob = _normalize_percentage(
+        payload["interview_probability"], "interview_probability"
+    )
+
+    if prob >= 55:
+        action = "apply"
+    elif prob >= 35:
+        action = "review"
+    else:
+        action = "skip"
+
     return {
-        "interview_probability": _normalize_percentage(
-            payload["interview_probability"], "interview_probability"
-        ),
+        "interview_probability": prob,
         "recommended_resume": _normalize_resume(payload["recommended_resume"]),
         "priority": _normalize_priority(payload["priority"]),
-        "action": _normalize_action(payload["action"]),
+        "action": action,
         "confidence": _normalize_percentage(payload["confidence"], "confidence"),
         "reason": reason,
         "missing_skills": _normalize_missing_skills(payload.get("missing_skills")),

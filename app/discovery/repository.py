@@ -76,6 +76,17 @@ CREATE TABLE IF NOT EXISTS job_application_questions (
 );
 """
 
+_CREATE_ANSWER_MAPPINGS_SQL = """
+CREATE TABLE IF NOT EXISTS answer_mappings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    question_key TEXT NOT NULL,
+    raw_answer TEXT NOT NULL,
+    selected_option TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    UNIQUE(question_key, raw_answer)
+);
+"""
+
 
 class ApplyDiscoveryRepository:
     """Persistence layer for apply discovery artifacts."""
@@ -116,6 +127,7 @@ class ApplyDiscoveryRepository:
         cursor.execute(_CREATE_JOB_APPLICATIONS_SQL)
         cursor.execute(_CREATE_QUESTION_BANK_SQL)
         cursor.execute(_CREATE_JOB_APPLICATION_QUESTIONS_SQL)
+        cursor.execute(_CREATE_ANSWER_MAPPINGS_SQL)
         for migration in self._MIGRATIONS:
             try:
                 cursor.execute(migration)
@@ -265,6 +277,11 @@ class ApplyDiscoveryRepository:
         question: DiscoveredQuestion,
     ) -> None:
         """Persist a discovered question and keep the question bank updated."""
+        if question.answer:
+            ans_lower = str(question.answer).strip().lower()
+            if ans_lower in ("save", "skip", "submit", "continue"):
+                question.answer = None
+
         now = datetime.now().isoformat()
         cursor = self._conn.cursor()
         cursor.execute(
@@ -342,10 +359,44 @@ class ApplyDiscoveryRepository:
         """Return row counts for discovery tables."""
         cursor = self._conn.cursor()
         counts: dict[str, int] = {}
-        for table in ("job_applications", "question_bank", "job_application_questions"):
-            cursor.execute(f"SELECT COUNT(*) FROM {table}")
-            counts[table] = int(cursor.fetchone()[0])
+        for table in ("job_applications", "question_bank", "job_application_questions", "answer_mappings"):
+            try:
+                cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                counts[table] = int(cursor.fetchone()[0])
+            except Exception:
+                pass
         return counts
+
+    def save_answer_mapping(self, question_key: str, raw_answer: str, selected_option: str) -> None:
+        """Insert or replace a question answer to option mapping."""
+        if selected_option:
+            opt_lower = str(selected_option).strip().lower()
+            if opt_lower in ("save", "skip", "submit", "continue"):
+                return
+
+        cursor = self._conn.cursor()
+        now = datetime.now().isoformat()
+        cursor.execute(
+            """
+            INSERT OR REPLACE INTO answer_mappings (question_key, raw_answer, selected_option, created_at)
+            VALUES (?, ?, ?, ?)
+            """,
+            (question_key, raw_answer, selected_option, now)
+        )
+        self._conn.commit()
+
+    def get_answer_mapping(self, question_key: str, raw_answer: str) -> str | None:
+        """Get the mapped selected option for a given question key and raw answer."""
+        cursor = self._conn.cursor()
+        cursor.execute(
+            """
+            SELECT selected_option FROM answer_mappings
+            WHERE question_key = ? AND raw_answer = ?
+            """,
+            (question_key, raw_answer)
+        )
+        row = cursor.fetchone()
+        return row[0] if row else None
 
     def close(self) -> None:
         if self._conn:
