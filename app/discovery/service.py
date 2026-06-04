@@ -740,6 +740,10 @@ class ApplyDiscoveryService:
             if not await container.is_visible():
                 continue
 
+            from app.question_bank.form_filler import is_valid_recruiter_question_container
+            if not await is_valid_recruiter_question_container(container):
+                continue
+
             question_text = await self._extract_text_from_locator(
                 container, self._selectors.discovery.questions.text
             )

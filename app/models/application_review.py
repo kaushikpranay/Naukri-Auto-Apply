@@ -85,13 +85,14 @@ def build_review_record(report: FormFillReport) -> ApplicationReviewRecord:
     Logic:
         ready_to_submit = True  iff
             (a) at least one field was detected, AND
-            (b) no required field is in the unknown list
+            (b) no required field is in the unknown list or has an error status
     """
     required_missing = [f for f in report.unknown if f.required]
+    required_missing.extend([f for f in report.filled if f.required and f.status == "error"])
     values_used = {
         f.question_key: f.answer_used
         for f in report.filled
-        if f.answer_used
+        if f.answer_used and f.status in ("filled", "skipped_dry_run")
     }
     ready = report.total_fields > 0 and len(required_missing) == 0
 
@@ -99,8 +100,8 @@ def build_review_record(report: FormFillReport) -> ApplicationReviewRecord:
         job_id=report.job_id,
         job_title=report.role,
         company=report.company,
-        filled_fields=report.filled,
-        unknown_fields=report.unknown,
+        filled_fields=[f for f in report.filled if f.status in ("filled", "skipped_dry_run")],
+        unknown_fields=report.unknown + [f for f in report.filled if f.status == "error"],
         required_fields_missing=required_missing,
         values_used=values_used,
         ready_to_submit=ready,

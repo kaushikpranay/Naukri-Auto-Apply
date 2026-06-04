@@ -7,7 +7,7 @@ from loguru import logger
 
 from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExpiredError
 from app.database.evaluations_repo import EvaluationsRepository
-from app.evaluator.evaluation_service import EvaluationService
+from app.evaluator.evaluation_service import EvaluationService, EvaluationBatchStats
 from app.export.eval_exporter import EvaluatedJobsExporter
 from app.models.config import AppSettings, SelectorsConfig
 from app.utils.config_loader import load_selectors, load_settings, resolve_path
@@ -164,15 +164,42 @@ def main():
         profile_path=profile_path,
     )
 
+    total_stats = EvaluationBatchStats()
     try:
-        stats = service.run(run_id)
-    except KeyboardInterrupt:
-        logger.info("Evaluation interrupted by user.")
-        print("\nInterrupted! Saving progress...")
-        stats = None
-    except Exception as exc:  # noqa: BLE001
-        logger.error("Unexpected error during evaluation: {}", exc)
-        stats = None
+        batch_idx = 1
+        pending_before_total = repo.get_pending_jobs_count()
+        while pending_before_total > 0:
+            print(f"\nBatch {batch_idx}")
+            print(f"Pending before: {pending_before_total}")
+            
+            try:
+                stats = service.run(run_id)
+                if not stats or stats.evaluated == 0:
+                    print("No jobs evaluated in this batch. Exiting loop.")
+                    break
+                
+                total_stats.evaluated += stats.evaluated
+                total_stats.apply += stats.apply
+                total_stats.review += stats.review
+                total_stats.skip += stats.skip
+                total_stats.errors += stats.errors
+                
+                pending_after = repo.get_pending_jobs_count()
+                print(f"Evaluated: {stats.evaluated}")
+                print(f"Pending after: {pending_after}")
+                
+                pending_before_total = pending_after
+                batch_idx += 1
+            except KeyboardInterrupt:
+                logger.info("Evaluation interrupted by user.")
+                print("\nInterrupted! Stopping gracefully...")
+                break
+            except Exception as exc:
+                logger.error("Error occurred during batch evaluation: {}", exc)
+                print(f"Error occurred: {exc}")
+                pending_remaining = repo.get_pending_jobs_count()
+                print(f"Stopping gracefully. Remaining pending jobs: {pending_remaining}")
+                break
     finally:
         repo.close()
 
@@ -187,18 +214,11 @@ def main():
     print("\n" + "=" * 40)
     print("EVALUATION SUMMARY")
     print("=" * 40)
-    if stats is not None:
-        print(f"Jobs Evaluated: {stats.evaluated}")
-        print(f"Apply:          {stats.apply}")
-        print(f"Review:         {stats.review}")
-        print(f"Skip:           {stats.skip}")
-        print(f"Errors:         {stats.errors}")
-    else:
-        print("Jobs Evaluated: 0")
-        print("Apply:          0")
-        print("Review:         0")
-        print("Skip:           0")
-        print("Errors:         0")
+    print(f"Jobs Evaluated: {total_stats.evaluated}")
+    print(f"Apply:          {total_stats.apply}")
+    print(f"Review:         {total_stats.review}")
+    print(f"Skip:           {total_stats.skip}")
+    print(f"Errors:         {total_stats.errors}")
     print("=" * 40)
 
 

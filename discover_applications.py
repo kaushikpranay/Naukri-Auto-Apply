@@ -133,9 +133,54 @@ async def run(args: argparse.Namespace) -> None:
                 sys.exit(1)
 
             service = ApplyDiscoveryService(repo, settings, selectors)
-            summary = await service.run(
-                page, run_id=run_id, force_job_id=force_job_id
-            )
+            if force_job_id is not None:
+                summary = await service.run(
+                    page, run_id=run_id, force_job_id=force_job_id
+                )
+            else:
+                batch_number = 1
+                while True:
+                    cursor = repo._conn.cursor()
+                    cursor.execute("""
+                        SELECT COUNT(*)
+                        FROM jobs j
+                        JOIN ai_evaluations e ON e.job_id = j.id
+                        LEFT JOIN job_applications a ON a.job_id = j.id
+                        WHERE UPPER(e.action) = 'APPLY'
+                          AND a.job_id IS NULL
+                    """)
+                    pending_count = cursor.fetchone()[0]
+
+                    if pending_count == 0:
+                        logger.info("Final:\nNo pending APPLY jobs.")
+                        print("\nFinal:\nNo pending APPLY jobs.")
+                        break
+
+                    logger.info("Batch {}:\nFound {} APPLY jobs", batch_number, pending_count)
+                    print(f"\nBatch {batch_number}:\nFound {pending_count} APPLY jobs")
+
+                    batch_summary = await service.run(
+                        page, run_id=run_id, force_job_id=None
+                    )
+                    
+                    summary.processed += batch_summary.processed
+                    summary.discovered += batch_summary.discovered
+                    summary.already_applied += batch_summary.already_applied
+                    summary.requires_review += batch_summary.requires_review
+                    summary.failed += batch_summary.failed
+                    summary.easy_apply += batch_summary.easy_apply
+                    summary.external_portal += batch_summary.external_portal
+                    summary.email += batch_summary.email
+                    summary.needs_register += batch_summary.needs_register
+                    summary.login_required += batch_summary.login_required
+                    summary.unknown_flow += batch_summary.unknown_flow
+                    summary.form_fill_reports.extend(batch_summary.form_fill_reports)
+
+                    if batch_summary.processed == 0:
+                        logger.info("No jobs were processed in this batch. Exiting loop.")
+                        break
+                    
+                    batch_number += 1
     finally:
         repo.close()
 

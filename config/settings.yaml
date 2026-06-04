@@ -32,8 +32,8 @@ logging:
   format: "{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {module}:{function}:{line} | {message}"
 
 evaluation:
-  max_ai_evaluations_per_run: 5
+  max_ai_evaluations_per_run: 25
   max_retry_count: 3
 
 discovery:
-  max_discovery_jobs_per_run: 1
+  max_discovery_jobs_per_run: 10

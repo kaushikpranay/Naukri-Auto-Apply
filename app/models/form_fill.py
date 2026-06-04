@@ -49,4 +49,5 @@ class FormFillReport:
     def fill_rate_pct(self) -> float:
         if self.total_fields == 0:
             return 0.0
-        return round(len(self.filled) / self.total_fields * 100, 1)
+        successful = sum(1 for f in self.filled if f.status in ("filled", "skipped_dry_run"))
+        return round(successful / self.total_fields * 100, 1)
