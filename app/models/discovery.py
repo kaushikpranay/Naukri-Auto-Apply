@@ -10,6 +10,14 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 
+class QuotaExhaustedStop(Exception):
+    """Raised internally to stop the discovery loop on consecutive quota exhaustion."""
+
+    def __init__(self, message: str, summary: DiscoverySummary | None = None) -> None:
+        super().__init__(message)
+        self.summary = summary
+
+
 class ApplicationDiscoveryRecord(BaseModel):
     """Persisted application-discovery result."""
 
@@ -40,6 +48,8 @@ class ApplicationDiscoveryRecord(BaseModel):
     radio_count: int = 0
     dropdown_count: int = 0
     buttons_count: int = 0
+    # Quota exhaustion
+    quota_message: str | None = None
 
 
 class DiscoveredQuestion(BaseModel):
@@ -66,6 +76,8 @@ class DiscoverySummary(BaseModel):
     needs_register: int = 0
     login_required: int = 0
     unknown_flow: int = 0
+    quota_exhausted: int = 0
+    quota_stopped: bool = False
     # POC-3B Phase 2: accumulated FormFillReport objects (typed as Any to
     # avoid a circular import with app.models.form_fill)
     form_fill_reports: list[Any] = Field(default_factory=list)

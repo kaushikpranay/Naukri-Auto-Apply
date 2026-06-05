@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}System Status{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title"><i class="bi bi-cpu-fill text-accent"></i> System Status</h1>
+    <p class="text-muted mb-0">Pipeline health and quota overview</p>
+</div>
+
+<div class="row g-3 mb-4">
+    <!-- Collector -->
+    <div class="col-12 col-lg-4">
+        <div class="glass-card p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <div class="status-icon status-icon-success"><i class="bi bi-collection-fill"></i></div>
+                <div>
+                    <h6 class="mb-0 fw-bold">Collector</h6>
+                    <small class="text-muted">Job scraping pipeline</small>
+                </div>
+            </div>
+            <div class="status-grid">
+                <div class="status-item"><span class="status-label">Total Jobs</span><span class="status-value">{{ status.collector.total_jobs }}</span></div>
+                <div class="status-item"><span class="status-label">Pending</span><span class="status-value text-warning">{{ status.collector.pending }}</span></div>
+                <div class="status-item"><span class="status-label">Evaluated</span><span class="status-value text-success">{{ status.collector.evaluated }}</span></div>
+                <div class="status-item"><span class="status-label">Queued</span><span class="status-value text-info">{{ status.collector.queued }}</span></div>
+                <div class="status-item"><span class="status-label">Failed</span><span class="status-value text-danger">{{ status.collector.failed }}</span></div>
+            </div>
+            {% if status.collector.keywords %}
+            <div class="mt-3">
+                <small class="text-muted d-block mb-1">Keywords:</small>
+                {% for kw in status.collector.keywords[:6] %}
+                <span class="badge bg-dark me-1 mb-1">{{ kw }}</span>
+                {% endfor %}
+                {% if status.collector.keywords|length > 6 %}<span class="text-muted small">+{{ status.collector.keywords|length - 6 }} more</span>{% endif %}
+            </div>
+            {% endif %}
+            {% if status.collector.locations %}
+            <div class="mt-2">
+                <small class="text-muted d-block mb-1">Locations:</small>
+                {% for loc in status.collector.locations[:6] %}
+                <span class="badge bg-dark me-1 mb-1">{{ loc }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Evaluator -->
+    <div class="col-12 col-lg-4">
+        <div class="glass-card p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <div class="status-icon status-icon-info"><i class="bi bi-robot"></i></div>
+                <div>
+                    <h6 class="mb-0 fw-bold">Evaluator</h6>
+                    <small class="text-muted">AI evaluation pipeline</small>
+                </div>
+            </div>
+            <div class="status-grid">
+                <div class="status-item"><span class="status-label">Total Evals</span><span class="status-value">{{ status.evaluator.total_evaluations }}</span></div>
+                <div class="status-item"><span class="status-label">Pending</span><span class="status-value text-warning">{{ status.evaluator.pending_eval }}</span></div>
+                <div class="status-item"><span class="status-label">Runs</span><span class="status-value">{{ status.evaluator.total_runs }}</span></div>
+                <div class="status-item"><span class="status-label">Last Eval</span><span class="status-value small">{{ status.evaluator.last_evaluation[:16] if status.evaluator.last_evaluation != 'Never' else 'Never' }}</span></div>
+            </div>
+            {% if status.evaluator.models_used %}
+            <div class="mt-3">
+                <small class="text-muted d-block mb-1">Models:</small>
+                {% for m in status.evaluator.models_used %}
+                <span class="badge bg-dark me-1 mb-1">{{ m }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <!-- Quota -->
+            <div class="mt-3 p-2 rounded" style="background: rgba(255,255,255,0.05);">
+                <div class="d-flex justify-content-between small">
+                    <span class="text-muted">Quota Status</span>
+                    <span class="{% if status.evaluator.pending_eval == 0 %}text-success{% else %}text-warning{% endif %}">
+                        {{ 'All evaluated' if status.evaluator.pending_eval == 0 else (status.evaluator.pending_eval|string + ' remaining') }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discovery -->
+    <div class="col-12 col-lg-4">
+        <div class="glass-card p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <div class="status-icon status-icon-accent"><i class="bi bi-search-heart"></i></div>
+                <div>
+                    <h6 class="mb-0 fw-bold">Discovery</h6>
+                    <small class="text-muted">Application processing</small>
+                </div>
+            </div>
+            <div class="status-grid">
+                <div class="status-item"><span class="status-label">Processed</span><span class="status-value">{{ status.discovery.total_processed }}</span></div>
+                <div class="status-item"><span class="status-label">Pending APPLY</span><span class="status-value text-warning">{{ status.discovery.pending_apply }}</span></div>
+                <div class="status-item"><span class="status-label">Last Run</span><span class="status-value small">{{ status.discovery.last_discovery[:16] if status.discovery.last_discovery != 'Never' else 'Never' }}</span></div>
+            </div>
+            <!-- Quota Status -->
+            <div class="mt-3 p-2 rounded" style="background: rgba(255,255,255,0.05);">
+                <div class="d-flex justify-content-between align-items-center mb-1 small">
+                    <span class="text-muted">Quota Status</span>
+                    <span class="badge {% if status.discovery.quota.is_exhausted %}bg-danger{% else %}bg-success{% endif %}">
+                        {{ status.discovery.quota.status_label }}
+                    </span>
+                </div>
+                <div class="d-flex justify-content-between small text-muted">
+                    <span>Consecutive Hits</span>
+                    <span>{{ status.discovery.quota.consecutive_count }}/3</span>
+                </div>
+                {% if status.discovery.quota.last_detected %}
+                <div class="d-flex justify-content-between small text-muted mt-1">
+                    <span>Last Exhausted</span>
+                    <span class="small">{{ status.discovery.quota.last_detected[:16] }}</span>
+                </div>
+                {% endif %}
+            </div>
+            <!-- Question Bank -->
+            <div class="mt-3">
+                <div class="d-flex justify-content-between mb-1 small">
+                    <span>Q-Bank Coverage</span>
+                    <span>{{ status.question_bank.coverage_pct }}%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar {% if status.question_bank.coverage_pct >= 80 %}bg-success{% elif status.question_bank.coverage_pct >= 50 %}bg-warning{% else %}bg-danger{% endif %}" style="width: {{ status.question_bank.coverage_pct }}%"></div>
+                </div>
+                <div class="d-flex justify-content-between small text-muted mt-1">
+                    <span>{{ status.question_bank.answered }}/{{ status.question_bank.total }} answered</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Runs -->
+{% if status.recent_runs %}
+<h2 class="section-title"><i class="bi bi-clock-history text-accent"></i> Recent Evaluation Runs</h2>
+<div class="glass-card p-3">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle glass-table mb-0">
+            <thead><tr><th>Run ID</th><th>Jobs</th><th>Started</th><th>Ended</th></tr></thead>
+            <tbody>
+                {% for run in status.recent_runs %}
+                <tr>
+                    <td><code>{{ run.run_id }}</code></td>
+                    <td><span class="badge bg-secondary">{{ run.cnt }}</span></td>
+                    <td class="small text-muted">{{ run.started[:19] }}</td>
+                    <td class="small text-muted">{{ run.ended[:19] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

@@ -26,6 +26,7 @@ from app.models.discovery import (
     ApplicationDiscoveryRecord,
     DiscoverySummary,
     DiscoveredQuestion,
+    QuotaExhaustedStop,
 )
 from app.models.form_fill import FormFillReport
 from app.models.job import JobData
@@ -60,6 +61,21 @@ class ApplyDiscoveryService:
         "a:has-text('Login')",
     ]
 
+    # ── Quota exhaustion detection ────────────────────────────────────────────
+    _QUOTA_PHRASES: list[str] = [
+        "quota exhausted",
+        "job quota exhausted",
+        "application limit reached",
+        "maximum applications reached",
+        "there was an error while processing your request",
+        "you have reached the maximum",
+        "apply limit",
+        "daily apply limit",
+        "reached your limit",
+        "applications limit",
+    ]
+    _QUOTA_CONSECUTIVE_THRESHOLD: int = 3
+
     def __init__(
         self,
         repo: ApplyDiscoveryRepository,
@@ -72,6 +88,7 @@ class ApplyDiscoveryService:
         self._screenshots_dir: Path = resolve_path(settings.paths.screenshots)
         self._artifacts_dir: Path = resolve_path(settings.paths.artifacts)
         self._form_filler = FormFiller(settings, selectors, self._screenshots_dir, self._repo)
+        self._quota_consecutive: int = 0  # reset on every service.run() call from the loop
 
     async def run(
         self,
@@ -86,6 +103,10 @@ class ApplyDiscoveryService:
             run_id: Run identifier (reserved).
             force_job_id: If set, ignore normal filtering and reprocess
                           exactly this job, clearing any prior record.
+
+        Raises:
+            QuotaExhaustedStop: If 3 consecutive quota_exhausted events are
+                                detected, the loop should stop immediately.
         """
         summary = DiscoverySummary()
 
@@ -125,6 +146,29 @@ class ApplyDiscoveryService:
                     outcome.record.apply_type or outcome.record.status,
                     (datetime.now() - started_at).total_seconds(),
                 )
+
+                # ── Consecutive quota protection ──────────────────────────
+                if outcome.record.apply_type == "quota_exhausted":
+                    self._quota_consecutive += 1
+                    logger.warning(
+                        "QUOTA_EXHAUSTED_DETECTED: job_id={} consecutive={} message='{}'",
+                        job.id, self._quota_consecutive,
+                        outcome.record.quota_message or "",
+                    )
+                    if self._quota_consecutive >= self._QUOTA_CONSECUTIVE_THRESHOLD:
+                        summary.quota_stopped = True
+                        summary.processed += 1
+                        raise QuotaExhaustedStop(
+                            f"{self._quota_consecutive} consecutive quota exhaustion events detected.",
+                            summary=summary,
+                        )
+                else:
+                    # Any successful classification resets the counter
+                    if outcome.record.apply_type not in ("discovery_failed", None):
+                        self._quota_consecutive = 0
+
+            except QuotaExhaustedStop:
+                raise  # propagate to caller without wrapping
             except Exception as exc:  # noqa: BLE001
                 logger.exception("Discovery Failed: job_id={} error={}", job.id, exc)
                 self._repo.save_application(
@@ -166,6 +210,8 @@ class ApplyDiscoveryService:
         elif apply_type == "login_required":
             summary.discovered += 1
             summary.login_required += 1
+        elif apply_type == "quota_exhausted":
+            summary.quota_exhausted += 1
         elif apply_type == "unknown":
             summary.discovered += 1
             summary.unknown_flow += 1
@@ -173,6 +219,8 @@ class ApplyDiscoveryService:
             summary.requires_review += 1
 
         logger.info("Apply Type Detected: job_id={} type={}", job.id, apply_type)
+        if outcome.record.quota_message:
+            logger.warning("Quota Message: job_id={} msg='{}'", job.id, outcome.record.quota_message)
         if outcome.record.button_text:
             logger.info("Button Text: job_id={} text={}", job.id, outcome.record.button_text)
         if outcome.record.email:
@@ -416,6 +464,45 @@ class ApplyDiscoveryService:
             logger.error("Failed to calculate debug element counts: {}", e)
 
         # ── Post-Click Classification ─────────────────────────────────
+        # 0. CHECK FOR QUOTA EXHAUSTION (before any other classifier)
+        quota_msg = await self._detect_quota_exhaustion(active_page)
+        if quota_msg:
+            logger.warning(
+                "QUOTA_EXHAUSTED: job_id={} message='{}'",
+                job_id, quota_msg,
+            )
+            screenshot_after = await self._capture_screenshot(active_page, f"job_{job_id}_quota")
+            return _DiscoveryOutcome(
+                record=ApplicationDiscoveryRecord(
+                    job_id=job_id,
+                    apply_type="quota_exhausted",
+                    quota_message=quota_msg,
+                    apply_url=url_after,
+                    email=recruiter_email,
+                    hr_name=hr_name,
+                    button_text=button_text,
+                    button_selector=button_selector_str,
+                    url_before=url_before,
+                    url_after=url_after,
+                    redirect_count=redirect_count,
+                    redirect_chain=redirect_json,
+                    status="discovered",
+                    screenshot_before=screenshot_before,
+                    screenshot_after=screenshot_after,
+                    html_before_path=html_before_path,
+                    elements_path=elements_path,
+                    detected_at=datetime.now().isoformat(),
+                    page_title=page_title,
+                    modal_detected=modal_detected,
+                    forms_count=forms_count,
+                    inputs_count=inputs_count,
+                    radio_count=radio_count,
+                    dropdown_count=dropdown_count,
+                    buttons_count=buttons_count,
+                ),
+                questions=[],
+            )
+
         # 1. IF external company URL detected: external_portal
         if self._is_external_link(url_after, job.job_url) or await self._selector_exists(
             active_page, self._selectors.discovery.apply_flow.external_portal_marker
@@ -725,6 +812,94 @@ class ApplyDiscoveryService:
             return "register"
         if "login" in lower_page and "apply" in lower_page:
             return "login_required"
+
+        return None
+
+    async def _detect_quota_exhaustion(self, page: Page) -> str | None:
+        """Scan the page for quota/limit exhaustion messages after Apply click.
+
+        Checks (in order):
+          1. Toast notifications
+          2. Error banners / alert boxes
+          3. Modal dialog text
+          4. Visible inline page text near the apply area
+          5. Any visible text in the body (last resort)
+
+        Returns the matched message text (first match) or None.
+        """
+        # Selectors that typically surface quota/error messages on Naukri
+        error_selectors = [
+            # Toast / snackbar containers (common patterns)
+            "[class*='toast']",
+            "[class*='snack']",
+            "[class*='notification']",
+            "[class*='alert']",
+            "[role='alert']",
+            "[role='status']",
+            # Error / warning banners
+            "[class*='error']",
+            "[class*='warning']",
+            "[class*='banner']",
+            # Modal / dialog
+            "[role='dialog']",
+            "[class*='modal']",
+            "[class*='popup']",
+            "[class*='overlay']",
+            # Naukri-specific inline feedback containers
+            "[class*='applyBtn']",
+            "[class*='apply-btn']",
+            "[class*='job-apply']",
+            "[class*='applyContainer']",
+            ".quota-msg",
+            ".limit-msg",
+        ]
+
+        checked_texts: list[str] = []
+
+        for selector in error_selectors:
+            try:
+                locators = page.locator(selector)
+                count = await locators.count()
+                for i in range(count):
+                    loc = locators.nth(i)
+                    if not await loc.is_visible():
+                        continue
+                    try:
+                        text = (await loc.inner_text()).strip()
+                    except Exception:
+                        continue
+                    if not text or text in checked_texts:
+                        continue
+                    checked_texts.append(text)
+                    lower_text = text.lower()
+                    for phrase in self._QUOTA_PHRASES:
+                        if phrase in lower_text:
+                            logger.warning(
+                                "Quota phrase '{}' found via selector '{}' | text: '{}'",
+                                phrase, selector, text[:120],
+                            )
+                            return text[:200]
+            except Exception:
+                continue
+
+        # Last resort: scan entire body (cheaper than iterating all elements)
+        try:
+            body_text = await page.locator("body").inner_text()
+            lower_body = body_text.lower()
+            for phrase in self._QUOTA_PHRASES:
+                if phrase in lower_body:
+                    # Extract surrounding context (up to 200 chars)
+                    idx = lower_body.index(phrase)
+                    start = max(0, idx - 40)
+                    end = min(len(body_text), idx + len(phrase) + 80)
+                    snippet = body_text[start:end].strip()
+                    logger.warning(
+                        "Quota phrase '{}' found in page body | snippet: '{}'",
+                        phrase, snippet,
+                    )
+                    return snippet[:200]
+        except Exception:
+            pass
 
         return None
 

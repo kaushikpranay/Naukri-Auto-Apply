@@ -31,7 +31,7 @@ from app.export.form_fill_report_exporter import FormFillReportExporter
 from app.export.question_bank_report_exporter import QuestionBankReportExporter
 from app.models.application_review import build_review_record
 from app.models.config import AppSettings, SelectorsConfig
-from app.models.discovery import DiscoverySummary
+from app.models.discovery import DiscoverySummary, QuotaExhaustedStop
 from app.question_bank.lookup_service import QuestionBankLookupService
 from app.question_bank.seeder import QuestionBankSeeder
 from app.utils.config_loader import (
@@ -159,10 +159,29 @@ async def run(args: argparse.Namespace) -> None:
                     logger.info("Batch {}:\nFound {} APPLY jobs", batch_number, pending_count)
                     print(f"\nBatch {batch_number}:\nFound {pending_count} APPLY jobs")
 
-                    batch_summary = await service.run(
-                        page, run_id=run_id, force_job_id=None
-                    )
-                    
+                    try:
+                        batch_summary = await service.run(
+                            page, run_id=run_id, force_job_id=None
+                        )
+                    except QuotaExhaustedStop as exc:
+                        logger.warning("QuotaExhaustedStop raised: {}", exc)
+                        summary.quota_stopped = True
+                        if exc.summary:
+                            summary.processed += exc.summary.processed
+                            summary.discovered += exc.summary.discovered
+                            summary.already_applied += exc.summary.already_applied
+                            summary.requires_review += exc.summary.requires_review
+                            summary.failed += exc.summary.failed
+                            summary.easy_apply += exc.summary.easy_apply
+                            summary.external_portal += exc.summary.external_portal
+                            summary.email += exc.summary.email
+                            summary.needs_register += exc.summary.needs_register
+                            summary.login_required += exc.summary.login_required
+                            summary.unknown_flow += exc.summary.unknown_flow
+                            summary.quota_exhausted += exc.summary.quota_exhausted
+                            summary.form_fill_reports.extend(exc.summary.form_fill_reports)
+                        break
+
                     summary.processed += batch_summary.processed
                     summary.discovered += batch_summary.discovered
                     summary.already_applied += batch_summary.already_applied
@@ -174,12 +193,16 @@ async def run(args: argparse.Namespace) -> None:
                     summary.needs_register += batch_summary.needs_register
                     summary.login_required += batch_summary.login_required
                     summary.unknown_flow += batch_summary.unknown_flow
+                    summary.quota_exhausted += batch_summary.quota_exhausted
                     summary.form_fill_reports.extend(batch_summary.form_fill_reports)
+
+                    if batch_summary.quota_stopped:
+                        break
 
                     if batch_summary.processed == 0:
                         logger.info("No jobs were processed in this batch. Exiting loop.")
                         break
-                    
+
                     batch_number += 1
     finally:
         repo.close()
@@ -249,7 +272,16 @@ async def run(args: argparse.Namespace) -> None:
     print(f"Register:         {summary.needs_register}")
     print(f"Login Required:   {summary.login_required}")
     print(f"Unknown:          {summary.unknown_flow}")
+    print(f"Quota Exhausted:  {summary.quota_exhausted}")
     print(f"Failed:           {summary.failed}")
+    if summary.quota_stopped:
+        print()
+        print("!" * 40)
+        print("QUOTA_EXHAUSTED_DETECTED")
+        print("Discovery stopped because Naukri quota appears exhausted.")
+        print("Reason:")
+        print("3 consecutive quota exhaustion events detected.")
+        print("!" * 40)
     print("=" * 40)
 
     if qb_report is not None:
