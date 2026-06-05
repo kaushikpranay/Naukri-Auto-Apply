@@ -144,11 +144,13 @@ class FormFiller:
                 if not await is_valid_recruiter_question_container(container):
                     continue
                     
-                question_text = await self._extract_text(
-                    container, self._selectors.discovery.questions.text
+                question_text = await self._extract_question_label(
+                    container, self._selectors.discovery.questions.text, page
                 )
                 if not question_text:
                     continue
+
+                logger.info("QUESTION_LABEL_DETECTED: '{}'", question_text[:100])
                     
                 question_key = normalize_question_key(question_text)
                 if question_key not in processed_keys:
@@ -827,6 +829,131 @@ class FormFiller:
                 continue
         return ""
 
+    async def _extract_question_label(
+        self, container, selector_string: str, page: Page | None = None
+    ) -> str:
+        """Extract the actual question label text, never an option value.
+
+        Strategy:
+          1. Collect all option texts (radio labels, checkbox labels, select
+             options) so we can exclude them.
+          2. Try chatbot-message selectors first (div[class*='botMsg'] span,
+             div[class*='botMsg']) — these hold the recruiter question.
+          3. Try each selector in the configured selector string, skipping
+             any text that matches a known option value.
+          4. Fallback: get the container's full text and strip all option
+             values from it.
+        """
+        # --- Step 1: gather all option texts for exclusion ---
+        option_texts: set[str] = set()
+        for opt_sel in [
+            "input[type='radio'] + label",
+            "label:has(input[type='radio'])",
+            "[role='radio']",
+            "input[type='checkbox'] + label",
+            "label:has(input[type='checkbox'])",
+            "[role='checkbox']",
+            "select option",
+        ]:
+            try:
+                locs = container.locator(opt_sel)
+                cnt = await locs.count()
+                for i in range(cnt):
+                    t = (await locs.nth(i).inner_text()).strip()
+                    if t:
+                        option_texts.add(t.lower())
+            except Exception:
+                pass
+
+        # Also gather option texts from the active chatbot drawer
+        if page:
+            drawer = await self._resolve_drawer(page)
+            if drawer:
+                for opt_sel in [
+                    "[role='radio']",
+                    "input[type='radio'] + label",
+                    "[role='checkbox']",
+                    "input[type='checkbox'] + label",
+                    "select option",
+                ]:
+                    try:
+                        locs = drawer.locator(opt_sel)
+                        cnt = await locs.count()
+                        for i in range(cnt):
+                            t = (await locs.nth(i).inner_text()).strip()
+                            if t:
+                                option_texts.add(t.lower())
+                    except Exception:
+                        pass
+
+        def _is_option_text(text: str) -> bool:
+            return text.lower().strip() in option_texts
+
+        # --- Step 2: chatbot message selectors (highest priority) ---
+        chatbot_selectors = [
+            "div[class*='botMsg'] span",
+            "div[class*='botMsg']",
+            "span[class*='question']",
+            "div[class*='question-text']",
+            "p[class*='question']",
+        ]
+        for sel in chatbot_selectors:
+            try:
+                item = container.locator(sel)
+                if await item.count() == 0:
+                    continue
+                text = (await item.first.inner_text()).strip()
+                if text and not _is_option_text(text):
+                    return text
+            except Exception:
+                continue
+
+        # --- Step 3: configured selectors, skipping option values ---
+        for selector in self._split_selectors(selector_string):
+            try:
+                items = container.locator(selector)
+                cnt = await items.count()
+                for i in range(cnt):
+                    text = (await items.nth(i).inner_text()).strip()
+                    if text and not _is_option_text(text):
+                        return text
+            except Exception:
+                continue
+
+        # --- Step 4: fallback — container text minus option values ---
+        try:
+            full_text = (await container.inner_text()).strip()
+            if full_text:
+                # Remove each option text from the full text
+                cleaned = full_text
+                for opt in option_texts:
+                    cleaned = cleaned.replace(opt, "")
+                    # also case-preserved removal
+                    for line in full_text.split("\n"):
+                        if line.strip().lower() == opt:
+                            cleaned = cleaned.replace(line.strip(), "")
+                cleaned = " ".join(cleaned.split()).strip()
+                if cleaned:
+                    return cleaned
+        except Exception:
+            pass
+
+        return ""
+
+    async def _resolve_drawer(self, page: Page):
+        """Find the visible chatbot drawer on the page."""
+        for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
+            try:
+                loc = page.locator(sel)
+                count = await loc.count()
+                for i in range(count):
+                    el = loc.nth(i)
+                    if await el.is_visible():
+                        return el
+            except Exception:
+                continue
+        return None
+
     async def _capture_screenshot(self, page: Page, name: str) -> str | None:
         self._screenshots_dir.mkdir(parents=True, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -844,90 +971,98 @@ class FormFiller:
         return [s.strip() for s in selector_string.split(",") if s.strip()]
 
     async def _get_field_options(self, container, field_type: str, page: Page | None = None) -> list[str]:
-        """Extract available options for select, radio, checkbox, or div inputs with global page/drawer fallback."""
-        options = []
-        try:
-            drawer = None
-            if page:
-                for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
-                    loc = page.locator(sel)
-                    count = await loc.count()
-                    for i in range(count):
-                        el = loc.nth(i)
-                        if await el.is_visible():
-                            drawer = el
-                            break
-                    if drawer:
-                        break
+        """Extract available options from radio buttons, checkboxes, and select elements only.
 
-            # 1. Select options
+        Excludes:
+          - Save / Submit / Continue / Skip / Cancel / Next / Close buttons
+          - Parent text nodes (combined text from multiple children)
+          - Containers whose text is a concatenation of other options
+        """
+        _EXCLUDED_WORDS = {
+            "save", "submit", "skip", "continue", "next", "close",
+            "cancel", "apply", "confirm", "back", "done", "ok",
+        }
+
+        options: list[str] = []
+        try:
+            drawer = await self._resolve_drawer(page) if page else None
+
+            # 1. Select <option> elements
             select_locs = container.locator("select option")
-            if await select_locs.count() == 0 and page:
-                if drawer:
-                    select_locs = drawer.locator("select option")
-                else:
-                    select_locs = page.locator("select option:visible")
-            
+            if await select_locs.count() == 0 and drawer:
+                select_locs = drawer.locator("select option")
+
             count = await select_locs.count()
             for i in range(count):
                 text = (await select_locs.nth(i).inner_text()).strip()
                 if text and not any(text.lower().startswith(p) for p in ["select", "--", "choose"]):
                     options.append(text)
 
-            # 2. Radio options
+            # 2. Radio button labels
             radio_locs = container.locator("[role='radio'], input[type='radio']")
-            if await radio_locs.count() == 0 and page:
-                if drawer:
-                    radio_locs = drawer.locator("[role='radio']:visible, input[type='radio']:visible")
-                else:
-                    radio_locs = page.locator("[role='radio']:visible, input[type='radio']:visible")
-            
+            if await radio_locs.count() == 0 and drawer:
+                radio_locs = drawer.locator("[role='radio']:visible, input[type='radio']:visible")
+
             count = await radio_locs.count()
             for i in range(count):
                 el = radio_locs.nth(i)
-                text = (await el.inner_text()).strip()
+                # Prefer aria-label first (clean single-value label)
+                text = (await el.get_attribute("aria-label") or "").strip()
                 if not text:
-                    text = (await el.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
+                    text = (await el.inner_text()).strip()
+                # Only use label sibling, NOT parentElement.innerText
+                if not text:
+                    try:
+                        text = await el.evaluate("""el => {
+                            // Check for associated <label>
+                            const id = el.getAttribute('id');
+                            if (id) {
+                                const label = document.querySelector('label[for="' + id + '"]');
+                                if (label) return label.innerText.trim();
+                            }
+                            // Check for wrapping <label>
+                            const parent = el.closest('label');
+                            if (parent) return parent.innerText.trim();
+                            // Check immediate next sibling text
+                            const next = el.nextElementSibling;
+                            if (next && next.tagName === 'LABEL') return next.innerText.trim();
+                            if (next && next.tagName === 'SPAN') return next.innerText.trim();
+                            return '';
+                        }""")
+                    except Exception:
+                        text = ""
                 if text:
                     text = " ".join(text.split())
                     options.append(text)
 
-            # 3. Checkbox options
+            # 3. Checkbox labels
             checkbox_locs = container.locator("input[type='checkbox'], [role='checkbox']")
-            if await checkbox_locs.count() == 0 and page:
-                if drawer:
-                    checkbox_locs = drawer.locator("input[type='checkbox']:visible, [role='checkbox']:visible")
-                else:
-                    checkbox_locs = page.locator("input[type='checkbox']:visible, [role='checkbox']:visible")
-            
+            if await checkbox_locs.count() == 0 and drawer:
+                checkbox_locs = drawer.locator("input[type='checkbox']:visible, [role='checkbox']:visible")
+
             count = await checkbox_locs.count()
             for i in range(count):
                 el = checkbox_locs.nth(i)
-                text = (await el.inner_text()).strip()
+                text = (await el.get_attribute("aria-label") or "").strip()
                 if not text:
-                    text = (await el.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
-                if text:
-                    text = " ".join(text.split())
-                    options.append(text)
-
-            # 4. Div options / Buttons
-            options_sel = "button, [role='button'], [role='option'], div[class*='option'], div[class*='button'], a[class*='btn'], a[class*='button'], [tabindex]"
-            div_locs = container.locator(options_sel)
-            if await div_locs.count() == 0 and page:
-                if drawer:
-                    div_locs = drawer.locator(options_sel)
-                else:
-                    div_locs = page.locator(options_sel)
-            
-            count = await div_locs.count()
-            for i in range(count):
-                el = div_locs.nth(i)
-                tag = await el.evaluate("el => el.tagName.toLowerCase()")
-                if tag in ("input", "textarea", "select"):
-                    continue
-                text = (await el.inner_text()).strip()
+                    text = (await el.inner_text()).strip()
                 if not text:
-                    text = (await el.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
+                    try:
+                        text = await el.evaluate("""el => {
+                            const id = el.getAttribute('id');
+                            if (id) {
+                                const label = document.querySelector('label[for="' + id + '"]');
+                                if (label) return label.innerText.trim();
+                            }
+                            const parent = el.closest('label');
+                            if (parent) return parent.innerText.trim();
+                            const next = el.nextElementSibling;
+                            if (next && next.tagName === 'LABEL') return next.innerText.trim();
+                            if (next && next.tagName === 'SPAN') return next.innerText.trim();
+                            return '';
+                        }""")
+                    except Exception:
+                        text = ""
                 if text:
                     text = " ".join(text.split())
                     options.append(text)
@@ -935,13 +1070,45 @@ class FormFiller:
         except Exception as e:
             logger.warning("Error in _get_field_options: {}", e)
 
-        # De-duplicate while preserving order
-        seen = set()
-        unique_opts = []
-        for o in options:
+        # --- Filtering ---
+        # 1. Remove action-button texts
+        filtered: list[str] = []
+        for opt in options:
+            cleaned_lower = opt.lower().strip()
+            if cleaned_lower in _EXCLUDED_WORDS:
+                continue
+            # Single word that is an excluded keyword
+            words = cleaned_lower.split()
+            if len(words) == 1 and words[0] in _EXCLUDED_WORDS:
+                continue
+            filtered.append(opt)
+
+        # 2. De-duplicate while preserving order
+        seen: set[str] = set()
+        unique_opts: list[str] = []
+        for o in filtered:
             if o not in seen:
                 seen.add(o)
                 unique_opts.append(o)
+
+        # 3. Remove combined text nodes (text that is a concatenation of ≥2 other options)
+        if len(unique_opts) > 1:
+            final_opts: list[str] = []
+            for opt in unique_opts:
+                # Check if this option's text contains all other options' text joined
+                other_texts = [o for o in unique_opts if o != opt]
+                is_combined = False
+                if len(other_texts) >= 2:
+                    # If opt contains all other option texts, it's a combined node
+                    opt_lower = opt.lower()
+                    matches = sum(1 for ot in other_texts if ot.lower() in opt_lower)
+                    if matches >= 2 and matches == len(other_texts):
+                        is_combined = True
+                if not is_combined:
+                    final_opts.append(opt)
+            unique_opts = final_opts
+
+        logger.info("QUESTION_OPTIONS_DETECTED: {}", unique_opts)
         return unique_opts
 
     async def _interactive_prompt_user(
@@ -952,7 +1119,17 @@ class FormFiller:
         stored_answer: str = "",
         options: list[str] = None
     ) -> dict:
-        """Open a modern glassmorphic dialog in the browser to prompt the user for input/mapping."""
+        """Open a glassmorphic dialog and block execution until the user responds.
+
+        Uses ``page.wait_for_function()`` with timeout=0 (infinite) so that:
+          - Automation is fully suspended.
+          - No polling loops or dialog re-injection.
+          - Only resumes when the user clicks an option or submits text.
+
+        A MutationObserver watches for the dialog being removed by the SPA
+        and re-attaches it automatically — keeping control entirely in the
+        browser so the Python side just waits on a single function call.
+        """
         if options is None:
             options = []
 
@@ -962,278 +1139,204 @@ class FormFiller:
         stored_ans_json = json.dumps(stored_answer)
         is_case2_json = json.dumps(is_case2)
 
-        # Build premium glassmorphic JS dialog
+        # Build premium glassmorphic JS dialog with self-healing MutationObserver
         js_code = f"""
         (() => {{
-            window.interactiveLearningResponse = null;
-            
+            // Sentinel: set to null, Python waits for non-null
+            window.__ilr = null;
+
             // Remove existing dialog if any
             const existing = document.getElementById('interactive-learning-dialog');
             if (existing) existing.remove();
 
-            const container = document.createElement('div');
-            container.id = 'interactive-learning-dialog';
-            container.style.position = 'fixed';
-            container.style.top = '0';
-            container.style.left = '0';
-            container.style.width = '100vw';
-            container.style.height = '100vh';
-            container.style.backgroundColor = 'rgba(15, 15, 25, 0.85)';
-            container.style.backdropFilter = 'blur(12px)';
-            container.style.webkitBackdropFilter = 'blur(12px)';
-            container.style.zIndex = '9999999';
-            container.style.display = 'flex';
-            container.style.alignItems = 'center';
-            container.style.justifyContent = 'center';
-            container.style.fontFamily = 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+            function buildDialog() {{
+                const container = document.createElement('div');
+                container.id = 'interactive-learning-dialog';
+                container.style.cssText = `
+                    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+                    background: rgba(15, 15, 25, 0.85); backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px); z-index: 9999999;
+                    display: flex; align-items: center; justify-content: center;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                `;
 
-            const dialog = document.createElement('div');
-            dialog.style.backgroundColor = '#181824';
-            dialog.style.color = '#f3f4f6';
-            dialog.style.padding = '32px';
-            dialog.style.borderRadius = '24px';
-            dialog.style.border = '1px solid rgba(255, 255, 255, 0.08)';
-            dialog.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5)';
-            dialog.style.maxWidth = '550px';
-            dialog.style.width = '90%';
-            dialog.style.display = 'flex';
-            dialog.style.flexDirection = 'column';
-            dialog.style.gap = '24px';
+                const dialog = document.createElement('div');
+                dialog.style.cssText = `
+                    background: #181824; color: #f3f4f6; padding: 32px;
+                    border-radius: 24px; border: 1px solid rgba(255,255,255,0.08);
+                    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+                    max-width: 550px; width: 90%; display: flex;
+                    flex-direction: column; gap: 24px;
+                `;
 
-            // Title
-            const title = document.createElement('h2');
-            title.innerText = {is_case2_json} ? 'Map Stored Answer to Option' : 'Interactive Fallback Prompt';
-            title.style.margin = '0';
-            title.style.fontSize = '24px';
-            title.style.fontWeight = '700';
-            title.style.letterSpacing = '-0.025em';
-            title.style.color = '#38bdf8';
-            dialog.appendChild(title);
+                // Title
+                const title = document.createElement('h2');
+                title.innerText = {is_case2_json} ? 'Map Stored Answer to Option' : 'Unknown Question — Your Input Needed';
+                title.style.cssText = 'margin:0; font-size:24px; font-weight:700; letter-spacing:-0.025em; color:#38bdf8;';
+                dialog.appendChild(title);
 
-            // Question Section
-            const qContainer = document.createElement('div');
-            qContainer.style.display = 'flex';
-            qContainer.style.flexDirection = 'column';
-            qContainer.style.gap = '6px';
-            
-            const qLabel = document.createElement('div');
-            qLabel.innerText = 'QUESTION';
-            qLabel.style.fontSize = '11px';
-            qLabel.style.fontWeight = '800';
-            qLabel.style.color = '#6b7280';
-            qLabel.style.letterSpacing = '0.05em';
-            qContainer.appendChild(qLabel);
+                // Question
+                const qC = document.createElement('div');
+                qC.style.cssText = 'display:flex; flex-direction:column; gap:6px;';
+                const qL = document.createElement('div');
+                qL.innerText = 'QUESTION';
+                qL.style.cssText = 'font-size:11px; font-weight:800; color:#6b7280; letter-spacing:0.05em;';
+                qC.appendChild(qL);
+                const qT = document.createElement('div');
+                qT.innerText = {question_json};
+                qT.style.cssText = 'font-weight:600; font-size:17px; line-height:1.5; color:#fff;';
+                qC.appendChild(qT);
+                dialog.appendChild(qC);
 
-            const qText = document.createElement('div');
-            qText.style.fontWeight = '600';
-            qText.style.fontSize = '17px';
-            qText.style.lineHeight = '1.5';
-            qText.style.color = '#ffffff';
-            qText.innerText = {question_json};
-            qContainer.appendChild(qText);
-            dialog.appendChild(qContainer);
+                // Stored answer badge (Case 2 only)
+                if ({is_case2_json}) {{
+                    const rawDiv = document.createElement('div');
+                    rawDiv.style.cssText = 'background:rgba(244,63,94,0.1); border:1px solid rgba(244,63,94,0.2); padding:12px 16px; border-radius:12px;';
+                    rawDiv.innerHTML = '<span style="color:#9ca3af;font-size:13px;">Stored Answer:</span> <strong style="color:#fb7185;font-size:15px;margin-left:6px;">' + {stored_ans_json} + '</strong>';
+                    dialog.appendChild(rawDiv);
+                }}
 
-            if ({is_case2_json}) {{
-                const rawAnsDiv = document.createElement('div');
-                rawAnsDiv.style.backgroundColor = 'rgba(244, 63, 94, 0.1)';
-                rawAnsDiv.style.border = '1px solid rgba(244, 63, 94, 0.2)';
-                rawAnsDiv.style.padding = '12px 16px';
-                rawAnsDiv.style.borderRadius = '12px';
-                rawAnsDiv.innerHTML = `<span style="color: #9ca3af; font-size: 13px;">Stored Answer:</span> <strong style="color: #fb7185; font-size: 15px; margin-left: 6px;">${stored_ans_json}</strong>`;
-                dialog.appendChild(rawAnsDiv);
+                const opts = {options_json};
+
+                if (opts && opts.length > 0) {{
+                    const oTitle = document.createElement('div');
+                    oTitle.innerText = {is_case2_json} ? 'Select the correct option to map to:' : 'Select the correct option:';
+                    oTitle.style.cssText = 'font-weight:600; font-size:13px; color:#9ca3af; letter-spacing:0.05em;';
+                    dialog.appendChild(oTitle);
+
+                    const oC = document.createElement('div');
+                    oC.style.cssText = 'display:flex; flex-direction:column; gap:10px; max-height:240px; overflow-y:auto; padding-right:4px;';
+
+                    opts.forEach(opt => {{
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.innerText = opt;
+                        btn.style.cssText = `
+                            background: rgba(255,255,255,0.03); color: #e5e7eb;
+                            border: 1px solid rgba(255,255,255,0.08); padding: 12px 18px;
+                            border-radius: 12px; cursor: pointer; text-align: left;
+                            font-size: 14px; font-weight: 500; transition: all 0.2s;
+                        `;
+                        btn.onmouseover = () => {{ btn.style.background='#0284c7'; btn.style.borderColor='#38bdf8'; btn.style.color='#fff'; }};
+                        btn.onmouseout = () => {{ btn.style.background='rgba(255,255,255,0.03)'; btn.style.borderColor='rgba(255,255,255,0.08)'; btn.style.color='#e5e7eb'; }};
+                        btn.onclick = () => {{
+                            if ({is_case2_json}) {{
+                                window.__ilr = {{ answer: {stored_ans_json}, selected_option: opt }};
+                            }} else {{
+                                window.__ilr = {{ answer: opt, selected_option: opt }};
+                            }}
+                        }};
+                        oC.appendChild(btn);
+                    }});
+                    dialog.appendChild(oC);
+                }} else {{
+                    // Free-text input
+                    const iL = document.createElement('div');
+                    iL.innerText = 'Enter your answer:';
+                    iL.style.cssText = 'font-weight:600; font-size:13px; color:#9ca3af;';
+                    dialog.appendChild(iL);
+
+                    const inp = document.createElement('input');
+                    inp.id = 'custom-answer-input';
+                    inp.type = 'text';
+                    inp.placeholder = 'Type your answer here...';
+                    inp.style.cssText = `
+                        background: #0f0f16; color: #fff; border: 1px solid rgba(255,255,255,0.1);
+                        padding: 14px; border-radius: 12px; font-size: 15px; outline: none; transition: all 0.2s;
+                    `;
+                    inp.onfocus = () => {{ inp.style.borderColor='#38bdf8'; inp.style.boxShadow='0 0 0 2px rgba(56,189,248,0.2)'; }};
+                    inp.onblur = () => {{ inp.style.borderColor='rgba(255,255,255,0.1)'; inp.style.boxShadow='none'; }};
+                    dialog.appendChild(inp);
+
+                    const acts = document.createElement('div');
+                    acts.style.cssText = 'display:flex; justify-content:flex-end; gap:12px;';
+
+                    const sBtn = document.createElement('button');
+                    sBtn.id = 'confirm-button';
+                    sBtn.type = 'button';
+                    sBtn.innerText = 'Submit Answer';
+                    sBtn.style.cssText = `
+                        background: #0284c7; color: #fff; border: none; padding: 12px 24px;
+                        border-radius: 12px; cursor: not-allowed; font-weight: 600;
+                        font-size: 14px; opacity: 0.5; transition: all 0.2s;
+                    `;
+
+                    inp.oninput = () => {{
+                        const ok = inp.value.trim().length > 0;
+                        sBtn.disabled = !ok;
+                        sBtn.style.opacity = ok ? '1' : '0.5';
+                        sBtn.style.cursor = ok ? 'pointer' : 'not-allowed';
+                    }};
+                    inp.onkeydown = (e) => {{
+                        if (e.key === 'Enter' && inp.value.trim().length > 0)
+                            window.__ilr = {{ answer: inp.value.trim(), selected_option: null }};
+                    }};
+                    sBtn.onclick = () => {{
+                        if (inp.value.trim().length > 0)
+                            window.__ilr = {{ answer: inp.value.trim(), selected_option: null }};
+                    }};
+                    acts.appendChild(sBtn);
+                    dialog.appendChild(acts);
+                }}
+
+                container.appendChild(dialog);
+                return container;
             }}
 
-            const options = {options_json};
-            
-            // Case 1 (Unknown Question) with options OR Case 2 (Unmatched option mapping)
-            if (options && options.length > 0) {{
-                const optionsTitle = document.createElement('div');
-                optionsTitle.style.fontWeight = '600';
-                optionsTitle.innerText = {is_case2_json} ? 'Select the correct option to map to:' : 'Select the correct option:';
-                optionsTitle.style.fontSize = '13px';
-                optionsTitle.style.color = '#9ca3af';
-                optionsTitle.style.letterSpacing = '0.05em';
-                dialog.appendChild(optionsTitle);
+            // Inject the dialog
+            const dlg = buildDialog();
+            document.body.appendChild(dlg);
 
-                const optsContainer = document.createElement('div');
-                optsContainer.style.display = 'flex';
-                optsContainer.style.flexDirection = 'column';
-                optsContainer.style.gap = '10px';
-                optsContainer.style.maxHeight = '240px';
-                optsContainer.style.overflowY = 'auto';
-                optsContainer.style.paddingRight = '4px';
+            // Self-healing: MutationObserver re-attaches dialog if SPA removes it
+            const observer = new MutationObserver(() => {{
+                if (!document.getElementById('interactive-learning-dialog') && window.__ilr === null) {{
+                    const rebuilt = buildDialog();
+                    document.body.appendChild(rebuilt);
+                }}
+            }});
+            observer.observe(document.body, {{ childList: true, subtree: true }});
 
-                options.forEach(opt => {{
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.innerText = opt;
-                    btn.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-                    btn.style.color = '#e5e7eb';
-                    btn.style.border = '1px solid rgba(255, 255, 255, 0.08)';
-                    btn.style.padding = '12px 18px';
-                    btn.style.borderRadius = '12px';
-                    btn.style.cursor = 'pointer';
-                    btn.style.textAlign = 'left';
-                    btn.style.fontSize = '14px';
-                    btn.style.fontWeight = '500';
-                    btn.style.transition = 'all 0.2s';
-                    
-                    btn.onmouseover = () => {{
-                        btn.style.backgroundColor = '#0284c7';
-                        btn.style.borderColor = '#38bdf8';
-                        btn.style.color = '#ffffff';
-                    }};
-                    btn.onmouseout = () => {{
-                        btn.style.backgroundColor = 'rgba(255, 255, 255, 0.03)';
-                        btn.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-                        btn.style.color = '#e5e7eb';
-                    }};
-                    
-                    btn.onclick = () => {{
-                        if ({is_case2_json}) {{
-                            window.interactiveLearningResponse = {{ answer: {stored_ans_json}, selected_option: opt }};
-                        }} else {{
-                            window.interactiveLearningResponse = {{ answer: opt, selected_option: opt }};
-                        }}
-                    }};
-                    optsContainer.appendChild(btn);
-                }});
-                dialog.appendChild(optsContainer);
-            }} else {{
-                // Case 1 (Unknown Question) without options -> Show text input
-                const inputLabel = document.createElement('div');
-                inputLabel.style.fontWeight = '600';
-                inputLabel.innerText = 'Enter your answer:';
-                inputLabel.style.fontSize = '13px';
-                inputLabel.style.color = '#9ca3af';
-                dialog.appendChild(inputLabel);
-
-                const input = document.createElement('input');
-                input.id = 'custom-answer-input';
-                input.type = 'text';
-                input.placeholder = 'Type your answer here...';
-                input.style.backgroundColor = '#0f0f16';
-                input.style.color = '#ffffff';
-                input.style.border = '1px solid rgba(255, 255, 255, 0.1)';
-                input.style.padding = '14px';
-                input.style.borderRadius = '12px';
-                input.style.fontSize = '15px';
-                input.style.outline = 'none';
-                input.style.transition = 'all 0.2s';
-                
-                input.onfocus = () => {{
-                    input.style.borderColor = '#38bdf8';
-                    input.style.boxShadow = '0 0 0 2px rgba(56, 189, 248, 0.2)';
-                }};
-                input.onblur = () => {{
-                    input.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                    input.style.boxShadow = 'none';
-                }};
-                dialog.appendChild(input);
-                
-                // Submit Action
-                const actions = document.createElement('div');
-                actions.style.display = 'flex';
-                actions.style.justifyContent = 'flex-end';
-                actions.style.gap = '12px';
-
-                const submitBtn = document.createElement('button');
-                submitBtn.id = 'confirm-button';
-                submitBtn.type = 'button';
-                submitBtn.innerText = 'Submit Answer';
-                submitBtn.style.backgroundColor = '#0284c7';
-                submitBtn.style.color = '#ffffff';
-                submitBtn.style.border = 'none';
-                submitBtn.style.padding = '12px 24px';
-                submitBtn.style.borderRadius = '12px';
-                submitBtn.style.cursor = 'not-allowed';
-                submitBtn.style.fontWeight = '600';
-                submitBtn.style.fontSize = '14px';
-                submitBtn.style.opacity = '0.5';
-                submitBtn.style.transition = 'all 0.2s';
-
-                input.oninput = () => {{
-                    const hasVal = input.value.trim().length > 0;
-                    submitBtn.disabled = !hasVal;
-                    submitBtn.style.opacity = hasVal ? '1' : '0.5';
-                    submitBtn.style.cursor = hasVal ? 'pointer' : 'not-allowed';
-                    if (hasVal) {{
-                        submitBtn.onmouseover = () => {{ submitBtn.style.backgroundColor = '#0369a1'; }};
-                        submitBtn.onmouseout = () => {{ submitBtn.style.backgroundColor = '#0284c7'; }};
-                    }} else {{
-                        submitBtn.onmouseover = null;
-                        submitBtn.onmouseout = null;
-                    }}
-                }};
-
-                input.onkeydown = (e) => {{
-                    if (e.key === 'Enter' && input.value.trim().length > 0) {{
-                        window.interactiveLearningResponse = {{ answer: input.value.trim(), selected_option: null }};
-                    }}
-                }};
-
-                submitBtn.onclick = () => {{
-                    if (input.value.trim().length > 0) {{
-                        window.interactiveLearningResponse = {{ answer: input.value.trim(), selected_option: null }};
-                    }}
-                }};
-                
-                actions.appendChild(submitBtn);
-                dialog.appendChild(actions);
-            }}
-
-            container.appendChild(dialog);
-            document.body.appendChild(container);
+            // Store observer ref so cleanup can disconnect it
+            window.__ilrObserver = observer;
         }})();
         """
 
-        logger.info("PAUSED_FOR_USER_INPUT")
-        logger.info("DETECTED_OPTIONS: {}", options)
+        logger.info("PAUSED_FOR_USER_INPUT | question='{}' options={}", question_text[:80], options)
 
         # Inject the dialog
         try:
             await page.evaluate(js_code)
         except Exception as e:
-            logger.warning("Initial dialog injection failed: {}", e)
+            logger.warning("Dialog injection failed: {}", e)
+            # Return a safe fallback so automation doesn't crash
+            return {"answer": "", "selected_option": None}
 
-        # Loop until response is not None
-        response = None
-        loop_cnt = 0
-        while response is None:
-            if page.is_closed():
-                logger.error("Page was closed while waiting for user input.")
-                break
-            await page.wait_for_timeout(1000)
-            loop_cnt += 1
-            
-            import os
-            if os.environ.get("AUTO_RESPOND") == "1" and loop_cnt == 5:
-                logger.info("SIMULATING USER RESPONSE FOR TESTING")
-                if is_case2:
-                    opt = options[0] if options else "0-1 years"
-                    await page.evaluate(f"() => {{ window.interactiveLearningResponse = {{ answer: '{stored_answer}', selected_option: '{opt}' }}; }}")
-                else:
-                    ans = "1.5"
-                    await page.evaluate(f"() => {{ window.interactiveLearningResponse = {{ answer: '{ans}', selected_option: null }}; }}")
-            try:
-                # Check if dialog exists, re-inject if not
-                exists = await page.evaluate("() => !!document.getElementById('interactive-learning-dialog')")
-                if not exists:
-                    logger.info("Dialog not found in DOM, re-injecting...")
-                    await page.evaluate(js_code)
-                response = await page.evaluate("() => window.interactiveLearningResponse")
-            except Exception as e:
-                logger.warning("Interactive prompt page.evaluate error: {}. Re-injecting dialog.", e)
-                try:
-                    await page.evaluate(js_code)
-                except Exception:
-                    pass
+        logger.info("POPUP_RENDERED")
+        logger.info("WAITING_FOR_USER_RESPONSE — automation is fully suspended, waiting indefinitely...")
 
-        logger.info("USER_RESPONSE_RECEIVED")
-
-        # Cleanup
+        # Block execution until user responds — NO polling, NO timeout
         try:
-            await page.evaluate("() => { const el = document.getElementById('interactive-learning-dialog'); if (el) el.remove(); }")
+            await page.wait_for_function(
+                "() => window.__ilr !== null",
+                timeout=0,  # Wait forever
+            )
+        except Exception as e:
+            logger.error("wait_for_function interrupted: {}", e)
+            return {"answer": "", "selected_option": None}
+
+        # Read the response
+        response = await page.evaluate("() => window.__ilr")
+
+        logger.info("USER_RESPONSE_RECEIVED: {}", response)
+
+        # Cleanup: remove dialog and disconnect observer
+        try:
+            await page.evaluate("""() => {
+                if (window.__ilrObserver) { window.__ilrObserver.disconnect(); window.__ilrObserver = null; }
+                const el = document.getElementById('interactive-learning-dialog');
+                if (el) el.remove();
+                window.__ilr = null;
+            }""")
         except Exception:
             pass
 

@@ -190,7 +190,10 @@ async def _run_discovery_stage(
             JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN job_applications a ON a.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
-              AND a.job_id IS NULL
+              AND (
+                  j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error'))
+              )
         """)
         pending_count = cursor.fetchone()[0]
 
@@ -271,8 +274,8 @@ async def main_async() -> None:
             sys.exit(1)
 
         # ── Shared service instances (reused across pipeline batches) ─────
-        repo_coll = JobRepository(db_path)
-        repo_eval = EvaluationsRepository(db_path)
+        repo_eval = EvaluationsRepository(db_path)  # migrations run first
+        repo_coll = JobRepository(db_path)           # opens after migrations done
         providers = _build_providers(prompt_path, profile_path)
         eval_service = EvaluationService(
             repo=repo_eval,
@@ -513,6 +516,8 @@ def main() -> None:
         print("\n\nInterrupted by user. Exiting...")
         sys.exit(1)
     except Exception as exc:
+        import traceback
+        traceback.print_exc()
         print(f"\n[ERROR] Fatal error: {exc}")
         sys.exit(1)
 

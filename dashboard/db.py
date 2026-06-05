@@ -81,6 +81,16 @@ def get_overview_stats() -> dict:
         c.execute("SELECT COUNT(*) FROM jobs WHERE created_at LIKE ?", (f"{today}%",))
         jobs_today = c.fetchone()[0]
 
+        # Retry queue breakdown
+        c.execute("""
+            SELECT status, COUNT(*)
+            FROM jobs
+            WHERE status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+            GROUP BY status
+        """)
+        retry_counts = {row[0]: row[1] for row in c.fetchall()}
+        retry_total = sum(retry_counts.values())
+
         return {
             "total_jobs": total_jobs,
             "jobs_today": jobs_today,
@@ -103,6 +113,15 @@ def get_overview_stats() -> dict:
             "answered_questions": answered_questions,
             "coverage_pct": coverage_pct,
             "last_run": last_run,
+            "retry_queue": {
+                "count": retry_total,
+                "reasons": {
+                    "unknown_question": retry_counts.get("unknown_question", 0),
+                    "quota_exhausted": retry_counts.get("quota_exhausted", 0),
+                    "temporary_failure": retry_counts.get("temporary_failure", 0),
+                    "browser_error": retry_counts.get("browser_error", 0),
+                }
+            }
         }
 
 
@@ -440,6 +459,16 @@ def get_system_status() -> dict:
         """)
         recent_runs = _rows_to_dicts(c.fetchall())
 
+        # Retry queue breakdown
+        c.execute("""
+            SELECT status, COUNT(*)
+            FROM jobs
+            WHERE status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+            GROUP BY status
+        """)
+        retry_counts = {row[0]: row[1] for row in c.fetchall()}
+        retry_total = sum(retry_counts.values())
+
         return {
             "collector": {
                 "total_jobs": total_jobs,
@@ -462,6 +491,15 @@ def get_system_status() -> dict:
                 "pending_apply": pending_apply,
                 "last_discovery": last_discovery,
                 "quota": get_quota_status(),
+                "retry_queue": {
+                    "count": retry_total,
+                    "reasons": {
+                        "unknown_question": retry_counts.get("unknown_question", 0),
+                        "quota_exhausted": retry_counts.get("quota_exhausted", 0),
+                        "temporary_failure": retry_counts.get("temporary_failure", 0),
+                        "browser_error": retry_counts.get("browser_error", 0),
+                    }
+                }
             },
             "question_bank": {
                 "total": qb_total,

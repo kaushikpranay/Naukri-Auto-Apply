@@ -95,6 +95,7 @@ class ApplyDiscoveryService:
         page: Page,
         run_id: str | None = None,
         force_job_id: int | None = None,
+        only_retryable: bool = False,
     ) -> DiscoverySummary:
         """Process shortlisted jobs, or a single forced job.
 
@@ -103,6 +104,7 @@ class ApplyDiscoveryService:
             run_id: Run identifier (reserved).
             force_job_id: If set, ignore normal filtering and reprocess
                           exactly this job, clearing any prior record.
+            only_retryable: If True, only process retryable jobs.
 
         Raises:
             QuotaExhaustedStop: If 3 consecutive quota_exhausted events are
@@ -115,8 +117,11 @@ class ApplyDiscoveryService:
             if job is None:
                 logger.error("Job {} not found in database", force_job_id)
                 return summary
-            self._repo.clear_application(force_job_id)
             jobs = [job]
+        elif only_retryable:
+            jobs = self._repo.get_retryable_jobs(
+                limit=self._settings.discovery.max_discovery_jobs_per_run
+            )
         else:
             jobs = self._repo.get_jobs_for_discovery(
                 limit=self._settings.discovery.max_discovery_jobs_per_run
@@ -131,6 +136,8 @@ class ApplyDiscoveryService:
         for index, job in enumerate(jobs, start=1):
             logger.info("Job Opened: [{} / {}] {} - {}", index, len(jobs), job.company_name, job.job_title)
             started_at = datetime.now()
+            # Clear existing application to avoid duplicate entries and allow fresh discovery
+            self._repo.clear_application(job.id)
             try:
                 outcome = await self._discover_job(page, job)
                 self._repo.save_application(outcome.record)
@@ -146,6 +153,30 @@ class ApplyDiscoveryService:
                     outcome.record.apply_type or outcome.record.status,
                     (datetime.now() - started_at).total_seconds(),
                 )
+
+                # Determine retryable status or successful status update
+                has_unknown = False
+                has_error = False
+                if outcome.form_fill_report is not None:
+                    if len(outcome.form_fill_report.unknown) > 0:
+                        has_unknown = True
+                    if any(f.status == "error" for f in outcome.form_fill_report.filled):
+                        has_error = True
+                else:
+                    if any(q.field_type == "unknown" for q in outcome.questions):
+                        has_unknown = True
+
+                if outcome.record.apply_type == "quota_exhausted":
+                    self._repo.update_job_status(job.id, "quota_exhausted")
+                elif has_unknown:
+                    self._repo.update_job_status(job.id, "unknown_question")
+                elif has_error:
+                    self._repo.increment_retry_count(job.id)
+                    self._repo.update_job_status(job.id, "temporary_failure")
+                else:
+                    # Successful or non-retryable apply type
+                    status_val = outcome.record.apply_type or "applied"
+                    self._repo.update_job_status(job.id, status_val)
 
                 # ── Consecutive quota protection ──────────────────────────
                 if outcome.record.apply_type == "quota_exhausted":
@@ -178,6 +209,12 @@ class ApplyDiscoveryService:
                         detected_at=datetime.now().isoformat(),
                     )
                 )
+                import playwright.async_api
+                if isinstance(exc, (playwright.async_api.Error, asyncio.TimeoutError)):
+                    self._repo.update_job_status(job.id, "browser_error")
+                else:
+                    self._repo.update_job_status(job.id, "temporary_failure")
+                self._repo.increment_retry_count(job.id)
                 summary.failed += 1
 
             summary.processed += 1

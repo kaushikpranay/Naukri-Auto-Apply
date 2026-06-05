@@ -50,7 +50,11 @@ def fetch_data():
         FROM jobs j
         JOIN ai_evaluations e ON e.job_id = j.id
         LEFT JOIN job_applications a ON a.job_id = j.id
-        WHERE UPPER(e.action) = 'APPLY' AND a.job_id IS NULL
+        WHERE UPPER(e.action) = 'APPLY'
+          AND (
+              j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+              OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error'))
+          )
     """)
     pending_apply = c.fetchone()[0]
 
@@ -67,6 +71,16 @@ def fetch_data():
     today = datetime.now().strftime("%Y-%m-%d")
     c.execute("SELECT COUNT(*) FROM jobs WHERE created_at LIKE ?", (f"{today}%",))
     jobs_today = c.fetchone()[0]
+
+    # Retry queue breakdown
+    c.execute("""
+        SELECT status, COUNT(*)
+        FROM jobs
+        WHERE status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+        GROUP BY status
+    """)
+    retry_counts = {row[0]: row[1] for row in c.fetchall()}
+    retry_total = sum(retry_counts.values())
 
     overview_stats = {
         "total_jobs": total_jobs,
@@ -90,6 +104,15 @@ def fetch_data():
         "answered_questions": answered_questions,
         "coverage_pct": coverage_pct,
         "last_run": last_run,
+        "retry_queue": {
+            "count": retry_total,
+            "reasons": {
+                "unknown_question": retry_counts.get("unknown_question", 0),
+                "quota_exhausted": retry_counts.get("quota_exhausted", 0),
+                "temporary_failure": retry_counts.get("temporary_failure", 0),
+                "browser_error": retry_counts.get("browser_error", 0),
+            }
+        }
     }
 
     # Quota status
@@ -246,6 +269,15 @@ def fetch_data():
             "pending_apply": pending_apply,
             "last_discovery": last_discovery,
             "quota": quota_status,
+            "retry_queue": {
+                "count": retry_total,
+                "reasons": {
+                    "unknown_question": retry_counts.get("unknown_question", 0),
+                    "quota_exhausted": retry_counts.get("quota_exhausted", 0),
+                    "temporary_failure": retry_counts.get("temporary_failure", 0),
+                    "browser_error": retry_counts.get("browser_error", 0),
+                }
+            }
         },
         "question_bank": {
             "total": total_questions,
@@ -382,7 +414,7 @@ def write_html_templates():
         </div>
 
         <div class="row g-3">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="glass-card mb-4 p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h6 class="fw-bold text-white mb-0"><i class="bi bi-patch-question-fill text-accent"></i> Question Bank</h6>
@@ -394,7 +426,7 @@ def write_html_templates():
                     <a href="question_bank.html" class="btn btn-sm btn-outline-accent mt-2">Manage Question Bank</a>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="glass-card mb-4 p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h6 class="fw-bold text-white mb-0"><i class="bi bi-shield-lock-fill text-accent"></i> Quota Status</h6>
@@ -405,6 +437,21 @@ def write_html_templates():
                         <span id="quota-consecutive">0/3</span>
                     </div>
                     <a href="system_status.html" class="btn btn-sm btn-outline-accent mt-2">View Quota Details</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="glass-card mb-4 p-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6 class="fw-bold text-white mb-0"><i class="bi bi-arrow-repeat text-accent"></i> Retry Queue</h6>
+                        <span class="badge bg-warning text-dark" id="retry-queue-badge">0</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.75rem;">
+                        <span>Q: <strong id="retry-reason-q">0</strong></span>
+                        <span>Quota: <strong id="retry-reason-quota">0</strong></span>
+                        <span>Temp: <strong id="retry-reason-temp">0</strong></span>
+                        <span>Browser: <strong id="retry-reason-browser">0</strong></span>
+                    </div>
+                    <a href="system_status.html" class="btn btn-sm btn-outline-accent mt-2">View System Status</a>
                 </div>
             </div>
         </div>
@@ -928,6 +975,30 @@ def write_html_templates():
                         </div>
                     </div>
 
+                    <!-- Retry Queue Status -->
+                    <div class="mt-3 p-2 rounded" style="background: rgba(255,255,255,0.05);">
+                        <div class="d-flex justify-content-between align-items-center mb-1 small">
+                            <span class="text-muted">Retry Queue</span>
+                            <span class="badge bg-warning text-dark" id="status-retry-badge">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>Unknown Questions</span>
+                            <span id="status-retry-q">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted mt-1">
+                            <span>Quota Exhausted</span>
+                            <span id="status-retry-quota">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted mt-1">
+                            <span>Temporary Failures</span>
+                            <span id="status-retry-temp">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted mt-1">
+                            <span>Browser Errors</span>
+                            <span id="status-retry-browser">0</span>
+                        </div>
+                    </div>
+
                     <!-- Question Bank -->
                     <div class="mt-3">
                         <div class="d-flex justify-content-between mb-1 small">
@@ -1441,6 +1512,21 @@ function renderOverview() {
         qBadge.className = `badge ${quota.is_exhausted ? 'bg-danger' : 'bg-success'}`;
     }
     document.getElementById("quota-consecutive").innerText = `${quota.consecutive_count}/3`;
+
+    // Retry Queue
+    const retry = stats.retry_queue || { count: 0, reasons: {} };
+    const rBadge = document.getElementById("retry-queue-badge");
+    if (rBadge) {
+        rBadge.innerText = retry.count;
+    }
+    const reqQ = document.getElementById("retry-reason-q");
+    if (reqQ) reqQ.innerText = retry.reasons.unknown_question || 0;
+    const reqQuota = document.getElementById("retry-reason-quota");
+    if (reqQuota) reqQuota.innerText = retry.reasons.quota_exhausted || 0;
+    const reqTemp = document.getElementById("retry-reason-temp");
+    if (reqTemp) reqTemp.innerText = retry.reasons.temporary_failure || 0;
+    const reqBrowser = document.getElementById("retry-reason-browser");
+    if (reqBrowser) reqBrowser.innerText = retry.reasons.browser_error || 0;
 }
 
 // ── Top Jobs Page ────────────────────────────────────────────────────────
@@ -1903,6 +1989,21 @@ function renderSystemStatus() {
     qBadge.className = `badge ${quota.is_exhausted ? 'bg-danger' : 'bg-success'}`;
     document.getElementById("status-quota-consecutive").innerText = `${quota.consecutive_count}/3`;
     document.getElementById("status-quota-last").innerText = quota.last_detected ? quota.last_detected.substring(0, 16) : "Never";
+
+    // Retry details
+    const retry = sys.discovery.retry_queue || { count: 0, reasons: {} };
+    const rBadge = document.getElementById("status-retry-badge");
+    if (rBadge) {
+        rBadge.innerText = retry.count;
+    }
+    const rq = document.getElementById("status-retry-q");
+    if (rq) rq.innerText = retry.reasons.unknown_question || 0;
+    const rquota = document.getElementById("status-retry-quota");
+    if (rquota) rquota.innerText = retry.reasons.quota_exhausted || 0;
+    const rtemp = document.getElementById("status-retry-temp");
+    if (rtemp) rtemp.innerText = retry.reasons.temporary_failure || 0;
+    const rbrowser = document.getElementById("status-retry-browser");
+    if (rbrowser) rbrowser.innerText = retry.reasons.browser_error || 0;
 
     // Q-bank
     document.getElementById("status-qb-ratio").innerText = `${sys.question_bank.answered}/${sys.question_bank.total} answered`;

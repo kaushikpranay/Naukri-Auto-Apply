@@ -147,7 +147,10 @@ async def run(args: argparse.Namespace) -> None:
                         JOIN ai_evaluations e ON e.job_id = j.id
                         LEFT JOIN job_applications a ON a.job_id = j.id
                         WHERE UPPER(e.action) = 'APPLY'
-                          AND a.job_id IS NULL
+                          AND (
+                              j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                              OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error'))
+                          )
                     """)
                     pending_count = cursor.fetchone()[0]
 
