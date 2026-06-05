@@ -448,6 +448,15 @@ async def main_async() -> None:
         except Exception as exc:
             logger.error("Application review export failed: {}", exc)
 
+    # 7. Publish Static Dashboard (GitHub Pages)
+    try:
+        logger.info("Publishing static dashboard to GitHub Pages...")
+        import subprocess
+        subprocess.run(["publish_dashboard.bat"], shell=True, check=True)
+        logger.info("Static dashboard successfully published!")
+    except Exception as exc:
+        logger.error("Failed to publish static dashboard: {}", exc)
+
     # ── Final Summary ─────────────────────────────────────────────────────
     duration = time.perf_counter() - start_time
     minutes = int(duration // 60)
