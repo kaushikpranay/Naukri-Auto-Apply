@@ -109,7 +109,7 @@
         </div>
 
         <div class="row g-3">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="glass-card mb-4 p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h6 class="fw-bold text-white mb-0"><i class="bi bi-patch-question-fill text-accent"></i> Question Bank</h6>
@@ -121,7 +121,7 @@
                     <a href="question_bank.html" class="btn btn-sm btn-outline-accent mt-2">Manage Question Bank</a>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="glass-card mb-4 p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h6 class="fw-bold text-white mb-0"><i class="bi bi-shield-lock-fill text-accent"></i> Quota Status</h6>
@@ -132,6 +132,21 @@
                         <span id="quota-consecutive">0/3</span>
                     </div>
                     <a href="system_status.html" class="btn btn-sm btn-outline-accent mt-2">View Quota Details</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="glass-card mb-4 p-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6 class="fw-bold text-white mb-0"><i class="bi bi-arrow-repeat text-accent"></i> Retry Queue</h6>
+                        <span class="badge bg-warning text-dark" id="retry-queue-badge">0</span>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.75rem;">
+                        <span>Q: <strong id="retry-reason-q">0</strong></span>
+                        <span>Quota: <strong id="retry-reason-quota">0</strong></span>
+                        <span>Temp: <strong id="retry-reason-temp">0</strong></span>
+                        <span>Browser: <strong id="retry-reason-browser">0</strong></span>
+                    </div>
+                    <a href="system_status.html" class="btn btn-sm btn-outline-accent mt-2">View System Status</a>
                 </div>
             </div>
         </div>

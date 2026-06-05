@@ -123,6 +123,21 @@ function renderOverview() {
         qBadge.className = `badge ${quota.is_exhausted ? 'bg-danger' : 'bg-success'}`;
     }
     document.getElementById("quota-consecutive").innerText = `${quota.consecutive_count}/3`;
+
+    // Retry Queue
+    const retry = stats.retry_queue || { count: 0, reasons: {} };
+    const rBadge = document.getElementById("retry-queue-badge");
+    if (rBadge) {
+        rBadge.innerText = retry.count;
+    }
+    const reqQ = document.getElementById("retry-reason-q");
+    if (reqQ) reqQ.innerText = retry.reasons.unknown_question || 0;
+    const reqQuota = document.getElementById("retry-reason-quota");
+    if (reqQuota) reqQuota.innerText = retry.reasons.quota_exhausted || 0;
+    const reqTemp = document.getElementById("retry-reason-temp");
+    if (reqTemp) reqTemp.innerText = retry.reasons.temporary_failure || 0;
+    const reqBrowser = document.getElementById("retry-reason-browser");
+    if (reqBrowser) reqBrowser.innerText = retry.reasons.browser_error || 0;
 }
 
 // ── Top Jobs Page ────────────────────────────────────────────────────────
@@ -585,6 +600,21 @@ function renderSystemStatus() {
     qBadge.className = `badge ${quota.is_exhausted ? 'bg-danger' : 'bg-success'}`;
     document.getElementById("status-quota-consecutive").innerText = `${quota.consecutive_count}/3`;
     document.getElementById("status-quota-last").innerText = quota.last_detected ? quota.last_detected.substring(0, 16) : "Never";
+
+    // Retry details
+    const retry = sys.discovery.retry_queue || { count: 0, reasons: {} };
+    const rBadge = document.getElementById("status-retry-badge");
+    if (rBadge) {
+        rBadge.innerText = retry.count;
+    }
+    const rq = document.getElementById("status-retry-q");
+    if (rq) rq.innerText = retry.reasons.unknown_question || 0;
+    const rquota = document.getElementById("status-retry-quota");
+    if (rquota) rquota.innerText = retry.reasons.quota_exhausted || 0;
+    const rtemp = document.getElementById("status-retry-temp");
+    if (rtemp) rtemp.innerText = retry.reasons.temporary_failure || 0;
+    const rbrowser = document.getElementById("status-retry-browser");
+    if (rbrowser) rbrowser.innerText = retry.reasons.browser_error || 0;
 
     // Q-bank
     document.getElementById("status-qb-ratio").innerText = `${sys.question_bank.answered}/${sys.question_bank.total} answered`;

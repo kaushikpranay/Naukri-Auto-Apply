@@ -1,11 +1,11 @@
 {
   "overview_stats": {
-    "total_jobs": 2237,
-    "jobs_today": 0,
+    "total_jobs": 2262,
+    "jobs_today": 25,
     "apply": 243,
     "review": 1056,
     "skip": 938,
-    "pending_eval": 0,
+    "pending_eval": 25,
     "pending_apply": 110,
     "easy_apply": 9,
     "external_portal": 85,
@@ -17,10 +17,19 @@
     "register": 0,
     "login_required": 0,
     "email": 0,
-    "total_questions": 44,
+    "total_questions": 45,
     "answered_questions": 44,
-    "coverage_pct": 100.0,
-    "last_run": "2026-06-04T22:51:20.261127"
+    "coverage_pct": 97.8,
+    "last_run": "2026-06-04T22:51:20.261127",
+    "retry_queue": {
+      "count": 1,
+      "reasons": {
+        "unknown_question": 0,
+        "quota_exhausted": 0,
+        "temporary_failure": 1,
+        "browser_error": 0
+      }
+    }
   },
   "quota_status": {
     "total_quota_exhausted": 0,
@@ -535,7 +544,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "easy_apply"
+      "apply_status": "pending"
     },
     {
       "id": 243,
@@ -1172,7 +1181,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1455,
@@ -17779,9 +17788,9 @@
       "question_key": "hi_kaushik_companies_value_diversity_and_want_to_build_inclu",
       "question_text": "Hi Kaushik, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?",
       "answer": "No",
-      "usage_count": 13,
-      "field_type": "unknown",
-      "last_used_at": "2026-06-04T05:00:25.227742"
+      "usage_count": 91,
+      "field_type": "div",
+      "last_used_at": "2026-06-06T03:21:35.859645"
     },
     {
       "id": 4,
@@ -17797,9 +17806,9 @@
       "question_key": "yes",
       "question_text": "Yes",
       "answer": "Yes",
-      "usage_count": 4,
+      "usage_count": 7,
       "field_type": "input",
-      "last_used_at": "2026-06-04T05:28:24.863592"
+      "last_used_at": "2026-06-06T02:16:28.896981"
     },
     {
       "id": 2131,
@@ -17818,6 +17827,15 @@
       "usage_count": 3,
       "field_type": "div",
       "last_used_at": "2026-06-04T05:27:46.219740"
+    },
+    {
+      "id": 2978,
+      "question_key": "hi_kaushik_pranay_thank_you_for_showing_interest_kindly_answ",
+      "question_text": "Hi Kaushik Pranay, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.",
+      "answer": null,
+      "usage_count": 3,
+      "field_type": "div",
+      "last_used_at": "2026-06-06T03:00:59.885824"
     },
     {
       "id": 1,
@@ -18173,9 +18191,9 @@
   ],
   "system_status": {
     "collector": {
-      "total_jobs": 2237,
-      "pending": 0,
-      "evaluated": 2237,
+      "total_jobs": 2262,
+      "pending": 25,
+      "evaluated": 2235,
       "queued": 0,
       "failed": 0,
       "keywords": [],
@@ -18191,24 +18209,33 @@
         "Requires Review",
         "Gemini"
       ],
-      "pending_eval": 0
+      "pending_eval": 25
     },
     "discovery": {
       "total_processed": 140,
       "pending_apply": 110,
-      "last_discovery": "2026-06-04T23:08:37.715981",
+      "last_discovery": "2026-06-06T03:00:59.876465",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
         "consecutive_count": 0,
         "is_exhausted": false,
         "status_label": "Available"
+      },
+      "retry_queue": {
+        "count": 1,
+        "reasons": {
+          "unknown_question": 0,
+          "quota_exhausted": 0,
+          "temporary_failure": 1,
+          "browser_error": 0
+        }
       }
     },
     "question_bank": {
-      "total": 44,
+      "total": 45,
       "answered": 44,
-      "coverage_pct": 100.0
+      "coverage_pct": 97.8
     },
     "recent_runs": [
       {
@@ -18243,5 +18270,5 @@
       }
     ]
   },
-  "generated_at": "2026-06-05T23:43:37.773935"
+  "generated_at": "2026-06-06T03:23:25.752050"
 }

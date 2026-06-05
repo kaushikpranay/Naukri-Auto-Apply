@@ -134,6 +134,40 @@
     </div>
 </div>
 
+<!-- Retry Queue -->
+<div class="glass-card mb-4 p-3">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="fw-semibold"><i class="bi bi-arrow-repeat text-accent me-2"></i>Retry Queue</span>
+        <span class="badge bg-warning text-dark">{{ stats.retry_queue.count }} jobs</span>
+    </div>
+    <div class="row g-2 mt-2">
+        <div class="col-6 col-md-3">
+            <div class="p-2 rounded text-center" style="background: rgba(255,255,255,0.02);">
+                <div class="small text-muted">Unknown Question</div>
+                <div class="fw-bold text-white">{{ stats.retry_queue.reasons.unknown_question }}</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="p-2 rounded text-center" style="background: rgba(255,255,255,0.02);">
+                <div class="small text-muted">Quota Exhausted</div>
+                <div class="fw-bold text-white">{{ stats.retry_queue.reasons.quota_exhausted }}</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="p-2 rounded text-center" style="background: rgba(255,255,255,0.02);">
+                <div class="small text-muted">Temporary Failure</div>
+                <div class="fw-bold text-white">{{ stats.retry_queue.reasons.temporary_failure }}</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="p-2 rounded text-center" style="background: rgba(255,255,255,0.02);">
+                <div class="small text-muted">Browser Error</div>
+                <div class="fw-bold text-white">{{ stats.retry_queue.reasons.browser_error }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Quick Links -->
 <div class="row g-3">
     <div class="col-6 col-lg-3">

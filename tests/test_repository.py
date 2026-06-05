@@ -249,7 +249,7 @@ class TestMigrationCompatibility:
                 "SELECT COUNT(*) FROM schema_migrations"
             ).fetchone()[0]
             conn.close()
-            assert migration_count == 1
+            assert migration_count == 2
         finally:
             repo.close()
 
@@ -260,7 +260,7 @@ class TestMigrationCompatibility:
                 "SELECT COUNT(*) FROM schema_migrations"
             ).fetchone()[0]
             conn.close()
-            assert migration_count == 1
+            assert migration_count == 2
         finally:
             repo_again.close()
 

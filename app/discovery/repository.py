@@ -94,8 +94,10 @@ class ApplyDiscoveryRepository:
 
     def __init__(self, db_path: Path) -> None:
         self._db_path = db_path
-        self._conn = sqlite3.connect(str(self._db_path))
+        self._conn = sqlite3.connect(str(self._db_path), timeout=30)
         self._conn.row_factory = sqlite3.Row
+        self._conn.execute("PRAGMA journal_mode=WAL")
+        self._conn.execute("PRAGMA busy_timeout=30000")
         self._init_schema()
 
     _MIGRATIONS: list[str] = [
@@ -140,7 +142,7 @@ class ApplyDiscoveryRepository:
         logger.debug("Apply discovery schema verified")
 
     def get_jobs_for_discovery(self, limit: int) -> list[JobData]:
-        """Return shortlisted jobs that still need discovery."""
+        """Return shortlisted jobs that still need discovery, prioritizing retryable ones."""
         query = """
             SELECT
                 j.id,
@@ -163,7 +165,45 @@ class ApplyDiscoveryRepository:
             JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN job_applications a ON a.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
-              AND a.job_id IS NULL
+              AND (
+                  j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error'))
+              )
+            ORDER BY
+              CASE WHEN j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error') THEN 0 ELSE 1 END ASC,
+              e.interview_probability DESC,
+              j.id ASC
+            LIMIT ?
+        """
+        cursor = self._conn.cursor()
+        cursor.execute(query, (limit,))
+        rows = cursor.fetchall()
+        return [JobData(**dict(row)) for row in rows]
+
+    def get_retryable_jobs(self, limit: int) -> list[JobData]:
+        """Return jobs that failed with a retryable status."""
+        query = """
+            SELECT
+                j.id,
+                j.job_title,
+                j.company_name,
+                j.job_description,
+                j.job_url,
+                j.normalized_url,
+                j.apply_url,
+                j.experience_required,
+                j.location,
+                j.posted_date,
+                j.recruiter_name,
+                j.recruiter_email,
+                j.status,
+                j.retry_count,
+                j.search_keyword,
+                j.search_location
+            FROM jobs j
+            JOIN ai_evaluations e ON e.job_id = j.id
+            WHERE UPPER(e.action) = 'APPLY'
+              AND j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
             ORDER BY e.interview_probability DESC, j.id ASC
             LIMIT ?
         """
@@ -171,6 +211,21 @@ class ApplyDiscoveryRepository:
         cursor.execute(query, (limit,))
         rows = cursor.fetchall()
         return [JobData(**dict(row)) for row in rows]
+
+    def update_job_status(self, job_id: int, status: str) -> None:
+        """Update the status column of a job in the jobs table."""
+        cursor = self._conn.cursor()
+        cursor.execute("UPDATE jobs SET status = ? WHERE id = ?", (status, job_id))
+        self._conn.commit()
+
+    def increment_retry_count(self, job_id: int) -> int:
+        """Increment retry_count on the jobs table and return the new value."""
+        cursor = self._conn.cursor()
+        cursor.execute("UPDATE jobs SET retry_count = COALESCE(retry_count, 0) + 1 WHERE id = ?", (job_id,))
+        self._conn.commit()
+        cursor.execute("SELECT retry_count FROM jobs WHERE id = ?", (job_id,))
+        row = cursor.fetchone()
+        return row[0] if row else 0
 
     def get_job_by_id(self, job_id: int) -> JobData | None:
         """Fetch a single job by its ID regardless of discovery status."""

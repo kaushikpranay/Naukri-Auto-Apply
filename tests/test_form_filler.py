@@ -205,7 +205,7 @@ async def test_fill_form_case1_unknown_question() -> None:
     page.locator = MagicMock(side_effect=locator_side_effect)
     
     # Mock text extraction and helper methods
-    filler._extract_text = AsyncMock(return_value="Have you ever used Python?")
+    filler._extract_question_label = AsyncMock(return_value="Have you ever used Python?")
     filler._detect_field_type = AsyncMock(return_value="input")
     filler._get_field_options = AsyncMock(return_value=[])
     filler._capture_screenshot = AsyncMock(return_value="dummy_path")
@@ -279,7 +279,7 @@ async def test_fill_form_case2_unmatched_option() -> None:
     page.locator = MagicMock(side_effect=locator_side_effect)
     
     # Mock text extraction and helper methods
-    filler._extract_text = AsyncMock(return_value="Years of Experience")
+    filler._extract_question_label = AsyncMock(return_value="Years of Experience")
     filler._detect_field_type = AsyncMock(return_value="div")
     filler._get_field_options = AsyncMock(return_value=["0-1 years", "1-2 years", "2-4 years"])
     filler._capture_screenshot = AsyncMock(return_value="dummy_path")
@@ -347,16 +347,14 @@ async def test_interactive_prompt_user_case1() -> None:
     page = MagicMock()
     page.is_closed = MagicMock(return_value=False)
     page.wait_for_timeout = AsyncMock()
-    
+
     res = {"answer": "1.5", "selected_option": None}
     page.evaluate = AsyncMock(side_effect=[
-        None, # initial inject
-        True, # exists check
-        None, # response is None
-        True, # exists check
-        res,  # response is received
-        None, # cleanup
+        None,  # initial inject (js_code)
+        res,   # read response (window.__ilr)
+        None,  # cleanup
     ])
+    page.wait_for_function = AsyncMock()  # blocks until __ilr is set
 
     response = await filler._interactive_prompt_user(
         page=page,
@@ -365,7 +363,8 @@ async def test_interactive_prompt_user_case1() -> None:
         options=[]
     )
     assert response == res
-    assert page.evaluate.call_count == 6
+    page.wait_for_function.assert_called_once()
+    assert page.evaluate.call_count == 3
 
 
 @pytest.mark.asyncio
@@ -379,14 +378,14 @@ async def test_interactive_prompt_user_case2() -> None:
     page = MagicMock()
     page.is_closed = MagicMock(return_value=False)
     page.wait_for_timeout = AsyncMock()
-    
+
     res = {"answer": "2", "selected_option": "2-4 years"}
     page.evaluate = AsyncMock(side_effect=[
-        None, # initial inject
-        True, # exists check
-        res,  # response is received
-        None, # cleanup
+        None,  # initial inject (js_code)
+        res,   # read response (window.__ilr)
+        None,  # cleanup
     ])
+    page.wait_for_function = AsyncMock()  # blocks until __ilr is set
 
     response = await filler._interactive_prompt_user(
         page=page,
@@ -396,7 +395,8 @@ async def test_interactive_prompt_user_case2() -> None:
         options=["0-1 years", "2-4 years"]
     )
     assert response == res
-    assert page.evaluate.call_count == 4
+    page.wait_for_function.assert_called_once()
+    assert page.evaluate.call_count == 3
 
 
 from app.question_bank.form_filler import is_valid_recruiter_question_container
