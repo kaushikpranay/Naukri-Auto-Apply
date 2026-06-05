@@ -1,12 +1,18 @@
 """
-daily_run.py — Complete Naukri automation workflow orchestrator.
+daily_run.py — Batched pipeline orchestrator for Naukri automation.
 
-Orchestrates:
-  1. Job Collection (POC-1)
-  2. AI Job Evaluation (POC-2)
-  3. Apply Discovery & Form Filling (POC-3)
-  4. Export all reports
-  5. Print final summary
+Pipeline batching workflow:
+  Loop over keyword × location search combinations:
+    1. Collect jobs for the current search combo.
+       Stop collection when 150 new jobs have been inserted OR the current
+       search combo is fully paginated.
+    2. Evaluate all newly-collected (pending) jobs.
+    3. Run apply discovery on APPLY-evaluated jobs.
+    4. Process APPLY jobs (form fill / classification).
+    5. Resume collection from the next search combo.
+    6. Repeat until all search combinations are exhausted.
+
+Final stage: export reports and print summary.
 """
 
 import sys
@@ -38,7 +44,7 @@ from app.export.question_bank_report_exporter import QuestionBankReportExporter
 from app.question_bank.lookup_service import QuestionBankLookupService
 from app.question_bank.seeder import QuestionBankSeeder
 from app.models.application_review import build_review_record
-from app.models.discovery import DiscoverySummary
+from app.models.discovery import DiscoverySummary, QuotaExhaustedStop
 
 # Load configs
 from app.models.config import AppSettings, SelectorsConfig, SearchConfig
@@ -49,6 +55,9 @@ from app.utils.config_loader import (
     load_settings,
     resolve_path,
 )
+
+# ── Constants ─────────────────────────────────────────────────────────────────
+BATCH_NEW_JOB_THRESHOLD = 150
 
 
 def setup_logging(settings: AppSettings) -> None:
@@ -90,6 +99,147 @@ def _build_providers(prompt_path: Path, profile_path: Path) -> list:
     return providers
 
 
+def _accumulate_discovery(total: DiscoverySummary, batch: DiscoverySummary) -> None:
+    """Merge a batch discovery summary into the running total."""
+    total.processed += batch.processed
+    total.discovered += batch.discovered
+    total.already_applied += batch.already_applied
+    total.requires_review += batch.requires_review
+    total.failed += batch.failed
+    total.easy_apply += batch.easy_apply
+    total.external_portal += batch.external_portal
+    total.email += batch.email
+    total.needs_register += batch.needs_register
+    total.login_required += batch.login_required
+    total.unknown_flow += batch.unknown_flow
+    total.quota_exhausted += batch.quota_exhausted
+    if batch.quota_stopped:
+        total.quota_stopped = True
+    total.form_fill_reports.extend(batch.form_fill_reports)
+
+
+def _accumulate_eval_stats(total: EvaluationBatchStats, batch: EvaluationBatchStats) -> None:
+    """Merge a batch evaluation stats into the running total."""
+    total.evaluated += batch.evaluated
+    total.apply += batch.apply
+    total.review += batch.review
+    total.skip += batch.skip
+    total.errors += batch.errors
+
+
+# ── Pipeline Stages ───────────────────────────────────────────────────────────
+
+def _run_evaluation_stage(
+    repo_eval: EvaluationsRepository,
+    eval_service: EvaluationService,
+    run_id: str,
+    total_eval_stats: EvaluationBatchStats,
+    pipeline_batch: int,
+) -> None:
+    """Evaluate all pending (unevaluated) jobs. Runs in sub-batches."""
+    pending = repo_eval.get_pending_jobs_count()
+    if pending == 0:
+        logger.info("Pipeline batch {}: No pending jobs to evaluate.", pipeline_batch)
+        return
+
+    logger.info("Pipeline batch {}: Evaluating {} pending jobs...", pipeline_batch, pending)
+    sub_batch = 1
+    while pending > 0:
+        logger.info("  Eval sub-batch {} ({} pending)", sub_batch, pending)
+        try:
+            stats = eval_service.run(run_id)
+            if not stats or stats.evaluated == 0:
+                break
+            _accumulate_eval_stats(total_eval_stats, stats)
+            pending = repo_eval.get_pending_jobs_count()
+            sub_batch += 1
+        except Exception as e:
+            logger.error("Error during evaluation sub-batch: {}", e)
+            break
+
+    logger.info(
+        "EVALUATION_BATCH_COMPLETE | pipeline_batch={} evaluated={} apply={} review={} skip={}",
+        pipeline_batch,
+        total_eval_stats.evaluated,
+        total_eval_stats.apply,
+        total_eval_stats.review,
+        total_eval_stats.skip,
+    )
+
+
+async def _run_discovery_stage(
+    page,
+    repo_discovery: ApplyDiscoveryRepository,
+    discovery_service: ApplyDiscoveryService,
+    run_id: str,
+    total_discovery: DiscoverySummary,
+    pipeline_batch: int,
+) -> bool:
+    """Process all pending APPLY jobs through discovery + form-fill.
+
+    Returns:
+        True  — loop should continue.
+        False — quota exhaustion detected, stop the pipeline.
+    """
+    batch_number = 1
+    while True:
+        cursor = repo_discovery._conn.cursor()
+        cursor.execute("""
+            SELECT COUNT(*)
+            FROM jobs j
+            JOIN ai_evaluations e ON e.job_id = j.id
+            LEFT JOIN job_applications a ON a.job_id = j.id
+            WHERE UPPER(e.action) = 'APPLY'
+              AND a.job_id IS NULL
+        """)
+        pending_count = cursor.fetchone()[0]
+
+        if pending_count == 0:
+            break
+
+        logger.info(
+            "Pipeline batch {}: Discovery sub-batch {} — {} APPLY jobs pending",
+            pipeline_batch, batch_number, pending_count,
+        )
+        try:
+            batch_summary = await discovery_service.run(
+                page, run_id=run_id, force_job_id=None
+            )
+        except QuotaExhaustedStop as exc:
+            logger.warning(
+                "QUOTA_EXHAUSTED_STOP: pipeline_batch={} reason='{}'",
+                pipeline_batch, exc,
+            )
+            total_discovery.quota_stopped = True
+            if exc.summary:
+                _accumulate_discovery(total_discovery, exc.summary)
+            break
+
+        _accumulate_discovery(total_discovery, batch_summary)
+
+        if total_discovery.quota_stopped or batch_summary.quota_stopped:
+            break
+
+        if batch_summary.processed == 0:
+            break
+
+        batch_number += 1
+
+    logger.info(
+        "DISCOVERY_BATCH_COMPLETE | pipeline_batch={} processed={} easy_apply={} "
+        "external={} quota_exhausted={} failed={}",
+        pipeline_batch,
+        total_discovery.processed,
+        total_discovery.easy_apply,
+        total_discovery.external_portal,
+        total_discovery.quota_exhausted,
+        total_discovery.failed,
+    )
+    return not total_discovery.quota_stopped
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
 async def main_async() -> None:
     start_time = time.perf_counter()
 
@@ -120,35 +270,8 @@ async def main_async() -> None:
             print(f"\nError: {exc}")
             sys.exit(1)
 
-        # ── Stage 1: Collect jobs ─────────────────────────────────────────────
-        logger.info("Starting Stage 1: Job Collection...")
+        # ── Shared service instances (reused across pipeline batches) ─────
         repo_coll = JobRepository(db_path)
-        collector = JobCollector(
-            page=page,
-            settings=settings,
-            selectors=selectors,
-            search_config=search_config,
-        )
-        total_combos = len(search_config.keywords) * len(search_config.locations)
-        current = 0
-        try:
-            for keyword in search_config.keywords:
-                for location in search_config.locations:
-                    current += 1
-                    logger.info(f"[{current}/{total_combos}] Searching: '{keyword.display}' in '{location.display}'")
-                    try:
-                        jobs = await collector.collect_for_search(keyword, location)
-                        if jobs:
-                            jobs = await collector.enrich_with_details(jobs)
-                            inserted, _ = repo_coll.insert_many(jobs)
-                            jobs_collected += inserted
-                    except Exception as e:
-                        logger.error("Error collecting keyword '{}' in '{}': {}", keyword.display, location.display, e)
-        finally:
-            repo_coll.close()
-
-        # ── Stage 2: Evaluate all pending jobs ───────────────────────────────
-        logger.info("Starting Stage 2: Job Evaluation...")
         repo_eval = EvaluationsRepository(db_path)
         providers = _build_providers(prompt_path, profile_path)
         eval_service = EvaluationService(
@@ -157,80 +280,124 @@ async def main_async() -> None:
             max_jobs_per_run=settings.evaluation.max_ai_evaluations_per_run,
             profile_path=profile_path,
         )
-        
-        pending_eval_count = repo_eval.get_pending_jobs_count()
-        batch_idx = 1
-        while pending_eval_count > 0:
-            logger.info("Evaluating Batch {} ({} pending)", batch_idx, pending_eval_count)
-            try:
-                # EvaluationService.run is synchronous
-                stats = eval_service.run(run_id)
-                if not stats or stats.evaluated == 0:
-                    break
-                total_eval_stats.evaluated += stats.evaluated
-                total_eval_stats.apply += stats.apply
-                total_eval_stats.review += stats.review
-                total_eval_stats.skip += stats.skip
-                total_eval_stats.errors += stats.errors
-                
-                pending_eval_count = repo_eval.get_pending_jobs_count()
-                batch_idx += 1
-            except Exception as e:
-                logger.error("Error during evaluation batch: {}", e)
-                break
-        repo_eval.close()
-
-        # ── Stage 3: Process all pending APPLY jobs until none remain ──────────
-        logger.info("Starting Stage 3: Apply Discovery...")
         repo_discovery = ApplyDiscoveryRepository(db_path)
         seeder = QuestionBankSeeder(repo_discovery)
         seeder.seed()
-        
         discovery_service = ApplyDiscoveryService(repo_discovery, settings, selectors)
-        batch_number = 1
-        while True:
-            cursor = repo_discovery._conn.cursor()
-            cursor.execute("""
-                SELECT COUNT(*)
-                FROM jobs j
-                JOIN ai_evaluations e ON e.job_id = j.id
-                LEFT JOIN job_applications a ON a.job_id = j.id
-                WHERE UPPER(e.action) = 'APPLY'
-                  AND a.job_id IS NULL
-            """)
-            pending_count = cursor.fetchone()[0]
 
-            if pending_count == 0:
-                break
+        collector = JobCollector(
+            page=page,
+            settings=settings,
+            selectors=selectors,
+            search_config=search_config,
+        )
 
-            logger.info("Batch {}: Found {} APPLY jobs for discovery", batch_number, pending_count)
-            batch_summary = await discovery_service.run(
-                page, run_id=run_id, force_job_id=None
+        # ── Build the search combination queue ────────────────────────────
+        search_combos = [
+            (keyword, location)
+            for keyword in search_config.keywords
+            for location in search_config.locations
+        ]
+        total_combos = len(search_combos)
+
+        # ── Pipeline batching loop ────────────────────────────────────────
+        pipeline_batch = 0
+        combo_index = 0          # next search combo to process
+        batch_new_jobs = 0       # new jobs in the current pipeline batch
+
+        logger.info(
+            "Starting batched pipeline: {} search combos, batch threshold = {} new jobs",
+            total_combos, BATCH_NEW_JOB_THRESHOLD,
+        )
+
+        while combo_index < total_combos:
+            pipeline_batch += 1
+            batch_new_jobs = 0
+            batch_combos_processed = 0
+
+            logger.info(
+                "═══ Pipeline Batch {} ═══ (resuming from combo {}/{})",
+                pipeline_batch, combo_index + 1, total_combos,
             )
-            
-            discovery_summary.processed += batch_summary.processed
-            discovery_summary.discovered += batch_summary.discovered
-            discovery_summary.already_applied += batch_summary.already_applied
-            discovery_summary.requires_review += batch_summary.requires_review
-            discovery_summary.failed += batch_summary.failed
-            discovery_summary.easy_apply += batch_summary.easy_apply
-            discovery_summary.external_portal += batch_summary.external_portal
-            discovery_summary.email += batch_summary.email
-            discovery_summary.needs_register += batch_summary.needs_register
-            discovery_summary.login_required += batch_summary.login_required
-            discovery_summary.unknown_flow += batch_summary.unknown_flow
-            discovery_summary.form_fill_reports.extend(batch_summary.form_fill_reports)
 
-            if batch_summary.processed == 0:
+            # ── Step 1: Collect jobs until threshold or combos exhausted ──
+            while combo_index < total_combos:
+                keyword, location = search_combos[combo_index]
+                combo_index += 1
+                batch_combos_processed += 1
+
+                logger.info(
+                    "[{}/{}] Searching: '{}' in '{}'",
+                    combo_index, total_combos,
+                    keyword.display, location.display,
+                )
+                try:
+                    jobs = await collector.collect_for_search(keyword, location)
+                    if jobs:
+                        jobs = await collector.enrich_with_details(jobs)
+                        inserted, _ = repo_coll.insert_many(jobs)
+                        jobs_collected += inserted
+                        batch_new_jobs += inserted
+                except Exception as e:
+                    logger.error(
+                        "Error collecting '{}' in '{}': {}",
+                        keyword.display, location.display, e,
+                    )
+
+                # Check if we've hit the batch threshold
+                if batch_new_jobs >= BATCH_NEW_JOB_THRESHOLD:
+                    logger.info(
+                        "Batch threshold reached: {} new jobs collected (threshold={}). "
+                        "Pausing collection for evaluation/discovery.",
+                        batch_new_jobs, BATCH_NEW_JOB_THRESHOLD,
+                    )
+                    break
+
+            logger.info(
+                "COLLECTION_BATCH_COMPLETE | pipeline_batch={} combos_processed={} "
+                "new_jobs={} total_collected={}",
+                pipeline_batch, batch_combos_processed,
+                batch_new_jobs, jobs_collected,
+            )
+
+            # ── Step 2: Evaluate newly collected jobs ─────────────────────
+            logger.info("Pipeline batch {}: Starting evaluation stage...", pipeline_batch)
+            _run_evaluation_stage(
+                repo_eval, eval_service, run_id,
+                total_eval_stats, pipeline_batch,
+            )
+
+            # ── Step 3 & 4: Discovery + Application processing ───────────
+            logger.info("Pipeline batch {}: Starting discovery stage...", pipeline_batch)
+            should_continue = await _run_discovery_stage(
+                page, repo_discovery, discovery_service,
+                run_id, discovery_summary, pipeline_batch,
+            )
+
+            if not should_continue:
+                logger.warning(
+                    "Pipeline stopping early due to quota exhaustion "
+                    "(pipeline_batch={}).", pipeline_batch
+                )
+                # Break outer combo loop so we reach exports + summary
+                combo_index = total_combos
                 break
-            
-            batch_number += 1
-            
+
+            logger.info(
+                "Pipeline batch {} complete: collected={} evaluated={} "
+                "applications_processed={}",
+                pipeline_batch, batch_new_jobs,
+                total_eval_stats.evaluated, discovery_summary.processed,
+            )
+
+        # ── Close database connections ────────────────────────────────────
+        repo_coll.close()
+        repo_eval.close()
         repo_discovery.close()
 
-    # ── Stage 4: Export all reports ───────────────────────────────────────
-    logger.info("Starting Stage 4: Report Export...")
-    
+    # ── Stage: Export all reports ──────────────────────────────────────────
+    logger.info("Starting report export stage...")
+
     # 1. Collector Excel Export
     try:
         exporter = ExcelExporter(db_path, export_dir)
@@ -281,7 +448,7 @@ async def main_async() -> None:
         except Exception as exc:
             logger.error("Application review export failed: {}", exc)
 
-    # ── Stage 5: Print final summary ─────────────────────────────────────
+    # ── Final Summary ─────────────────────────────────────────────────────
     duration = time.perf_counter() - start_time
     minutes = int(duration // 60)
     seconds = int(duration % 60)
@@ -293,27 +460,39 @@ async def main_async() -> None:
 
     print()
     print("==================================================")
-    print("              DAILY RUN SUMMARY                   ")
+    print("           DAILY RUN SUMMARY (Batched)            ")
     print("==================================================")
-    print(f"Jobs Collected:   {jobs_collected}")
-    print(f"Jobs Evaluated:   {total_eval_stats.evaluated}")
-    print(f"Apply:            {total_eval_stats.apply}")
-    print(f"Review:           {total_eval_stats.review}")
-    print(f"Skip:             {total_eval_stats.skip}")
+    print(f"Pipeline Batches:  {pipeline_batch}")
+    print(f"Search Combos:     {total_combos}")
     print()
-    print("Applications:")
-    print(f"  Easy Apply:     {discovery_summary.easy_apply}")
-    print(f"  External Portal:{discovery_summary.external_portal}")
-    print(f"  Already Applied:{discovery_summary.already_applied}")
-    print(f"  Requires Review:{discovery_summary.requires_review}")
-    print(f"  Failed:         {discovery_summary.failed}")
+    print(f"Jobs Collected:    {jobs_collected}")
+    print(f"Jobs Evaluated:    {total_eval_stats.evaluated}")
+    print(f"  Apply:           {total_eval_stats.apply}")
+    print(f"  Review:          {total_eval_stats.review}")
+    print(f"  Skip:            {total_eval_stats.skip}")
+    print()
+    print("Applications Processed:")
+    print(f"  Total Processed: {discovery_summary.processed}")
+    print(f"  Easy Apply:      {discovery_summary.easy_apply}")
+    print(f"  External Portal: {discovery_summary.external_portal}")
+    print(f"  Already Applied: {discovery_summary.already_applied}")
+    print(f"  Requires Review: {discovery_summary.requires_review}")
+    print(f"  Quota Exhausted: {discovery_summary.quota_exhausted}")
+    print(f"  Failed:          {discovery_summary.failed}")
+    if discovery_summary.quota_stopped:
+        print()
+        print("  !" * 20)
+        print("  QUOTA_EXHAUSTED_DETECTED")
+        print("  Discovery stopped because Naukri quota appears exhausted.")
+        print("  Reason: 3 consecutive quota exhaustion events detected.")
+        print("  !" * 20)
     print()
     print("Question Bank:")
-    print(f"  Known:          {known_count}")
-    print(f"  Unknown:        {unknown_count}")
-    print(f"  Coverage %:     {coverage_pct}%")
+    print(f"  Known:           {known_count}")
+    print(f"  Unknown:         {unknown_count}")
+    print(f"  Coverage %:      {coverage_pct}%")
     print()
-    print(f"Execution Time:   {exec_time_str}")
+    print(f"Execution Time:    {exec_time_str}")
     print("==================================================")
     print()
 

@@ -1,0 +1,95 @@
+<!-- Search + Pagination macros -->
+
+{% macro search_bar(action, search_value="", placeholder="Search jobs...") %}
+<form method="get" action="{{ action }}" class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text glass-input-addon"><i class="bi bi-search"></i></span>
+        <input type="text" name="search" class="form-control glass-input"
+               placeholder="{{ placeholder }}" value="{{ search_value }}"
+               autocomplete="off">
+        {% if search_value %}
+        <a href="{{ action }}" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i></a>
+        {% endif %}
+        <button type="submit" class="btn btn-accent">Search</button>
+    </div>
+</form>
+{% endmacro %}
+
+{% macro pagination_controls(pagination, base_url, extra_params="") %}
+{% if pagination.total_pages > 1 %}
+<nav class="d-flex justify-content-between align-items-center mt-3 flex-wrap gap-2">
+    <span class="text-muted small">
+        Showing page {{ pagination.page }} of {{ pagination.total_pages }}
+        ({{ pagination.total }} total)
+    </span>
+    <ul class="pagination pagination-sm mb-0">
+        <li class="page-item {% if not pagination.has_prev %}disabled{% endif %}">
+            <a class="page-link" href="{{ base_url }}?page={{ pagination.page - 1 }}{{ extra_params }}">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+        </li>
+        {% for p in range(1, pagination.total_pages + 1) %}
+            {% if p == pagination.page %}
+            <li class="page-item active"><a class="page-link" href="#">{{ p }}</a></li>
+            {% elif p <= 3 or p > pagination.total_pages - 3 or (p >= pagination.page - 1 and p <= pagination.page + 1) %}
+            <li class="page-item">
+                <a class="page-link" href="{{ base_url }}?page={{ p }}{{ extra_params }}">{{ p }}</a>
+            </li>
+            {% elif p == 4 or p == pagination.total_pages - 3 %}
+            <li class="page-item disabled"><span class="page-link">…</span></li>
+            {% endif %}
+        {% endfor %}
+        <li class="page-item {% if not pagination.has_next %}disabled{% endif %}">
+            <a class="page-link" href="{{ base_url }}?page={{ pagination.page + 1 }}{{ extra_params }}">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endif %}
+{% endmacro %}
+
+{% macro probability_badge(prob) %}
+{% if prob >= 85 %}
+<span class="badge bg-success">{{ prob|int }}%</span>
+{% elif prob >= 70 %}
+<span class="badge bg-info">{{ prob|int }}%</span>
+{% elif prob >= 50 %}
+<span class="badge bg-warning text-dark">{{ prob|int }}%</span>
+{% else %}
+<span class="badge bg-secondary">{{ prob|int }}%</span>
+{% endif %}
+{% endmacro %}
+
+{% macro apply_status_badge(status) %}
+{% if status == 'easy_apply' %}
+<span class="badge bg-success"><i class="bi bi-lightning-fill"></i> Easy Apply</span>
+{% elif status == 'external_portal' %}
+<span class="badge bg-info"><i class="bi bi-box-arrow-up-right"></i> External</span>
+{% elif status == 'already_applied' %}
+<span class="badge bg-primary"><i class="bi bi-check2-all"></i> Applied</span>
+{% elif status == 'applied_successfully' %}
+<span class="badge bg-success"><i class="bi bi-check-circle-fill"></i> Success</span>
+{% elif status == 'discovery_failed' %}
+<span class="badge bg-danger"><i class="bi bi-x-circle-fill"></i> Failed</span>
+{% elif status == 'pending' %}
+<span class="badge bg-secondary"><i class="bi bi-clock"></i> Pending</span>
+{% elif status == 'unknown' %}
+<span class="badge bg-warning text-dark"><i class="bi bi-question-circle"></i> Unknown</span>
+{% else %}
+<span class="badge bg-secondary">{{ status }}</span>
+{% endif %}
+{% endmacro %}
+
+{% macro sort_header(label, field, current_sort, current_order, base_url, search="") %}
+{% set new_order = "asc" if current_sort == field and current_order == "desc" else "desc" %}
+{% set icon = "" %}
+{% if current_sort == field %}
+    {% set icon = "bi-sort-down" if current_order == "desc" else "bi-sort-up" %}
+{% endif %}
+<a href="{{ base_url }}?sort={{ field }}&order={{ new_order }}{% if search %}&search={{ search }}{% endif %}"
+   class="sort-link text-nowrap">
+    {{ label }}
+    {% if icon %}<i class="bi {{ icon }}"></i>{% endif %}
+</a>
+{% endmacro %}

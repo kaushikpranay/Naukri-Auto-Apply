@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS job_applications (
     radio_count INTEGER DEFAULT 0,
     dropdown_count INTEGER DEFAULT 0,
     buttons_count INTEGER DEFAULT 0,
+    quota_message TEXT,
     FOREIGN KEY(job_id) REFERENCES jobs(id)
 );
 """
@@ -120,6 +121,8 @@ class ApplyDiscoveryRepository:
         "ALTER TABLE question_bank ADD COLUMN field_type TEXT",
         "ALTER TABLE question_bank ADD COLUMN created_at TEXT",
         "ALTER TABLE question_bank ADD COLUMN last_used_at TEXT",
+        # Quota exhaustion detection
+        "ALTER TABLE job_applications ADD COLUMN quota_message TEXT",
     ]
 
     def _init_schema(self) -> None:
@@ -211,8 +214,9 @@ class ApplyDiscoveryRepository:
                 redirect_chain, status, screenshot_before, screenshot_after,
                 screenshot_modal, html_before_path, html_path, elements_path,
                 detected_at, page_title, modal_detected, forms_count,
-                inputs_count, radio_count, dropdown_count, buttons_count
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                inputs_count, radio_count, dropdown_count, buttons_count,
+                quota_message
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(job_id) DO UPDATE SET
                 apply_type = excluded.apply_type,
                 apply_url = excluded.apply_url,
@@ -238,7 +242,8 @@ class ApplyDiscoveryRepository:
                 inputs_count = excluded.inputs_count,
                 radio_count = excluded.radio_count,
                 dropdown_count = excluded.dropdown_count,
-                buttons_count = excluded.buttons_count
+                buttons_count = excluded.buttons_count,
+                quota_message = excluded.quota_message
             """,
             (
                 record.job_id,
@@ -267,6 +272,7 @@ class ApplyDiscoveryRepository:
                 record.radio_count,
                 record.dropdown_count,
                 record.buttons_count,
+                record.quota_message,
             ),
         )
         self._conn.commit()

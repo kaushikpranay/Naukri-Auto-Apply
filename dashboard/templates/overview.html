@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block title %}Overview{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">
+        <i class="bi bi-grid-1x2-fill text-accent"></i> Dashboard Overview
+    </h1>
+    <p class="text-muted mb-0">Last run: {{ stats.last_run[:19] if stats.last_run != 'Never' else 'Never' }}</p>
+</div>
+
+<!-- KPI Cards Row 1: Collection + Evaluation -->
+<div class="row g-3 mb-4">
+    <div class="col-6 col-lg-3">
+        <div class="stat-card stat-card-primary">
+            <div class="stat-icon"><i class="bi bi-database-fill"></i></div>
+            <div class="stat-value">{{ stats.total_jobs }}</div>
+            <div class="stat-label">Total Jobs</div>
+            <div class="stat-sub">+{{ stats.jobs_today }} today</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card stat-card-success">
+            <div class="stat-icon"><i class="bi bi-check-circle-fill"></i></div>
+            <div class="stat-value">{{ stats.apply }}</div>
+            <div class="stat-label">Apply</div>
+            <div class="stat-sub">{{ stats.pending_apply }} pending</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card stat-card-warning">
+            <div class="stat-icon"><i class="bi bi-eye-fill"></i></div>
+            <div class="stat-value">{{ stats.review }}</div>
+            <div class="stat-label">Review</div>
+            <div class="stat-sub">Needs manual check</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card stat-card-muted">
+            <div class="stat-icon"><i class="bi bi-skip-forward-fill"></i></div>
+            <div class="stat-value">{{ stats.skip }}</div>
+            <div class="stat-label">Skip</div>
+            <div class="stat-sub">{{ stats.pending_eval }} unevaluated</div>
+        </div>
+    </div>
+</div>
+
+<!-- Evaluation Progress Bar -->
+<div class="glass-card mb-4 p-3">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="fw-semibold"><i class="bi bi-pie-chart-fill text-accent me-2"></i>Evaluation Breakdown</span>
+        <span class="badge bg-secondary">{{ stats.apply + stats.review + stats.skip }} evaluated</span>
+    </div>
+    {% set total_eval = stats.apply + stats.review + stats.skip %}
+    {% if total_eval > 0 %}
+    <div class="progress progress-stacked" style="height: 12px; border-radius: 6px;">
+        <div class="progress-bar bg-success" style="width: {{ (stats.apply / total_eval * 100)|round(1) }}%"
+             title="Apply: {{ stats.apply }}"></div>
+        <div class="progress-bar bg-warning" style="width: {{ (stats.review / total_eval * 100)|round(1) }}%"
+             title="Review: {{ stats.review }}"></div>
+        <div class="progress-bar bg-secondary" style="width: {{ (stats.skip / total_eval * 100)|round(1) }}%"
+             title="Skip: {{ stats.skip }}"></div>
+    </div>
+    <div class="d-flex justify-content-between mt-2 small text-muted">
+        <span><span class="dot dot-success"></span> Apply {{ (stats.apply / total_eval * 100)|round(1) }}%</span>
+        <span><span class="dot dot-warning"></span> Review {{ (stats.review / total_eval * 100)|round(1) }}%</span>
+        <span><span class="dot dot-muted"></span> Skip {{ (stats.skip / total_eval * 100)|round(1) }}%</span>
+    </div>
+    {% endif %}
+</div>
+
+<!-- KPI Cards Row 2: Applications -->
+<h2 class="section-title"><i class="bi bi-send-fill text-accent"></i> Applications</h2>
+<div class="row g-3 mb-4">
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value text-success">{{ stats.easy_apply }}</div>
+            <div class="mini-stat-label">Easy Apply</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value text-info">{{ stats.external_portal }}</div>
+            <div class="mini-stat-label">External Portal</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value text-primary">{{ stats.already_applied }}</div>
+            <div class="mini-stat-label">Already Applied</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value text-warning">{{ stats.unknown_flow }}</div>
+            <div class="mini-stat-label">Unknown Flow</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value text-danger">{{ stats.failed }}</div>
+            <div class="mini-stat-label">Failed</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value text-danger">{{ stats.quota_exhausted }}</div>
+            <div class="mini-stat-label">Quota Exhausted</div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="mini-stat-card">
+            <div class="mini-stat-value" style="color: var(--accent)">{{ stats.applied_successfully }}</div>
+            <div class="mini-stat-label">Applied OK</div>
+        </div>
+    </div>
+</div>
+
+<!-- Question Bank Coverage -->
+<div class="glass-card mb-4 p-3">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="fw-semibold"><i class="bi bi-chat-dots-fill text-accent me-2"></i>Question Bank Coverage</span>
+        <span class="badge {% if stats.coverage_pct >= 80 %}bg-success{% elif stats.coverage_pct >= 50 %}bg-warning{% else %}bg-danger{% endif %}">
+            {{ stats.coverage_pct }}%
+        </span>
+    </div>
+    <div class="progress" style="height: 10px; border-radius: 5px;">
+        <div class="progress-bar {% if stats.coverage_pct >= 80 %}bg-success{% elif stats.coverage_pct >= 50 %}bg-warning{% else %}bg-danger{% endif %}"
+             style="width: {{ stats.coverage_pct }}%"></div>
+    </div>
+    <div class="d-flex justify-content-between mt-2 small text-muted">
+        <span>{{ stats.answered_questions }} answered</span>
+        <span>{{ stats.total_questions - stats.answered_questions }} unanswered</span>
+    </div>
+</div>
+
+<!-- Quick Links -->
+<div class="row g-3">
+    <div class="col-6 col-lg-3">
+        <a href="/top-jobs" class="quick-link-card">
+            <i class="bi bi-trophy-fill"></i>
+            <span>Top Jobs</span>
+            <i class="bi bi-chevron-right ms-auto"></i>
+        </a>
+    </div>
+    <div class="col-6 col-lg-3">
+        <a href="/external" class="quick-link-card">
+            <i class="bi bi-box-arrow-up-right"></i>
+            <span>External Apply</span>
+            <i class="bi bi-chevron-right ms-auto"></i>
+        </a>
+    </div>
+    <div class="col-6 col-lg-3">
+        <a href="/questions" class="quick-link-card">
+            <i class="bi bi-chat-dots-fill"></i>
+            <span>Question Bank</span>
+            <i class="bi bi-chevron-right ms-auto"></i>
+        </a>
+    </div>
+    <div class="col-6 col-lg-3">
+        <a href="/system" class="quick-link-card">
+            <i class="bi bi-cpu-fill"></i>
+            <span>System Status</span>
+            <i class="bi bi-chevron-right ms-auto"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}

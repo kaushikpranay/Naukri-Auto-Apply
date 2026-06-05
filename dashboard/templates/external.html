@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% from "macros.html" import search_bar, pagination_controls, probability_badge %}
+{% block title %}External Portal{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">
+        <i class="bi bi-box-arrow-up-right text-accent"></i> External Portal Jobs
+    </h1>
+    <p class="text-muted mb-0">One-click apply via external company portals</p>
+</div>
+
+{{ search_bar("/external", search, "Search by title, company...") }}
+
+<!-- Mobile Cards -->
+<div class="d-lg-none">
+    {% for job in jobs %}
+    <div class="job-card mb-3">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+            {{ probability_badge(job.interview_probability) }}
+            <span class="badge bg-info"><i class="bi bi-box-arrow-up-right"></i> External</span>
+        </div>
+        <h6 class="mb-1 fw-semibold">{{ job.job_title[:60] }}</h6>
+        <div class="text-muted small mb-1">
+            <i class="bi bi-building"></i> {{ job.company_name }}
+        </div>
+        <div class="text-muted small mb-2">
+            <i class="bi bi-geo-alt"></i> {{ job.location or 'N/A' }}
+        </div>
+        <div class="d-flex gap-2">
+            <a href="{{ job.apply_url or job.job_url }}" target="_blank" rel="noopener"
+               class="btn btn-sm btn-accent flex-fill">
+                <i class="bi bi-send-fill"></i> Apply Now
+            </a>
+            <a href="{{ job.job_url }}" target="_blank" rel="noopener"
+               class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-eye"></i>
+            </a>
+        </div>
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <i class="bi bi-inbox"></i>
+        <p>No external portal jobs found.</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Desktop Table -->
+<div class="d-none d-lg-block">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle glass-table">
+            <thead>
+                <tr>
+                    <th>Prob.</th>
+                    <th>Company</th>
+                    <th>Title</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                <tr>
+                    <td>{{ probability_badge(job.interview_probability) }}</td>
+                    <td class="fw-medium">{{ job.company_name[:30] }}</td>
+                    <td>{{ job.job_title[:50] }}</td>
+                    <td class="text-muted small">{{ job.location[:25] if job.location else 'N/A' }}</td>
+                    <td>
+                        <a href="{{ job.apply_url or job.job_url }}" target="_blank" rel="noopener"
+                           class="btn btn-sm btn-accent">
+                            <i class="bi bi-send-fill"></i> Apply
+                        </a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5" class="text-center py-5 text-muted">
+                        <i class="bi bi-inbox fs-1 d-block mb-2"></i>
+                        No external portal jobs found.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{{ pagination_controls(pagination, "/external", ("&search=" ~ search if search else "")) }}
+{% endblock %}
