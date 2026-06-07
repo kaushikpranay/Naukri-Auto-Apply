@@ -34,7 +34,6 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(notice period|current notice|serving notice|availability|join.*days)", re.I), "notice_period"),
     # ── Location ─────────────────────────────────────────────────────────────
     (re.compile(r"(current location|present location|where.*(located|based))", re.I), "current_location"),
-    (re.compile(r"(willing to relocate|open to relocate|ready to relocate|relocat)", re.I), "willing_to_relocate"),
     (re.compile(r"(preferred location|work location preference)", re.I), "preferred_location"),
     # ── Role / employment ────────────────────────────────────────────────────
     (re.compile(r"(work.*(from.home|remote|hybrid)|remote.*(work|job)|wfh)", re.I), "work_mode_preference"),
@@ -45,18 +44,83 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(gender|pronouns)", re.I), "gender"),
     (re.compile(r"(disability|differently abled|pwd)", re.I), "disability_status"),
     (re.compile(r"(veteran|armed.force|military)", re.I), "veteran_status"),
+    (re.compile(r"(career break)", re.I), "career_break"),
     (re.compile(r"(cover letter|write.*about|describe yourself|brief.*introduction)", re.I), "cover_letter"),
     (re.compile(r"(linkedin|github|portfolio|profile.url)", re.I), "profile_links"),
 ]
 
 
-def normalize_question_key(question_text: str) -> str:
+def _normalize_option_values(options: list[str] | None) -> list[str]:
+    if not options:
+        return []
+
+    normalized: list[str] = []
+    for option in options:
+        cleaned = " ".join(str(option).strip().lower().split())
+        if cleaned:
+            normalized.append(cleaned)
+    return normalized
+
+
+def _is_yes_no_option_set(options: list[str]) -> bool:
+    if not options:
+        return False
+
+    ignored = {"skip this question", "skip", "none of the above"}
+    meaningful = [opt for opt in options if opt not in ignored]
+    if not meaningful:
+        return False
+
+    return set(meaningful).issubset({"yes", "no", "y", "n", "true", "false"})
+
+
+def _resolve_relocation_question_key(
+    normalized_text: str,
+    normalized_options: list[str],
+) -> str | None:
+    if "relocat" not in normalized_text:
+        return None
+
+    if _is_yes_no_option_set(normalized_options):
+        return "willing_to_relocate"
+
+    city_selector_pattern = re.compile(
+        r"(select|choose).*(city|location)|(city|location).*(residing|reside|relocat|move)",
+        re.I,
+    )
+    yes_no_relocation_pattern = re.compile(
+        r"are you .*?(residing|located|based).*?(or|and).*?relocat",
+        re.I,
+    )
+
+    if city_selector_pattern.search(normalized_text):
+        return "relocation_city_preference"
+
+    if yes_no_relocation_pattern.search(normalized_text):
+        return "willing_to_relocate"
+
+    if normalized_options and not _is_yes_no_option_set(normalized_options):
+        return "relocation_city_preference"
+
+    return "willing_to_relocate"
+
+
+def normalize_question_key(question_text: str, options: list[str] | None = None) -> str:
     """Map similar application questions to a stable key.
 
     First tries pattern matching against known question families.
     Falls back to a slug derived from the question text (max 60 chars).
     """
     normalized_text = " ".join(question_text.lower().strip().split())
+    normalized_options = _normalize_option_values(options)
+
+    relocation_key = _resolve_relocation_question_key(
+        normalized_text,
+        normalized_options,
+    )
+    if relocation_key:
+        return relocation_key
+
     for pattern, key in _QUESTION_PATTERNS:
         if pattern.search(normalized_text):
             return key

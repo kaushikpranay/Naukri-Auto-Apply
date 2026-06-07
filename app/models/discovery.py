@@ -1,4 +1,5 @@
 """
+app\models\discovery.py
 Models for apply discovery.
 """
 
@@ -16,6 +17,12 @@ class QuotaExhaustedStop(Exception):
     def __init__(self, message: str, summary: DiscoverySummary | None = None) -> None:
         super().__init__(message)
         self.summary = summary
+
+
+class PipelineSuspendedException(BaseException):
+    """Raised when the pipeline is suspended in a WAITING_FOR_USER state or user cancels input."""
+    pass
+
 
 
 class ApplicationDiscoveryRecord(BaseModel):

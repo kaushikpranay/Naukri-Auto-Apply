@@ -6,7 +6,7 @@ browser:
   headless: false
   profile_dir: "browser_profile"
   slow_mo: 500                    # milliseconds between actions
-  default_timeout: 30000          # milliseconds
+  default_timeout: 3000000          # milliseconds
   viewport_width: 1920
   viewport_height: 1080
 

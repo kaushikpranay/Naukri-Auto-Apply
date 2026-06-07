@@ -44,7 +44,7 @@ from app.export.question_bank_report_exporter import QuestionBankReportExporter
 from app.question_bank.lookup_service import QuestionBankLookupService
 from app.question_bank.seeder import QuestionBankSeeder
 from app.models.application_review import build_review_record
-from app.models.discovery import DiscoverySummary, QuotaExhaustedStop
+from app.models.discovery import DiscoverySummary, QuotaExhaustedStop, PipelineSuspendedException
 
 # Load configs
 from app.models.config import AppSettings, SelectorsConfig, SearchConfig
@@ -191,8 +191,8 @@ async def _run_discovery_stage(
             LEFT JOIN job_applications a ON a.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
               AND (
-                  j.status IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error')
-                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'quota_exhausted', 'temporary_failure', 'browser_error'))
+                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error'))
               )
         """)
         pending_count = cursor.fetchone()[0]
@@ -515,6 +515,10 @@ def main() -> None:
     except KeyboardInterrupt:
         print("\n\nInterrupted by user. Exiting...")
         sys.exit(1)
+    except PipelineSuspendedException:
+        print("\n\nPipeline suspended: WAITING_FOR_USER action required in browser. Exiting...")
+        logger.info("Pipeline suspended on interactive question")
+        sys.exit(0)
     except Exception as exc:
         import traceback
         traceback.print_exc()

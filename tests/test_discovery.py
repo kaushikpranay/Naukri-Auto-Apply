@@ -149,6 +149,20 @@ def test_question_normalization_maps_similar_questions() -> None:
     assert normalize_question_key("Custom Random Question!") == "custom_random_question"
 
 
+def test_question_normalization_distinguishes_relocation_city_selector() -> None:
+    question = "Please select the city you are currently residing or willing to relocate to"
+    options = ["Hyderabad", "Gurugram"]
+
+    assert normalize_question_key(question, options) == "relocation_city_preference"
+
+
+def test_question_normalization_distinguishes_relocation_yes_no_selector() -> None:
+    question = "Are you currently residing in Gurugram or willing to relocate to Gurugram?"
+    options = ["Yes", "No"]
+
+    assert normalize_question_key(question, options) == "willing_to_relocate"
+
+
 def test_apply_discovery_repository_selects_only_apply_jobs(tmp_path: Path) -> None:
     db_path = tmp_path / "discovery.db"
     _create_discovery_db(db_path)

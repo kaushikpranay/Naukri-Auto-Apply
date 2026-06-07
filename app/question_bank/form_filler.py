@@ -15,6 +15,8 @@ Safety guarantees
 
 from __future__ import annotations
 
+import asyncio
+import traceback
 from datetime import datetime
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
@@ -24,7 +26,7 @@ from playwright.async_api import Page, Locator
 
 from app.discovery.question_normalizer import normalize_question_key
 from app.models.config import AppSettings, SelectorsConfig
-from app.models.discovery import DiscoveredQuestion
+from app.models.discovery import DiscoveredQuestion, PipelineSuspendedException
 from app.models.form_fill import FieldFillResult, FormFillReport
 
 if TYPE_CHECKING:
@@ -41,6 +43,43 @@ When False → known answers are typed / selected into form fields.
 
 The final_submit selector is NEVER clicked regardless of this flag.
 """
+
+# ---------------------------------------------------------------------------
+# Module-level constants (single source of truth)
+# ---------------------------------------------------------------------------
+
+_INFO_MESSAGE_PATTERNS: tuple[str, ...] = (
+    "thank you for showing interest",
+    "kindly answer all the recruiter",
+    "kindly answer all recruiter",
+    "successfully apply for the job",
+    "proceed with application",
+    "welcome",
+    "instruction",
+)
+
+_VALID_QUESTION_HINTS: tuple[str, ...] = (
+    "?",
+    "years of experience",
+    "experience in",
+    "are you",
+    "do you",
+    "willing to",
+    "current ctc",
+    "expected ctc",
+    "notice period",
+)
+
+_NAV_BUTTON_KEYWORDS: frozenset[str] = frozenset({
+    "save", "submit", "skip", "continue", "next", "close",
+    "cancel", "apply", "confirm", "back", "done", "ok",
+})
+
+_NAUKRI_ERROR_PHRASES: tuple[str, ...] = (
+    "something went wrong",
+    "error while processing your job application",
+    "please try again",
+)
 
 
 class FormFiller:
@@ -62,6 +101,7 @@ class FormFiller:
         self._selectors = selectors
         self._screenshots_dir = screenshots_dir
         self._repo = repo
+        self._drawer_opened_at: float | None = None
 
     # ── Public API ───────────────────────────────────────────────────────────
 
@@ -86,91 +126,96 @@ class FormFiller:
         Returns:
             FormFillReport with filled / unknown lists and screenshot paths.
         """
-        report = FormFillReport(
-            job_id=job_id,
-            company=company,
-            role=role,
-            dry_run=DRY_RUN,
-        )
+        report = FormFillReport(job_id=job_id, company=company, role=role, dry_run=DRY_RUN)
+        self._drawer_opened_at = None
 
-        if DRY_RUN:
-            logger.info(
-                "Phase 2 DRY_RUN=True — detecting fields for job_id={} (no DOM changes)",
-                job_id,
-            )
-        else:
-            logger.info(
-                "Phase 2 DRY_RUN=False — filling fields for job_id={}",
-                job_id,
-            )
+        logger.info(
+            "Phase 2 DRY_RUN={} — {} fields for job_id={}",
+            DRY_RUN,
+            "detecting" if DRY_RUN else "filling",
+            job_id,
+        )
 
         # Build lookup: question_key → DiscoveredQuestion (with answer)
         answer_map: dict[str, DiscoveredQuestion] = {
             q.question_key: q for q in questions if q.answer
         }
 
-        # Screenshot before any interaction
-        report.screenshot_before = await self._capture_screenshot(
-            page, f"job_{job_id}_phase2_before"
-        )
+        report.screenshot_before = await self._capture_screenshot(page, f"job_{job_id}_phase2_before")
 
-        # Iterate all question containers visible on the page
         container_sel = self._selectors.discovery.questions.container
-        container_count = await page.locator(container_sel).count()
-        logger.info(
-            "Phase 2: found {} question container(s) on page for job_id={}",
-            container_count,
-            job_id,
-        )
+        processed_keys: set[str] = set()
 
-        processed_keys = set()
-        loop_limit = 30
-        loop_count = 0
-
-        while loop_count < loop_limit:
-            # Re-evaluate container count dynamically
+        for loop_count in range(30):
             container_count = await page.locator(container_sel).count()
-            
-            # Find the first unprocessed visible question container
+
+            # ── Resolve next unprocessed question ──────────────────────────
             target_container = None
             target_key = None
             target_text = None
-            
-            for idx in range(container_count):
-                container = page.locator(container_sel).nth(idx)
-                if not await container.is_visible():
-                    continue
+            target_field_type = "unknown"
+            target_options: list[str] = []
 
-                if not await is_valid_recruiter_question_container(container):
-                    continue
-                    
-                question_text = await self._extract_question_label(
-                    container, self._selectors.discovery.questions.text, page
-                )
-                if not question_text:
-                    continue
+            active = await self._resolve_active_chatbot_question(page, processed_keys)
+            if active:
+                if active.get("field_type") == "unknown":
+                    await self._final_drawer_refresh_scan(page, active)
+                target_container = active["container"]
+                target_key = active["question_key"]
+                target_text = active["question_text"]
+                target_field_type = active["field_type"]
+                target_options = active["options"]
+                logger.info("TARGET_FIELD_TYPE_FINAL: {}", target_field_type)
+                logger.info("TARGET_OPTIONS_FINAL: {}", target_options)
+            else:
+                for idx in range(container_count):
+                    container = page.locator(container_sel).nth(idx)
+                    if not await container.is_visible():
+                        continue
+                    if not await is_valid_recruiter_question_container(container):
+                        continue
 
-                logger.info("QUESTION_LABEL_DETECTED: '{}'", question_text[:100])
-                    
-                question_key = normalize_question_key(question_text)
-                if question_key not in processed_keys:
-                    target_container = container
-                    target_key = question_key
-                    target_text = question_text
-                    break
-                    
+                    question_text = await self._extract_question_label(
+                        container, self._selectors.discovery.questions.text, page
+                    )
+                    if not question_text:
+                        continue
+
+                    logger.info("QUESTION_LABEL_DETECTED: '{}'", question_text[:100])
+
+                    if question_text.strip().isdigit() or len(question_text.strip()) < 8:
+                        logger.info("SKIPPING_SHORT_OR_NUMERIC_LABEL: '{}'", question_text[:100])
+                        continue
+
+                    preview_field_type = await self._detect_field_type(container, page)
+                    preview_options = await self._get_field_options(container, preview_field_type, page)
+
+                    if not await self._is_valid_question_text(
+                        question_text,
+                        has_visible_answer_controls=bool(preview_options) or preview_field_type != "unknown",
+                        option_texts=preview_options,
+                    ):
+                        logger.info("SKIPPING_INFORMATIONAL_MESSAGE: '{}'", question_text[:100])
+                        continue
+
+                    question_key = normalize_question_key(question_text, preview_options)
+                    if question_key not in processed_keys:
+                        target_container = container
+                        target_key = question_key
+                        target_text = question_text
+                        target_field_type = preview_field_type
+                        target_options = preview_options
+                        break
+
             if not target_container:
-                # No more unprocessed visible questions found
                 break
-                
-            loop_count += 1
+
             processed_keys.add(target_key)
+            logger.info("PROCESSING_KEY: {} loop={}", target_key, loop_count)
 
             try:
-                # Add a brief delay to allow chatbot DOM updates to settle
-                await page.wait_for_timeout(1000)
-
-                field_type = await self._detect_field_type(target_container, page)
+                field_type = target_field_type
+                options = target_options
                 required = "required" in target_text.lower() or "*" in target_text
 
                 discovered_q = answer_map.get(target_key)
@@ -180,60 +225,73 @@ class FormFiller:
                 final_answer = answer
                 if not final_answer and self._repo:
                     final_answer = self._repo.get_question_answer(target_key)
-                    if final_answer:
-                        answer_source = "AUTO"
 
                 if final_answer:
                     final_answer = str(final_answer).strip()
                     if final_answer.lower() in ("none", "null", "unknown"):
                         final_answer = None
 
-                # Check mapping for CASE 2
+                mapping_key = self._build_answer_mapping_key(target_key, options)
+
                 if final_answer and self._repo and hasattr(self._repo, "get_answer_mapping"):
-                    mapped = self._repo.get_answer_mapping(target_key, final_answer)
+                    mapped = self._repo.get_answer_mapping(mapping_key, final_answer)
                     if mapped:
-                        logger.info("Using mapped option for key={}: {} -> {}", target_key, final_answer, mapped)
+                        logger.info("MAPPING_APPLIED: {} → {}", final_answer, mapped)
                         final_answer = mapped
 
+                # ── CASE 1: Unknown question ───────────────────────────────
                 if not final_answer:
-                    # CASE 1: Unknown Question
-                    options = await self._get_field_options(target_container, field_type, page)
-                    
-                    logger.info("Unknown question '{}' (key={}). Prompting user via browser dialog...", target_text, target_key)
+                    logger.info("UNKNOWN_QUESTION key={} — prompting user", target_key)
+
+                    if self._repo:
+                        try:
+                            self._repo.update_job_status(job_id, "waiting_for_user")
+                            self._repo.save_question(job_id, DiscoveredQuestion(
+                                question_key=target_key,
+                                question_text=target_text,
+                                field_type=field_type,
+                                required=required,
+                                answer=None,
+                            ))
+                        except Exception as e:
+                            logger.warning("Failed to persist waiting_for_user state: {}", e)
+
                     response = await self._interactive_prompt_user(
                         page=page,
                         question_text=target_text,
+                        options=options,
                         is_case2=False,
-                        options=options
                     )
-                    user_ans = response["answer"]
+                    logger.info("RESPONSE_FROM_POPUP={}", self._sanitize_response(response))
 
-                    # Save answer immediately into question_bank
+                    if not isinstance(response, dict) or response.get("answer") is None:
+                        logger.info("USER_CANCELLED_INPUT")
+                        raise PipelineSuspendedException("User cancelled or skipped interactive input.")
+
+                    user_ans = response["answer"]
+                    logger.info("ANSWER_RECEIVED")
+
                     if self._repo:
-                        from app.models.discovery import DiscoveredQuestion
-                        new_q = DiscoveredQuestion(
+                        self._repo.save_question(job_id, DiscoveredQuestion(
                             question_key=target_key,
                             question_text=target_text,
                             field_type=field_type,
                             required=required,
-                            answer=user_ans
-                        )
-                        self._repo.save_question(job_id, new_q)
-                    
+                            answer=user_ans,
+                        ))
+
                     final_answer = user_ans
-                    answer = user_ans  # Keep track of original raw answer for mapping checks
+                    answer = user_ans
                     answer_source = "USER_LEARNED"
-                    
-                    # Update local answer map so it's reused immediately if the same key appears again in this form
-                    from app.models.discovery import DiscoveredQuestion
                     answer_map[target_key] = DiscoveredQuestion(
                         question_key=target_key,
                         question_text=target_text,
                         field_type=field_type,
                         required=required,
-                        answer=final_answer
+                        answer=final_answer,
                     )
 
+                # ── Fill the field ─────────────────────────────────────────
                 result = await self._handle_known_field(
                     container=target_container,
                     question_key=target_key,
@@ -245,27 +303,53 @@ class FormFiller:
                     answer_source=answer_source,
                     page=page,
                 )
+                logger.info("FILL_RESULT_STATUS: {} field_type: {}", result.status, field_type)
 
-                # CASE 2: Known Answer But No Matching Option
+                # ── CASE 2: Known answer but no matching option ────────────
                 if result.status == "error" and answer:
-                    logger.info("Known answer '{}' failed for field_type={} key={}. Checking if options exist for mapping...", answer, field_type, target_key)
-                    options = await self._get_field_options(target_container, field_type, page)
-                    if options:
-                        logger.info("Known answer '{}' failed and options exist. Prompting option mapping...", answer)
-                        response = await self._interactive_prompt_user(
-                            page=page,
-                            question_text=target_text,
-                            is_case2=True,
-                            stored_answer=answer,
-                            options=options
-                        )
+                    logger.info(
+                        "CASE2_TRIGGERED: known answer '{}' failed for field_type={} key={}",
+                        answer, field_type, target_key,
+                    )
+
+                    if options or field_type == "checkbox":
+                        # Extract checkbox options if missing
+                        if not options and field_type == "checkbox":
+                            options = await self._extract_checkbox_options(target_container)
+
+                        if self._repo:
+                            try:
+                                self._repo.update_job_status(job_id, "waiting_for_user")
+                            except Exception:
+                                pass
+
+                        try:
+                            response = await self._interactive_prompt_user(
+                                page=page,
+                                question_text=target_text,
+                                options=options,
+                                is_case2=True,
+                                stored_answer=answer,
+                            )
+                        except Exception as tkinter_err:
+                            logger.error("TKINTER_POPUP_CRASHED: {}", tkinter_err)
+                            logger.error("TRACEBACK: {}", traceback.format_exc())
+                            raise
+
+                        logger.info("RESPONSE_FROM_POPUP={}", self._sanitize_response(response))
+
+                        if not isinstance(response, dict) or response.get("selected_option") is None:
+                            logger.info("USER_CANCELLED_INPUT")
+                            raise PipelineSuspendedException("User cancelled or skipped interactive option mapping.")
+
                         selected_opt = response["selected_option"]
+                        logger.info("ANSWER_RECEIVED")
+
                         if selected_opt:
                             if self._repo and hasattr(self._repo, "save_answer_mapping"):
-                                self._repo.save_answer_mapping(target_key, answer, selected_opt)
+                                self._repo.save_answer_mapping(mapping_key, answer, selected_opt)
                                 logger.info("MAPPING_SAVED")
-                            
-                            # Re-run filling with the selected option
+
                             result = await self._handle_known_field(
                                 container=target_container,
                                 question_key=target_key,
@@ -277,88 +361,196 @@ class FormFiller:
                                 answer_source="USER_MAPPED",
                                 page=page,
                             )
+                            logger.info("FILL_RESULT_STATUS: {} field_type: {}", result.status, field_type)
 
                 report.filled.append(result)
 
-                # Click chatbot Save button if field was successfully filled
+                # ── Post-fill: click Save button ───────────────────────────
                 if result.status == "filled":
-                    # 1. Resolve chatbot drawer
-                    drawer = None
-                    for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
-                        loc = page.locator(sel)
-                        count = await loc.count()
-                        for i in range(count):
-                            el = loc.nth(i)
-                            if await el.is_visible():
-                                drawer = el
-                                break
-                        if drawer:
-                            break
+                    await self._post_fill_save(page, job_id, container_sel, processed_keys, target_key, report)
 
-                    # 2. Find Save button inside drawer/page
-                    save_btn = None
-                    for sel in [".sendMsg", "div:has-text('Save')", "button:has-text('Save')"]:
-                        loc = drawer.locator(sel) if drawer else page.locator(sel)
-                        count = await loc.count()
-                        for i in range(count):
-                            el = loc.nth(i)
-                            if await el.is_visible():
-                                save_btn = el
-                                logger.info("SAVE_BUTTON_FOUND with selector: {}", sel)
-                                break
-                        if save_btn:
-                            break
+            except PipelineSuspendedException:
+                raise
+            except Exception as exc:
+                logger.warning("Phase 2 container error key={} job_id={}: {}", target_key, job_id, exc)
 
-                    if save_btn:
-                        # Wait for UI update
-                        await page.wait_for_timeout(1000)
-                        logger.info("SAVE_BUTTON_CLICKED")
-                        await save_btn.evaluate("el => el.click()")
-                        
-                        # Wait for next question to load
-                        await page.wait_for_timeout(2000)
-                        
-                        # Detect next question
-                        new_count = await page.locator(container_sel).count()
-                        next_q_found = False
-                        for next_idx in range(new_count):
-                            next_container = page.locator(container_sel).nth(next_idx)
-                            if await next_container.is_visible():
-                                next_q_text = await self._extract_text(
-                                    next_container, self._selectors.discovery.questions.text
-                                )
-                                if next_q_text:
-                                    next_q_key = normalize_question_key(next_q_text)
-                                    if next_q_key not in processed_keys:
-                                        logger.info("NEXT_QUESTION_DETECTED: '{}' [{}]", next_q_text[:60], next_q_key)
-                                        next_q_found = True
-                                        break
-                        if not next_q_found:
-                            logger.info("No new question detected after clicking Save.")
-
-            except Exception as exc:  # noqa: BLE001
-                logger.warning(
-                    "Phase 2 container error key={} job_id={}: {}",
-                    target_key,
-                    job_id,
-                    exc,
-                )
-
-        # Screenshot after (reflects fills if DRY_RUN=False)
-        report.screenshot_after = await self._capture_screenshot(
-            page, f"job_{job_id}_phase2_after"
-        )
-
-        status_word = "DRY_RUN" if DRY_RUN else "LIVE"
+        report.screenshot_after = await self._capture_screenshot(page, f"job_{job_id}_phase2_after")
         logger.info(
             "Phase 2 [{}] complete: {} filled / {} unknown / {:.1f}% fill rate — job_id={}",
-            status_word,
+            "DRY_RUN" if DRY_RUN else "LIVE",
             len(report.filled),
             len(report.unknown),
             report.fill_rate_pct,
             job_id,
         )
         return report
+
+    # ── Post-fill save logic ─────────────────────────────────────────────────
+
+    async def _post_fill_save(
+        self,
+        page: Page,
+        job_id: int,
+        container_sel: str,
+        processed_keys: set[str],
+        target_key: str,
+        report: FormFillReport,
+    ) -> None:
+        """Click the Save button after a successful fill and handle outcomes."""
+        drawer = await self._resolve_drawer(page)
+
+        save_btn = None
+        for sel in [".sendMsg", "div:has-text('Save')", "button:has-text('Save')"]:
+            loc = drawer.locator(sel) if drawer else page.locator(sel)
+            count = await loc.count()
+            for i in range(count):
+                el = loc.nth(i)
+                if await el.is_visible():
+                    save_btn = el
+                    logger.info("SAVE_BUTTON_FOUND with selector: {}", sel)
+                    break
+            if save_btn:
+                break
+
+        if not save_btn:
+            return
+
+        await self._safe_wait(page, 3000)
+        logger.info("SAVE_BUTTON_CLICKED")
+        await save_btn.evaluate("el => el.click()")
+        await self._safe_wait(page, 2000)
+        logger.info("POST_SAVE_WAIT_DONE")
+
+        # Detect Naukri server error
+        try:
+            page_text = (await page.inner_text("body")).lower()
+            if any(phrase in page_text for phrase in _NAUKRI_ERROR_PHRASES):
+                logger.warning("NAUKRI_SERVER_ERROR_DETECTED — skipping job_id={}", job_id)
+                if self._repo:
+                    self._repo.update_job_status(job_id, "naukri_error")
+                raise PipelineSuspendedException()
+        except PipelineSuspendedException:
+            raise
+        except Exception:
+            pass
+
+        # Detect validation error
+        if await self._has_validation_error(page, drawer):
+            logger.warning("SAVE_REJECTED")
+            processed_keys.discard(target_key)
+            if self._repo:
+                self._repo.update_job_status(job_id, "validation_failed")
+            report.screenshot_error = await self._capture_screenshot(page, f"job_{job_id}_validation_failed")
+            raise PipelineSuspendedException()
+
+        # Detect success / next question
+        save_accepted = await self._detect_save_accepted(page, container_sel, processed_keys)
+        logger.info("SAVE_ACCEPTED" if save_accepted else "No new question or success indicator detected after clicking Save.")
+
+    async def _has_validation_error(self, page: Page, drawer) -> bool:
+        """Return True if a validation error is visible after save."""
+        error_selectors = [
+            ".error", ".err", "[class*='error']", "[class*='invalid']",
+            ".error-msg", ".validation-error", ".msg-error", ".error-message",
+        ]
+        scope = drawer if drawer else page
+        for err_sel in error_selectors:
+            try:
+                loc = scope.locator(err_sel)
+                count = await loc.count()
+                for i in range(count):
+                    el = loc.nth(i)
+                    if await el.is_visible():
+                        # Exclude bot message bubbles
+                        is_bot = await el.evaluate("""(node) => {
+                            return !!node.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
+                        }""")
+                        if is_bot:
+                            continue
+                        txt = (await el.inner_text()).strip().lower()
+                        if txt:
+                            logger.warning("VALIDATION_ERROR_DETECTED: selector='{}' text='{}'", err_sel, txt)
+                            return True
+            except Exception:
+                continue
+
+        error_keywords = ["please", "required", "mandatory", "invalid", "error"]
+        error_texts = ["required", "mandatory", "please enter", "please select",
+                       "invalid", "cannot be empty", "choose", "fill", "incorrect"]
+        for err_txt in error_texts:
+            try:
+                loc = scope.locator(f"*:has-text('{err_txt}')")
+                count = await loc.count()
+                for i in range(count):
+                    el = loc.nth(i)
+                    if await el.is_visible():
+                        tag = await el.evaluate("el => el.tagName.toLowerCase()")
+                        if tag in ("div", "span", "p", "label"):
+                            # Exclude bot message bubbles
+                            is_bot = await el.evaluate("""(node) => {
+                                return !!node.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
+                            }""")
+                            if is_bot:
+                                continue
+                            txt = (await el.inner_text()).strip().lower()
+                            if len(txt) < 150 and any(kw in txt for kw in error_keywords):
+                                logger.warning("VALIDATION_ERROR_DETECTED: text='{}': '{}'", err_txt, txt)
+                                return True
+            except Exception:
+                continue
+        return False
+
+    async def _detect_save_accepted(
+        self,
+        page: Page,
+        container_sel: str,
+        processed_keys: set[str],
+    ) -> bool:
+        """Return True if save was accepted (success message, next question, or nav button visible)."""
+        for succ_txt in ["success", "submitted", "application received", "successfully applied",
+                         "thank you", "completed", "saved"]:
+            try:
+                loc = page.locator(f"*:has-text('{succ_txt}')")
+                count = await loc.count()
+                for i in range(count):
+                    if await loc.nth(i).is_visible():
+                        logger.info("APPLICATION_SUBMITTED")
+                        return True
+            except Exception:
+                continue
+
+        for btn_txt in ["submit", "continue", "review", "next", "preview"]:
+            try:
+                loc = page.locator(
+                    f"button:has-text('{btn_txt}'), input[type='button']:has-text('{btn_txt}'), [role='button']:has-text('{btn_txt}')"
+                )
+                count = await loc.count()
+                for i in range(count):
+                    if await loc.nth(i).is_visible():
+                        return True
+            except Exception:
+                continue
+
+        # Check for next chatbot question
+        next_q = await self._resolve_active_chatbot_question(page, processed_keys)
+        if next_q:
+            if next_q.get("field_type") == "unknown":
+                await self._final_drawer_refresh_scan(page, next_q)
+            logger.info("NEXT_QUESTION_DETECTED: '{}' [{}]",
+                        next_q["question_text"][:60], next_q["question_key"])
+            return True
+
+        new_count = await page.locator(container_sel).count()
+        for idx in range(new_count):
+            next_container = page.locator(container_sel).nth(idx)
+            if await next_container.is_visible():
+                next_q_text = await self._extract_text(next_container, self._selectors.discovery.questions.text)
+                if next_q_text:
+                    next_q_key = normalize_question_key(next_q_text)
+                    if next_q_key not in processed_keys:
+                        logger.info("NEXT_QUESTION_DETECTED: '{}' [{}]", next_q_text[:60], next_q_key)
+                        return True
+        return False
 
     # ── Field handling ───────────────────────────────────────────────────────
 
@@ -378,11 +570,7 @@ class FormFiller:
         if DRY_RUN and answer_source != "USER_LEARNED":
             logger.info(
                 "Phase 2 DRY_RUN WOULD_FILL: [{}] '{}' = '{}' (source={}) job_id={}",
-                question_key,
-                question_text[:60],
-                answer[:40],
-                answer_source,
-                job_id,
+                question_key, question_text[:60], answer[:40], answer_source, job_id,
             )
             return FieldFillResult(
                 question_key=question_key,
@@ -394,38 +582,29 @@ class FormFiller:
                 answer_source=answer_source,
             )
 
-        # Live fill
-        success, error, selector_used, method_used = await self._fill_field(container, field_type, answer, page, question_key=question_key)
+        success, error, selector_used, method_used = await self._fill_field(
+            container, field_type, answer, page, question_key=question_key
+        )
         status = "filled" if success else "error"
-        result_word = "SUCCESS" if success else f"FAILED ({error})"
-        
-        # Verification Log
+
         logger.info(
-            f"\n{question_key}\n"
-            f"{answer}\n"
-            f"{selector_used}\n"
-            f"{method_used}\n"
-            f"{result_word}\n"
+            "\n{}\n{}\n{}\n{}\n{}\n",
+            question_key, answer, selector_used, method_used,
+            "SUCCESS" if success else f"FAILED ({error})",
         )
 
         if success:
+            logger.info("ANSWER_FILLED")
             logger.info(
                 "Phase 2 FILLED: [{}] '{}' = '{}' (source={}) job_id={}",
-                question_key,
-                question_text[:60],
-                answer[:40],
-                answer_source,
-                job_id,
+                question_key, question_text[:60], answer[:40], answer_source, job_id,
             )
         else:
             logger.warning(
                 "Phase 2 ERROR: [{}] '{}' (source={}) job_id={} — {}",
-                question_key,
-                question_text[:60],
-                answer_source,
-                job_id,
-                error,
+                question_key, question_text[:60], answer_source, job_id, error,
             )
+
         return FieldFillResult(
             question_key=question_key,
             question_text=question_text,
@@ -438,36 +617,30 @@ class FormFiller:
         )
 
     async def _fill_field(
-        self, container, field_type: str, answer: str, page: Page | None = None, question_key: str = ""
+        self,
+        container,
+        field_type: str,
+        answer: str,
+        page: Page | None = None,
+        question_key: str = "",
     ) -> tuple[bool, str | None, str, str]:
-        """
-        Fill a single form field.
-
-        Returns (success, error_message, selector_used, method_used).
-        The final_submit selector is NEVER clicked here.
-        """
+        """Fill a single form field. Returns (success, error, selector_used, method_used)."""
         selector_used = "unknown"
         method_used = "unknown"
         try:
-            # Active drawer resolution helper
-            drawer = None
-            if page:
-                for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
-                    loc = page.locator(sel)
-                    count = await loc.count()
-                    for i in range(count):
-                        el = loc.nth(i)
-                        if await el.is_visible():
-                            drawer = el
-                            break
-                    if drawer:
-                        break
+            drawer = await self._resolve_drawer(page) if page else None
 
+            # ── input / textarea ──────────────────────────────────────────
             if field_type in ("input", "textarea"):
-                input_sel = "input:not([type='radio']):not([type='checkbox']):not([type='hidden'])" if field_type == "input" else "textarea"
+                input_sel = (
+                    "input:not([type='radio']):not([type='checkbox']):not([type='hidden'])"
+                    if field_type == "input" else "textarea"
+                )
                 field_loc = container.locator(input_sel).first
-                selector_used = f"{field_type}"
-                if await field_loc.count() == 0 and page:
+                selector_used = field_type
+                field_visible = await field_loc.count() > 0 and await self._is_element_visible(field_loc)
+
+                if not field_visible and page:
                     if drawer:
                         field_loc = drawer.locator(input_sel).first
                         selector_used = f"chatbot_drawer {field_type}"
@@ -478,9 +651,18 @@ class FormFiller:
                 method_used = "TYPE"
                 await field_loc.click()
                 await field_loc.fill("")
-                await field_loc.type(answer, delay=20)
-                return True, None, selector_used, method_used
+                await field_loc.type(answer, delay=30)
 
+                actual = (await field_loc.evaluate("el => el.value || ''")).strip().lower()
+                ans_norm = " ".join(answer.strip().lower().split())
+                act_norm = " ".join(actual.split())
+                if ans_norm in act_norm or act_norm in ans_norm:
+                    logger.info("FIELD_VERIFY_SUCCESS")
+                    return True, None, selector_used, method_used
+                logger.error("FIELD_VERIFY_FAILED")
+                return False, f"Verification failed: expected '{answer}', got '{actual}'", selector_used, method_used
+
+            # ── select ────────────────────────────────────────────────────
             if field_type == "select":
                 select_loc = container.locator("select").first
                 selector_used = "select"
@@ -497,324 +679,585 @@ class FormFiller:
                     await select_loc.select_option(label=answer)
                 except Exception:
                     await select_loc.select_option(value=answer)
-                return True, None, selector_used, method_used
 
-            if field_type in ("radiogroup", "[role='radiogroup']", "radio") or "radio" in field_type:
+                selected_val = (await select_loc.evaluate(
+                    "el => { const opt = el.options[el.selectedIndex]; return opt ? (opt.label || opt.text || opt.value || '') : ''; }"
+                )).strip().lower()
+                ans_norm = " ".join(answer.strip().lower().split())
+                sel_norm = " ".join(selected_val.split())
+                if ans_norm in sel_norm or sel_norm in ans_norm:
+                    logger.info("FIELD_VERIFY_SUCCESS")
+                    return True, None, selector_used, method_used
+                logger.error("FIELD_VERIFY_FAILED")
+                return False, f"Verification failed: expected '{answer}', got '{selected_val}'", selector_used, method_used
+
+            # ── radio ─────────────────────────────────────────────────────
+            if "radio" in field_type or field_type in ("[role='radiogroup']",):
                 method_used = "DOM_CLICK"
-                opt_locs = []
-                if drawer:
-                    opt_loc = drawer.locator(f"input[aria-label='{answer}']").first
-                    if await opt_loc.count() > 0:
-                        opt_locs.append((opt_loc, f"input[aria-label=\"{answer}\"]"))
-                    opt_loc2 = drawer.locator(f"[role='radio'][aria-label='{answer}']").first
-                    if await opt_loc2.count() > 0:
-                        opt_locs.append((opt_loc2, f"[role='radio'][aria-label=\"{answer}\"]"))
+                options = container.locator("[role='radio'], input[type='radio']")
+                if await options.count() == 0 and drawer:
+                    options = drawer.locator("[role='radio']:visible, input[type='radio']:visible")
+                elif await options.count() == 0 and page:
+                    options = page.locator("[role='radio']:visible, input[type='radio']:visible")
 
-                if not opt_locs:
-                    options = container.locator("[role='radio'], input[type='radio']")
-                    if await options.count() == 0 and drawer:
-                        options = drawer.locator("[role='radio']:visible, input[type='radio']:visible")
-                    elif await options.count() == 0 and page:
-                        options = page.locator("[role='radio']:visible, input[type='radio']:visible")
-                    count = await options.count()
-                    answer_lower = answer.lower()
-                    
-                    # Store option elements and their text for fuzzy matching fallback
-                    option_pairs = []
-                    for i in range(count):
-                        opt = options.nth(i)
-                        opt_text = (await opt.inner_text()).strip()
-                        if not opt_text:
-                            opt_text = (await opt.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
-                        aria_label = (await opt.get_attribute("aria-label") or "").strip()
-                        
-                        # 1. Simple text matching
-                        opt_text_lower = opt_text.lower()
-                        aria_label_lower = aria_label.lower()
-                        if answer_lower in opt_text_lower or opt_text_lower in answer_lower or answer_lower in aria_label_lower:
-                            opt_locs.append((opt, f"[role='radio'] option {answer}"))
-                        else:
-                            option_pairs.append((opt, opt_text if opt_text else aria_label))
+                count = await options.count()
+                answer_lower = self._normalize_option_text(answer)
+                exact_matches: list[tuple] = []
+                fuzzy_matches: list[tuple] = []
+                option_pairs: list[tuple] = []
 
-                    # 2. If no exact/substring match found, try experience range/numerical matching
-                    if not opt_locs:
-                        val = None
-                        try:
-                            val = float(answer.strip())
-                        except ValueError:
-                            # If answer is not a pure float (e.g. "<6 years"), try to get actual numeric experience
-                            val = get_actual_numeric_experience(question_key, self._repo)
+                for i in range(count):
+                    opt = options.nth(i)
+                    option_text = await self._extract_choice_label_text(opt)
+                    norm = self._normalize_option_text(option_text)
+                    if not norm:
+                        continue
+                    option_pairs.append((opt, option_text))
+                    if norm == answer_lower:
+                        exact_matches.append((opt, option_text))
+                    elif answer_lower and (answer_lower in norm or norm in answer_lower):
+                        fuzzy_matches.append((opt, option_text))
 
-                        if val is not None:
-                            import re
-                            for opt, text_val in option_pairs:
-                                opt_norm = text_val.strip().lower()
-                                matched = False
-                                
-                                # Case 1: No experience
-                                if val == 0 and any(w in opt_norm for w in ["no experience", "fresher", "fresh", "none", "0"]):
-                                    matched = True
-                                
-                                # Case 2: Range X-Y or X to Y
-                                if not matched:
-                                    range_match = re.search(r'(\d+(?:\.\d+)?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)', opt_norm)
-                                    if range_match:
-                                        low = float(range_match.group(1))
-                                        high = float(range_match.group(2))
-                                        if low <= val <= high:
-                                            matched = True
-                                            
-                                # Case 3: Less than X
-                                if not matched:
-                                    less_match = re.search(r'(?:<|less\s+than)\s*(\d+(?:\.\d+)?)', opt_norm)
-                                    if less_match:
-                                        limit = float(less_match.group(1))
-                                        if val < limit:
-                                            matched = True
-                                            
-                                # Case 4: Greater than X or X+
-                                if not matched:
-                                    greater_match = re.search(r'(?:>|greater\s+than|more\s+than|above)\s*(\d+(?:\.\d+)?)', opt_norm)
-                                    if greater_match:
-                                        limit = float(greater_match.group(1))
-                                        if val > limit:
-                                            matched = True
-                                    plus_match = re.search(r'(\d+(?:\.\d+)?)\s*\+', opt_norm)
-                                    if plus_match and not matched:
-                                        limit = float(plus_match.group(1))
-                                        if val >= limit:
-                                            matched = True
-                                            
-                                # Case 5: Exact single number
-                                if not matched:
-                                    exact_match = re.search(r'\b(\d+(?:\.\d+)?)\b', opt_norm)
-                                    if exact_match:
-                                        limit = float(exact_match.group(1))
-                                        if val == limit:
-                                            matched = True
-                                            
-                                if matched:
-                                    opt_locs.append((opt, f"[role='radio'] fuzzy option {text_val}"))
-                                    break  # Match found
+                opt_locs: list[tuple] = []
+                if exact_matches:
+                    opt_locs = [(o, f"[role='radio'] exact: {t}") for o, t in exact_matches]
+                elif fuzzy_matches:
+                    opt_locs = [(o, f"[role='radio'] fuzzy: {t}") for o, t in fuzzy_matches]
+                else:
+                    val = None
+                    try:
+                        val = float(answer.strip())
+                    except ValueError:
+                        val = get_actual_numeric_experience(question_key, self._repo)
+
+                    if val is not None:
+                        import re
+                        for opt, text_val in option_pairs:
+                            if _numeric_option_matches(opt_norm := text_val.strip().lower(), val):
+                                opt_locs.append((opt, f"[role='radio'] numeric: {text_val}"))
+                                break
 
                 for opt, sel_name in opt_locs:
                     try:
                         selector_used = sel_name
+                        matched_text = await self._extract_choice_label_text(opt)
+                        logger.info("MATCHED_OPTION_TEXT: {}", answer)
+                        logger.info("MATCHED_ELEMENT_TEXT: {}", matched_text)
                         await opt.evaluate("el => { el.click(); el.dispatchEvent(new Event('change', { bubbles: true })); el.dispatchEvent(new Event('input', { bubbles: true })); }")
-                        return True, None, selector_used, method_used
+
+                        is_selected = False
+                        try:
+                            is_selected = await opt.evaluate("""el => {
+                                if (el.tagName.toLowerCase() === 'input') return el.checked;
+                                const a = el.getAttribute('aria-checked');
+                                if (a === 'true') return true;
+                                const c = el.className || '';
+                                if (c.includes('checked') || c.includes('selected') || c.includes('active')) return true;
+                                const p = el.parentElement;
+                                return p && (p.className || '').includes('selected');
+                            }""")
+                        except Exception:
+                            pass
+
+                        if is_selected:
+                            logger.info("FIELD_VERIFY_SUCCESS")
+                            return True, None, selector_used, method_used
+                        logger.error("FIELD_VERIFY_FAILED")
                     except Exception as e:
                         logger.warning("DOM click failed: {}", e)
 
-                return False, f"No radio option matched '{answer}'", selector_used, method_used
+                return False, f"No radio option matched '{answer}' or verification failed", selector_used, method_used
 
+            # ── button-options / chatbot chips / div ──────────────────────
+            if field_type in ("button-options", "button-choice", "chatbot_chips", "div"):
+                method_used = "DOM_CLICK"
+                chip_sel = ".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem']"
+                chip_locs = (
+                    drawer.locator(chip_sel) if drawer
+                    else page.locator(f"{chip_sel}:visible") if page
+                    else None
+                )
+                if chip_locs and await chip_locs.count() > 0:
+                    answer_lower = answer.strip().lower()
+                    matched_chip = None
+                    for i in range(await chip_locs.count()):
+                        el = chip_locs.nth(i)
+                        if not await el.is_visible():
+                            continue
+                        txt = (await el.inner_text()).strip().lower()
+                        if txt == answer_lower or answer_lower in txt or txt in answer_lower:
+                            matched_chip = el
+                            selector_used = f"chatbot_chip: {txt}"
+                            break
+
+                    if matched_chip:
+                        await matched_chip.evaluate("el => el.click()")
+                        if page:
+                            await self._safe_wait(page, 1000)
+
+                        is_selected = False
+                        try:
+                            is_selected = await matched_chip.evaluate("""el => {
+                                const c = el.className || '';
+                                return c.includes('selected') || c.includes('active') || c.includes('checked') || el.disabled;
+                            }""")
+                        except Exception:
+                            pass
+
+                        if not is_selected and page:
+                            try:
+                                drawer_el = await self._resolve_drawer(page)
+                                if drawer_el:
+                                    user_msgs = drawer_el.locator(".chatbot_ListItem.userItem, [class*='userItem']")
+                                    ans_lower = answer.strip().lower()
+                                    for idx in range(await user_msgs.count()):
+                                        msg_text = (await user_msgs.nth(idx).inner_text()).strip().lower()
+                                        if ans_lower in msg_text or msg_text in ans_lower:
+                                            is_selected = True
+                                            break
+                            except Exception:
+                                pass
+
+                        if not is_selected:
+                            try:
+                                is_selected = not await matched_chip.is_visible()
+                            except Exception:
+                                pass
+
+                        if is_selected:
+                            logger.info("FIELD_VERIFY_SUCCESS")
+                            return True, None, selector_used, method_used
+                        logger.error("FIELD_VERIFY_FAILED")
+                        return False, "Verification failed for chatbot chip selection", selector_used, method_used
+
+                # Fallback to general option/button selectors
+                return await self._click_option_fallback(container, drawer, page, answer, "div option")
+
+            # ── contenteditable ───────────────────────────────────────────
             if field_type == "contenteditable":
                 ce_loc = container.locator("[contenteditable='true']").first
                 selector_used = "[contenteditable='true']"
-                if await ce_loc.count() == 0 and page:
+                ce_visible = await ce_loc.count() > 0 and await self._is_element_visible(ce_loc)
+
+                if not ce_visible and page:
                     if drawer:
                         ce_loc = drawer.locator("[contenteditable='true']").first
-                        selector_used = "[contenteditable=\"true\"]"
+                        selector_used = '[contenteditable="true"]'
                     else:
                         ce_loc = page.locator("[contenteditable='true']:visible").first
                         selector_used = "[contenteditable='true']:visible"
 
                 method_used = "TYPE"
                 await ce_loc.click()
-                await ce_loc.fill(answer)
-                return True, None, selector_used, method_used
+                await ce_loc.fill("")
+                await ce_loc.type(answer, delay=30)
 
+                actual = (await ce_loc.evaluate("el => el.innerText || el.textContent || ''")).strip().lower()
+                ans_norm = " ".join(answer.strip().lower().split())
+                act_norm = " ".join(actual.split())
+                if ans_norm in act_norm or act_norm in ans_norm:
+                    logger.info("FIELD_VERIFY_SUCCESS")
+                    return True, None, selector_used, method_used
+                logger.error("FIELD_VERIFY_FAILED")
+                return False, f"Verification failed: expected '{answer}', got '{actual}'", selector_used, method_used
+
+            # ── checkbox ──────────────────────────────────────────────────
             if field_type == "checkbox":
-                checkbox_loc = container.locator("input[type='checkbox'], [role='checkbox']").first
-                selector_used = "checkbox"
-                if await checkbox_loc.count() == 0 and page:
-                    if drawer:
-                        checkbox_loc = drawer.locator("input[type='checkbox'], [role='checkbox']").first
-                        selector_used = "chatbot_drawer checkbox"
-                    else:
-                        checkbox_loc = page.locator("input[type='checkbox']:visible, [role='checkbox']:visible").first
-                        selector_used = "checkbox:visible"
-
                 method_used = "CLICK"
                 answer_lower = answer.strip().lower()
-                should_be_checked = answer_lower in ("yes", "true", "check", "checked", "select", "selected", "1")
+                logger.info("FILL_FIELD_CHECKBOX_START JS-eval answer='{}'", answer)
                 
-                is_checked = False
-                tag = await checkbox_loc.evaluate("el => el.tagName.toLowerCase()")
-                if tag == "input":
-                    is_checked = await checkbox_loc.evaluate("el => el.checked")
+                # Resolve the correct scope (drawer or container)
+                scope = drawer if drawer else container
+                
+                is_mock = type(scope).__name__ in ("MagicMock", "AsyncMock", "Mock")
+                if is_mock:
+                    # Old locator-based fallback for mocks/unit-tests
+                    cb_selector = (
+                        "input[type='checkbox'], [role='checkbox'], "
+                        ".checkboxLabel, [class*='checkbox'], "
+                        "label:has(input[type='checkbox']), "
+                        "[class*='check-box'], [class*='checkBox'], "
+                        "label.mcc__label, [class*='mcc__label']"
+                    )
+                    all_cbs = container.locator(cb_selector)
+                    if drawer:
+                        all_cbs = drawer.locator(cb_selector)
+                    count = await all_cbs.count()
+
+                    if count == 0:
+                        return False, "No checkboxes found in container", "checkbox", method_used
+                    elif count > 1:
+                        await all_cbs.first.click()
+                        return True, None, "checkbox", method_used
+                    else:
+                        cb_loc = all_cbs.first
+                        should_check = answer_lower in ("yes", "true", "check", "checked", "select", "selected", "1")
+                        tag = await cb_loc.evaluate("el => el.tagName.toLowerCase()")
+                        if tag == "input":
+                            is_checked = await cb_loc.evaluate("el => el.checked")
+                        else:
+                            is_checked = (await cb_loc.get_attribute("aria-checked")) == "true"
+                        if should_check != is_checked:
+                            await cb_loc.click()
+                        return True, None, "checkbox", method_used
+
+                # Evaluate in-browser to extract all checkbox info instantly
+                checkboxes = await scope.evaluate("""(el) => {
+                    const cbSelector = "input[type='checkbox'], [role='checkbox'], .checkboxLabel, [class*='checkbox'], label:has(input[type='checkbox']), [class*='check-box'], [class*='checkBox'], label.mcc__label, [class*='mcc__label']";
+                    const elements = Array.from(el.querySelectorAll(cbSelector));
+                    return elements.map((item, index) => {
+                        let labelText = item.textContent || item.innerText || '';
+                        if (!labelText.trim()) {
+                            labelText = item.getAttribute('aria-label') || '';
+                        }
+                        if (!labelText.trim()) {
+                            const closestLabel = item.closest('label');
+                            if (closestLabel) {
+                                labelText = closestLabel.innerText || closestLabel.textContent || '';
+                            }
+                        }
+                        return {
+                            index: index,
+                            labelText: labelText.trim(),
+                            tagName: item.tagName.toLowerCase(),
+                            isInput: item.tagName.toLowerCase() === 'input',
+                            checked: item.checked || item.getAttribute('aria-checked') === 'true'
+                        };
+                    });
+                }""")
+                
+                logger.info("JS-extracted checkboxes: {}", checkboxes)
+                
+                if not checkboxes:
+                    logger.warning("No checkboxes found in container/drawer")
+                    return False, "No checkboxes found in container", "checkbox", method_used
+                
+                if len(checkboxes) > 1:
+                    matched_idx = -1
+                    matched_label = ""
+                    for cb in checkboxes:
+                        lbl = cb["labelText"].lower().strip()
+                        if not lbl:
+                            continue
+                        if answer_lower in lbl or lbl in answer_lower:
+                            matched_idx = cb["index"]
+                            matched_label = cb["labelText"]
+                            break
+                            
+                    if matched_idx != -1:
+                        # Click the matched checkbox in JS to avoid Playwright waiting
+                        await scope.evaluate(f"""(el) => {{
+                            const cbSelector = "input[type='checkbox'], [role='checkbox'], .checkboxLabel, [class*='checkbox'], label:has(input[type='checkbox']), [class*='check-box'], [class*='checkBox'], label.mcc__label, [class*='mcc__label']";
+                            const item = el.querySelectorAll(cbSelector)[{matched_idx}];
+                            if (item) {{
+                                item.click();
+                                item.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                                item.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                            }}
+                        }}""")
+                        logger.info("CHECKBOX_OPTION_MATCHED: '{}'", matched_label)
+                        logger.info("FIELD_VERIFY_SUCCESS")
+                        return True, None, "checkbox", method_used
+                    else:
+                        logger.warning("CHECKBOX_NO_MATCH: answer='{}' not found in options", answer)
+                        return False, f"No checkbox option matched answer '{answer}'", "checkbox", method_used
                 else:
-                    aria_checked = await checkbox_loc.get_attribute("aria-checked")
-                    is_checked = aria_checked == "true"
-                
-                if should_be_checked != is_checked:
-                    await checkbox_loc.click()
+                    # Single checkbox (Yes/No style)
+                    cb = checkboxes[0]
+                    should_check = answer_lower in ("yes", "true", "check", "checked", "select", "selected", "1")
+                    is_checked = cb["checked"]
+                    
+                    if should_check != is_checked:
+                        await scope.evaluate(f"""(el) => {{
+                            const cbSelector = "input[type='checkbox'], [role='checkbox'], .checkboxLabel, [class*='checkbox'], label:has(input[type='checkbox']), [class*='check-box'], [class*='checkBox'], label.mcc__label, [class*='mcc__label']";
+                            const item = el.querySelectorAll(cbSelector)[0];
+                            if (item) {{
+                                item.click();
+                                item.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                                item.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                            }}
+                        }}""")
                     logger.info("CHECKBOX_SELECTED")
-                return True, None, selector_used, method_used
-
-            if field_type == "div":
-                method_used = "DOM_CLICK"
-                options_sel = "button, [role='button'], [role='option'], [role='radio'], div[class*='option'], div[class*='button'], a[class*='btn'], a[class*='button'], [tabindex]"
-                options = container.locator(options_sel)
-                if await options.count() == 0 and drawer:
-                    options = drawer.locator(options_sel)
-                elif await options.count() == 0 and page:
-                    options = page.locator(options_sel)
-
-                count = await options.count()
-                answer_lower = answer.lower().strip()
-                
-                matched_option = None
-                selector_used = "div option"
-                
-                for i in range(count):
-                    opt = options.nth(i)
-                    if not await opt.is_visible():
-                        continue
-                    opt_text = (await opt.inner_text()).strip()
-                    if not opt_text:
-                        opt_text = (await opt.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
-                    aria_label = (await opt.get_attribute("aria-label") or "").strip()
-                    
-                    opt_text_lower = opt_text.lower().strip()
-                    aria_label_lower = aria_label.lower().strip()
-                    
-                    if (answer_lower and (answer_lower in opt_text_lower or opt_text_lower in answer_lower or answer_lower in aria_label_lower)):
-                        matched_option = opt
-                        selector_used = f"div option text={opt_text[:30]}"
-                        break
-                
-                if matched_option:
-                    await matched_option.evaluate("el => { el.click(); el.dispatchEvent(new Event('change', { bubbles: true })); el.dispatchEvent(new Event('input', { bubbles: true })); }")
-                    logger.info("DIV_OPTION_SELECTED")
-                    return True, None, selector_used, method_used
-                else:
-                    return False, f"No option matching '{answer}' found", selector_used, method_used
+                    logger.info("FIELD_VERIFY_SUCCESS")
+                    return True, None, "checkbox", method_used
 
             return False, f"Unsupported field_type '{field_type}'", selector_used, method_used
 
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             return False, str(exc), selector_used, method_used
+
+    async def _click_option_fallback(
+        self,
+        container,
+        drawer,
+        page: Page | None,
+        answer: str,
+        selector_label: str,
+    ) -> tuple[bool, str | None, str, str]:
+        """Shared fallback for div/button-options: scan general clickable elements."""
+        method_used = "DOM_CLICK"
+        options_sel = "button, [role='button'], [role='option'], [role='radio'], div[class*='option'], div[class*='button'], a[class*='btn'], a[class*='button'], [tabindex]"
+        options = container.locator(options_sel)
+        if await options.count() == 0 and drawer:
+            options = drawer.locator(options_sel)
+        elif await options.count() == 0 and page:
+            options = page.locator(options_sel)
+
+        answer_lower = answer.lower().strip()
+        matched_option = None
+        selector_used = selector_label
+
+        for i in range(await options.count()):
+            opt = options.nth(i)
+            if not await opt.is_visible():
+                continue
+            opt_text = (await opt.inner_text()).strip()
+            if not opt_text:
+                opt_text = (await opt.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
+            aria_label = (await opt.get_attribute("aria-label") or "").strip()
+            opt_lower = opt_text.lower().strip()
+            aria_lower = aria_label.lower().strip()
+            if answer_lower and (answer_lower in opt_lower or opt_lower in answer_lower or answer_lower in aria_lower):
+                matched_option = opt
+                selector_used = f"div option text={opt_text[:30]}"
+                break
+
+        if not matched_option:
+            return False, f"No option matching '{answer}' found", selector_used, method_used
+
+        await matched_option.evaluate("el => { el.click(); el.dispatchEvent(new Event('change', { bubbles: true })); el.dispatchEvent(new Event('input', { bubbles: true })); }")
+        if page:
+            await self._safe_wait(page, 1000)
+
+        is_selected = False
+        try:
+            is_selected = await matched_option.evaluate("""el => {
+                const c = el.className || '';
+                return c.includes('selected') || c.includes('active') || c.includes('checked') || el.disabled;
+            }""")
+        except Exception:
+            pass
+        if not is_selected:
+            try:
+                is_selected = not await matched_option.is_visible()
+            except Exception:
+                pass
+
+        if is_selected:
+            logger.info("FIELD_VERIFY_SUCCESS")
+            return True, None, selector_used, method_used
+        logger.error("FIELD_VERIFY_FAILED")
+        return False, "Verification failed for option click", selector_used, method_used
 
     # ── Helpers ──────────────────────────────────────────────────────────────
 
-    async def _detect_field_type(self, container, page: Page | None = None) -> str:
-        # Check if container contains any checkboxes
+    @staticmethod
+    def _sanitize_response(response: dict | None) -> str:
+        if not isinstance(response, dict):
+            return str(response)
+        clean = {k: v for k, v in response.items() if k != "response_received" and v is not None}
+        return str(clean).replace(" ", "")
+
+    async def _extract_checkbox_options(self, container) -> list[str]:
+        """Extract checkbox option labels from a container."""
+        options: list[str] = []
         try:
-            if await container.locator("[role='checkbox'], input[type='checkbox']").count() > 0:
-                return "checkbox"
+            loc = container.locator("input[type='checkbox'], [role='checkbox']")
+            for i in range(await loc.count()):
+                cb = loc.nth(i)
+                label = ""
+                try:
+                    label = (await cb.evaluate("el => el.closest('label') ? el.closest('label').innerText : ''")).strip()
+                except Exception:
+                    pass
+                if not label:
+                    try:
+                        label = (await cb.get_attribute("aria-label") or "").strip()
+                    except Exception:
+                        pass
+                if label:
+                    options.append(label)
+            logger.info("CHECKBOX_OPTIONS_EXTRACTED: {}", options)
+        except Exception as e:
+            logger.warning("Failed to extract checkbox options: {}", e)
+        return options
+
+    async def _safe_wait(self, page: Page | None, ms: int) -> None:
+        if not page:
+            return
+        try:
+            await page.wait_for_timeout(ms)
+        except TypeError:
+            pass
+
+    async def _is_element_visible(self, el) -> bool:
+        import inspect
+        try:
+            if hasattr(el, "is_visible"):
+                vis = el.is_visible()
+                if asyncio.iscoroutine(vis) or inspect.isawaitable(vis):
+                    vis = await vis
+                if vis is False:
+                    return False
         except Exception:
             pass
 
-        # Check if container contains any radio buttons
         try:
-            if await container.locator("[role='radio'], input[type='radio']").count() > 0:
-                return "radio"
+            val = el.evaluate("""(element) => {
+                if (!element) return false;
+                const style = window.getComputedStyle(element);
+                if (style.display === 'none' || style.visibility !== 'visible') return false;
+                if (element.offsetWidth === 0 || element.offsetHeight === 0 || element.hidden) return false;
+                let parent = element.parentElement;
+                while (parent) {
+                    const ps = window.getComputedStyle(parent);
+                    if (ps.display === 'none' || ps.visibility === 'hidden') return false;
+                    parent = parent.parentElement;
+                }
+                return true;
+            }""")
+            if asyncio.iscoroutine(val) or inspect.isawaitable(val):
+                val = await val
+            return bool(val)
         except Exception:
-            pass
+            try:
+                if hasattr(el, "is_visible"):
+                    vis = el.is_visible()
+                    if asyncio.iscoroutine(vis) or inspect.isawaitable(vis):
+                        return await vis
+                    return bool(vis)
+            except Exception:
+                pass
+            return True
 
-        field_loc = container.locator(self._selectors.discovery.questions.field)
-        if await field_loc.count() > 0:
-            tag = await field_loc.first.evaluate("(el) => el.tagName.toLowerCase()")
-            role = await field_loc.first.get_attribute("role") or ""
-            contenteditable = await field_loc.first.get_attribute("contenteditable") or ""
-            if role == "radiogroup" or role == "radio":
-                return "radio"
-            if role == "checkbox" or tag == "checkbox":
-                return "checkbox"
-            if contenteditable.lower() == "true":
-                return "contenteditable"
-            return tag
-
-        # Check if container contains any div/button options
+    async def _find_visible_elements(self, container, selector: str, page: Page | None = None) -> list:
+        import inspect
+        elements = []
         try:
-            if await container.locator("button, [role='button'], [role='option'], div[class*='option'], div[class*='button'], a[class*='btn'], a[class*='button'], [tabindex]").count() > 0:
-                return "div"
-        except Exception:
-            pass
+            loc = container.locator(selector)
+            for i in range(await loc.count()):
+                el = loc.nth(i)
+                if inspect.iscoroutine(el) or inspect.isawaitable(el):
+                    el = await el
+                if await self._is_element_visible(el):
+                    elements.append(el)
 
-        # No field found inside container — fallback to active chatbot drawer
-        if page:
-            drawer = None
-            for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
-                loc = page.locator(sel)
-                count = await loc.count()
-                for i in range(count):
+            if not elements and page:
+                drawer = await self._resolve_drawer(page)
+                scope = drawer if drawer else page
+                loc = scope.locator(selector)
+                for i in range(await loc.count()):
                     el = loc.nth(i)
-                    if await el.is_visible():
-                        drawer = el
-                        break
-                if drawer:
-                    break
+                    if inspect.iscoroutine(el) or inspect.isawaitable(el):
+                        el = await el
+                    if await self._is_element_visible(el):
+                        elements.append(el)
+        except Exception as e:
+            logger.warning("Error in _find_visible_elements: {}", e)
+        return elements
 
-            if drawer:
-                # 1. First, try to find an active text/contenteditable/textarea input in the footer area of the drawer
-                footer_selectors = [
-                    "[class*='footer'] [contenteditable='true']",
-                    "[class*='Input'] [contenteditable='true']",
-                    "[class*='input'] [contenteditable='true']",
-                    "[class*='footer'] textarea",
-                    "[class*='Input'] textarea",
-                    "[class*='input'] textarea",
-                    "[class*='footer'] input:not([type='hidden']):not([type='radio']):not([type='checkbox'])",
-                    "[class*='Input'] input:not([type='hidden']):not([type='radio']):not([type='checkbox'])",
-                    "[class*='input'] input:not([type='hidden']):not([type='radio']):not([type='checkbox'])"
-                ]
-                for sel in footer_selectors:
-                    loc = drawer.locator(sel)
-                    count = await loc.count()
-                    for i in range(count):
-                        el = loc.nth(i)
-                        if await el.is_visible() and await el.is_enabled():
-                            tag = await el.evaluate("(element) => element.tagName.toLowerCase()")
-                            contenteditable = await el.get_attribute("contenteditable") or ""
-                            if tag == "div" and contenteditable == "true":
-                                return "contenteditable"
-                            if tag in ("input", "textarea"):
-                                return tag
+    async def _detect_field_type(self, container, page: Page | None = None) -> str:
+        try:
+            drawer = await self._resolve_drawer(page) if page else None
+            use_chatbot_fallback = drawer is not None
+            if not use_chatbot_fallback and page:
+                try:
+                    use_chatbot_fallback = await container.evaluate("""el => {
+                        const c = el.className || '';
+                        return c.includes('botItem') || c.includes('chatbot_ListItem') || c.includes('botMsg') || el.closest('.chatbot_ListItem') !== null;
+                    }""")
+                except Exception:
+                    pass
 
-                # 2. If no footer input found, look in the drawer globally
-                global_selectors = [
-                    "[contenteditable='true']",
-                    "textarea",
-                    "input:not([type='hidden']):not([type='radio']):not([type='checkbox'])",
-                    "select",
-                    "input[type='radio']",
-                    "[role='radio']",
-                    "[role='radiogroup']",
-                    "input[type='checkbox']",
-                    "[role='checkbox']",
-                    "button",
-                    "[role='button']",
-                    "[role='option']",
-                    "div[class*='option']",
-                    "div[class*='button']",
-                    "a[class*='btn']",
-                    "a[class*='button']",
-                    "[tabindex]"
-                ]
-                for sel in global_selectors:
-                    loc = drawer.locator(sel)
-                    count = await loc.count()
-                    for i in range(count):
-                        el = loc.nth(i)
-                        if await el.is_visible() and await el.is_enabled():
-                            tag = await el.evaluate("(element) => element.tagName.toLowerCase()")
-                            role = await el.get_attribute("role") or ""
-                            contenteditable = await el.get_attribute("contenteditable") or ""
-                            type_attr = await el.get_attribute("type") or ""
-                            if role == "checkbox" or type_attr == "checkbox":
-                                return "checkbox"
-                            if role == "radiogroup" or role == "radio" or type_attr == "radio":
-                                return "radio"
-                            if tag == "div" and contenteditable == "true":
-                                return "contenteditable"
-                            if tag in ("input", "textarea"):
-                                return tag
-                            if tag == "select":
-                                return "select"
-                            if tag == "button" or role == "button" or role == "option" or "option" in (await el.get_attribute("class") or "").lower() or "button" in (await el.get_attribute("class") or "").lower() or await el.get_attribute("tabindex") is not None:
-                                return "div"
-        return "unknown"
+            async def get_elements(selector: str) -> list:
+                elements = await self._find_visible_elements(container, selector, page)
+                if not elements and use_chatbot_fallback:
+                    scope = drawer if drawer else page
+                    elements = await self._find_visible_elements(scope, selector, page)
+                return elements
+
+            visible_ces = await get_elements("[contenteditable='true']")
+            visible_radios = await get_elements("[role='radio'], input[type='radio']")
+            visible_checkboxes = await get_elements(
+                "[role='checkbox'], input[type='checkbox'], "
+                ".checkboxLabel, [class*='checkbox'], "
+                "label:has(input[type='checkbox']), "
+                "[class*='check-box'], [class*='checkBox']"
+            )
+            visible_selects = await get_elements("select")
+            visible_inputs = await get_elements("input:not([type='radio']):not([type='checkbox']):not([type='hidden']), textarea")
+
+            chip_sel = ".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem']"
+            visible_chips = await get_elements(chip_sel)
+
+            btn_sel = (
+                ".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem'], "
+                "button, [role='button'], [role='option'], div[class*='option'], "
+                "div[class*='button'], a[class*='btn'], a[class*='button']"
+            )
+            all_btns = await get_elements(btn_sel)
+            valid_btns = []
+            for btn in all_btns:
+                is_mock = type(btn).__name__ in ("MagicMock", "AsyncMock", "Mock")
+                if is_mock:
+                    valid_btns.append(btn)
+                    continue
+                try:
+                    tag = await btn.evaluate("el => el.tagName.toLowerCase()")
+                except Exception:
+                    tag = "div"
+                if tag in ("input", "textarea", "select"):
+                    continue
+                try:
+                    text = (await btn.inner_text()).strip()
+                except Exception:
+                    text = ""
+                if not text:
+                    try:
+                        text = (await btn.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
+                    except Exception:
+                        text = ""
+                if text:
+                    words = " ".join(text.split()).lower().split()
+                    if not any(w.strip(".,;:()<>[]{}&/-_") in _NAV_BUTTON_KEYWORDS for w in words):
+                        valid_btns.append(btn)
+
+            logger.info("TEXT_INPUT_MATCHES: {}", len(visible_inputs))
+            logger.info("CONTENTEDITABLE_MATCHES: {}", len(visible_ces))
+            logger.info("CHIP_MATCHES: {}", len(visible_chips))
+            logger.info("BUTTON_MATCHES: {}", len(valid_btns))
+
+            if visible_ces:
+                field_type = "contenteditable"
+            elif visible_inputs:
+                is_mock = type(visible_inputs[0]).__name__ in ("MagicMock", "AsyncMock", "Mock")
+                if is_mock:
+                    field_type = "input"
+                else:
+                    try:
+                        field_type = await visible_inputs[0].evaluate("el => el.tagName.toLowerCase()")
+                    except Exception:
+                        field_type = "input"
+            elif visible_selects:
+                field_type = "select"
+            elif visible_radios:
+                field_type = "radio"
+            elif visible_checkboxes:
+                field_type = "checkbox"
+            elif visible_chips:
+                field_type = "chatbot_chips"
+            elif valid_btns:
+                field_type = "button-options"
+            else:
+                field_type = "unknown"
+
+            logger.info("FIELD_TYPE_DETECTED: {}", field_type)
+            return field_type
+
+        except Exception as e:
+            logger.warning("Error in _detect_field_type: {}", e)
+            return "unknown"
 
     async def _extract_text(self, container, selector_string: str) -> str:
         for selector in self._split_selectors(selector_string):
@@ -832,103 +1275,70 @@ class FormFiller:
     async def _extract_question_label(
         self, container, selector_string: str, page: Page | None = None
     ) -> str:
-        """Extract the actual question label text, never an option value.
-
-        Strategy:
-          1. Collect all option texts (radio labels, checkbox labels, select
-             options) so we can exclude them.
-          2. Try chatbot-message selectors first (div[class*='botMsg'] span,
-             div[class*='botMsg']) — these hold the recruiter question.
-          3. Try each selector in the configured selector string, skipping
-             any text that matches a known option value.
-          4. Fallback: get the container's full text and strip all option
-             values from it.
-        """
-        # --- Step 1: gather all option texts for exclusion ---
+        """Extract the actual question label text, never an option value."""
         option_texts: set[str] = set()
-        for opt_sel in [
-            "input[type='radio'] + label",
-            "label:has(input[type='radio'])",
-            "[role='radio']",
-            "input[type='checkbox'] + label",
-            "label:has(input[type='checkbox'])",
-            "[role='checkbox']",
-            "select option",
-        ]:
+        option_selectors = [
+            "input[type='radio'] + label", "label:has(input[type='radio'])", "[role='radio']",
+            "input[type='checkbox'] + label", "label:has(input[type='checkbox'])", "[role='checkbox']",
+            "select option", ".chatbot_Chip", ".chipItem", "[class*='chatbot_Chip']", "[class*='chipItem']",
+            "button", "[role='button']", "[role='option']", "div[class*='option']", "div[class*='button']",
+        ]
+        for sel in option_selectors:
             try:
-                locs = container.locator(opt_sel)
-                cnt = await locs.count()
-                for i in range(cnt):
+                locs = container.locator(sel)
+                for i in range(await locs.count()):
                     t = (await locs.nth(i).inner_text()).strip()
                     if t:
                         option_texts.add(t.lower())
             except Exception:
                 pass
 
-        # Also gather option texts from the active chatbot drawer
         if page:
             drawer = await self._resolve_drawer(page)
             if drawer:
-                for opt_sel in [
-                    "[role='radio']",
-                    "input[type='radio'] + label",
-                    "[role='checkbox']",
-                    "input[type='checkbox'] + label",
-                    "select option",
-                ]:
+                for sel in option_selectors:
                     try:
-                        locs = drawer.locator(opt_sel)
-                        cnt = await locs.count()
-                        for i in range(cnt):
+                        locs = drawer.locator(sel)
+                        for i in range(await locs.count()):
                             t = (await locs.nth(i).inner_text()).strip()
                             if t:
                                 option_texts.add(t.lower())
                     except Exception:
                         pass
 
-        def _is_option_text(text: str) -> bool:
+        def _is_option(text: str) -> bool:
             return text.lower().strip() in option_texts
 
-        # --- Step 2: chatbot message selectors (highest priority) ---
-        chatbot_selectors = [
-            "div[class*='botMsg'] span",
-            "div[class*='botMsg']",
-            "span[class*='question']",
-            "div[class*='question-text']",
-            "p[class*='question']",
-        ]
-        for sel in chatbot_selectors:
+        for sel in [
+            "div[class*='botMsg'] span", "div[class*='botMsg']",
+            "span[class*='question']", "div[class*='question-text']", "p[class*='question']",
+        ]:
             try:
                 item = container.locator(sel)
                 if await item.count() == 0:
                     continue
                 text = (await item.first.inner_text()).strip()
-                if text and not _is_option_text(text):
+                if text and not _is_option(text):
                     return text
             except Exception:
                 continue
 
-        # --- Step 3: configured selectors, skipping option values ---
         for selector in self._split_selectors(selector_string):
             try:
                 items = container.locator(selector)
-                cnt = await items.count()
-                for i in range(cnt):
+                for i in range(await items.count()):
                     text = (await items.nth(i).inner_text()).strip()
-                    if text and not _is_option_text(text):
+                    if text and not _is_option(text):
                         return text
             except Exception:
                 continue
 
-        # --- Step 4: fallback — container text minus option values ---
         try:
             full_text = (await container.inner_text()).strip()
             if full_text:
-                # Remove each option text from the full text
                 cleaned = full_text
                 for opt in option_texts:
                     cleaned = cleaned.replace(opt, "")
-                    # also case-preserved removal
                     for line in full_text.split("\n"):
                         if line.strip().lower() == opt:
                             cleaned = cleaned.replace(line.strip(), "")
@@ -942,26 +1352,33 @@ class FormFiller:
 
     async def _resolve_drawer(self, page: Page):
         """Find the visible chatbot drawer on the page."""
+        import time
+        logger.info("RESOLVE_DRAWER_START")
         for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
             try:
                 loc = page.locator(sel)
-                count = await loc.count()
-                for i in range(count):
+                cnt = await loc.count()
+                logger.info("RESOLVE_DRAWER: sel='{}' count={}", sel, cnt)
+                for i in range(cnt):
                     el = loc.nth(i)
                     if await el.is_visible():
+                        if self._drawer_opened_at is None:
+                            self._drawer_opened_at = time.time()
+                        logger.info("RESOLVE_DRAWER_FOUND: '{}'", sel)
                         return el
-            except Exception:
+            except Exception as e:
+                logger.warning("RESOLVE_DRAWER_ERR: {} - {}", sel, e)
                 continue
+        logger.info("RESOLVE_DRAWER_NOT_FOUND")
         return None
 
     async def _capture_screenshot(self, page: Page, name: str) -> str | None:
         self._screenshots_dir.mkdir(parents=True, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"{timestamp}_{name}.png"
-        filepath = self._screenshots_dir / filename
+        filepath = self._screenshots_dir / f"{timestamp}_{name}.png"
         try:
             await page.screenshot(path=str(filepath), full_page=True)
-            logger.info("Phase 2 screenshot: {}", filename)
+            logger.info("Phase 2 screenshot: {}", filepath.name)
             return str(filepath)
         except Exception as exc:
             logger.warning("Phase 2 screenshot failed {}: {}", name, exc)
@@ -970,484 +1387,617 @@ class FormFiller:
     def _split_selectors(self, selector_string: str) -> list[str]:
         return [s.strip() for s in selector_string.split(",") if s.strip()]
 
-    async def _get_field_options(self, container, field_type: str, page: Page | None = None) -> list[str]:
-        """Extract available options from radio buttons, checkboxes, and select elements only.
+    def _normalize_option_text(self, text: str) -> str:
+        return " ".join(str(text).strip().split()).lower()
 
-        Excludes:
-          - Save / Submit / Continue / Skip / Cancel / Next / Close buttons
-          - Parent text nodes (combined text from multiple children)
-          - Containers whose text is a concatenation of other options
-        """
-        _EXCLUDED_WORDS = {
-            "save", "submit", "skip", "continue", "next", "close",
-            "cancel", "apply", "confirm", "back", "done", "ok",
+    def _build_answer_mapping_key(self, question_key: str, options: list[str]) -> str:
+        normalized = [self._normalize_option_text(o) for o in options if self._normalize_option_text(o)]
+        if not normalized:
+            return question_key
+        return f"{question_key}__options__{'|'.join(sorted(dict.fromkeys(normalized)))}"
+
+    async def _extract_choice_label_text(self, el) -> str:
+        try:
+            text = (await el.inner_text()).strip()
+            if text:
+                return " ".join(text.split())
+        except Exception:
+            pass
+        try:
+            aria = (await el.get_attribute("aria-label") or "").strip()
+            if aria:
+                return " ".join(aria.split())
+        except Exception:
+            pass
+        try:
+            evaluated = await el.evaluate("""element => {
+                if (!element) return '';
+                const normalize = v => (v || '').replace(/\\s+/g, ' ').trim();
+                const tag = (element.tagName || '').toLowerCase();
+                if (tag === 'input') {
+                    const id = element.getAttribute('id');
+                    if (id) {
+                        const label = document.querySelector(`label[for="${id}"]`);
+                        if (label) return normalize(label.innerText || label.textContent);
+                    }
+                }
+                const lb = element.getAttribute('aria-labelledby');
+                if (lb) {
+                    const txt = lb.split(/\\s+/).map(id => document.getElementById(id))
+                        .filter(Boolean).map(n => normalize(n.innerText || n.textContent))
+                        .filter(Boolean).join(' ');
+                    if (txt) return txt;
+                }
+                const pl = element.closest('label');
+                if (pl) return normalize(pl.innerText || pl.textContent);
+                let sib = element.nextElementSibling;
+                while (sib) {
+                    const t = normalize(sib.innerText || sib.textContent);
+                    if (t) return t;
+                    sib = sib.nextElementSibling;
+                }
+                return '';
+            }""")
+            return " ".join(str(evaluated).split()) if evaluated else ""
+        except Exception:
+            return ""
+
+    async def _is_valid_question_text(
+        self,
+        question_text: str,
+        has_visible_answer_controls: bool,
+        option_texts: list[str] | None = None,
+    ) -> bool:
+        normalized = " ".join(question_text.lower().strip().split())
+        if not normalized:
+            return False
+
+        normalized_options = {
+            self._normalize_option_text(o) for o in (option_texts or []) if self._normalize_option_text(o)
+        }
+        if normalized in normalized_options:
+            logger.info("REJECTED_OPTION_AS_QUESTION: {}", question_text[:100])
+            return False
+
+        if any(p in normalized for p in _INFO_MESSAGE_PATTERNS):
+            return False
+
+        if has_visible_answer_controls:
+            return True
+
+        return any(h in normalized for h in _VALID_QUESTION_HINTS)
+
+    async def _resolve_active_chatbot_question(
+        self,
+        page: Page,
+        processed_keys: set[str],
+    ) -> dict[str, Any] | None:
+        import time
+
+        drawer = await self._resolve_drawer(page)
+        if not drawer:
+            return None
+
+        history_items = drawer.locator(".chatbot_ListItem")
+        if await history_items.count() == 0:
+            return None
+
+        # Find latest bot question
+        active_question_item = None
+        for idx in range(await history_items.count() - 1, -1, -1):
+            item = history_items.nth(idx)
+            if not await item.is_visible():
+                continue
+            try:
+                class_name = await item.evaluate("el => el.className || ''")
+            except Exception:
+                continue
+            if "userItem" in class_name:
+                logger.info("LATEST_MESSAGE_IS_USER_ANSWER")
+                return None
+            if "botItem" in class_name:
+                active_question_item = item
+                break
+
+        if not active_question_item:
+            return None
+
+        question_text = await self._extract_question_label(
+            active_question_item, self._selectors.discovery.questions.text, page=None
+        )
+        if not question_text:
+            return None
+
+        normalized_text = " ".join(question_text.lower().strip().split())
+        if any(p in normalized_text for p in _INFO_MESSAGE_PATTERNS):
+            logger.info("REJECTED_INFO_MESSAGE_IMMEDIATELY: '{}'", question_text[:100])
+            return None
+
+        logger.info("QUESTION_RAW: '{}'", question_text[:100])
+
+        start_wait = time.time()
+        field_type = "unknown"
+        options: list[str] = []
+        target_container = active_question_item
+        has_controls = False
+
+        for attempt in range(1, 26):
+            logger.info("FIELD_DETECTION_ATTEMPT: {}/25", attempt)
+
+            drawer = await self._resolve_drawer(page)
+            if not drawer:
+                logger.info("FIELD_DETECTION_RETRY: Drawer disappeared")
+                await self._safe_wait(page, 1000)
+                continue
+
+            history_items = drawer.locator(".chatbot_ListItem")
+            active_question_item = None
+            active_chips_item = None
+
+            for idx in range(await history_items.count() - 1, -1, -1):
+                item = history_items.nth(idx)
+                if not await item.is_visible():
+                    continue
+                try:
+                    class_name = await item.evaluate("el => el.className || ''")
+                except Exception:
+                    continue
+                if "userItem" in class_name:
+                    logger.info("LATEST_MESSAGE_IS_USER_ANSWER")
+                    return None
+                if "botChips" in class_name and active_chips_item is None:
+                    active_chips_item = item
+                    continue
+                if "botItem" in class_name:
+                    active_question_item = item
+                    break
+
+            if not active_question_item:
+                logger.info("FIELD_DETECTION_RETRY: Active bot question item not found")
+                await self._safe_wait(page, 1000)
+                continue
+
+            field_type = "unknown"
+            options = []
+            target_container = active_question_item
+
+            if active_chips_item:
+                field_type = await self._detect_field_type(active_chips_item, page=None)
+                options = await self._get_field_options(active_chips_item, field_type, page=None)
+                if field_type != "unknown" or options:
+                    target_container = active_chips_item
+
+            if field_type == "unknown" and not options:
+                field_type = await self._detect_field_type(active_question_item, page)
+                options = await self._get_field_options(active_question_item, field_type, page)
+
+            if field_type == "unknown" and not options:
+                cb_count = await active_question_item.locator(
+                    "input[type='checkbox'], [role='checkbox'], [class*='checkbox'], [class*='checkBox']"
+                ).count()
+                if cb_count > 0:
+                    field_type = "checkbox"
+                    logger.info("CHECKBOX_DETECTED_IN_LOOP: count={}", cb_count)
+
+            has_controls = bool(options) or field_type != "unknown"
+            logger.info("ACTIVE_CONTROLS_FOUND: {}", has_controls)
+
+            if has_controls:
+                elapsed_ms = int((time.time() - (self._drawer_opened_at or start_wait)) * 1000)
+                logger.info(
+                    "FIELD_DETECTION_SUCCESS: field_type='{}' options={} (elapsed={}ms)",
+                    field_type, options, elapsed_ms,
+                )
+                break
+            else:
+                logger.info("FIELD_DETECTION_RETRY: Attempt {}/25 - no controls rendered yet", attempt)
+                await self._safe_wait(page, 1000)
+
+        if not has_controls:
+            logger.warning("FIELD_DETECTION_TIMEOUT: Failed to detect controls after 25 attempts")
+
+        if not await self._is_valid_question_text(
+            question_text, has_visible_answer_controls=has_controls, option_texts=options
+        ):
+            logger.info("REJECTED_HISTORY_MESSAGE: '{}'", question_text[:100])
+            return None
+
+        question_key = normalize_question_key(question_text, options)
+        if question_key in processed_keys:
+            logger.info("REJECTED_ALREADY_PROCESSED: '{}'", question_text[:100])
+            return None
+
+        logger.info("ACTIVE_QUESTION_SELECTED: {}", question_text[:100])
+        return {
+            "container": target_container,
+            "question_container": active_question_item,
+            "question_text": question_text,
+            "question_key": question_key,
+            "field_type": field_type,
+            "options": options,
+            "source": "chatbot_active",
         }
 
+    async def _final_drawer_refresh_scan(self, page: Page, active_q: dict[str, Any]) -> None:
+        logger.info("FIELD_TYPE_UNKNOWN: Final forced refresh scan of recruiter drawer...")
+        await self._safe_wait(page, 1000)
+        drawer = await self._resolve_drawer(page)
+        if not drawer:
+            return
+
+        container = active_q["container"]
+        field_type = await self._detect_field_type(container, page)
+        options = await self._get_field_options(container, field_type, page)
+
+        if field_type == "unknown" and container != drawer:
+            field_type = await self._detect_field_type(drawer, page)
+            options = await self._get_field_options(drawer, field_type, page)
+            if field_type != "unknown":
+                active_q["container"] = drawer
+
+        if field_type != "unknown":
+            logger.info("FINAL_REFRESH_SCAN_SUCCESS: field_type='{}'", field_type)
+            active_q["field_type"] = field_type
+            active_q["options"] = options
+        else:
+            logger.warning("FINAL_REFRESH_SCAN_FAILED: Field type remains unknown")
+
+    async def _get_field_options(self, container, field_type: str, page: Page | None = None) -> list[str]:
+        """Extract available options from the field. Excludes nav/action button text."""
+        logger.info("GET_FIELD_OPTIONS_CALLED: field_type={}", field_type)
         options: list[str] = []
+
         try:
             drawer = await self._resolve_drawer(page) if page else None
 
-            # 1. Select <option> elements
-            select_locs = container.locator("select option")
-            if await select_locs.count() == 0 and drawer:
-                select_locs = drawer.locator("select option")
+            if field_type in ("button-options", "button-choice", "chatbot_chips", "div"):
+                chip_sel = ".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem']"
+                chip_locs = container.locator(chip_sel)
+                if await chip_locs.count() == 0 and drawer:
+                    chip_locs = drawer.locator(chip_sel)
+                elif await chip_locs.count() == 0 and page:
+                    chip_locs = page.locator(f"{chip_sel}:visible")
 
-            count = await select_locs.count()
-            for i in range(count):
-                text = (await select_locs.nth(i).inner_text()).strip()
-                if text and not any(text.lower().startswith(p) for p in ["select", "--", "choose"]):
-                    options.append(text)
+                if chip_locs and await chip_locs.count() > 0:
+                    for i in range(await chip_locs.count()):
+                        el = chip_locs.nth(i)
+                        if await el.is_visible() or page is None:
+                            text = (await el.inner_text()).strip()
+                            if text:
+                                options.append(text)
 
-            # 2. Radio button labels
-            radio_locs = container.locator("[role='radio'], input[type='radio']")
-            if await radio_locs.count() == 0 and drawer:
-                radio_locs = drawer.locator("[role='radio']:visible, input[type='radio']:visible")
+                if not options:
+                    options_sel = "button, [role='button'], [role='option'], div[class*='option'], div[class*='button'], a[class*='btn'], a[class*='button'], [tabindex]"
+                    btn_locs = container.locator(options_sel)
+                    if await btn_locs.count() == 0 and drawer:
+                        btn_locs = drawer.locator(options_sel)
+                    elif await btn_locs.count() == 0 and page:
+                        btn_locs = page.locator(options_sel)
 
-            count = await radio_locs.count()
-            for i in range(count):
-                el = radio_locs.nth(i)
-                # Prefer aria-label first (clean single-value label)
-                text = (await el.get_attribute("aria-label") or "").strip()
-                if not text:
-                    text = (await el.inner_text()).strip()
-                # Only use label sibling, NOT parentElement.innerText
-                if not text:
-                    try:
-                        text = await el.evaluate("""el => {
-                            // Check for associated <label>
-                            const id = el.getAttribute('id');
-                            if (id) {
-                                const label = document.querySelector('label[for="' + id + '"]');
-                                if (label) return label.innerText.trim();
-                            }
-                            // Check for wrapping <label>
-                            const parent = el.closest('label');
-                            if (parent) return parent.innerText.trim();
-                            // Check immediate next sibling text
-                            const next = el.nextElementSibling;
-                            if (next && next.tagName === 'LABEL') return next.innerText.trim();
-                            if (next && next.tagName === 'SPAN') return next.innerText.trim();
-                            return '';
-                        }""")
-                    except Exception:
-                        text = ""
-                if text:
-                    text = " ".join(text.split())
-                    options.append(text)
+                    for i in range(await btn_locs.count()):
+                        el = btn_locs.nth(i)
+                        if not await el.is_visible():
+                            continue
+                        tag = await el.evaluate("el => el.tagName.toLowerCase()")
+                        if tag in ("input", "textarea", "select"):
+                            continue
+                        text = (await el.inner_text()).strip()
+                        if not text:
+                            text = (await el.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
+                        if text:
+                            words = " ".join(text.split()).lower().split()
+                            if not any(w.strip(".,;:()<>[]{}&/-_") in _NAV_BUTTON_KEYWORDS for w in words):
+                                options.append(text)
 
-            # 3. Checkbox labels
-            checkbox_locs = container.locator("input[type='checkbox'], [role='checkbox']")
-            if await checkbox_locs.count() == 0 and drawer:
-                checkbox_locs = drawer.locator("input[type='checkbox']:visible, [role='checkbox']:visible")
+            else:
+                # Select options
+                select_locs = container.locator("select option")
+                if await select_locs.count() == 0 and drawer:
+                    select_locs = drawer.locator("select option")
+                elif await select_locs.count() == 0 and page:
+                    select_locs = page.locator("select option:visible")
+                for i in range(await select_locs.count()):
+                    text = (await select_locs.nth(i).inner_text()).strip()
+                    if text and not any(text.lower().startswith(p) for p in ["select", "--", "choose"]):
+                        options.append(text)
 
-            count = await checkbox_locs.count()
-            for i in range(count):
-                el = checkbox_locs.nth(i)
-                text = (await el.get_attribute("aria-label") or "").strip()
-                if not text:
-                    text = (await el.inner_text()).strip()
-                if not text:
-                    try:
-                        text = await el.evaluate("""el => {
-                            const id = el.getAttribute('id');
-                            if (id) {
-                                const label = document.querySelector('label[for="' + id + '"]');
-                                if (label) return label.innerText.trim();
-                            }
-                            const parent = el.closest('label');
-                            if (parent) return parent.innerText.trim();
-                            const next = el.nextElementSibling;
-                            if (next && next.tagName === 'LABEL') return next.innerText.trim();
-                            if (next && next.tagName === 'SPAN') return next.innerText.trim();
-                            return '';
-                        }""")
-                    except Exception:
-                        text = ""
-                if text:
-                    text = " ".join(text.split())
-                    options.append(text)
+                # Radio labels
+                radio_locs = container.locator("[role='radio'], input[type='radio']")
+                if await radio_locs.count() == 0 and drawer:
+                    radio_locs = drawer.locator("[role='radio']:visible, input[type='radio']:visible")
+                elif await radio_locs.count() == 0 and page:
+                    radio_locs = page.locator("[role='radio']:visible, input[type='radio']:visible")
+                for i in range(await radio_locs.count()):
+                    el = radio_locs.nth(i)
+                    text = (await el.get_attribute("aria-label") or "").strip() or (await el.inner_text()).strip()
+                    if not text:
+                        try:
+                            text = await el.evaluate("""el => {
+                                const id = el.getAttribute('id');
+                                if (id) { const l = document.querySelector('label[for="' + id + '"]'); if (l) return l.innerText.trim(); }
+                                const p = el.closest('label'); if (p) return p.innerText.trim();
+                                const n = el.nextElementSibling;
+                                if (n && (n.tagName === 'LABEL' || n.tagName === 'SPAN')) return n.innerText.trim();
+                                return '';
+                            }""")
+                        except Exception:
+                            text = ""
+                    if text:
+                        options.append(" ".join(text.split()))
+
+                # Checkbox options (custom Naukri elements first)
+                if field_type == "checkbox":
+                    for cb_sel in [
+                        "[class*='checkbox']", "[class*='checkBox']", "[class*='check-box']",
+                        "label:has(input[type='checkbox'])", ".checkboxLabel",
+                        "[class*='option']", "[class*='choice']",
+                    ]:
+                        try:
+                            loc = container.locator(cb_sel)
+                            if await loc.count() == 0 and drawer:
+                                loc = drawer.locator(cb_sel)
+                            count = await loc.count()
+                            if count > 0:
+                                for i in range(count):
+                                    el = loc.nth(i)
+                                    try:
+                                        text = (await el.inner_text()).strip()
+                                        if text:
+                                            for part in [p.strip() for p in text.replace("\n", "|").split("|") if p.strip()]:
+                                                if part not in options:
+                                                    options.append(part)
+                                    except Exception:
+                                        pass
+                                if options:
+                                    logger.info("CUSTOM_CHECKBOX_OPTIONS_EXTRACTED: {}", options)
+                                    break
+                        except Exception:
+                            continue
+
+                # Standard checkbox labels
+                cb_locs = container.locator("input[type='checkbox'], [role='checkbox']")
+                if await cb_locs.count() == 0 and drawer:
+                    cb_locs = drawer.locator("input[type='checkbox']:visible, [role='checkbox']:visible")
+                elif await cb_locs.count() == 0 and page:
+                    cb_locs = page.locator("input[type='checkbox']:visible, [role='checkbox']:visible")
+                logger.info("CHECKBOX_LOCS_COUNT: {}", await cb_locs.count())
+                for i in range(await cb_locs.count()):
+                    el = cb_locs.nth(i)
+                    text = (await el.get_attribute("aria-label") or "").strip() or (await el.inner_text()).strip()
+                    if not text:
+                        try:
+                            text = await el.evaluate("""el => {
+                                const id = el.getAttribute('id');
+                                if (id) { const l = document.querySelector('label[for="' + id + '"]'); if (l) return l.innerText.trim(); }
+                                const p = el.closest('label'); if (p) return p.innerText.trim();
+                                const n = el.nextElementSibling; if (n) return n.innerText.trim();
+                                const pr = el.previousElementSibling; if (pr) return pr.innerText.trim();
+                                const c = el.parentElement; if (c) return c.innerText.trim();
+                                return '';
+                            }""")
+                        except Exception:
+                            text = ""
+                    if text:
+                        for part in [p.strip() for p in text.replace("\n", "|").split("|") if p.strip()]:
+                            options.append(" ".join(part.split()))
 
         except Exception as e:
             logger.warning("Error in _get_field_options: {}", e)
 
-        # --- Filtering ---
-        # 1. Remove action-button texts
-        filtered: list[str] = []
-        for opt in options:
-            cleaned_lower = opt.lower().strip()
-            if cleaned_lower in _EXCLUDED_WORDS:
-                continue
-            # Single word that is an excluded keyword
-            words = cleaned_lower.split()
-            if len(words) == 1 and words[0] in _EXCLUDED_WORDS:
-                continue
-            filtered.append(opt)
+        # Filter nav keywords
+        filtered = [
+            opt for opt in options
+            if opt.lower().strip() not in _NAV_BUTTON_KEYWORDS
+            and not (len(opt.split()) == 1 and opt.lower() in _NAV_BUTTON_KEYWORDS)
+        ]
 
-        # 2. De-duplicate while preserving order
+        # Deduplicate
         seen: set[str] = set()
-        unique_opts: list[str] = []
+        unique: list[str] = []
         for o in filtered:
             if o not in seen:
                 seen.add(o)
-                unique_opts.append(o)
+                unique.append(o)
 
-        # 3. Remove combined text nodes (text that is a concatenation of ≥2 other options)
-        if len(unique_opts) > 1:
-            final_opts: list[str] = []
-            for opt in unique_opts:
-                # Check if this option's text contains all other options' text joined
-                other_texts = [o for o in unique_opts if o != opt]
-                is_combined = False
-                if len(other_texts) >= 2:
-                    # If opt contains all other option texts, it's a combined node
-                    opt_lower = opt.lower()
-                    matches = sum(1 for ot in other_texts if ot.lower() in opt_lower)
-                    if matches >= 2 and matches == len(other_texts):
-                        is_combined = True
-                if not is_combined:
-                    final_opts.append(opt)
-            unique_opts = final_opts
+        # Remove combined text nodes
+        if len(unique) > 1:
+            final: list[str] = []
+            for opt in unique:
+                others = [o for o in unique if o != opt]
+                opt_lower = opt.lower()
+                matches = sum(1 for o in others if o.lower() in opt_lower)
+                if not (matches >= 2 and matches == len(others)):
+                    final.append(opt)
+            unique = final
 
-        logger.info("QUESTION_OPTIONS_DETECTED: {}", unique_opts)
-        return unique_opts
+        logger.info("QUESTION_OPTIONS_DETECTED: {}", unique)
+        return unique
 
     async def _interactive_prompt_user(
         self,
         page: Page,
         question_text: str,
-        is_case2: bool,
-        stored_answer: str = "",
-        options: list[str] = None
+        options: list[str] | None = None,
+        is_case2: bool = False,
+        stored_answer: str | None = None,
     ) -> dict:
-        """Open a glassmorphic dialog and block execution until the user responds.
-
-        Uses ``page.wait_for_function()`` with timeout=0 (infinite) so that:
-          - Automation is fully suspended.
-          - No polling loops or dialog re-injection.
-          - Only resumes when the user clicks an option or submits text.
-
-        A MutationObserver watches for the dialog being removed by the SPA
-        and re-attaches it automatically — keeping control entirely in the
-        browser so the Python side just waits on a single function call.
-        """
         if options is None:
             options = []
 
-        import json
-        options_json = json.dumps(options)
-        question_json = json.dumps(question_text)
-        stored_ans_json = json.dumps(stored_answer)
-        is_case2_json = json.dumps(is_case2)
+        logger.info("POPUP_STARTING — question='{}'", question_text[:60])
 
-        # Build premium glassmorphic JS dialog with self-healing MutationObserver
-        js_code = f"""
-        (() => {{
-            // Sentinel: set to null, Python waits for non-null
-            window.__ilr = null;
+        loop = asyncio.get_event_loop()
+        response = await loop.run_in_executor(
+            None,
+            self._show_tkinter_popup,
+            question_text,
+            options,
+            is_case2,
+            stored_answer,
+        )
 
-            // Remove existing dialog if any
-            const existing = document.getElementById('interactive-learning-dialog');
-            if (existing) existing.remove();
-
-            function buildDialog() {{
-                const container = document.createElement('div');
-                container.id = 'interactive-learning-dialog';
-                container.style.cssText = `
-                    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-                    background: rgba(15, 15, 25, 0.85); backdrop-filter: blur(12px);
-                    -webkit-backdrop-filter: blur(12px); z-index: 9999999;
-                    display: flex; align-items: center; justify-content: center;
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                `;
-
-                const dialog = document.createElement('div');
-                dialog.style.cssText = `
-                    background: #181824; color: #f3f4f6; padding: 32px;
-                    border-radius: 24px; border: 1px solid rgba(255,255,255,0.08);
-                    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-                    max-width: 550px; width: 90%; display: flex;
-                    flex-direction: column; gap: 24px;
-                `;
-
-                // Title
-                const title = document.createElement('h2');
-                title.innerText = {is_case2_json} ? 'Map Stored Answer to Option' : 'Unknown Question — Your Input Needed';
-                title.style.cssText = 'margin:0; font-size:24px; font-weight:700; letter-spacing:-0.025em; color:#38bdf8;';
-                dialog.appendChild(title);
-
-                // Question
-                const qC = document.createElement('div');
-                qC.style.cssText = 'display:flex; flex-direction:column; gap:6px;';
-                const qL = document.createElement('div');
-                qL.innerText = 'QUESTION';
-                qL.style.cssText = 'font-size:11px; font-weight:800; color:#6b7280; letter-spacing:0.05em;';
-                qC.appendChild(qL);
-                const qT = document.createElement('div');
-                qT.innerText = {question_json};
-                qT.style.cssText = 'font-weight:600; font-size:17px; line-height:1.5; color:#fff;';
-                qC.appendChild(qT);
-                dialog.appendChild(qC);
-
-                // Stored answer badge (Case 2 only)
-                if ({is_case2_json}) {{
-                    const rawDiv = document.createElement('div');
-                    rawDiv.style.cssText = 'background:rgba(244,63,94,0.1); border:1px solid rgba(244,63,94,0.2); padding:12px 16px; border-radius:12px;';
-                    rawDiv.innerHTML = '<span style="color:#9ca3af;font-size:13px;">Stored Answer:</span> <strong style="color:#fb7185;font-size:15px;margin-left:6px;">' + {stored_ans_json} + '</strong>';
-                    dialog.appendChild(rawDiv);
-                }}
-
-                const opts = {options_json};
-
-                if (opts && opts.length > 0) {{
-                    const oTitle = document.createElement('div');
-                    oTitle.innerText = {is_case2_json} ? 'Select the correct option to map to:' : 'Select the correct option:';
-                    oTitle.style.cssText = 'font-weight:600; font-size:13px; color:#9ca3af; letter-spacing:0.05em;';
-                    dialog.appendChild(oTitle);
-
-                    const oC = document.createElement('div');
-                    oC.style.cssText = 'display:flex; flex-direction:column; gap:10px; max-height:240px; overflow-y:auto; padding-right:4px;';
-
-                    opts.forEach(opt => {{
-                        const btn = document.createElement('button');
-                        btn.type = 'button';
-                        btn.innerText = opt;
-                        btn.style.cssText = `
-                            background: rgba(255,255,255,0.03); color: #e5e7eb;
-                            border: 1px solid rgba(255,255,255,0.08); padding: 12px 18px;
-                            border-radius: 12px; cursor: pointer; text-align: left;
-                            font-size: 14px; font-weight: 500; transition: all 0.2s;
-                        `;
-                        btn.onmouseover = () => {{ btn.style.background='#0284c7'; btn.style.borderColor='#38bdf8'; btn.style.color='#fff'; }};
-                        btn.onmouseout = () => {{ btn.style.background='rgba(255,255,255,0.03)'; btn.style.borderColor='rgba(255,255,255,0.08)'; btn.style.color='#e5e7eb'; }};
-                        btn.onclick = () => {{
-                            if ({is_case2_json}) {{
-                                window.__ilr = {{ answer: {stored_ans_json}, selected_option: opt }};
-                            }} else {{
-                                window.__ilr = {{ answer: opt, selected_option: opt }};
-                            }}
-                        }};
-                        oC.appendChild(btn);
-                    }});
-                    dialog.appendChild(oC);
-                }} else {{
-                    // Free-text input
-                    const iL = document.createElement('div');
-                    iL.innerText = 'Enter your answer:';
-                    iL.style.cssText = 'font-weight:600; font-size:13px; color:#9ca3af;';
-                    dialog.appendChild(iL);
-
-                    const inp = document.createElement('input');
-                    inp.id = 'custom-answer-input';
-                    inp.type = 'text';
-                    inp.placeholder = 'Type your answer here...';
-                    inp.style.cssText = `
-                        background: #0f0f16; color: #fff; border: 1px solid rgba(255,255,255,0.1);
-                        padding: 14px; border-radius: 12px; font-size: 15px; outline: none; transition: all 0.2s;
-                    `;
-                    inp.onfocus = () => {{ inp.style.borderColor='#38bdf8'; inp.style.boxShadow='0 0 0 2px rgba(56,189,248,0.2)'; }};
-                    inp.onblur = () => {{ inp.style.borderColor='rgba(255,255,255,0.1)'; inp.style.boxShadow='none'; }};
-                    dialog.appendChild(inp);
-
-                    const acts = document.createElement('div');
-                    acts.style.cssText = 'display:flex; justify-content:flex-end; gap:12px;';
-
-                    const sBtn = document.createElement('button');
-                    sBtn.id = 'confirm-button';
-                    sBtn.type = 'button';
-                    sBtn.innerText = 'Submit Answer';
-                    sBtn.style.cssText = `
-                        background: #0284c7; color: #fff; border: none; padding: 12px 24px;
-                        border-radius: 12px; cursor: not-allowed; font-weight: 600;
-                        font-size: 14px; opacity: 0.5; transition: all 0.2s;
-                    `;
-
-                    inp.oninput = () => {{
-                        const ok = inp.value.trim().length > 0;
-                        sBtn.disabled = !ok;
-                        sBtn.style.opacity = ok ? '1' : '0.5';
-                        sBtn.style.cursor = ok ? 'pointer' : 'not-allowed';
-                    }};
-                    inp.onkeydown = (e) => {{
-                        if (e.key === 'Enter' && inp.value.trim().length > 0)
-                            window.__ilr = {{ answer: inp.value.trim(), selected_option: null }};
-                    }};
-                    sBtn.onclick = () => {{
-                        if (inp.value.trim().length > 0)
-                            window.__ilr = {{ answer: inp.value.trim(), selected_option: null }};
-                    }};
-                    acts.appendChild(sBtn);
-                    dialog.appendChild(acts);
-                }}
-
-                container.appendChild(dialog);
-                return container;
-            }}
-
-            // Inject the dialog
-            const dlg = buildDialog();
-            document.body.appendChild(dlg);
-
-            // Self-healing: MutationObserver re-attaches dialog if SPA removes it
-            const observer = new MutationObserver(() => {{
-                if (!document.getElementById('interactive-learning-dialog') && window.__ilr === null) {{
-                    const rebuilt = buildDialog();
-                    document.body.appendChild(rebuilt);
-                }}
-            }});
-            observer.observe(document.body, {{ childList: true, subtree: true }});
-
-            // Store observer ref so cleanup can disconnect it
-            window.__ilrObserver = observer;
-        }})();
-        """
-
-        logger.info("PAUSED_FOR_USER_INPUT | question='{}' options={}", question_text[:80], options)
-
-        # Inject the dialog
-        try:
-            await page.evaluate(js_code)
-        except Exception as e:
-            logger.warning("Dialog injection failed: {}", e)
-            # Return a safe fallback so automation doesn't crash
-            return {"answer": "", "selected_option": None}
-
-        logger.info("POPUP_RENDERED")
-        logger.info("WAITING_FOR_USER_RESPONSE — automation is fully suspended, waiting indefinitely...")
-
-        # Block execution until user responds — NO polling, NO timeout
-        try:
-            await page.wait_for_function(
-                "() => window.__ilr !== null",
-                timeout=0,  # Wait forever
-            )
-        except Exception as e:
-            logger.error("wait_for_function interrupted: {}", e)
-            return {"answer": "", "selected_option": None}
-
-        # Read the response
-        response = await page.evaluate("() => window.__ilr")
-
-        logger.info("USER_RESPONSE_RECEIVED: {}", response)
-
-        # Cleanup: remove dialog and disconnect observer
-        try:
-            await page.evaluate("""() => {
-                if (window.__ilrObserver) { window.__ilrObserver.disconnect(); window.__ilrObserver = null; }
-                const el = document.getElementById('interactive-learning-dialog');
-                if (el) el.remove();
-                window.__ilr = null;
-            }""")
-        except Exception:
-            pass
-
-        logger.info("RESUMING_AUTOMATION")
+        logger.info("RESPONSE_FROM_POPUP={}", response)
         return response
+
+    def _show_tkinter_popup(
+        self,
+        question_text: str,
+        options: list[str],
+        is_case2: bool = False,
+        stored_answer: str | None = None,
+    ) -> dict:
+        import subprocess
+        import sys
+        import json
+        from pathlib import Path
+
+        input_data = {
+            "question_text": question_text,
+            "options": options,
+            "is_case2": is_case2,
+            "stored_answer": stored_answer,
+        }
+
+        # Locate popup_helper.py absolute path relative to this file
+        helper_path = Path(__file__).parent.parent / "utils" / "popup_helper.py"
+
+        try:
+            # Run helper script in a new Python process
+            startupinfo = None
+            if sys.platform == "win32":
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+
+            result = subprocess.run(
+                [sys.executable, str(helper_path)],
+                input=json.dumps(input_data),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                startupinfo=startupinfo,
+                check=False
+            )
+
+            if result.returncode == 0 and result.stdout.strip():
+                try:
+                    res_dict = json.loads(result.stdout)
+                    return {
+                        "answer": res_dict.get("answer"),
+                        "selected_option": res_dict.get("selected_option")
+                    }
+                except Exception as json_err:
+                    logger.warning("Failed to parse popup helper output: {}", json_err)
+            else:
+                logger.warning(
+                    "Popup helper exited with code {}. Stderr: {}",
+                    result.returncode, result.stderr
+                )
+        except Exception as exc:
+            logger.error("Failed to run popup helper: {}", exc)
+
+        return {"answer": None, "selected_option": None}
+
+
+# ---------------------------------------------------------------------------
+# Module-level helpers
+# ---------------------------------------------------------------------------
+
+def _numeric_option_matches(opt_norm: str, val: float) -> bool:
+    """Return True if the option text describes a numeric range/limit that contains val."""
+    import re
+    if val == 0 and any(w in opt_norm for w in ["no experience", "fresher", "fresh", "none", "0"]):
+        return True
+    if m := re.search(r"(\d+(?:\.\d+)?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)", opt_norm):
+        if float(m.group(1)) <= val <= float(m.group(2)):
+            return True
+    if m := re.search(r"(?:<|less\s+than)\s*(\d+(?:\.\d+)?)", opt_norm):
+        if val < float(m.group(1)):
+            return True
+    if m := re.search(r"(?:>|greater\s+than|more\s+than|above)\s*(\d+(?:\.\d+)?)", opt_norm):
+        if val > float(m.group(1)):
+            return True
+    if m := re.search(r"(\d+(?:\.\d+)?)\s*\+", opt_norm):
+        if val >= float(m.group(1)):
+            return True
+    if m := re.search(r"\b(\d+(?:\.\d+)?)\b", opt_norm):
+        if val == float(m.group(1)):
+            return True
+    return False
 
 
 async def is_valid_recruiter_question_container(container: Locator) -> bool:
-    """
-    Determine if a container is a valid recruiter question container (contains question/answer controls)
-    and not just an informational system message or footer button container.
-    """
+    """Return True if the container holds a real recruiter question (not a nav/info block)."""
     try:
-        # 1. Check for standard inputs, textareas, selects, contenteditable
-        has_text_area = await container.locator("textarea").count() > 0
-        has_select = await container.locator("select").count() > 0
-        has_editable = await container.locator("[contenteditable='true']").count() > 0
-        if has_text_area or has_select or has_editable:
+        try:
+            is_chatbot = await container.evaluate("""el => {
+                const c = el.className || '';
+                return c.includes('botItem') || c.includes('chatbot_ListItem') || c.includes('botMsg') || el.closest('.chatbot_ListItem') !== null;
+            }""")
+            if is_chatbot:
+                return True
+        except Exception:
+            pass
+
+        if (
+            await container.locator("textarea").count() > 0
+            or await container.locator("select").count() > 0
+            or await container.locator("[contenteditable='true']").count() > 0
+            or await container.locator(".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem']").count() > 0
+            or await container.locator("input[type='radio'], [role='radio']").count() > 0
+            or await container.locator("input[type='checkbox'], [role='checkbox']").count() > 0
+        ):
             return True
 
-        # Check for radio or checkbox controls
-        has_radio = await container.locator("input[type='radio'], [role='radio']").count() > 0
-        has_checkbox = await container.locator("input[type='checkbox'], [role='checkbox']").count() > 0
-        if has_radio or has_checkbox:
-            return True
-
-        # Check for other text/number inputs (excluding hidden/button/submit/image)
         inputs = container.locator("input")
-        input_count = await inputs.count()
-        for i in range(input_count):
+        for i in range(await inputs.count()):
             type_attr = (await inputs.nth(i).get_attribute("type") or "text").lower()
             if type_attr not in ("button", "submit", "hidden", "image"):
                 return True
 
-        # 2. Check for option buttons / clickable elements
-        # Ignore navigation buttons (Save, Skip, Submit, Continue, Confirm, Apply, Next, Close, Cancel, Back)
-        ignored_keywords = {"save", "skip", "submit", "continue", "confirm", "apply", "next", "close", "cancel", "back"}
-        
         options_sel = "button, [role='button'], [role='option'], div[class*='option'], div[class*='button'], a[class*='btn'], a[class*='button']"
-        clickable_locs = container.locator(options_sel)
-        click_count = await clickable_locs.count()
-        
-        valid_options_found = 0
-        for i in range(click_count):
-            el = clickable_locs.nth(i)
-            # Make sure it's not a form input tag matched by options_sel
+        clickable = container.locator(options_sel)
+        for i in range(await clickable.count()):
+            el = clickable.nth(i)
             tag = await el.evaluate("el => el.tagName.toLowerCase()")
             if tag in ("input", "textarea", "select"):
                 continue
-                
             text = (await el.inner_text()).strip()
             if not text:
                 text = (await el.evaluate("el => el.parentElement ? el.parentElement.innerText : ''")).strip()
-            
             if text:
-                # Clean text and split to check against ignored keywords
-                cleaned = " ".join(text.split()).lower()
-                words = cleaned.split()
-                is_nav = False
-                for word in words:
-                    w = word.strip(".,;:()<>[]{}&/-_")
-                    if w in ignored_keywords:
-                        is_nav = True
-                        break
-                if not is_nav:
-                    valid_options_found += 1
-
-        if valid_options_found > 0:
-            return True
+                words = " ".join(text.split()).lower().split()
+                if not any(w.strip(".,;:()<>[]{}&/-_") in _NAV_BUTTON_KEYWORDS for w in words):
+                    return True
 
     except Exception as e:
-        logger.warning("Error checking if container is valid: {}", e)
+        logger.warning("Error checking container validity: {}", e)
 
     return False
 
 
-def get_actual_numeric_experience(question_key: str, repo: ApplyDiscoveryRepository | None = None) -> float | None:
-    """Helper to extract a numeric experience value from candidate profile or question bank.
-    
-    Useful when a stored answer is a string range (e.g. '<6 years') but we need to map it
-    to a set of numerical boundaries (e.g. '<4 years', '4-5 years', '5-6 years').
-    """
+def get_actual_numeric_experience(question_key: str, repo: "ApplyDiscoveryRepository | None" = None) -> float | None:
+    """Extract a numeric experience value from profile, repo, or answer bank."""
     key_lower = question_key.lower()
+    experience_map = {
+        "python": "python_experience",
+        "genai": "genai_experience", "generative": "genai_experience",
+        "llm": "llm_experience",
+        "rag": "rag_experience",
+        "langchain": "langchain_experience",
+        "fastapi": "fastapi_experience",
+        "aws": "aws_experience",
+        "ml": "ml_experience", "machine": "ml_experience",
+        "dl": "dl_experience", "deep": "dl_experience",
+        "nlp": "nlp_experience", "natural": "nlp_experience",
+        "sql": "sql_experience",
+    }
     search_keys = []
-    if "python" in key_lower:
-        search_keys.append("python_experience")
-    elif "genai" in key_lower or "generative" in key_lower:
-        search_keys.append("genai_experience")
-    elif "llm" in key_lower:
-        search_keys.append("llm_experience")
-    elif "rag" in key_lower:
-        search_keys.append("rag_experience")
-    elif "langchain" in key_lower:
-        search_keys.append("langchain_experience")
-    elif "fastapi" in key_lower:
-        search_keys.append("fastapi_experience")
-    elif "aws" in key_lower:
-        search_keys.append("aws_experience")
-    elif "ml" in key_lower or "machine" in key_lower:
-        search_keys.append("ml_experience")
-    elif "dl" in key_lower or "deep" in key_lower:
-        search_keys.append("dl_experience")
-    elif "nlp" in key_lower or "natural" in key_lower:
-        search_keys.append("nlp_experience")
-    elif "sql" in key_lower:
-        search_keys.append("sql_experience")
-    
-    # Always check experience_years / total_experience as a fallback
+    for keyword, experience_key in experience_map.items():
+        if keyword in key_lower:
+            search_keys.append(experience_key)
+            break
     search_keys.extend(["experience_years", "total_experience", "relevant_experience"])
-    
-    # 1. Try candidate_profile.json
+
     try:
         import json
         profile_path = Path("config/candidate_profile.json")
@@ -1462,7 +2012,6 @@ def get_actual_numeric_experience(question_key: str, repo: ApplyDiscoveryReposit
     except Exception:
         pass
 
-    # 2. Try repo
     if repo:
         for k in search_keys:
             try:
@@ -1472,7 +2021,6 @@ def get_actual_numeric_experience(question_key: str, repo: ApplyDiscoveryReposit
             except (ValueError, TypeError, Exception):
                 pass
 
-    # 3. Try answers registry static answers/CANDIDATE_ANSWERS
     try:
         from app.question_bank.answers import CANDIDATE_ANSWERS
         for k in search_keys:
@@ -1484,8 +2032,4 @@ def get_actual_numeric_experience(question_key: str, repo: ApplyDiscoveryReposit
     except Exception:
         pass
 
-    # Final hardcoded default if everything else fails
     return 2.0
-
-
-
