@@ -1,4 +1,5 @@
 """
+#app\discovery\service.py
 Apply discovery orchestration.
 
 Purely read-only. No forms filled, no resumes uploaded,
@@ -943,6 +944,33 @@ class ApplyDiscoveryService:
     async def _discover_questions_readonly(self, page: Page, job: JobData) -> list[DiscoveredQuestion]:
         """Detect questions on the page — read-only, no interaction."""
         questions: list[DiscoveredQuestion] = []
+        from app.question_bank.form_filler import FormFiller, is_valid_recruiter_question_container
+
+        helper = FormFiller(self._settings, self._selectors, self._screenshots_dir, repo=self._repo)
+        active_chatbot_question = await helper._resolve_active_chatbot_question(page, set())
+        if active_chatbot_question:
+            if active_chatbot_question.get("field_type") == "unknown":
+                await helper._final_drawer_refresh_scan(page, active_chatbot_question)
+            question_text = active_chatbot_question["question_text"]
+            question_key = active_chatbot_question["question_key"]
+            field_type = active_chatbot_question["field_type"]
+            required = await self._detect_required(
+                active_chatbot_question["question_container"],
+                question_text,
+            )
+            logger.info("Question Detected: {} [{}]", question_text, question_key)
+
+            stored_answer = self._repo.get_question_answer(question_key)
+            question = DiscoveredQuestion(
+                question_key=question_key,
+                question_text=question_text,
+                field_type=field_type,
+                required=required,
+                answer=stored_answer or None,
+            )
+            questions.append(question)
+            return questions
+
         containers = await page.locator(self._selectors.discovery.questions.container).count()
         if containers == 0:
             return questions
@@ -952,7 +980,6 @@ class ApplyDiscoveryService:
             if not await container.is_visible():
                 continue
 
-            from app.question_bank.form_filler import is_valid_recruiter_question_container
             if not await is_valid_recruiter_question_container(container):
                 continue
 
@@ -962,8 +989,17 @@ class ApplyDiscoveryService:
             if not question_text:
                 continue
 
-            question_key = normalize_question_key(question_text)
-            field_type = await self._detect_field_type(container)
+            field_type = await self._detect_field_type(container, page)
+            options = await helper._get_field_options(container, field_type, page)
+            if not await helper._is_valid_question_text(
+                question_text,
+                has_visible_answer_controls=bool(options) or field_type != "unknown",
+                option_texts=options,
+            ):
+                logger.info("Skipping informational message during discovery: {}", question_text[:100])
+                continue
+
+            question_key = normalize_question_key(question_text, options)
             required = await self._detect_required(container, question_text)
             logger.info("Question Detected: {} [{}]", question_text, question_key)
 
@@ -1026,8 +1062,11 @@ class ApplyDiscoveryService:
         except Exception:
             return "unknown"
 
-    async def _detect_field_type(self, container) -> str:
-        """Infer the field type for a question container."""
+    async def _detect_field_type(self, container, page: Page | None = None) -> str:
+        """Infer the field type for a question container, delegating to the form filler logic."""
+        if hasattr(self, "_form_filler") and self._form_filler:
+            return await self._form_filler._detect_field_type(container, page)
+
         field_locator = container.locator(self._selectors.discovery.questions.field)
         if await field_locator.count() == 0:
             return "unknown"

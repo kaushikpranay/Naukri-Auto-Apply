@@ -89,6 +89,7 @@ _STATIC_ANSWERS: dict[str, str] = {
     "gender":                   "Male",
     "disability_status":        "No",
     "veteran_status":           "No",
+    "career_break":             "No",
     # ── Profile / misc ─────────────────────────────────────────────────────
     "profile_links":            "https://github.com/kaushikpranay",
     "cover_letter": (

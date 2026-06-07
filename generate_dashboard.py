@@ -793,10 +793,11 @@ def write_html_templates():
                             <th>Location</th>
                             <th>Error Details</th>
                             <th>Failed Date</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody id="jobs-tbody">
-                        <tr><td colspan="5" class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm text-accent" role="status"></div> Loading...</td></tr>
+                        <tr><td colspan="6" class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm text-accent" role="status"></div> Loading...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -817,6 +818,105 @@ def write_html_templates():
 </html>"""
     with open(DOCS_DIR / "failed_jobs.html", "w", encoding="utf-8") as f:
         f.write(failed_jobs_html)
+
+    # Hidden Jobs Template
+    hidden_jobs_html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naukri Automation - Hidden Jobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <div class="container main-content">
+        <div class="page-header">
+            <h1 class="page-title"><i class="bi bi-eye-slash-fill text-accent"></i> Hidden Jobs</h1>
+            <p class="text-muted mb-0">Jobs that have been hidden (toggled green) from the main lists</p>
+        </div>
+
+        <div class="glass-card p-3 mb-4">
+            <div class="row g-2 align-items-center">
+                <div class="col-12">
+                    <div class="input-group">
+                        <span class="input-group-text glass-input-addon"><i class="bi bi-search"></i></span>
+                        <input type="text" id="search-input" class="form-control glass-input" placeholder="Search role, company, location or category...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop View -->
+        <div class="glass-card d-none d-md-block overflow-hidden">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle glass-table mb-0">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Location / Info</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jobs-tbody">
+                        <tr><td colspan="5" class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm text-accent" role="status"></div> Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Mobile Cards View -->
+        <div class="d-md-none" id="mobile-cards">
+            <div class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm text-accent" role="status"></div> Loading...</div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-nav"></div>
+    </div>
+
+    <!-- Reason Modal -->
+    <div class="modal fade" id="analysisModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border-secondary text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title fw-bold text-accent" id="modal-job-title">Job Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-2 mb-3">
+                        <div class="col-6">
+                            <div class="p-2 rounded bg-secondary-subtle">
+                                <small class="text-muted d-block">Probability</small>
+                                <strong id="modal-probability" class="text-success">0%</strong>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-2 rounded bg-secondary-subtle">
+                                <small class="text-muted d-block">Confidence</small>
+                                <strong id="modal-confidence" class="text-info">0%</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 rounded reason-text">
+                        <h6 class="fw-bold text-white mb-2">AI Assessment Reason:</h6>
+                        <p id="modal-reason" class="mb-0 small text-muted"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>"""
+    with open(DOCS_DIR / "hidden_jobs.html", "w", encoding="utf-8") as f:
+        f.write(hidden_jobs_html)
 
     # Question Bank Template
     question_bank_html = """<!DOCTYPE html>
@@ -1423,6 +1523,7 @@ function injectNavbar() {
                     <li class="nav-item"><a class="nav-link" id="nav-external-jobs" href="external_jobs.html"><i class="bi bi-link-45deg me-1"></i> External</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-review-jobs" href="review_jobs.html"><i class="bi bi-eye-fill me-1"></i> Review</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-failed-jobs" href="failed_jobs.html"><i class="bi bi-exclamation-triangle-fill me-1"></i> Failed</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-hidden-jobs" href="hidden_jobs.html"><i class="bi bi-eye-slash-fill me-1"></i> Hidden</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-question-bank" href="question_bank.html"><i class="bi bi-patch-question-fill me-1"></i> Q-Bank</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-system-status" href="system_status.html"><i class="bi bi-cpu-fill me-1"></i> Status</a></li>
                 </ul>
@@ -1438,6 +1539,7 @@ function highlightNav() {
     else if (path.includes("external_jobs.html")) activeId = "nav-external-jobs";
     else if (path.includes("review_jobs.html")) activeId = "nav-review-jobs";
     else if (path.includes("failed_jobs.html")) activeId = "nav-failed-jobs";
+    else if (path.includes("hidden_jobs.html")) activeId = "nav-hidden-jobs";
     else if (path.includes("question_bank.html")) activeId = "nav-question-bank";
     else if (path.includes("system_status.html")) activeId = "nav-system-status";
     
@@ -1467,6 +1569,8 @@ function initPage() {
         renderReviewJobs();
     } else if (path.includes("failed_jobs.html")) {
         renderFailedJobs();
+    } else if (path.includes("hidden_jobs.html")) {
+        renderHiddenJobs();
     } else if (path.includes("question_bank.html")) {
         renderQuestionBank();
     } else if (path.includes("system_status.html")) {
@@ -1531,7 +1635,7 @@ function renderOverview() {
 
 // ── Top Jobs Page ────────────────────────────────────────────────────────
 function renderTopJobs() {
-    let jobs = [...dashboardData.top_jobs];
+    let jobs = dashboardData.top_jobs.filter(j => !getHiddenJobs().includes(j.id));
     
     const searchInput = document.getElementById("search-input");
     const sortSelect = document.getElementById("sort-select");
@@ -1610,7 +1714,10 @@ function renderTable(list) {
             </td>
             <td><span class="badge ${badgeClass}">${escapeHtml(j.apply_status)}</span></td>
             <td>
-                <button class="btn btn-sm btn-outline-accent" onclick="showReasonModal(${j.id})">Reason</button>
+                <div class="d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-accent" onclick="showReasonModal(${j.id})">Reason</button>
+                    ${renderToggleButton(j.id)}
+                </div>
             </td>
         </tr>`;
     }).join("");
@@ -1631,8 +1738,9 @@ function renderTable(list) {
                 <span>Exp: ${escapeHtml(j.experience_required || "N/A")}</span>
                 <span>Prob: <strong class="text-success">${j.interview_probability}%</strong></span>
             </div>
-            <div class="mt-2 text-end">
-                <button class="btn btn-sm btn-outline-accent w-100" onclick="showReasonModal(${j.id})">View Analysis</button>
+            <div class="mt-2 d-flex gap-2">
+                <button class="btn btn-sm btn-outline-accent flex-grow-1" onclick="showReasonModal(${j.id})">View Analysis</button>
+                ${renderToggleButton(j.id)}
             </div>
         </div>`;
     }).join("");
@@ -1665,7 +1773,7 @@ function getApplyStatusBadgeClass(status) {
 
 // ── External Jobs Page ───────────────────────────────────────────────────
 function renderExternalJobs() {
-    let jobs = [...dashboardData.external_jobs];
+    let jobs = dashboardData.external_jobs.filter(j => !getHiddenJobs().includes(j.id));
     
     const searchInput = document.getElementById("search-input");
 
@@ -1712,7 +1820,10 @@ function renderExternalTable(list) {
             <td>${escapeHtml(j.location)}</td>
             <td><strong class="text-success">${j.interview_probability}%</strong></td>
             <td>
-                <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i> Apply</a>
+                <div class="d-flex gap-1">
+                    <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i> Apply</a>
+                    ${renderToggleButton(j.id)}
+                </div>
             </td>
         </tr>`;
     }).join("");
@@ -1726,7 +1837,10 @@ function renderExternalTable(list) {
                 <span>Loc: ${escapeHtml(j.location)}</span>
                 <span>Prob: <strong class="text-success">${j.interview_probability}%</strong></span>
             </div>
-            <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent w-100"><i class="bi bi-box-arrow-up-right me-1"></i> Apply on Portal</a>
+            <div class="d-flex gap-2">
+                <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i> Apply on Portal</a>
+                ${renderToggleButton(j.id)}
+            </div>
         </div>`;
     }).join("");
 
@@ -1735,7 +1849,7 @@ function renderExternalTable(list) {
 
 // ── Review Jobs Page ─────────────────────────────────────────────────────
 function renderReviewJobs() {
-    let jobs = [...dashboardData.review_jobs];
+    let jobs = dashboardData.review_jobs.filter(j => !getHiddenJobs().includes(j.id));
     
     const searchInput = document.getElementById("search-input");
 
@@ -1789,7 +1903,10 @@ function renderReviewTable(list) {
             <td><span class="badge bg-dark">${escapeHtml(j.experience_required || "N/A")}</span></td>
             <td>${skillsBadges || '<span class="text-muted small">None</span>'}</td>
             <td>
-                <button class="btn btn-sm btn-outline-accent" onclick="showReasonModal(${j.id})">Details</button>
+                <div class="d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-accent" onclick="showReasonModal(${j.id})">Details</button>
+                    ${renderToggleButton(j.id)}
+                </div>
             </td>
         </tr>`;
     }).join("");
@@ -1812,7 +1929,10 @@ function renderReviewTable(list) {
                 <span class="text-muted small d-block">Missing Skills:</span>
                 <div>${skillsBadges || '<span class="text-muted small">None</span>'}</div>
             </div>
-            <button class="btn btn-sm btn-outline-accent w-100" onclick="showReasonModal(${j.id})">View Reason</button>
+            <div class="mt-2 d-flex gap-2">
+                <button class="btn btn-sm btn-outline-accent flex-grow-1" onclick="showReasonModal(${j.id})">View Reason</button>
+                ${renderToggleButton(j.id)}
+            </div>
         </div>`;
     }).join("");
 
@@ -1821,7 +1941,7 @@ function renderReviewTable(list) {
 
 // ── Failed Jobs Page ─────────────────────────────────────────────────────
 function renderFailedJobs() {
-    let jobs = [...dashboardData.failed_jobs];
+    let jobs = dashboardData.failed_jobs.filter(j => !getHiddenJobs().includes(j.id));
     
     const searchInput = document.getElementById("search-input");
 
@@ -1853,7 +1973,7 @@ function renderFailedTable(list) {
     const mCards = document.getElementById("mobile-cards");
     
     if (pageList.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-muted">No failed jobs found</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center text-muted">No failed jobs found</td></tr>`;
         mCards.innerHTML = `<div class="empty-state"><i class="bi bi-inbox"></i>No failed jobs found</div>`;
         renderPaginationControls(totalPages);
         return;
@@ -1867,6 +1987,11 @@ function renderFailedTable(list) {
             <td>${escapeHtml(j.location)}</td>
             <td class="text-danger small">${escapeHtml(j.reason)}</td>
             <td class="text-muted small">${escapeHtml(j.detected_at.substring(0,16))}</td>
+            <td>
+                <div class="d-flex gap-1">
+                    ${renderToggleButton(j.id)}
+                </div>
+            </td>
         </tr>`;
     }).join("");
 
@@ -1876,8 +2001,9 @@ function renderFailedTable(list) {
             <h6 class="fw-bold text-white mb-1">${escapeHtml(j.company_name)}</h6>
             <a href="${escapeHtml(j.job_url)}" target="_blank" class="d-block text-white text-decoration-none fw-semibold mb-2">${escapeHtml(j.job_title)}</a>
             <p class="text-danger small mb-2">Error: ${escapeHtml(j.reason)}</p>
-            <div class="text-end text-muted small">
-                Failed: ${escapeHtml(j.detected_at.substring(0, 16))}
+            <div class="d-flex justify-content-between align-items-center mt-2">
+                <span class="text-muted small">Failed: ${escapeHtml(j.detected_at.substring(0, 16))}</span>
+                ${renderToggleButton(j.id)}
             </div>
         </div>`;
     }).join("");
@@ -2070,6 +2196,147 @@ function escapeHtml(str) {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+}
+
+// ── Hidden Jobs Logic ────────────────────────────────────────────────────
+function getHiddenJobs() {
+    try {
+        return JSON.parse(localStorage.getItem("hidden_job_ids") || "[]");
+    } catch (e) {
+        return [];
+    }
+}
+
+window.toggleJobHidden = function(jobId, event) {
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+    let hidden = getHiddenJobs();
+    if (hidden.includes(jobId)) {
+        hidden = hidden.filter(id => id !== jobId);
+    } else {
+        hidden.push(jobId);
+    }
+    localStorage.setItem("hidden_job_ids", JSON.stringify(hidden));
+    initPage();
+};
+
+function renderToggleButton(jobId) {
+    const isHidden = getHiddenJobs().includes(jobId);
+    const btnClass = isHidden ? "btn-success" : "btn-danger";
+    const titleText = isHidden ? "Show Card" : "Hide Card";
+    const iconClass = isHidden ? "bi-eye-fill" : "bi-eye-slash-fill";
+    return `<button class="btn btn-sm ${btnClass}" onclick="toggleJobHidden(${jobId}, event)" title="${titleText}"><i class="bi ${iconClass}"></i></button>`;
+}
+
+function renderHiddenJobs() {
+    const hiddenIds = getHiddenJobs();
+    
+    // Consolidate all jobs across categories
+    let allJobs = [];
+    if (dashboardData.top_jobs) {
+        dashboardData.top_jobs.forEach(j => {
+            if (hiddenIds.includes(j.id)) allJobs.push({...j, category: "Top Job"});
+        });
+    }
+    if (dashboardData.external_jobs) {
+        dashboardData.external_jobs.forEach(j => {
+            if (hiddenIds.includes(j.id)) allJobs.push({...j, category: "External"});
+        });
+    }
+    if (dashboardData.review_jobs) {
+        dashboardData.review_jobs.forEach(j => {
+            if (hiddenIds.includes(j.id)) allJobs.push({...j, category: "Review"});
+        });
+    }
+    if (dashboardData.failed_jobs) {
+        dashboardData.failed_jobs.forEach(j => {
+            if (hiddenIds.includes(j.id)) allJobs.push({...j, category: "Failed"});
+        });
+    }
+
+    const searchInput = document.getElementById("search-input");
+
+    function update() {
+        searchTerm = searchInput.value.toLowerCase();
+        let filtered = allJobs.filter(j => {
+            return (j.company_name || "").toLowerCase().includes(searchTerm) ||
+                   (j.job_title || "").toLowerCase().includes(searchTerm) ||
+                   (j.location || "").toLowerCase().includes(searchTerm) ||
+                   (j.category || "").toLowerCase().includes(searchTerm);
+        });
+
+        renderHiddenTable(filtered);
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("input", () => { currentPage = 1; update(); });
+    }
+    update();
+}
+
+function renderHiddenTable(list) {
+    const totalCount = list.length;
+    const totalPages = Math.ceil(totalCount / pageSize) || 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    const pageList = list.slice(start, end);
+
+    const tbody = document.getElementById("jobs-tbody");
+    const mCards = document.getElementById("mobile-cards");
+    
+    if (pageList.length === 0) {
+        if (tbody) tbody.innerHTML = `<tr><td colspan="5" class="text-center text-muted">No hidden jobs found</td></tr>`;
+        if (mCards) mCards.innerHTML = `<div class="empty-state"><i class="bi bi-inbox"></i>No hidden jobs found</div>`;
+        renderPaginationControls(totalPages);
+        return;
+    }
+
+    if (tbody) {
+        tbody.innerHTML = pageList.map(j => {
+            const catBadge = j.category === "Top Job" ? "bg-success" : j.category === "External" ? "bg-info text-dark" : j.category === "Review" ? "bg-warning text-dark" : "bg-danger";
+            return `
+            <tr>
+                <td><span class="badge ${catBadge}">${escapeHtml(j.category)}</span></td>
+                <td><strong>${escapeHtml(j.company_name)}</strong></td>
+                <td><a href="${escapeHtml(j.job_url)}" target="_blank" class="text-white text-decoration-none fw-semibold">${escapeHtml(j.job_title)}</a></td>
+                <td>
+                    <div>${escapeHtml(j.location || "N/A")}</div>
+                    ${j.reason ? `<div class="text-muted small text-truncate" style="max-width: 300px;">${escapeHtml(j.reason)}</div>` : ''}
+                </td>
+                <td>
+                    <div class="d-flex gap-1">
+                        ${j.reason ? `<button class="btn btn-sm btn-outline-accent" onclick="showReasonModal(${j.id})">Details</button>` : ''}
+                        ${renderToggleButton(j.id)}
+                    </div>
+                </td>
+            </tr>`;
+        }).join("");
+    }
+
+    if (mCards) {
+        mCards.innerHTML = pageList.map(j => {
+            const catBadge = j.category === "Top Job" ? "bg-success" : j.category === "External" ? "bg-info text-dark" : j.category === "Review" ? "bg-warning text-dark" : "bg-danger";
+            return `
+            <div class="job-card mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-white mb-0">${escapeHtml(j.company_name)}</h6>
+                    <span class="badge ${catBadge}">${escapeHtml(j.category)}</span>
+                </div>
+                <a href="${escapeHtml(j.job_url)}" target="_blank" class="d-block text-white text-decoration-none fw-semibold mb-2">${escapeHtml(j.job_title)}</a>
+                ${j.reason ? `<p class="text-muted small mb-2">${escapeHtml(j.reason)}</p>` : ''}
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    ${j.reason ? `<button class="btn btn-sm btn-outline-accent" onclick="showReasonModal(${j.id})">Reason</button>` : '<span></span>'}
+                    ${renderToggleButton(j.id)}
+                </div>
+            </div>`;
+        }).join("");
+    }
+
+    renderPaginationControls(totalPages);
 }
 """
     with open(JS_DIR / "app.js", "w", encoding="utf-8") as f:

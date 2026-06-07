@@ -48,6 +48,76 @@ INSERT OR IGNORE INTO jobs (
 """
 
 
+_auto_cleanup_done = False
+
+def run_db_auto_cleanup(db_path: Path) -> None:
+    """Auto-delete job records from the database that are older than 15 days."""
+    global _auto_cleanup_done
+    if _auto_cleanup_done:
+        return
+    _auto_cleanup_done = True
+
+    # In-memory DB doesn't need file check
+    if db_path != Path(":memory:") and not db_path.exists():
+        return
+
+    import sqlite3
+    from datetime import datetime, timedelta
+    from loguru import logger
+
+    cutoff = (datetime.now() - timedelta(days=15)).isoformat()
+    try:
+        conn = sqlite3.connect(str(db_path), timeout=30)
+        cursor = conn.cursor()
+
+        # Check if jobs table exists
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='jobs'")
+        if not cursor.fetchone():
+            conn.close()
+            return
+
+        cursor.execute("SELECT id FROM jobs WHERE created_at < ?", (cutoff,))
+        old_ids = [row[0] for row in cursor.fetchall()]
+        if not old_ids:
+            conn.close()
+            return
+
+        placeholders = ",".join("?" for _ in old_ids)
+
+        deleted_apps = 0
+        deleted_questions = 0
+        deleted_evals = 0
+
+        # Delete in order of dependencies
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='job_applications'")
+        if cursor.fetchone():
+            cursor.execute(f"DELETE FROM job_applications WHERE job_id IN ({placeholders})", tuple(old_ids))
+            deleted_apps = cursor.rowcount
+
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='job_application_questions'")
+        if cursor.fetchone():
+            cursor.execute(f"DELETE FROM job_application_questions WHERE job_id IN ({placeholders})", tuple(old_ids))
+            deleted_questions = cursor.rowcount
+
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='ai_evaluations'")
+        if cursor.fetchone():
+            cursor.execute(f"DELETE FROM ai_evaluations WHERE job_id IN ({placeholders})", tuple(old_ids))
+            deleted_evals = cursor.rowcount
+
+        cursor.execute(f"DELETE FROM jobs WHERE id IN ({placeholders})", tuple(old_ids))
+        deleted_jobs = cursor.rowcount
+
+        conn.commit()
+        conn.close()
+
+        logger.info(
+            "Auto-cleanup: Deleted {} old job records (applications: {}, questions: {}, evals: {}) older than 15 days.",
+            deleted_jobs, deleted_apps, deleted_questions, deleted_evals
+        )
+    except Exception as e:
+        logger.error("Auto-cleanup error: {}", e)
+
+
 class JobRepository:
     """
     SQLite repository for job data.
@@ -73,6 +143,7 @@ class JobRepository:
         self._migrate_legacy_database()
         self._migration_manager = DatabaseMigrationManager(self._conn)
         self._migration_manager.apply_pending_migrations()
+        run_db_auto_cleanup(self._db_path)
 
         logger.info("Database initialized: {}", self._db_path)
 
