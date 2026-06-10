@@ -1169,6 +1169,8 @@ def write_css():
     --radius: 14px;
     --radius-sm: 10px;
     --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --bs-secondary-color: white;
+    --bs-secondary-color-rgb: 255, 255, 255;
 }
 
 * { box-sizing: border-box; }
