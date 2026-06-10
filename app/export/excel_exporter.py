@@ -1,15 +1,10 @@
-"""
-Excel exporter.
-
-Exports job data from SQLite to a formatted .xlsx file using
-Pandas and OpenPyXL.
-"""
-
 from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
 from loguru import logger
+
+from app.export.utils import write_excel
 
 
 # Column mapping: database column → Excel display name
@@ -43,15 +38,12 @@ class ExcelExporter:
         self._db_path: Path = db_path
         self._export_dir: Path = export_dir
 
-    def export(self) -> Path:
+    def export(self) -> Path | None:
         """
         Export all jobs to an Excel file.
 
         Returns:
-            Path to the created Excel file.
-
-        Raises:
-            ValueError: If no jobs exist in the database.
+            Path to the created Excel file, or None if no jobs found.
         """
         self._export_dir.mkdir(parents=True, exist_ok=True)
 
@@ -67,7 +59,7 @@ class ExcelExporter:
 
         if df.empty:
             logger.warning("No jobs in database — nothing to export")
-            raise ValueError("No jobs found in database to export")
+            return None
 
         # Select and rename columns
         available_cols: list[str] = [
@@ -76,26 +68,13 @@ class ExcelExporter:
         df_export: pd.DataFrame = df[available_cols].rename(columns=_COLUMN_MAP)
 
         # Generate filename
-        date_str: str = datetime.now().strftime("%Y_%m_%d")
-        filename: str = f"jobs_{date_str}.xlsx"
+        timestamp: str = datetime.now().strftime("%Y_%m_%d_%H%M%S")
+        filename: str = f"jobs_{timestamp}.xlsx"
         filepath: Path = self._export_dir / filename
 
-        # Write to Excel with formatting
-        with pd.ExcelWriter(str(filepath), engine="openpyxl") as writer:
-            df_export.to_excel(writer, index=False, sheet_name="Jobs")
-
-            # Auto-fit column widths
-            worksheet = writer.sheets["Jobs"]
-            for col_idx, column in enumerate(df_export.columns, start=1):
-                max_length: int = max(
-                    len(str(column)),
-                    df_export[column].astype(str).str.len().max() if not df_export[column].empty else 0,
-                )
-                # Cap at 60 chars, minimum 12
-                adjusted_width: int = min(max(max_length + 2, 12), 60)
-                worksheet.column_dimensions[
-                    worksheet.cell(row=1, column=col_idx).column_letter
-                ].width = adjusted_width
+        # Write to Excel with formatting using the shared utility
+        write_excel(df_export, filepath, "Jobs")
 
         logger.info("Excel export complete: {} ({} rows)", filepath.name, len(df_export))
         return filepath
+

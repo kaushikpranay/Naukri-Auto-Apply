@@ -64,9 +64,11 @@ class TestNormalizeUrl:
         assert "#" not in result
 
     def test_empty_url(self) -> None:
-        """Empty string should return empty string."""
-        assert normalize_url("") == ""
-        assert normalize_url("   ") == ""
+        """Empty string should raise ValueError."""
+        with pytest.raises(ValueError):
+            normalize_url("")
+        with pytest.raises(ValueError):
+            normalize_url("   ")
 
     def test_idempotent(self) -> None:
         """Normalizing an already-normalized URL should be a no-op."""

@@ -220,6 +220,8 @@ async def test_fill_form_case1_unknown_question() -> None:
     repo.get_question_answer = MagicMock(return_value=None)
     
     filler = FormFiller(settings, selectors, Path("tmp"), repo=repo)
+    filler._post_fill_save = AsyncMock()
+    filler._is_application_submitted = AsyncMock(return_value=False)
     
     # Mock page and locator count
     page = MagicMock()
@@ -232,6 +234,7 @@ async def test_fill_form_case1_unknown_question() -> None:
     
     mock_input_loc = AsyncMock()
     mock_input_loc.count = AsyncMock(return_value=1)
+    mock_input_loc.nth = MagicMock(return_value=container)
     container.locator = MagicMock(return_value=mock_input_loc)
     
     question_locator = AsyncMock()
@@ -418,6 +421,8 @@ async def test_fill_form_case2_unmatched_option() -> None:
     repo.get_answer_mapping = MagicMock(return_value=None)
     
     filler = FormFiller(settings, selectors, Path("tmp"), repo=repo)
+    filler._post_fill_save = AsyncMock()
+    filler._is_application_submitted = AsyncMock(return_value=False)
     
     # Mock page and locator count
     page = MagicMock()
@@ -430,6 +435,7 @@ async def test_fill_form_case2_unmatched_option() -> None:
     
     mock_input_loc = AsyncMock()
     mock_input_loc.count = AsyncMock(return_value=1)
+    mock_input_loc.nth = MagicMock(return_value=container)
     container.locator = MagicMock(return_value=mock_input_loc)
     
     question_locator = AsyncMock()
@@ -458,7 +464,7 @@ async def test_fill_form_case2_unmatched_option() -> None:
     
     # Mock first handle known field (returns error)
     err_result = FieldFillResult(
-        question_key="years_of_experience",
+        question_key="years_experience",
         question_text="Years of Experience",
         field_type="div",
         required=False,
@@ -469,7 +475,7 @@ async def test_fill_form_case2_unmatched_option() -> None:
     )
     # Mock second handle known field (returns success)
     success_result = FieldFillResult(
-        question_key="years_of_experience",
+        question_key="years_experience",
         question_text="Years of Experience",
         field_type="div",
         required=False,
@@ -481,7 +487,7 @@ async def test_fill_form_case2_unmatched_option() -> None:
     
     discovered_qs = [
         DiscoveredQuestion(
-            question_key="years_of_experience",
+            question_key="years_experience",
             question_text="Years of Experience",
             field_type="div",
             required=False,
@@ -499,7 +505,7 @@ async def test_fill_form_case2_unmatched_option() -> None:
         options=["0-1 years", "1-2 years", "2-4 years"]
     )
     repo.save_answer_mapping.assert_called_once_with(
-        "years_of_experience__options__0-1 years|1-2 years|2-4 years",
+        "years_experience__options__0-1 years|1-2 years|2-4 years",
         "1.5",
         "1-2 years",
     )
@@ -1163,3 +1169,74 @@ async def test_interactive_prompt_user_real_submit_flow() -> None:
         
         assert response == {"answer": "Yes", "selected_option": "Yes"}
         mock_run.assert_called_once()
+
+
+def test_resolve_session_key() -> None:
+    """Test session key resolving for loop detection and collision handling."""
+    settings = load_settings()
+    selectors = load_selectors()
+    filler = FormFiller(settings, selectors, Path("tmp"))
+
+    processed = {}
+    
+    # 1. New key: should return target key and no action
+    k1, action1 = filler._resolve_session_key("How many years of experience in Python?", "exp_python", processed)
+    assert k1 == "exp_python"
+    assert action1 is None
+    processed[k1] = "How many years of experience in Python?"
+
+    # 2. Key collision (different question text for same key): should return new unique key
+    k2, action2 = filler._resolve_session_key("How many years of experience in PySpark?", "exp_python", processed)
+    assert k2 == "exp_python_2"
+    assert action2 is None
+    processed[k2] = "How many years of experience in PySpark?"
+
+    # 3. Repeat of collision key: should resolve to the same unique key
+    k3, action3 = filler._resolve_session_key("How many years of experience in PySpark?", "exp_python", processed)
+    assert k3 == "exp_python_2"
+    assert action3 is None
+
+    # 4. Stuck loop (same question text and key): should return action='skip'
+    k4, action4 = filler._resolve_session_key("How many years of experience in Python?", "exp_python", processed)
+    assert k4 == "exp_python"
+    assert action4 == "skip"
+
+
+def test_get_actual_numeric_experience_transferable() -> None:
+    """Test get_actual_numeric_experience with direct profile skills and transferable skills."""
+    from app.question_bank.form_filler import get_actual_numeric_experience
+    import json
+    
+    profile_path = Path("config/candidate_profile.json")
+    original_profile = None
+    if profile_path.exists():
+        original_profile = profile_path.read_text(encoding="utf-8")
+        
+    try:
+        test_profile = {
+            "experience_years": 4.5,
+            "skills": ["Python", "AWS", "FastAPI"],
+            "transferable_skills": {
+                "AWS": ["Azure", "GCP"],
+                "Python": ["Django", "Flask"]
+            }
+        }
+        profile_path.write_text(json.dumps(test_profile), encoding="utf-8")
+        
+        # Test direct skill match
+        assert get_actual_numeric_experience("exp_python") == 4.5
+        assert get_actual_numeric_experience("exp_fastapi") == 4.5
+        
+        # Test transferable skill match (Azure is not in skills but AWS is)
+        assert get_actual_numeric_experience("exp_azure") == 4.5
+        assert get_actual_numeric_experience("exp_gcp") == 4.5
+        assert get_actual_numeric_experience("exp_django") == 4.5
+        
+        # Test no match (returns 0.0)
+        assert get_actual_numeric_experience("exp_react") == 0.0
+        assert get_actual_numeric_experience("exp_kubernetes") == 0.0
+    finally:
+        if original_profile is not None:
+            profile_path.write_text(original_profile, encoding="utf-8")
+        elif profile_path.exists():
+            profile_path.unlink()

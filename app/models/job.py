@@ -1,4 +1,5 @@
 """
+app/models/job.py
 Pydantic models for job data and collection summary.
 """
 

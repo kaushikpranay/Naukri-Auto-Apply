@@ -1,3 +1,4 @@
+# question_bank/answers.py
 """
 Candidate answers registry — auto-populated from config/candidate_profile.json.
 

@@ -411,6 +411,12 @@ def write_html_templates():
                     <div class="mini-stat-label">Applied OK</div>
                 </div>
             </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="mini-stat-card">
+                    <div class="mini-stat-value text-secondary" id="count-hidden-jobs">0</div>
+                    <div class="mini-stat-label">Hidden Jobs</div>
+                </div>
+            </div>
         </div>
 
         <div class="row g-3">
@@ -1523,7 +1529,7 @@ function injectNavbar() {
                     <li class="nav-item"><a class="nav-link" id="nav-external-jobs" href="external_jobs.html"><i class="bi bi-link-45deg me-1"></i> External</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-review-jobs" href="review_jobs.html"><i class="bi bi-eye-fill me-1"></i> Review</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-failed-jobs" href="failed_jobs.html"><i class="bi bi-exclamation-triangle-fill me-1"></i> Failed</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-hidden-jobs" href="hidden_jobs.html"><i class="bi bi-eye-slash-fill me-1"></i> Hidden</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-hidden-jobs" href="hidden_jobs.html"><i class="bi bi-eye-slash-fill me-1"></i> Hidden <span class="badge bg-secondary ms-1" id="nav-hidden-count">0</span></a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-question-bank" href="question_bank.html"><i class="bi bi-patch-question-fill me-1"></i> Q-Bank</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-system-status" href="system_status.html"><i class="bi bi-cpu-fill me-1"></i> Status</a></li>
                 </ul>
@@ -1558,6 +1564,18 @@ async function loadData() {
 
 function initPage() {
     if (!dashboardData) return;
+    
+    // Update hidden count badge in navbar
+    try {
+        const hiddenCount = getHiddenJobs().length;
+        const navHiddenBadge = document.getElementById("nav-hidden-count");
+        if (navHiddenBadge) {
+            navHiddenBadge.innerText = hiddenCount;
+        }
+    } catch (e) {
+        console.error("Failed to update hidden count:", e);
+    }
+
     const path = window.location.pathname;
     if (path.includes("index.html") || path.endsWith("/") || path.endsWith("docs") || path.endsWith("docs/")) {
         renderOverview();
@@ -1600,6 +1618,11 @@ function renderOverview() {
     document.getElementById("count-failed").innerText = stats.failed;
     document.getElementById("count-quota-exhausted").innerText = stats.quota_exhausted;
     document.getElementById("count-applied-ok").innerText = stats.applied_successfully;
+    
+    const countHiddenJobs = document.getElementById("count-hidden-jobs");
+    if (countHiddenJobs) {
+        countHiddenJobs.innerText = getHiddenJobs().length;
+    }
 
     // Progress bar for Q-bank
     const pb = document.getElementById("qbank-progress");

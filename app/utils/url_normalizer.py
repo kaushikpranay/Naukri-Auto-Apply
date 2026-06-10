@@ -1,4 +1,5 @@
 """
+#app/utils/url_normalizer.py
 URL Normalization utility.
 
 Strips tracking parameters, UTM tags, and recommendation params
@@ -8,7 +9,7 @@ from Naukri job URLs to enable reliable deduplication.
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
 
 # Parameters to strip from URLs
-_TRACKING_PARAMS: set[str] = {
+_TRACKING_PARAMS: frozenset[str] = frozenset({
     # UTM family
     "utm_source",
     "utm_medium",
@@ -34,7 +35,7 @@ _TRACKING_PARAMS: set[str] = {
     "mc_eid",
     "_ga",
     "_gl",
-}
+})
 
 
 def normalize_url(raw_url: str) -> str:
@@ -54,9 +55,11 @@ def normalize_url(raw_url: str) -> str:
         'https://www.naukri.com/job/456?k=python'
     """
     if not raw_url or not raw_url.strip():
-        return ""
+        raise ValueError(f"Cannot normalize empty or null URL: {raw_url!r}")
 
     parsed = urlparse(raw_url.strip())
+    if not parsed.scheme or not parsed.netloc:
+        raise ValueError(f"URL missing scheme or host: {raw_url!r}")
 
     # Lowercase scheme and host
     scheme: str = parsed.scheme.lower()

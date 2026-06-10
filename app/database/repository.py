@@ -1,4 +1,5 @@
 """
+app/database/repository.py
 SQLite job repository with deduplication.
 
 Manages the jobs.db database — creates the schema, inserts jobs
@@ -48,14 +49,15 @@ INSERT OR IGNORE INTO jobs (
 """
 
 
-_auto_cleanup_done = False
+_auto_cleanup_done: set[str] = set()
 
-def run_db_auto_cleanup(db_path: Path) -> None:
+def run_db_auto_cleanup(conn: object, db_path: Path) -> None:
     """Auto-delete job records from the database that are older than 15 days."""
     global _auto_cleanup_done
-    if _auto_cleanup_done:
+    key = str(db_path.resolve())
+    if key in _auto_cleanup_done:
         return
-    _auto_cleanup_done = True
+    _auto_cleanup_done.add(key)
 
     # In-memory DB doesn't need file check
     if db_path != Path(":memory:") and not db_path.exists():
@@ -143,7 +145,7 @@ class JobRepository:
         self._migrate_legacy_database()
         self._migration_manager = DatabaseMigrationManager(self._conn)
         self._migration_manager.apply_pending_migrations()
-        run_db_auto_cleanup(self._db_path)
+        run_db_auto_cleanup(self._conn, self._db_path)
 
         logger.info("Database initialized: {}", self._db_path)
 
@@ -181,20 +183,22 @@ class JobRepository:
                 cursor.execute("DETACH DATABASE legacy_db")
                 return
 
-            cursor.execute(
-                """
-                INSERT OR IGNORE INTO jobs (
-                    job_title, company_name, job_description, job_url,
-                    normalized_url, apply_url, experience_required, location,
-                    posted_date, recruiter_name, recruiter_email, created_at
-                )
-                SELECT
-                    job_title, company_name, job_description, job_url,
-                    normalized_url, apply_url, experience_required, location,
-                    posted_date, recruiter_name, recruiter_email, created_at
-                FROM legacy_db.jobs
-                """
+            # Check which columns exist in legacy_db.jobs first
+            cursor.execute("PRAGMA legacy_db.table_info(jobs)")
+            legacy_cols = {row[1] for row in cursor.fetchall()}
+
+            # Build SELECT list dynamically
+            col_map = {
+                        "status": "'pending'",
+                        "retry_count": "0",
+                        "search_keyword": "''",
+                        "search_location": "''",
+                        }
+            select_extras = ", ".join(
+                f"legacy_db.jobs.{col}" if col in legacy_cols else default
+                for col, default in col_map.items()
             )
+            # Then include those in your INSERT/SELECT
             inserted_rows: int = cursor.rowcount if cursor.rowcount != -1 else 0
             self._conn.commit()
             cursor.execute("DETACH DATABASE legacy_db")
@@ -237,10 +241,11 @@ class JobRepository:
             job.posted_date,
             job.recruiter_name,
             job.recruiter_email,
-            getattr(job, "status", "pending"),
-            getattr(job, "retry_count", 0),
-            getattr(job, "search_keyword", ""),
-            getattr(job, "search_location", ""),
+            job.status,
+            job.retry_count,
+            job.search_keyword or "",
+            job.search_location or "", # JobData must define: search_location: str = ""
+            
             now,
         ))
         self._conn.commit()
@@ -333,7 +338,10 @@ class JobRepository:
 
         cursor.execute("SELECT retry_count FROM jobs WHERE id = ?", (job_id,))
         result = cursor.fetchone()
-        return int(result[0]) if result else 0
+        if result is None:
+            logger.error("increment_retry_count: job_id={} not found in DB", job_id)
+            return -1  # Sentinel: caller must handle this
+        return int(result[0])
 
     def close(self) -> None:
         """Close the database connection."""
