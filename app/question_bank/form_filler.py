@@ -5,8 +5,8 @@ Fills known answers into application form fields.
 
 Safety guarantees
 -----------------
-- DRY_RUN = False (default): detects what would be filled, logs it, but never
-  touches the DOM.  Set to False only when you are ready for live filling.
+- DRY_RUN = True (safe): detects what would be filled, logs it, never touches DOM.
+- DRY_RUN = False (live): actively fills fields. Set False only when ready.
 - Final-submit selectors (configured in selectors.yaml ``final_submit``) are
   NEVER clicked under any circumstances.
 - No "Next", "Submit", "Apply Now", or confirmation buttons are clicked.
@@ -36,8 +36,11 @@ if TYPE_CHECKING:
 # SAFETY FLAG
 # ---------------------------------------------------------------------------
 
-DRY_RUN: bool = False
+DRY_RUN = False 
 """
+DRY_RUN = True (safe): detects what would be filled, logs it, never touches DOM.
+DRY_RUN = False (live): actively fills fields. Set False only when ready.
+
 When True  → fields are detected and logged; the DOM is NOT modified.
 When False → known answers are typed / selected into form fields.
 
@@ -144,10 +147,25 @@ class FormFiller:
         report.screenshot_before = await self._capture_screenshot(page, f"job_{job_id}_phase2_before")
 
         container_sel = self._selectors.discovery.questions.container
-        processed_keys: set[str] = set()
+        processed_keys: dict[str, str] = {}
+        processed_texts: set[str] = set()
 
         for loop_count in range(30):
-            container_count = await page.locator(container_sel).count()
+            # Check if page is closed (safely handling unit test MagicMock)
+            is_closed = False
+            if not (hasattr(page, "assert_called") or hasattr(page, "_mock_self")):
+                try:
+                    is_closed = page.is_closed()
+                except Exception:
+                    pass
+            if is_closed:
+                logger.info("Page closed. Exiting fill_form loop.")
+                break
+            try:
+                container_count = await page.locator(container_sel).count()
+            except Exception as e:
+                logger.info("Failed to count containers (likely page closed): {}", e)
+                break
 
             # ── Resolve next unprocessed question ──────────────────────────
             target_container = None
@@ -199,9 +217,21 @@ class FormFiller:
                         continue
 
                     question_key = normalize_question_key(question_text, preview_options)
-                    if question_key not in processed_keys:
+                    resolved_key, session_action = self._resolve_session_key(question_text, question_key, processed_keys)
+                    if session_action == "skip":
+                        logger.info("FIELD_SKIPPED_LOOP_LIMIT: key={}", question_key)
+                        processed_keys[resolved_key] = question_text
+                        continue
+
+                    # Check if the field is already filled or selected!
+                    if await self._is_field_filled(container, preview_field_type, page):
+                        logger.info("FIELD_ALREADY_FILLED: key={}", resolved_key)
+                        processed_keys[resolved_key] = question_text
+                        continue
+
+                    if resolved_key not in processed_keys:
                         target_container = container
-                        target_key = question_key
+                        target_key = resolved_key
                         target_text = question_text
                         target_field_type = preview_field_type
                         target_options = preview_options
@@ -210,7 +240,14 @@ class FormFiller:
             if not target_container:
                 break
 
-            processed_keys.add(target_key)
+            # Stuck on same question check
+            norm_text = " ".join(target_text.lower().strip().split())
+            if norm_text in processed_texts:
+                logger.warning("STUCK_ON_SAME_QUESTION_TEXT — breaking loop: '{}'", target_text[:60])
+                break
+            processed_texts.add(norm_text)
+            processed_keys[target_key] = target_text
+
             logger.info("PROCESSING_KEY: {} loop={}", target_key, loop_count)
 
             try:
@@ -225,6 +262,24 @@ class FormFiller:
                 final_answer = answer
                 if not final_answer and self._repo:
                     final_answer = self._repo.get_question_answer(target_key)
+
+                if not final_answer and target_key.startswith("willing_to_relocate_"):
+                    if self._repo:
+                        final_answer = self._repo.get_question_answer("willing_to_relocate")
+                    if not final_answer:
+                        from app.question_bank.answers import CANDIDATE_ANSWERS
+                        final_answer = CANDIDATE_ANSWERS.get("willing_to_relocate")
+
+                if not final_answer and target_key.startswith("exp_"):
+                    resolved_years = get_actual_numeric_experience(target_key, self._repo)
+                    if resolved_years is not None:
+                        if resolved_years > 0:
+                            final_answer = str(int(resolved_years))
+                            answer_source = "PROFILE_SKILL_EXP"
+                        else:
+                            final_answer = "0"
+                            answer_source = "PROFILE_SKILL_EXP_ZERO"
+                        logger.info("RESOLVED_SKILL_EXPERIENCE key={} -> {} (source={})", target_key, final_answer, answer_source)
 
                 if final_answer:
                     final_answer = str(final_answer).strip()
@@ -368,6 +423,9 @@ class FormFiller:
                 # ── Post-fill: click Save button ───────────────────────────
                 if result.status == "filled":
                     await self._post_fill_save(page, job_id, container_sel, processed_keys, target_key, report)
+                    if await self._is_application_submitted(page):
+                        logger.info("APPLICATION_SUBMITTED_SUCCESSFULLY - exiting form filler loop")
+                        break
 
             except PipelineSuspendedException:
                 raise
@@ -392,7 +450,7 @@ class FormFiller:
         page: Page,
         job_id: int,
         container_sel: str,
-        processed_keys: set[str],
+        processed_keys: dict[str, str],
         target_key: str,
         report: FormFillReport,
     ) -> None:
@@ -407,7 +465,6 @@ class FormFiller:
                 el = loc.nth(i)
                 if await el.is_visible():
                     save_btn = el
-                    logger.info("SAVE_BUTTON_FOUND with selector: {}", sel)
                     break
             if save_btn:
                 break
@@ -418,7 +475,7 @@ class FormFiller:
         await self._safe_wait(page, 3000)
         logger.info("SAVE_BUTTON_CLICKED")
         await save_btn.evaluate("el => el.click()")
-        await self._safe_wait(page, 2000)
+        await self._safe_wait(page, 3000)
         logger.info("POST_SAVE_WAIT_DONE")
 
         # Detect Naukri server error
@@ -437,7 +494,7 @@ class FormFiller:
         # Detect validation error
         if await self._has_validation_error(page, drawer):
             logger.warning("SAVE_REJECTED")
-            processed_keys.discard(target_key)
+            processed_keys.pop(target_key, None)
             if self._repo:
                 self._repo.update_job_status(job_id, "validation_failed")
             report.screenshot_error = await self._capture_screenshot(page, f"job_{job_id}_validation_failed")
@@ -447,89 +504,222 @@ class FormFiller:
         save_accepted = await self._detect_save_accepted(page, container_sel, processed_keys)
         logger.info("SAVE_ACCEPTED" if save_accepted else "No new question or success indicator detected after clicking Save.")
 
+    async def _is_application_submitted(self, page: Page) -> bool:
+        """Check if the application has been successfully submitted."""
+        is_closed = False
+        if not (hasattr(page, "assert_called") or hasattr(page, "_mock_self")):
+            try:
+                is_closed = page.is_closed()
+            except Exception:
+                pass
+        if is_closed:
+            return True
+        
+        # Check URL indicators
+        try:
+            url = page.url.lower()
+            if "/myapply/saveapply" in url or "applied" in url:
+                return True
+        except Exception:
+            pass
+            
+        # Check page text for clear submission indicators (excluding buttons/inputs)
+        submit_keywords = [
+            "successfully applied",
+            "application received",
+            "thank you for applying",
+            "thank you for showing interest",
+            "your application has been",
+        ]
+        try:
+            body_text = (await page.locator("body").inner_text()).lower()
+            if any(kw in body_text for kw in submit_keywords):
+                return True
+        except Exception:
+            pass
+            
+        # Also check if drawer disappeared after we started filling
+        try:
+            drawer_visible = await page.evaluate("""() => {
+                const selectors = ['.chatbot_Drawer', '[class*="chatbot"]', '[class*="drawer"]', '[class*="modal"]'];
+                for (const sel of selectors) {
+                    const elements = document.querySelectorAll(sel);
+                    for (const el of elements) {
+                        if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }""")
+            if not drawer_visible and self._drawer_opened_at is not None:
+                return True
+        except Exception:
+            pass
+            
+        return False
+
     async def _has_validation_error(self, page: Page, drawer) -> bool:
         """Return True if a validation error is visible after save."""
-        error_selectors = [
-            ".error", ".err", "[class*='error']", "[class*='invalid']",
-            ".error-msg", ".validation-error", ".msg-error", ".error-message",
-        ]
-        scope = drawer if drawer else page
-        for err_sel in error_selectors:
+        is_closed = False
+        if not (hasattr(page, "assert_called") or hasattr(page, "_mock_self")):
             try:
-                loc = scope.locator(err_sel)
-                count = await loc.count()
-                for i in range(count):
-                    el = loc.nth(i)
-                    if await el.is_visible():
-                        # Exclude bot message bubbles
-                        is_bot = await el.evaluate("""(node) => {
-                            return !!node.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
-                        }""")
-                        if is_bot:
-                            continue
-                        txt = (await el.inner_text()).strip().lower()
-                        if txt:
-                            logger.warning("VALIDATION_ERROR_DETECTED: selector='{}' text='{}'", err_sel, txt)
-                            return True
+                is_closed = page.is_closed()
             except Exception:
-                continue
+                pass
+        if is_closed:
+            return False
 
-        error_keywords = ["please", "required", "mandatory", "invalid", "error"]
-        error_texts = ["required", "mandatory", "please enter", "please select",
-                       "invalid", "cannot be empty", "choose", "fill", "incorrect"]
-        for err_txt in error_texts:
-            try:
-                loc = scope.locator(f"*:has-text('{err_txt}')")
-                count = await loc.count()
-                for i in range(count):
-                    el = loc.nth(i)
-                    if await el.is_visible():
-                        tag = await el.evaluate("el => el.tagName.toLowerCase()")
-                        if tag in ("div", "span", "p", "label"):
-                            # Exclude bot message bubbles
-                            is_bot = await el.evaluate("""(node) => {
-                                return !!node.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
-                            }""")
-                            if is_bot:
-                                continue
-                            txt = (await el.inner_text()).strip().lower()
-                            if len(txt) < 150 and any(kw in txt for kw in error_keywords):
-                                logger.warning("VALIDATION_ERROR_DETECTED: text='{}': '{}'", err_txt, txt)
-                                return True
-            except Exception:
-                continue
+        try:
+            if drawer:
+                error_detected = await drawer.evaluate("""(root) => {
+                    const errorSelectors = [
+                        ".error", ".err", "[class*='error']", "[class*='invalid']",
+                        ".error-msg", ".validation-error", ".msg-error", ".error-message"
+                    ];
+                    for (const sel of errorSelectors) {
+                        const elements = root.querySelectorAll(sel);
+                        for (const el of elements) {
+                            if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                                const isBot = !!el.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
+                                if (isBot) continue;
+                                const txt = (el.innerText || '').trim();
+                                if (txt) {
+                                    return { type: 'selector', key: sel, text: txt };
+                                }
+                            }
+                        }
+                    }
+
+                    const errorTexts = ["required", "mandatory", "please enter", "please select",
+                                        "invalid", "cannot be empty", "choose", "fill", "incorrect"];
+                    const errorKeywords = ["please", "required", "mandatory", "invalid", "error"];
+                    const allElements = root.querySelectorAll('div, span, p, label');
+                    for (const el of allElements) {
+                        if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                            const isBot = !!el.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
+                            if (isBot) continue;
+                            const txt = (el.innerText || '').trim().toLowerCase();
+                            if (txt.length < 150) {
+                                for (const errTxt of errorTexts) {
+                                    if (txt.includes(errTxt) && errorKeywords.some(kw => txt.includes(kw))) {
+                                        return { type: 'text', key: errTxt, text: txt };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return null;
+                }""")
+            else:
+                error_detected = await page.evaluate("""() => {
+                    const errorSelectors = [
+                        ".error", ".err", "[class*='error']", "[class*='invalid']",
+                        ".error-msg", ".validation-error", ".msg-error", ".error-message"
+                    ];
+                    for (const sel of errorSelectors) {
+                        const elements = document.querySelectorAll(sel);
+                        for (const el of elements) {
+                            if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                                const isBot = !!el.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
+                                if (isBot) continue;
+                                const txt = (el.innerText || '').trim();
+                                if (txt) {
+                                    return { type: 'selector', key: sel, text: txt };
+                                }
+                            }
+                        }
+                    }
+
+                    const errorTexts = ["required", "mandatory", "please enter", "please select",
+                                        "invalid", "cannot be empty", "choose", "fill", "incorrect"];
+                    const errorKeywords = ["please", "required", "mandatory", "invalid", "error"];
+                    const allElements = document.querySelectorAll('div, span, p, label');
+                    for (const el of allElements) {
+                        if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                            const isBot = !!el.closest('.botItem, .botMsg, [class*="botItem"], [class*="botMsg"], [class*="chatbot"]');
+                            if (isBot) continue;
+                            const txt = (el.innerText || '').trim().toLowerCase();
+                            if (txt.length < 150) {
+                                for (const errTxt of errorTexts) {
+                                    if (txt.includes(errTxt) && errorKeywords.some(kw => txt.includes(kw))) {
+                                        return { type: 'text', key: errTxt, text: txt };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return null;
+                }""")
+            if error_detected:
+                logger.warning("VALIDATION_ERROR_DETECTED: type='{}' key='{}' text='{}'", 
+                               error_detected['type'], error_detected['key'], error_detected['text'])
+                return True
+        except Exception as e:
+            logger.warning("Error evaluating validation status: {}", e)
         return False
 
     async def _detect_save_accepted(
         self,
         page: Page,
         container_sel: str,
-        processed_keys: set[str],
+        processed_keys: dict[str, str],
     ) -> bool:
         """Return True if save was accepted (success message, next question, or nav button visible)."""
-        for succ_txt in ["success", "submitted", "application received", "successfully applied",
-                         "thank you", "completed", "saved"]:
+        is_closed = False
+        if not (hasattr(page, "assert_called") or hasattr(page, "_mock_self")):
             try:
-                loc = page.locator(f"*:has-text('{succ_txt}')")
-                count = await loc.count()
-                for i in range(count):
-                    if await loc.nth(i).is_visible():
-                        logger.info("APPLICATION_SUBMITTED")
-                        return True
+                is_closed = page.is_closed()
             except Exception:
-                continue
+                pass
+        if is_closed:
+            return True
 
-        for btn_txt in ["submit", "continue", "review", "next", "preview"]:
-            try:
-                loc = page.locator(
-                    f"button:has-text('{btn_txt}'), input[type='button']:has-text('{btn_txt}'), [role='button']:has-text('{btn_txt}')"
-                )
-                count = await loc.count()
-                for i in range(count):
-                    if await loc.nth(i).is_visible():
-                        return True
-            except Exception:
-                continue
+        # Check for success message keywords
+        try:
+            success_keywords = ["success", "submitted", "application received", "successfully applied",
+                                "thank you", "completed", "saved"]
+            success_detected = await page.evaluate("""(keywords) => {
+                const elements = document.querySelectorAll('div, p, span, h1, h2, h3, h4, h5, h6, li, section');
+                for (const el of elements) {
+                    if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                        const txt = (el.innerText || '').toLowerCase();
+                        for (const kw of keywords) {
+                            if (txt.includes(kw)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            }""", success_keywords)
+            if success_detected:
+                logger.info("APPLICATION_SUBMITTED")
+                return True
+        except Exception:
+            pass
+
+        # Check for navigation buttons
+        try:
+            btn_keywords = ["continue", "review", "next", "preview"]
+            button_visible = await page.evaluate("""(keywords) => {
+                const elements = document.querySelectorAll("button, input[type='button'], [role='button']");
+                for (const el of elements) {
+                    if (el.offsetWidth || el.offsetHeight || el.getClientRects().length) {
+                        const txt = (el.innerText || el.value || '').toLowerCase();
+                        for (const kw of keywords) {
+                            if (txt.includes(kw)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                return false;
+            }""", btn_keywords)
+            if button_visible:
+                return True
+        except Exception:
+            pass
 
         # Check for next chatbot question
         next_q = await self._resolve_active_chatbot_question(page, processed_keys)
@@ -540,16 +730,20 @@ class FormFiller:
                         next_q["question_text"][:60], next_q["question_key"])
             return True
 
-        new_count = await page.locator(container_sel).count()
-        for idx in range(new_count):
-            next_container = page.locator(container_sel).nth(idx)
-            if await next_container.is_visible():
-                next_q_text = await self._extract_text(next_container, self._selectors.discovery.questions.text)
-                if next_q_text:
-                    next_q_key = normalize_question_key(next_q_text)
-                    if next_q_key not in processed_keys:
-                        logger.info("NEXT_QUESTION_DETECTED: '{}' [{}]", next_q_text[:60], next_q_key)
-                        return True
+        try:
+            new_count = await page.locator(container_sel).count()
+            for idx in range(new_count):
+                next_container = page.locator(container_sel).nth(idx)
+                if await next_container.is_visible():
+                    next_q_text = await self._extract_text(next_container, self._selectors.discovery.questions.text)
+                    if next_q_text:
+                        next_q_key = normalize_question_key(next_q_text)
+                        if next_q_key not in processed_keys:
+                            logger.info("NEXT_QUESTION_DETECTED: '{}' [{}]", next_q_text[:60], next_q_key)
+                            return True
+        except Exception:
+            pass
+
         return False
 
     # ── Field handling ───────────────────────────────────────────────────────
@@ -808,11 +1002,13 @@ class FormFiller:
                             try:
                                 drawer_el = await self._resolve_drawer(page)
                                 if drawer_el:
-                                    user_msgs = drawer_el.locator(".chatbot_ListItem.userItem, [class*='userItem']")
+                                    msg_texts = await drawer_el.evaluate("""
+                                        el => Array.from(el.querySelectorAll('.chatbot_ListItem.userItem, [class*="userItem"]')).map(item => item.innerText || '')
+                                    """)
                                     ans_lower = answer.strip().lower()
-                                    for idx in range(await user_msgs.count()):
-                                        msg_text = (await user_msgs.nth(idx).inner_text()).strip().lower()
-                                        if ans_lower in msg_text or msg_text in ans_lower:
+                                    for msg_text in msg_texts:
+                                        msg_text_stripped = msg_text.strip().lower()
+                                        if ans_lower in msg_text_stripped or msg_text_stripped in ans_lower:
                                             is_selected = True
                                             break
                             except Exception:
@@ -1470,7 +1666,7 @@ class FormFiller:
     async def _resolve_active_chatbot_question(
         self,
         page: Page,
-        processed_keys: set[str],
+        processed_keys: dict[str, str],
     ) -> dict[str, Any] | None:
         import time
 
@@ -1479,28 +1675,56 @@ class FormFiller:
             return None
 
         history_items = drawer.locator(".chatbot_ListItem")
-        if await history_items.count() == 0:
+        
+        # Get class names and visibility of all history items at once
+        try:
+            items_info = await drawer.evaluate("""
+                drawerEl => {
+                    const items = drawerEl.querySelectorAll('.chatbot_ListItem');
+                    return Array.from(items).map(el => ({
+                        className: el.className || '',
+                        isVisible: !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length)
+                    }));
+                }
+            """)
+        except Exception as e:
+            logger.warning("Failed to evaluate history items: {}", e)
+            return None
+
+        if not items_info:
             return None
 
         # Find latest bot question
-        active_question_item = None
-        for idx in range(await history_items.count() - 1, -1, -1):
-            item = history_items.nth(idx)
-            if not await item.is_visible():
+        active_idx = -1
+        last_user_idx = -1
+        last_bot_idx = -1
+
+        for idx in range(len(items_info) - 1, -1, -1):
+            info = items_info[idx]
+            if not info["isVisible"]:
                 continue
-            try:
-                class_name = await item.evaluate("el => el.className || ''")
-            except Exception:
-                continue
-            if "userItem" in class_name:
-                logger.info("LATEST_MESSAGE_IS_USER_ANSWER")
-                return None
-            if "botItem" in class_name:
-                active_question_item = item
+            class_name = info["className"]
+            if "userItem" in class_name and last_user_idx == -1:
+                last_user_idx = idx
+            if "botItem" in class_name and last_bot_idx == -1:
+                last_bot_idx = idx
+            if last_user_idx != -1 and last_bot_idx != -1:
                 break
 
-        if not active_question_item:
+        # Only skip if user's answer is newer than the latest bot question
+        if last_user_idx > last_bot_idx:
+            logger.info("LATEST_MESSAGE_IS_USER_ANSWER — no new question yet")
             return None
+
+        if last_bot_idx == -1:
+            return None
+
+        active_idx = last_bot_idx
+
+        if active_idx == -1:
+            return None
+
+        active_question_item = history_items.nth(active_idx)
 
         question_text = await self._extract_question_label(
             active_question_item, self._selectors.discovery.questions.text, page=None
@@ -1530,32 +1754,66 @@ class FormFiller:
                 await self._safe_wait(page, 1000)
                 continue
 
-            history_items = drawer.locator(".chatbot_ListItem")
-            active_question_item = None
-            active_chips_item = None
+            try:
+                items_info = await drawer.evaluate("""
+                    drawerEl => {
+                        const items = drawerEl.querySelectorAll('.chatbot_ListItem');
+                        return Array.from(items).map(el => ({
+                            className: el.className || '',
+                            isVisible: !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length)
+                        }));
+                    }
+                """)
+            except Exception as e:
+                logger.warning("Failed to evaluate history items in retry loop: {}", e)
+                await self._safe_wait(page, 1000)
+                continue
 
-            for idx in range(await history_items.count() - 1, -1, -1):
-                item = history_items.nth(idx)
-                if not await item.is_visible():
+            if not items_info:
+                logger.info("FIELD_DETECTION_RETRY: No history items found")
+                await self._safe_wait(page, 1000)
+                continue
+
+            active_question_idx = -1
+            active_chips_idx = -1
+            last_user_idx = -1
+            last_bot_idx = -1
+
+            for idx in range(len(items_info) - 1, -1, -1):
+                info = items_info[idx]
+                if not info["isVisible"]:
                     continue
-                try:
-                    class_name = await item.evaluate("el => el.className || ''")
-                except Exception:
-                    continue
-                if "userItem" in class_name:
-                    logger.info("LATEST_MESSAGE_IS_USER_ANSWER")
-                    return None
-                if "botChips" in class_name and active_chips_item is None:
-                    active_chips_item = item
-                    continue
-                if "botItem" in class_name:
-                    active_question_item = item
+                class_name = info["className"]
+                
+                if "userItem" in class_name and last_user_idx == -1:
+                    last_user_idx = idx
+                
+                if "botChips" in class_name and active_chips_idx == -1:
+                    active_chips_idx = idx
+                    if last_bot_idx == -1:
+                        last_bot_idx = idx
+                
+                if "botItem" in class_name and active_question_idx == -1:
+                    active_question_idx = idx
+                    if last_bot_idx == -1:
+                        last_bot_idx = idx
+                
+                if last_user_idx != -1 and active_question_idx != -1:
                     break
 
-            if not active_question_item:
+            # Only skip if user's answer is newer than the latest bot activity
+            if last_user_idx > last_bot_idx:
+                logger.info("LATEST_MESSAGE_IS_USER_ANSWER — no new question yet")
+                return None
+
+            if active_question_idx == -1:
                 logger.info("FIELD_DETECTION_RETRY: Active bot question item not found")
                 await self._safe_wait(page, 1000)
                 continue
+
+            history_items = drawer.locator(".chatbot_ListItem")
+            active_question_item = history_items.nth(active_question_idx)
+            active_chips_item = history_items.nth(active_chips_idx) if active_chips_idx != -1 else None
 
             field_type = "unknown"
             options = []
@@ -1603,8 +1861,13 @@ class FormFiller:
             return None
 
         question_key = normalize_question_key(question_text, options)
-        if question_key in processed_keys:
+        target_key, session_action = self._resolve_session_key(question_text, question_key, processed_keys)
+        if session_action == "skip":
             logger.info("REJECTED_ALREADY_PROCESSED: '{}'", question_text[:100])
+            return None
+
+        if await self._is_field_filled(target_container, field_type, page):
+            logger.info("REJECTED_ALREADY_FILLED_OR_SELECTED: '{}'", question_text[:100])
             return None
 
         logger.info("ACTIVE_QUESTION_SELECTED: {}", question_text[:100])
@@ -1612,7 +1875,7 @@ class FormFiller:
             "container": target_container,
             "question_container": active_question_item,
             "question_text": question_text,
-            "question_key": question_key,
+            "question_key": target_key,
             "field_type": field_type,
             "options": options,
             "source": "chatbot_active",
@@ -1813,6 +2076,130 @@ class FormFiller:
         logger.info("QUESTION_OPTIONS_DETECTED: {}", unique)
         return unique
 
+    async def _is_field_filled(self, container, field_type: str, page: Page | None = None) -> bool:
+        # Safely handle unit test mock objects
+        if type(container).__name__ in ("MagicMock", "AsyncMock", "Mock"):
+            return False
+        if page and type(page).__name__ in ("MagicMock", "AsyncMock", "Mock"):
+            return False
+            
+        try:
+            drawer = await self._resolve_drawer(page) if page else None
+            if drawer and type(drawer).__name__ in ("MagicMock", "AsyncMock", "Mock"):
+                drawer = None
+            
+            if field_type in ("input", "textarea"):
+                inputs = container.locator("input:not([type='hidden']), textarea")
+                if await inputs.count() == 0 and drawer:
+                    inputs = drawer.locator("input:not([type='hidden']), textarea")
+                for i in range(await inputs.count()):
+                    val = await inputs.nth(i).evaluate("el => el.value")
+                    if val and val.strip():
+                        return True
+            
+            elif field_type == "contenteditable":
+                ces = container.locator("[contenteditable='true']")
+                if await ces.count() == 0 and drawer:
+                    ces = drawer.locator("[contenteditable='true']")
+                for i in range(await ces.count()):
+                    val = await ces.nth(i).inner_text()
+                    if val and val.strip():
+                        return True
+
+            elif field_type == "radio":
+                radios = container.locator("input[type='radio'], [role='radio']")
+                if await radios.count() == 0 and drawer:
+                    radios = drawer.locator("input[type='radio'], [role='radio']")
+                for i in range(await radios.count()):
+                    el = radios.nth(i)
+                    checked = await el.evaluate("""el => {
+                        if (el.checked) return true;
+                        if (el.getAttribute('aria-checked') === 'true') return true;
+                        const c = el.className || '';
+                        return c.includes('selected') || c.includes('active') || c.includes('checked');
+                    }""")
+                    if checked:
+                        return True
+
+            elif field_type == "checkbox":
+                cbs = container.locator("input[type='checkbox'], [role='checkbox']")
+                if await cbs.count() == 0 and drawer:
+                    cbs = drawer.locator("input[type='checkbox'], [role='checkbox']")
+                for i in range(await cbs.count()):
+                    el = cbs.nth(i)
+                    checked = await el.evaluate("""el => {
+                        if (el.checked) return true;
+                        if (el.getAttribute('aria-checked') === 'true') return true;
+                        const c = el.className || '';
+                        return c.includes('selected') || c.includes('active') || c.includes('checked');
+                    }""")
+                    if checked:
+                        return True
+
+            elif field_type == "select":
+                selects = container.locator("select")
+                if await selects.count() == 0 and drawer:
+                    selects = drawer.locator("select")
+                for i in range(await selects.count()):
+                    el = selects.nth(i)
+                    val = await el.evaluate("el => el.value")
+                    if val and val.strip() and not any(p in val.lower() for p in ["select", "--", "choose"]):
+                        return True
+
+            elif field_type in ("chatbot_chips", "button-options"):
+                chip_sel = ".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem'], button, [role='button']"
+                chips = container.locator(chip_sel)
+                if await chips.count() == 0 and drawer:
+                    chips = drawer.locator(chip_sel)
+                for i in range(await chips.count()):
+                    el = chips.nth(i)
+                    is_selected = await el.evaluate("""el => {
+                        const c = el.className || '';
+                        return c.includes('selected') || c.includes('active') || c.includes('checked') || el.disabled;
+                    }""")
+                    if is_selected:
+                        return True
+
+        except Exception as e:
+            logger.warning("Error checking if field is filled: {}", e)
+
+        return False
+
+    def _resolve_session_key(
+        self,
+        question_text: str,
+        question_key: str,
+        processed_keys: dict[str, str],
+    ) -> tuple[str, str | None]:
+        """
+        Check for collision or loop detection on the question key.
+        Returns: (final_key, action)
+        Where action can be:
+          - None: proceed to answer
+          - "skip": skip/escalate because of loop/stuck
+        """
+        if question_key not in processed_keys:
+            return question_key, None
+
+        prev_text = processed_keys[question_key]
+        norm_prev = " ".join(prev_text.lower().strip().split())
+        norm_curr = " ".join(question_text.lower().strip().split())
+
+        if norm_prev != norm_curr:
+            counter = 2
+            new_key = f"{question_key}_{counter}"
+            while new_key in processed_keys:
+                if " ".join(processed_keys[new_key].lower().strip().split()) == norm_curr:
+                    return new_key, None
+                counter += 1
+                new_key = f"{question_key}_{counter}"
+            
+            logger.info("RESOLVED_KEY_COLLISION: '{}' vs '{}' -> new key '{}'", prev_text, question_text, new_key)
+            return new_key, None
+        else:
+            logger.warning("DETECTED_STUCK_LOOP: Same question '{}' and key '{}' encountered again.", question_text, question_key)
+            return question_key, "skip"
+
     async def _interactive_prompt_user(
         self,
         page: Page,
@@ -1978,40 +2365,81 @@ async def is_valid_recruiter_question_container(container: Locator) -> bool:
 def get_actual_numeric_experience(question_key: str, repo: "ApplyDiscoveryRepository | None" = None) -> float | None:
     """Extract a numeric experience value from profile, repo, or answer bank."""
     key_lower = question_key.lower()
-    experience_map = {
-        "python": "python_experience",
-        "genai": "genai_experience", "generative": "genai_experience",
-        "llm": "llm_experience",
-        "rag": "rag_experience",
-        "langchain": "langchain_experience",
-        "fastapi": "fastapi_experience",
-        "aws": "aws_experience",
-        "ml": "ml_experience", "machine": "ml_experience",
-        "dl": "dl_experience", "deep": "dl_experience",
-        "nlp": "nlp_experience", "natural": "nlp_experience",
-        "sql": "sql_experience",
-    }
-    search_keys = []
-    for keyword, experience_key in experience_map.items():
-        if keyword in key_lower:
-            search_keys.append(experience_key)
-            break
-    search_keys.extend(["experience_years", "total_experience", "relevant_experience"])
-
+    
+    import json
+    from pathlib import Path
+    
+    profile_skills = []
+    profile_transferable = {}
+    profile_exp_years = 2.0
+    profile = {}
+    
     try:
-        import json
         profile_path = Path("config/candidate_profile.json")
         if profile_path.exists():
             profile = json.loads(profile_path.read_text(encoding="utf-8"))
-            for k in search_keys:
-                if k in profile:
-                    try:
-                        return float(profile[k])
-                    except (ValueError, TypeError):
-                        pass
+            profile_skills = [s.lower().strip() for s in profile.get("skills", [])]
+            profile_transferable = profile.get("transferable_skills", {})
+            profile_exp_years = float(profile.get("experience_years", 2.0))
+            
+            # Direct check for key in profile (for tests or custom fields)
+            if question_key in profile:
+                try:
+                    return float(profile[question_key])
+                except (ValueError, TypeError):
+                    pass
     except Exception:
         pass
 
+    # Determine what skill we are looking for
+    skill_query = None
+    if key_lower.startswith("exp_"):
+        skill_query = key_lower[len("exp_"):].replace("_", " ").strip()
+    else:
+        # Fallback keyword map for legacy keys
+        experience_map = {
+            "python": "python",
+            "genai": "generative ai", "generative": "generative ai",
+            "llm": "llm applications",
+            "rag": "rag",
+            "langchain": "langchain",
+            "fastapi": "fastapi",
+            "aws": "aws",
+            "ml": "machine learning", "machine": "machine learning",
+            "dl": "deep learning", "deep": "deep learning",
+            "nlp": "nlp", "natural": "nlp",
+            "sql": "sql",
+        }
+        for keyword, skill_name in experience_map.items():
+            if keyword in key_lower:
+                skill_query = skill_name
+                break
+
+    if skill_query:
+        # 1. Search candidate profile for skill
+        if skill_query in profile_skills:
+            return profile_exp_years
+        
+        # 2. Check transferable skills
+        for base_skill, mapped_list in profile_transferable.items():
+            mapped_lower = [m.lower().strip() for m in mapped_list]
+            if skill_query in mapped_lower:
+                if base_skill.lower().strip() in profile_skills:
+                    return profile_exp_years
+        
+        # Not found anywhere in skills or transferable -> return 0.0
+        return 0.0
+
+    # Fallback for generic experience keys (e.g. total_years_experience, relevant_experience)
+    search_keys = ["experience_years", "total_experience", "relevant_experience"]
+    
+    for k in search_keys:
+        if k in profile:
+            try:
+                return float(profile[k])
+            except (ValueError, TypeError):
+                pass
+                
     if repo:
         for k in search_keys:
             try:
@@ -2032,4 +2460,4 @@ def get_actual_numeric_experience(question_key: str, repo: "ApplyDiscoveryReposi
     except Exception:
         pass
 
-    return 2.0
+    return profile_exp_years

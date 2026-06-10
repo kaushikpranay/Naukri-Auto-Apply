@@ -1,4 +1,5 @@
 """
+app/collector/job_collector.py
 Job collector — scrapes Naukri search results and job detail pages.
 
 Iterates all keyword × location combinations, paginates through results,
@@ -210,7 +211,11 @@ class JobCollector:
         )
 
         # Normalize the URL
-        normalized: str = normalize_url(job_url) if job_url else ""
+        if not job_url:
+            logger.warning("Skipping card with no URL: title='{}'", title_text)
+            return None
+
+        normalized: str = normalize_url(job_url)
 
         return JobData(
             job_title=title_text,
@@ -225,6 +230,8 @@ class JobCollector:
             apply_url="",
             recruiter_name="",
             recruiter_email="",
+            search_keyword=keyword.display,
+            search_location=location.display,
         )
 
     async def _extract_text_from_card(
@@ -255,6 +262,11 @@ class JobCollector:
             try:
                 el = await self._page.query_selector(selector)
                 if el:
+                    is_disabled = await el.get_attribute("disabled")
+                    aria_disabled = await el.get_attribute("aria-disabled")
+                    class_name = await el.get_attribute("class") or ""
+                    if is_disabled is not None or aria_disabled == "true" or "disabled" in class_name:
+                        return False
                     return True
             except Exception:
                 continue
@@ -287,7 +299,7 @@ class JobCollector:
             )
 
             try:
-                await self._page.goto(job.job_url, wait_until="domcontentloaded")
+                await self._page.goto(job.job_url, wait_until="domcontentloaded", timeout=30000)
                 await self._page.wait_for_timeout(
                     self._settings.naukri.detail_load_wait
                 )

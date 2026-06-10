@@ -1,5 +1,5 @@
 """
-#app\discovery\service.py
+#app/discovery/service.py
 Apply discovery orchestration.
 
 Purely read-only. No forms filled, no resumes uploaded,
@@ -32,7 +32,7 @@ from app.models.discovery import (
 from app.models.form_fill import FormFillReport
 from app.models.job import JobData
 from app.question_bank.form_filler import FormFiller
-from app.utils.config_loader import resolve_path
+from app.utils.config_loader import resolve_path, PROJECT_ROOT
 
 
 @dataclass
@@ -111,6 +111,7 @@ class ApplyDiscoveryService:
             QuotaExhaustedStop: If 3 consecutive quota_exhausted events are
                                 detected, the loop should stop immediately.
         """
+        self._quota_consecutive = 0
         summary = DiscoverySummary()
 
         if force_job_id is not None:
@@ -138,6 +139,10 @@ class ApplyDiscoveryService:
             logger.info("Job Opened: [{} / {}] {} - {}", index, len(jobs), job.company_name, job.job_title)
             started_at = datetime.now()
             # Clear existing application to avoid duplicate entries and allow fresh discovery
+            existing = self._repo.get_application(job.id)
+            if existing and existing.apply_type == "applied_successfully":
+                logger.warning("Skipping job_id={} — already applied_successfully", job.id)
+                continue
             self._repo.clear_application(job.id)
             try:
                 outcome = await self._discover_job(page, job)
@@ -279,7 +284,7 @@ class ApplyDiscoveryService:
         job_id = int(job.id or 0)
         logger.info("Job URL: {}", job.job_url)
 
-        await page.goto(job.job_url, wait_until="domcontentloaded")
+        await page.goto(job.job_url, wait_until="domcontentloaded", timeout=30000)
         await page.wait_for_timeout(self._settings.naukri.page_load_wait)
 
         hr_name = await self._extract_text(page, self._selectors.job_detail.recruiter_name)
@@ -449,7 +454,7 @@ class ApplyDiscoveryService:
             if latest != redirect_chain[-1]:
                 redirect_chain.append(latest)
             if len(page.context.pages) > before_pages:
-                active_page = page.context.pages[-1]
+                active_page = await self._active_page(page, before_pages)
                 if active_page.url != redirect_chain[-1]:
                     redirect_chain.append(active_page.url)
 
@@ -577,11 +582,15 @@ class ApplyDiscoveryService:
             )
 
         # 2. ELIF saveApply confirmation page detected: applied_successfully
-        page_text = await active_page.locator("body").inner_text()
+        try:
+            page_text = await active_page.locator("main, .job-apply-content, #app, body").first.inner_text()
+        except Exception:
+            page_text = ""
         if (
             "/myapply/saveApply" in url_after
             or "Apply Confirmation" in page_title
-            or "Applied to" in page_text
+            or "successfully applied" in page_text.lower()
+            or "application submitted" in page_text.lower()
         ):
             logger.info("Applied successfully: job_id={} title={}", job_id, job.job_title)
             return _DiscoveryOutcome(
@@ -763,14 +772,10 @@ class ApplyDiscoveryService:
         """Detect apply type by URL patterns (registration, login, etc.)."""
         if not url:
             return None
-        lower = url.lower()
-        if "/registration/" in lower or "/createaccount" in lower:
+        path = urlparse(url).path.lower()
+        if "/registration/" in path or "/createaccount" in path:
             return "register"
-        if "/login/" in lower or "/signin" in lower or "/sign-in" in lower:
-            return "login_required"
-        if "register" in lower:
-            return "register"
-        if "login" in lower:
+        if "/login/" in path or "/signin" in path or "/sign-in" in path:
             return "login_required"
         return None
 
@@ -820,7 +825,10 @@ class ApplyDiscoveryService:
                 encoding="utf-8",
             )
             logger.info("Elements exported: {} ({} candidates)", filename, len(elements))
-            return str(filepath.relative_to(resolve_path(".")))
+            try:
+                return str(filepath.relative_to(PROJECT_ROOT))
+            except ValueError:
+                return str(filepath)
         except Exception as e:
             logger.error("Failed to export elements for job {}: {}", job_id, e)
             return None
@@ -844,11 +852,15 @@ class ApplyDiscoveryService:
         if "login" in lower or "sign" in lower:
             return "login_required"
 
-        page_text = await page.locator("body").inner_text()
+        try:
+            page_text = await page.locator("main, #app, .job-desc, body").first.inner_text()
+        except Exception:
+            page_text = await page.locator("body").inner_text()
+        
         lower_page = page_text.lower()
-        if "register" in lower_page and "apply" in lower_page:
+        if "register to apply" in lower_page or "register and apply" in lower_page:
             return "register"
-        if "login" in lower_page and "apply" in lower_page:
+        if "login to apply" in lower_page or "sign in to apply" in lower_page:
             return "login_required"
 
         return None
@@ -946,7 +958,7 @@ class ApplyDiscoveryService:
         questions: list[DiscoveredQuestion] = []
         from app.question_bank.form_filler import FormFiller, is_valid_recruiter_question_container
 
-        helper = FormFiller(self._settings, self._selectors, self._screenshots_dir, repo=self._repo)
+        helper = self._form_filler
         active_chatbot_question = await helper._resolve_active_chatbot_question(page, set())
         if active_chatbot_question:
             if active_chatbot_question.get("field_type") == "unknown":
@@ -1024,7 +1036,10 @@ class ApplyDiscoveryService:
         try:
             await page.screenshot(path=str(filepath), full_page=True)
             logger.info("Screenshot saved: {} (purpose: {})", filename, name)
-            return str(filepath.relative_to(resolve_path(".")))
+            try:
+                return str(filepath.relative_to(PROJECT_ROOT))
+            except ValueError:
+                return str(filepath)
         except Exception as e:
             logger.error("Failed to capture screenshot {}: {}", name, e)
             return None
@@ -1039,7 +1054,10 @@ class ApplyDiscoveryService:
             html = await page.content()
             filepath.write_text(html, encoding="utf-8")
             logger.info("HTML saved: {} ({:.1f} KB)", filename, len(html) / 1024)
-            return str(filepath.relative_to(resolve_path(".")))
+            try:
+                return str(filepath.relative_to(PROJECT_ROOT))
+            except ValueError:
+                return str(filepath)
         except Exception as e:
             logger.error("Failed to save HTML for job {}: {}", job_id, e)
             return None
@@ -1206,22 +1224,26 @@ class ApplyDiscoveryService:
     async def _active_page(self, page: Page, before_pages: int) -> Page:
         """Return the most likely active page after clicking apply."""
         pages = page.context.pages
-        if len(pages) > before_pages:
-            return pages[-1]
+        new_pages = pages[before_pages:]
+        for p in reversed(new_pages):
+            if not p.is_closed() and "naukri" in p.url.lower():
+                return p
+        if new_pages:
+            return new_pages[-1]
         return page
 
     def _is_external_link(self, url: str, job_url: str) -> bool:
-        if not url:
+        if not url or url.lower().startswith("mailto:"):
             return False
-        if url.lower().startswith("mailto:"):
-            return False
-
         parsed = urlparse(url)
         if not parsed.scheme or not parsed.netloc:
             return False
-
-        job_domain = urlparse(job_url).netloc.lower()
-        return parsed.netloc.lower() != job_domain
+    
+        def root_domain(netloc: str) -> str:
+            parts = netloc.lower().split(".")
+            return ".".join(parts[-2:]) if len(parts) >= 2 else netloc.lower()
+    
+        return root_domain(parsed.netloc) != root_domain(urlparse(job_url).netloc)
 
     def _split_selectors(self, selector_string: str) -> list[str]:
         return [selector.strip() for selector in selector_string.split(",") if selector.strip()]

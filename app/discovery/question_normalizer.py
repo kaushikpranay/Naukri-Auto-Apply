@@ -1,4 +1,5 @@
 """
+discovery/question_normalizer.py
 Question normalization helpers for apply discovery.
 """
 
@@ -12,14 +13,14 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(python).*(experience|year)|(experience|year).*(python)", re.I), "python_experience"),
     (re.compile(r"(llm).*(experience|year)|(experience|year).*(llm)", re.I), "llm_experience"),
     (re.compile(r"(generative.?ai|genai).*(experience|year)|(experience|year).*(generative.?ai|genai)", re.I), "genai_experience"),
-    (re.compile(r"(rag|retrieval.?augmented).*(experience|year)|(experience|year).*(rag|retrieval.?augmented)", re.I), "rag_experience"),
+    (re.compile(r"\b(rag|retrieval.?augmented)\b.*(experience|year)|(experience|year).*\b(rag|retrieval.?augmented)\b", re.I), "rag_experience"),
     (re.compile(r"(langchain|langgraph).*(experience|year)|(experience|year).*(langchain|langgraph)", re.I), "langchain_experience"),
     (re.compile(r"(fastapi).*(experience|year)|(experience|year).*(fastapi)", re.I), "fastapi_experience"),
-    (re.compile(r"(aws|amazon.web.services).*(experience|year)|(experience|year).*(aws|amazon.web.services)", re.I), "aws_experience"),
-    (re.compile(r"(machine.?learning|ml).*(experience|year)|(experience|year).*(machine.?learning|ml)", re.I), "ml_experience"),
-    (re.compile(r"(deep.?learning|dl).*(experience|year)|(experience|year).*(deep.?learning|dl)", re.I), "dl_experience"),
+    (re.compile(r"\b(aws|amazon.web.services)\b.*(experience|year)|(experience|year).*\b(aws|amazon.web.services)\b", re.I), "aws_experience"),
+    (re.compile(r"\b(machine.?learning|ml)\b.*(experience|year)|(experience|year).*\b(machine.?learning|ml)\b", re.I), "ml_experience"),
+    (re.compile(r"\b(deep.?learning|dl)\b.*(experience|year)|(experience|year).*\b(deep.?learning|dl)\b", re.I), "dl_experience"),
     (re.compile(r"(nlp|natural.?language.?processing).*(experience|year)|(experience|year).*(nlp|natural.?language)", re.I), "nlp_experience"),
-    (re.compile(r"(sql|database).*(experience|year)|(experience|year).*(sql|database)", re.I), "sql_experience"),
+    (re.compile(r"\b(sql|database)\b.*(experience|year)|(experience|year).*\b(sql|database)\b", re.I), "sql_experience"),
     (re.compile(r"(docker|kubernetes|k8s).*(experience|year)|(experience|year).*(docker|kubernetes|k8s)", re.I), "devops_experience"),
     (re.compile(r"(flask|django).*(experience|year)|(experience|year).*(flask|django)", re.I), "web_framework_experience"),
     (re.compile(r"(tensorflow|pytorch|keras).*(experience|year)|(experience|year).*(tensorflow|pytorch|keras)", re.I), "ml_framework_experience"),
@@ -48,6 +49,14 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(cover letter|write.*about|describe yourself|brief.*introduction)", re.I), "cover_letter"),
     (re.compile(r"(linkedin|github|portfolio|profile.url)", re.I), "profile_links"),
 ]
+
+
+_STOP_WORDS = frozenset({"are", "you", "is", "the", "a", "an", "do", "does", "have", "your", "to", "in", "of", "for", "on", "with", "how", "many", "what", "please", "specify", "select"})
+
+
+def _stable_slug(text: str) -> str:
+    words = [w for w in re.sub(r"[^a-z0-9]+", " ", text).split() if w not in _STOP_WORDS]
+    return "_".join(words)[:60].rstrip("_") or "unknown_question"
 
 
 def _normalize_option_values(options: list[str] | None) -> list[str]:
@@ -114,6 +123,47 @@ def normalize_question_key(question_text: str, options: list[str] | None = None)
     normalized_text = " ".join(question_text.lower().strip().split())
     normalized_options = _normalize_option_values(options)
 
+    def _slugify(t: str) -> str:
+        cleaned = re.sub(r"[^a-z0-9+#\.]+", "_", t.lower().strip())
+        cleaned = cleaned.replace("+", "p").replace("#", "sharp").replace(".", "dot")
+        cleaned = re.sub(r"_+", "_", cleaned).strip("_")
+        return cleaned
+
+    # Rule 1: Skill/tool experience questions
+    if "experience in" in normalized_text or "experience with" in normalized_text:
+        match = re.search(r"experience (?:in|with)\s+([a-z0-9\s+#\.\-]+)", normalized_text)
+        if match:
+            skill = match.group(1).strip()
+            skill = re.sub(r"[^a-zA-Z0-9+#\.]+$", "", skill)
+            if skill:
+                return f"exp_{_slugify(skill)}"
+
+    # Rule 2: Location/relocation questions
+    if "relocate to" in normalized_text:
+        match = re.search(r"relocate to\s+([a-z0-9\s+#\.\-]+)", normalized_text)
+        if match:
+            city = match.group(1).strip()
+            city = re.sub(r"[^a-zA-Z0-9]+$", "", city)
+            if city:
+                return f"willing_to_relocate_{_slugify(city)}"
+
+    # Rule 3: Yes/no preference questions
+    if "open for" in normalized_text:
+        match = re.search(r"open for\s+([a-z0-9\s+#\.\-]+)", normalized_text)
+        if match:
+            condition = match.group(1).strip()
+            condition = re.sub(r"[^a-zA-Z0-9]+$", "", condition)
+            if condition:
+                return f"open_for_{_slugify(condition)}"
+
+    # Rule 4: Generic total experience
+    if any(p in normalized_text for p in [
+        "total years of experience", "total experience",
+        "overall experience", "total work experience",
+        "relevant experience", "years of relevant"
+    ]):
+        return "total_years_experience"
+
     relocation_key = _resolve_relocation_question_key(
         normalized_text,
         normalized_options,
@@ -123,8 +173,8 @@ def normalize_question_key(question_text: str, options: list[str] | None = None)
 
     for pattern, key in _QUESTION_PATTERNS:
         if pattern.search(normalized_text):
+            if key == "total_experience":
+                return "total_years_experience"
             return key
 
-    slug = re.sub(r"[^a-z0-9]+", "_", normalized_text).strip("_")
-    slug = slug[:60].rstrip("_")
-    return slug or "unknown_question"
+    return _stable_slug(normalized_text)

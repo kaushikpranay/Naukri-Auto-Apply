@@ -149,6 +149,7 @@ class TestExcelExporter:
         exporter = EvaluatedJobsExporter(populated_db, export_dir)
         result = exporter.export()
 
+        assert result is not None
         assert result.exists()
         assert result.name == "evaluated_jobs.xlsx"
 
@@ -164,11 +165,14 @@ class TestExcelExporter:
             "Reason",
             "Provider Used",
         ]
+        assert len(workbook) == 2
         assert workbook.iloc[0]["Company"] == "TestCorp"
         assert workbook.iloc[0]["Provider Used"] == "Groq"
+        assert workbook.iloc[1]["Company"] == "AI Corp"
+        assert workbook.iloc[1]["Action"] == "pending"
 
-    def test_export_empty_db_still_creates_file(self, tmp_path: Path) -> None:
-        """Export with empty database should still create the workbook."""
+    def test_export_empty_db_returns_none(self, tmp_path: Path) -> None:
+        """Export with empty database should return None."""
         db_path = tmp_path / "empty.db"
         conn = sqlite3.connect(str(db_path))
         conn.execute(
@@ -219,5 +223,4 @@ class TestExcelExporter:
         export_dir = tmp_path / "exports"
         exporter = EvaluatedJobsExporter(db_path, export_dir)
         result = exporter.export()
-        assert result.name == "evaluated_jobs.xlsx"
-        assert result.exists()
+        assert result is None

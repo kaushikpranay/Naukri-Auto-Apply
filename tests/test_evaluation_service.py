@@ -42,6 +42,7 @@ def _create_repo_with_jobs(db_path: Path) -> EvaluationsRepository:
         JobData(
             job_title="AI Engineer",
             company_name="TestCorp",
+            job_description="Standard Job description",
             job_url="https://naukri.com/job/1",
             normalized_url="https://naukri.com/job/1",
         )
@@ -50,6 +51,7 @@ def _create_repo_with_jobs(db_path: Path) -> EvaluationsRepository:
         JobData(
             job_title="AI Engineer",
             company_name="TestCorp",
+            job_description="Standard Job description",
             job_url="https://naukri.com/job/2",
             normalized_url="https://naukri.com/job/2",
         )
@@ -58,6 +60,7 @@ def _create_repo_with_jobs(db_path: Path) -> EvaluationsRepository:
         JobData(
             job_title="ML Engineer",
             company_name="OtherCorp",
+            job_description="Standard Job description",
             job_url="https://naukri.com/job/3",
             normalized_url="https://naukri.com/job/3",
         )
@@ -120,6 +123,7 @@ class TestEvaluationService:
             JobData(
                 job_title="Exact Fit Developer",
                 company_name="ExactCorp",
+                job_description="Standard Job description",
                 job_url="https://naukri.com/job/exact",
                 normalized_url="https://naukri.com/job/exact",
                 experience_required="2-5 Yrs",
@@ -130,6 +134,7 @@ class TestEvaluationService:
             JobData(
                 job_title="Near Match Developer",
                 company_name="NearCorp",
+                job_description="Standard Job description",
                 job_url="https://naukri.com/job/near",
                 normalized_url="https://naukri.com/job/near",
                 experience_required="3-8 Yrs",
@@ -140,6 +145,7 @@ class TestEvaluationService:
             JobData(
                 job_title="Mismatch Developer",
                 company_name="FarCorp",
+                job_description="Standard Job description",
                 job_url="https://naukri.com/job/far",
                 normalized_url="https://naukri.com/job/far",
                 experience_required="5-10 Yrs",

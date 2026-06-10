@@ -1,26 +1,26 @@
 {
   "overview_stats": {
-    "total_jobs": 2351,
-    "jobs_today": 89,
+    "total_jobs": 2353,
+    "jobs_today": 0,
     "apply": 289,
     "review": 1057,
-    "skip": 1005,
+    "skip": 1007,
     "pending_eval": 0,
-    "pending_apply": 30,
-    "easy_apply": 31,
-    "external_portal": 134,
-    "already_applied": 13,
-    "applied_successfully": 39,
+    "pending_apply": 1,
+    "easy_apply": 48,
+    "external_portal": 148,
+    "already_applied": 17,
+    "applied_successfully": 52,
     "failed": 0,
-    "unknown_flow": 49,
+    "unknown_flow": 30,
     "quota_exhausted": 0,
     "register": 0,
     "login_required": 0,
     "email": 0,
-    "total_questions": 58,
-    "answered_questions": 52,
-    "coverage_pct": 89.7,
-    "last_run": "2026-06-07T21:21:05.628982",
+    "total_questions": 73,
+    "answered_questions": 67,
+    "coverage_pct": 91.8,
+    "last_run": "2026-06-08T19:32:13.432410",
     "retry_queue": {
       "count": 0,
       "reasons": {
@@ -50,7 +50,7 @@
       "priority": "high",
       "reason": "Exceptional alignment with job requirements, demonstrating production-grade RAG, LangGraph, Agentic AI, FastAPI, and AWS experience. Strong transferable skills cover most other areas.",
       "confidence": 92.0,
-      "apply_status": "unknown"
+      "apply_status": "already_applied"
     },
     {
       "id": 1893,
@@ -154,7 +154,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 1443,
@@ -167,7 +167,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployments, and prompt engineering.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 1464,
@@ -193,7 +193,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1532,
@@ -206,7 +206,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; missing LlamaIndex, Hugging Face, Azure OpenAI.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1534,
@@ -219,7 +219,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployments, and prompt engineering align with role.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1575,
@@ -232,7 +232,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS; missing Azure OpenAI and LlamaIndex.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1624,
@@ -284,7 +284,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployments, and prompt engineering.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1738,
@@ -323,7 +323,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1819,
@@ -362,7 +362,7 @@
       "priority": "high",
       "reason": "Exceptional alignment with Gen AI Engineer role, strong production RAG, LangGraph, Agentic AI, and AWS experience. Transferable skills cover all major requirements.",
       "confidence": 95.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1867,
@@ -375,7 +375,7 @@
       "priority": "high",
       "reason": "Exceptional production experience in RAG, Agentic AI, LangGraph, and LLM applications on AWS, directly aligning with job requirements despite fewer years of experience.",
       "confidence": 92.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1870,
@@ -440,7 +440,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 8193,
@@ -921,7 +921,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 1004,
@@ -1025,7 +1025,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 1312,
@@ -1116,7 +1116,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 1437,
@@ -1129,7 +1129,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience, Bedrock expertise, FastAPI backend, AWS deployment, and prompt engineering align with role.",
       "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1438,
@@ -1142,7 +1142,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "already_applied"
     },
     {
       "id": 1444,
@@ -1181,7 +1181,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 1454,
@@ -2104,7 +2104,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience with FastAPI and AWS deployments.",
       "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 6696,
@@ -2156,7 +2156,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience, transferable AWS skills.",
       "confidence": 85.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 6818,
@@ -2260,7 +2260,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "already_applied"
     },
     {
       "id": 7949,
@@ -2273,7 +2273,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 7952,
@@ -2286,7 +2286,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS, and LLM applications align with Gen AI role.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 7970,
@@ -2299,7 +2299,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployment, and Bedrock skill mapping to Azure OpenAI demonstrate relevant capability.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 7991,
@@ -2312,7 +2312,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience aligns with GenAI role; transferable cloud skills compensate for lower years.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8008,
@@ -2325,7 +2325,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 8043,
@@ -2338,7 +2338,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "unknown"
     },
     {
       "id": 8146,
@@ -2351,7 +2351,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8171,
@@ -2364,7 +2364,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 8304,
@@ -2377,7 +2377,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core LLM and ML requirements.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8315,
@@ -2390,7 +2390,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployments, and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8316,
@@ -2403,7 +2403,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 8360,
@@ -2416,7 +2416,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployments, semantic search, and LLM applications align with role requirements.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "already_applied"
     },
     {
       "id": 8381,
@@ -2429,7 +2429,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "unknown"
     },
     {
       "id": 8402,
@@ -2442,7 +2442,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8403,
@@ -2455,7 +2455,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 8406,
@@ -2468,7 +2468,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8409,
@@ -2481,7 +2481,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 82.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 224,
@@ -2975,7 +2975,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "pending"
+      "apply_status": "unknown"
     },
     {
       "id": 7823,
@@ -2988,7 +2988,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LLM experience, transferable cloud skills, but limited years.",
       "confidence": 85.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 7840,
@@ -3001,7 +3001,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core AI/ML and backend requirements.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 8194,
@@ -3014,7 +3014,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 8200,
@@ -3027,7 +3027,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience with transferable cloud skills.",
       "confidence": 85.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8203,
@@ -3040,7 +3040,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience, FastAPI backend, AWS deployments, and transferable cloud skills.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 241,
@@ -3456,7 +3456,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience, FastAPI backend, AWS deployments, but lacks container orchestration and observability tools.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 7937,
@@ -3469,7 +3469,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LLM experience, transferable AWS skills, but lacks Azure and Docker.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 8190,
@@ -3482,7 +3482,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 8313,
@@ -3495,7 +3495,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LLM experience with transferable AWS/GCP skills.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 306,
@@ -3508,7 +3508,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 75.0,
-      "apply_status": "unknown"
+      "apply_status": "pending"
     },
     {
       "id": 580,
@@ -3690,7 +3690,7 @@
       "priority": "high",
       "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; lacks Azure OpenAI, PyTorch, Huggingface.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 7944,
@@ -3703,7 +3703,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS, and Bedrock mapping to Azure OpenAI.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 648,
@@ -3768,7 +3768,7 @@
       "priority": "high",
       "reason": "Strong production RAG and AI experience but lacks core Java, 3GPP, and containerization skills.",
       "confidence": 70.0,
-      "apply_status": "unknown"
+      "apply_status": "easy_apply"
     },
     {
       "id": 1,
@@ -4509,6 +4509,86 @@
       "job_url": "https://www.naukri.com/job-listings-erds-mj-gen-ai-engineer-capco-technologies-pvt-ltd-bengaluru-3-to-8-years-190526501227"
     },
     {
+      "id": 7970,
+      "job_title": "Generative AI/LLM Engineer | Careers | Soothsayer Analytics",
+      "company_name": "Soothsayer Analytics",
+      "location": "Hyderabad",
+      "interview_probability": 85.0,
+      "apply_url": "https://soothsayeranalytics.com/careers/generative-aillm-engineer",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-generative-ai-llm-engineer-careers-soothsayer-analytics-soothsayer-analytics-hyderabad-1-to-6-years-100925500443"
+    },
+    {
+      "id": 7991,
+      "job_title": "Gen AI Engineer",
+      "company_name": "Blitzenx",
+      "location": "Hyderabad",
+      "interview_probability": 85.0,
+      "apply_url": "https://www2.jobdiva.com/portal/?a=jijdnw3s97hzs8d7xx7xtpcwqr2i1m09c2kpk5hyw5arxlos37p2zmuvvecm6qfj&jobid=32403269&source=null#%2Fjobs%2F32403269",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-engineer-blitzenx-rapid-consulting-services-hyderabad-4-to-8-years-050626501632"
+    },
+    {
+      "id": 8146,
+      "job_title": "AI Engineer",
+      "company_name": "Marsh Risk",
+      "location": "Gurugram",
+      "interview_probability": 85.0,
+      "apply_url": "https://careers.marsh.com/global/en/job/R_332280",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-marsh-risk-gurugram-3-to-6-years-250326500009"
+    },
+    {
+      "id": 8304,
+      "job_title": "Senior NLP Engineer(INDIA ONLY)",
+      "company_name": "Futurepath Ai",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Mumbai, Hyderabad, Chennai",
+      "interview_probability": 85.0,
+      "apply_url": "https://app.dover.com/apply/futurepath-ai/d175b40c-e291-4b9b-9334-7ef1d93d23d8?rs=42706078&urlhash",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-nlp-engineer-india-only-futurepath-ai-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-050225501411"
+    },
+    {
+      "id": 8315,
+      "job_title": "AI Engineer EverestLabs.AI",
+      "company_name": "Vigoursoft Global Solutions",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://vigoursoft.keka.com/careers/jobdetails/74422",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-everestlabs-ai-vigoursoft-global-solutions-bengaluru-2-to-5-years-050626503305"
+    },
+    {
+      "id": 8402,
+      "job_title": "AI workflow Engineer",
+      "company_name": "Aisera",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://job-boards.greenhouse.io/aiserajobs/jobs/5260300004",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-workflow-engineer-aisera-bengaluru-2-to-5-years-151024500449"
+    },
+    {
+      "id": 8406,
+      "job_title": "Artificial Intelligence (AI) Software Engineer",
+      "company_name": "FuGenX",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.fugenx.com/careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-ai-software-engineer-fugenx-technologies-private-limited-bengaluru-2-to-4-years-151117500659"
+    },
+    {
+      "id": 8409,
+      "job_title": "Artificial Intelligence (AI) Software Engineer",
+      "company_name": "FuGenX",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.fugenx.com/careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-ai-software-engineer-fugenx-technologies-private-limited-bengaluru-2-to-4-years-260219503087"
+    },
+    {
       "id": 224,
       "job_title": "GenAI Engineer",
       "company_name": "Qloron Technology",
@@ -4707,6 +4787,26 @@
       "apply_url": "https://careers.clinisys.com/jobs/7817592-ai-engineer",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-sunquest-information-systems-bengaluru-3-to-8-years-020626502253"
+    },
+    {
+      "id": 7823,
+      "job_title": "Lead AI Engineer",
+      "company_name": "Aptus Data Labs",
+      "location": "Bengaluru, Hubli, Mangaluru, Mysuru, Belgaum",
+      "interview_probability": 80.0,
+      "apply_url": "https://aptusdatalabs.zohorecruit.com/jobs/Careers/422437000022942085",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-aptus-data-labs-hubli-mangaluru-mysuru-bengaluru-belgaum-4-to-7-years-150725504571"
+    },
+    {
+      "id": 8200,
+      "job_title": "Python AI/ML/Gen AI engineer -TPM",
+      "company_name": "Velodata Global",
+      "location": "Gurugram",
+      "interview_probability": 80.0,
+      "apply_url": "https://velodata.in/careers/?job_id=z5G7h3l6a1kMvyS65NP3c46Fsr0vuJ59N_LaLdZ1NU0=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-python-ai-ml-gen-ai-engineer-tpm-velodata-global-pvt-ltd-gurugram-3-to-7-years-010526501645"
     },
     {
       "id": 605,
@@ -4929,6 +5029,36 @@
       "job_url": "https://www.naukri.com/job-listings-lead-engineer-ai-academian-pune-4-to-8-years-050126501071"
     },
     {
+      "id": 7838,
+      "job_title": "Backend Engineer - Samvaad - Sarvam AI",
+      "company_name": "Sarvam",
+      "location": "Bengaluru",
+      "interview_probability": 75.0,
+      "apply_url": "https://careers.kula.ai/sarvam-ai/24275",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-samvaad-sarvam-ai-sarvam-bengaluru-3-to-6-years-150126504360"
+    },
+    {
+      "id": 8190,
+      "job_title": "Cloud Platform & AI Engineer",
+      "company_name": "Blue Planet Solutions",
+      "location": "Gurugram",
+      "interview_probability": 75.0,
+      "apply_url": "https://ciena.wd5.myworkdayjobs.com/en-US/Careers/job/Remote--India--Gurugram/Cloud-Platform---AI-Engineer_R030459",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-cloud-platform-ai-engineer-blue-planet-solutions-inc-gurugram-4-to-6-years-070426501836"
+    },
+    {
+      "id": 8313,
+      "job_title": "Senior MLE - MLOps, Python, GCP, VertexAI, GKE",
+      "company_name": "UPS Supply Chain Solutions (UPS SCS)",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Mumbai, Hyderabad, Chennai",
+      "interview_probability": 75.0,
+      "apply_url": "https://hcmportal.wd5.myworkdayjobs.com/en-US/Search/job/IN---TDC-1-IN110/Senior-MLE---MLOps--Python--GCP--VertexAI--GKE_R25007754",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-mle-mlops-python-gcp-vertexai-gke-ups-pvt-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-4-to-7-years-260425501537"
+    },
+    {
       "id": 580,
       "job_title": "GenAI Engineer",
       "company_name": "Qloron Technology",
@@ -5047,6 +5177,16 @@
       "apply_url": "https://hitachidigital.com/careers/job-details/?jid=7916914002&gh_jid=7916914002&gh_src=e88a2f692us",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-hitachi-digital-services-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-4-to-7-years-280425504830"
+    },
+    {
+      "id": 7781,
+      "job_title": "Distinguished AI Engineer",
+      "company_name": "Capital One",
+      "location": "Bengaluru",
+      "interview_probability": 70.0,
+      "apply_url": "https://www.capitalonecareers.com/job/bengaluru/distinguished-ai-engineer/1732/95247961152",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-distinguished-ai-engineer-capital-one-bengaluru-4-to-9-years-050626503554"
     },
     {
       "id": 648,
@@ -18887,11 +19027,11 @@
     {
       "id": 4,
       "question_key": "total_experience",
-      "question_text": "What is your total years of experience and relevant experience ?",
+      "question_text": "How many years of experience do you have in JAVA/GO?",
       "answer": "2",
-      "usage_count": 23,
+      "usage_count": 25,
       "field_type": "contenteditable",
-      "last_used_at": "2026-06-07T03:42:59.106373"
+      "last_used_at": "2026-06-08T02:27:56.960304"
     },
     {
       "id": 1687,
@@ -18903,6 +19043,15 @@
       "last_used_at": "2026-06-06T05:18:55.610991"
     },
     {
+      "id": 25,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you ready to relocate to Gurugram, Haryana?",
+      "answer": "Yes",
+      "usage_count": 12,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T03:11:15.456462"
+    },
+    {
       "id": 3827,
       "question_key": "are_you_comfortable_with_6_months_extendable_contractual_rol",
       "question_text": "Are you comfortable with 6 months extendable contractual role?",
@@ -18910,15 +19059,6 @@
       "usage_count": 10,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-07T01:11:35.589200"
-    },
-    {
-      "id": 25,
-      "question_key": "willing_to_relocate",
-      "question_text": "Are you currently living in or ready to relocate to Gurugram ?",
-      "answer": "Yes",
-      "usage_count": 8,
-      "field_type": "radio",
-      "last_used_at": "2026-06-07T02:31:37.670932"
     },
     {
       "id": 2978,
@@ -18975,6 +19115,15 @@
       "last_used_at": "2026-06-07T04:55:35.663859"
     },
     {
+      "id": 7,
+      "question_key": "llm_experience",
+      "question_text": "How many years of hands-on experience do you have working with Generative AI and Large Language Models (LLMs)?",
+      "answer": "2",
+      "usage_count": 4,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T19:34:41.901617"
+    },
+    {
       "id": 3144,
       "question_key": "hi_kaushik_companies_value_diversity_and_want_to_build_inclu",
       "question_text": "Hi Kaushik, companies value diversity and want to build inclusive teams. Share your career status to proceed with this job application. Are you on a career break?",
@@ -19011,15 +19160,6 @@
       "last_used_at": "2026-06-07T17:52:04.686441"
     },
     {
-      "id": 7,
-      "question_key": "llm_experience",
-      "question_text": "How many years of experience do you have in LLM?",
-      "answer": "2",
-      "usage_count": 3,
-      "field_type": "div",
-      "last_used_at": "2026-06-04T05:27:46.219740"
-    },
-    {
       "id": 3362,
       "question_key": "hyderabad_telangana",
       "question_text": "Hyderabad, Telangana",
@@ -19036,6 +19176,78 @@
       "usage_count": 3,
       "field_type": "radio",
       "last_used_at": "2026-06-07T05:02:22.965488"
+    },
+    {
+      "id": 5800,
+      "question_key": "are_you_available_for_a_face_to_face_interview_on_23rd_may",
+      "question_text": "Are you available for a face to face interview on 23rd May ?",
+      "answer": "No",
+      "usage_count": 3,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T01:32:46.324090"
+    },
+    {
+      "id": 5803,
+      "question_key": "salutation",
+      "question_text": "Salutation",
+      "answer": "Mr.",
+      "usage_count": 3,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T01:35:18.548628"
+    },
+    {
+      "id": 5953,
+      "question_key": "the_role_will_be_based_out_of_the_klypup_office_onsite_in_no",
+      "question_text": "The role will be based out of the Klypup office, onsite in Noida. Does that work for you?",
+      "answer": "Yes",
+      "usage_count": 3,
+      "field_type": "checkbox",
+      "last_used_at": "2026-06-08T03:09:08.570569"
+    },
+    {
+      "id": 6004,
+      "question_key": "are_you_an_iit_iiit_nit_graduate",
+      "question_text": "Are you an IIT/IIIT/NIT graduate?",
+      "answer": "No",
+      "usage_count": 3,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T03:45:43.880616"
+    },
+    {
+      "id": 6007,
+      "question_key": "are_you_available_for_virtual_interview_on_23_may_2026_satur",
+      "question_text": "Are You Available for Virtual Interview on 23 MAY 2026 (Saturday)?",
+      "answer": "NO",
+      "usage_count": 3,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T03:46:20.901574"
+    },
+    {
+      "id": 6180,
+      "question_key": "which_programming_languages_actively_use_give_example_recent",
+      "question_text": "Which programming languages do you actively use? Give an example of a recent project where you used Python or JavaScript.",
+      "answer": "Adaptive-Rag-System",
+      "usage_count": 3,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T19:37:26.935770"
+    },
+    {
+      "id": 6,
+      "question_key": "python_experience",
+      "question_text": "Do you have 1+ years of hands-on experience developing applications using Python?",
+      "answer": "2",
+      "usage_count": 2,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T03:47:35.441855"
+    },
+    {
+      "id": 23,
+      "question_key": "notice_period",
+      "question_text": "What is your Notice Period? If Serving, Mention Last Working Day.",
+      "answer": "45 days",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T03:44:45.173086"
     },
     {
       "id": 3782,
@@ -19065,6 +19277,87 @@
       "last_used_at": "2026-06-07T05:06:11.159917"
     },
     {
+      "id": 5805,
+      "question_key": "date_of_birth",
+      "question_text": "Date of Birth",
+      "answer": "22-Jan-2002",
+      "usage_count": 2,
+      "field_type": "input",
+      "last_used_at": "2026-06-08T01:35:01.315972"
+    },
+    {
+      "id": 5808,
+      "question_key": "thank_you_for_your_responses",
+      "question_text": "Thank you for your responses.",
+      "answer": "okay",
+      "usage_count": 2,
+      "field_type": "input",
+      "last_used_at": "2026-06-08T01:36:44.795253"
+    },
+    {
+      "id": 5897,
+      "question_key": "what_is_your_official_tice_period_if_you_are_serving_please",
+      "question_text": "What is your official tice period? If you are serving, please mention your last working day.",
+      "answer": "Yes",
+      "usage_count": 2,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T02:25:12.313589"
+    },
+    {
+      "id": 5899,
+      "question_key": "are_you_open_to_a_noida_or_gurgaon_location_with_a_hybrid_wf",
+      "question_text": "Are you open to a Noida or Gurgaon location with a hybrid WFO setup?",
+      "answer": "Yes",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T02:25:29.113411"
+    },
+    {
+      "id": 5901,
+      "question_key": "which_databases_have_you_worked_with",
+      "question_text": "Which databases have you worked with?",
+      "answer": "PostgreSQL, Qdrant",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T02:26:54.326291"
+    },
+    {
+      "id": 5903,
+      "question_key": "are_you_open_to_a_software_developer_position",
+      "question_text": "Are you open to a Software Developer position?",
+      "answer": "Yes",
+      "usage_count": 2,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T02:27:11.377253"
+    },
+    {
+      "id": 5907,
+      "question_key": "3_years",
+      "question_text": "<3 years",
+      "answer": "0.5",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T02:31:48.462189"
+    },
+    {
+      "id": 5909,
+      "question_key": "are_you_open_for_noida_or_mohali_location",
+      "question_text": "Are you open for Noida or Mohali location?",
+      "answer": "Yes",
+      "usage_count": 2,
+      "field_type": "radio",
+      "last_used_at": "2026-06-08T02:32:42.409330"
+    },
+    {
+      "id": 6001,
+      "question_key": "total_years_experience",
+      "question_text": "How many years of Experience do you have in Agentic AI?",
+      "answer": "2",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-08T03:44:06.421769"
+    },
+    {
       "id": 1,
       "question_key": "first_name",
       "question_text": "First Name*",
@@ -19092,13 +19385,13 @@
       "last_used_at": null
     },
     {
-      "id": 23,
-      "question_key": "notice_period",
-      "question_text": "Last Working Day if serving Notice Period",
-      "answer": "45 days",
+      "id": 12,
+      "question_key": "aws_experience",
+      "question_text": "How many years of experience do you have in Aws Bedrock?",
+      "answer": "2",
       "usage_count": 1,
       "field_type": "contenteditable",
-      "last_used_at": "2026-06-07T05:08:09.317701"
+      "last_used_at": "2026-06-08T02:30:29.188469"
     },
     {
       "id": 2390,
@@ -19137,15 +19430,6 @@
       "last_used_at": null
     },
     {
-      "id": 6,
-      "question_key": "python_experience",
-      "question_text": "python_experience",
-      "answer": "2",
-      "usage_count": 0,
-      "field_type": null,
-      "last_used_at": null
-    },
-    {
       "id": 10,
       "question_key": "langchain_experience",
       "question_text": "langchain_experience",
@@ -19158,15 +19442,6 @@
       "id": 11,
       "question_key": "fastapi_experience",
       "question_text": "fastapi_experience",
-      "answer": "2",
-      "usage_count": 0,
-      "field_type": null,
-      "last_used_at": null
-    },
-    {
-      "id": 12,
-      "question_key": "aws_experience",
-      "question_text": "aws_experience",
       "answer": "2",
       "usage_count": 0,
       "field_type": null,
@@ -19409,18 +19684,22 @@
   ],
   "system_status": {
     "collector": {
-      "total_jobs": 2351,
-      "pending": 0,
-      "evaluated": 2224,
+      "total_jobs": 2353,
+      "pending": 1,
+      "evaluated": 2169,
       "queued": 0,
       "failed": 0,
-      "keywords": [],
-      "locations": []
+      "keywords": [
+        "GenAI Engineer"
+      ],
+      "locations": [
+        "Noida"
+      ]
     },
     "evaluator": {
       "total_evaluations": 1346,
-      "total_runs": 12,
-      "last_evaluation": "2026-06-07T21:21:05.628982",
+      "total_runs": 13,
+      "last_evaluation": "2026-06-08T19:32:13.432410",
       "models_used": [
         "Groq",
         "ExperienceFilter",
@@ -19430,9 +19709,9 @@
       "pending_eval": 0
     },
     "discovery": {
-      "total_processed": 266,
-      "pending_apply": 30,
-      "last_discovery": "2026-06-07T21:26:10.231247",
+      "total_processed": 295,
+      "pending_apply": 1,
+      "last_discovery": "2026-06-08T19:37:26.931519",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
@@ -19451,11 +19730,17 @@
       }
     },
     "question_bank": {
-      "total": 58,
-      "answered": 52,
-      "coverage_pct": 89.7
+      "total": 73,
+      "answered": 67,
+      "coverage_pct": 91.8
     },
     "recent_runs": [
+      {
+        "run_id": "9b8dde6b",
+        "cnt": 2,
+        "started": "2026-06-08T19:32:13.408338",
+        "ended": "2026-06-08T19:32:13.432410"
+      },
       {
         "run_id": "ffdb1976",
         "cnt": 114,
@@ -19479,14 +19764,8 @@
         "cnt": 25,
         "started": "2026-06-04T02:30:51.144582",
         "ended": "2026-06-04T02:34:18.306295"
-      },
-      {
-        "run_id": "43bce2df",
-        "cnt": 25,
-        "started": "2026-06-04T02:24:13.643634",
-        "ended": "2026-06-04T02:26:59.716100"
       }
     ]
   },
-  "generated_at": "2026-06-07T21:29:00.819014"
+  "generated_at": "2026-06-10T04:24:23.899781"
 }

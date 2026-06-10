@@ -160,7 +160,7 @@ def test_question_normalization_distinguishes_relocation_yes_no_selector() -> No
     question = "Are you currently residing in Gurugram or willing to relocate to Gurugram?"
     options = ["Yes", "No"]
 
-    assert normalize_question_key(question, options) == "willing_to_relocate"
+    assert normalize_question_key(question, options) == "willing_to_relocate_gurugram"
 
 
 def test_apply_discovery_repository_selects_only_apply_jobs(tmp_path: Path) -> None:

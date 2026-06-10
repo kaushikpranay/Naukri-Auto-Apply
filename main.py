@@ -153,9 +153,13 @@ async def run() -> None:
 
     try:
         exporter: ExcelExporter = ExcelExporter(db_path, export_dir)
-        export_path: Path = exporter.export()
-        summary.export_status = "Success"
-        summary.export_path = str(export_path)
+        export_path: Path | None = exporter.export()
+        if export_path is not None:
+            summary.export_status = "Success"
+            summary.export_path = str(export_path)
+        else:
+            summary.export_status = "Skipped"
+            summary.export_path = "No jobs to export"
     except Exception as e:
         logger.error("Excel export failed: {}", str(e))
         summary.export_status = f"Failed: {str(e)}"

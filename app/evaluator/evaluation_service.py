@@ -1,3 +1,5 @@
+#app\evaluator\evaluation_service.py
+
 import json
 import re
 from pathlib import Path
@@ -87,6 +89,15 @@ class EvaluationService:
         for index, job in enumerate(jobs, start=1):
             logger.info("Evaluating [{}/{}]: {}", index, len(jobs), job.job_title[:80])
 
+            if job.id is None:
+                logger.error("Skipping job with no DB id: {}", job.job_title)
+                stats.errors += 1
+                continue
+
+            if not job.job_description or not job.job_description.strip():
+                logger.info("Skipping job {} for now: job description is empty (not yet enriched)", job.id)
+                continue
+
             # Apply eligibility logic
             min_exp = parse_min_experience(job.experience_required)
             if min_exp is not None:
@@ -134,6 +145,9 @@ class EvaluationService:
             started_at = perf_counter()
             evaluation, provider_used = self._evaluate_with_fallback(job)
             duration = perf_counter() - started_at
+
+            if provider_used == "Requires Review":
+                stats.errors += 1
 
             self._store_result(job.id, run_id, evaluation, provider_used)
             self._repo.mark_job_evaluated(int(job.id))

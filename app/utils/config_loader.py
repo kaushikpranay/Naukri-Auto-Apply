@@ -1,4 +1,5 @@
 """
+app/utils/config_loader.py
 Configuration loader.
 
 Reads YAML config files and returns validated Pydantic models.
@@ -56,11 +57,7 @@ def load_selectors() -> SelectorsConfig:
 
 def load_auth_selectors() -> AuthSelectors:
     """Load and validate auth_selectors.yaml."""
-    path = CONFIG_DIR / "auth_selectors.yaml"
-    if not path.exists():
-        logger.warning("auth_selectors.yaml not found, using empty defaults")
-        return AuthSelectors()
-    data: dict[str, Any] = _load_yaml(path)
+    data: dict[str, Any] = _load_yaml(CONFIG_DIR / "auth_selectors.yaml")
     return AuthSelectors(**data)
 
 

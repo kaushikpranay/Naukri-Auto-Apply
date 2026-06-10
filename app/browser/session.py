@@ -1,4 +1,5 @@
 """
+app/browser/session.py
 Browser session manager with persistent Playwright context.
 
 Manages a Chromium browser session that reuses cookies/storage
@@ -52,6 +53,7 @@ class BrowserSession:
         settings: AppSettings,
         selectors: SelectorsConfig,
     ) -> None:
+        self._auth_cfg = load_auth_selectors()
         self._settings: AppSettings = settings
         self._selectors: SelectorsConfig = selectors
         self._playwright: Optional[Playwright] = None
@@ -147,15 +149,15 @@ class BrowserSession:
         await page.goto(
             self._settings.naukri.base_url,
             wait_until="domcontentloaded",
+            timeout=30000,
         )
 
         await page.wait_for_timeout(self._settings.naukri.page_load_wait)
 
         current_url: str = page.url
-        logger.info("Current URL: {}", current_url)
 
         # ── Positive Authentication Check ────────────────────────────
-        auth_cfg = load_auth_selectors()
+        auth_cfg = self._auth_cfg
         if auth_cfg.authenticated:
             authenticated_selectors: list[str] = auth_cfg.authenticated
         else:
@@ -165,14 +167,19 @@ class BrowserSession:
             ]
 
         found_selector: Optional[str] = None
+        errors = []
         for selector in authenticated_selectors:
             try:
                 element = await page.query_selector(selector)
                 if element:
                     found_selector = selector
                     break
-            except Exception:
+            except Exception as e:
+                errors.append(str(e))
                 continue
+
+        if errors and not found_selector:
+            logger.warning("Selector errors during auth check: {}", errors)
 
         # ── Diagnostic Logging ───────────────────────────────────────
         logger.info("Current URL: {}", current_url)

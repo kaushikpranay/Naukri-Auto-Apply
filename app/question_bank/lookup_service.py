@@ -1,3 +1,4 @@
+# question_bank/lookup_service.py
 """
 Question Bank Lookup Service — POC-3B Phase 1.
 

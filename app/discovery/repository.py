@@ -100,7 +100,7 @@ class ApplyDiscoveryRepository:
         self._conn.execute("PRAGMA busy_timeout=30000")
         self._init_schema()
         from app.database.repository import run_db_auto_cleanup
-        run_db_auto_cleanup(self._db_path)
+        run_db_auto_cleanup(self._conn, self._db_path)
 
     _MIGRATIONS: list[str] = [
         "ALTER TABLE job_applications ADD COLUMN button_text TEXT",
@@ -135,11 +135,29 @@ class ApplyDiscoveryRepository:
         cursor.execute(_CREATE_QUESTION_BANK_SQL)
         cursor.execute(_CREATE_JOB_APPLICATION_QUESTIONS_SQL)
         cursor.execute(_CREATE_ANSWER_MAPPINGS_SQL)
+        
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS _discovery_migrations (
+                sql_hash TEXT PRIMARY KEY,
+                applied_at TEXT NOT NULL
+            )
+        """)
+        
+        import hashlib
         for migration in self._MIGRATIONS:
+            h = hashlib.md5(migration.encode("utf-8")).hexdigest()
+            cursor.execute("SELECT 1 FROM _discovery_migrations WHERE sql_hash = ?", (h,))
+            if cursor.fetchone():
+                continue
             try:
                 cursor.execute(migration)
-            except sqlite3.OperationalError:
-                pass
+                cursor.execute(
+                    "INSERT INTO _discovery_migrations VALUES (?, ?)",
+                    (h, datetime.now().isoformat())
+                )
+            except sqlite3.OperationalError as e:
+                if "duplicate column" not in str(e).lower():
+                    logger.error("Migration failed: {} | SQL: {}", e, migration)
         self._conn.commit()
         logger.debug("Apply discovery schema verified")
 
@@ -169,7 +187,11 @@ class ApplyDiscoveryRepository:
             WHERE UPPER(e.action) = 'APPLY'
               AND (
                   j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
-                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error'))
+                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
+                      'unknown_question', 'waiting_for_user', 'quota_exhausted',
+                      'temporary_failure', 'browser_error',
+                      'applied_successfully', 'failed', 'external_portal'
+                  ))
               )
             ORDER BY
               CASE WHEN j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error') THEN 0 ELSE 1 END ASC,
@@ -227,7 +249,10 @@ class ApplyDiscoveryRepository:
         self._conn.commit()
         cursor.execute("SELECT retry_count FROM jobs WHERE id = ?", (job_id,))
         row = cursor.fetchone()
-        return row[0] if row else 0
+        if row is None:
+            logger.error("increment_retry_count: job_id={} not found", job_id)
+            return -1
+        return int(row[0])
 
     def get_job_by_id(self, job_id: int) -> JobData | None:
         """Fetch a single job by its ID regardless of discovery status."""
@@ -246,6 +271,17 @@ class ApplyDiscoveryRepository:
         row = cursor.fetchone()
         return JobData(**dict(row)) if row else None
 
+    def get_application(self, job_id: int) -> ApplicationDiscoveryRecord | None:
+        """Fetch a single application record by job ID."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT * FROM job_applications WHERE job_id = ?", (job_id,))
+        row = cursor.fetchone()
+        if not row:
+            return None
+        data = dict(row)
+        data["modal_detected"] = bool(data.get("modal_detected", False))
+        return ApplicationDiscoveryRecord(**data)
+
     def clear_application(self, job_id: int) -> None:
         """Remove existing discovery record for a job (force reprocess)."""
         cursor = self._conn.cursor()
@@ -253,6 +289,7 @@ class ApplyDiscoveryRepository:
         cursor.execute(
             "DELETE FROM job_application_questions WHERE job_id = ?", (job_id,)
         )
+        cursor.execute("UPDATE jobs SET status = 'pending', retry_count = 0 WHERE id = ?", (job_id,))
         self._conn.commit()
         logger.info("Cleared existing discovery record for job_id={}", job_id)
 
@@ -340,10 +377,11 @@ class ApplyDiscoveryRepository:
         question: DiscoveredQuestion,
     ) -> None:
         """Persist a discovered question and keep the question bank updated."""
-        if question.answer:
-            ans_lower = str(question.answer).strip().lower()
+        answer_to_save = question.answer
+        if answer_to_save:
+            ans_lower = str(answer_to_save).strip().lower()
             if ans_lower in ("save", "skip", "submit", "continue"):
-                question.answer = None
+                answer_to_save = None
 
         now = datetime.now().isoformat()
         cursor = self._conn.cursor()
@@ -364,7 +402,7 @@ class ApplyDiscoveryRepository:
             (
                 question.question_key,
                 question.question_text,
-                question.answer,
+                answer_to_save,
                 now,
                 question.field_type,
                 now,
@@ -389,7 +427,7 @@ class ApplyDiscoveryRepository:
                 question.question_text,
                 question.field_type,
                 1 if question.required else 0,
-                question.answer,
+                answer_to_save,
                 now,
             ),
         )
@@ -426,8 +464,9 @@ class ApplyDiscoveryRepository:
             try:
                 cursor.execute(f"SELECT COUNT(*) FROM {table}")
                 counts[table] = int(cursor.fetchone()[0])
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning("Count failed for table {}: {}", table, e)
+                counts[table] = -1
         return counts
 
     def save_answer_mapping(self, question_key: str, raw_answer: str, selected_option: str) -> None:
