@@ -1,6 +1,24 @@
 {
-  "job_id": 8952,
+  "job_id": 9014,
   "elements": [
+    {
+      "candidate_index": 0,
+      "selector": "button:has-text('Apply')",
+      "tag": "button",
+      "text": "Apply on company site",
+      "href": "",
+      "visible": true,
+      "computed_selector": "#company-site-button"
+    },
+    {
+      "candidate_index": 1,
+      "selector": "button:has-text('Apply')",
+      "tag": "button",
+      "text": "Apply on company site",
+      "href": "",
+      "visible": false,
+      "computed_selector": "#company-site-button"
+    },
     {
       "candidate_index": 0,
       "selector": "a[href*='apply']",
