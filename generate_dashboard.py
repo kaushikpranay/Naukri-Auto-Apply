@@ -1527,12 +1527,12 @@ function injectNavbar() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto gap-1 mt-2 mt-lg-0">
                     <li class="nav-item"><a class="nav-link" id="nav-overview" href="index.html"><i class="bi bi-grid-fill me-1"></i> Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-top-jobs" href="top_jobs.html"><i class="bi bi-star-fill me-1"></i> Top Jobs</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-external-jobs" href="external_jobs.html"><i class="bi bi-link-45deg me-1"></i> External</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-review-jobs" href="review_jobs.html"><i class="bi bi-eye-fill me-1"></i> Review</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-failed-jobs" href="failed_jobs.html"><i class="bi bi-exclamation-triangle-fill me-1"></i> Failed</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-top-jobs" href="top_jobs.html"><i class="bi bi-star-fill me-1"></i> Top Jobs <span class="badge bg-secondary ms-1" id="nav-top-jobs-count">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-external-jobs" href="external_jobs.html"><i class="bi bi-link-45deg me-1"></i> External <span class="badge bg-secondary ms-1" id="nav-external-jobs-count">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-review-jobs" href="review_jobs.html"><i class="bi bi-eye-fill me-1"></i> Review <span class="badge bg-secondary ms-1" id="nav-review-count">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-failed-jobs" href="failed_jobs.html"><i class="bi bi-exclamation-triangle-fill me-1"></i> Failed <span class="badge bg-secondary ms-1" id="nav-failed-count">0</span></a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-hidden-jobs" href="hidden_jobs.html"><i class="bi bi-eye-slash-fill me-1"></i> Hidden <span class="badge bg-secondary ms-1" id="nav-hidden-count">0</span></a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-question-bank" href="question_bank.html"><i class="bi bi-patch-question-fill me-1"></i> Q-Bank</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-question-bank" href="question_bank.html"><i class="bi bi-patch-question-fill me-1"></i> Q-Bank <span class="badge bg-secondary ms-1" id="nav-qbank-count">0</span></a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-system-status" href="system_status.html"><i class="bi bi-cpu-fill me-1"></i> Status</a></li>
                 </ul>
             </div>
@@ -1567,15 +1567,45 @@ async function loadData() {
 function initPage() {
     if (!dashboardData) return;
     
-    // Update hidden count badge in navbar
+    // Update navbar badges
     try {
         const hiddenCount = getHiddenJobs().length;
         const navHiddenBadge = document.getElementById("nav-hidden-count");
         if (navHiddenBadge) {
             navHiddenBadge.innerText = hiddenCount;
         }
+
+        const topJobsCount = (dashboardData.top_jobs || []).filter(j => !getHiddenJobs().includes(j.id)).length;
+        const navTopBadge = document.getElementById("nav-top-jobs-count");
+        if (navTopBadge) {
+            navTopBadge.innerText = topJobsCount;
+        }
+
+        const externalCount = (dashboardData.external_jobs || []).filter(j => !getHiddenJobs().includes(j.id)).length;
+        const navExternalBadge = document.getElementById("nav-external-jobs-count");
+        if (navExternalBadge) {
+            navExternalBadge.innerText = externalCount;
+        }
+
+        const reviewCount = (dashboardData.review_jobs || []).filter(j => !getHiddenJobs().includes(j.id)).length;
+        const navReviewBadge = document.getElementById("nav-review-count");
+        if (navReviewBadge) {
+            navReviewBadge.innerText = reviewCount;
+        }
+
+        const failedCount = (dashboardData.failed_jobs || []).filter(j => !getHiddenJobs().includes(j.id)).length;
+        const navFailedBadge = document.getElementById("nav-failed-count");
+        if (navFailedBadge) {
+            navFailedBadge.innerText = failedCount;
+        }
+
+        const qbankCount = (dashboardData.question_bank || []).length;
+        const navQbankBadge = document.getElementById("nav-qbank-count");
+        if (navQbankBadge) {
+            navQbankBadge.innerText = qbankCount;
+        }
     } catch (e) {
-        console.error("Failed to update hidden count:", e);
+        console.error("Failed to update navbar badges:", e);
     }
 
     const path = window.location.pathname;
