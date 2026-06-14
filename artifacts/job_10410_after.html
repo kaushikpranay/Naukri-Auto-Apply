@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyntra</title>
+     <link rel="shortcut icon" href="https://vyntrapro.com/build/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://vyntrapro.com/front-assets/css/stylenew.css?var=1781428766">
+    <link rel="stylesheet" href="https://vyntrapro.com/front-assets/css/responsive.css?var=1781428766">
+    <link rel="stylesheet" href="https://vyntrapro.com/front-assets/css/timeline.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script></head>
+
+<body>
+    <style>
+        .contact-form-design input {
+            text-transform: capitalize ! IMPORTANT;
+        }
+
+        .accordion-title:before {
+            float: right !important;
+            font-family: FontAwesome;
+            content: "\f068";
+            padding-right: 5px;
+        }
+
+        .accordion-title.collapsed:before {
+            float: right !important;
+            content: "\f067";
+            display: none
+        }
+
+        .dropdown-menu {
+            left: -66px;
+        }
+
+        /*.cardq {    margin-bottom: 16px;}*/
+        .accordion-title:before {
+            padding-right: 5px;
+            top: -4px;
+            position: relative;
+        }
+
+        .card-headerqss {
+            display: flex;
+            align-items: center;
+        }
+
+        a.main-n {
+            color: #c22232 ! IMPORTANT;
+            font-weight: 600 !important;
+            position: relative;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        a.main-n::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: #fff3f3;
+            z-index: -1;
+            left: 0;
+            width: 100%;
+        }
+
+        a.main-n {
+            color: #c22232 ! IMPORTANT;
+            font-weight: 600 !important;
+            padding-left: 10px;
+        }
+
+        /*    .cta-inner a.theme-btn {    width: 220px;}*/
+        .cta-inner p {
+            margin-bottom: 30px;
+        }
+
+        .cta-inner h3 {
+            margin-bottom: 20px;
+        }
+
+        .row.new-sec .col-md-7.right {
+            background: #fff;
+            padding: 0;
+            box-shadow: 0 0 10px #ededed;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    </style>
+    <style>
+        .nav-link {
+            display: block;
+            padding: .8rem 1rem;
+        }
+
+        .navbar-expand-lg .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        ul.dropdown-menu.show {
+            display: block;
+        }
+
+        .navbar-expand-lg .navbar-collapse ul li a {
+            color: var(--theme-paracolor);
+            font-weight: 350;
+            font-size: 16px;
+            position: relative;
+        }
+
+        a.main-n {
+            color: #c22232 ! IMPORTANT;
+            font-weight: 600 !important;
+        }
+
+        .dropdown:hover>.dropdown-menu,
+        .dropend:hover>.dropdown-menu {
+            display: block;
+        }
+
+        ul.dropdown-menu.show {
+            min-width: 100%;
+        }
+
+        ul.dropdown-menu li ul {
+            border-top: none !important;
+            top: 46px;
+            box-shadow: none !important;
+            padding-bottom: 14px;
+        }
+
+        ul.dropdown-menu li ul li {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            border-bottom: none;
+        }
+
+        .navbar-expand-lg .navbar-collapse ul li a:hover {
+            color: #b31b2b !important;
+        }
+
+        .dropend .dropdown-menu[data-bs-popper] {
+            left: 0px !important;
+            top: 3rem;
+        }
+
+        .dropdown-menu li a {
+            font-size: 14px !important;
+        }
+
+        header {
+            background: #fff;
+            position: sticky;
+            border-bottom: 1px solid #f0f0f0;
+            top: 0;
+            z-index: 99;
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu {
+            position: absolute;
+            border-top: 2px solid #ab1524;
+            padding-bottom: 10px;
+        }
+
+        .navbar-nav .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--theme-primarycolor);
+            transition: var(--theme-transition);
+        }
+
+        .navbar-nav .nav-link:hover::before {
+            width: 100%;
+        }
+    </style>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light"> <a class="navbar-brand" href="https://vyntrapro.com"> <img class="logo-img" src="https://vyntrapro.com/front-assets/img/vyntra-logo1.png" alt="logo"> <span class="header-logo">Vyntra <b>TM</b></span> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"> <span class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown"> <a class="nav-link" href="#" id="offeringsDropdown" role="button"> Our Offerings </a>
+                                <ul class="dropdown-menu" aria-labelledby="offeringsDropdown">
+                                    <div id="accordion">
+                                        <div class="cardq mb-3">
+                                            <div class="card-headerqss"> <a class="main-n" href="https://vyntrapro.com/vyntraverse">VyntraVerse – Gateway to high-impact tech careers</a> <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseOne"> </a> </div>
+                                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                                <div class="card-bodys">
+                                                    <ul class="sd">
+                                                        <li><a class="dropdown-item1" href="https://vyntrapro.com/vyntraverse-learners">For Learners</a></li>
+                                                        <li><a class="dropdown-item1" href="https://vyntrapro.com/vyntraverse-enterprise">For Enterprises</a></li>
+                                                        <li><a class="dropdown-item1" href="https://vyntrapro.com/vyntraverse-oem">For OEMs</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cardq">
+                                            <div class="card-headerqss"> <a class="main-n" href="https://vyntrapro.com/enterprise-solutions">Enterprise Solutions – Your strategic partner in scalable tech delivery</a> <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseTwo"> </a> </div>
+                                            <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                                                <div class="card-bodys">
+                                                    <ul class="sd">
+                                                        <li><a class="dropdown-item1" href="https://vyntrapro.com/global-capability-centers">SmartHubs (GCC Solutions)</a></li>
+                                                        <li><a class="dropdown-item1" href="https://vyntrapro.com/erp-sap-services">ERP – SAP Services</a></li>
+                                                        <li><a class="dropdown-item1" href="https://vyntrapro.com/security-services">Security Services</a></li>
+                                                        <li class="pb-0"><a class="dropdown-item1" href="https://vyntrapro.com/cloud-and-hybrid-it-management">Cloud &amp; Hybrid IT Management</a></li>
+                                                        <li class="pb-0"><a class="dropdown-item1" href="https://vyntrapro.com/digital-transformation-servicess">Digital Transformation</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="https://vyntrapro.com/about">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vyntrapro.com/careers">Careers</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vyntrapro.com/blogs">Blogs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vyntrapro.com/pricing">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vyntrapro.com/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+<div class="breadcrumb-section relative">
+		<div class="container-fluid">
+			<div class="row rowcenter">
+				<div class="col-lg-11">
+					<div class="breadcrumb-head">
+						<h1 class="mb20">Careers</h1>
+						<div class="breadcrumb-ul">
+							<ul>
+								<li><a href="https://vyntrapro.com">Home</a></li>
+								<li><a href="javascript:void(0)"><i class="fa-solid fa-chevron-right"></i></a></li>
+								<li><a href="javascript:void(0)" class="active">Job Board</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="https://jobsapi.ceipal.com/APISource/widget.js" data-ceipal-api-key="QWp4Z2Jvdm9TVTh4YjgrTnZaTGk1QT09" data-ceipal-career-portal-id="Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09"></script><div id="example-widget-container" style="min-height: 900px;"><iframe id="careers_api_source" width="100%" height="2230" iframeborder="0" style="border:none; margin:0px;" src="https://jobsapi.ceipal.com/APISource/v2/index.html?bgcolor=b0211d&amp;api_key=QWp4Z2Jvdm9TVTh4YjgrTnZaTGk1QT09&amp;cp_id=Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09&amp;job_id=z5G7h3l6a1kMvyS65NP3c_Y2iN5QsrCoQF63D18TCUo="></iframe></div>
+<footer>
+        <div class="container-fluid">
+            <div class="row rowcenter">
+                <div class="col-lg-11">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer-logo"> <a href="https://vyntrapro.com"><img class="logo-img" src="https://vyntrapro.com/front-assets/img/vyntra-logo1.png" alt=""><span class="logo">Vyntra<b class="tt">TM</b></span></a> </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer-content">
+                                <div class="footer-quick-links pt30">
+                                    <ul>
+                                        <li><a href="https://vyntrapro.com">Home</a></li>
+                                        <li><a href="https://vyntrapro.com/vyntraverse">VyntraVerse</a></li>
+                                        <li><a href="https://vyntrapro.com/vyntraverse-enterprise">Enterprise Solutions</a></li>
+                                        <li><a href="https://vyntrapro.com/about">About Us</a></li>
+                                        <li><a href="https://vyntrapro.com/careers">Careers</a></li>
+                                        <li><a href="https://vyntrapro.com/blogs">Blogs</a></li>
+                                        <li><a href="https://vyntrapro.com/pricing">Pricing</a></li>
+                                        <li><a href="https://vyntrapro.com/contact">Contact Us</a></li>
+                                        <li><a href="https://vyntrapro.com/terms-and-conditions">Terms and Conditions</a></li>
+                                        <li><a href="https://vyntrapro.com/privacy-policy">Privacy Policy</a></li>
+                                        <li><a href="https://vyntrapro.com/cookies-policy">Cookies Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="footer-content">
+                                <div class="footer-links pt30">
+                                    <div class="footer-info">
+                                        <div class="footer-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                        <div class="footer-para">
+                                            <h6>Corporate Address:</h6> <a href="javscript:void(0)">37B, Thinkvalley Workspaces, Sector - 32, Gurugram, Haryana, 122001</a>
+                                        </div>
+                                    </div>
+                                    <div class="footer-info">
+                                        <div class="footer-icon"><i class="fa-solid fa-phone"></i></div>
+                                        <div class="footer-para">
+                                            <h6>Phone:</h6> <a href="tel: +91 9266552001">+91 9266552001</a>
+                                        </div>
+                                    </div>
+                                    <div class="footer-info">
+                                        <div class="footer-icon"><i class="fa-solid fa-envelope"></i></div>
+                                        <div class="footer-para">
+                                            <h6>Email:</h6> <a href="mailto: hivyni@vyntrapro.com">hivyni@vyntrapro.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="footer-content">
+                                <div class="footer-social-links pt30">
+                                    <ul>
+                                        <li><a href="https://www.linkedin.com/company/vyntrapro-innovations" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://www.instagram.com/vyntraproinnovations/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://api.whatsapp.com/send?phone=919266552001" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <script>
+                const currentYear = new Date().getFullYear();
+                document.write("Copyright@ " + "Vyntra" + " All rights reserved.");
+            </script>Copyright@ Vyntra All rights reserved.
+        </div>
+    </footer><!-- Modal -->
+    <div class="modal fade vyntra" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <h2>Job Description:</h2>
+                    <p>We are seeking a qualified and detail-oriented Chartered Accountant (CA) to manage our financial operations, ensure compliance with statutory regulations, and provide strategic insights for financial planning. The ideal candidate will have strong analytical skills, a deep understanding of financial reporting standards, and proven experience in accounting and auditing.</p>
+                    <h3>Key Responsibilities:</h3>
+                    <ul class="mb-3">
+                        <li> <strong>Financial Reporting &amp; Analysis:</strong>
+                            <ul>
+                                <li>Prepare accurate monthly, quarterly, and annual financial statements.</li>
+                                <li>Conduct variance analysis and provide insights into financial performance.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="mb-3">
+                        <li> <strong>Taxation &amp; Compliance:</strong>
+                            <ul>
+                                <li>Ensure compliance with direct and indirect tax laws (e.g., GST, TDS, Income Tax).</li>
+                                <li>File tax returns and support audits by government authorities.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="mb-3">
+                        <li> <strong>Auditing &amp; Internal Controls:</strong>
+                            <ul>
+                                <li>Conduct internal audits and implement financial control systems.</li>
+                                <li>Liaise with external auditors and regulatory bodies.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="mb-3">
+                        <li> <strong>Budgeting &amp; Forecasting:</strong>
+                            <ul>
+                                <li>Develop annual budgets and financial forecasts.</li>
+                                <li>Monitor budget adherence and recommend corrective actions.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li> <strong>Financial Strategy &amp; Advisory:</strong>
+                            <ul>
+                                <li>Assist in strategic financial planning, risk management, and investment analysis.</li>
+                                <li>Advise management on cost-reduction and profit-maximization strategies.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+                    var dropdowns = document.querySelectorAll('.dropdown-menu .dropdown-toggle');
+                    dropdowns.forEach(function(dropdownToggleEl) {
+                        dropdownToggleEl.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            let subMenu = this.nextElementSibling;
+                            if (subMenu && !subMenu.classList.contains('show')) {
+                                let openSubmenus = this.closest('.dropdown-menu').querySelectorAll('.dropdown-menu.show');
+                                openSubmenus.forEach(function(menu) {
+                                    menu.classList.remove('show');
+                                });
+                            }
+                            if (subMenu) {
+                                subMenu.classList.toggle('show');
+                            }
+                        });
+                    });
+                    });
+    </script>
+    <script src="https://vyntrapro.com/front-assets/js/slider.js"></script>
+    <script src="https://vyntrapro.com/front-assets/js/main.js"></script>
+    <script src="https://vyntrapro.com/front-assets/js/timeline.min.js"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+    <script>
+        $(".slider").slick({
+            dots: true,
+            infinite: true,
+            marginLeft: 20,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    adaptiveHeight: true,
+                    slidesToScroll: 2
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    slidesToScroll: 1
+                }
+            }]
+        });
+        $(".slider1").slick({
+            dots: true,
+            infinite: true,
+            marginLeft: 20,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.clickable-flip').forEach(function(box) {
+            box.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        });
+    </script>
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl509546'},{'dcenter':'p3'},{'cp_id':'10382126'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script></body></html>

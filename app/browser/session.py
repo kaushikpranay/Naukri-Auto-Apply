@@ -71,6 +71,31 @@ class BrowserSession:
         """
         self._profile_path.mkdir(parents=True, exist_ok=True)
 
+        # If another Chrome is already using this profile, raise immediately.
+        # DO NOT kill it — killing would destroy another running automation session.
+        # Raising here prevents launching a new Chrome that would forward its command
+        # to the running instance via Windows IPC and clobber its active page.
+        try:
+            profile_str = str(self._profile_path)
+            out = subprocess.check_output(
+                [
+                    "powershell", "-NonInteractive", "-Command",
+                    f"(Get-CimInstance Win32_Process -Filter \"name='chrome.exe'\" | "
+                    f"Where-Object {{$_.CommandLine -like '*{profile_str}*'}}).Count",
+                ],
+                text=True, stderr=subprocess.DEVNULL, timeout=5,
+            ).strip()
+            if out.isdigit() and int(out) > 0:
+                raise RuntimeError(
+                    f"Browser profile already in use by {out} chrome.exe process(es). "
+                    "Another automation script may be running — wait for it to finish."
+                )
+        except RuntimeError:
+            raise
+        except Exception as probe_exc:
+            logger.debug("Profile-in-use probe skipped: {}", probe_exc)
+
+        # Safe to clean up stale lock files — no live Chrome is using this profile.
         for lock_file in ("SingletonLock", "SingletonSocket", "SingletonCookie", "lockfile"):
             lock_path = self._profile_path / lock_file
             if lock_path.exists():
@@ -79,23 +104,6 @@ class BrowserSession:
                     logger.debug("Removed stale lock file: {}", lock_path)
                 except PermissionError:
                     logger.debug("Lock file in use, skipping: {}", lock_path)
-
-        # Kill any Chrome/Chromium processes still holding this profile open
-        try:
-            profile_str = str(self._profile_path)
-            result = subprocess.run(
-                [
-                    "powershell", "-NoProfile", "-Command",
-                    f"Get-CimInstance Win32_Process -Filter \"name='chrome.exe'\" | "
-                    f"Where-Object {{ $_.CommandLine -like '*{profile_str}*' }} | "
-                    f"ForEach-Object {{ Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }}"
-                ],
-                capture_output=True, timeout=10
-            )
-            if result.returncode == 0:
-                logger.debug("Killed stale Chrome process(es) using profile: {}", profile_str)
-        except Exception as e:
-            logger.debug("Could not kill stale Chrome processes: {}", e)
 
         logger.info("Launching browser with profile: {}", self._profile_path)
 
