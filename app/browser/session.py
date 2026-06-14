@@ -186,7 +186,7 @@ class BrowserSession:
 
         self._validate_profile()
 
-        page: Page = self._context.pages[0] if self._context.pages else await self._context.new_page()
+        page: Page = await self._context.new_page()
 
         logger.info("Navigating to Naukri to validate session...")
         await page.goto(
