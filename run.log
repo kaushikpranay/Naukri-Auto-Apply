@@ -161,3 +161,17 @@
 [2026-06-14 15:03:13] [32m15:03:13[0m | [1mINFO    [0m | [36mCleared existing discovery record for job_id=9039[0m
 [2026-06-14 15:03:13] [32m15:03:13[0m | [1mINFO    [0m | [36mJob URL: https://www.naukri.com/job-listings-ccai-engineer-lead-datametica-pune-3-to-8-years-110626014463[0m
 EXIT_CODE=1
+[2026-06-14 15:03:21] [32m15:03:20[0m | [1mINFO    [0m | [36mScreenshot saved: 20260614_150316_job_9039_before.png (purpose: job_9039_before)[0m
+[2026-06-14 15:03:21] [32m15:03:20[0m | [1mINFO    [0m | [36mHTML saved: job_9039_before.html (249.4 KB)[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36mFound 6 candidate apply element(s)[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36m  Candidate: text='Apply' href='' visible=True selector='#apply-button'[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36m  Candidate: text='Apply' href='' visible=False selector='#apply-button'[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36m  Candidate: text='Apply' href='' visible=True selector='#apply-button'[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36m  Candidate: text='Apply' href='' visible=False selector='#apply-button'[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36m  Candidate: text='Application status
+[2026-06-14 15:03:21] 39 Updates' href='/myapply/historypage' visible=True selector='a'[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36m  Candidate: text='Neo-AI Job Agent' href='https://www.naukri.com/job-apply-agent?utmTerm=JobAgent_gnb&utmContent=gnbV1' visible=True selector='a'[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36mElements exported: job_9039_elements.json (6 candidates)[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36mApply Button Text: Apply[0m
+[2026-06-14 15:03:21] [32m15:03:21[0m | [1mINFO    [0m | [36mSelector: #apply-button[0m
+EXIT_CODE=1
