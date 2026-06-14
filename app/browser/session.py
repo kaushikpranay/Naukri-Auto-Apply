@@ -8,6 +8,7 @@ actively looks for logged-in selectors rather than assuming
 login based on the absence of login-page selectors.
 """
 
+import subprocess
 from pathlib import Path
 from types import TracebackType
 from typing import Optional, Self
@@ -78,6 +79,23 @@ class BrowserSession:
                     logger.debug("Removed stale lock file: {}", lock_path)
                 except PermissionError:
                     logger.debug("Lock file in use, skipping: {}", lock_path)
+
+        # Kill any Chrome/Chromium processes still holding this profile open
+        try:
+            profile_str = str(self._profile_path)
+            result = subprocess.run(
+                [
+                    "powershell", "-NoProfile", "-Command",
+                    f"Get-CimInstance Win32_Process -Filter \"name='chrome.exe'\" | "
+                    f"Where-Object {{ $_.CommandLine -like '*{profile_str}*' }} | "
+                    f"ForEach-Object {{ Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }}"
+                ],
+                capture_output=True, timeout=10
+            )
+            if result.returncode == 0:
+                logger.debug("Killed stale Chrome process(es) using profile: {}", profile_str)
+        except Exception as e:
+            logger.debug("Could not kill stale Chrome processes: {}", e)
 
         logger.info("Launching browser with profile: {}", self._profile_path)
 
