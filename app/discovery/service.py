@@ -508,7 +508,10 @@ class ApplyDiscoveryService:
         redirect_json = json.dumps(redirect_chain)
 
         # Compute debug values
-        page_title = await active_page.title()
+        try:
+            page_title = await active_page.title()
+        except Exception:
+            page_title = ""
         modal_detected = await self._is_easy_apply_modal_visible(active_page)
 
         forms_count = 0
