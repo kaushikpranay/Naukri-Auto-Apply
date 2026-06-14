@@ -137,8 +137,12 @@ class ApplyDiscoveryService:
 
         for index, job in enumerate(jobs, start=1):
             if page.is_closed():
-                logger.error("Browser page is closed. Aborting discovery batch to prevent cascading failures.")
-                break
+                try:
+                    page = await page.context.new_page()
+                    logger.info("Page was closed (e.g. post-submit); opened a new page to continue batch.")
+                except Exception as reopen_exc:
+                    logger.error("Page is closed and could not reopen: {}. Aborting batch.", reopen_exc)
+                    break
             logger.info("Job Opened: [{} / {}] {} - {}", index, len(jobs), job.company_name, job.job_title)
             started_at = datetime.now()
             # Clear existing application to avoid duplicate entries and allow fresh discovery
