@@ -73,8 +73,11 @@ class BrowserSession:
         for lock_file in ("SingletonLock", "SingletonSocket", "SingletonCookie", "lockfile"):
             lock_path = self._profile_path / lock_file
             if lock_path.exists():
-                lock_path.unlink(missing_ok=True)
-                logger.debug("Removed stale lock file: {}", lock_path)
+                try:
+                    lock_path.unlink(missing_ok=True)
+                    logger.debug("Removed stale lock file: {}", lock_path)
+                except PermissionError:
+                    logger.debug("Lock file in use, skipping: {}", lock_path)
 
         logger.info("Launching browser with profile: {}", self._profile_path)
 
