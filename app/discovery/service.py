@@ -335,7 +335,13 @@ class ApplyDiscoveryService:
         job_id = int(job.id or 0)
         logger.info("Job URL: {}", job.job_url)
 
-        await page.goto(job.job_url, wait_until="domcontentloaded", timeout=30000)
+        try:
+            await page.goto(job.job_url, wait_until="domcontentloaded", timeout=30000)
+        except AttributeError as e:
+            if "_object" not in str(e):
+                raise
+            # Playwright + Python 3.13 compat bug: response channel returned as raw dict.
+            # Navigation completed; ignore the failed response deserialization.
         await page.wait_for_timeout(self._settings.naukri.page_load_wait)
 
         hr_name = await self._extract_text(page, self._selectors.job_detail.recruiter_name)
