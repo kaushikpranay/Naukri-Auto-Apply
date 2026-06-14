@@ -135,6 +135,15 @@ class ApplyDiscoveryService:
 
         logger.info("Found {} shortlisted APPLY job(s) for discovery.", len(jobs))
 
+        # Keep a guardian page so Chrome doesn't exit when a job page closes mid-batch.
+        # Without this, Chrome exits when its last tab closes, killing the BrowserContext
+        # and making page.context.new_page() fail for all subsequent jobs.
+        guardian_page = None
+        try:
+            guardian_page = await page.context.new_page()
+        except Exception:
+            pass
+
         for index, job in enumerate(jobs, start=1):
             if page.is_closed():
                 try:
@@ -255,8 +264,14 @@ class ApplyDiscoveryService:
             # Close any extra tabs opened during apply (prevents tab accumulation)
             try:
                 for extra in list(page.context.pages):
-                    if extra is not page and not extra.is_closed():
+                    if extra is not page and extra is not guardian_page and not extra.is_closed():
                         await extra.close()
+            except Exception:
+                pass
+
+        if guardian_page is not None and not guardian_page.is_closed():
+            try:
+                await guardian_page.close()
             except Exception:
                 pass
 
