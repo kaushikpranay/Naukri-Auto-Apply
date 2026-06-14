@@ -59,6 +59,16 @@ _INFO_MESSAGE_PATTERNS: tuple[str, ...] = (
     "proceed with application",
     "welcome",
     "instruction",
+    # Post-submission success confirmations — reject immediately (no controls exist)
+    "successfully applied",
+    "applied successfully",
+    "application submitted",
+    "application has been submitted",
+    "you have applied",
+    "thank you for applying",
+    "congratulations",
+    "application received",
+    "your application has been",
 )
 
 _VALID_QUESTION_HINTS: tuple[str, ...] = (
@@ -149,6 +159,8 @@ class FormFiller:
         container_sel = self._selectors.discovery.questions.container
         processed_keys: dict[str, str] = {}
         processed_texts: set[str] = set()
+        _no_progress_count: int = 0
+        _MAX_NO_PROGRESS: int = 5
 
         for loop_count in range(30):
             # Check if page is closed (safely handling unit test MagicMock)
@@ -420,6 +432,18 @@ class FormFiller:
 
                 report.filled.append(result)
 
+                # ── Track progress to detect stuck loops ────────────────────
+                if result.status == "filled":
+                    _no_progress_count = 0
+                else:
+                    _no_progress_count += 1
+                    if _no_progress_count >= _MAX_NO_PROGRESS:
+                        logger.warning(
+                            "NO_PROGRESS_LIMIT_REACHED: {} consecutive non-fills — breaking loop for job_id={}",
+                            _no_progress_count, job_id,
+                        )
+                        break
+
                 # ── Post-fill: click Save button ───────────────────────────
                 if result.status == "filled":
                     await self._post_fill_save(page, job_id, container_sel, processed_keys, target_key, report)
@@ -470,17 +494,46 @@ class FormFiller:
                 break
 
         if not save_btn:
-            return
+            # Chip/radio/button-options clicks auto-submit — no Save button exists.
+            # Verify the chatbot received the answer before treating this as an error.
+            await self._safe_wait(page, 1500)
+            if await self._is_application_submitted(page):
+                logger.info("Auto-submit: application submitted job_id={}", job_id)
+                return
+            drawer_chk = await self._resolve_drawer(page)
+            if drawer_chk:
+                try:
+                    items_cls = await drawer_chk.evaluate("""el => Array.from(
+                        el.querySelectorAll('.chatbot_ListItem')
+                    ).filter(i => i.offsetWidth || i.offsetHeight).map(i => i.className || '')""")
+                    for cls in reversed(items_cls):
+                        if "userItem" in cls:
+                            logger.info("Auto-submit: chatbot received answer job_id={}", job_id)
+                            await self._safe_wait(page, 2000)
+                            return
+                        if "botItem" in cls or "botChips" in cls:
+                            break
+                except Exception as _e:
+                    logger.warning("Auto-submit drawer check failed: {}", _e)
+            logger.error("Save button not found for job_id={}", job_id)
+            report.screenshot_error = await self._capture_screenshot(page, f"job_{job_id}_save_btn_missing")
+            if self._repo:
+                self._repo.update_job_status(job_id, "temporary_failure")
+            raise PipelineSuspendedException("Save button not found")
 
         await self._safe_wait(page, 3000)
-        logger.info("SAVE_BUTTON_CLICKED")
         await save_btn.evaluate("el => el.click()")
+        logger.info("SAVE_BUTTON_CLICKED")
+        try:
+            await page.wait_for_load_state("networkidle", timeout=5000)
+        except Exception:
+            pass
         await self._safe_wait(page, 3000)
         logger.info("POST_SAVE_WAIT_DONE")
 
         # Detect Naukri server error
         try:
-            page_text = (await page.inner_text("body")).lower()
+            page_text = (await page.inner_text("body", timeout=5000)).lower()
             if any(phrase in page_text for phrase in _NAUKRI_ERROR_PHRASES):
                 logger.warning("NAUKRI_SERVER_ERROR_DETECTED — skipping job_id={}", job_id)
                 if self._repo:
@@ -499,6 +552,11 @@ class FormFiller:
                 self._repo.update_job_status(job_id, "validation_failed")
             report.screenshot_error = await self._capture_screenshot(page, f"job_{job_id}_validation_failed")
             raise PipelineSuspendedException()
+
+        # Fast exit: if application already submitted, skip the expensive 25-attempt chatbot query
+        if await self._is_application_submitted(page):
+            logger.info("APPLICATION_SUBMITTED — early post-save exit")
+            return
 
         # Detect success / next question
         save_accepted = await self._detect_save_accepted(page, container_sel, processed_keys)
@@ -526,22 +584,27 @@ class FormFiller:
         # Check page text for clear submission indicators (excluding buttons/inputs)
         submit_keywords = [
             "successfully applied",
+            "applied successfully",
             "application received",
+            "application submitted",
+            "application has been submitted",
             "thank you for applying",
             "thank you for showing interest",
             "your application has been",
+            "you have applied",
+            "congratulations",
         ]
         try:
-            body_text = (await page.locator("body").inner_text()).lower()
+            body_text = (await page.locator("body").inner_text(timeout=5000)).lower()
             if any(kw in body_text for kw in submit_keywords):
                 return True
         except Exception:
             pass
             
-        # Also check if drawer disappeared after we started filling
+        # Also check if chatbot drawer disappeared after we started filling
         try:
             drawer_visible = await page.evaluate("""() => {
-                const selectors = ['.chatbot_Drawer', '[class*="chatbot"]', '[class*="drawer"]', '[class*="modal"]'];
+                const selectors = ['.chatbot_Drawer', '.chatbot_Overlay', '[class*="chatbot_Drawer"]', '[class*="chatbotModal"]'];
                 for (const sel of selectors) {
                     const elements = document.querySelectorAll(sel);
                     for (const el of elements) {
@@ -677,8 +740,8 @@ class FormFiller:
 
         # Check for success message keywords
         try:
-            success_keywords = ["success", "submitted", "application received", "successfully applied",
-                                "thank you", "completed", "saved"]
+            success_keywords = ["successfully applied", "application received", "application submitted",
+                                "your application has been", "applied successfully"]
             success_detected = await page.evaluate("""(keywords) => {
                 const elements = document.querySelectorAll('div, p, span, h1, h2, h3, h4, h5, h6, li, section');
                 for (const el of elements) {
@@ -974,29 +1037,53 @@ class FormFiller:
                 if chip_locs and await chip_locs.count() > 0:
                     answer_lower = answer.strip().lower()
                     matched_chip = None
+                    # Pass 1: exact match — avoids matching multi-option wrapper whose
+                    # inner_text is "Yes\nNo" (which contains any single option as substring)
                     for i in range(await chip_locs.count()):
                         el = chip_locs.nth(i)
                         if not await el.is_visible():
                             continue
-                        txt = (await el.inner_text()).strip().lower()
-                        if txt == answer_lower or answer_lower in txt or txt in answer_lower:
+                        try:
+                            txt = " ".join((await el.inner_text(timeout=5000)).strip().lower().split())
+                        except Exception:
+                            continue
+                        if txt == answer_lower:
                             matched_chip = el
                             selector_used = f"chatbot_chip: {txt}"
                             break
+                    # Pass 2: substring match, but skip multi-line container elements
+                    if not matched_chip:
+                        for i in range(await chip_locs.count()):
+                            el = chip_locs.nth(i)
+                            if not await el.is_visible():
+                                continue
+                            try:
+                                raw = (await el.inner_text(timeout=5000)).strip().lower()
+                            except Exception:
+                                continue
+                            if "\n" in raw:
+                                continue  # skip wrappers containing multiple chip texts
+                            txt = " ".join(raw.split())
+                            if answer_lower in txt or txt in answer_lower:
+                                matched_chip = el
+                                selector_used = f"chatbot_chip: {txt}"
+                                break
 
                     if matched_chip:
                         await matched_chip.evaluate("el => el.click()")
                         if page:
-                            await self._safe_wait(page, 1000)
+                            await self._safe_wait(page, 1200)
 
                         is_selected = False
                         try:
+                            # timeout=2000: if chip was removed from DOM (success), don't wait 30s
                             is_selected = await matched_chip.evaluate("""el => {
                                 const c = el.className || '';
                                 return c.includes('selected') || c.includes('active') || c.includes('checked') || el.disabled;
-                            }""")
+                            }""", timeout=2000)
                         except Exception:
-                            pass
+                            # Naukri removes chips from DOM after selection — detached element = success
+                            is_selected = True
 
                         if not is_selected and page:
                             try:
@@ -1018,7 +1105,8 @@ class FormFiller:
                             try:
                                 is_selected = not await matched_chip.is_visible()
                             except Exception:
-                                pass
+                                # is_visible() throws when element detached = chip removed = success
+                                is_selected = True
 
                         if is_selected:
                             logger.info("FIELD_VERIFY_SUCCESS")
@@ -1353,9 +1441,9 @@ class FormFiller:
             logger.warning("Error in _find_visible_elements: {}", e)
         return elements
 
-    async def _detect_field_type(self, container, page: Page | None = None) -> str:
+    async def _detect_field_type(self, container, page: Page | None = None, _drawer=None) -> str:
         try:
-            drawer = await self._resolve_drawer(page) if page else None
+            drawer = _drawer if _drawer is not None else (await self._resolve_drawer(page) if page else None)
             use_chatbot_fallback = drawer is not None
             if not use_chatbot_fallback and page:
                 try:
@@ -1370,7 +1458,7 @@ class FormFiller:
                 elements = await self._find_visible_elements(container, selector, page)
                 if not elements and use_chatbot_fallback:
                     scope = drawer if drawer else page
-                    elements = await self._find_visible_elements(scope, selector, page)
+                    elements = await self._find_visible_elements(scope, selector, None)
                 return elements
 
             visible_ces = await get_elements("[contenteditable='true']")
@@ -1550,7 +1638,7 @@ class FormFiller:
         """Find the visible chatbot drawer on the page."""
         import time
         logger.info("RESOLVE_DRAWER_START")
-        for sel in [".chatbot_Drawer", "[class*='chatbot']", "[class*='drawer']", "[class*='modal']"]:
+        for sel in [".chatbot_Drawer", ".chatbot_Overlay", "[class*='chatbot_Drawer']", "[class*='chatbotModal']"]:
             try:
                 loc = page.locator(sel)
                 cnt = await loc.count()
@@ -1826,8 +1914,8 @@ class FormFiller:
                     target_container = active_chips_item
 
             if field_type == "unknown" and not options:
-                field_type = await self._detect_field_type(active_question_item, page)
-                options = await self._get_field_options(active_question_item, field_type, page)
+                field_type = await self._detect_field_type(active_question_item, page, _drawer=drawer)
+                options = await self._get_field_options(active_question_item, field_type, page, _drawer=drawer)
 
             if field_type == "unknown" and not options:
                 cb_count = await active_question_item.locator(
@@ -1905,13 +1993,13 @@ class FormFiller:
         else:
             logger.warning("FINAL_REFRESH_SCAN_FAILED: Field type remains unknown")
 
-    async def _get_field_options(self, container, field_type: str, page: Page | None = None) -> list[str]:
+    async def _get_field_options(self, container, field_type: str, page: Page | None = None, _drawer=None) -> list[str]:
         """Extract available options from the field. Excludes nav/action button text."""
         logger.info("GET_FIELD_OPTIONS_CALLED: field_type={}", field_type)
         options: list[str] = []
 
         try:
-            drawer = await self._resolve_drawer(page) if page else None
+            drawer = _drawer if _drawer is not None else (await self._resolve_drawer(page) if page else None)
 
             if field_type in ("button-options", "button-choice", "chatbot_chips", "div"):
                 chip_sel = ".chatbot_Chip, .chipItem, [class*='chatbot_Chip'], [class*='chipItem']"
@@ -2213,7 +2301,7 @@ class FormFiller:
 
         logger.info("POPUP_STARTING — question='{}'", question_text[:60])
 
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         response = await loop.run_in_executor(
             None,
             self._show_tkinter_popup,
@@ -2248,12 +2336,18 @@ class FormFiller:
         # Locate popup_helper.py absolute path relative to this file
         helper_path = Path(__file__).parent.parent / "utils" / "popup_helper.py"
 
+        _POPUP_TIMEOUT = 90  # seconds — reduced from 300 to prevent 5-min silent hang
+
         try:
             # Run helper script in a new Python process
             startupinfo = None
             if sys.platform == "win32":
                 startupinfo = subprocess.STARTUPINFO()
                 startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                startupinfo.wShowWindow = 1  # SW_SHOWNORMAL — ensures Tkinter window is visible
+
+            logger.info("POPUP_SUBPROCESS_WAITING — answer required, timeout={}s", _POPUP_TIMEOUT)
+            print(f"\n[ACTION REQUIRED] A popup window has appeared asking for an answer. You have {_POPUP_TIMEOUT} seconds.", flush=True)
 
             result = subprocess.run(
                 [sys.executable, str(helper_path)],
@@ -2262,7 +2356,8 @@ class FormFiller:
                 text=True,
                 encoding="utf-8",
                 startupinfo=startupinfo,
-                check=False
+                check=False,
+                timeout=_POPUP_TIMEOUT,
             )
 
             if result.returncode == 0 and result.stdout.strip():
@@ -2279,6 +2374,14 @@ class FormFiller:
                     "Popup helper exited with code {}. Stderr: {}",
                     result.returncode, result.stderr
                 )
+        except subprocess.TimeoutExpired:
+            logger.error(
+                "POPUP_TIMEOUT: No answer received within {}s — popup may be hidden behind browser window. "
+                "Check your taskbar for a Python/Naukri window.",
+                _POPUP_TIMEOUT,
+            )
+            print(f"\n[TIMEOUT] Popup was not answered within {_POPUP_TIMEOUT}s. "
+                  "Check your taskbar — the window may be behind the browser.", flush=True)
         except Exception as exc:
             logger.error("Failed to run popup helper: {}", exc)
 

@@ -136,12 +136,18 @@ class ApplyDiscoveryService:
         logger.info("Found {} shortlisted APPLY job(s) for discovery.", len(jobs))
 
         for index, job in enumerate(jobs, start=1):
+            if page.is_closed():
+                logger.error("Browser page is closed. Aborting discovery batch to prevent cascading failures.")
+                break
             logger.info("Job Opened: [{} / {}] {} - {}", index, len(jobs), job.company_name, job.job_title)
             started_at = datetime.now()
             # Clear existing application to avoid duplicate entries and allow fresh discovery
+            if job.status == "applied_successfully":
+                logger.warning("Skipping job_id={} — jobs.status is applied_successfully", job.id)
+                continue
             existing = self._repo.get_application(job.id)
             if existing and existing.apply_type == "applied_successfully":
-                logger.warning("Skipping job_id={} — already applied_successfully", job.id)
+                logger.warning("Skipping job_id={} — job_applications.apply_type is applied_successfully", job.id)
                 continue
             self._repo.clear_application(job.id)
             try:
@@ -181,8 +187,12 @@ class ApplyDiscoveryService:
                     self._repo.update_job_status(job.id, "temporary_failure")
                 else:
                     # Successful or non-retryable apply type
-                    status_val = outcome.record.apply_type or "applied"
+                    status_val = outcome.record.apply_type or "pending"
                     self._repo.update_job_status(job.id, status_val)
+                    if status_val == "login_required":
+                        from app.browser.session import SessionExpiredError
+                        logger.error("Session expired during discovery. Aborting run.")
+                        raise SessionExpiredError("Login required detected during apply.")
 
                 # ── Consecutive quota protection ──────────────────────────
                 if outcome.record.apply_type == "quota_exhausted":
@@ -208,6 +218,16 @@ class ApplyDiscoveryService:
                 raise  # propagate to caller without wrapping
             except Exception as exc:  # noqa: BLE001
                 logger.exception("Discovery Failed: job_id={} error={}", job.id, exc)
+                # Capture diagnostic screenshot before recording failure
+                try:
+                    from app.utils.screenshot import capture_screenshot
+                    await capture_screenshot(
+                        page,
+                        reason=f"discovery_failed_job_{job.id}",
+                        screenshots_dir=str(self._screenshots_dir),
+                    )
+                except Exception as screenshot_exc:
+                    logger.warning("Failed to capture error screenshot: {}", screenshot_exc)
                 self._repo.save_application(
                     ApplicationDiscoveryRecord(
                         job_id=int(job.id or 0),
@@ -222,10 +242,22 @@ class ApplyDiscoveryService:
                     self._repo.update_job_status(job.id, "temporary_failure")
                 self._repo.increment_retry_count(job.id)
                 summary.failed += 1
+                if page.is_closed():
+                    logger.error("Browser page was closed/crashed during processing. Aborting discovery batch.")
+                    break
 
             summary.processed += 1
 
+            # Close any extra tabs opened during apply (prevents tab accumulation)
+            try:
+                for extra in list(page.context.pages):
+                    if extra is not page and not extra.is_closed():
+                        await extra.close()
+            except Exception:
+                pass
+
         summary.completed_at = datetime.now()
+        logger.info("Discovery batch complete — closing browser after all jobs processed.")
         return summary
 
     def _log_outcome(
@@ -584,7 +616,8 @@ class ApplyDiscoveryService:
         # 2. ELIF saveApply confirmation page detected: applied_successfully
         try:
             page_text = await active_page.locator("main, .job-apply-content, #app, body").first.inner_text()
-        except Exception:
+        except Exception as _pt_exc:
+            logger.warning("Failed to read page text for apply classification job_id={}: {}", job_id, _pt_exc)
             page_text = ""
         if (
             "/myapply/saveApply" in url_after
@@ -854,8 +887,13 @@ class ApplyDiscoveryService:
 
         try:
             page_text = await page.locator("main, #app, .job-desc, body").first.inner_text()
-        except Exception:
-            page_text = await page.locator("body").inner_text()
+        except Exception as _e:
+            logger.warning("Failed to get page text for post-click classify: {}", _e)
+            try:
+                page_text = await page.locator("body").inner_text()
+            except Exception as _e2:
+                logger.warning("Failed to get body text for post-click classify: {}", _e2)
+                page_text = ""
         
         lower_page = page_text.lower()
         if "register to apply" in lower_page or "register and apply" in lower_page:
@@ -948,8 +986,8 @@ class ApplyDiscoveryService:
                         phrase, snippet,
                     )
                     return snippet[:200]
-        except Exception:
-            pass
+        except Exception as _body_exc:
+            logger.warning("Quota body scan failed (page likely closed): {}", _body_exc)
 
         return None
 
@@ -959,7 +997,7 @@ class ApplyDiscoveryService:
         from app.question_bank.form_filler import FormFiller, is_valid_recruiter_question_container
 
         helper = self._form_filler
-        active_chatbot_question = await helper._resolve_active_chatbot_question(page, set())
+        active_chatbot_question = await helper._resolve_active_chatbot_question(page, {})
         if active_chatbot_question:
             if active_chatbot_question.get("field_type") == "unknown":
                 await helper._final_drawer_refresh_scan(page, active_chatbot_question)
@@ -1110,9 +1148,12 @@ class ApplyDiscoveryService:
             if href and href.lower().startswith("mailto:"):
                 return href.replace("mailto:", "").strip()
 
-        body_text = await page.locator(
-            self._selectors.discovery.questions.page_body
-        ).inner_text()
+        try:
+            body_text = await page.locator(
+                self._selectors.discovery.questions.page_body
+            ).inner_text(timeout=5000)
+        except Exception:
+            return None
         for token in body_text.split():
             if "@" in token and "." in token:
                 cleaned = token.strip(".,;:()<>[]{}")

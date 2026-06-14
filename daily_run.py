@@ -88,6 +88,7 @@ def _build_providers(prompt_path: Path, profile_path: Path) -> list:
         logger.info("Groq provider initialized.")
     except Exception as exc:
         logger.warning("Groq provider unavailable: {}", exc)
+        logger.debug("Groq init traceback:", exc_info=True)
 
     try:
         from app.evaluator.providers.gemini_provider import GeminiEvaluator
@@ -95,6 +96,10 @@ def _build_providers(prompt_path: Path, profile_path: Path) -> list:
         logger.info("Gemini provider initialized.")
     except Exception as exc:
         logger.warning("Gemini provider unavailable: {}", exc)
+        logger.debug("Gemini init traceback:", exc_info=True)
+
+    if not providers:
+        logger.error("NO PROVIDERS AVAILABLE — all evaluations will fail")
 
     return providers
 
@@ -183,19 +188,7 @@ async def _run_discovery_stage(
     """
     batch_number = 1
     while True:
-        cursor = repo_discovery._conn.cursor()
-        cursor.execute("""
-            SELECT COUNT(*)
-            FROM jobs j
-            JOIN ai_evaluations e ON e.job_id = j.id
-            LEFT JOIN job_applications a ON a.job_id = j.id
-            WHERE UPPER(e.action) = 'APPLY'
-              AND (
-                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
-                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error'))
-              )
-        """)
-        pending_count = cursor.fetchone()[0]
+        pending_count = repo_discovery.get_pending_discovery_count()
 
         if pending_count == 0:
             break
@@ -313,90 +306,93 @@ async def main_async() -> None:
             total_combos, BATCH_NEW_JOB_THRESHOLD,
         )
 
-        while combo_index < total_combos:
-            pipeline_batch += 1
-            batch_new_jobs = 0
-            batch_combos_processed = 0
-
-            logger.info(
-                "═══ Pipeline Batch {} ═══ (resuming from combo {}/{})",
-                pipeline_batch, combo_index + 1, total_combos,
-            )
-
-            # ── Step 1: Collect jobs until threshold or combos exhausted ──
+        try:
             while combo_index < total_combos:
-                keyword, location = search_combos[combo_index]
-                combo_index += 1
-                batch_combos_processed += 1
+                pipeline_batch += 1
+                batch_new_jobs = 0
+                batch_combos_processed = 0
 
                 logger.info(
-                    "[{}/{}] Searching: '{}' in '{}'",
-                    combo_index, total_combos,
-                    keyword.display, location.display,
+                    "═══ Pipeline Batch {} ═══ (resuming from combo {}/{})",
+                    pipeline_batch, combo_index + 1, total_combos,
                 )
-                try:
-                    jobs = await collector.collect_for_search(keyword, location)
-                    if jobs:
-                        jobs = await collector.enrich_with_details(jobs)
-                        inserted, _ = repo_coll.insert_many(jobs)
-                        jobs_collected += inserted
-                        batch_new_jobs += inserted
-                except Exception as e:
-                    logger.error(
-                        "Error collecting '{}' in '{}': {}",
-                        keyword.display, location.display, e,
-                    )
 
-                # Check if we've hit the batch threshold
-                if batch_new_jobs >= BATCH_NEW_JOB_THRESHOLD:
+                # ── Step 1: Collect jobs until threshold or combos exhausted ──
+                while combo_index < total_combos:
+                    keyword, location = search_combos[combo_index]
+                    combo_index += 1
+                    batch_combos_processed += 1
+
                     logger.info(
-                        "Batch threshold reached: {} new jobs collected (threshold={}). "
-                        "Pausing collection for evaluation/discovery.",
-                        batch_new_jobs, BATCH_NEW_JOB_THRESHOLD,
+                        "[{}/{}] Searching: '{}' in '{}'",
+                        combo_index, total_combos,
+                        keyword.display, location.display,
                     )
+                    try:
+                        jobs = await collector.collect_for_search(keyword, location)
+                        if jobs:
+                            jobs = await collector.enrich_with_details(jobs)
+                            inserted, _ = repo_coll.insert_many(jobs)
+                            jobs_collected += inserted
+                            batch_new_jobs += inserted
+                    except (SessionExpiredError, ProfileNotFoundError):
+                        raise
+                    except Exception as e:
+                        logger.error(
+                            "Error collecting '{}' in '{}': {}",
+                            keyword.display, location.display, e,
+                        )
+
+                    # Check if we've hit the batch threshold
+                    if batch_new_jobs >= BATCH_NEW_JOB_THRESHOLD:
+                        logger.info(
+                            "Batch threshold reached: {} new jobs collected (threshold={}). "
+                            "Pausing collection for evaluation/discovery.",
+                            batch_new_jobs, BATCH_NEW_JOB_THRESHOLD,
+                        )
+                        break
+
+                logger.info(
+                    "COLLECTION_BATCH_COMPLETE | pipeline_batch={} combos_processed={} "
+                    "new_jobs={} total_collected={}",
+                    pipeline_batch, batch_combos_processed,
+                    batch_new_jobs, jobs_collected,
+                )
+
+                # ── Step 2: Evaluate newly collected jobs ─────────────────────
+                logger.info("Pipeline batch {}: Starting evaluation stage...", pipeline_batch)
+                _run_evaluation_stage(
+                    repo_eval, eval_service, run_id,
+                    total_eval_stats, pipeline_batch,
+                )
+
+                # ── Step 3 & 4: Discovery + Application processing ───────────
+                logger.info("Pipeline batch {}: Starting discovery stage...", pipeline_batch)
+                should_continue = await _run_discovery_stage(
+                    page, repo_discovery, discovery_service,
+                    run_id, discovery_summary, pipeline_batch,
+                )
+
+                if not should_continue:
+                    logger.warning(
+                        "Pipeline stopping early due to quota exhaustion "
+                        "(pipeline_batch={}).", pipeline_batch
+                    )
+                    # Break outer combo loop so we reach exports + summary
+                    combo_index = total_combos
                     break
 
-            logger.info(
-                "COLLECTION_BATCH_COMPLETE | pipeline_batch={} combos_processed={} "
-                "new_jobs={} total_collected={}",
-                pipeline_batch, batch_combos_processed,
-                batch_new_jobs, jobs_collected,
-            )
-
-            # ── Step 2: Evaluate newly collected jobs ─────────────────────
-            logger.info("Pipeline batch {}: Starting evaluation stage...", pipeline_batch)
-            _run_evaluation_stage(
-                repo_eval, eval_service, run_id,
-                total_eval_stats, pipeline_batch,
-            )
-
-            # ── Step 3 & 4: Discovery + Application processing ───────────
-            logger.info("Pipeline batch {}: Starting discovery stage...", pipeline_batch)
-            should_continue = await _run_discovery_stage(
-                page, repo_discovery, discovery_service,
-                run_id, discovery_summary, pipeline_batch,
-            )
-
-            if not should_continue:
-                logger.warning(
-                    "Pipeline stopping early due to quota exhaustion "
-                    "(pipeline_batch={}).", pipeline_batch
+                logger.info(
+                    "Pipeline batch {} complete: collected={} evaluated={} "
+                    "applications_processed={}",
+                    pipeline_batch, batch_new_jobs,
+                    total_eval_stats.evaluated, discovery_summary.processed,
                 )
-                # Break outer combo loop so we reach exports + summary
-                combo_index = total_combos
-                break
-
-            logger.info(
-                "Pipeline batch {} complete: collected={} evaluated={} "
-                "applications_processed={}",
-                pipeline_batch, batch_new_jobs,
-                total_eval_stats.evaluated, discovery_summary.processed,
-            )
-
-        # ── Close database connections ────────────────────────────────────
-        repo_coll.close()
-        repo_eval.close()
-        repo_discovery.close()
+        finally:
+            # ── Close database connections (guaranteed cleanup) ────────────
+            repo_coll.close()
+            repo_eval.close()
+            repo_discovery.close()
 
     # ── Stage: Export all reports ──────────────────────────────────────────
     logger.info("Starting report export stage...")

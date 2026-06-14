@@ -70,24 +70,36 @@ class BrowserSession:
         """
         self._profile_path.mkdir(parents=True, exist_ok=True)
 
+        for lock_file in ("SingletonLock", "SingletonSocket", "SingletonCookie", "lockfile"):
+            lock_path = self._profile_path / lock_file
+            if lock_path.exists():
+                lock_path.unlink(missing_ok=True)
+                logger.debug("Removed stale lock file: {}", lock_path)
+
         logger.info("Launching browser with profile: {}", self._profile_path)
 
         self._playwright = await async_playwright().start()
-        self._context = await self._playwright.chromium.launch_persistent_context(
-            user_data_dir=str(self._profile_path),
-            headless=self._settings.browser.headless,
-            slow_mo=self._settings.browser.slow_mo,
-            viewport={
-                "width": self._settings.browser.viewport_width,
-                "height": self._settings.browser.viewport_height,
-            },
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox",
-                "--disable-dev-shm-usage",
-                "--window-size=1280,900",
-            ],
-        )
+        try:
+            self._context = await self._playwright.chromium.launch_persistent_context(
+                user_data_dir=str(self._profile_path),
+                headless=self._settings.browser.headless,
+                slow_mo=self._settings.browser.slow_mo,
+                viewport={
+                    "width": self._settings.browser.viewport_width,
+                    "height": self._settings.browser.viewport_height,
+                },
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--window-size=1280,900",
+                ],
+            )
+        except Exception:
+            logger.error("Failed to launch browser context — stopping Playwright")
+            await self._playwright.stop()
+            self._playwright = None
+            raise
 
         self._context.set_default_timeout(self._settings.browser.default_timeout)
         for page in self._context.pages:

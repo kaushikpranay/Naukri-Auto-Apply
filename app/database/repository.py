@@ -16,6 +16,23 @@ from app.database.migrations import DatabaseMigrationManager
 from app.models.job import JobData
 
 
+def commit_with_retry(conn: sqlite3.Connection, max_retries: int = 5, initial_delay: float = 0.5) -> None:
+    """Commit transaction with backoff retry on SQLite locked error."""
+    import time
+    delay = initial_delay
+    for attempt in range(max_retries):
+        try:
+            conn.commit()
+            return
+        except sqlite3.OperationalError as e:
+            if "locked" in str(e).lower() and attempt < max_retries - 1:
+                logger.warning("Database locked during commit, retrying in {}s...", delay)
+                time.sleep(delay)
+                delay *= 2
+            else:
+                raise
+
+
 # Schema definition
 _CREATE_TABLE_SQL: str = """
 CREATE TABLE IF NOT EXISTS jobs (
@@ -63,25 +80,24 @@ def run_db_auto_cleanup(conn: object, db_path: Path) -> None:
     if db_path != Path(":memory:") and not db_path.exists():
         return
 
-    import sqlite3
-    from datetime import datetime, timedelta
-    from loguru import logger
+    from datetime import timedelta
 
     cutoff = (datetime.now() - timedelta(days=15)).isoformat()
+    cleanup_conn = None
     try:
-        conn = sqlite3.connect(str(db_path), timeout=30)
-        cursor = conn.cursor()
+        cleanup_conn = sqlite3.connect(str(db_path), timeout=30)
+        cursor = cleanup_conn.cursor()
 
         # Check if jobs table exists
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='jobs'")
         if not cursor.fetchone():
-            conn.close()
+            cleanup_conn.close()
             return
 
         cursor.execute("SELECT id FROM jobs WHERE created_at < ?", (cutoff,))
         old_ids = [row[0] for row in cursor.fetchall()]
         if not old_ids:
-            conn.close()
+            cleanup_conn.close()
             return
 
         placeholders = ",".join("?" for _ in old_ids)
@@ -90,7 +106,7 @@ def run_db_auto_cleanup(conn: object, db_path: Path) -> None:
         deleted_questions = 0
         deleted_evals = 0
 
-        # Delete in order of dependencies
+        # Delete in order of dependencies within a single transaction
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='job_applications'")
         if cursor.fetchone():
             cursor.execute(f"DELETE FROM job_applications WHERE job_id IN ({placeholders})", tuple(old_ids))
@@ -109,8 +125,7 @@ def run_db_auto_cleanup(conn: object, db_path: Path) -> None:
         cursor.execute(f"DELETE FROM jobs WHERE id IN ({placeholders})", tuple(old_ids))
         deleted_jobs = cursor.rowcount
 
-        conn.commit()
-        conn.close()
+        cleanup_conn.commit()
 
         logger.info(
             "Auto-cleanup: Deleted {} old job records (applications: {}, questions: {}, evals: {}) older than 15 days.",
@@ -118,6 +133,17 @@ def run_db_auto_cleanup(conn: object, db_path: Path) -> None:
         )
     except Exception as e:
         logger.error("Auto-cleanup error: {}", e)
+        if cleanup_conn:
+            try:
+                cleanup_conn.rollback()
+            except Exception:
+                pass
+    finally:
+        if cleanup_conn:
+            try:
+                cleanup_conn.close()
+            except Exception:
+                pass
 
 
 class JobRepository:
@@ -183,22 +209,45 @@ class JobRepository:
                 cursor.execute("DETACH DATABASE legacy_db")
                 return
 
-            # Check which columns exist in legacy_db.jobs first
+            # Check which columns exist in legacy_db.jobs
             cursor.execute("PRAGMA legacy_db.table_info(jobs)")
             legacy_cols = {row[1] for row in cursor.fetchall()}
 
-            # Build SELECT list dynamically
-            col_map = {
-                        "status": "'pending'",
-                        "retry_count": "0",
-                        "search_keyword": "''",
-                        "search_location": "''",
-                        }
-            select_extras = ", ".join(
-                f"legacy_db.jobs.{col}" if col in legacy_cols else default
-                for col, default in col_map.items()
+            base_cols = [
+                "job_title", "company_name", "job_description", "job_url",
+                "normalized_url", "apply_url", "experience_required", "location",
+                "posted_date", "recruiter_name", "recruiter_email",
+            ]
+            extra_col_map = {
+                "status": "'pending'",
+                "retry_count": "0",
+                "search_keyword": "''",
+                "search_location": "''",
+            }
+            base_select = [
+                f"legacy_db.jobs.{c}" if c in legacy_cols else "''"
+                for c in base_cols
+            ]
+            extra_select = [
+                f"legacy_db.jobs.{c}" if c in legacy_cols else default
+                for c, default in extra_col_map.items()
+            ]
+            created_at_expr = (
+                "COALESCE(legacy_db.jobs.created_at, datetime('now'))"
+                if "created_at" in legacy_cols
+                else "datetime('now')"
             )
-            # Then include those in your INSERT/SELECT
+            select_sql = ", ".join(base_select + extra_select + [created_at_expr])
+
+            cursor.execute(f"""
+                INSERT OR IGNORE INTO jobs (
+                    job_title, company_name, job_description, job_url,
+                    normalized_url, apply_url, experience_required, location,
+                    posted_date, recruiter_name, recruiter_email,
+                    status, retry_count, search_keyword, search_location, created_at
+                )
+                SELECT {select_sql} FROM legacy_db.jobs
+            """)
             inserted_rows: int = cursor.rowcount if cursor.rowcount != -1 else 0
             self._conn.commit()
             cursor.execute("DETACH DATABASE legacy_db")
@@ -248,7 +297,7 @@ class JobRepository:
             
             now,
         ))
-        self._conn.commit()
+        commit_with_retry(self._conn)
 
         inserted: bool = cursor.rowcount > 0
 
@@ -262,6 +311,7 @@ class JobRepository:
     def insert_many(self, jobs: list[JobData]) -> tuple[int, int]:
         """
         Insert multiple jobs with deduplication tracking.
+        Uses a single transaction for performance.
 
         Args:
             jobs: List of job data to insert.
@@ -271,12 +321,37 @@ class JobRepository:
         """
         inserted: int = 0
         duplicates: int = 0
+        now: str = datetime.now().isoformat()
+        cursor: sqlite3.Cursor = self._conn.cursor()
 
-        for job in jobs:
-            if self.insert_job(job):
-                inserted += 1
-            else:
-                duplicates += 1
+        try:
+            for job in jobs:
+                cursor.execute(_INSERT_JOB_SQL, (
+                    job.job_title,
+                    job.company_name,
+                    job.job_description,
+                    job.job_url,
+                    job.normalized_url,
+                    job.apply_url,
+                    job.experience_required,
+                    job.location,
+                    job.posted_date,
+                    job.recruiter_name,
+                    job.recruiter_email,
+                    job.status,
+                    job.retry_count,
+                    job.search_keyword or "",
+                    job.search_location or "",
+                    now,
+                ))
+                if cursor.rowcount > 0:
+                    inserted += 1
+                else:
+                    duplicates += 1
+            commit_with_retry(self._conn)
+        except Exception:
+            self._conn.rollback()
+            raise
 
         logger.info(
             "Batch insert complete: {} inserted, {} duplicates",
@@ -322,10 +397,13 @@ class JobRepository:
         """Update the queue status for a job."""
         cursor: sqlite3.Cursor = self._conn.cursor()
         cursor.execute(
-            "UPDATE jobs SET status = ? WHERE id = ?",
-            (status, job_id),
+            "UPDATE jobs SET status = ? WHERE id = ?"
+            " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
+            (status, job_id, status),
         )
         self._conn.commit()
+        if cursor.rowcount == 0:
+            logger.warning("update_job_status: no row updated for job_id={} status={}", job_id, status)
 
     def increment_retry_count(self, job_id: int) -> int:
         """Increment retry_count and return the new value."""

@@ -45,6 +45,25 @@ def main():
     
     root.lift()
     root.focus_force()
+    root.bell()  # audible alert so user knows popup appeared
+    # Flash the taskbar button to draw attention (Windows only)
+    try:
+        import ctypes
+        FLASHW_ALL = 3
+        FLASHW_TIMERNOFG = 12
+        class FLASHWINFO(ctypes.Structure):
+            _fields_ = [
+                ("cbSize", ctypes.c_uint),
+                ("hwnd", ctypes.c_void_p),
+                ("dwFlags", ctypes.c_uint),
+                ("uCount", ctypes.c_uint),
+                ("dwTimeout", ctypes.c_uint),
+            ]
+        hwnd = ctypes.windll.user32.GetForegroundWindow()
+        fwi = FLASHWINFO(ctypes.sizeof(FLASHWINFO), root.winfo_id(), FLASHW_ALL | FLASHW_TIMERNOFG, 5, 0)
+        ctypes.windll.user32.FlashWindowEx(ctypes.byref(fwi))
+    except Exception:
+        pass
 
     # Premium dark theme styling
     bg_color = "#0f0f16"

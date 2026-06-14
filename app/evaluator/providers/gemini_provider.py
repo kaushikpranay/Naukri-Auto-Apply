@@ -13,6 +13,7 @@ from google.genai import types
 
 from app.evaluator.errors import (
     ProviderConfigurationError,
+    ProviderQuotaError,
     ProviderTransientError,
 )
 from app.evaluator.providers.base_evaluator import BaseEvaluator
@@ -56,6 +57,12 @@ class GeminiEvaluator(BaseEvaluator):
 
         if status_code == 401 or "api key" in message or "authentication" in message:
             return ProviderConfigurationError(f"Gemini authentication failed: {exc}")
+
+        if status_code == 429 and any(
+            token in message
+            for token in ("quota", "insufficient_quota", "quota exceeded", "resource_exhausted")
+        ):
+            return ProviderQuotaError(f"Gemini quota exceeded: {exc}")
 
         if status_code in {408, 409, 425, 429, 500, 502, 503, 504}:
             return ProviderTransientError(f"Gemini transient error: {exc}")
