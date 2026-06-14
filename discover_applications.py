@@ -162,6 +162,16 @@ async def run(args: argparse.Namespace) -> None:
                     logger.info("Batch {}:\nFound {} APPLY jobs", batch_number, pending_count)
                     print(f"\nBatch {batch_number}:\nFound {pending_count} APPLY jobs")
 
+                    if page.is_closed():
+                        logger.info("Page closed before batch {} — relaunching browser.", batch_number)
+                        await session.close()
+                        await session.launch()
+                        try:
+                            page = await session.validate_session()
+                        except (SessionExpiredError, ProfileNotFoundError) as exc:
+                            logger.error("Cannot relaunch after context close: {}", exc)
+                            break
+
                     try:
                         batch_summary = await service.run(
                             page, run_id=run_id, force_job_id=None
