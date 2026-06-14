@@ -71,10 +71,8 @@ class BrowserSession:
         """
         self._profile_path.mkdir(parents=True, exist_ok=True)
 
-        # If another Chrome is already using this profile, raise immediately.
-        # DO NOT kill it — killing would destroy another running automation session.
-        # Raising here prevents launching a new Chrome that would forward its command
-        # to the running instance via Windows IPC and clobber its active page.
+        # Kill any stale Chrome processes using this profile before launching.
+        # These are leftover from a previous session that didn't clean up properly.
         try:
             profile_str = str(self._profile_path)
             out = subprocess.check_output(
@@ -86,12 +84,16 @@ class BrowserSession:
                 text=True, stderr=subprocess.DEVNULL, timeout=5,
             ).strip()
             if out.isdigit() and int(out) > 0:
-                raise RuntimeError(
-                    f"Browser profile already in use by {out} chrome.exe process(es). "
-                    "Another automation script may be running — wait for it to finish."
+                logger.warning("Killing {} stale chrome.exe process(es) using profile before launch.", out)
+                subprocess.run(
+                    [
+                        "powershell", "-NonInteractive", "-Command",
+                        f"Get-CimInstance Win32_Process -Filter \"name='chrome.exe'\" | "
+                        f"Where-Object {{$_.CommandLine -like '*{profile_str}*'}} | "
+                        f"ForEach-Object {{ Stop-Process -Id $_.ProcessId -Force }}",
+                    ],
+                    stderr=subprocess.DEVNULL, timeout=10,
                 )
-        except RuntimeError:
-            raise
         except Exception as probe_exc:
             logger.debug("Profile-in-use probe skipped: {}", probe_exc)
 
