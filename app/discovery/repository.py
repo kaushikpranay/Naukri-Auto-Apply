@@ -161,6 +161,27 @@ class ApplyDiscoveryRepository:
         self._conn.commit()
         logger.debug("Apply discovery schema verified")
 
+    def get_pending_discovery_count(self) -> int:
+        """Return count of APPLY-evaluated jobs still awaiting discovery."""
+        cursor = self._conn.cursor()
+        cursor.execute("""
+            SELECT COUNT(*)
+            FROM jobs j
+            JOIN ai_evaluations e ON e.job_id = j.id
+            LEFT JOIN job_applications a ON a.job_id = j.id
+            WHERE UPPER(e.action) = 'APPLY'
+              AND (
+                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
+                      'unknown_question', 'waiting_for_user', 'quota_exhausted',
+                      'temporary_failure', 'browser_error',
+                      'applied_successfully', 'failed', 'external_portal'
+                  ))
+              )
+        """)
+        row = cursor.fetchone()
+        return int(row[0]) if row else 0
+
     def get_jobs_for_discovery(self, limit: int) -> list[JobData]:
         """Return shortlisted jobs that still need discovery, prioritizing retryable ones."""
         query = """
@@ -239,8 +260,14 @@ class ApplyDiscoveryRepository:
     def update_job_status(self, job_id: int, status: str) -> None:
         """Update the status column of a job in the jobs table."""
         cursor = self._conn.cursor()
-        cursor.execute("UPDATE jobs SET status = ? WHERE id = ?", (status, job_id))
+        cursor.execute(
+            "UPDATE jobs SET status = ? WHERE id = ?"
+            " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
+            (status, job_id, status),
+        )
         self._conn.commit()
+        if cursor.rowcount == 0:
+            logger.warning("update_job_status: no row updated for job_id={} status={}", job_id, status)
 
     def increment_retry_count(self, job_id: int) -> int:
         """Increment retry_count on the jobs table and return the new value."""
@@ -285,6 +312,14 @@ class ApplyDiscoveryRepository:
     def clear_application(self, job_id: int) -> None:
         """Remove existing discovery record for a job (force reprocess)."""
         cursor = self._conn.cursor()
+        cursor.execute("SELECT status FROM jobs WHERE id = ?", (job_id,))
+        row = cursor.fetchone()
+        if row and row[0] == "applied_successfully":
+            logger.warning(
+                "clear_application: refusing to overwrite terminal state 'applied_successfully' for job_id={}",
+                job_id,
+            )
+            return
         cursor.execute("DELETE FROM job_applications WHERE job_id = ?", (job_id,))
         cursor.execute(
             "DELETE FROM job_application_questions WHERE job_id = ?", (job_id,)
@@ -375,8 +410,17 @@ class ApplyDiscoveryRepository:
         self,
         job_id: int,
         question: DiscoveredQuestion,
+        *,
+        auto_commit: bool = True,
     ) -> None:
-        """Persist a discovered question and keep the question bank updated."""
+        """Persist a discovered question and keep the question bank updated.
+
+        Args:
+            job_id: The job ID this question belongs to.
+            question: The discovered question to save.
+            auto_commit: If True, commits after saving. Set to False when
+                         batching with save_application for transactional safety.
+        """
         answer_to_save = question.answer
         if answer_to_save:
             ans_lower = str(answer_to_save).strip().lower()
@@ -385,53 +429,58 @@ class ApplyDiscoveryRepository:
 
         now = datetime.now().isoformat()
         cursor = self._conn.cursor()
-        cursor.execute(
-            """
-            INSERT INTO question_bank (
-                question_key, question_text, answer, usage_count, last_used,
-                field_type, created_at, last_used_at
-            ) VALUES (?, ?, ?, 1, ?, ?, ?, ?)
-            ON CONFLICT(question_key) DO UPDATE SET
-                question_text = excluded.question_text,
-                answer = COALESCE(NULLIF(excluded.answer, ''), question_bank.answer),
-                usage_count = question_bank.usage_count + 1,
-                last_used = excluded.last_used,
-                field_type = COALESCE(NULLIF(excluded.field_type, ''), question_bank.field_type),
-                last_used_at = excluded.last_used_at
-            """,
-            (
-                question.question_key,
-                question.question_text,
-                answer_to_save,
-                now,
-                question.field_type,
-                now,
-                now,
-            ),
-        )
-        cursor.execute(
-            """
-            INSERT INTO job_application_questions (
-                job_id, question_key, question_text, field_type,
-                required, answer, detected_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(job_id, question_key, question_text) DO UPDATE SET
-                field_type = excluded.field_type,
-                required = excluded.required,
-                answer = excluded.answer,
-                detected_at = excluded.detected_at
-            """,
-            (
-                job_id,
-                question.question_key,
-                question.question_text,
-                question.field_type,
-                1 if question.required else 0,
-                answer_to_save,
-                now,
-            ),
-        )
-        self._conn.commit()
+        try:
+            cursor.execute(
+                """
+                INSERT INTO question_bank (
+                    question_key, question_text, answer, usage_count, last_used,
+                    field_type, created_at, last_used_at
+                ) VALUES (?, ?, ?, 1, ?, ?, ?, ?)
+                ON CONFLICT(question_key) DO UPDATE SET
+                    question_text = excluded.question_text,
+                    answer = COALESCE(NULLIF(excluded.answer, ''), question_bank.answer),
+                    usage_count = question_bank.usage_count + 1,
+                    last_used = excluded.last_used,
+                    field_type = COALESCE(NULLIF(excluded.field_type, ''), question_bank.field_type),
+                    last_used_at = excluded.last_used_at
+                """,
+                (
+                    question.question_key,
+                    question.question_text,
+                    answer_to_save,
+                    now,
+                    question.field_type,
+                    now,
+                    now,
+                ),
+            )
+            cursor.execute(
+                """
+                INSERT INTO job_application_questions (
+                    job_id, question_key, question_text, field_type,
+                    required, answer, detected_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(job_id, question_key, question_text) DO UPDATE SET
+                    field_type = excluded.field_type,
+                    required = excluded.required,
+                    answer = excluded.answer,
+                    detected_at = excluded.detected_at
+                """,
+                (
+                    job_id,
+                    question.question_key,
+                    question.question_text,
+                    question.field_type,
+                    1 if question.required else 0,
+                    answer_to_save,
+                    now,
+                ),
+            )
+            if auto_commit:
+                self._conn.commit()
+        except Exception:
+            self._conn.rollback()
+            raise
 
     def get_question_answer(self, question_key: str) -> str | None:
         """Return a stored answer for a question key, if available."""

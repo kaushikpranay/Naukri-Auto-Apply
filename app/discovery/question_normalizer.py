@@ -32,7 +32,9 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(current ctc|ctc currently|current salary|present ctc)", re.I), "current_ctc"),
     (re.compile(r"(expected ctc|expected salary|expected package|salary expectation)", re.I), "expected_ctc"),
     # ── Notice period ────────────────────────────────────────────────────────
-    (re.compile(r"(notice period|current notice|serving notice|availability|join.*days)", re.I), "notice_period"),
+    (re.compile(r"(in.?person.*interview|office.*interview|available.*interview.*office|available.*in.?person)", re.I), "available_person_interview_at_office_location"),
+    (re.compile(r"(availability.*(?:attend|interview)|(?:attend|interview).*availability)", re.I), "interview_availability"),
+    (re.compile(r"(notice period|current notice|serving notice|join.*days|days.*to.*join)", re.I), "notice_period"),
     # ── Location ─────────────────────────────────────────────────────────────
     (re.compile(r"(current location|present location|where.*(located|based))", re.I), "current_location"),
     (re.compile(r"(preferred location|work location preference)", re.I), "preferred_location"),
@@ -40,6 +42,7 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"(work.*(from.home|remote|hybrid)|remote.*(work|job)|wfh)", re.I), "work_mode_preference"),
     (re.compile(r"(current (company|employer|organization)|present (company|employer))", re.I), "current_company"),
     (re.compile(r"(current (role|designation|title)|present (role|designation))", re.I), "current_role"),
+    (re.compile(r"(pass.*out|passed.*out|when.*graduate|graduation.*year|batch.*year|year.*pass.*out)", re.I), "when_did_pass_out_college"),
     (re.compile(r"(highest.*(qualification|degree)|education|graduation)", re.I), "education_qualification"),
     (re.compile(r"(immediately available|immediate joiner|can.*join.*immediately)", re.I), "immediate_availability"),
     (re.compile(r"(gender|pronouns)", re.I), "gender"),

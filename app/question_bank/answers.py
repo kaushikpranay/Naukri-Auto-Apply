@@ -86,11 +86,20 @@ _STATIC_ANSWERS: dict[str, str] = {
     "work_mode_preference":     "Work from Office",
     "education_qualification":  "B.Tech in Computer Science",
     "immediate_availability":   "No - 45 days notice period",
+    "interview_availability":   "Yes",
     # ── Personal / compliance ──────────────────────────────────────────────
     "gender":                   "Male",
     "disability_status":        "No",
     "veteran_status":           "No",
     "career_break":             "No",
+    # ── Education / batch ──────────────────────────────────────────────────
+    "when_did_pass_out_college": "2024",   # graduation year — update if wrong
+    "graduation_year":           "2024",
+    "batch_year":                "2024",
+    # ── Interview logistics ────────────────────────────────────────────────
+    "available_person_interview_at_office_location": "Yes",
+    "available_in_person_interview":                 "Yes",
+    "available_office_interview":                    "Yes",
     # ── Profile / misc ─────────────────────────────────────────────────────
     "profile_links":            "https://github.com/kaushikpranay",
     "cover_letter": (
