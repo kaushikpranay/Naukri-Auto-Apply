@@ -127,6 +127,9 @@ class ApplyDiscoveryRepository:
         "ALTER TABLE question_bank ADD COLUMN last_used_at TEXT",
         # Quota exhaustion detection
         "ALTER TABLE job_applications ADD COLUMN quota_message TEXT",
+        # Sync jobs.status for evaluated jobs whose discovery outcome was saved but
+        # status was never updated (old code omitted update_job_status call)
+        "UPDATE jobs SET status = (SELECT apply_type FROM job_applications WHERE job_id = jobs.id AND apply_type NOT IN ('', 'discovery_failed') LIMIT 1) WHERE status = 'evaluated' AND EXISTS (SELECT 1 FROM job_applications WHERE job_id = jobs.id AND apply_type NOT IN ('', 'discovery_failed'))",
     ]
 
     def _init_schema(self) -> None:
