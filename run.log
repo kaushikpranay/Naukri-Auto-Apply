@@ -1,5 +1,9 @@
-[2026-06-15 18:26:58] Traceback (most recent call last):
-[2026-06-15 18:26:58]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\discover_applications.py", line 23, in <module>
-[2026-06-15 18:26:58]     from loguru import logger
-[2026-06-15 18:26:58] ModuleNotFoundError: No module named 'loguru'
+[2026-06-15 18:27:40] Traceback (most recent call last):
+[2026-06-15 18:27:40]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\discover_applications.py", line 25, in <module>
+[2026-06-15 18:27:40]     from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExpiredError
+[2026-06-15 18:27:40]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\app\browser\session.py", line 17, in <module>
+[2026-06-15 18:27:40]     from playwright.async_api import (
+[2026-06-15 18:27:40]     ...<4 lines>...
+[2026-06-15 18:27:40]     )
+[2026-06-15 18:27:40] ModuleNotFoundError: No module named 'playwright'
 EXIT_CODE=1
