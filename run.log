@@ -1,6 +1,8 @@
-[2026-06-15 18:29:09] Traceback (most recent call last):
-[2026-06-15 18:29:09]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\discover_applications.py", line 28, in <module>
-[2026-06-15 18:29:09]     from app.export.apply_discovery_exporter import ApplyDiscoveryExporter
-[2026-06-15 18:29:09]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\app\export\apply_discovery_exporter.py", line 10, in <module>
-[2026-06-15 18:29:09]     import pandas as pd
-[2026-06-15 18:29:09] ModuleNotFoundError: No module named 'pandas'
+[2026-06-15 18:29:14] Traceback (most recent call last):
+[2026-06-15 18:29:14]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\discover_applications.py", line 28, in <module>
+[2026-06-15 18:29:14]     from app.export.apply_discovery_exporter import ApplyDiscoveryExporter
+[2026-06-15 18:29:14]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\app\export\apply_discovery_exporter.py", line 10, in <module>
+[2026-06-15 18:29:14]     import pandas as pd
+[2026-06-15 18:29:14] ModuleNotFoundError: No module named 'pandas'
+EXIT_CODE=1
+EXIT_CODE=1
