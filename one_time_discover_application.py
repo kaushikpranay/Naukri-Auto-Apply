@@ -88,6 +88,12 @@ def parse_args() -> argparse.Namespace:
         default=100,
         help="Maximum number of missing applications to re-run in this session to prevent accidental mass applications.",
     )
+    parser.add_argument(
+        "--reapply-actions",
+        type=str,
+        default="APPLY,REVIEW,SKIP",
+        help="Comma-separated list of AI evaluation actions to reapply (e.g. APPLY,REVIEW,SKIP). Default is APPLY,REVIEW,SKIP to process all missing evaluated jobs.",
+    )
     return parser.parse_args()
 
 
@@ -105,6 +111,9 @@ async def run(args: argparse.Namespace) -> None:
     run_id = str(uuid.uuid4())[:8]
 
     logger.info("Database Path: {}", db_path)
+    
+    reapply_actions = [a.strip().upper() for a in args.reapply_actions.split(",")]
+    logger.info("Allowed actions for application re-run: {}", reapply_actions)
 
     # Initialize Repository to execute migration check and establish connection
     temp_repo = JobRepository(db_path)
@@ -234,20 +243,70 @@ async def run(args: argparse.Namespace) -> None:
                 "MATCH: Job ID {} ('{}' at '{}') already applied (reason: {})",
                 ej_id, ej_title, ej_company, match_reason
             )
+            # Mark it in the database if it doesn't already have an application entry
+            if ej_id not in applied_by_job_id:
+                # Find matching application
+                matched_app = None
+                for app in applied_jobs:
+                    if app["job_id"] == ej_id:
+                        matched_app = app
+                        break
+                    for url in (ej_normalized_url, ej_url):
+                        if url and url in (app["job_url"], app["normalized_url"], app["apply_url"]):
+                            matched_app = app
+                            break
+                    if matched_app:
+                        break
+                    ext_id = extract_ext_id(ej_url) or extract_ext_id(ej_normalized_url)
+                    app_ext_id = extract_ext_id(app["job_url"]) or extract_ext_id(app["normalized_url"]) or extract_ext_id(app["apply_url"])
+                    if ext_id and app_ext_id and ext_id == app_ext_id:
+                        matched_app = app
+                        break
+                    comp_title_val = normalize_company_title(ej_company, ej_title)
+                    app_comp_title = normalize_company_title(app["company_name"], app["job_title"])
+                    if comp_title_val == app_comp_title:
+                        matched_app = app
+                        break
+
+                apply_type = "already_applied"
+                apply_url = ej_url
+                status = "applied_successfully"
+
+                if matched_app:
+                    apply_type = matched_app.get("apply_type") or "already_applied"
+                    apply_url = matched_app.get("apply_url") or ej_url
+                    status = matched_app.get("application_status") or "applied_successfully"
+
+                logger.info(
+                    "Marking Job ID {} ('{}' at '{}') as applied in database. Type: {}, Status: {}",
+                    ej_id, ej_title, ej_company, apply_type, status
+                )
+
+                if not args.dry_run:
+                    from app.models.discovery import ApplicationDiscoveryRecord
+                    record = ApplicationDiscoveryRecord(
+                        job_id=ej_id,
+                        apply_type=apply_type,
+                        apply_url=apply_url,
+                        status=status,
+                        detected_at=datetime.now().isoformat()
+                    )
+                    repo.save_application(record)
+                    repo.update_job_status(ej_id, apply_type)
         else:
             missing_count += 1
             logger.info(
                 "MISSING: Job ID {} ('{}' at '{}') has no application. Action: {}",
                 ej_id, ej_title, ej_company, ej_action
             )
-            # Re-queue only if the AI action is APPLY
-            if ej_action.upper() == "APPLY":
+            # Re-queue if the AI action is in the allowed reapply actions
+            if ej_action.upper() in reapply_actions:
                 reapply_queue.append(ej)
 
     logger.info("Reconciliation scan complete.")
     logger.info("Total matched (already applied): {}", already_applied_count)
     logger.info("Total missing applications: {}", missing_count)
-    logger.info("Total missing that require application (action=APPLY): {}", len(reapply_queue))
+    logger.info("Total missing that require application (actions={}): {}", args.reapply_actions, len(reapply_queue))
 
     # Step 4: Re-Run Missing Applications
     successfully_reapplied = 0

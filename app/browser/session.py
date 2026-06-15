@@ -123,7 +123,7 @@ class BrowserSession:
                     "--disable-blink-features=AutomationControlled",
                     "--no-sandbox",
                     "--disable-dev-shm-usage",
-                    "--window-size=1280,900",
+                    f"--window-size={self._settings.browser.viewport_width},{self._settings.browser.viewport_height}",
                 ],
             )
         except Exception:
@@ -134,7 +134,10 @@ class BrowserSession:
 
         self._context.set_default_timeout(self._settings.browser.default_timeout)
         for page in self._context.pages:
-            await page.set_viewport_size({"width": 1280, "height": 900})
+            await page.set_viewport_size({
+                "width": self._settings.browser.viewport_width,
+                "height": self._settings.browser.viewport_height,
+            })
         logger.info("Browser launched successfully")
 
     def _validate_profile(self) -> None:
