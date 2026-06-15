@@ -1,26 +1,26 @@
 {
   "overview_stats": {
-    "total_jobs": 2600,
-    "jobs_today": 0,
-    "apply": 412,
+    "total_jobs": 2646,
+    "jobs_today": 46,
+    "apply": 435,
     "review": 1069,
-    "skip": 1118,
+    "skip": 1141,
     "pending_eval": 1,
-    "pending_apply": 7,
-    "easy_apply": 55,
-    "external_portal": 208,
+    "pending_apply": 0,
+    "easy_apply": 65,
+    "external_portal": 218,
     "already_applied": 29,
-    "applied_successfully": 64,
+    "applied_successfully": 73,
     "failed": 0,
-    "unknown_flow": 56,
+    "unknown_flow": 57,
     "quota_exhausted": 0,
     "register": 0,
     "login_required": 0,
     "email": 0,
-    "total_questions": 98,
-    "answered_questions": 91,
-    "coverage_pct": 92.9,
-    "last_run": "2026-06-13T20:18:11.438812",
+    "total_questions": 101,
+    "answered_questions": 94,
+    "coverage_pct": 93.1,
+    "last_run": "2026-06-15T20:18:06.789119",
     "retry_queue": {
       "count": 0,
       "reasons": {
@@ -765,6 +765,45 @@
       "priority": "high",
       "reason": "Candidate has strong production-grade Python backend experience with FastAPI and extensive AWS deployment, directly matching core job requirements. Advanced Generative AI projects demonstrate high capability in building complex, scalable systems. Missing front-end skills are noted as an advantage, not a hard requirement.",
       "confidence": 95.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 10767,
+      "job_title": "Software Engineer- GenAI",
+      "company_name": "PayU",
+      "location": "Gurugram",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-genai-payu-india-gurugram-1-to-4-years-150626501545",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS deployments, and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 11326,
+      "job_title": "LLM Engineer (Freelancer)",
+      "company_name": "Deccan Ai",
+      "location": "Remote",
+      "experience_required": "0-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-llm-engineer-freelancer-deccan-ai-hyderabad-0-to-2-years-150626019942",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Production RAG, LangGraph, FastAPI, AWS experience align with LLM Engineer role.",
+      "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 11804,
+      "job_title": "Back End Engineer",
+      "company_name": "ti Steps",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "0-1 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-ti-steps-hyderabad-chennai-bengaluru-0-to-1-years-271125029223",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, AWS deployments, transferable cloud skills.",
+      "confidence": 85.0,
       "apply_status": "applied_successfully"
     },
     {
@@ -3654,6 +3693,149 @@
       "apply_status": "external_portal"
     },
     {
+      "id": 10857,
+      "job_title": "GenAI Developer",
+      "company_name": "unionsystems technologies",
+      "location": "Chennai, Hyderabad",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-genai-developer-unionsystems-technologies-hyderabad-chennai-3-to-5-years-150626500177",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 10927,
+      "job_title": "AI Engineer",
+      "company_name": "Applied Data Finance",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-applied-data-finance-hyderabad-chennai-bengaluru-2-to-4-years-150626918428",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 10928,
+      "job_title": "AI Engineer",
+      "company_name": "Applied Data Finance",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-applied-data-finance-hyderabad-chennai-bengaluru-2-to-7-years-150626918099",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 10930,
+      "job_title": "AI Engineer",
+      "company_name": "Kimberly-Clark Corporation",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-kimberly-clark-bengaluru-2-to-5-years-150626503056",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 10963,
+      "job_title": "Junior AI Engineer",
+      "company_name": "Ion Enterprise Solutions",
+      "location": "Hybrid - Pune",
+      "experience_required": "4-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-junior-ai-engineer-ion-enterprise-solutions-pune-4-to-5-years-030126016858",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "easy_apply"
+    },
+    {
+      "id": 11160,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Tech Mahindra",
+      "location": "Hybrid - Bengaluru, Pune, Hyderabad",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-tech-mahindra-hyderabad-pune-bengaluru-4-to-9-years-150626004220",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "easy_apply"
+    },
+    {
+      "id": 11226,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-150626924265",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 11377,
+      "job_title": "GenAI Developer (FastAPI)",
+      "company_name": "Akriya Group",
+      "location": "Mumbai (All Areas)",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-genai-developer-fastapi-akriya-group-mumbai-all-areas-4-to-6-years-150626013045",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "easy_apply"
+    },
+    {
+      "id": 11753,
+      "job_title": "Back End Engineer",
+      "company_name": "Tredence",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-tredence-bengaluru-2-to-5-years-150626005303",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience, FastAPI backend, AWS deployments, and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "easy_apply"
+    },
+    {
+      "id": 11865,
+      "job_title": "Senior Devops / Backend developer",
+      "company_name": "Tigmo",
+      "location": "Indore",
+      "experience_required": "0-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-devops-backend-developer-tigmo-indore-0-to-5-years-150626504333",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong backend, AWS deployment, and production RAG experience align with DevOps responsibilities.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 11930,
+      "job_title": "Software Engineer",
+      "company_name": "Legato",
+      "location": "Hybrid - Bengaluru",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-legato-bengaluru-3-to-5-years-160326014656",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core AI/LLM requirements.",
+      "confidence": 82.0,
+      "apply_status": "easy_apply"
+    },
+    {
       "id": 224,
       "job_title": "GenAI Engineer",
       "company_name": "Qloron Technology",
@@ -4382,6 +4564,84 @@
       "apply_status": "external_portal"
     },
     {
+      "id": 10918,
+      "job_title": "Walk-in || 20th Drive_ Gen AI/ Data Scientist/ MLOps For Kolkata",
+      "company_name": "LTM",
+      "location": "Hybrid - Kolkata",
+      "experience_required": "",
+      "job_url": "https://www.naukri.com/job-listings-20th-drive-gen-ai-data-scientist-mlops-for-kolkata-ltimindtree-kolkata-4-to-9-years-150626004971",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 11111,
+      "job_title": "AI Engineer",
+      "company_name": "Infosys",
+      "location": "Bengaluru",
+      "experience_required": "1-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-infosys-limited-bengaluru-1-to-5-years-150626923050",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG and agentic AI experience; transferable AWS/Azure skills; lacks specific Azure IoT and industrial domain exposure.",
+      "confidence": 80.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 11123,
+      "job_title": "Artificial Intelligence Engineer",
+      "company_name": "Azentio Software",
+      "location": "Hybrid - Bengaluru",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-azentio-software-bengaluru-2-to-4-years-150626016424",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 11416,
+      "job_title": "LangGraph/ LangChain Consultant",
+      "company_name": "Infosys",
+      "location": "Bengaluru",
+      "experience_required": "1-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-langgraph-langchain-consultant-infosys-limited-bengaluru-1-to-5-years-150626922773",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience with transferable AWS skills.",
+      "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 11449,
+      "job_title": "Software Engineer - Agentic & Generative AI",
+      "company_name": "HARMAN India",
+      "location": "Pune",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-agentic-generative-ai-harman-india-pune-4-to-6-years-150626503558",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 11973,
+      "job_title": "Python Software Developer",
+      "company_name": "Freetechcafe Technologies",
+      "location": "Chennai(Sholinganallur)",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-software-developer-freetechcafe-technologies-chennai-3-to-5-years-150626016256",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong FastAPI and AI production experience, transferable cloud skills, but lacks MSSQL/SQLAlchemy.",
+      "confidence": 85.0,
+      "apply_status": "easy_apply"
+    },
+    {
       "id": 241,
       "job_title": "Gen AI+GCP Developer",
       "company_name": "Capgemini",
@@ -4915,6 +5175,19 @@
       "apply_status": "unknown"
     },
     {
+      "id": 11112,
+      "job_title": "AI Engineer",
+      "company_name": "Infosys",
+      "location": "Bengaluru",
+      "experience_required": "1-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-infosys-limited-bengaluru-1-to-5-years-150626922622",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LLM experience, transferable AWS/Azure skills, but lacks industrial IoT and Azure-specific services.",
+      "confidence": 75.0,
+      "apply_status": "applied_successfully"
+    },
+    {
       "id": 306,
       "job_title": "GenAI Devops Engineer",
       "company_name": "PwC Service Delivery Center",
@@ -5224,7 +5497,7 @@
       "priority": "high",
       "reason": "Strong backend and AWS experience, but lacks frontend framework skills.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 10531,
@@ -5237,7 +5510,7 @@
       "priority": "high",
       "reason": "Strong production RAG and backend experience, but lacks frontend stack.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 10613,
@@ -5250,7 +5523,33 @@
       "priority": "high",
       "reason": "Strong production experience in Python, FastAPI, Microservices, AWS, and AI Agents, with relevant experience in complex, reliable workflow design, making them a strong candidate for a Temporal-adjacent role, despite lacking explicit Temporal experience.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 10839,
+      "job_title": "Senior Software Engineer: Data Engineering, GCP, GenAI",
+      "company_name": "Wells Fargo",
+      "location": "Hyderabad",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-software-engineer-data-engineering-gcp-genai-wells-fargo-international-solutions-private-ltd-hyderabad-4-to-9-years-150626922073",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong production RAG and GenAI experience with transferable cloud skills, but lacks direct GCP exposure.",
+      "confidence": 75.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 11942,
+      "job_title": "Software Engineer",
+      "company_name": "Cyncly",
+      "location": "Bengaluru",
+      "experience_required": "2-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-cyncly-bengaluru-2-to-3-years-191125504310",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, transferable AWS to Azure, but lacks MongoDB and Azure Blob Storage.",
+      "confidence": 75.0,
+      "apply_status": "external_portal"
     },
     {
       "id": 648,
@@ -5302,7 +5601,7 @@
       "priority": "medium",
       "reason": "Exceptional FastAPI, AWS, and Generative AI/LLM production experience, highly relevant for backend and AI-accelerated development. Lacks primary React Native and direct MongoDB experience.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 40,
@@ -5341,7 +5640,7 @@
       "priority": "high",
       "reason": "Strong AI backend experience but lacks core frontend stack.",
       "confidence": 70.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     },
     {
       "id": 10555,
@@ -5354,7 +5653,7 @@
       "priority": "medium",
       "reason": "Strong production RAG and FastAPI experience, but lacks frontend and containerization skills.",
       "confidence": 70.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 1,
@@ -5393,7 +5692,7 @@
       "priority": "medium",
       "reason": "Strong backend and AI experience but lacks frontend frameworks required for fullstack role.",
       "confidence": 60.0,
-      "apply_status": "pending"
+      "apply_status": "easy_apply"
     }
   ],
   "external_jobs": [
@@ -5706,6 +6005,16 @@
       "apply_url": "https://careers.srmtech.com/jobs/Careers/664168000020238213",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-backend-developer-python-fastapi-srm-technologies-chennai-2-to-4-years-060526500380"
+    },
+    {
+      "id": 10767,
+      "job_title": "Software Engineer- GenAI",
+      "company_name": "PayU",
+      "location": "Gurugram",
+      "interview_probability": 90.0,
+      "apply_url": "https://careers.payu.in/PayU/job/Gurgaon-Software-Engineer-GenAI/53594380/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-genai-payu-india-gurugram-1-to-4-years-150626501545"
     },
     {
       "id": 1912,
@@ -6688,6 +6997,46 @@
       "job_url": "https://www.naukri.com/job-listings-software-engineer-indus-valley-partners-mumbai-2-to-7-years-200226503384"
     },
     {
+      "id": 10857,
+      "job_title": "GenAI Developer",
+      "company_name": "unionsystems technologies",
+      "location": "Chennai, Hyderabad",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.unionsystechnologies.com/Careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-developer-unionsystems-technologies-hyderabad-chennai-3-to-5-years-150626500177"
+    },
+    {
+      "id": 10930,
+      "job_title": "AI Engineer",
+      "company_name": "Kimberly-Clark Corporation",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://kimberlyclark.wd1.myworkdayjobs.com/en-US/GLOBAL/job/IT-Centre-Bengaluru-GDTC/AI-Engineer_885971-2",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-kimberly-clark-bengaluru-2-to-5-years-150626503056"
+    },
+    {
+      "id": 11226,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5210957-S1911176_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-150626924265"
+    },
+    {
+      "id": 11865,
+      "job_title": "Senior Devops / Backend developer",
+      "company_name": "Tigmo",
+      "location": "Indore",
+      "interview_probability": 85.0,
+      "apply_url": "https://tigmo.in/careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-devops-backend-developer-tigmo-indore-0-to-5-years-150626504333"
+    },
+    {
       "id": 224,
       "job_title": "GenAI Engineer",
       "company_name": "Qloron Technology",
@@ -6966,6 +7315,16 @@
       "apply_url": "https://jobs.smartrecruiters.com/EVERSANA1/744000121165603",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-developer-eversana-india-bengaluru-3-to-5-years-170426500708"
+    },
+    {
+      "id": 11449,
+      "job_title": "Software Engineer - Agentic & Generative AI",
+      "company_name": "HARMAN India",
+      "location": "Pune",
+      "interview_probability": 80.0,
+      "apply_url": "https://jobsearch.harman.com/en_US/careers/JobDetail/Software-Engineer-Agentic-Generative-AI/31853",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-agentic-generative-ai-harman-india-pune-4-to-6-years-150626503558"
     },
     {
       "id": 605,
@@ -7388,6 +7747,26 @@
       "job_url": "https://www.naukri.com/job-listings-full-stack-developer-anlight-consulting-services-gurugram-3-to-8-years-120626503836"
     },
     {
+      "id": 10839,
+      "job_title": "Senior Software Engineer: Data Engineering, GCP, GenAI",
+      "company_name": "Wells Fargo",
+      "location": "Hyderabad",
+      "interview_probability": 70.0,
+      "apply_url": "https://wd1.myworkdaysite.com/en-US/recruiting/wf/WellsFargoJobs/job/Hyderabad-India/Senior-Software-Engineer--Data-Engineering--GCP--GenAI_R-544175",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-software-engineer-data-engineering-gcp-genai-wells-fargo-international-solutions-private-ltd-hyderabad-4-to-9-years-150626922073"
+    },
+    {
+      "id": 11942,
+      "job_title": "Software Engineer",
+      "company_name": "Cyncly",
+      "location": "Bengaluru",
+      "interview_probability": 70.0,
+      "apply_url": "https://fa-ewdg-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CynclyJobs/job/2095",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-cyncly-bengaluru-2-to-3-years-191125504310"
+    },
+    {
       "id": 648,
       "job_title": "SDE (GenAI + Backend Engineering)",
       "company_name": "Assessli",
@@ -7418,6 +7797,16 @@
       "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-grid-dynamics-bengaluru-1-to-2-years-130126500767"
     },
     {
+      "id": 10597,
+      "job_title": "Senior React Native / Full Stack Developer (FastAPI, AWS, MongoDB)",
+      "company_name": "India Health Link",
+      "location": "Chennai",
+      "interview_probability": 65.0,
+      "apply_url": "https://ihl.keka.com/careers/jobdetails/124618",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-react-native-full-stack-developer-fastapi-aws-mongodb-india-health-link-pvt-ltd-chennai-4-to-8-years-030426503818"
+    },
+    {
       "id": 40,
       "job_title": "SOAR Automation Engineer/GenAI Engineer",
       "company_name": "Kyndryl",
@@ -7426,6 +7815,16 @@
       "apply_url": "https://kyndryl.wd5.myworkdayjobs.com/en-US/kyndrylprofessionalcareers/job/Greater-Noida-Uttar-Pradesh-India/Cybersecurity_R-52995-1",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-soar-automation-engineer-genai-engineer-kyndryl-noida-2-to-7-years-200526503159"
+    },
+    {
+      "id": 10555,
+      "job_title": "Full stack Developer",
+      "company_name": "Wangoes Technologies",
+      "location": "Indore",
+      "interview_probability": 60.0,
+      "apply_url": "https://www.wangoes.com/career",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-wangoes-technology-indore-4-to-9-years-030626502002"
     },
     {
       "id": 1,
@@ -21416,6 +21815,15 @@
       "last_used_at": "2026-06-07T01:11:35.589200"
     },
     {
+      "id": 6001,
+      "question_key": "total_years_experience",
+      "question_text": "How many years of experience do you have in Fast Api?",
+      "answer": "2",
+      "usage_count": 10,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T21:00:29.194235"
+    },
+    {
       "id": 2978,
       "question_key": "hi_kaushik_pranay_thank_you_for_showing_interest_kindly_answ",
       "question_text": "Hi Kaushik Pranay, thank you for showing interest. Kindly answer all the recruiter's questions to successfully apply for the job.",
@@ -21423,6 +21831,15 @@
       "usage_count": 7,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-06T05:00:13.555330"
+    },
+    {
+      "id": 4482,
+      "question_key": "relocation_city_preference",
+      "question_text": "Please select the city you are currently residing or willing to relocate to",
+      "answer": "Noida",
+      "usage_count": 6,
+      "field_type": "checkbox",
+      "last_used_at": "2026-06-15T20:57:08.348944"
     },
     {
       "id": 8,
@@ -21479,15 +21896,6 @@
       "last_used_at": "2026-06-07T04:55:35.663859"
     },
     {
-      "id": 4482,
-      "question_key": "relocation_city_preference",
-      "question_text": "Please select the city you are currently residing or willing to relocate to",
-      "answer": "Noida",
-      "usage_count": 5,
-      "field_type": "checkbox",
-      "last_used_at": "2026-06-14T03:23:38.326849"
-    },
-    {
       "id": 7,
       "question_key": "llm_experience",
       "question_text": "How many years of hands-on experience do you have working with Generative AI and Large Language Models (LLMs)?",
@@ -21513,6 +21921,15 @@
       "usage_count": 4,
       "field_type": "checkbox",
       "last_used_at": "2026-06-07T17:52:04.686441"
+    },
+    {
+      "id": 5803,
+      "question_key": "salutation",
+      "question_text": "Salutation",
+      "answer": "Mr.",
+      "usage_count": 4,
+      "field_type": "radio",
+      "last_used_at": "2026-06-15T20:57:30.305058"
     },
     {
       "id": 6,
@@ -21551,15 +21968,6 @@
       "last_used_at": "2026-06-08T01:32:46.324090"
     },
     {
-      "id": 5803,
-      "question_key": "salutation",
-      "question_text": "Salutation",
-      "answer": "Mr.",
-      "usage_count": 3,
-      "field_type": "radio",
-      "last_used_at": "2026-06-08T01:35:18.548628"
-    },
-    {
       "id": 5953,
       "question_key": "the_role_will_be_based_out_of_the_klypup_office_onsite_in_no",
       "question_text": "The role will be based out of the Klypup office, onsite in Noida. Does that work for you?",
@@ -21567,15 +21975,6 @@
       "usage_count": 3,
       "field_type": "checkbox",
       "last_used_at": "2026-06-08T03:09:08.570569"
-    },
-    {
-      "id": 6001,
-      "question_key": "total_years_experience",
-      "question_text": "How many years of experience do you have in Ai Engineer?",
-      "answer": "2",
-      "usage_count": 3,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-14T02:37:37.081466"
     },
     {
       "id": 6004,
@@ -21630,6 +22029,24 @@
       "usage_count": 3,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-14T14:42:22.055148"
+    },
+    {
+      "id": 8587,
+      "question_key": "which_following_frontend_tech_stack_worked",
+      "question_text": "Which of the following FrontEnd tech stack you have worked?",
+      "answer": "HTML, CSS",
+      "usage_count": 3,
+      "field_type": "checkbox",
+      "last_used_at": "2026-06-15T18:33:09.785096"
+    },
+    {
+      "id": 9036,
+      "question_key": "working_currently",
+      "question_text": "Are you working currently",
+      "answer": "Yes",
+      "usage_count": 3,
+      "field_type": "radio",
+      "last_used_at": "2026-06-15T20:40:41.719298"
     },
     {
       "id": 23,
@@ -21884,6 +22301,15 @@
       "last_used_at": "2026-06-14T03:59:05.192435"
     },
     {
+      "id": 8591,
+      "question_key": "academics_10th_secondary_marks_percentage",
+      "question_text": "Academics: 10th/Secondary Marks Percentage?",
+      "answer": "94",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T18:35:43.208905"
+    },
+    {
       "id": 1,
       "question_key": "first_name",
       "question_text": "First Name*",
@@ -21918,6 +22344,15 @@
       "usage_count": 1,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-08T02:30:29.188469"
+    },
+    {
+      "id": 31,
+      "question_key": "immediate_availability",
+      "question_text": "are you a immediate joiner ?",
+      "answer": "No - 45 days notice period",
+      "usage_count": 1,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T20:41:19.576890"
     },
     {
       "id": 2390,
@@ -22118,15 +22553,6 @@
       "last_used_at": null
     },
     {
-      "id": 31,
-      "question_key": "immediate_availability",
-      "question_text": "immediate_availability",
-      "answer": "No - 45 days notice period",
-      "usage_count": 0,
-      "field_type": null,
-      "last_used_at": null
-    },
-    {
       "id": 32,
       "question_key": "gender",
       "question_text": "gender",
@@ -22264,9 +22690,9 @@
   ],
   "system_status": {
     "collector": {
-      "total_jobs": 2600,
-      "pending": 2,
-      "evaluated": 2298,
+      "total_jobs": 2646,
+      "pending": 1,
+      "evaluated": 2203,
       "queued": 0,
       "failed": 0,
       "keywords": [
@@ -22293,9 +22719,9 @@
       ]
     },
     "evaluator": {
-      "total_evaluations": 1481,
-      "total_runs": 14,
-      "last_evaluation": "2026-06-13T20:18:11.438812",
+      "total_evaluations": 1504,
+      "total_runs": 15,
+      "last_evaluation": "2026-06-15T20:18:06.789119",
       "models_used": [
         "Groq",
         "ExperienceFilter",
@@ -22305,9 +22731,9 @@
       "pending_eval": 1
     },
     "discovery": {
-      "total_processed": 412,
-      "pending_apply": 7,
-      "last_discovery": "2026-06-14T15:04:23.266420",
+      "total_processed": 442,
+      "pending_apply": 0,
+      "last_discovery": "2026-06-15T21:01:08.489152",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
@@ -22326,11 +22752,17 @@
       }
     },
     "question_bank": {
-      "total": 98,
-      "answered": 91,
-      "coverage_pct": 92.9
+      "total": 101,
+      "answered": 94,
+      "coverage_pct": 93.1
     },
     "recent_runs": [
+      {
+        "run_id": "a96bfc3b",
+        "cnt": 46,
+        "started": "2026-06-15T20:12:17.742047",
+        "ended": "2026-06-15T20:18:06.789119"
+      },
       {
         "run_id": "e19dc925",
         "cnt": 246,
@@ -22354,14 +22786,8 @@
         "cnt": 2087,
         "started": "2026-06-04T21:45:50.042136",
         "ended": "2026-06-04T22:51:20.261127"
-      },
-      {
-        "run_id": "9a910ba1",
-        "cnt": 69,
-        "started": "2026-06-04T03:05:42.414309",
-        "ended": "2026-06-04T03:12:15.892158"
       }
     ]
   },
-  "generated_at": "2026-06-14T19:19:55.417223"
+  "generated_at": "2026-06-15T21:17:13.417239"
 }
