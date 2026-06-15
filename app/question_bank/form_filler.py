@@ -1221,6 +1221,8 @@ class FormFiller:
                     matched_idx = -1
                     matched_label = ""
                     for cb in checkboxes:
+                        if cb.get("tagName") == "div":
+                            continue
                         lbl = cb["labelText"].lower().strip()
                         if not lbl:
                             continue
