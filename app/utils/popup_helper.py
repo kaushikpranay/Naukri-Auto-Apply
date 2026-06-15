@@ -24,13 +24,14 @@ def main():
     options = input_data.get("options", [])
     stored_answer = input_data.get("stored_answer")
     is_case2 = input_data.get("is_case2", False)
+    is_multi_select = input_data.get("is_multi_select", False)
 
     result = {"answer": None, "selected_option": None}
 
     # Initialize Tkinter Window
     root = tk.Tk()
     root.title("Naukri Automation — Human in the Loop")
-    root.geometry("620x480")
+    root.geometry("640x520")
     root.configure(bg="#0f0f16")
     root.attributes("-topmost", True)
     root.resizable(True, True)
@@ -98,43 +99,114 @@ def main():
         bg=bg_color, 
         fg=fg_color,
         font=("Segoe UI", 13, "bold"), 
-        wraplength=570, 
+        wraplength=592, 
         justify="left"
     )
     question_label.pack(anchor="w", padx=24, pady=(0, 10))
 
     # 3. Contextual Box (Case 2: Mapping indicator)
+    ctx_label = None
     if is_case2 and stored_answer:
         ctx_frame = tk.Frame(root, bg=card_bg, padx=12, pady=8, bd=0)
         ctx_frame.pack(fill="x", padx=24, pady=(0, 10))
         
         info_icon = "ℹ "
-        tk.Label(
+        ctx_label = tk.Label(
             ctx_frame, 
             text=f"{info_icon}Existing answer is '{stored_answer}'. Please map it to one of the options below:", 
             bg=card_bg, 
             fg="#c084fc",
             font=("Segoe UI", 9, "italic"),
-            wraplength=540,
+            wraplength=568,
             justify="left"
         )
-        ctx_frame.pack()
-        # Ensure label inside context fits and wraps correctly
-        for child in ctx_frame.winfo_children():
-            child.pack(anchor="w")
+        ctx_label.pack(anchor="w")
 
-    # Divider line
+    # 5. Bottom Navigation / Buttons Bar - Packed FIRST at the bottom to ensure visibility
+    btn_frame = tk.Frame(root, bg=bg_color)
+    btn_frame.pack(side="bottom", fill="x", padx=24, pady=(15, 20))
+
+    # Divider line - Packed next at the bottom
     divider = tk.Frame(root, bg="#27273a", height=1)
-    divider.pack(fill="x", padx=24, pady=5)
+    divider.pack(side="bottom", fill="x", padx=24, pady=5)
 
-    # 4. Interactive Body Area
+    # 4. Interactive Body Area - Packed last to fill remaining center space
     body_frame = tk.Frame(root, bg=bg_color)
     body_frame.pack(fill="both", expand=True, padx=24, pady=10)
 
     selected_var = tk.StringVar(value="")
+    radio_buttons = []
+    check_vars = []  # For multi-select checkboxes
 
-    if options:
-        # Multiple Choice selection (Radio buttons)
+    if options and is_multi_select:
+        # Multi-select checkbox mode
+        tk.Label(
+            body_frame, 
+            text="Select all that apply:", 
+            bg=bg_color, 
+            fg=secondary_fg,
+            font=("Segoe UI", 10, "bold")
+        )
+        body_frame.winfo_children()[-1].pack(anchor="w", pady=(0, 8))
+
+        # Scrollable option panel
+        canvas = tk.Canvas(body_frame, bg=bg_color, highlightthickness=0)
+        scrollbar = tk.Scrollbar(body_frame, orient="vertical", command=canvas.yview)
+        scrollable_frame = tk.Frame(canvas, bg=bg_color)
+
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+
+        canvas_window = canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+        canvas.bind("<Configure>", lambda e: canvas.itemconfig(canvas_window, width=e.width))
+
+        # Build checkbox choices
+        for opt in options:
+            var = tk.BooleanVar(value=False)
+            check_vars.append((var, opt))
+            cb_frame = tk.Frame(scrollable_frame, bg=bg_color, pady=2)
+            cb_frame.pack(fill="x", anchor="w")
+            
+            cb = tk.Checkbutton(
+                cb_frame, 
+                text=opt, 
+                variable=var,
+                bg=bg_color, 
+                fg="#e5e7eb", 
+                selectcolor="#1e293b",
+                font=("Segoe UI", 11), 
+                activebackground=bg_color,
+                activeforeground=fg_color,
+                highlightthickness=0,
+                wraplength=560,
+                justify="left"
+            )
+            cb.pack(anchor="w")
+            radio_buttons.append(cb)  # reuse list for resize handler
+
+        canvas.pack(side="left", fill="both", expand=True)
+        if len(options) > 6:
+            scrollbar.pack(side="right", fill="y")
+
+        def _on_mousewheel(event):
+            canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        canvas.bind_all("<MouseWheel>", _on_mousewheel)
+
+        def on_submit():
+            selected = [opt_text for var, opt_text in check_vars if var.get()]
+            if selected:
+                val = ", ".join(selected)
+            else:
+                val = None
+            result["answer"] = stored_answer if (is_case2 and stored_answer is not None) else val
+            result["selected_option"] = val
+            root.destroy()
+
+    elif options:
+        # Single-choice selection (Radio buttons)
         tk.Label(
             body_frame, 
             text="Select the most appropriate option:", 
@@ -154,8 +226,11 @@ def main():
             lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
         )
 
-        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas_window = canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
+
+        # Make the scrollable frame fill the canvas width
+        canvas.bind("<Configure>", lambda e: canvas.itemconfig(canvas_window, width=e.width))
 
         # Build radio button choices
         for opt in options:
@@ -173,9 +248,12 @@ def main():
                 font=("Segoe UI", 11), 
                 activebackground=bg_color,
                 activeforeground=fg_color,
-                highlightthickness=0
+                highlightthickness=0,
+                wraplength=560,
+                justify="left"
             )
             rb.pack(anchor="w")
+            radio_buttons.append(rb)
 
         canvas.pack(side="left", fill="both", expand=True)
         
@@ -240,10 +318,6 @@ def main():
     # Handle window close (X button) as skip/cancel
     root.protocol("WM_DELETE_WINDOW", on_skip)
 
-    # 5. Bottom Navigation / Buttons Bar
-    btn_frame = tk.Frame(root, bg=bg_color)
-    btn_frame.pack(fill="x", padx=24, pady=(15, 25))
-
     # Hover animations helpers
     def on_enter(e, widget, bg):
         widget.configure(bg=bg)
@@ -281,6 +355,25 @@ def main():
     submit_btn.pack(side="right")
     submit_btn.bind("<Enter>", lambda e: on_enter(e, submit_btn, accent_hover))
     submit_btn.bind("<Leave>", lambda e: on_leave(e, submit_btn, accent_color))
+
+    # Dynamic wraplength resize handler
+    def on_window_resize(event):
+        if event.widget == root:
+            new_width = root.winfo_width() - 48
+            if new_width > 200:
+                question_label.configure(wraplength=new_width)
+                if ctx_label:
+                    try:
+                        ctx_label.configure(wraplength=new_width - 24)
+                    except Exception:
+                        pass
+                for rb in radio_buttons:
+                    try:
+                        rb.configure(wraplength=new_width - 40)
+                    except Exception:
+                        pass
+
+    root.bind("<Configure>", on_window_resize)
 
     # Start main Tkinter loop
     root.mainloop()

@@ -6,9 +6,9 @@ browser:
   headless: false
   profile_dir: "browser_profile"
   slow_mo: 500                    # milliseconds between actions
-  default_timeout: 3000000          # milliseconds
-  viewport_width: 1920
-  viewport_height: 1080
+  default_timeout: 30000            # milliseconds (30s — prevents silent multi-minute hangs)
+  viewport_width: 1280
+  viewport_height: 720
 
 paths:
   database: "database/jobs.db"

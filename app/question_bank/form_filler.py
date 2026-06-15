@@ -159,10 +159,14 @@ class FormFiller:
         container_sel = self._selectors.discovery.questions.container
         processed_keys: dict[str, str] = {}
         processed_texts: set[str] = set()
+        _error_keys: set[str] = set()  # Keys whose last fill had status="error" — allow retry
         _no_progress_count: int = 0
         _MAX_NO_PROGRESS: int = 5
+        _RESOLVE_TIMEOUT: float = 60.0  # Max seconds for chatbot question resolution
 
         for loop_count in range(30):
+            logger.info("── FILL_LOOP iter={}/30 ── processed={} filled={} job_id={}",
+                        loop_count, len(processed_keys), len(report.filled), job_id)
             # Check if page is closed (safely handling unit test MagicMock)
             is_closed = False
             if not (hasattr(page, "assert_called") or hasattr(page, "_mock_self")):
@@ -186,7 +190,14 @@ class FormFiller:
             target_field_type = "unknown"
             target_options: list[str] = []
 
-            active = await self._resolve_active_chatbot_question(page, processed_keys)
+            try:
+                active = await asyncio.wait_for(
+                    self._resolve_active_chatbot_question(page, processed_keys, error_keys=_error_keys),
+                    timeout=_RESOLVE_TIMEOUT,
+                )
+            except asyncio.TimeoutError:
+                logger.error("RESOLVE_CHATBOT_TIMEOUT: Chatbot question resolution exceeded {}s — breaking loop", _RESOLVE_TIMEOUT)
+                active = None
             if active:
                 if active.get("field_type") == "unknown":
                     await self._final_drawer_refresh_scan(page, active)
@@ -229,7 +240,9 @@ class FormFiller:
                         continue
 
                     question_key = normalize_question_key(question_text, preview_options)
-                    resolved_key, session_action = self._resolve_session_key(question_text, question_key, processed_keys)
+                    resolved_key, session_action = self._resolve_session_key(
+                        question_text, question_key, processed_keys, error_keys=_error_keys,
+                    )
                     if session_action == "skip":
                         logger.info("FIELD_SKIPPED_LOOP_LIMIT: key={}", question_key)
                         processed_keys[resolved_key] = question_text
@@ -252,11 +265,13 @@ class FormFiller:
             if not target_container:
                 break
 
-            # Stuck on same question check
+            # Stuck on same question check (allow retry if previous fill errored)
             norm_text = " ".join(target_text.lower().strip().split())
             if norm_text in processed_texts:
-                logger.warning("STUCK_ON_SAME_QUESTION_TEXT — breaking loop: '{}'", target_text[:60])
-                break
+                if target_key not in _error_keys:
+                    logger.warning("STUCK_ON_SAME_QUESTION_TEXT — breaking loop: '{}'", target_text[:60])
+                    break
+                logger.info("RETRY_SAME_QUESTION_TEXT — previous fill errored, retrying: '{}'", target_text[:60])
             processed_texts.add(norm_text)
             processed_keys[target_key] = target_text
 
@@ -374,6 +389,7 @@ class FormFiller:
 
                 # ── CASE 2: Known answer but no matching option ────────────
                 if result.status == "error" and answer:
+                    _error_keys.add(target_key)  # Allow retry if chatbot re-shows this question
                     logger.info(
                         "CASE2_TRIGGERED: known answer '{}' failed for field_type={} key={}",
                         answer, field_type, target_key,
@@ -383,6 +399,8 @@ class FormFiller:
                         # Extract checkbox options if missing
                         if not options and field_type == "checkbox":
                             options = await self._extract_checkbox_options(target_container)
+
+                        _is_multi = field_type == "checkbox" and len(options) > 1
 
                         if self._repo:
                             try:
@@ -397,6 +415,7 @@ class FormFiller:
                                 options=options,
                                 is_case2=True,
                                 stored_answer=answer,
+                                is_multi_select=_is_multi,
                             )
                         except Exception as tkinter_err:
                             logger.error("TKINTER_POPUP_CRASHED: {}", tkinter_err)
@@ -435,6 +454,7 @@ class FormFiller:
                 # ── Track progress to detect stuck loops ────────────────────
                 if result.status == "filled":
                     _no_progress_count = 0
+                    _error_keys.discard(target_key)  # Clear error status on success
                 else:
                     _no_progress_count += 1
                     if _no_progress_count >= _MAX_NO_PROGRESS:
@@ -525,7 +545,7 @@ class FormFiller:
         await save_btn.evaluate("el => el.click()")
         logger.info("SAVE_BUTTON_CLICKED")
         try:
-            await page.wait_for_load_state("networkidle", timeout=5000)
+            await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:
             pass
         await self._safe_wait(page, 3000)
@@ -1218,32 +1238,34 @@ class FormFiller:
                     return False, "No checkboxes found in container", "checkbox", method_used
                 
                 if len(checkboxes) > 1:
-                    matched_idx = -1
-                    matched_label = ""
+                    # Support comma-separated multi-select answers (e.g. "Hyderabad, Telangana, Bengaluru, Karnataka")
+                    answer_parts = [a.strip().lower() for a in answer.split(",")] if "," in answer else [answer_lower]
+                    matched_indices: list[tuple[int, str]] = []
                     for cb in checkboxes:
                         if cb.get("tagName") == "div":
                             continue
                         lbl = cb["labelText"].lower().strip()
                         if not lbl:
                             continue
-                        if answer_lower in lbl or lbl in answer_lower:
-                            matched_idx = cb["index"]
-                            matched_label = cb["labelText"]
-                            break
+                        for part in answer_parts:
+                            if part in lbl or lbl in part:
+                                matched_indices.append((cb["index"], cb["labelText"]))
+                                break
                             
-                    if matched_idx != -1:
-                        # Click the matched checkbox in JS to avoid Playwright waiting
-                        await scope.evaluate(f"""(el) => {{
-                            const cbSelector = "input[type='checkbox'], [role='checkbox'], .checkboxLabel, [class*='checkbox'], label:has(input[type='checkbox']), [class*='check-box'], [class*='checkBox'], label.mcc__label, [class*='mcc__label']";
-                            const item = el.querySelectorAll(cbSelector)[{matched_idx}];
-                            if (item) {{
-                                item.click();
-                                item.dispatchEvent(new Event('change', {{ bubbles: true }}));
-                                item.dispatchEvent(new Event('input', {{ bubbles: true }}));
-                            }}
-                        }}""")
-                        logger.info("CHECKBOX_OPTION_MATCHED: '{}'", matched_label)
-                        logger.info("FIELD_VERIFY_SUCCESS")
+                    if matched_indices:
+                        # Click ALL matched checkboxes
+                        for m_idx, m_label in matched_indices:
+                            await scope.evaluate(f"""(el) => {{
+                                const cbSelector = "input[type='checkbox'], [role='checkbox'], .checkboxLabel, [class*='checkbox'], label:has(input[type='checkbox']), [class*='check-box'], [class*='checkBox'], label.mcc__label, [class*='mcc__label']";
+                                const item = el.querySelectorAll(cbSelector)[{m_idx}];
+                                if (item) {{
+                                    item.click();
+                                    item.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                                    item.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                                }}
+                            }}""")
+                            logger.info("CHECKBOX_OPTION_MATCHED: '{}'", m_label)
+                        logger.info("FIELD_VERIFY_SUCCESS — {} checkbox(es) clicked", len(matched_indices))
                         return True, None, "checkbox", method_used
                     else:
                         logger.warning("CHECKBOX_NO_MATCH: answer='{}' not found in options", answer)
@@ -1640,6 +1662,7 @@ class FormFiller:
         """Find the visible chatbot drawer on the page."""
         import time
         logger.info("RESOLVE_DRAWER_START")
+        _DRAWER_OP_TIMEOUT = 3000  # 3s per selector check to prevent cascading hangs
         for sel in [".chatbot_Drawer", ".chatbot_Overlay", "[class*='chatbot_Drawer']", "[class*='chatbotModal']"]:
             try:
                 loc = page.locator(sel)
@@ -1647,7 +1670,7 @@ class FormFiller:
                 logger.info("RESOLVE_DRAWER: sel='{}' count={}", sel, cnt)
                 for i in range(cnt):
                     el = loc.nth(i)
-                    if await el.is_visible():
+                    if await el.is_visible(timeout=_DRAWER_OP_TIMEOUT):
                         if self._drawer_opened_at is None:
                             self._drawer_opened_at = time.time()
                         logger.info("RESOLVE_DRAWER_FOUND: '{}'", sel)
@@ -1757,6 +1780,7 @@ class FormFiller:
         self,
         page: Page,
         processed_keys: dict[str, str],
+        error_keys: set[str] | None = None,
     ) -> dict[str, Any] | None:
         import time
 
@@ -1951,7 +1975,9 @@ class FormFiller:
             return None
 
         question_key = normalize_question_key(question_text, options)
-        target_key, session_action = self._resolve_session_key(question_text, question_key, processed_keys)
+        target_key, session_action = self._resolve_session_key(
+            question_text, question_key, processed_keys, error_keys=error_keys,
+        )
         if session_action == "skip":
             logger.info("REJECTED_ALREADY_PROCESSED: '{}'", question_text[:100])
             return None
@@ -2260,6 +2286,7 @@ class FormFiller:
         question_text: str,
         question_key: str,
         processed_keys: dict[str, str],
+        error_keys: set[str] | None = None,
     ) -> tuple[str, str | None]:
         """
         Check for collision or loop detection on the question key.
@@ -2287,6 +2314,11 @@ class FormFiller:
             logger.info("RESOLVED_KEY_COLLISION: '{}' vs '{}' -> new key '{}'", prev_text, question_text, new_key)
             return new_key, None
         else:
+            # If the previous fill errored, allow one retry (the user popup may fix it)
+            if error_keys and question_key in error_keys:
+                logger.info("RETRY_AFTER_ERROR: key='{}' — allowing re-process", question_key)
+                error_keys.discard(question_key)  # Only allow one retry
+                return question_key, None
             logger.warning("DETECTED_STUCK_LOOP: Same question '{}' and key '{}' encountered again.", question_text, question_key)
             return question_key, "skip"
 
@@ -2297,6 +2329,7 @@ class FormFiller:
         options: list[str] | None = None,
         is_case2: bool = False,
         stored_answer: str | None = None,
+        is_multi_select: bool = False,
     ) -> dict:
         if options is None:
             options = []
@@ -2311,6 +2344,7 @@ class FormFiller:
             options,
             is_case2,
             stored_answer,
+            is_multi_select,
         )
 
         logger.info("RESPONSE_FROM_POPUP={}", response)
@@ -2322,6 +2356,7 @@ class FormFiller:
         options: list[str],
         is_case2: bool = False,
         stored_answer: str | None = None,
+        is_multi_select: bool = False,
     ) -> dict:
         import subprocess
         import sys
@@ -2333,6 +2368,7 @@ class FormFiller:
             "options": options,
             "is_case2": is_case2,
             "stored_answer": stored_answer,
+            "is_multi_select": is_multi_select,
         }
 
         # Locate popup_helper.py absolute path relative to this file

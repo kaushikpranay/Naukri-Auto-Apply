@@ -62,6 +62,9 @@ async def run() -> None:
                 "width": settings.browser.viewport_width,
                 "height": settings.browser.viewport_height,
             },
+            args=[
+                f"--window-size={settings.browser.viewport_width},{settings.browser.viewport_height}",
+            ],
         )
         context.set_default_timeout(settings.browser.default_timeout)
 

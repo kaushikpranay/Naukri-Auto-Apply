@@ -7,12 +7,12 @@
     "skip": 1141,
     "pending_eval": 1,
     "pending_apply": 0,
-    "easy_apply": 65,
-    "external_portal": 218,
-    "already_applied": 29,
-    "applied_successfully": 73,
+    "easy_apply": 87,
+    "external_portal": 348,
+    "already_applied": 36,
+    "applied_successfully": 85,
     "failed": 0,
-    "unknown_flow": 57,
+    "unknown_flow": 61,
     "quota_exhausted": 0,
     "register": 0,
     "login_required": 0,
@@ -7847,6 +7847,16 @@
       "job_url": "https://www.naukri.com/job-listings-consultant-ernst-young-noida-3-to-8-years-170426502934"
     },
     {
+      "id": 635,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 20.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-270526928303"
+    },
+    {
       "id": 2,
       "job_title": "Lead AI Engineer GCP & GenAI",
       "company_name": "Opplane",
@@ -7875,6 +7885,1296 @@
       "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c8vk5dZjoogxcHivfTOU3T0=",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-agentic-genai-engineer-anthropic-sparix-global-private-limited-noida-8-to-9-years-020626503084"
+    },
+    {
+      "id": 152,
+      "job_title": "Agentic GenAI Engineer (Anthropic)",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c8vk5dZjoogxcHivfTOU3T0=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-genai-engineer-anthropic-sparix-global-private-limited-noida-8-to-9-years-030626505081"
+    },
+    {
+      "id": 977,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-bengaluru-12-to-17-years-040626916931"
+    },
+    {
+      "id": 989,
+      "job_title": "GenAI Engineer",
+      "company_name": "SLK Software",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://altimetrik.ripplehire.com/candidate/unknownerror",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-slk-software-services-private-limited-pune-5-to-10-years-020626502849"
+    },
+    {
+      "id": 995,
+      "job_title": "GenAI Engineer",
+      "company_name": "Altimetrik",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://altimetrik.ripplehire.com/candidate/unknownerror",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-altimetrik-corp-pune-5-to-10-years-210526500748"
+    },
+    {
+      "id": 1042,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-pune-5-to-10-years-040626919550"
+    },
+    {
+      "id": 1046,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-pune-5-to-10-years-110526915729"
+    },
+    {
+      "id": 1089,
+      "job_title": "GenAI Engineer Agentic AI & RAG",
+      "company_name": "360DigiTMG",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://360digitmg.com/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-agentic-ai-rag-360digitmg-hyderabad-4-to-8-years-090426505877"
+    },
+    {
+      "id": 1104,
+      "job_title": "Specialist Software Engineer - Full Stack AI / ML/GenAI",
+      "company_name": "Amgen Inc",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://careers.amgen.com/en/job/-/-/87/87104854864?source=rd_naukri&utm_source=naukri.com&utm_medium=job_posting&utm_campaign=Healthcare_General&utm_content=job_board&utm_term=402434614&ss=paid",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-specialist-software-engineer-full-stack-ai-ml-genai-amgen-inc-hyderabad-2-to-6-years-070526929760"
+    },
+    {
+      "id": 1120,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-2-to-5-years-270526929440"
+    },
+    {
+      "id": 1123,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-2-to-5-years-130526939303"
+    },
+    {
+      "id": 1124,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-2-to-5-years-110526918366"
+    },
+    {
+      "id": 1142,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-15-to-20-years-250526918011"
+    },
+    {
+      "id": 1143,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-15-to-20-years-190526933779"
+    },
+    {
+      "id": 1144,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-5-to-10-years-180526920568"
+    },
+    {
+      "id": 1145,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-5-to-10-years-110526916923"
+    },
+    {
+      "id": 1146,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-15-to-20-years-040526922650"
+    },
+    {
+      "id": 1147,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-hyderabad-15-to-20-years-040526922648"
+    },
+    {
+      "id": 1180,
+      "job_title": "GenAI Engineer",
+      "company_name": "Qloron Technology",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://qloron.keka.com/careers/jobdetails/128652",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-qloron-pvt-ltd-chennai-4-to-8-years-200226504379"
+    },
+    {
+      "id": 1205,
+      "job_title": "ML Engineer (NLP/GenAI)",
+      "company_name": "Vestas",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://careers.vestas.com/job/Chennai-ML-Engineer-(NLPGenAI)-TN-600-117/1399981733/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ml-engineer-nlp-genai-vestas-wind-technology-india-pvt-ltd-chennai-4-to-6-years-040626503287"
+    },
+    {
+      "id": 1728,
+      "job_title": "AES - DE - Generative AI Prompt Engineers",
+      "company_name": "Zensar",
+      "location": "Bengaluru, Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://fa-etvl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/145117_2",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-aes-de-generative-ai-prompt-engineers-zensar-technologies-hyderabad-bengaluru-5-to-10-years-040626503387"
+    },
+    {
+      "id": 1758,
+      "job_title": "Lead AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Bengaluru, Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.griddynamics.com/careers/vacancy/46227",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-grid-dynamics-private-limited-hyderabad-bengaluru-6-to-10-years-270526932906"
+    },
+    {
+      "id": 1768,
+      "job_title": "Distinguished AI Engineer",
+      "company_name": "Capital One",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.capitalonecareers.com/job/bengaluru/distinguished-ai-engineer/1732/95247961152",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-distinguished-ai-engineer-capital-one-bengaluru-15-to-20-years-200526503801"
+    },
+    {
+      "id": 1869,
+      "job_title": "Lead Engineer AI",
+      "company_name": "Academian India",
+      "location": "Hybrid - Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://academian.keka.com/careers/jobdetails/71514",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-engineer-ai-academian-india-pune-5-to-8-years-180526009058"
+    },
+    {
+      "id": 1907,
+      "job_title": "AI developer",
+      "company_name": "E Billing Solutions (EBS)",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://jobs.worldline.com/job/ai-developer/299393-en_us?src",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-developer-e-billing-solutions-pvt-ltd-pune-2-to-5-years-280425502774"
+    },
+    {
+      "id": 1971,
+      "job_title": "Lead AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.griddynamics.com/careers/vacancy/46227",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-grid-dynamics-hyderabad-1-to-2-years-290126509142"
+    },
+    {
+      "id": 1972,
+      "job_title": "Lead AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.griddynamics.com/careers/vacancy/46227",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-grid-dynamics-hyderabad-1-to-2-years-130126500768"
+    },
+    {
+      "id": 2133,
+      "job_title": "Lead Generative AI Engineer",
+      "company_name": "Baker Hughes",
+      "location": "Navi Mumbai",
+      "interview_probability": 0.0,
+      "apply_url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/IN-KA-BANGALORE-NEON-BUILDING-WEST-TOWER/Lead-Generative-AI-Engineer_R163566",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-generative-ai-engineer-baker-hughes-the-network-navi-mumbai-4-to-6-years-180526500348"
+    },
+    {
+      "id": 2154,
+      "job_title": "Lead AI Engineer",
+      "company_name": "Baker Hughes",
+      "location": "Mumbai",
+      "interview_probability": 0.0,
+      "apply_url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/IN-KA-BANGALORE-NEON-BUILDING-WEST-TOWER/Lead-AI-Engineer_R163570",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-baker-hughes-the-network-mumbai-4-to-6-years-180526501099"
+    },
+    {
+      "id": 2432,
+      "job_title": "Engineer",
+      "company_name": "Synopsys",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://careers.synopsys.com/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-engineer-synopsys-noida-2-to-6-years-030426501910"
+    },
+    {
+      "id": 2446,
+      "job_title": "AI Engineer",
+      "company_name": "Comviva Technology",
+      "location": "Gurugram",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.comviva.com/careers/explore-opportunity/?job_id=z5G7h3l6a1kMvyS65NP3cxRYrCMdGbjM1pWbWTspGbg=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-comviva-technologies-limited-gurugram-2-to-3-years-040526500171"
+    },
+    {
+      "id": 2631,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Kolkata",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-kolkata-2-to-5-years-250526926618"
+    },
+    {
+      "id": 3153,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-250526918609"
+    },
+    {
+      "id": 3157,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-110526914172"
+    },
+    {
+      "id": 3158,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-110526913532"
+    },
+    {
+      "id": 3159,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-110526913523"
+    },
+    {
+      "id": 3160,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-050526934565"
+    },
+    {
+      "id": 3161,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-050526934129"
+    },
+    {
+      "id": 3167,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-110526913530"
+    },
+    {
+      "id": 3168,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-040526918098"
+    },
+    {
+      "id": 3169,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-040626931172"
+    },
+    {
+      "id": 3177,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-7-to-12-years-250526918735"
+    },
+    {
+      "id": 3180,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-180526918617"
+    },
+    {
+      "id": 3182,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-110526916762"
+    },
+    {
+      "id": 3183,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-110526913644"
+    },
+    {
+      "id": 3184,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-110526912928"
+    },
+    {
+      "id": 3185,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-050526934154"
+    },
+    {
+      "id": 3186,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-050526933999"
+    },
+    {
+      "id": 3188,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-7-to-12-years-250526918843"
+    },
+    {
+      "id": 3189,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-250526918780"
+    },
+    {
+      "id": 3190,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-250526918771"
+    },
+    {
+      "id": 3191,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-250526918718"
+    },
+    {
+      "id": 3192,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-250526918543"
+    },
+    {
+      "id": 3193,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-250526918416"
+    },
+    {
+      "id": 3194,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-250526918078"
+    },
+    {
+      "id": 3195,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-3-to-8-years-250526918062"
+    },
+    {
+      "id": 3196,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-7-to-12-years-250526918037"
+    },
+    {
+      "id": 3197,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-7-to-12-years-250526917996"
+    },
+    {
+      "id": 3198,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-250526917964"
+    },
+    {
+      "id": 3199,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-250526917636"
+    },
+    {
+      "id": 3202,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-110526913737"
+    },
+    {
+      "id": 3203,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-12-to-15-years-110526912927"
+    },
+    {
+      "id": 3204,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-7-to-12-years-050526939791"
+    },
+    {
+      "id": 3205,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-050526933990"
+    },
+    {
+      "id": 3206,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-050526923437"
+    },
+    {
+      "id": 3207,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-040526922171"
+    },
+    {
+      "id": 3208,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-7-to-12-years-040526916869"
+    },
+    {
+      "id": 3209,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-040526916863"
+    },
+    {
+      "id": 3212,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-indore-2-to-5-years-270526928276"
+    },
+    {
+      "id": 3215,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-180526918618"
+    },
+    {
+      "id": 3225,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-indore-12-to-17-years-010626912635"
+    },
+    {
+      "id": 3228,
+      "job_title": "Backend Developer",
+      "company_name": "Vibencode",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://careers.vibencode.com/j/backend-developer-vibencode-7e3040cb",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-vibencode-indore-1-to-2-years-310326501842"
+    },
+    {
+      "id": 3329,
+      "job_title": "Engineer",
+      "company_name": "Synopsys",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://careers.synopsys.com/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-engineer-synopsys-india-private-limited-noida-5-to-10-years-030626501078"
+    },
+    {
+      "id": 3511,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626918620"
+    },
+    {
+      "id": 3512,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626917588"
+    },
+    {
+      "id": 3514,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626918172"
+    },
+    {
+      "id": 3515,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626917589"
+    },
+    {
+      "id": 3516,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626917581"
+    },
+    {
+      "id": 3517,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626917579"
+    },
+    {
+      "id": 3522,
+      "job_title": "Agentic Engineer",
+      "company_name": "C4scale",
+      "location": "Bengaluru, Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://c4scale.com/careers/agentic-engineer/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-engineer-c4scale-chennai-bengaluru-2-to-5-years-030626504896"
+    },
+    {
+      "id": 3536,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-110526925522"
+    },
+    {
+      "id": 3539,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-110526923806"
+    },
+    {
+      "id": 3540,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-110526920191"
+    },
+    {
+      "id": 3541,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-110526918280"
+    },
+    {
+      "id": 3542,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-050526938921"
+    },
+    {
+      "id": 3559,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626917566"
+    },
+    {
+      "id": 3560,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626917564"
+    },
+    {
+      "id": 3561,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-010626912760"
+    },
+    {
+      "id": 3588,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-110526917572"
+    },
+    {
+      "id": 3594,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-040626916648"
+    },
+    {
+      "id": 3597,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-3-to-8-years-260526918836"
+    },
+    {
+      "id": 3602,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-110526919249"
+    },
+    {
+      "id": 3603,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-5-to-10-years-040626916925"
+    },
+    {
+      "id": 3604,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-5-to-10-years-040626916769"
+    },
+    {
+      "id": 3636,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-pune-3-to-8-years-040526923178"
+    },
+    {
+      "id": 3644,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-pune-3-to-8-years-150526923765"
+    },
+    {
+      "id": 3653,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-pune-5-to-10-years-220526924125"
+    },
+    {
+      "id": 3654,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-pune-5-to-10-years-220526924090"
+    },
+    {
+      "id": 3745,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-hyderabad-5-to-10-years-110526918481"
+    },
+    {
+      "id": 3746,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-hyderabad-5-to-10-years-110526917411"
+    },
+    {
+      "id": 3747,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-hyderabad-7-to-12-years-050526920022"
+    },
+    {
+      "id": 3818,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-chennai-7-to-12-years-020626920354"
+    },
+    {
+      "id": 3901,
+      "job_title": "LLM Model Developer",
+      "company_name": "Accenture",
+      "location": "Mumbai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217918-S1923377_en&title=LLM+Model+Developer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-mumbai-2-to-5-years-250526919306"
+    },
+    {
+      "id": 4345,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-10-to-12-years-050526935625"
+    },
+    {
+      "id": 4360,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-12-to-14-years-020626921143"
+    },
+    {
+      "id": 4361,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-10-to-12-years-020626920548"
+    },
+    {
+      "id": 4362,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-12-to-14-years-020626919320"
+    },
+    {
+      "id": 4363,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-10-to-12-years-020626919305"
+    },
+    {
+      "id": 4632,
+      "job_title": "Gen AI Developer",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c3RYCKInpOccDDAZLvj0mFk=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-developer-sparix-global-private-limited-noida-4-to-9-years-060526504693"
+    },
+    {
+      "id": 4633,
+      "job_title": "Gen AI Developer",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c3RYCKInpOccDDAZLvj0mFk=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-developer-sparix-global-private-limited-noida-4-to-9-years-050526503368"
+    },
+    {
+      "id": 5215,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-2-to-5-years-020626921196"
+    },
+    {
+      "id": 5216,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-2-to-5-years-020626920284"
+    },
+    {
+      "id": 5803,
+      "job_title": "Backend Engineer",
+      "company_name": "HappyFox, Inc",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://happyfox.hire.trakstar.com/jobs/fk0fucc/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-happyfox-inc-bengaluru-3-to-8-years-130324500918"
+    },
+    {
+      "id": 5804,
+      "job_title": "Backend Engineer",
+      "company_name": "HappyFox, Inc",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://happyfox.hire.trakstar.com/jobs/fk0fucc/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-happyfox-inc-bengaluru-3-to-4-years-090523500756"
+    },
+    {
+      "id": 8660,
+      "job_title": "AES - DE - Generative AI Prompt Engineers",
+      "company_name": "Zensar",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://fa-etvl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/145117_2",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-aes-de-generative-ai-prompt-engineers-zensar-technologies-bengaluru-5-to-10-years-100626500122"
+    },
+    {
+      "id": 8702,
+      "job_title": "AES - DE - Generative AI Prompt Engineer",
+      "company_name": "Zensar",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://fa-etvl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/145117_2",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-aes-de-generative-ai-prompt-engineer-zensar-technologies-hyderabad-5-to-10-years-040626503387"
+    },
+    {
+      "id": 9033,
+      "job_title": "LLM Operations Engineer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-pune-7-to-12-years-110626926018"
+    },
+    {
+      "id": 9192,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-10-to-12-years-080626924936"
+    },
+    {
+      "id": 9209,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Chennai",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-chennai-10-to-12-years-120626918054"
+    },
+    {
+      "id": 10526,
+      "job_title": "Backend Engineer [Mid-Level]",
+      "company_name": "Portcast",
+      "location": "Mumbai",
+      "interview_probability": 0.0,
+      "apply_url": "https://jobs.lever.co/portcast/1f6381eb-03dd-451a-a8cc-2c862cec3fe3",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-mid-level-portcast-mumbai-4-to-9-years-110626500387"
+    },
+    {
+      "id": 10561,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-090626929257"
+    },
+    {
+      "id": 10564,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-indore-5-to-10-years-080626917670"
+    },
+    {
+      "id": 10593,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-bengaluru-4-to-9-years-080626931561"
+    },
+    {
+      "id": 10607,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-bengaluru-5-to-10-years-080626929946"
+    },
+    {
+      "id": 10610,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Bengaluru",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-020626921050"
+    },
+    {
+      "id": 10621,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Pune",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-pune-5-to-10-years-100626924225"
+    },
+    {
+      "id": 10641,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Hyderabad",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-hyderabad-7-to-12-years-270526929574"
+    },
+    {
+      "id": 11225,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-15-to-20-years-150626924290"
+    },
+    {
+      "id": 11230,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Accenture",
+      "location": "Indore",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4822077-S1849385_en&title=AI+%2F+ML+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-accenture-solutions-pvt-ltd-indore-12-to-15-years-150626924273"
+    },
+    {
+      "id": 11881,
+      "job_title": "Custom Software Engineer",
+      "company_name": "Accenture",
+      "location": "Gurugram",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5310553-S1940390_en&title=Custom+Software+Engineer&SRC=RECNau",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-gurugram-6-to-10-years-150626924181"
     }
   ],
   "review_jobs": [
@@ -22692,7 +23992,7 @@
     "collector": {
       "total_jobs": 2646,
       "pending": 1,
-      "evaluated": 2203,
+      "evaluated": 2028,
       "queued": 0,
       "failed": 0,
       "keywords": [
@@ -22731,9 +24031,9 @@
       "pending_eval": 1
     },
     "discovery": {
-      "total_processed": 442,
+      "total_processed": 617,
       "pending_apply": 0,
-      "last_discovery": "2026-06-15T21:01:08.489152",
+      "last_discovery": "2026-06-15T21:26:23.970696",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
@@ -22789,5 +24089,5 @@
       }
     ]
   },
-  "generated_at": "2026-06-15T21:17:13.417239"
+  "generated_at": "2026-06-15T21:26:47.392888"
 }
