@@ -1,9 +1,6 @@
-[2026-06-15 18:28:19] Traceback (most recent call last):
-[2026-06-15 18:28:19]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\discover_applications.py", line 25, in <module>
-[2026-06-15 18:28:19]     from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExpiredError
-[2026-06-15 18:28:19]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\app\browser\session.py", line 24, in <module>
-[2026-06-15 18:28:19]     from app.models.config import AppSettings, SelectorsConfig
-[2026-06-15 18:28:19]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\app\models\config.py", line 7, in <module>
-[2026-06-15 18:28:19]     from pydantic import BaseModel, Field
-[2026-06-15 18:28:19] ModuleNotFoundError: No module named 'pydantic'
-EXIT_CODE=1
+[2026-06-15 18:29:09] Traceback (most recent call last):
+[2026-06-15 18:29:09]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\discover_applications.py", line 28, in <module>
+[2026-06-15 18:29:09]     from app.export.apply_discovery_exporter import ApplyDiscoveryExporter
+[2026-06-15 18:29:09]   File "C:\Extra-stuffs\Mega-folder\Naukri-Automation\app\export\apply_discovery_exporter.py", line 10, in <module>
+[2026-06-15 18:29:09]     import pandas as pd
+[2026-06-15 18:29:09] ModuleNotFoundError: No module named 'pandas'
