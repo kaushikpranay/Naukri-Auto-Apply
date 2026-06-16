@@ -31,6 +31,7 @@ function injectNavbar() {
                 <ul class="navbar-nav ms-auto gap-1 mt-2 mt-lg-0">
                     <li class="nav-item"><a class="nav-link" id="nav-overview" href="index.html"><i class="bi bi-grid-fill me-1"></i> Overview</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-top-jobs" href="top_jobs.html"><i class="bi bi-star-fill me-1"></i> Top Jobs <span class="badge bg-secondary ms-1" id="nav-top-jobs-count">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-wellfound" href="wellfound.html"><i class="bi bi-people-fill me-1"></i> Wellfound</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-external-jobs" href="external_jobs.html"><i class="bi bi-link-45deg me-1"></i> External <span class="badge bg-secondary ms-1" id="nav-external-jobs-count">0</span></a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-review-jobs" href="review_jobs.html"><i class="bi bi-eye-fill me-1"></i> Review <span class="badge bg-secondary ms-1" id="nav-review-count">0</span></a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-failed-jobs" href="failed_jobs.html"><i class="bi bi-exclamation-triangle-fill me-1"></i> Failed <span class="badge bg-secondary ms-1" id="nav-failed-count">0</span></a></li>
@@ -47,6 +48,7 @@ function highlightNav() {
     const path = window.location.pathname;
     let activeId = "nav-overview";
     if (path.includes("top_jobs.html")) activeId = "nav-top-jobs";
+    else if (path.includes("wellfound.html")) activeId = "nav-wellfound";
     else if (path.includes("external_jobs.html")) activeId = "nav-external-jobs";
     else if (path.includes("review_jobs.html")) activeId = "nav-review-jobs";
     else if (path.includes("failed_jobs.html")) activeId = "nav-failed-jobs";

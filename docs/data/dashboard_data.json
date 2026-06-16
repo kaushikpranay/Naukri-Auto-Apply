@@ -1,25 +1,25 @@
 {
   "overview_stats": {
     "total_jobs": 2646,
-    "jobs_today": 46,
+    "jobs_today": 0,
     "apply": 435,
     "review": 1069,
     "skip": 1141,
     "pending_eval": 1,
     "pending_apply": 0,
-    "easy_apply": 87,
-    "external_portal": 348,
+    "easy_apply": 92,
+    "external_portal": 359,
     "already_applied": 36,
-    "applied_successfully": 85,
+    "applied_successfully": 91,
     "failed": 0,
-    "unknown_flow": 61,
+    "unknown_flow": 65,
     "quota_exhausted": 0,
     "register": 0,
     "login_required": 0,
     "email": 0,
-    "total_questions": 101,
-    "answered_questions": 94,
-    "coverage_pct": 93.1,
+    "total_questions": 104,
+    "answered_questions": 96,
+    "coverage_pct": 92.3,
     "last_run": "2026-06-15T20:18:06.789119",
     "retry_queue": {
       "count": 0,
@@ -7877,6 +7877,36 @@
       "job_url": "https://www.naukri.com/job-listings-principal-genai-systems-engineer-infraveo-technologies-remote-7-to-10-years-290525504929"
     },
     {
+      "id": 5,
+      "job_title": "CLM Consultant",
+      "company_name": "TESTQ",
+      "location": "Remote",
+      "interview_probability": 5.0,
+      "apply_url": "https://testqtech.com/career-job-details/5675",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-clm-consultant-testq-technologies-limited-remote-7-to-12-years-280526500306"
+    },
+    {
+      "id": 46,
+      "job_title": "Saviynt IGA Consultant",
+      "company_name": "SmarTek21",
+      "location": "Noida",
+      "interview_probability": 5.0,
+      "apply_url": "https://smartek21.applytojob.com/apply/VMkhs1AUWK/Saviynt-IGA-Consultant",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-saviynt-iga-consultant-smartek21-com-noida-3-to-8-years-160426503021"
+    },
+    {
+      "id": 6,
+      "job_title": "Team Lead/Senior Specialist - AI",
+      "company_name": "BuzzBoard, Inc.",
+      "location": "Remote",
+      "interview_probability": 0.0,
+      "apply_url": "https://buzzboard.applytojob.com/apply/mqPSQLBius/Team-LeadSenior-Specialist-AI",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-team-lead-senior-specialist-ai-buzzboard-inc-remote-6-to-11-years-210526505211"
+    },
+    {
       "id": 36,
       "job_title": "Agentic GenAI Engineer (Anthropic)",
       "company_name": "Sparix Global",
@@ -7887,6 +7917,66 @@
       "job_url": "https://www.naukri.com/job-listings-agentic-genai-engineer-anthropic-sparix-global-private-limited-noida-8-to-9-years-020626503084"
     },
     {
+      "id": 37,
+      "job_title": "GenAI Engineer (Anthropic)",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c9rp3QqdI-IaEJUuZcQPzAg=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-anthropic-sparix-global-private-limited-noida-8-to-9-years-020626503082"
+    },
+    {
+      "id": 38,
+      "job_title": "Full Stack GenAI Engineer",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c7VwzDg4l4M6-8nu0ZMZ8dA=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-genai-engineer-sparix-global-private-limited-noida-8-to-9-years-020626503086"
+    },
+    {
+      "id": 39,
+      "job_title": "Frontend & GenAI Engineer",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c6ze0Ddp52s6rbjMowTuM1M=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-frontend-genai-engineer-sparix-global-private-limited-noida-8-to-9-years-020626503085"
+    },
+    {
+      "id": 53,
+      "job_title": "Senior Machine Learning Engineer",
+      "company_name": "Adobe",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/Noida/Senior-Machine-Learning-Engineer_R167945",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-machine-learning-engineer-adobe-systems-india-pvt-ltd-noida-10-to-15-years-220426502505"
+    },
+    {
+      "id": 132,
+      "job_title": "Generative AI Engineer",
+      "company_name": "Workiy Technologies",
+      "location": "Remote",
+      "interview_probability": 0.0,
+      "apply_url": "https://workiy.zohorecruit.com/jobs/Workiy-Careers/574222000019291070",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-workiy-inc-remote-5-to-10-years-030626505137"
+    },
+    {
+      "id": 151,
+      "job_title": "GenAI Engineer (Anthropic)",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c9rp3QqdI-IaEJUuZcQPzAg=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-anthropic-sparix-global-private-limited-noida-8-to-9-years-030626505086"
+    },
+    {
       "id": 152,
       "job_title": "Agentic GenAI Engineer (Anthropic)",
       "company_name": "Sparix Global",
@@ -7895,6 +7985,26 @@
       "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c8vk5dZjoogxcHivfTOU3T0=",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-agentic-genai-engineer-anthropic-sparix-global-private-limited-noida-8-to-9-years-030626505081"
+    },
+    {
+      "id": 153,
+      "job_title": "Frontend & GenAI Engineer",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c6ze0Ddp52s6rbjMowTuM1M=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-frontend-genai-engineer-sparix-global-private-limited-noida-8-to-9-years-030626505087"
+    },
+    {
+      "id": 154,
+      "job_title": "Full Stack GenAI Engineer",
+      "company_name": "Sparix Global",
+      "location": "Noida",
+      "interview_probability": 0.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c7VwzDg4l4M6-8nu0ZMZ8dA=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-genai-engineer-sparix-global-private-limited-noida-8-to-9-years-030626505083"
     },
     {
       "id": 977,
@@ -23106,6 +23216,15 @@
       "last_used_at": "2026-06-08T03:11:15.456462"
     },
     {
+      "id": 6001,
+      "question_key": "total_years_experience",
+      "question_text": "Total Years Of experience",
+      "answer": "2",
+      "usage_count": 11,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T21:46:39.753907"
+    },
+    {
       "id": 3827,
       "question_key": "are_you_comfortable_with_6_months_extendable_contractual_rol",
       "question_text": "Are you comfortable with 6 months extendable contractual role?",
@@ -23113,15 +23232,6 @@
       "usage_count": 10,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-07T01:11:35.589200"
-    },
-    {
-      "id": 6001,
-      "question_key": "total_years_experience",
-      "question_text": "How many years of experience do you have in Fast Api?",
-      "answer": "2",
-      "usage_count": 10,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-15T21:00:29.194235"
     },
     {
       "id": 2978,
@@ -23133,6 +23243,15 @@
       "last_used_at": "2026-06-06T05:00:13.555330"
     },
     {
+      "id": 8,
+      "question_key": "genai_experience",
+      "question_text": "How many years of experience do you have in GenAI?",
+      "answer": "2",
+      "usage_count": 6,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T21:41:46.282689"
+    },
+    {
       "id": 4482,
       "question_key": "relocation_city_preference",
       "question_text": "Please select the city you are currently residing or willing to relocate to",
@@ -23140,15 +23259,6 @@
       "usage_count": 6,
       "field_type": "checkbox",
       "last_used_at": "2026-06-15T20:57:08.348944"
-    },
-    {
-      "id": 8,
-      "question_key": "genai_experience",
-      "question_text": "How many years of experience do you have in AI/ML or Generative AI development?",
-      "answer": "2",
-      "usage_count": 5,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-06T05:35:00.765171"
     },
     {
       "id": 13,
@@ -23196,6 +23306,15 @@
       "last_used_at": "2026-06-07T04:55:35.663859"
     },
     {
+      "id": 6,
+      "question_key": "python_experience",
+      "question_text": "Do you have hands-on production experience using TypeScript / JavaScript for backend development? (Python-only profiles will not be considered)",
+      "answer": "2",
+      "usage_count": 4,
+      "field_type": "radio",
+      "last_used_at": "2026-06-15T21:46:03.234778"
+    },
+    {
       "id": 7,
       "question_key": "llm_experience",
       "question_text": "How many years of hands-on experience do you have working with Generative AI and Large Language Models (LLMs)?",
@@ -23230,15 +23349,6 @@
       "usage_count": 4,
       "field_type": "radio",
       "last_used_at": "2026-06-15T20:57:30.305058"
-    },
-    {
-      "id": 6,
-      "question_key": "python_experience",
-      "question_text": "How many years of experience do you have in Python?",
-      "answer": "2",
-      "usage_count": 3,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-14T14:41:18.143378"
     },
     {
       "id": 3362,
@@ -23610,6 +23720,24 @@
       "last_used_at": "2026-06-15T18:35:43.208905"
     },
     {
+      "id": 9142,
+      "question_key": "genai_experience_2",
+      "question_text": "How many years of experience do you have in GenAI?",
+      "answer": "2",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T21:39:56.050349"
+    },
+    {
+      "id": 9193,
+      "question_key": "comforatble_working_contarct_basis",
+      "question_text": "Are you Comforatble Working On contarct Basis ?",
+      "answer": "Yes",
+      "usage_count": 2,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T21:41:07.371060"
+    },
+    {
       "id": 1,
       "question_key": "first_name",
       "question_text": "First Name*",
@@ -23644,6 +23772,15 @@
       "usage_count": 1,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-08T02:30:29.188469"
+    },
+    {
+      "id": 20,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in GCP?",
+      "answer": "2",
+      "usage_count": 1,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-15T21:42:56.006426"
     },
     {
       "id": 31,
@@ -23689,6 +23826,15 @@
       "usage_count": 1,
       "field_type": "radio",
       "last_used_at": "2026-06-14T14:45:23.555943"
+    },
+    {
+      "id": 9199,
+      "question_key": "exp_python_backend_development",
+      "question_text": "1. What is your total experience in Python backend development?",
+      "answer": null,
+      "usage_count": 1,
+      "field_type": "radio",
+      "last_used_at": "2026-06-15T21:47:03.980320"
     },
     {
       "id": 5,
@@ -23767,15 +23913,6 @@
       "question_key": "ml_framework_experience",
       "question_text": "ml_framework_experience",
       "answer": "1",
-      "usage_count": 0,
-      "field_type": null,
-      "last_used_at": null
-    },
-    {
-      "id": 20,
-      "question_key": "cloud_experience",
-      "question_text": "cloud_experience",
-      "answer": "2",
       "usage_count": 0,
       "field_type": null,
       "last_used_at": null
@@ -23991,8 +24128,8 @@
   "system_status": {
     "collector": {
       "total_jobs": 2646,
-      "pending": 1,
-      "evaluated": 2028,
+      "pending": 2,
+      "evaluated": 2001,
       "queued": 0,
       "failed": 0,
       "keywords": [
@@ -24031,9 +24168,9 @@
       "pending_eval": 1
     },
     "discovery": {
-      "total_processed": 617,
+      "total_processed": 643,
       "pending_apply": 0,
-      "last_discovery": "2026-06-15T21:26:23.970696",
+      "last_discovery": "2026-06-15T21:47:09.216424",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
@@ -24052,9 +24189,9 @@
       }
     },
     "question_bank": {
-      "total": 101,
-      "answered": 94,
-      "coverage_pct": 93.1
+      "total": 104,
+      "answered": 96,
+      "coverage_pct": 92.3
     },
     "recent_runs": [
       {
@@ -24089,5 +24226,5 @@
       }
     ]
   },
-  "generated_at": "2026-06-15T21:26:47.392888"
+  "generated_at": "2026-06-17T05:25:51.977452"
 }
