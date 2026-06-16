@@ -1,7 +1,7 @@
 # Multi-Platform Automation — Concept (single source of truth)
 
 > This is the **spec** we edit before writing code. We rebuild the system fresh,
-> **one feature at a time**, inside `microservices/`. Each feature is built, then
+> **one feature at a time**, just like using `microservices - System design`. Each feature is built, then
 > **tested and approved by the user**, before moving to the next.
 >
 > Hard constraint: **must NOT break `Naukri-Automation`.** Reuse Naukri's engine by
