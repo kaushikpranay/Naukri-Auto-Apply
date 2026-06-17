@@ -75,6 +75,7 @@ class DiscoverySummary(BaseModel):
     processed: int = 0
     discovered: int = 0
     already_applied: int = 0
+    applied_successfully: int = 0
     requires_review: int = 0
     failed: int = 0
     easy_apply: int = 0

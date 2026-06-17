@@ -57,9 +57,29 @@ _QUESTION_PATTERNS: list[tuple[re.Pattern[str], str]] = [
 _STOP_WORDS = frozenset({"are", "you", "is", "the", "a", "an", "do", "does", "have", "your", "to", "in", "of", "for", "on", "with", "how", "many", "what", "please", "specify", "select"})
 
 
+def _slugify(t: str) -> str:
+    """Canonical slug: lower, keep +/#/. as words, collapse other runs to '_'."""
+    cleaned = re.sub(r"[^a-z0-9+#\.]+", "_", t.lower().strip())
+    cleaned = cleaned.replace("+", "p").replace("#", "sharp").replace(".", "dot")
+    cleaned = re.sub(r"_+", "_", cleaned).strip("_")
+    return cleaned
+
+
+def _clean_skill(raw: str) -> str:
+    """Trim a captured skill phrase at connector/filler words and separators so
+    'python for our backend team' -> 'python' and 'react and node' -> 'react'."""
+    s = raw.strip()
+    s = re.split(r"\s+(?:for|and|or|with|using)\s+|[/,&]", s)[0]
+    s = re.sub(r"[^a-zA-Z0-9+#\.]+$", "", s.strip())
+    return s.strip()
+
+
 def _stable_slug(text: str) -> str:
-    words = [w for w in re.sub(r"[^a-z0-9]+", " ", text).split() if w not in _STOP_WORDS]
-    return "_".join(words)[:60].rstrip("_") or "unknown_question"
+    # Reuse the canonical slugifier (handles +/#/.) after dropping stop words,
+    # so the fallback path produces keys consistent with _slugify.
+    words = [w for w in re.sub(r"[^a-z0-9+#\.]+", " ", text).split() if w not in _STOP_WORDS]
+    slug = _slugify(" ".join(words))
+    return slug[:60].rstrip("_") or "unknown_question"
 
 
 def _normalize_option_values(options: list[str] | None) -> list[str]:
@@ -126,18 +146,11 @@ def normalize_question_key(question_text: str, options: list[str] | None = None)
     normalized_text = " ".join(question_text.lower().strip().split())
     normalized_options = _normalize_option_values(options)
 
-    def _slugify(t: str) -> str:
-        cleaned = re.sub(r"[^a-z0-9+#\.]+", "_", t.lower().strip())
-        cleaned = cleaned.replace("+", "p").replace("#", "sharp").replace(".", "dot")
-        cleaned = re.sub(r"_+", "_", cleaned).strip("_")
-        return cleaned
-
     # Rule 1: Skill/tool experience questions
     if "experience in" in normalized_text or "experience with" in normalized_text:
         match = re.search(r"experience (?:in|with)\s+([a-z0-9\s+#\.\-]+)", normalized_text)
         if match:
-            skill = match.group(1).strip()
-            skill = re.sub(r"[^a-zA-Z0-9+#\.]+$", "", skill)
+            skill = _clean_skill(match.group(1))
             if skill:
                 return f"exp_{_slugify(skill)}"
 
@@ -177,6 +190,19 @@ def normalize_question_key(question_text: str, options: list[str] | None = None)
     for pattern, key in _QUESTION_PATTERNS:
         if pattern.search(normalized_text):
             if key == "total_experience":
+                # Naukri phrases skill questions as "how many years of experience
+                # do you have in <skill>?" — the skill is split from "experience"
+                # by "do you have", so Rule 1 misses it and it would otherwise
+                # collapse to the generic key (causing positional collisions like
+                # total_years_experience_2 inheriting an unrelated skill's answer).
+                skill_m = re.search(
+                    r"experience\s+(?:do you have\s+)?(?:in|with)\s+([a-z0-9\s+#\.\-]+)",
+                    normalized_text,
+                )
+                if skill_m:
+                    skill = _clean_skill(skill_m.group(1))
+                    if skill:
+                        return f"exp_{_slugify(skill)}"
                 return "total_years_experience"
             return key
 

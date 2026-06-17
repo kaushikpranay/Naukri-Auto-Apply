@@ -109,6 +109,7 @@ def _accumulate_discovery(total: DiscoverySummary, batch: DiscoverySummary) -> N
     total.processed += batch.processed
     total.discovered += batch.discovered
     total.already_applied += batch.already_applied
+    total.applied_successfully += batch.applied_successfully
     total.requires_review += batch.requires_review
     total.failed += batch.failed
     total.easy_apply += batch.easy_apply
