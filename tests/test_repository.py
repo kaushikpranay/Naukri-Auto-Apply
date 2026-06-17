@@ -3,6 +3,7 @@ Tests for SQLite job repository.
 """
 
 import sqlite3
+from datetime import datetime
 from pathlib import Path
 
 import pytest
@@ -224,7 +225,7 @@ class TestMigrationCompatibility:
                 "Legacy Co",
                 "https://naukri.com/job/legacy",
                 "https://naukri.com/job/legacy",
-                "2026-06-02T00:00:00",
+                datetime.now().isoformat(),
             ),
         )
         conn.commit()
@@ -313,7 +314,7 @@ class TestLegacyNullCompatibility:
                 0,
                 None,
                 None,
-                "2026-06-02T00:00:00",
+                datetime.now().isoformat(),
             ),
         )
         conn.commit()

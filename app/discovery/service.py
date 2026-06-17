@@ -191,7 +191,11 @@ class ApplyDiscoveryService:
                     if any(q.field_type == "unknown" for q in outcome.questions):
                         has_unknown = True
 
-                if outcome.record.apply_type == "quota_exhausted":
+                if outcome.record.apply_type == "applied_successfully":
+                    # Confirmed submission is terminal — it wins over any leftover
+                    # unknown/error fields detected during the fill.
+                    self._repo.update_job_status(job.id, "applied_successfully")
+                elif outcome.record.apply_type == "quota_exhausted":
                     self._repo.update_job_status(job.id, "quota_exhausted")
                 elif has_unknown:
                     self._repo.update_job_status(job.id, "unknown_question")
@@ -289,6 +293,9 @@ class ApplyDiscoveryService:
 
         if apply_type == "already_applied":
             summary.already_applied += 1
+        elif apply_type == "applied_successfully":
+            summary.discovered += 1
+            summary.applied_successfully += 1
         elif apply_type == "easy_apply":
             summary.discovered += 1
             summary.easy_apply += 1
@@ -699,10 +706,18 @@ class ApplyDiscoveryService:
                 questions=questions,
             )
 
+            # If the easy-apply flow actually completed the submission, record it
+            # as applied_successfully instead of the generic easy_apply label.
+            try:
+                submitted = await self._form_filler._is_application_submitted(active_page)
+            except Exception:
+                submitted = False
+            resolved_apply_type = "applied_successfully" if submitted else "easy_apply"
+
             return _DiscoveryOutcome(
                 record=ApplicationDiscoveryRecord(
                     job_id=job_id,
-                    apply_type="easy_apply",
+                    apply_type=resolved_apply_type,
                     apply_url=url_after,
                     email=recruiter_email,
                     hr_name=hr_name,

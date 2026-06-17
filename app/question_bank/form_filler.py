@@ -24,7 +24,7 @@ from typing import TYPE_CHECKING, Any
 from loguru import logger
 from playwright.async_api import Page, Locator
 
-from app.discovery.question_normalizer import normalize_question_key
+from app.discovery.question_normalizer import normalize_question_key, _slugify
 from app.models.config import AppSettings, SelectorsConfig
 from app.models.discovery import DiscoveredQuestion, PipelineSuspendedException
 from app.models.form_fill import FieldFillResult, FormFillReport
@@ -992,27 +992,38 @@ class FormFiller:
                     option_pairs.append((opt, option_text))
                     if norm == answer_lower:
                         exact_matches.append((opt, option_text))
-                    elif answer_lower and (answer_lower in norm or norm in answer_lower):
+                    elif answer_lower and _token_overlap(answer_lower, norm):
                         fuzzy_matches.append((opt, option_text))
+
+                # Resolve the answer's numeric value: prefer a concrete number in the
+                # answer (e.g. "45 days" -> 45); for non-numeric answers fall back to
+                # the experience heuristic. Vague range/comparison answers ("<6 years")
+                # use the heuristic too.
+                import re
+                val = None
+                try:
+                    val = float(answer.strip())
+                except ValueError:
+                    num_match = re.search(r"\d+(?:\.\d+)?", answer)
+                    has_range_qualifier = re.search(
+                        r"[<>+\-]|less|more|greater|above|below|under|over",
+                        answer.lower(),
+                    )
+                    if num_match and not has_range_qualifier:
+                        val = float(num_match.group(0))
+                    else:
+                        val = get_actual_numeric_experience(question_key, self._repo)
 
                 opt_locs: list[tuple] = []
                 if exact_matches:
                     opt_locs = [(o, f"[role='radio'] exact: {t}") for o, t in exact_matches]
+                elif val is not None and (_num_best := _best_numeric_option(option_pairs, val)) is not None:
+                    # Range-aware best match (e.g. 2 -> "2-4 years", tightest bucket)
+                    # takes priority over loose substring matching, which mis-fires
+                    # when a digit appears inside another number ("2" inside "12").
+                    opt_locs = [(_num_best[0], f"[role='radio'] numeric: {_num_best[1]}")]
                 elif fuzzy_matches:
                     opt_locs = [(o, f"[role='radio'] fuzzy: {t}") for o, t in fuzzy_matches]
-                else:
-                    val = None
-                    try:
-                        val = float(answer.strip())
-                    except ValueError:
-                        val = get_actual_numeric_experience(question_key, self._repo)
-
-                    if val is not None:
-                        import re
-                        for opt, text_val in option_pairs:
-                            if _numeric_option_matches(opt_norm := text_val.strip().lower(), val):
-                                opt_locs.append((opt, f"[role='radio'] numeric: {text_val}"))
-                                break
 
                 for opt, sel_name in opt_locs:
                     try:
@@ -2303,14 +2314,12 @@ class FormFiller:
         norm_curr = " ".join(question_text.lower().strip().split())
 
         if norm_prev != norm_curr:
-            counter = 2
-            new_key = f"{question_key}_{counter}"
-            while new_key in processed_keys:
-                if " ".join(processed_keys[new_key].lower().strip().split()) == norm_curr:
-                    return new_key, None
-                counter += 1
-                new_key = f"{question_key}_{counter}"
-            
+            # Use a stable, text-derived suffix instead of a positional _2/_3.
+            # Positional suffixes are job-local, but answers are looked up in the
+            # GLOBAL question_bank — so the same suffix mapped to unrelated
+            # questions across jobs and leaked answers between them (e.g. an "Iac"
+            # question inheriting an unrelated "API Development" answer).
+            new_key = f"{question_key}__{_slugify(norm_curr)[:40]}".strip("_")
             logger.info("RESOLVED_KEY_COLLISION: '{}' vs '{}' -> new key '{}'", prev_text, question_text, new_key)
             return new_key, None
         else:
@@ -2451,6 +2460,55 @@ def _numeric_option_matches(opt_norm: str, val: float) -> bool:
         if val == float(m.group(1)):
             return True
     return False
+
+
+def _token_overlap(a: str, b: str) -> bool:
+    """Word-boundary containment in either direction.
+
+    Avoids the substring trap where a numeric answer like "2" matches inside an
+    unrelated number such as "12-15 years".
+    """
+    import re
+    if not a or not b:
+        return False
+    for needle, hay in ((a, b), (b, a)):
+        if re.search(r"(?<!\w)" + re.escape(needle) + r"(?!\w)", hay):
+            return True
+    return False
+
+
+def _range_tightness(opt_norm: str, val: float) -> float:
+    """Lower = tighter fit of val to the option's numeric range/bound.
+
+    Used to pick the best bucket among several matching options instead of the
+    first one (e.g. val=8 with ["2+ yrs", "8+ yrs"] should pick "8+ yrs").
+    """
+    import re
+    if m := re.search(r"(\d+(?:\.\d+)?)\s*(?:-|to)\s*(\d+(?:\.\d+)?)", opt_norm):
+        return abs(float(m.group(2)) - float(m.group(1)))  # span of the range
+    if m := re.search(r"(?:>|greater\s+than|more\s+than|above)\s*(\d+(?:\.\d+)?)", opt_norm):
+        return abs(val - float(m.group(1)))
+    if m := re.search(r"(\d+(?:\.\d+)?)\s*\+", opt_norm):
+        return abs(val - float(m.group(1)))
+    if m := re.search(r"(?:<|less\s+than)\s*(\d+(?:\.\d+)?)", opt_norm):
+        return abs(float(m.group(1)) - val)
+    if m := re.search(r"\b(\d+(?:\.\d+)?)\b", opt_norm):
+        return abs(val - float(m.group(1)))
+    return float("inf")
+
+
+def _best_numeric_option(option_pairs: list[tuple], val: float) -> tuple | None:
+    """Return the (locator, text) whose numeric range best fits val, or None."""
+    best: tuple | None = None
+    best_score: float | None = None
+    for opt, text in option_pairs:
+        norm = text.strip().lower()
+        if _numeric_option_matches(norm, val):
+            score = _range_tightness(norm, val)
+            if best_score is None or score < best_score:
+                best_score = score
+                best = (opt, text)
+    return best
 
 
 async def is_valid_recruiter_question_container(container: Locator) -> bool:
@@ -2601,4 +2659,6 @@ def get_actual_numeric_experience(question_key: str, repo: "ApplyDiscoveryReposi
     except Exception:
         pass
 
-    return profile_exp_years
+    # Unrecognized, non-experience key: return None so the caller treats it as
+    # unknown rather than silently filling the candidate's total experience.
+    return None

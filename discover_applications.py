@@ -183,6 +183,7 @@ async def run(args: argparse.Namespace) -> None:
                             summary.processed += exc.summary.processed
                             summary.discovered += exc.summary.discovered
                             summary.already_applied += exc.summary.already_applied
+                            summary.applied_successfully += exc.summary.applied_successfully
                             summary.requires_review += exc.summary.requires_review
                             summary.failed += exc.summary.failed
                             summary.easy_apply += exc.summary.easy_apply
@@ -198,6 +199,7 @@ async def run(args: argparse.Namespace) -> None:
                     summary.processed += batch_summary.processed
                     summary.discovered += batch_summary.discovered
                     summary.already_applied += batch_summary.already_applied
+                    summary.applied_successfully += batch_summary.applied_successfully
                     summary.requires_review += batch_summary.requires_review
                     summary.failed += batch_summary.failed
                     summary.easy_apply += batch_summary.easy_apply

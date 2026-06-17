@@ -502,7 +502,8 @@ async def test_fill_form_case2_unmatched_option() -> None:
         question_text="Years of Experience",
         is_case2=True,
         stored_answer="1.5",
-        options=["0-1 years", "1-2 years", "2-4 years"]
+        options=["0-1 years", "1-2 years", "2-4 years"],
+        is_multi_select=False
     )
     repo.save_answer_mapping.assert_called_once_with(
         "years_experience__options__0-1 years|1-2 years|2-4 years",
@@ -538,7 +539,8 @@ async def test_interactive_prompt_user_case1() -> None:
         "How many years of experience?",
         [],
         False,
-        None
+        None,
+        False
     )
 
 
@@ -566,7 +568,8 @@ async def test_interactive_prompt_user_case2() -> None:
         "Select your experience level",
         ["0-1 years", "2-4 years"],
         True,
-        "2"
+        "2",
+        False
     )
 
 
@@ -1185,21 +1188,47 @@ def test_resolve_session_key() -> None:
     assert action1 is None
     processed[k1] = "How many years of experience in Python?"
 
-    # 2. Key collision (different question text for same key): should return new unique key
+    # 2. Key collision (different question text for same key): should return a
+    #    NEW key derived from the question text (stable across jobs), not a
+    #    positional _2 (which leaked answers across jobs via the global bank).
     k2, action2 = filler._resolve_session_key("How many years of experience in PySpark?", "exp_python", processed)
-    assert k2 == "exp_python_2"
+    assert k2 != "exp_python"
+    assert k2.startswith("exp_python__")
+    assert "pyspark" in k2
     assert action2 is None
     processed[k2] = "How many years of experience in PySpark?"
 
-    # 3. Repeat of collision key: should resolve to the same unique key
+    # 3. Repeat of collision key: should resolve to the SAME text-derived key
     k3, action3 = filler._resolve_session_key("How many years of experience in PySpark?", "exp_python", processed)
-    assert k3 == "exp_python_2"
+    assert k3 == k2
     assert action3 is None
 
     # 4. Stuck loop (same question text and key): should return action='skip'
     k4, action4 = filler._resolve_session_key("How many years of experience in Python?", "exp_python", processed)
     assert k4 == "exp_python"
     assert action4 == "skip"
+
+
+def test_token_overlap_avoids_numeric_substring_trap() -> None:
+    from app.question_bank.form_filler import _token_overlap
+    # "2" must NOT match inside "12" / "12 - 15 years"
+    assert _token_overlap("2", "12 - 15 years") is False
+    assert _token_overlap("2", "2 - 4 years") is True
+    # word answers still match at boundaries
+    assert _token_overlap("yes", "yes") is True
+    assert _token_overlap("no", "notice period") is False
+
+
+def test_best_numeric_option_picks_correct_and_tightest_bucket() -> None:
+    from app.question_bank.form_filler import _best_numeric_option
+    # val=2 must pick "2-4 years", never "10-12 years" (digit-substring trap)
+    pairs = [("o1", "10-12 years"), ("o2", "2-4 years")]
+    assert _best_numeric_option(pairs, 2.0) == ("o2", "2-4 years")
+    # overlapping open-ended ranges: val=8 must pick the tighter "8+ yrs"
+    pairs2 = [("a", "2+ yrs"), ("b", "8+ yrs")]
+    assert _best_numeric_option(pairs2, 8.0) == ("b", "8+ yrs")
+    # no matching bucket -> None
+    assert _best_numeric_option([("x", "10-12 years")], 2.0) is None
 
 
 def test_get_actual_numeric_experience_transferable() -> None:

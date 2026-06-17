@@ -173,6 +173,14 @@ async def run() -> None:
 
 def main() -> None:
     """Entry point — runs the async pipeline."""
+    # Ensure UTF-8 console output so the Unicode banner / log glyphs (×, box-drawing)
+    # don't crash on a Windows cp1252 console.
+    for _stream in (sys.stdout, sys.stderr):
+        try:
+            _stream.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):
+            pass
+
     print()
     print("╔══════════════════════════════════════════════════╗")
     print("║       NAUKRI JOB COLLECTOR — POC-1              ║")

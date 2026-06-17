@@ -149,6 +149,31 @@ def test_question_normalization_maps_similar_questions() -> None:
     assert normalize_question_key("Custom Random Question!") == "custom_random_question"
 
 
+def test_question_normalization_extracts_skill_from_how_many_years_phrasing() -> None:
+    # Naukri phrasing "how many years of experience do you have in <skill>?" must
+    # extract the skill into a distinct exp_<skill> key, not collapse into the
+    # generic total_years_experience (which caused positional-collision answers).
+    assert (
+        normalize_question_key("How many years of experience do you have in Terraform?")
+        == "exp_terraform"
+    )
+    assert (
+        normalize_question_key("How many years of experience do you have in Iac?")
+        == "exp_iac"
+    )
+    # Distinct skills must produce distinct keys (no _2/_3 positional collision).
+    assert normalize_question_key(
+        "How many years of experience do you have in Terraform?"
+    ) != normalize_question_key(
+        "How many years of experience do you have in Iac?"
+    )
+    # No-skill generic experience question still collapses to the generic key.
+    assert (
+        normalize_question_key("What is your total years of experience?")
+        == "total_years_experience"
+    )
+
+
 def test_question_normalization_distinguishes_relocation_city_selector() -> None:
     question = "Please select the city you are currently residing or willing to relocate to"
     options = ["Hyderabad", "Gurugram"]
