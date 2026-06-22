@@ -1,26 +1,26 @@
 {
   "overview_stats": {
-    "total_jobs": 878,
-    "jobs_today": 354,
-    "apply": 243,
-    "review": 26,
-    "skip": 608,
+    "total_jobs": 1075,
+    "jobs_today": 221,
+    "apply": 326,
+    "review": 65,
+    "skip": 683,
     "pending_eval": 1,
     "pending_apply": 0,
-    "easy_apply": 33,
-    "external_portal": 123,
+    "easy_apply": 29,
+    "external_portal": 188,
     "already_applied": 18,
-    "applied_successfully": 60,
+    "applied_successfully": 71,
     "failed": 0,
-    "unknown_flow": 33,
+    "unknown_flow": 41,
     "quota_exhausted": 0,
     "register": 0,
     "login_required": 0,
     "email": 0,
-    "total_questions": 149,
-    "answered_questions": 148,
-    "coverage_pct": 99.3,
-    "last_run": "2026-06-20T04:46:42.089692",
+    "total_questions": 193,
+    "answered_questions": 181,
+    "coverage_pct": 93.8,
+    "last_run": "2026-06-22T17:38:40.244514",
     "retry_queue": {
       "count": 0,
       "reasons": {
@@ -63,6 +63,19 @@
       "priority": "high",
       "reason": "Exceptional production experience in Generative AI, RAG, LLM applications, and AWS, with strong backend and database skills, highly relevant for a data science company.",
       "confidence": 92.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15685,
+      "job_title": "Back - End Developer",
+      "company_name": "Digital Glyde",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "0-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-digital-glyde-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-3-years-170524500932",
+      "interview_probability": 92.0,
+      "priority": "high",
+      "reason": "Strong Python, FastAPI, AWS backend skills with production LLM/RAG experience. Excellent fit for the role.",
+      "confidence": 90.0,
       "apply_status": "external_portal"
     },
     {
@@ -547,6 +560,227 @@
       "apply_status": "external_portal"
     },
     {
+      "id": 14749,
+      "job_title": "AI Automation Engineer (GenAI, LLMs, AI Agents)",
+      "company_name": "Bandi Informatics",
+      "location": "Chennai",
+      "experience_required": "1-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-automation-engineer-genai-llms-ai-agents-bandi-informatics-chennai-1-to-5-years-050626006114",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production experience in RAG, Agentic AI, LangGraph, FastAPI, and AWS, directly aligning with core job requirements. Experience gap is mitigated by demonstrated capability.",
+      "confidence": 92.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15029,
+      "job_title": "AI Engineer",
+      "company_name": "Illuminz",
+      "location": "Bengaluru",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-illumina-inc-bengaluru-1-to-2-years-220626501818",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15144,
+      "job_title": "Data Engineer - AI",
+      "company_name": "Nucleusteq Consulting",
+      "location": "Indore",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-data-engineer-ai-nucleusteq-indore-1-to-3-years-070426501150",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Exceptional production RAG and LLM application experience, strong SQL, and transferable cloud skills.",
+      "confidence": 92.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15146,
+      "job_title": "AI Developer",
+      "company_name": "Five Exceptions Software Solutions",
+      "location": "Indore",
+      "experience_required": "2-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-developer-fiveexceptions-software-solutions-indore-2-to-8-years-070824502563",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15231,
+      "job_title": "LLM Ops Engineer (Infrastructure & Performance)",
+      "company_name": "Krazy Bee Services",
+      "location": "Bengaluru",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-llm-ops-engineer-infrastructure-performance-krazy-bee-services-bengaluru-1-to-2-years-250526031604",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; meets core infrastructure and LLM ops needs.",
+      "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15569,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Sage It",
+      "location": "Chennai",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-sage-it-chennai-1-to-3-years-170226504320",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience aligns with Agentic AI role.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15604,
+      "job_title": "Artificial Intelligence Engineer",
+      "company_name": "Godrej Infotech",
+      "location": "Mumbai(Vikhroli)",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-godrej-infotech-mumbai-2-to-5-years-180626015382",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 88.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15612,
+      "job_title": "Backend Engineer",
+      "company_name": "Margex",
+      "location": "Remote",
+      "experience_required": "0-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-margex-remote-0-to-2-years-201125504154",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15631,
+      "job_title": "Backend Engineer",
+      "company_name": "Workforce Next",
+      "location": "Noida",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-workforce-next-noida-1-to-4-years-140526500218",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15642,
+      "job_title": "Backend Developer",
+      "company_name": "Fourthpointer Services",
+      "location": "Noida",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-fourthpointer-services-pvt-ltd-noida-2-to-4-years-120324500394",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG, FastAPI, AWS, and OOP experience align with backend role.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15650,
+      "job_title": "Backend Developer",
+      "company_name": "Zenith Software",
+      "location": "Noida",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-zenith-india-pvt-ltd-noida-1-to-3-years-291025502319",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15665,
+      "job_title": "Associate - Back-End Developer (PEG)",
+      "company_name": "Bain",
+      "location": "Hybrid - Gurugram",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-associate-back-end-developer-peg-bain-gurugram-1-to-4-years-210526011560",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience, FastAPI, AWS, LLM, vector DB, and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15672,
+      "job_title": "Python Backend Engineer",
+      "company_name": "Ascendeum",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-ascendeum-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-151223501653",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, transferable cloud skills, meets Python backend requirements.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15674,
+      "job_title": "Back-End Engineer",
+      "company_name": "Kalkey Solutions",
+      "location": "Kolkata",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-kalkey-kolkata-1-to-4-years-071025502743",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, FastAPI backend, AWS deployments, and AI expertise.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15681,
+      "job_title": "Backend Engineer",
+      "company_name": "Aidaptive",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-aidaptive-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-2-years-090224500860",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, AWS deployments, and OOP skills align with backend role.",
+      "confidence": 88.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15692,
+      "job_title": "Backend Engineer",
+      "company_name": "Prajnan Software Com",
+      "location": "Bengaluru",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-prajnan-software-bengaluru-1-to-2-years-010626501409",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15698,
+      "job_title": "Backend Engineer",
+      "company_name": "Revefi",
+      "location": "Bengaluru",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-revefi-bengaluru-1-to-3-years-130225505004",
+      "interview_probability": 90.0,
+      "priority": "high",
+      "reason": "Exceptional production experience with RAG, LangGraph, FastAPI, and AWS microservices, directly aligning with key positive signals in the guidance. Strong backend and distributed systems capabilities demonstrated through GenAI applications.",
+      "confidence": 95.0,
+      "apply_status": "external_portal"
+    },
+    {
       "id": 10577,
       "job_title": "Fixed Income Index Engineering Professional",
       "company_name": "ISS Corporate Solutions",
@@ -599,121 +833,30 @@
       "apply_status": "applied_successfully"
     },
     {
-      "id": 6144,
-      "job_title": "GenAI Developer",
-      "company_name": "Infosys",
-      "location": "Bengaluru",
-      "experience_required": "3-5 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-genai-developer-infosys-limited-bengaluru-3-to-5-years-050626924412",
-      "interview_probability": 85.0,
+      "id": 15654,
+      "job_title": "Python Backend Engineer Role",
+      "company_name": "SBNRI",
+      "location": "Hybrid - Gurugram",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-role-veerwal-getwork-services-gurugram-2-to-5-years-180626930701",
+      "interview_probability": 88.0,
       "priority": "high",
-      "reason": "Strong production RAG experience and transferable cloud skills.",
-      "confidence": 82.0,
+      "reason": "Strong production RAG and FastAPI experience, AWS deployments, PostgreSQL, and system design align with role.",
+      "confidence": 84.0,
       "apply_status": "applied_successfully"
     },
     {
-      "id": 6161,
-      "job_title": "Engineer - Target -8",
-      "company_name": "Target",
+      "id": 15697,
+      "job_title": "Backend Engineer",
+      "company_name": "Simplismart",
       "location": "Bengaluru",
-      "experience_required": "2-4 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-engineer-target-8-target-corporation-india-pvt-ltd-bengaluru-2-to-4-years-190526501474",
-      "interview_probability": 85.0,
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-simplismart-bengaluru-2-to-5-years-201124508043",
+      "interview_probability": 88.0,
       "priority": "high",
-      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills.",
-      "confidence": 82.0,
-      "apply_status": "external_portal"
-    },
-    {
-      "id": 6218,
-      "job_title": "Gen AI Engineer",
-      "company_name": "Cyient",
-      "location": "Bengaluru",
-      "experience_required": "3-5 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-gen-ai-engineer-cyient-bengaluru-3-to-5-years-050626022027",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core GenAI requirements.",
-      "confidence": 82.0,
-      "apply_status": "applied_successfully"
-    },
-    {
-      "id": 6424,
-      "job_title": "AI Automation Engineer (GenAI, LLMs, AI Agents)",
-      "company_name": "Bandi Informatics",
-      "location": "Chennai",
-      "experience_required": "1-5 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-ai-automation-engineer-genai-llms-ai-agents-bandi-informatics-chennai-1-to-5-years-050626006114",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG and LangGraph experience with FastAPI and AWS deployments.",
-      "confidence": 82.0,
-      "apply_status": "easy_apply"
-    },
-    {
-      "id": 6696,
-      "job_title": "GEN AI Developer",
-      "company_name": "Tata Consultancy Services",
-      "location": "Noida, Gurugram, Delhi / NCR",
-      "experience_required": "3-8 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-gen-ai-developer-tata-consultancy-services-noida-gurugram-delhi-ncr-3-to-8-years-050626011759",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG experience and transferable cloud skills.",
-      "confidence": 82.0,
-      "apply_status": "easy_apply"
-    },
-    {
-      "id": 6727,
-      "job_title": "Data Scientist",
-      "company_name": "Tata Consultancy Services",
-      "location": "Noida, Gurugram, Delhi / NCR",
-      "experience_required": "4-9 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-data-scientist-tata-consultancy-services-noida-gurugram-delhi-ncr-4-to-9-years-050626011471",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG experience and transferable cloud skills.",
-      "confidence": 82.0,
-      "apply_status": "easy_apply"
-    },
-    {
-      "id": 6788,
-      "job_title": "Data Scientist",
-      "company_name": "Gartner for HR",
-      "location": "Gurugram",
-      "experience_required": "2-4 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-data-scientist-gartner-for-hr-gurugram-2-to-4-years-050626502961",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG experience and transferable cloud skills.",
-      "confidence": 82.0,
-      "apply_status": "external_portal"
-    },
-    {
-      "id": 6796,
-      "job_title": "AI Developer with Entrepreneurial Mindset",
-      "company_name": "Avni Jawa",
-      "location": "Remote",
-      "experience_required": "4-6 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-ai-developer-with-entrepreneurial-mindset-avni-jawa-gurugram-4-to-6-years-050626025966",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG and LangGraph experience, transferable AWS skills.",
+      "reason": "Strong production RAG, LangGraph, FastAPI, and AWS experience for ML microservices. Excellent alignment with GenAI and MLOps requirements.",
       "confidence": 85.0,
-      "apply_status": "easy_apply"
-    },
-    {
-      "id": 6818,
-      "job_title": "Gen AI / Artificial Intelligence Developer",
-      "company_name": "Syansoft",
-      "location": "Gurugram",
-      "experience_required": "3-6 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-gen-ai-artificial-intelligence-developer-syansoft-gurugram-3-to-6-years-040626026288",
-      "interview_probability": 85.0,
-      "priority": "high",
-      "reason": "Strong production RAG experience and transferable cloud skills.",
-      "confidence": 82.0,
-      "apply_status": "unknown"
+      "apply_status": "external_portal"
     },
     {
       "id": 7784,
@@ -2172,17 +2315,511 @@
       "apply_status": "applied_successfully"
     },
     {
-      "id": 6613,
-      "job_title": "AI Vibe Coding Engineer",
-      "company_name": "Gruve",
-      "location": "Remote",
-      "experience_required": "1-2 Yrs",
-      "job_url": "https://www.naukri.com/job-listings-ai-vibe-coding-engineer-gruve-remote-1-to-2-years-050626503892",
-      "interview_probability": 80.0,
+      "id": 14568,
+      "job_title": "Software Engineer III, AI/ML GenAI, Google Cloud",
+      "company_name": "Google",
+      "location": "Hyderabad",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-iii-ai-ml-genai-google-cloud-google-india-private-limited-hyderabad-2-to-7-years-090725503471",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 14657,
+      "job_title": "GenAI Engineer",
+      "company_name": "QUADRAFORT TECHNOLOGIES",
+      "location": "Hybrid - Gurugram",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-quantumcommit-infotech-gurugram-4-to-9-years-200626013347",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS, transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 14714,
+      "job_title": "Quality Assurance SDET Engineer, GenAI AI Platform",
+      "company_name": "Logicmonitor",
+      "location": "Pune",
+      "experience_required": "2-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-quality-assurance-sdet-engineer-genai-ai-platform-logicmonitor-pune-2-to-3-years-090226503149",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 14799,
+      "job_title": "GEN AI Data Scientist",
+      "company_name": "US MNC (analytics)",
+      "location": "Hybrid - Noida, Gurugram, Delhi / NCR",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-data-scientist-aspyra-hr-services-noida-gurugram-delhi-ncr-4-to-8-years-220626000954",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 14843,
+      "job_title": "Gen AI Developer",
+      "company_name": "LTM",
+      "location": "Hybrid - Kolkata",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-developer-ltimindtree-kolkata-4-to-9-years-040626033619",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, FastAPI, AWS, and prompt engineering align with GenAI role.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 14866,
+      "job_title": "Junior AI Engineer",
+      "company_name": "Dr D Y Patil Vidyapeeth (DPU)",
+      "location": "Pune(Sant Tukaram Nagar)",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-junior-ai-engineer-dr-d-y-patil-vidyapeeth-dpu-pune-2-to-5-years-220626014292",
+      "interview_probability": 85.0,
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 14967,
+      "job_title": "AI Engineer",
+      "company_name": "Metaschool",
+      "location": "Remote",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-metaschool-remote-4-to-9-years-150126500399",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15030,
+      "job_title": "AI Engineer",
+      "company_name": "Vation Digital",
+      "location": "Bengaluru",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-vation-digital-bengaluru-1-to-4-years-220626500657",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15228,
+      "job_title": "Senior AI/ML Engineer (Document Intelligence & LLMs)",
+      "company_name": "Krazy Bee Services",
+      "location": "Bengaluru",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-ai-ml-engineer-document-intelligence-llms-krazy-bee-services-bengaluru-2-to-4-years-250526026681",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15305,
+      "job_title": "GenAI Developer (FastAPI)",
+      "company_name": "Akriya Group",
+      "location": "Mumbai (All Areas)",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-genai-developer-fastapi-akriya-group-mumbai-all-areas-4-to-6-years-220626007371",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15358,
+      "job_title": "Prompt Engineer",
+      "company_name": "Nusummit Technologies",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-prompt-engineer-nusummit-technologies-bengaluru-2-to-5-years-270526018229",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and prompt engineering experience, but lacks JavaScript and voice AI exposure.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15455,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Magneum Technology",
+      "location": "Noida",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-magneum-technology-noida-3-to-6-years-260526032822",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, FastAPI backend, AWS deployment, and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15509,
+      "job_title": "Agentic AI Engineer (Fractional)",
+      "company_name": "Getsubstance",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-fractional-substance-bengaluru-2-to-5-years-150526502377",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and agentic experience, transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15525,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Tazapay",
+      "location": "Bengaluru",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-tazapay-bengaluru-3-to-6-years-080426500980",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, and FastAPI backend align with agentic AI needs.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15526,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Clifyx Technology",
+      "location": "Bengaluru",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-clifyx-technology-bengaluru-4-to-8-years-040226502282",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15530,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "FlytBase Labs",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-flytbase-labs-pune-1-to-4-years-291225505086",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
       "apply_status": "unknown"
+    },
+    {
+      "id": 15540,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Lumasense Technologies",
+      "location": "Pune",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-lumasense-technologies-formerly-luxtron-pune-3-to-8-years-130426502829",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and agentic experience with transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15545,
+      "job_title": "AI Engineer",
+      "company_name": "Onit",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-onit-pune-1-to-4-years-140426501551",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and agentic AI experience with FastAPI and AWS; transferable cloud skills cover Azure OpenAI.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15546,
+      "job_title": "Junior AI Engineer",
+      "company_name": "Ranjangaon Industries",
+      "location": "Pune",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-junior-ai-engineer-ranjangaon-industries-private-limited-pune-2-to-4-years-200426502232",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15559,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Hyderabad",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-grid-dynamics-hyderabad-4-to-9-years-180526500485",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15601,
+      "job_title": "AI Engineer",
+      "company_name": "Prosares Solutions",
+      "location": "Mumbai",
+      "experience_required": "1-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-prosares-solutions-pvt-ltd-mumbai-1-to-6-years-301225504743",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15605,
+      "job_title": "Zapier & n8n Agentic AI Developer",
+      "company_name": "Gold Star Jewellery India",
+      "location": "Mumbai (All Areas)(Andheri East)",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-zapier-n8n-agentic-ai-developer-gold-star-jewellery-india-mumbai-all-areas-1-to-2-years-190526026594",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "applied_successfully"
+    },
+    {
+      "id": 15608,
+      "job_title": "AI Operations / Python AI Developer",
+      "company_name": "Codevian Technologies",
+      "location": "Mumbai",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-operations-python-ai-developer-codevian-technologies-pvt-ltd-mumbai-2-to-4-years-250326504906",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15619,
+      "job_title": "Golang Developer",
+      "company_name": "Sparix Global",
+      "location": "Remote",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-golang-developer-sparix-global-private-limited-remote-2-to-5-years-240426500746",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong Python API and microservices experience, production RAG system, AWS, SQL, but lacks Go and containerization.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15624,
+      "job_title": "Backend Developer",
+      "company_name": "Junky Tech India",
+      "location": "Remote",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-junky-tech-india-private-limited-remote-2-to-5-years-190626504081",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15638,
+      "job_title": "Backend devloper",
+      "company_name": "Eduzent Infotech",
+      "location": "Noida",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-devloper-eduzent-noida-1-to-3-years-110925502543",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15641,
+      "job_title": "Backend Developer",
+      "company_name": "TagTaste Foods",
+      "location": "Noida",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-tagtaste-foods-pvt-ltd-noida-2-to-5-years-220925503867",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, AWS deployments, CI/CD, but missing PHP/NodeJs and configuration management skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15649,
+      "job_title": "backend developer",
+      "company_name": "Sutraa Technosoft",
+      "location": "Noida",
+      "experience_required": "2-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-sutraa-technosoft-private-limited-noida-2-to-3-years-301025504934",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15651,
+      "job_title": "Backend Engineer",
+      "company_name": "Excel Net Solutions",
+      "location": "Gurugram",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-excel-net-solutions-pvt-ltd-gurugram-1-to-4-years-191225504448",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15653,
+      "job_title": "Backend Engineer",
+      "company_name": "Inteligenai",
+      "location": "Gurugram",
+      "experience_required": "0-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-inteligenai-gurugram-0-to-2-years-210725505396",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15670,
+      "job_title": "Back End Developer",
+      "company_name": "Zippee",
+      "location": "Gurugram",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-zippee-gurugram-1-to-2-years-250825505021",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, AWS deployment, transferable RDBMS skills, meets backend requirements.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15677,
+      "job_title": "Senior Backend Engineer - Pythons",
+      "company_name": "Iletexy",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-backend-engineer-pythons-iletexy-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-250823501171",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, AWS devops, transferable skills to Django, meets backend requirements.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15682,
+      "job_title": "Backend Developer",
+      "company_name": "Photon",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-121124506331",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience with AWS; transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15683,
+      "job_title": "Back End Developer",
+      "company_name": "Sstech Networking Solution",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-sstech-networking-solution-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-240823500154",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15686,
+      "job_title": "Full Stack Developer Mid-Level",
+      "company_name": "Aerobotics7",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-mid-level-aerobotics7-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-240725503446",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production AI/LLM backend experience (RAG, LangGraph, FastAPI, AWS) highly relevant to company's AI focus. Lacks explicit frontend and real-time streaming skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15688,
+      "job_title": "Full - Stack Developer",
+      "company_name": "Arsr Technologies",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-arsr-technologies-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-301020500932",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Exceptional production backend and GenAI experience; lacks explicit front-end skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15696,
+      "job_title": "Backend Engineer",
+      "company_name": "Nurix Ai",
+      "location": "Bengaluru, Hubli, Mangaluru, Mysuru, Belgaum",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-nurix-ai-hubli-mangaluru-mysuru-bengaluru-belgaum-1-to-4-years-280126501383",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15699,
+      "job_title": "Backend Engineer",
+      "company_name": "Leaguex Gaming",
+      "location": "Bengaluru",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-leaguex-gaming-bengaluru-2-to-4-years-110825502539",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production RAG, FastAPI, and microservices experience with transferable cloud skills. Excellent alignment with modern backend requirements.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15700,
+      "job_title": "Backend Engineer",
+      "company_name": "Plausibility Solutions",
+      "location": "Bengaluru",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-plausibility-solutions-bengaluru-1-to-3-years-090323502596",
+      "interview_probability": 85.0,
+      "priority": "high",
+      "reason": "Strong production-grade FastAPI and AWS deployment experience, demonstrating high capability in building scalable backend systems, with transferable skills for Django.",
+      "confidence": 82.0,
+      "apply_status": "external_portal"
     },
     {
       "id": 7823,
@@ -2601,6 +3238,175 @@
       "apply_status": "external_portal"
     },
     {
+      "id": 14986,
+      "job_title": "AI Engineer",
+      "company_name": "Apex 2000 INC",
+      "location": "Noida",
+      "experience_required": "3-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-apex-2000-inc-noida-3-to-7-years-050326500045",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 85.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15297,
+      "job_title": "Software Developer, Delhi / Mumbai, The Ability Network",
+      "company_name": "Tech Mahindra Foundation",
+      "location": "New Delhi, Mumbai",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-developer-delhi-mumbai-the-ability-network-tech-mahindra-foundation-mumbai-new-delhi-3-to-5-years-220626020576",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15359,
+      "job_title": "GTM Engineer",
+      "company_name": "Intellectyx Data Science India",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-gtm-engineer-intellectyx-data-science-india-bengaluru-2-to-5-years-010626004166",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15465,
+      "job_title": "AI Lead Engineer",
+      "company_name": "Vellstone",
+      "location": "Noida",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-lead-engineer-vellstone-noida-3-to-8-years-040626501018",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core requirements.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15564,
+      "job_title": "Ai Engineer (Agentic Ai / Mcp)",
+      "company_name": "S&P Global Market Intelligence",
+      "location": "Hyderabad",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-agentic-ai-mcp-s-p-capital-iq-india-pvt-ltd-hyderabad-4-to-6-years-270526935947",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core AI requirements.",
+      "confidence": 78.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15590,
+      "job_title": "Agentic AI Engineer\"",
+      "company_name": "Pristine It Code",
+      "location": "Mumbai",
+      "experience_required": "3-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-pristine-it-code-mumbai-3-to-7-years-281125502655",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, and prompt engineering align with Agentic AI role.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15613,
+      "job_title": "Python Backend Engineer",
+      "company_name": "Lincoln International",
+      "location": "Remote",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-lincoln-international-remote-4-to-6-years-050526503351",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15617,
+      "job_title": "Fullstack Developer",
+      "company_name": "Sparix Global",
+      "location": "Remote",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-fullstack-developer-sparix-global-private-limited-remote-2-to-6-years-280426500594",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15620,
+      "job_title": "Backend Developer",
+      "company_name": "True Choice",
+      "location": "Remote",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-true-choice-remote-1-to-3-years-221222500537",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience with AWS deployments, but lacks NodeJS/JavaScript stack.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15625,
+      "job_title": "Backend Software Engineer - Python/Postgres [ / Global]",
+      "company_name": "Enveritas",
+      "location": "Remote",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-software-engineer-python-postgres-global-enveritas-remote-2-to-5-years-300326502285",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG, FastAPI, AWS, PostgreSQL experience aligns with backend role.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15658,
+      "job_title": "Backend Engineer",
+      "company_name": "Paypay India",
+      "location": "Gurugram, New Delhi",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-paypay-india-new-delhi-gurugram-4-to-6-years-010626013959",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience with AWS, transferable to backend role.",
+      "confidence": 80.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15660,
+      "job_title": "Backend Engineer",
+      "company_name": "Paypay Corporation",
+      "location": "Gurugram",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-paypay-corporation-gurugram-3-to-5-years-200824500932",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15716,
+      "job_title": "Python Backend Engineer with strong Cloud expert",
+      "company_name": "KPIT",
+      "location": "Pune",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-with-strong-cloud-expert-kpit-pune-3-to-6-years-190626023555",
+      "interview_probability": 80.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience, FastAPI maps to Flask, AWS expertise, transferable skills.",
+      "confidence": 85.0,
+      "apply_status": "unknown"
+    },
+    {
       "id": 7838,
       "job_title": "Backend Engineer - Samvaad - Sarvam AI",
       "company_name": "Sarvam",
@@ -2848,6 +3654,110 @@
       "apply_status": "applied_successfully"
     },
     {
+      "id": 14943,
+      "job_title": "Lead Generative AI Engineer",
+      "company_name": "Baker Hughes",
+      "location": "Navi Mumbai",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-lead-generative-ai-engineer-baker-hughes-the-network-navi-mumbai-4-to-6-years-180526500348",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; missing Azure OpenAI.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15229,
+      "job_title": "Developer",
+      "company_name": "EXL",
+      "location": "Hybrid - Bengaluru, Pune, Delhi / NCR",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-developer-exl-pune-bengaluru-delhi-ncr-3-to-6-years-200626017919",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, transferable AWS/GCP skills, but lacks GCP and Dialogflow CX.",
+      "confidence": 80.0,
+      "apply_status": "easy_apply"
+    },
+    {
+      "id": 15479,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "EXL",
+      "location": "Hybrid - Gurugram, Bengaluru, Pune",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-exl-pune-gurugram-bengaluru-3-to-5-years-280526022286",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG and agentic AI experience with transferable cloud skills.",
+      "confidence": 80.0,
+      "apply_status": "easy_apply"
+    },
+    {
+      "id": 15522,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Bengaluru",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-grid-dynamics-bengaluru-4-to-9-years-180526500484",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 78.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15538,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Pune",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-grid-dynamics-pune-4-to-9-years-130526501159",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG and LangGraph experience, AWS deployments, FastAPI backend, but lacks SageMaker and enterprise governance.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15580,
+      "job_title": "AI/Gen AI Engineer",
+      "company_name": "dotSolved Systems Inc.",
+      "location": "Chennai",
+      "experience_required": "3-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-gen-ai-engineer-dotsolved-systems-inc-chennai-3-to-7-years-190626503119",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "confidence": 75.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15618,
+      "job_title": "Full Stack Developer",
+      "company_name": "Upstack",
+      "location": "Remote",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-upstack-remote-2-to-6-years-260822501614",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, transferable AWS skills, but lacks front-end frameworks.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15667,
+      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
+      "company_name": "Thinkhub Technologies And Consulting",
+      "location": "Gurugram",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-python-reactjs-vuejs-thinkhub-india-gurugram-2-to-4-years-021225503674",
+      "interview_probability": 75.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills, but lacks frontend frameworks.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
       "id": 7781,
       "job_title": "Distinguished AI Engineer",
       "company_name": "Capital One",
@@ -3082,6 +3992,97 @@
       "apply_status": "external_portal"
     },
     {
+      "id": 15615,
+      "job_title": "Full Stack Developer",
+      "company_name": "Gleac Com",
+      "location": "Remote",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-gleac-remote-2-to-6-years-230125505489",
+      "interview_probability": 70.0,
+      "priority": "medium",
+      "reason": "Strong backend and AI production experience, but lacks front-end skills.",
+      "confidence": 75.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15637,
+      "job_title": "Full - Stack Developer",
+      "company_name": "Appy Pie",
+      "location": "Noida",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-appy-pie-noida-1-to-2-years-220626502687",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong production RAG and AI experience, transferable AWS and FastAPI skills, but lacks Node.js/TypeScript and MongoDB.",
+      "confidence": 75.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15640,
+      "job_title": "Full Stack Developer",
+      "company_name": "Talent Toppers",
+      "location": "Noida",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-talent-toppers-noida-2-to-7-years-041024503948",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong backend and AI production experience, but lacks frontend stack.",
+      "confidence": 75.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15648,
+      "job_title": "Backend Engineer",
+      "company_name": "Oriserve",
+      "location": "Noida",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-oriserve-noida-2-to-4-years-220526918388",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong production backend experience with FastAPI and AWS, but lacks Node.js, MongoDB, TypeScript, and Redis.",
+      "confidence": 75.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15666,
+      "job_title": "Full stack developers",
+      "company_name": "Meyrahkee",
+      "location": "Gurugram",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developers-meyrahkee-gurugram-2-to-6-years-131219500725",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong production RAG experience and transferable cloud skills, but lacks JavaScript frameworks.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15669,
+      "job_title": "Full Stack Developer",
+      "company_name": "Leading Client",
+      "location": "Hybrid - Gurugram",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-contactx-resource-management-pvt-ltd-gurugram-2-to-5-years-040626921575",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong backend and AI production experience, but missing core frontend stack.",
+      "confidence": 75.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15673,
+      "job_title": "Jr. Backend Engineer",
+      "company_name": "5D Vdc Services",
+      "location": "Kolkata",
+      "experience_required": "0-1 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-jr-backend-engineer-5d-vdc-services-kolkata-0-to-1-years-070426501719",
+      "interview_probability": 70.0,
+      "priority": "high",
+      "reason": "Strong production RAG and FastAPI experience, but lacks JavaScript/Redis.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
       "id": 10597,
       "job_title": "Senior React Native / Full Stack Developer (FastAPI, AWS, MongoDB)",
       "company_name": "India Health Link",
@@ -3160,6 +4161,58 @@
       "apply_status": "external_portal"
     },
     {
+      "id": 14649,
+      "job_title": "Secops Engineer",
+      "company_name": "Achnet",
+      "location": "Noida",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-secops-engineer-achnet-inc-noida-3-to-5-years-220626501471",
+      "interview_probability": 60.0,
+      "priority": "high",
+      "reason": "Strong production RAG and GenAI experience, transferable AWS skills, but lacks explicit security ops tools and Linux admin.",
+      "confidence": 70.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15508,
+      "job_title": "Principal AI Engineer",
+      "company_name": "ActTrident",
+      "location": "Remote",
+      "experience_required": "0-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-principal-ai-engineer-acttrident-kolkata-0-to-6-years-210626004069",
+      "interview_probability": 60.0,
+      "priority": "medium",
+      "reason": "Strong production RAG experience and transferable cloud skills, but lacks frontend and cybersecurity expertise.",
+      "confidence": 70.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15668,
+      "job_title": "Full Stack Developer",
+      "company_name": "Leading Client",
+      "location": "Gurugram",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-contactx-resource-management-pvt-ltd-gurugram-2-to-5-years-040626921577",
+      "interview_probability": 60.0,
+      "priority": "high",
+      "reason": "Strong backend, AI, and AWS experience; missing core frontend stack.",
+      "confidence": 70.0,
+      "apply_status": "unknown"
+    },
+    {
+      "id": 15687,
+      "job_title": "Fullstack Developer",
+      "company_name": "Iquest Solutions",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-fullstack-developer-iquest-solutions-corp-usa-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-040825508574",
+      "interview_probability": 60.0,
+      "priority": "medium",
+      "reason": "Strong backend, cloud, and system design skills, with production experience in RAG and microservices. However, lacks explicit modern frontend framework experience required for a Fullstack role.",
+      "confidence": 80.0,
+      "apply_status": "external_portal"
+    },
+    {
       "id": 10397,
       "job_title": "Fullstack Developer",
       "company_name": "Invest Mango",
@@ -3197,6 +4250,32 @@
       "reason": "Strong production RAG and LLM experience but lacks explicit responsible AI expertise.",
       "confidence": 65.0,
       "apply_status": "external_portal"
+    },
+    {
+      "id": 15622,
+      "job_title": "Full Stack Developer",
+      "company_name": "Construe Labs",
+      "location": "Remote",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-construe-labs-remote-2-to-4-years-120526500155",
+      "interview_probability": 55.0,
+      "priority": "medium",
+      "reason": "Strong backend and AI production experience but lacks front-end skills.",
+      "confidence": 70.0,
+      "apply_status": "external_portal"
+    },
+    {
+      "id": 15626,
+      "job_title": "Web3 Backend Engineer",
+      "company_name": "Ultahost",
+      "location": "Remote",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-web3-backend-engineer-ultahost-remote-4-to-9-years-210825501162",
+      "interview_probability": 55.0,
+      "priority": "medium",
+      "reason": "Strong Python backend and FastAPI experience, but lacks IPFS and blockchain expertise.",
+      "confidence": 60.0,
+      "apply_status": "external_portal"
     }
   ],
   "external_jobs": [
@@ -3219,6 +4298,16 @@
       "apply_url": "https://www.godigiinfotech.com/job-detail/software-engineer/243",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-software-engineer-godigi-infotech-pune-0-to-1-years-011225502471"
+    },
+    {
+      "id": 15685,
+      "job_title": "Back - End Developer",
+      "company_name": "Digital Glyde",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 92.0,
+      "apply_url": "https://www.digitalglyde.com/digital-glyde-careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-digital-glyde-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-3-years-170524500932"
     },
     {
       "id": 8575,
@@ -3411,6 +4500,136 @@
       "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-150626936503"
     },
     {
+      "id": 15029,
+      "job_title": "AI Engineer",
+      "company_name": "Illuminz",
+      "location": "Bengaluru",
+      "interview_probability": 90.0,
+      "apply_url": "https://illumina.wd1.myworkdayjobs.com/en-US/illumina-careers/job/India---Bengaluru---Manyata/AI-Engineer_42949-JOB",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-illumina-inc-bengaluru-1-to-2-years-220626501818"
+    },
+    {
+      "id": 15144,
+      "job_title": "Data Engineer - AI",
+      "company_name": "Nucleusteq Consulting",
+      "location": "Indore",
+      "interview_probability": 90.0,
+      "apply_url": "https://nucleusteq.breezy.hr/p/42564a984b07-data-engineer-ai",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-data-engineer-ai-nucleusteq-indore-1-to-3-years-070426501150"
+    },
+    {
+      "id": 15146,
+      "job_title": "AI Developer",
+      "company_name": "Five Exceptions Software Solutions",
+      "location": "Indore",
+      "interview_probability": 90.0,
+      "apply_url": "https://5exceptions.com/Career",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-developer-fiveexceptions-software-solutions-indore-2-to-8-years-070824502563"
+    },
+    {
+      "id": 15569,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Sage It",
+      "location": "Chennai",
+      "interview_probability": 90.0,
+      "apply_url": "https://sageit.keka.com/careers/jobdetails/119287",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-sage-it-chennai-1-to-3-years-170226504320"
+    },
+    {
+      "id": 15612,
+      "job_title": "Backend Engineer",
+      "company_name": "Margex",
+      "location": "Remote",
+      "interview_probability": 90.0,
+      "apply_url": "https://margex.com/en/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-margex-remote-0-to-2-years-201125504154"
+    },
+    {
+      "id": 15631,
+      "job_title": "Backend Engineer",
+      "company_name": "Workforce Next",
+      "location": "Noida",
+      "interview_probability": 90.0,
+      "apply_url": "https://wfnext.com/careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-workforce-next-noida-1-to-4-years-140526500218"
+    },
+    {
+      "id": 15642,
+      "job_title": "Backend Developer",
+      "company_name": "Fourthpointer Services",
+      "location": "Noida",
+      "interview_probability": 90.0,
+      "apply_url": "https://app.pyjamahr.com/careers?company=company&job_id=87388&company_uuid=CEE728B8F7",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-fourthpointer-services-pvt-ltd-noida-2-to-4-years-120324500394"
+    },
+    {
+      "id": 15650,
+      "job_title": "Backend Developer",
+      "company_name": "Zenith Software",
+      "location": "Noida",
+      "interview_probability": 90.0,
+      "apply_url": "https://zenithindia.org/Career",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-zenith-india-pvt-ltd-noida-1-to-3-years-291025502319"
+    },
+    {
+      "id": 15672,
+      "job_title": "Python Backend Engineer",
+      "company_name": "Ascendeum",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 90.0,
+      "apply_url": "https://ascendeum.snaphunt.com/job/GG2WEIC9FO",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-ascendeum-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-151223501653"
+    },
+    {
+      "id": 15674,
+      "job_title": "Back-End Engineer",
+      "company_name": "Kalkey Solutions",
+      "location": "Kolkata",
+      "interview_probability": 90.0,
+      "apply_url": "https://kalkey.com/career/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-kalkey-kolkata-1-to-4-years-071025502743"
+    },
+    {
+      "id": 15681,
+      "job_title": "Backend Engineer",
+      "company_name": "Aidaptive",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 90.0,
+      "apply_url": "https://jarvis-ml.breezy.hr/p/4d7b83809ef7-backend-engineer-india",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-aidaptive-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-2-years-090224500860"
+    },
+    {
+      "id": 15692,
+      "job_title": "Backend Engineer",
+      "company_name": "Prajnan Software Com",
+      "location": "Bengaluru",
+      "interview_probability": 90.0,
+      "apply_url": "https://prajnansoftwares.com/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-prajnan-software-bengaluru-1-to-2-years-010626501409"
+    },
+    {
+      "id": 15698,
+      "job_title": "Backend Engineer",
+      "company_name": "Revefi",
+      "location": "Bengaluru",
+      "interview_probability": 90.0,
+      "apply_url": "https://jobs.lever.co/revefi/22239d2c-eb57-4a5e-a1d3-16d0f6bf196a",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-revefi-bengaluru-1-to-3-years-130225505004"
+    },
+    {
       "id": 10577,
       "job_title": "Fixed Income Index Engineering Professional",
       "company_name": "ISS Corporate Solutions",
@@ -3431,24 +4650,14 @@
       "job_url": "https://www.naukri.com/job-listings-backend-developer-fastapi-scimplify-bengaluru-3-to-8-years-180825503016"
     },
     {
-      "id": 6161,
-      "job_title": "Engineer - Target -8",
-      "company_name": "Target",
+      "id": 15697,
+      "job_title": "Backend Engineer",
+      "company_name": "Simplismart",
       "location": "Bengaluru",
-      "interview_probability": 85.0,
-      "apply_url": "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/BangaloreIndia/Engineer---Target-India-8_R0000439188",
+      "interview_probability": 88.0,
+      "apply_url": "https://app.pyjamahr.com/careers?company=Simplismart&job_id=153788&company_uuid=7762D0EFFC",
       "apply_type": "external_portal",
-      "job_url": "https://www.naukri.com/job-listings-engineer-target-8-target-corporation-india-pvt-ltd-bengaluru-2-to-4-years-190526501474"
-    },
-    {
-      "id": 6788,
-      "job_title": "Data Scientist",
-      "company_name": "Gartner for HR",
-      "location": "Gurugram",
-      "interview_probability": 85.0,
-      "apply_url": "https://gartner.wd5.myworkdayjobs.com/en-US/EXT/job/Gurgaon/Data-Scientist_110303-1",
-      "apply_type": "external_portal",
-      "job_url": "https://www.naukri.com/job-listings-data-scientist-gartner-for-hr-gurugram-2-to-4-years-050626502961"
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-simplismart-bengaluru-2-to-5-years-201124508043"
     },
     {
       "id": 7822,
@@ -3961,6 +5170,296 @@
       "job_url": "https://www.naukri.com/job-listings-llm-engineer-prometteur-solutions-pvt-ltd-pune-2-to-7-years-170626501752"
     },
     {
+      "id": 14568,
+      "job_title": "Software Engineer III, AI/ML GenAI, Google Cloud",
+      "company_name": "Google",
+      "location": "Hyderabad",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.google.com/about/careers/applications/jobs/results/122874734491640518-software-engineer-iii-aiml-genai-google-cloud",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-iii-ai-ml-genai-google-cloud-google-india-private-limited-hyderabad-2-to-7-years-090725503471"
+    },
+    {
+      "id": 14714,
+      "job_title": "Quality Assurance SDET Engineer, GenAI AI Platform",
+      "company_name": "Logicmonitor",
+      "location": "Pune",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.logicmonitor.com/careers?gh_jid=7593528",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-quality-assurance-sdet-engineer-genai-ai-platform-logicmonitor-pune-2-to-3-years-090226503149"
+    },
+    {
+      "id": 14967,
+      "job_title": "AI Engineer",
+      "company_name": "Metaschool",
+      "location": "Remote",
+      "interview_probability": 85.0,
+      "apply_url": "https://metaschool.freshteam.com/jobs/4dntZZKWZixh/ai-engineer-remote",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-metaschool-remote-4-to-9-years-150126500399"
+    },
+    {
+      "id": 15030,
+      "job_title": "AI Engineer",
+      "company_name": "Vation Digital",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://vation.com/careers/ai_platform_engineer/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-vation-digital-bengaluru-1-to-4-years-220626500657"
+    },
+    {
+      "id": 15509,
+      "job_title": "Agentic AI Engineer (Fractional)",
+      "company_name": "Getsubstance",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://apply.workable.com/getsubstance/j/ED095755F4/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-fractional-substance-bengaluru-2-to-5-years-150526502377"
+    },
+    {
+      "id": 15525,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Tazapay",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://tazapay.freshteam.com/jobs/RjJRX-JDrCif/agentic-ai-engineer",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-tazapay-bengaluru-3-to-6-years-080426500980"
+    },
+    {
+      "id": 15526,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Clifyx Technology",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://www2.jobdiva.com/portal/?a=bajdnw4w0yraloh1qse3s25s4wl54b0546be8ws8392toifs4y6rer0c7aoojvcn&jobid=31818212&source=null#/%2Fjobs%2F31818212",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-clifyx-technology-bengaluru-4-to-8-years-040226502282"
+    },
+    {
+      "id": 15540,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Lumasense Technologies",
+      "location": "Pune",
+      "interview_probability": 85.0,
+      "apply_url": "https://jobs.advanced-energy.com/job/Pune-Agentic-AI-Engineer-MH-411018/1381211700/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-lumasense-technologies-formerly-luxtron-pune-3-to-8-years-130426502829"
+    },
+    {
+      "id": 15545,
+      "job_title": "AI Engineer",
+      "company_name": "Onit",
+      "location": "Pune",
+      "interview_probability": 85.0,
+      "apply_url": "https://jobs.lever.co/onit/983d3c5d-55d7-4802-9865-80bf58c68bd4",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-onit-pune-1-to-4-years-140426501551"
+    },
+    {
+      "id": 15546,
+      "job_title": "Junior AI Engineer",
+      "company_name": "Ranjangaon Industries",
+      "location": "Pune",
+      "interview_probability": 85.0,
+      "apply_url": "https://ria.keka.com/careers/jobdetails/135819",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-junior-ai-engineer-ranjangaon-industries-private-limited-pune-2-to-4-years-200426502232"
+    },
+    {
+      "id": 15559,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Hyderabad",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.griddynamics.com/careers/vacancy/55316",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-grid-dynamics-hyderabad-4-to-9-years-180526500485"
+    },
+    {
+      "id": 15601,
+      "job_title": "AI Engineer",
+      "company_name": "Prosares Solutions",
+      "location": "Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://prosares.com/ai-engineer/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-prosares-solutions-pvt-ltd-mumbai-1-to-6-years-301225504743"
+    },
+    {
+      "id": 15608,
+      "job_title": "AI Operations / Python AI Developer",
+      "company_name": "Codevian Technologies",
+      "location": "Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://codevian.com/career/ai-operations-python-ai-developer/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-operations-python-ai-developer-codevian-technologies-pvt-ltd-mumbai-2-to-4-years-250326504906"
+    },
+    {
+      "id": 15619,
+      "job_title": "Golang Developer",
+      "company_name": "Sparix Global",
+      "location": "Remote",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3c5G3Y5utMCA48mt1qkdJNVs=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-golang-developer-sparix-global-private-limited-remote-2-to-5-years-240426500746"
+    },
+    {
+      "id": 15624,
+      "job_title": "Backend Developer",
+      "company_name": "Junky Tech India",
+      "location": "Remote",
+      "interview_probability": 85.0,
+      "apply_url": "https://junkytech.com/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-junky-tech-india-private-limited-remote-2-to-5-years-190626504081"
+    },
+    {
+      "id": 15638,
+      "job_title": "Backend devloper",
+      "company_name": "Eduzent Infotech",
+      "location": "Noida",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.eduzent.org/career",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-devloper-eduzent-noida-1-to-3-years-110925502543"
+    },
+    {
+      "id": 15641,
+      "job_title": "Backend Developer",
+      "company_name": "TagTaste Foods",
+      "location": "Noida",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.tagtaste.com/career",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-tagtaste-foods-pvt-ltd-noida-2-to-5-years-220925503867"
+    },
+    {
+      "id": 15649,
+      "job_title": "backend developer",
+      "company_name": "Sutraa Technosoft",
+      "location": "Noida",
+      "interview_probability": 85.0,
+      "apply_url": "https://sutraatechno.com/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-sutraa-technosoft-private-limited-noida-2-to-3-years-301025504934"
+    },
+    {
+      "id": 15651,
+      "job_title": "Backend Engineer",
+      "company_name": "Excel Net Solutions",
+      "location": "Gurugram",
+      "interview_probability": 85.0,
+      "apply_url": "https://investwellonline.com/career/backend-engineer/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-excel-net-solutions-pvt-ltd-gurugram-1-to-4-years-191225504448"
+    },
+    {
+      "id": 15653,
+      "job_title": "Backend Engineer",
+      "company_name": "Inteligenai",
+      "location": "Gurugram",
+      "interview_probability": 85.0,
+      "apply_url": "https://inteligenai.com/careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-inteligenai-gurugram-0-to-2-years-210725505396"
+    },
+    {
+      "id": 15670,
+      "job_title": "Back End Developer",
+      "company_name": "Zippee",
+      "location": "Gurugram",
+      "interview_probability": 85.0,
+      "apply_url": "https://zippee.keka.com/careers/jobdetails/35336",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-zippee-gurugram-1-to-2-years-250825505021"
+    },
+    {
+      "id": 15677,
+      "job_title": "Senior Backend Engineer - Pythons",
+      "company_name": "Iletexy",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://app.pyjamahr.com/careers?company=company&job_id=24132&company_uuid=C36E7E9755",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-senior-backend-engineer-pythons-iletexy-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-250823501171"
+    },
+    {
+      "id": 15682,
+      "job_title": "Backend Developer",
+      "company_name": "Photon",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://fa-ertb-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/20825",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-photon-infotech-p-ltd-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-121124506331"
+    },
+    {
+      "id": 15683,
+      "job_title": "Back End Developer",
+      "company_name": "Sstech Networking Solution",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://www.sstechnetwork.com/back-end.php",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-sstech-networking-solution-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-240823500154"
+    },
+    {
+      "id": 15686,
+      "job_title": "Full Stack Developer Mid-Level",
+      "company_name": "Aerobotics7",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://app.dover.com/apply/Aerobotics7/15ada2b0-9668-4703-9b58-096820475214/?rs=76643084",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-mid-level-aerobotics7-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-6-years-240725503446"
+    },
+    {
+      "id": 15688,
+      "job_title": "Full - Stack Developer",
+      "company_name": "Arsr Technologies",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 85.0,
+      "apply_url": "https://arsrtech.com/career/india/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-arsr-technologies-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-4-years-301020500932"
+    },
+    {
+      "id": 15696,
+      "job_title": "Backend Engineer",
+      "company_name": "Nurix Ai",
+      "location": "Bengaluru, Hubli, Mangaluru, Mysuru, Belgaum",
+      "interview_probability": 85.0,
+      "apply_url": "https://nurix.keka.com/careers/jobdetails/46725",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-nurix-ai-hubli-mangaluru-mysuru-bengaluru-belgaum-1-to-4-years-280126501383"
+    },
+    {
+      "id": 15699,
+      "job_title": "Backend Engineer",
+      "company_name": "Leaguex Gaming",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://app.pyjamahr.com/careers?company=company&job_id=265692&company_uuid=B59DC2782B",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-leaguex-gaming-bengaluru-2-to-4-years-110825502539"
+    },
+    {
+      "id": 15700,
+      "job_title": "Backend Engineer",
+      "company_name": "Plausibility Solutions",
+      "location": "Bengaluru",
+      "interview_probability": 85.0,
+      "apply_url": "https://app.pyjamahr.com/careers?company=Plausibility%20Solutions&job_id=22759&company_uuid=3E3621A0C7",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-plausibility-solutions-bengaluru-1-to-3-years-090323502596"
+    },
+    {
       "id": 7823,
       "job_title": "Lead AI Engineer",
       "company_name": "Aptus Data Labs",
@@ -4081,6 +5580,86 @@
       "job_url": "https://www.naukri.com/job-listings-sr-software-engineer-react-python-aws-yash-technologies-indore-4-to-7-years-170626502574"
     },
     {
+      "id": 14986,
+      "job_title": "AI Engineer",
+      "company_name": "Apex 2000 INC",
+      "location": "Noida",
+      "interview_probability": 80.0,
+      "apply_url": "https://www.apex-2000.com/careers/job-details-global.php?id=7935",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-apex-2000-inc-noida-3-to-7-years-050326500045"
+    },
+    {
+      "id": 15465,
+      "job_title": "AI Lead Engineer",
+      "company_name": "Vellstone",
+      "location": "Noida",
+      "interview_probability": 80.0,
+      "apply_url": "https://vellstone.zohorecruit.in/jobs/Careers/166053000002386003",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-lead-engineer-vellstone-noida-3-to-8-years-040626501018"
+    },
+    {
+      "id": 15590,
+      "job_title": "Agentic AI Engineer\"",
+      "company_name": "Pristine It Code",
+      "location": "Mumbai",
+      "interview_probability": 80.0,
+      "apply_url": "https://www.pristine-code.com/Careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-pristine-it-code-mumbai-3-to-7-years-281125502655"
+    },
+    {
+      "id": 15613,
+      "job_title": "Python Backend Engineer",
+      "company_name": "Lincoln International",
+      "location": "Remote",
+      "interview_probability": 80.0,
+      "apply_url": "https://www.lincolninternational.com/greenhouse/?gh_jid=7867091",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-lincoln-international-remote-4-to-6-years-050526503351"
+    },
+    {
+      "id": 15617,
+      "job_title": "Fullstack Developer",
+      "company_name": "Sparix Global",
+      "location": "Remote",
+      "interview_probability": 80.0,
+      "apply_url": "https://www.sparixglobal.com/career/?job_id=z5G7h3l6a1kMvyS65NP3cx2BB7pGZB7mvQLydBh7aRA=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-fullstack-developer-sparix-global-private-limited-remote-2-to-6-years-280426500594"
+    },
+    {
+      "id": 15620,
+      "job_title": "Backend Developer",
+      "company_name": "True Choice",
+      "location": "Remote",
+      "interview_probability": 80.0,
+      "apply_url": "https://www.truechoice.io/job-post/backend-developer",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-true-choice-remote-1-to-3-years-221222500537"
+    },
+    {
+      "id": 15625,
+      "job_title": "Backend Software Engineer - Python/Postgres [ / Global]",
+      "company_name": "Enveritas",
+      "location": "Remote",
+      "interview_probability": 80.0,
+      "apply_url": "https://job-boards.greenhouse.io/enveritas/jobs/4006514008",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-software-engineer-python-postgres-global-enveritas-remote-2-to-5-years-300326502285"
+    },
+    {
+      "id": 15660,
+      "job_title": "Backend Engineer",
+      "company_name": "Paypay Corporation",
+      "location": "Gurugram",
+      "interview_probability": 80.0,
+      "apply_url": "https://job-boards.greenhouse.io/pay2dc/jobs/4024283006",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-paypay-corporation-gurugram-3-to-5-years-200824500932"
+    },
+    {
       "id": 7838,
       "job_title": "Backend Engineer - Samvaad - Sarvam AI",
       "company_name": "Sarvam",
@@ -4151,6 +5730,66 @@
       "job_url": "https://www.naukri.com/job-listings-responsible-ai-engineer-accenture-solutions-pvt-ltd-mumbai-3-to-8-years-150626926489"
     },
     {
+      "id": 14943,
+      "job_title": "Lead Generative AI Engineer",
+      "company_name": "Baker Hughes",
+      "location": "Navi Mumbai",
+      "interview_probability": 75.0,
+      "apply_url": "https://bakerhughes.wd5.myworkdayjobs.com/en-US/BakerHughes/job/IN-KA-BANGALORE-NEON-BUILDING-WEST-TOWER/Lead-Generative-AI-Engineer_R163566",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-lead-generative-ai-engineer-baker-hughes-the-network-navi-mumbai-4-to-6-years-180526500348"
+    },
+    {
+      "id": 15522,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Bengaluru",
+      "interview_probability": 75.0,
+      "apply_url": "https://www.griddynamics.com/careers/vacancy/55316",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-grid-dynamics-bengaluru-4-to-9-years-180526500484"
+    },
+    {
+      "id": 15538,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Grid Dynamics",
+      "location": "Pune",
+      "interview_probability": 75.0,
+      "apply_url": "https://www.griddynamics.com/careers/vacancy/55316",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-grid-dynamics-pune-4-to-9-years-130526501159"
+    },
+    {
+      "id": 15580,
+      "job_title": "AI/Gen AI Engineer",
+      "company_name": "dotSolved Systems Inc.",
+      "location": "Chennai",
+      "interview_probability": 75.0,
+      "apply_url": "https://jobs.dotsolved.com/jobs/Careers/28576000014378202/OIC-Technical-Consultant?source=CareerSite",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-gen-ai-engineer-dotsolved-systems-inc-chennai-3-to-7-years-190626503119"
+    },
+    {
+      "id": 15618,
+      "job_title": "Full Stack Developer",
+      "company_name": "Upstack",
+      "location": "Remote",
+      "interview_probability": 75.0,
+      "apply_url": "https://upstackhq.com/careers#job-details",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-upstack-remote-2-to-6-years-260822501614"
+    },
+    {
+      "id": 15667,
+      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
+      "company_name": "Thinkhub Technologies And Consulting",
+      "location": "Gurugram",
+      "interview_probability": 75.0,
+      "apply_url": "https://thinkhubindia.com/career.php",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-python-reactjs-vuejs-thinkhub-india-gurugram-2-to-4-years-021225503674"
+    },
+    {
       "id": 7781,
       "job_title": "Distinguished AI Engineer",
       "company_name": "Capital One",
@@ -4199,6 +5838,56 @@
       "apply_url": "https://apply.workable.com/intellectsoft/j/EBD48B991F/",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-senior-fullstack-developer-python-ai-react-ir-528-intellectual-software-remote-2-to-4-years-160626504241"
+    },
+    {
+      "id": 15615,
+      "job_title": "Full Stack Developer",
+      "company_name": "Gleac Com",
+      "location": "Remote",
+      "interview_probability": 70.0,
+      "apply_url": "https://www.gleac.com/careers#job-openings",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-gleac-remote-2-to-6-years-230125505489"
+    },
+    {
+      "id": 15637,
+      "job_title": "Full - Stack Developer",
+      "company_name": "Appy Pie",
+      "location": "Noida",
+      "interview_probability": 70.0,
+      "apply_url": "https://careers.appypie.com/careers/full-stack-developer-ai-augmented-integration-platform",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-appy-pie-noida-1-to-2-years-220626502687"
+    },
+    {
+      "id": 15640,
+      "job_title": "Full Stack Developer",
+      "company_name": "Talent Toppers",
+      "location": "Noida",
+      "interview_probability": 70.0,
+      "apply_url": "http://www.talenttoppers.com/jobs/full-stack-developer/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-talent-toppers-noida-2-to-7-years-041024503948"
+    },
+    {
+      "id": 15666,
+      "job_title": "Full stack developers",
+      "company_name": "Meyrahkee",
+      "location": "Gurugram",
+      "interview_probability": 70.0,
+      "apply_url": "https://www.meyrahkee.com/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developers-meyrahkee-gurugram-2-to-6-years-131219500725"
+    },
+    {
+      "id": 15673,
+      "job_title": "Jr. Backend Engineer",
+      "company_name": "5D Vdc Services",
+      "location": "Kolkata",
+      "interview_probability": 70.0,
+      "apply_url": "https://5dvdc.zohorecruit.in/jobs/careers/43360000004846743",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-jr-backend-engineer-5d-vdc-services-kolkata-0-to-1-years-070426501719"
     },
     {
       "id": 10597,
@@ -4251,6 +5940,26 @@
       "job_url": "https://www.naukri.com/job-listings-lead-software-engineer-cadence-noida-3-to-8-years-170626504167"
     },
     {
+      "id": 14649,
+      "job_title": "Secops Engineer",
+      "company_name": "Achnet",
+      "location": "Noida",
+      "interview_probability": 60.0,
+      "apply_url": "https://www.achnet.com/business/59b8fbbb0f97e21b3ca67a33/public/careers/6a377dbfbe628bd0f249bc46?type=default&uid=&mod=jobs",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-secops-engineer-achnet-inc-noida-3-to-5-years-220626501471"
+    },
+    {
+      "id": 15687,
+      "job_title": "Fullstack Developer",
+      "company_name": "Iquest Solutions",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "interview_probability": 60.0,
+      "apply_url": "https://iquestsols.com/careers/current-openings/?job_id=z5G7h3l6a1kMvyS65NP3cxDdC0SJqe47Utt_yQiwM1c=",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-fullstack-developer-iquest-solutions-corp-usa-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-040825508574"
+    },
+    {
       "id": 12095,
       "job_title": "Software Engineer /Full Stack Java Developer/GenAI/UI",
       "company_name": "Wells Fargo",
@@ -4269,6 +5978,26 @@
       "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-4929509-S1854638_en&title=Responsible+AI+Engineer&SRC=RECNau",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-responsible-ai-engineer-accenture-solutions-pvt-ltd-gurugram-3-to-6-years-150626925768"
+    },
+    {
+      "id": 15622,
+      "job_title": "Full Stack Developer",
+      "company_name": "Construe Labs",
+      "location": "Remote",
+      "interview_probability": 55.0,
+      "apply_url": "https://construelabs.freshteam.com/jobs/Tnb9d8G2aap8/full-stack-developer-remote",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-construe-labs-remote-2-to-4-years-120526500155"
+    },
+    {
+      "id": 15626,
+      "job_title": "Web3 Backend Engineer",
+      "company_name": "Ultahost",
+      "location": "Remote",
+      "interview_probability": 55.0,
+      "apply_url": "https://ultahost.com/career-detail/web3-backend-engineer-ipfs-smart-contracts",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-web3-backend-engineer-ultahost-remote-4-to-9-years-210825501162"
     },
     {
       "id": 8660,
@@ -4459,6 +6188,19 @@
       "missing_skills": "[\"React\", \"Next.js\", \"Node.js\"]"
     },
     {
+      "id": 15676,
+      "job_title": "Full Stack Developer",
+      "company_name": "Tech Stalwart Solution",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "0-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-tech-stalwart-solution-private-limited-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-0-to-3-years-040225508253",
+      "interview_probability": 45.0,
+      "reason": "Strong backend and AI experience but lacks frontend skills.",
+      "confidence": 50.0,
+      "priority": "medium",
+      "missing_skills": "[\"React\", \"Angular\", \"Vue.js\", \"JavaScript\", \"HTML\", \"CSS\"]"
+    },
+    {
       "id": 8284,
       "job_title": "Full Stack Developer (MERN + LLMs)",
       "company_name": "Wing Assistant",
@@ -4509,6 +6251,32 @@
       "confidence": 60.0,
       "priority": "medium",
       "missing_skills": "[\"Angular\", \"Next.js\", \"JavaScript\", \"TypeScript\", \"Node.js\"]"
+    },
+    {
+      "id": 15380,
+      "job_title": "SINEQUA ENGINEERS",
+      "company_name": "Left Right Mind",
+      "location": "Pune",
+      "experience_required": "4-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-sinequa-engineers-left-right-mind-pune-4-to-5-years-251125503230",
+      "interview_probability": 35.0,
+      "reason": "Strong AI/LLM and semantic search experience, but lacks Sinequa domain expertise.",
+      "confidence": 60.0,
+      "priority": "medium",
+      "missing_skills": "[\"Sinequa Search Platform\", \"Java\", \"Azure DevOps\"]"
+    },
+    {
+      "id": 15664,
+      "job_title": "Full Stack Developer Platform Engineering & Integrations",
+      "company_name": "Suredrive Assist",
+      "location": "Gurugram(Sector 48)",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-platform-engineering-integrations-suredrive-assist-gurugram-2-to-5-years-040626023386",
+      "interview_probability": 35.0,
+      "reason": "Strong Python backend and AI production experience but missing core Node.js/React stack.",
+      "confidence": 60.0,
+      "priority": "medium",
+      "missing_skills": "[\"Node.js\", \"Express.js\", \"React.js\", \"Next.js\", \"Docker\", \"DigitalOcean\", \"Payment gateway integration\", \"CRM integration\"]"
     },
     {
       "id": 10526,
@@ -4769,6 +6537,474 @@
       "confidence": 0.0,
       "priority": "medium",
       "missing_skills": "[]"
+    },
+    {
+      "id": 15701,
+      "job_title": "Backend Engineer",
+      "company_name": "Sarvam",
+      "location": "Bengaluru",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-sarvam-bengaluru-2-to-4-years-200326500417",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini failed to return valid JSON after 2 attempts: Gemini transient error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15702,
+      "job_title": "Backend Engineer",
+      "company_name": "Atomicwork",
+      "location": "Bengaluru",
+      "experience_required": "0-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-atomicwork-bengaluru-0-to-2-years-230425502234",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini failed to return valid JSON after 2 attempts: Gemini transient error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15712,
+      "job_title": "Backend Engineer",
+      "company_name": "People Tech",
+      "location": "Pune",
+      "experience_required": "2-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-people-tech-group-pune-2-to-3-years-210225502567",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini failed to return valid JSON after 2 attempts: Gemini transient error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15719,
+      "job_title": "Backend Engineer",
+      "company_name": "Lotusflare Technologies",
+      "location": "Pune(Baner)",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-lotusflare-technologies-pune-4-to-8-years-010825031653",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 31.38480689s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15721,
+      "job_title": "Backend Engineer & Architect",
+      "company_name": "Praxis Global Alliance",
+      "location": "Pune, Mumbai, Nagpur, Thane, Nashik, Aurangabad",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-architect-praxian-global-private-limited-mumbai-nagpur-thane-nashik-pune-aurangabad-4-to-9-years-110326507276",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 30.937423286s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15725,
+      "job_title": "Backend Engineer",
+      "company_name": "Truckx",
+      "location": "Pune",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-truckx-inc-pune-4-to-6-years-080824501218",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 30.507468956s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15730,
+      "job_title": "Full Stack Backend Developer (Offshore)",
+      "company_name": "Jade Global",
+      "location": "Pune",
+      "experience_required": "0-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-backend-developer-offshore-jade-global-software-pvt-ltd-pune-0-to-3-years-210526507129",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 30.064692635s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15739,
+      "job_title": "Serverless Engineer",
+      "company_name": "ti Steps",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-serverless-engineer-ti-steps-hyderabad-chennai-bengaluru-2-to-5-years-151025018839",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 29.674548518s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15745,
+      "job_title": "Back End Developer",
+      "company_name": "ti Steps",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-ti-steps-hyderabad-chennai-bengaluru-2-to-6-years-201125022167",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 29.258980535s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15746,
+      "job_title": "Django Developer",
+      "company_name": "Aptagrim Consulting",
+      "location": "Hyderabad",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-django-developer-aptagrim-consulting-llp-hyderabad-2-to-5-years-270126501825",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 28.650063415s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15747,
+      "job_title": "Software Developer",
+      "company_name": "SmartDocs Business Solutions",
+      "location": "Hyderabad",
+      "experience_required": "0-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-developer-smartdocs-inc-hyderabad-0-to-2-years-130326502966",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 28.251570648s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15748,
+      "job_title": "Front End Developer",
+      "company_name": "Ask Ainstein",
+      "location": "Remote",
+      "experience_required": "1-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-front-end-developer-ask-ainstein-hyderabad-1-to-6-years-020626022899",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 27.832571388s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15749,
+      "job_title": "Full Stack Developer",
+      "company_name": "Skill Hive Hub",
+      "location": "Hyderabad",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-skill-hive-hub-hyderabad-2-to-5-years-010526501117",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 27.337915776s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15766,
+      "job_title": "Back End Developer",
+      "company_name": "Elfonze Technologies",
+      "location": "Chennai",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-elfonze-technologies-private-limited-chennai-2-to-4-years-300924502644",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 26.936758326s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15769,
+      "job_title": "Backend Engineer",
+      "company_name": "HappyFox, Inc",
+      "location": "Chennai",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-happyfox-inc-chennai-3-to-8-years-130324500917",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 26.517307883s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15770,
+      "job_title": "Full Stack Developer: Agentic Systems",
+      "company_name": "Multicoreware",
+      "location": "Chennai",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-agentic-systems-multicoreware-chennai-4-to-8-years-190626007874",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 26.129496264s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '26s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15778,
+      "job_title": "Full Stack AI Developer",
+      "company_name": "Mirrar",
+      "location": "Bengaluru, Delhi / NCR, Mumbai",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-ai-developer-mirrar-mumbai-delhi-ncr-bengaluru-1-to-2-years-020626919850",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 25.679905988s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15783,
+      "job_title": "Full stack developers",
+      "company_name": "Meyrahkee",
+      "location": "Mumbai",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developers-meyrahkee-mumbai-2-to-6-years-280526502097",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 25.272458002s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15784,
+      "job_title": "Full-Stack Developer",
+      "company_name": "Jean Martin Systems",
+      "location": "Mumbai",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-jean-martin-systems-india-pvt-ltd-mumbai-2-to-5-years-091225504421",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 24.849842187s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15785,
+      "job_title": "Back End Developer Web Application",
+      "company_name": "Riverus",
+      "location": "Mumbai",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-developer-web-application-riverus-mumbai-2-to-4-years-090525501363",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 24.431815713s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15786,
+      "job_title": "Kafka Engineer",
+      "company_name": "Diverse Lynx",
+      "location": "Mumbai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-kafka-engineer-diverse-lynx-mumbai-2-to-7-years-040725502428",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 24.010323523s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '24s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15788,
+      "job_title": "Full Stack Laravel Developer",
+      "company_name": "Hemitz Media",
+      "location": "Mumbai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-laravel-developer-hemitz-media-pvt-ltd-mumbai-2-to-7-years-080221500977",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 23.625536968s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15789,
+      "job_title": "Software Engineer (Back End)",
+      "company_name": "Rolling Arrays",
+      "location": "Mumbai",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-back-end-rolling-arrays-consulting-pvt-ltd-mumbai-3-to-5-years-280624500674",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 23.219610038s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '23s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15799,
+      "job_title": "DevOps Engineer",
+      "company_name": "DHL Supply Chain",
+      "location": "Indore",
+      "experience_required": "2-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-devops-engineer-dhl-global-forwarding-india-indore-2-to-3-years-280426501863",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 22.770338483s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15804,
+      "job_title": "Python AI/ML Developer",
+      "company_name": "Mxpertz",
+      "location": "Indore",
+      "experience_required": "1-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-ai-ml-developer-mxpertz-indore-1-to-6-years-291025503479",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 22.372768488s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '22s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15806,
+      "job_title": ".Net Fullstack Developer",
+      "company_name": "MNC",
+      "location": "Hybrid - Chennai, Indore, Jaipur",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-net-fullstack-developer-anlage-infotech-indore-chennai-jaipur-2-to-6-years-280526029723",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 21.979620039s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15810,
+      "job_title": "Walk-in || Hiring Senior Python Software Engineer",
+      "company_name": "Empower Integrated Solutions",
+      "location": "Indore, Bhopal",
+      "experience_required": "",
+      "job_url": "https://www.naukri.com/job-listings-hiring-senior-python-software-engineer-empower-integrated-solutions-bhopal-indore-5-to-10-years-190626026131",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 21.534278717s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15815,
+      "job_title": "Software Engineer",
+      "company_name": "Green Rider Technology",
+      "location": "Gurugram",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-green-rider-technology-gurugram-2-to-5-years-270526034488",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 21.112350501s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15820,
+      "job_title": "Software Engineer - Agentic AI",
+      "company_name": "Moody's Analytics",
+      "location": "Hybrid - Gurugram",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-agentic-ai-moody-s-analytics-gurugram-3-to-6-years-220526034044",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 20.527683691s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '20s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15834,
+      "job_title": "Software Engineer, AI",
+      "company_name": "Conga",
+      "location": "Bengaluru",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-ai-conga-bengaluru-3-to-8-years-060326505516",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 20.113589802s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '20s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15853,
+      "job_title": "MLOps Engineer",
+      "company_name": "Codvo",
+      "location": "Pune",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-mlops-engineer-codvo-ai-pune-4-to-9-years-200326507019",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 19.642564205s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15857,
+      "job_title": "Python FastAPI Developer",
+      "company_name": "Qloron Technology",
+      "location": "Hyderabad",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-fastapi-developer-qloron-pvt-ltd-hyderabad-3-to-5-years-090326501585",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 19.007730222s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15875,
+      "job_title": "Walk-in || Python Developer (FastAPI)",
+      "company_name": "ti Steps",
+      "location": "Chennai(Perungudi)",
+      "experience_required": "",
+      "job_url": "https://www.naukri.com/job-listings-python-developer-fastapi-ti-steps-chennai-3-to-5-years-220626025078",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 18.581809376s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15877,
+      "job_title": "Agentic Developer",
+      "company_name": "Concern Infotech",
+      "location": "Chennai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-developer-concern-infotech-pvt-ltd-chennai-2-to-7-years-140725501622",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 18.147748505s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15880,
+      "job_title": "Software Engineer",
+      "company_name": "NTT DATA, Inc.",
+      "location": "Chennai",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-ntt-data-inc-chennai-4-to-9-years-180626014893",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 17.714558404s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 15886,
+      "job_title": "GenAI Developer (FastAPI)",
+      "company_name": "Akriya Group",
+      "location": "Mumbai (All Areas)",
+      "experience_required": "4-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-genai-developer-fastapi-akriya-group-mumbai-all-areas-4-to-6-years-220626025415",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini quota exceeded: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 17.291063165s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
     }
   ],
   "failed_jobs": [],
@@ -4777,7 +7013,7 @@
       "id": 4,
       "question_key": "total_experience",
       "question_text": "total_experience",
-      "answer": "0",
+      "answer": "2",
       "usage_count": 25,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-18T18:34:01"
@@ -4787,9 +7023,9 @@
       "question_key": "total_years_experience",
       "question_text": "How many years of experience do you have in Terraform?",
       "answer": "2",
-      "usage_count": 18,
+      "usage_count": 19,
       "field_type": "contenteditable",
-      "last_used_at": "2026-06-17T18:53:50.280364"
+      "last_used_at": "2026-06-20T19:31:06"
     },
     {
       "id": 1687,
@@ -4799,6 +7035,15 @@
       "usage_count": 16,
       "field_type": "radio",
       "last_used_at": "2026-06-06T05:18:55.610991"
+    },
+    {
+      "id": 9793,
+      "question_key": "address_line_1",
+      "question_text": "Address Line 1",
+      "answer": "Indore",
+      "usage_count": 15,
+      "field_type": "",
+      "last_used_at": "2026-06-22T16:31:59"
     },
     {
       "id": 25,
@@ -4819,6 +7064,24 @@
       "last_used_at": "2026-06-07T01:11:35.589200"
     },
     {
+      "id": 2,
+      "question_key": "country",
+      "question_text": "country",
+      "answer": "India",
+      "usage_count": 7,
+      "field_type": null,
+      "last_used_at": "2026-06-22T17:39:22"
+    },
+    {
+      "id": 6,
+      "question_key": "python_experience",
+      "question_text": "How many years of experience do you have in Python Development?",
+      "answer": "2",
+      "usage_count": 7,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-22T17:02:53.854594"
+    },
+    {
       "id": 8,
       "question_key": "genai_experience",
       "question_text": "genai_experience",
@@ -4826,15 +7089,6 @@
       "usage_count": 6,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-18T18:34:01"
-    },
-    {
-      "id": 3518,
-      "question_key": "middle_name",
-      "question_text": "Middle Name",
-      "answer": "Skip this question",
-      "usage_count": 6,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-17T15:07:50.025409"
     },
     {
       "id": 4482,
@@ -4846,13 +7100,13 @@
       "last_used_at": "2026-06-15T20:57:08.348944"
     },
     {
-      "id": 6,
-      "question_key": "python_experience",
-      "question_text": "python_experience",
+      "id": 7,
+      "question_key": "llm_experience",
+      "question_text": "How many years of experience do you have in AI/LLM?",
       "answer": "2",
       "usage_count": 5,
       "field_type": "contenteditable",
-      "last_used_at": "2026-06-18T18:34:01"
+      "last_used_at": "2026-06-22T16:57:44.921562"
     },
     {
       "id": 13,
@@ -4862,6 +7116,15 @@
       "usage_count": 5,
       "field_type": "contenteditable",
       "last_used_at": "2026-06-18T18:34:01"
+    },
+    {
+      "id": 112,
+      "question_key": "state",
+      "question_text": "state",
+      "answer": "Madhya Pradesh",
+      "usage_count": 5,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:39:38"
     },
     {
       "id": 2131,
@@ -4891,13 +7154,13 @@
       "last_used_at": "2026-06-07T04:55:35.663859"
     },
     {
-      "id": 7,
-      "question_key": "llm_experience",
-      "question_text": "llm_experience",
-      "answer": "2",
-      "usage_count": 4,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-18T18:34:01"
+      "id": 9542,
+      "question_key": "country_territory_phone_code",
+      "question_text": "country_territory_phone_code",
+      "answer": "India(+91)",
+      "usage_count": 5,
+      "field_type": "multiselect",
+      "last_used_at": "2026-06-22T17:39:40"
     },
     {
       "id": 3144,
@@ -4927,6 +7190,24 @@
       "last_used_at": "2026-06-15T20:57:30.305058"
     },
     {
+      "id": 9858,
+      "question_key": "phone_device_type",
+      "question_text": "Phone Device Type",
+      "answer": "Mobile",
+      "usage_count": 4,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:39:39"
+    },
+    {
+      "id": 9895,
+      "question_key": "did_hear_about_us",
+      "question_text": "How Did You Hear About Us?",
+      "answer": "Career Page",
+      "usage_count": 4,
+      "field_type": "multiselect",
+      "last_used_at": "2026-06-22T17:39:16"
+    },
+    {
       "id": 23,
       "question_key": "notice_period",
       "question_text": "notice_period",
@@ -4934,6 +7215,24 @@
       "usage_count": 3,
       "field_type": "radio",
       "last_used_at": "2026-06-18T18:34:01"
+    },
+    {
+      "id": 31,
+      "question_key": "immediate_availability",
+      "question_text": "are you a immediate joiner ?",
+      "answer": "No - 45 days notice period",
+      "usage_count": 3,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-22T17:04:28.179671"
+    },
+    {
+      "id": 2390,
+      "question_key": "overall_exp",
+      "question_text": "Overall Exp:",
+      "answer": "2",
+      "usage_count": 3,
+      "field_type": "unknown",
+      "last_used_at": "2026-06-22T17:06:10"
     },
     {
       "id": 4486,
@@ -5035,13 +7334,49 @@
       "last_used_at": "2026-06-15T20:40:41.719298"
     },
     {
-      "id": 31,
-      "question_key": "immediate_availability",
-      "question_text": "immediate_availability",
-      "answer": "No - 45 days notice period",
-      "usage_count": 2,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-18T18:34:01"
+      "id": 9548,
+      "question_key": "school_or_university",
+      "question_text": "school_or_university",
+      "answer": "Oriental Institute of science and technology",
+      "usage_count": 3,
+      "field_type": "multiselect",
+      "last_used_at": "2026-06-22T17:05:46"
+    },
+    {
+      "id": 9572,
+      "question_key": "legally_eligible_work_country_which_applying",
+      "question_text": "legally_eligible_work_country_which_applying",
+      "answer": "Yes",
+      "usage_count": 3,
+      "field_type": "",
+      "last_used_at": "2026-06-21T00:05:59"
+    },
+    {
+      "id": 9769,
+      "question_key": "degree",
+      "question_text": "Degree",
+      "answer": "Bachelor's Degree",
+      "usage_count": 3,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:05:46"
+    },
+    {
+      "id": 9773,
+      "question_key": "preferred_first_name",
+      "question_text": "Preferred First Name",
+      "answer": "Kaushik",
+      "usage_count": 3,
+      "field_type": "input_text",
+      "last_used_at": "2026-06-22T16:31:57"
+    },
+    {
+      "id": 9794,
+      "question_key": "postal_code",
+      "question_text": "Postal Code",
+      "answer": "453555",
+      "usage_count": 3,
+      "field_type": "",
+      "last_used_at": "2026-06-21T19:23:17"
     },
     {
       "id": 3782,
@@ -5323,19 +7658,100 @@
       "last_used_at": "2026-06-15T21:41:07.371060"
     },
     {
+      "id": 9406,
+      "question_key": "willing_to_relocate_bengaluru",
+      "question_text": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?",
+      "answer": null,
+      "usage_count": 2,
+      "field_type": "radio",
+      "last_used_at": "2026-06-22T16:54:55.480241"
+    },
+    {
+      "id": 9578,
+      "question_key": "all_individuals_employed_by_accenture_must_possess_valid_and",
+      "question_text": "all_individuals_employed_by_accenture_must_possess_valid_and",
+      "answer": "yes",
+      "usage_count": 2,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:20:08"
+    },
+    {
+      "id": 9580,
+      "question_key": "non_compete_non_solicitation_or_other_post_employment_restri",
+      "question_text": "non_compete_non_solicitation_or_other_post_employment_restri",
+      "answer": "no",
+      "usage_count": 2,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:20:12"
+    },
+    {
+      "id": 9582,
+      "question_key": "accenture_committed_not_hiring_employees_who_not_minimum_leg",
+      "question_text": "accenture_committed_not_hiring_employees_who_not_minimum_leg",
+      "answer": "yes",
+      "usage_count": 2,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:20:16"
+    },
+    {
+      "id": 9584,
+      "question_key": "at_current_employer_currently_working_project_accenture_or_w",
+      "question_text": "at_current_employer_currently_working_project_accenture_or_w",
+      "answer": "no",
+      "usage_count": 2,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:20:20"
+    },
+    {
+      "id": 9767,
+      "question_key": "phone",
+      "question_text": "Phone",
+      "answer": "9905252808",
+      "usage_count": 2,
+      "field_type": "input_text",
+      "last_used_at": "2026-06-21T03:09:44"
+    },
+    {
+      "id": 9776,
+      "question_key": "list_most_recent_employer_heredot",
+      "question_text": "Please list your most recent Employer here.",
+      "answer": "Tata Consultancy Services",
+      "usage_count": 2,
+      "field_type": "",
+      "last_used_at": "2026-06-21T00:15:33"
+    },
+    {
+      "id": 9778,
+      "question_key": "did_learn_about_this_opportunity_atlan",
+      "question_text": "How did you learn about this opportunity with Atlan?",
+      "answer": "Linkedin",
+      "usage_count": 2,
+      "field_type": "",
+      "last_used_at": "2026-06-21T00:15:34"
+    },
+    {
+      "id": 9886,
+      "question_key": "type_add_skills",
+      "question_text": "Type to Add Skills",
+      "answer": "Python",
+      "usage_count": 2,
+      "field_type": "multiselect",
+      "last_used_at": "2026-06-22T17:19:53"
+    },
+    {
+      "id": 9896,
+      "question_key": "currently_residing_kolkata",
+      "question_text": "Are you currently residing in Kolkata?",
+      "answer": "No",
+      "usage_count": 2,
+      "field_type": "radio",
+      "last_used_at": "2026-06-22T17:00:46.808012"
+    },
+    {
       "id": 1,
       "question_key": "first_name",
       "question_text": "first_name",
       "answer": "Kaushik",
-      "usage_count": 1,
-      "field_type": null,
-      "last_used_at": "2026-06-18T18:34:01"
-    },
-    {
-      "id": 2,
-      "question_key": "country",
-      "question_text": "country",
-      "answer": "India",
       "usage_count": 1,
       "field_type": null,
       "last_used_at": "2026-06-18T18:34:01"
@@ -5377,15 +7793,6 @@
       "last_used_at": "2026-06-18T18:34:01"
     },
     {
-      "id": 2390,
-      "question_key": "overall_exp",
-      "question_text": "Overall Exp:",
-      "answer": "2",
-      "usage_count": 1,
-      "field_type": "unknown",
-      "last_used_at": "2026-06-04T05:02:49.667397"
-    },
-    {
       "id": 9199,
       "question_key": "exp_python_backend_development",
       "question_text": "1. What is your total experience in Python backend development?",
@@ -5393,15 +7800,6 @@
       "usage_count": 1,
       "field_type": "radio",
       "last_used_at": "2026-06-15T21:47:03.980320"
-    },
-    {
-      "id": 9406,
-      "question_key": "willing_to_relocate_bengaluru",
-      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
-      "answer": null,
-      "usage_count": 1,
-      "field_type": "radio",
-      "last_used_at": "2026-06-17T18:48:42.870155"
     },
     {
       "id": 9408,
@@ -5413,10 +7811,64 @@
       "last_used_at": "2026-06-18T18:34:01"
     },
     {
+      "id": 9574,
+      "question_key": "will_now_or_future_require_kla_sponsorship_legally_work_job",
+      "question_text": "will_now_or_future_require_kla_sponsorship_legally_work_job",
+      "answer": "No",
+      "usage_count": 1,
+      "field_type": "",
+      "last_used_at": "2026-06-21T14:19:00"
+    },
+    {
+      "id": 9795,
+      "question_key": "field_study",
+      "question_text": "Field of Study",
+      "answer": "Computer Science",
+      "usage_count": 1,
+      "field_type": "multiselect",
+      "last_used_at": "2026-06-22T17:05:47"
+    },
+    {
+      "id": 9796,
+      "question_key": "overall_result_gpa",
+      "question_text": "Overall Result (GPA)",
+      "answer": "8.62",
+      "usage_count": 1,
+      "field_type": "",
+      "last_used_at": "2026-06-21T22:25:14"
+    },
+    {
+      "id": 9870,
+      "question_key": "i_am_fluent_this_languagedot",
+      "question_text": "I am fluent in this language.",
+      "answer": "Yes",
+      "usage_count": 1,
+      "field_type": "checkbox",
+      "last_used_at": "2026-06-22T17:06:09"
+    },
+    {
+      "id": 9898,
+      "question_key": "exp_developer",
+      "question_text": "How many years of experience do you have in Developer?",
+      "answer": null,
+      "usage_count": 1,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-22T17:01:32.149225"
+    },
+    {
+      "id": 9922,
+      "question_key": "exp_zapier",
+      "question_text": "How many years of experience do you have in Zapier?",
+      "answer": null,
+      "usage_count": 1,
+      "field_type": "contenteditable",
+      "last_used_at": "2026-06-22T17:08:26.434865"
+    },
+    {
       "id": 5,
       "question_key": "relevant_experience",
       "question_text": "relevant_experience",
-      "answer": "0",
+      "answer": "2",
       "usage_count": 0,
       "field_type": null,
       "last_used_at": "2026-06-18T18:34:01"
@@ -5620,15 +8072,6 @@
       "last_used_at": "2026-06-18T18:34:01"
     },
     {
-      "id": 112,
-      "question_key": "state",
-      "question_text": "state",
-      "answer": "Madhya Pradesh",
-      "usage_count": 0,
-      "field_type": null,
-      "last_used_at": "2026-06-18T18:34:01"
-    },
-    {
       "id": 114,
       "question_key": "github_url",
       "question_text": "github_url",
@@ -5641,7 +8084,7 @@
       "id": 122,
       "question_key": "experience_years",
       "question_text": "experience_years",
-      "answer": "0",
+      "answer": "2",
       "usage_count": 0,
       "field_type": null,
       "last_used_at": "2026-06-18T18:34:01"
@@ -5935,24 +8378,6 @@
       "last_used_at": "2026-06-19T13:29:47"
     },
     {
-      "id": 9538,
-      "question_key": "i_acknowledge_above_and_where_legally_required_provide_my_co",
-      "question_text": "i_acknowledge_above_and_where_legally_required_provide_my_co",
-      "answer": "I didn't understand what you are saying to me.",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T13:33:07"
-    },
-    {
-      "id": 9542,
-      "question_key": "country_territory_phone_code",
-      "question_text": "country_territory_phone_code",
-      "answer": "India(+91)",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T14:14:28"
-    },
-    {
       "id": 9544,
       "question_key": "i_consent_receive_periodic_automated_text_messages_including",
       "question_text": "i_consent_receive_periodic_automated_text_messages_including",
@@ -5960,15 +8385,6 @@
       "usage_count": 0,
       "field_type": "",
       "last_used_at": "2026-06-19T14:15:49"
-    },
-    {
-      "id": 9548,
-      "question_key": "school_or_university",
-      "question_text": "school_or_university",
-      "answer": "Oriental Institute of science and technology",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T14:20:38"
     },
     {
       "id": 9562,
@@ -6016,24 +8432,6 @@
       "last_used_at": "2026-06-19T18:20:56"
     },
     {
-      "id": 9572,
-      "question_key": "legally_eligible_work_country_which_applying",
-      "question_text": "legally_eligible_work_country_which_applying",
-      "answer": "Yes",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T18:21:05"
-    },
-    {
-      "id": 9574,
-      "question_key": "will_now_or_future_require_kla_sponsorship_legally_work_job",
-      "question_text": "will_now_or_future_require_kla_sponsorship_legally_work_job",
-      "answer": "No",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T18:21:17"
-    },
-    {
       "id": 9576,
       "question_key": "currently_or_within_last_12_months_ever_worked_at_kla_throug",
       "question_text": "currently_or_within_last_12_months_ever_worked_at_kla_throug",
@@ -6041,42 +8439,6 @@
       "usage_count": 0,
       "field_type": "",
       "last_used_at": "2026-06-19T18:21:27"
-    },
-    {
-      "id": 9578,
-      "question_key": "all_individuals_employed_by_accenture_must_possess_valid_and",
-      "question_text": "all_individuals_employed_by_accenture_must_possess_valid_and",
-      "answer": "yes",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T18:27:12"
-    },
-    {
-      "id": 9580,
-      "question_key": "non_compete_non_solicitation_or_other_post_employment_restri",
-      "question_text": "non_compete_non_solicitation_or_other_post_employment_restri",
-      "answer": "no",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T18:27:21"
-    },
-    {
-      "id": 9582,
-      "question_key": "accenture_committed_not_hiring_employees_who_not_minimum_leg",
-      "question_text": "accenture_committed_not_hiring_employees_who_not_minimum_leg",
-      "answer": "yes",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T18:27:37"
-    },
-    {
-      "id": 9584,
-      "question_key": "at_current_employer_currently_working_project_accenture_or_w",
-      "question_text": "at_current_employer_currently_working_project_accenture_or_w",
-      "answer": "no",
-      "usage_count": 0,
-      "field_type": "",
-      "last_used_at": "2026-06-19T18:27:46"
     },
     {
       "id": 9586,
@@ -6113,13 +8475,283 @@
       "usage_count": 0,
       "field_type": "",
       "last_used_at": "2026-06-19T21:50:51"
+    },
+    {
+      "id": 9766,
+      "question_key": "email",
+      "question_text": "Email",
+      "answer": "kaushik.prny@gmail.com",
+      "usage_count": 0,
+      "field_type": "input_text",
+      "last_used_at": "2026-06-20T07:27:46"
+    },
+    {
+      "id": 9768,
+      "question_key": "school",
+      "question_text": "School",
+      "answer": "Other",
+      "usage_count": 0,
+      "field_type": "education",
+      "last_used_at": "2026-06-20T07:28:06"
+    },
+    {
+      "id": 9770,
+      "question_key": "discipline",
+      "question_text": "Discipline",
+      "answer": "Computer Science Engineering",
+      "usage_count": 0,
+      "field_type": "education",
+      "last_used_at": "2026-06-20T07:28:38"
+    },
+    {
+      "id": 9771,
+      "question_key": "start_date_year",
+      "question_text": "Start date year",
+      "answer": "2020",
+      "usage_count": 0,
+      "field_type": "education",
+      "last_used_at": "2026-06-20T07:28:44"
+    },
+    {
+      "id": 9772,
+      "question_key": "end_date_year",
+      "question_text": "End date year",
+      "answer": "2024",
+      "usage_count": 0,
+      "field_type": "education",
+      "last_used_at": "2026-06-20T07:28:47"
+    },
+    {
+      "id": 9774,
+      "question_key": "current_firm_re_part",
+      "question_text": "Current firm you're part of?",
+      "answer": "Tata Consultancy Services",
+      "usage_count": 0,
+      "field_type": "input_text",
+      "last_used_at": "2026-06-20T07:30:01"
+    },
+    {
+      "id": 9775,
+      "question_key": "15p_years_industry_experience",
+      "question_text": "Do you have 15+ years of industry experience?",
+      "answer": "No",
+      "usage_count": 0,
+      "field_type": "multi_value_single_select",
+      "last_used_at": "2026-06-20T07:30:09"
+    },
+    {
+      "id": 9780,
+      "question_key": "let_company_know_about_interest_working_there",
+      "question_text": "Let the company know about your interest working there",
+      "answer": "I would like to be considered for future opportunities that align with my skills and experience.",
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-20T20:16:45"
+    },
+    {
+      "id": 9781,
+      "question_key": "when_would_be_able_begin_this_position",
+      "question_text": "When would you be able to begin this position?",
+      "answer": "45 days Notice Period",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T20:17:33"
+    },
+    {
+      "id": 9782,
+      "question_key": "current_base_location",
+      "question_text": "What is your Current Base Location?",
+      "answer": "Indore",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T20:17:47"
+    },
+    {
+      "id": 9783,
+      "question_key": "express_interest_company",
+      "question_text": "Express interest in the company",
+      "answer": "I am interested in exploring future opportunitird with your company that align with my skills and experience.",
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-20T21:55:38"
+    },
+    {
+      "id": 9784,
+      "question_key": "degree_program_full_time_or_part_time",
+      "question_text": "Is your degree program full-time or part-time?",
+      "answer": "Vollzeit / full-time",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T22:02:13"
+    },
+    {
+      "id": 9785,
+      "question_key": "this_dual_study_program",
+      "question_text": "Is this a dual study program?",
+      "answer": "Nein/No",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T22:02:20"
+    },
+    {
+      "id": 9786,
+      "question_key": "this_mandatory_or_voluntary_internship",
+      "question_text": "Is this a mandatory or voluntary internship?",
+      "answer": "Mischpraktikum (Pflicht- und freiwilliges Praktikum) / hybrid internship (mandatory and voluntary",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T22:02:32"
+    },
+    {
+      "id": 9787,
+      "question_key": "preferred_overall_duration_internship",
+      "question_text": "Preferred overall duration of the internship:",
+      "answer": "3 months",
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-20T22:02:47"
+    },
+    {
+      "id": 9788,
+      "question_key": "mandatory_internships_duration_according_study_examination_r",
+      "question_text": "For mandatory internships - specify the duration according to the study examination regulations:",
+      "answer": "3 month",
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-20T22:02:56"
+    },
+    {
+      "id": 9789,
+      "question_key": "preferred_internship_period_start_end_dd_mm_yyyy",
+      "question_text": "Preferred internship period (start/end: \u200b\u200bDD/MM/YYYY):",
+      "answer": "03/05/2023",
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-20T22:03:12"
+    },
+    {
+      "id": 9790,
+      "question_key": "already_been_contact_relevant_department",
+      "question_text": "Have you already been in contact with the relevant department?",
+      "answer": "Nein/No",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T22:03:31"
+    },
+    {
+      "id": 9791,
+      "question_key": "accordance_applicable_eu_and_us_re_export_control_and_sancti",
+      "question_text": "In accordance with applicable EU and US (re-)export control and sanctions regulations, we are obliged to carry out export control and sanctions checks in the recruiting process. For this , we require the following information: Do you have one or more of the nationalities listed below: \u2022 Iran \u2022 Russia \u2022 Belarus \u2022 Syria \u2022 North Korea \u2022 Cuba \u2022 Venezuela",
+      "answer": "Nein / No",
+      "usage_count": 0,
+      "field_type": "select",
+      "last_used_at": "2026-06-20T22:04:27"
+    },
+    {
+      "id": 9798,
+      "question_key": "role_description",
+      "question_text": "Role Description",
+      "answer": "Associate System Engineer",
+      "usage_count": 0,
+      "field_type": "",
+      "last_used_at": "2026-06-21T19:24:19"
+    },
+    {
+      "id": 9849,
+      "question_key": "country_territory",
+      "question_text": "Country/Territory",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:39:22"
+    },
+    {
+      "id": 9861,
+      "question_key": "phone_extension",
+      "question_text": "Phone Extension",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:40:49"
+    },
+    {
+      "id": 9862,
+      "question_key": "middle_name",
+      "question_text": "Middle Name",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:39:24"
+    },
+    {
+      "id": 9863,
+      "question_key": "local_given_name_s",
+      "question_text": "Local Given Name(s)",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:39:36"
+    },
+    {
+      "id": 9864,
+      "question_key": "local_middle_name",
+      "question_text": "Local Middle Name",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:39:36"
+    },
+    {
+      "id": 9865,
+      "question_key": "local_family_name",
+      "question_text": "Local Family Name",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:39:36"
+    },
+    {
+      "id": 9866,
+      "question_key": "i_preferred_name",
+      "question_text": "I have a preferred name",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "checkbox",
+      "last_used_at": "2026-06-22T17:39:36"
+    },
+    {
+      "id": 9867,
+      "question_key": "address_line_2",
+      "question_text": "Address Line 2",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:39:37"
+    },
+    {
+      "id": 9868,
+      "question_key": "address_line_3",
+      "question_text": "Address Line 3",
+      "answer": null,
+      "usage_count": 0,
+      "field_type": "text",
+      "last_used_at": "2026-06-22T17:39:37"
+    },
+    {
+      "id": 9917,
+      "question_key": "language",
+      "question_text": "Language",
+      "answer": "English",
+      "usage_count": 0,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-22T17:06:06"
     }
   ],
   "system_status": {
     "collector": {
-      "total_jobs": 878,
+      "total_jobs": 1075,
       "pending": 1,
-      "evaluated": 610,
+      "evaluated": 727,
       "queued": 0,
       "failed": 0,
       "keywords": [
@@ -6146,9 +8778,9 @@
       ]
     },
     "evaluator": {
-      "total_evaluations": 269,
-      "total_runs": 8,
-      "last_evaluation": "2026-06-20T04:46:42.089692",
+      "total_evaluations": 391,
+      "total_runs": 10,
+      "last_evaluation": "2026-06-22T17:38:40.244514",
       "models_used": [
         "ExperienceFilter",
         "Groq",
@@ -6158,9 +8790,9 @@
       "pending_eval": 1
     },
     "discovery": {
-      "total_processed": 267,
+      "total_processed": 347,
       "pending_apply": 0,
-      "last_discovery": "2026-06-17T19:37:48.279320",
+      "last_discovery": "2026-06-22T17:40:53.243219",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
@@ -6179,11 +8811,23 @@
       }
     },
     "question_bank": {
-      "total": 149,
-      "answered": 148,
-      "coverage_pct": 99.3
+      "total": 193,
+      "answered": 181,
+      "coverage_pct": 93.8
     },
     "recent_runs": [
+      {
+        "run_id": "c67cecd5",
+        "cnt": 221,
+        "started": "2026-06-22T16:26:17.586810",
+        "ended": "2026-06-22T17:38:40.244514"
+      },
+      {
+        "run_id": "bc695ac4",
+        "cnt": 1,
+        "started": "2026-06-20T05:11:32.719152",
+        "ended": "2026-06-20T05:11:32.719152"
+      },
       {
         "run_id": "4056a22e",
         "cnt": 39,
@@ -6201,20 +8845,8 @@
         "cnt": 79,
         "started": "2026-06-17T18:20:36.829896",
         "ended": "2026-06-17T18:33:44.285467"
-      },
-      {
-        "run_id": "f94254dc",
-        "cnt": 36,
-        "started": "2026-06-17T14:56:04.943487",
-        "ended": "2026-06-17T14:57:24.093524"
-      },
-      {
-        "run_id": "a96bfc3b",
-        "cnt": 46,
-        "started": "2026-06-15T20:12:17.742047",
-        "ended": "2026-06-15T20:18:06.789119"
       }
     ]
   },
-  "generated_at": "2026-06-20T04:48:00.429105"
+  "generated_at": "2026-06-22T17:41:00.023293"
 }
