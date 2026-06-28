@@ -116,6 +116,7 @@ function initPage() {
     const path = window.location.pathname;
     if (path.includes("index.html") || path.endsWith("/") || path.endsWith("docs") || path.endsWith("docs/")) {
         renderOverview();
+        renderAllPlatforms();
     } else if (path.includes("top_jobs.html")) {
         renderTopJobs();
     } else if (path.includes("external_jobs.html")) {
@@ -191,6 +192,46 @@ function renderOverview() {
     if (reqTemp) reqTemp.innerText = retry.reasons.temporary_failure || 0;
     const reqBrowser = document.getElementById("retry-reason-browser");
     if (reqBrowser) reqBrowser.innerText = retry.reasons.browser_error || 0;
+}
+
+// ── All Platforms Summary ────────────────────────────────────────────────────
+function renderAllPlatforms() {
+    const ext = dashboardData.external_platform;
+    const wf  = dashboardData.wellfound_platform;
+    if (!ext && !wf) return;  // Neither module has run yet — keep card hidden
+
+    const section = document.getElementById("all-platforms-section");
+    if (section) section.style.display = "";
+
+    if (ext) {
+        const total = document.getElementById("ap-ext-total");
+        if (total) total.innerText = ext.total || 0;
+        const redir = document.getElementById("ap-naukri-redirected");
+        if (redir) redir.innerText = `${ext.naukri_redirected || 0} from Naukri`;
+
+        const byAts = document.getElementById("ap-ext-by-ats");
+        if (byAts) {
+            byAts.innerHTML = Object.entries(ext.by_ats || {})
+                .map(([k, v]) => `<span class="badge bg-secondary me-1 mb-1">${k}: ${v}</span>`)
+                .join("");
+        }
+        const byAction = document.getElementById("ap-ext-by-action");
+        if (byAction) {
+            const colorMap = { APPLY: "success", REVIEW: "warning", REJECT: "danger", unevaluated: "secondary" };
+            byAction.innerHTML = Object.entries(ext.by_action || {})
+                .map(([k, v]) => `<span class="badge bg-${colorMap[k] || "secondary"} me-1 mb-1">${k}: ${v}</span>`)
+                .join("");
+        }
+    }
+
+    if (wf) {
+        const wfTotal = document.getElementById("ap-wf-total");
+        if (wfTotal) wfTotal.innerText = wf.total || 0;
+        const wfRel = document.getElementById("ap-wf-relevant");
+        if (wfRel) wfRel.innerText = wf.relevant || 0;
+        const wfMem = document.getElementById("ap-wf-members");
+        if (wfMem) wfMem.innerText = wf.members || 0;
+    }
 }
 
 // ── Top Jobs Page ────────────────────────────────────────────────────────

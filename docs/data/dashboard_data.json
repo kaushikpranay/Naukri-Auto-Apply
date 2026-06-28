@@ -1,26 +1,26 @@
 {
   "overview_stats": {
-    "total_jobs": 1134,
-    "jobs_today": 150,
+    "total_jobs": 1260,
+    "jobs_today": 126,
     "apply": 369,
-    "review": 67,
-    "skip": 697,
+    "review": 137,
+    "skip": 753,
     "pending_eval": 1,
-    "pending_apply": 9,
+    "pending_apply": 0,
     "easy_apply": 24,
-    "external_portal": 206,
+    "external_portal": 211,
     "already_applied": 15,
-    "applied_successfully": 89,
+    "applied_successfully": 93,
     "failed": 0,
     "unknown_flow": 44,
     "quota_exhausted": 0,
     "register": 0,
     "login_required": 0,
     "email": 0,
-    "total_questions": 212,
-    "answered_questions": 187,
-    "coverage_pct": 88.2,
-    "last_run": "2026-06-25T22:53:12.586435",
+    "total_questions": 198,
+    "answered_questions": 198,
+    "coverage_pct": 100.0,
+    "last_run": "2026-06-28T10:56:30.829625",
     "retry_queue": {
       "count": 0,
       "reasons": {
@@ -4535,7 +4535,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience, AWS Bedrock, FastAPI, but lacks Azure OpenAI.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 16070,
@@ -4548,7 +4548,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 16578,
@@ -4561,7 +4561,7 @@
       "priority": "high",
       "reason": "Strong production RAG and LangGraph experience, transferable cloud skills, but lacks direct Kubeflow/SageMaker exposure.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 16902,
@@ -4574,7 +4574,7 @@
       "priority": "high",
       "reason": "Strong backend and AI production experience, but lacks front-end frameworks.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 16925,
@@ -4587,7 +4587,7 @@
       "priority": "high",
       "reason": "Strong backend and AI experience, but missing Node.js, MongoDB, Docker, Kubernetes.",
       "confidence": 80.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 16953,
@@ -4600,7 +4600,7 @@
       "priority": "high",
       "reason": "Strong backend and AI production experience, but lacks frontend skills.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 17015,
@@ -4613,7 +4613,7 @@
       "priority": "high",
       "reason": "Strong production RAG and backend experience, but lacks front-end and Node.js.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     },
     {
       "id": 10597,
@@ -4665,7 +4665,7 @@
       "priority": "high",
       "reason": "Strong production RAG experience and transferable cloud skills, but lacks explicit PySpark, Kafka, Flink, Airflow, and visualization tools.",
       "confidence": 75.0,
-      "apply_status": "pending"
+      "apply_status": "applied_successfully"
     },
     {
       "id": 10545,
@@ -4834,7 +4834,7 @@
       "priority": "medium",
       "reason": "Strong backend and cloud experience but lacks frontend frameworks.",
       "confidence": 60.0,
-      "apply_status": "pending"
+      "apply_status": "external_portal"
     }
   ],
   "external_jobs": [
@@ -6629,6 +6629,46 @@
       "job_url": "https://www.naukri.com/job-listings-jr-backend-engineer-5d-vdc-services-kolkata-0-to-1-years-070426501719"
     },
     {
+      "id": 16578,
+      "job_title": "AI Red Teaming Enginee Professional",
+      "company_name": "PROTECTT.AI Labs",
+      "location": "Mumbai",
+      "interview_probability": 70.0,
+      "apply_url": "https://protectt.ai/careers",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-ai-red-teaming-enginee-professional-protectt-ai-labs-pvt-ltd-mumbai-4-to-9-years-240626503854"
+    },
+    {
+      "id": 16902,
+      "job_title": "Full Stack Developer",
+      "company_name": "Xzect",
+      "location": "Remote",
+      "interview_probability": 70.0,
+      "apply_url": "https://www.xzect.com/career",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-xzect-remote-0-to-5-years-240626505974"
+    },
+    {
+      "id": 16953,
+      "job_title": "Full-stack Developer",
+      "company_name": "Enfuse Solutions",
+      "location": "Gurugram",
+      "interview_probability": 70.0,
+      "apply_url": "https://www.enfuse-solutions.com/careers/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-enfuse-solutions-pvt-ltd-gurugram-2-to-7-years-160925503748"
+    },
+    {
+      "id": 17015,
+      "job_title": "Fullstack Developer",
+      "company_name": "Cctech",
+      "location": "Pune",
+      "interview_probability": 70.0,
+      "apply_url": "https://jobs.cctech.co.in/jobs/careers/44607000014719713/sr-fullstack-developer?source=careersite",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-fullstack-developer-centre-for-computational-technologies-pvt-ltd-pune-2-to-6-years-160226501751"
+    },
+    {
       "id": 10597,
       "job_title": "Senior React Native / Full Stack Developer (FastAPI, AWS, MongoDB)",
       "company_name": "India Health Link",
@@ -6737,6 +6777,16 @@
       "apply_url": "https://ultahost.com/career-detail/web3-backend-engineer-ipfs-smart-contracts",
       "apply_type": "external_portal",
       "job_url": "https://www.naukri.com/job-listings-web3-backend-engineer-ultahost-remote-4-to-9-years-210825501162"
+    },
+    {
+      "id": 17012,
+      "job_title": "Full Stack Developer",
+      "company_name": "Leadstocompany",
+      "location": "Bengaluru, Pune, Hyderabad",
+      "interview_probability": 55.0,
+      "apply_url": "https://leadstocompany.com/career/",
+      "apply_type": "external_portal",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-leads-to-company-hyderabad-pune-bengaluru-3-to-6-years-250626504476"
     },
     {
       "id": 8660,
@@ -7770,6 +7820,916 @@
       "confidence": 0.0,
       "priority": "medium",
       "missing_skills": "[]"
+    },
+    {
+      "id": 17036,
+      "job_title": "GenAI Engineer",
+      "company_name": "Vrinda International Noida",
+      "location": "Gurugram",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-genai-engineer-vrinda-international-gurugram-2-to-6-years-260626506173",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17088,
+      "job_title": "Senior GenAI Engineering Manager",
+      "company_name": "Bajaj General Insurance",
+      "location": "Pune",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-genai-engineering-manager-bajaj-allianz-general-insurance-company-ltd-pune-3-to-6-years-260626502362",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17095,
+      "job_title": "Senior AI Engineer GenAI & ML solutions",
+      "company_name": "Crisil Analytices",
+      "location": "Pune, Mumbai",
+      "experience_required": "4-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-ai-engineer-genai-ml-solutions-crisil-analytices-mumbai-pune-4-to-7-years-260626505666",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17114,
+      "job_title": "Senior AI Engineer - GenAI Solutions (GDS AIA)",
+      "company_name": "EY",
+      "location": "Hyderabad",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-senior-ai-engineer-genai-solutions-gds-aia-ernst-young-llp-hyderabad-2-to-6-years-220626927326",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17115,
+      "job_title": "AI Systems Engineer (Backend + GenAI Infrastructure)",
+      "company_name": "Predictive Data Sciences",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "4-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-systems-engineer-backend-genai-infrastructure-predictive-data-sciences-hyderabad-chennai-bengaluru-4-to-5-years-260626909355",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17123,
+      "job_title": "Machine Learning Engineer (ML / DL / GenAI)",
+      "company_name": "Cleartrip",
+      "location": "Chennai",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-machine-learning-engineer-ml-dl-genai-cleartrip-private-limited-chennai-1-to-4-years-030626502125",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17124,
+      "job_title": "Machine Learning Engineer (ML / DL / GenAI)",
+      "company_name": "CapeStart",
+      "location": "Chennai",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-machine-learning-engineer-ml-dl-genai-capestart-software-private-limited-chennai-1-to-4-years-030626502124",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17166,
+      "job_title": "Gen AI - Engineer",
+      "company_name": "Iris Software",
+      "location": "Noida",
+      "experience_required": "2-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-engineer-iris-software-technologies-private-limited-noida-2-to-6-years-260626928383",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17167,
+      "job_title": "AI Engineer",
+      "company_name": "Training Basket",
+      "location": "Noida",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-training-basket-noida-1-to-3-years-260626505556",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17183,
+      "job_title": "GEN AI Data Scientist",
+      "company_name": "US MNC (analytics)",
+      "location": "Hybrid - Noida, Gurugram, Delhi / NCR",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-gen-ai-data-scientist-aspyra-hr-services-noida-gurugram-delhi-ncr-4-to-8-years-260626004419",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17226,
+      "job_title": "Generative AI Engineer",
+      "company_name": "Hewlett Packard Enterprise",
+      "location": "Bengaluru",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-hewlett-packard-enterprise-bengaluru-2-to-4-years-260626505289",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17263,
+      "job_title": "Agentic AI Engineer",
+      "company_name": "Infosys",
+      "location": "Pune",
+      "experience_required": "3-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-infosys-limited-pune-3-to-5-years-260626910914",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17285,
+      "job_title": "Associate AI Engineer",
+      "company_name": "NOVARTIS",
+      "location": "Hyderabad",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-associate-ai-engineer-novartis-healthcare-pvt-ltd-hyderabad-1-to-4-years-260626501481",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17428,
+      "job_title": "AI Engineer",
+      "company_name": "GrayMatter",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-gray-matter-software-services-bengaluru-2-to-5-years-050326501911",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17430,
+      "job_title": "Associate AI Engineer",
+      "company_name": "Digital Green",
+      "location": "Bengaluru",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-associate-ai-engineer-digital-green-bengaluru-1-to-4-years-210426500275",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17431,
+      "job_title": "Ai Engineer",
+      "company_name": "Tezsid Engineering",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-tezsid-pune-1-to-4-years-260626501771",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17446,
+      "job_title": "AI Engineer",
+      "company_name": "Micro1",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-micro1-pune-1-to-4-years-281125505195",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17447,
+      "job_title": "AI Engineer",
+      "company_name": "Micro1",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-micro1-pune-1-to-4-years-281125505193",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17449,
+      "job_title": "AI Engineer",
+      "company_name": "Kodo",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-kodo-card-pune-1-to-4-years-171024500497",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17450,
+      "job_title": "AI Engineer",
+      "company_name": "Aiotor Labs Private Limited",
+      "location": "Pune",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-aiotor-labs-private-limited-pune-1-to-4-years-120526502847",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17528,
+      "job_title": "AI Software Engineer",
+      "company_name": "DHL Supply Chain",
+      "location": "Indore",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-software-engineer-dhl-global-forwarding-india-indore-2-to-7-years-020326500133",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17606,
+      "job_title": "AI/ML Developer (LLMs & Prompt Engineering) \u2013 Python & AI",
+      "company_name": "Razorthink",
+      "location": "Bengaluru, Delhi / NCR, Mumbai",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-developer-llms-prompt-engineering-python-ai-razorthink-mumbai-delhi-ncr-bengaluru-3-to-8-years-260626910050",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17614,
+      "job_title": "AI Engineer Python Full Stack React GenAI LLM RAG",
+      "company_name": "Sciens Technologies",
+      "location": "Hybrid - Bengaluru, Hyderabad",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-python-full-stack-react-genai-llm-rag-sciens-software-technologies-hyderabad-bengaluru-4-to-9-years-270626003797",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17653,
+      "job_title": "AI/LLM QA Engineer - Agentic and Multi-Agent System Testing",
+      "company_name": "Crew Kraftorz",
+      "location": "Hyderabad",
+      "experience_required": "4-9 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-llm-qa-engineer-agentic-and-multi-agent-system-testing-crew-kraftorz-llp-hyderabad-4-to-9-years-250626501452",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17673,
+      "job_title": "Data Engineer (LLM Data Pipeline)",
+      "company_name": "Buildingblocks Software Services",
+      "location": "Chennai",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-data-engineer-llm-data-pipeline-buildingblocks-software-services-chennai-3-to-6-years-101125503559",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17730,
+      "job_title": "Software Developer",
+      "company_name": "Safran Engineering Services",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-developer-safran-engineering-services-bengaluru-2-to-5-years-100725014825",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17853,
+      "job_title": "AI & Agentic Developer",
+      "company_name": "Nile",
+      "location": "Noida",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-agentic-developer-nile-technologies-pvt-ltd-noida-2-to-5-years-260626907275",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17918,
+      "job_title": "AI Engineer",
+      "company_name": "IBU Consulting",
+      "location": "Bengaluru",
+      "experience_required": "1-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-ibu-consulting-bengaluru-1-to-4-years-250326504556",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17919,
+      "job_title": "AI Engineer",
+      "company_name": "Clifyx Technology",
+      "location": "Bengaluru",
+      "experience_required": "1-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-clifyx-technology-bengaluru-1-to-5-years-281125502208",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17976,
+      "job_title": "AI Engineer",
+      "company_name": "Newagesys Solutions",
+      "location": "Chennai",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-newagesys-solutions-p-ltd-chennai-1-to-2-years-290126509913",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17977,
+      "job_title": "AI Engineer",
+      "company_name": "Athrv Cloud",
+      "location": "Chennai",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-athrv-cloud-pvt-ltd-chennai-1-to-2-years-180526503442",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17978,
+      "job_title": "AI Engineer D4 Insight",
+      "company_name": "D4 Insight",
+      "location": "Chennai",
+      "experience_required": "0-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-d4-insight-d4insight-tech-chennai-0-to-3-years-130326502977",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 17988,
+      "job_title": "Python Fullstack Agentic AI Engineer",
+      "company_name": "Nxtwave Disruptive Technologies (Hiring for a Client)",
+      "location": "Mumbai",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-fullstack-agentic-ai-engineer-nxtwave-disruptive-technologies-hiring-for-a-client-mumbai-2-to-5-years-260626028467",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18021,
+      "job_title": "Full Stack Developer",
+      "company_name": "Travelmore",
+      "location": "Remote",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-travelmore-io-remote-1-to-3-years-111224503853",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18035,
+      "job_title": "Backend Developer",
+      "company_name": "Campus Direct",
+      "location": "Noida",
+      "experience_required": "1-2 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-campus-direct-noida-1-to-2-years-200426502033",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18036,
+      "job_title": "Backend Developer",
+      "company_name": "Bumppy Media",
+      "location": "Noida",
+      "experience_required": "1-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-bumppy-media-pvt-ltd-noida-1-to-3-years-070725500728",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18040,
+      "job_title": "Full-Stack Developer",
+      "company_name": "Evanti Tech",
+      "location": "Noida",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-evanti-tech-private-limited-noida-2-to-5-years-280426500580",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18041,
+      "job_title": "Backend Developer",
+      "company_name": "Zipaworld Innovation",
+      "location": "Noida",
+      "experience_required": "1-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-zipaworld-noida-1-to-6-years-250526503325",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18081,
+      "job_title": "IOT Software Engineer",
+      "company_name": "Drive Terra",
+      "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-iot-software-engineer-drive-terra-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-2-to-5-years-210725503337",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18089,
+      "job_title": "Back End Engineer",
+      "company_name": "Tredence",
+      "location": "Bengaluru",
+      "experience_required": "2-5 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-tredence-bengaluru-2-to-5-years-060626006984",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18092,
+      "job_title": "Backend Engineer(Golang)",
+      "company_name": "Predictive Data Sciences",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "3-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-golang-predictive-data-sciences-hyderabad-chennai-bengaluru-3-to-8-years-260626909362",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18093,
+      "job_title": "Backend Engineer",
+      "company_name": "Predictive Data Sciences",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-engineer-predictive-data-sciences-hyderabad-chennai-bengaluru-3-to-6-years-260626909351",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18120,
+      "job_title": "FULL STACK DEVELOPER",
+      "company_name": "Godigi Infotech",
+      "location": "Pune",
+      "experience_required": "0-1 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-godigi-infotech-pune-0-to-1-years-101225501528",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18132,
+      "job_title": "Back End Engineer",
+      "company_name": "ti Steps",
+      "location": "Bengaluru, Chennai, Hyderabad",
+      "experience_required": "0-1 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-ti-steps-hyderabad-chennai-bengaluru-0-to-1-years-271125029383",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18136,
+      "job_title": "Full Stack Developer",
+      "company_name": "Leadstocompany",
+      "location": "Hyderabad",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-full-stack-developer-leads-to-company-hyderabad-3-to-6-years-260626500650",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18141,
+      "job_title": "Back End Engineer - Python/REST API",
+      "company_name": "Apex 2000 INC",
+      "location": "Hyderabad",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-back-end-engineer-python-rest-api-apex-2000-inc-hyderabad-4-to-8-years-240226501009",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18144,
+      "job_title": "Python Backend Engineer",
+      "company_name": "Efficienza Business Solutions",
+      "location": "Chennai",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-efficienza-business-solutions-chennai-2-to-4-years-240626505235",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18151,
+      "job_title": "AI Engineer Agentic AI Full-Stack Developer",
+      "company_name": "ISI India",
+      "location": "Chennai, Madurai, Tiruppur, Salem, Tiruchirapalli, Coimbatore",
+      "experience_required": "1-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-agentic-ai-full-stack-developer-isi-india-pvt-ltd-madurai-tiruppur-salem-chennai-tiruchirapalli-coimbatore-1-to-6-years-250626507788",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18182,
+      "job_title": "Backend Developer",
+      "company_name": "Yashvitech It Solution",
+      "location": "Indore",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-backend-developer-yashvitech-it-solution-pvt-ltd-indore-2-to-4-years-250626504762",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18190,
+      "job_title": "Staff Engineer (Finance)",
+      "company_name": "Leading Client",
+      "location": "Indore",
+      "experience_required": "1-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-staff-engineer-finance-hungry-bird-it-consulting-services-private-limited-indore-1-to-6-years-250626942545",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18191,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Indore",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-indore-2-to-7-years-250626942077",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18192,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Indore",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-indore-2-to-7-years-250626942040",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18201,
+      "job_title": "Macros India Junior Analyst , Process analyst",
+      "company_name": "WM Logistics",
+      "location": "Indore",
+      "experience_required": "0-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-macros-india-junior-analyst-process-analyst-wm-logistics-indore-0-to-4-years-261224501140",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18214,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Kolkata",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-kolkata-2-to-7-years-250626942072",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18215,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Kolkata",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-kolkata-2-to-7-years-250626942036",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18217,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Bengaluru",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-bengaluru-2-to-7-years-250626942058",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18218,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Bengaluru",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-bengaluru-2-to-7-years-250626941983",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18222,
+      "job_title": "Software Engineer at A FinTech Company",
+      "company_name": "Talentzo Delhi",
+      "location": "Remote",
+      "experience_required": "0-3 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-at-a-fintech-company-talentzo-delhi-bengaluru-0-to-3-years-230626045251",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18226,
+      "job_title": "Engineer",
+      "company_name": "Impelsys",
+      "location": "Bengaluru",
+      "experience_required": "3-6 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-engineer-impelsys-bengaluru-3-to-6-years-250626014187",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18237,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Pune",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-pune-2-to-7-years-250626942067",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18238,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Pune",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-pune-2-to-7-years-250626942029",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18241,
+      "job_title": "Nvidia Engineer",
+      "company_name": "Persistent",
+      "location": "Pune",
+      "experience_required": "4-8 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-nvidia-engineer-persistent-pune-4-to-8-years-260626021692",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18253,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Hyderabad",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-hyderabad-2-to-7-years-250626942064",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18254,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Hyderabad",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-hyderabad-2-to-7-years-250626942027",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18269,
+      "job_title": "Software Engineer",
+      "company_name": "Datalake Solutions",
+      "location": "Hyderabad",
+      "experience_required": "2-4 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-datalake-solutions-hyderabad-2-to-4-years-170626036154",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18271,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Chennai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-chennai-2-to-7-years-250626942070",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18272,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Chennai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-chennai-2-to-7-years-250626942034",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18274,
+      "job_title": "Walk-in || Python Developer (FastAPI) Immediate Joiner Only",
+      "company_name": "ti Steps",
+      "location": "Chennai(Perungudi)",
+      "experience_required": "",
+      "job_url": "https://www.naukri.com/job-listings-python-developer-fastapi-immediate-joiner-only-ti-steps-chennai-3-to-6-years-220626025078",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18285,
+      "job_title": "Software Engineer - Finance",
+      "company_name": "Leading Client",
+      "location": "Mumbai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-finance-hungry-bird-it-consulting-services-private-limited-mumbai-2-to-7-years-250626942063",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
+    },
+    {
+      "id": 18286,
+      "job_title": "Software Engineer - Orders",
+      "company_name": "Leading Client",
+      "location": "Mumbai",
+      "experience_required": "2-7 Yrs",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-orders-hungry-bird-it-consulting-services-private-limited-mumbai-2-to-7-years-250626942025",
+      "interview_probability": 0.0,
+      "reason": "Requires review after provider failures.",
+      "confidence": 0.0,
+      "priority": "medium",
+      "missing_skills": "[]"
     }
   ],
   "failed_jobs": [],
@@ -7829,6 +8789,15 @@
       "last_used_at": "2026-06-25T22:58:19.700943"
     },
     {
+      "id": 10128,
+      "question_key": "citizenship_status",
+      "question_text": "Citizenship Status",
+      "answer": "Indian",
+      "usage_count": 18,
+      "field_type": "multiselect",
+      "last_used_at": "2026-06-26T00:08:25"
+    },
+    {
       "id": 1687,
       "question_key": "yes",
       "question_text": "Yes",
@@ -7854,15 +8823,6 @@
       "usage_count": 16,
       "field_type": "",
       "last_used_at": "2026-06-25T03:01:24"
-    },
-    {
-      "id": 10128,
-      "question_key": "citizenship_status",
-      "question_text": "Citizenship Status",
-      "answer": "Indian",
-      "usage_count": 14,
-      "field_type": "multiselect",
-      "last_used_at": "2026-06-25T05:11:38"
     },
     {
       "id": 25,
@@ -8025,15 +8985,6 @@
       "usage_count": 5,
       "field_type": "dropdown",
       "last_used_at": "2026-06-24T21:41:21"
-    },
-    {
-      "id": 10632,
-      "question_key": "exp_azure",
-      "question_text": "Do you have experience in Azure?",
-      "answer": null,
-      "usage_count": 5,
-      "field_type": "radio",
-      "last_used_at": "2026-06-25T23:11:03.374908"
     },
     {
       "id": 32,
@@ -8232,6 +9183,15 @@
       "usage_count": 3,
       "field_type": "",
       "last_used_at": "2026-06-21T19:23:17"
+    },
+    {
+      "id": 9870,
+      "question_key": "i_am_fluent_this_languagedot",
+      "question_text": "I am fluent in this language.",
+      "answer": "Yes",
+      "usage_count": 3,
+      "field_type": "checkbox",
+      "last_used_at": "2026-06-25T23:48:47"
     },
     {
       "id": 10635,
@@ -8522,15 +9482,6 @@
       "last_used_at": "2026-06-15T21:41:07.371060"
     },
     {
-      "id": 9406,
-      "question_key": "willing_to_relocate_bengaluru",
-      "question_text": "Are you currently residing in Bengaluru or willing to relocate to Bengaluru?",
-      "answer": null,
-      "usage_count": 2,
-      "field_type": "radio",
-      "last_used_at": "2026-06-22T16:54:55.480241"
-    },
-    {
       "id": 9578,
       "question_key": "all_individuals_employed_by_accenture_must_possess_valid_and",
       "question_text": "all_individuals_employed_by_accenture_must_possess_valid_and",
@@ -8675,49 +9626,85 @@
       "last_used_at": "2026-06-21T22:25:14"
     },
     {
-      "id": 9870,
-      "question_key": "i_am_fluent_this_languagedot",
-      "question_text": "I am fluent in this language.",
-      "answer": "Yes",
+      "id": 10673,
+      "question_key": "comprehension",
+      "question_text": "Comprehension",
+      "answer": "3 - Intermediate",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:48:47"
+    },
+    {
+      "id": 10677,
+      "question_key": "reading",
+      "question_text": "Reading",
+      "answer": "3 - Intermediate",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:49:56"
+    },
+    {
+      "id": 10679,
+      "question_key": "speaking",
+      "question_text": "Speaking",
+      "answer": "3 - Intermediate",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:49:56"
+    },
+    {
+      "id": 10681,
+      "question_key": "writing",
+      "question_text": "Writing",
+      "answer": "3 - Intermediate",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:49:56"
+    },
+    {
+      "id": 10683,
+      "question_key": "any_experience_working_ngo_sector",
+      "question_text": "Do you have any experience working in the NGO Sector?",
+      "answer": "No",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:50:40"
+    },
+    {
+      "id": 10685,
+      "question_key": "any_experience_working_government_organizations",
+      "question_text": "Do you have any experience working with government organizations?",
+      "answer": "No",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:50:46"
+    },
+    {
+      "id": 10687,
+      "question_key": "sexual_orientation_sexual_orientation_refers_type_person_sex",
+      "question_text": "Your sexual orientation? (*Sexual orientation refers to the type of person you are sexually attracted to)",
+      "answer": "Straight",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:51:06"
+    },
+    {
+      "id": 10689,
+      "question_key": "which_following_age_group_belong",
+      "question_text": "Which of the following age group do you belong to?",
+      "answer": "20-29",
+      "usage_count": 1,
+      "field_type": "dropdown",
+      "last_used_at": "2026-06-25T23:51:12"
+    },
+    {
+      "id": 10691,
+      "question_key": "religious_family_belong_or_identify_yourself_most_close",
+      "question_text": "What religious family do you belong to or identify yourself most close to?",
+      "answer": "Hindu",
       "usage_count": 1,
       "field_type": "checkbox",
-      "last_used_at": "2026-06-22T17:06:09"
-    },
-    {
-      "id": 9898,
-      "question_key": "exp_developer",
-      "question_text": "How many years of experience do you have in Developer?",
-      "answer": null,
-      "usage_count": 1,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-22T17:01:32.149225"
-    },
-    {
-      "id": 9922,
-      "question_key": "exp_zapier",
-      "question_text": "How many years of experience do you have in Zapier?",
-      "answer": null,
-      "usage_count": 1,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-22T17:08:26.434865"
-    },
-    {
-      "id": 10630,
-      "question_key": "exp_computer_vision",
-      "question_text": "How many years of experience do you have in Computer Vision?",
-      "answer": null,
-      "usage_count": 1,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-25T22:56:36.253384"
-    },
-    {
-      "id": 10638,
-      "question_key": "exp_prompt_engineering",
-      "question_text": "How many years of experience do you have in Prompt Engineering?",
-      "answer": null,
-      "usage_count": 1,
-      "field_type": "contenteditable",
-      "last_used_at": "2026-06-25T23:04:12.227990"
+      "last_used_at": "2026-06-25T23:51:18"
     },
     {
       "id": 5,
@@ -9485,69 +10472,6 @@
       "last_used_at": "2026-06-21T19:24:19"
     },
     {
-      "id": 9849,
-      "question_key": "country_territory",
-      "question_text": "Country/Territory",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "dropdown",
-      "last_used_at": "2026-06-22T17:47:40"
-    },
-    {
-      "id": 9861,
-      "question_key": "phone_extension",
-      "question_text": "Phone Extension",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T13:12:58"
-    },
-    {
-      "id": 9862,
-      "question_key": "middle_name",
-      "question_text": "Middle Name",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T13:12:58"
-    },
-    {
-      "id": 9864,
-      "question_key": "local_middle_name",
-      "question_text": "Local Middle Name",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T13:12:58"
-    },
-    {
-      "id": 9866,
-      "question_key": "i_preferred_name",
-      "question_text": "I have a preferred name",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "checkbox",
-      "last_used_at": "2026-06-25T13:12:58"
-    },
-    {
-      "id": 9867,
-      "question_key": "address_line_2",
-      "question_text": "Address Line 2",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T03:18:56"
-    },
-    {
-      "id": 9868,
-      "question_key": "address_line_3",
-      "question_text": "Address Line 3",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T03:18:56"
-    },
-    {
       "id": 9917,
       "question_key": "language",
       "question_text": "Language",
@@ -9575,119 +10499,29 @@
       "last_used_at": "2026-06-25T03:02:09"
     },
     {
-      "id": 9977,
-      "question_key": "country_region",
-      "question_text": "Country/Region",
-      "answer": null,
+      "id": 10675,
+      "question_key": "overall",
+      "question_text": "Overall",
+      "answer": "3 - Intermediate",
       "usage_count": 0,
       "field_type": "dropdown",
-      "last_used_at": "2026-06-23T00:21:26"
+      "last_used_at": "2026-06-25T23:49:56"
     },
     {
-      "id": 9983,
-      "question_key": "country_region_phone_code",
-      "question_text": "Country/Region Phone Code",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "multiselect",
-      "last_used_at": "2026-06-23T00:21:31"
-    },
-    {
-      "id": 10027,
-      "question_key": "facebook",
-      "question_text": "Facebook",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-24T05:52:43"
-    },
-    {
-      "id": 10059,
-      "question_key": "legally_authorized_work_country_applying",
-      "question_text": "Are you legally authorized to work in the country you are applying for?",
-      "answer": null,
+      "id": 10712,
+      "question_key": "ok_salary_range_mentioned_this_position",
+      "question_text": "Are you ok with the salary range mentioned for this position?",
+      "answer": "Yes",
       "usage_count": 0,
       "field_type": "dropdown",
-      "last_used_at": "2026-06-24T21:41:08"
-    },
-    {
-      "id": 10155,
-      "question_key": "date_birth",
-      "question_text": "Date of Birth",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "date",
-      "last_used_at": "2026-06-23T17:21:24"
-    },
-    {
-      "id": 10444,
-      "question_key": "authorized_work_lawfully_country_this_role_based",
-      "question_text": "Are you authorized to work lawfully in the country this role is based?",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "dropdown",
-      "last_used_at": "2026-06-25T02:34:56"
-    },
-    {
-      "id": 10445,
-      "question_key": "will_now_or_future_require_sailpoint_commence_sponsor_immigr",
-      "question_text": "Will you now or in the future require SailPoint to commence (\u201csponsor\u201d) an immigration case in order to employ you in the country this role is based (for example, in the United States, an H-1B or other employment-based immigration case)? This is sometimes called \u201csponsorship\u201d for an employment-based visa status.",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "dropdown",
-      "last_used_at": "2026-06-25T02:34:56"
-    },
-    {
-      "id": 10446,
-      "question_key": "currently_employed_by_sailpoint_partner_or_customer",
-      "question_text": "Are you currently employed by a SailPoint partner or customer?",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "dropdown",
-      "last_used_at": "2026-06-25T02:34:56"
-    },
-    {
-      "id": 10463,
-      "question_key": "address_line_1_local",
-      "question_text": "Address Line 1 - Local",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T03:01:24"
-    },
-    {
-      "id": 10464,
-      "question_key": "address_line_2_local",
-      "question_text": "Address Line 2 - Local",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T03:18:56"
-    },
-    {
-      "id": 10465,
-      "question_key": "address_line_3_local",
-      "question_text": "Address Line 3 - Local",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T03:18:56"
-    },
-    {
-      "id": 10466,
-      "question_key": "city_local",
-      "question_text": "City - Local",
-      "answer": null,
-      "usage_count": 0,
-      "field_type": "text",
-      "last_used_at": "2026-06-25T03:02:09"
+      "last_used_at": "2026-06-25T23:50:32"
     }
   ],
   "system_status": {
     "collector": {
-      "total_jobs": 1134,
-      "pending": 2,
-      "evaluated": 754,
+      "total_jobs": 1260,
+      "pending": 1,
+      "evaluated": 872,
       "queued": 0,
       "failed": 0,
       "keywords": [
@@ -9714,9 +10548,9 @@
       ]
     },
     "evaluator": {
-      "total_evaluations": 436,
-      "total_runs": 9,
-      "last_evaluation": "2026-06-25T22:53:12.586435",
+      "total_evaluations": 506,
+      "total_runs": 10,
+      "last_evaluation": "2026-06-28T10:56:30.829625",
       "models_used": [
         "Groq",
         "ExperienceFilter",
@@ -9726,9 +10560,9 @@
       "pending_eval": 1
     },
     "discovery": {
-      "total_processed": 378,
-      "pending_apply": 9,
-      "last_discovery": "2026-06-25T23:18:13.541403",
+      "total_processed": 387,
+      "pending_apply": 0,
+      "last_discovery": "2026-06-28T10:58:59.209113",
       "quota": {
         "total_quota_exhausted": 0,
         "last_detected": null,
@@ -9747,11 +10581,17 @@
       }
     },
     "question_bank": {
-      "total": 212,
-      "answered": 187,
-      "coverage_pct": 88.2
+      "total": 198,
+      "answered": 198,
+      "coverage_pct": 100.0
     },
     "recent_runs": [
+      {
+        "run_id": "3b248567",
+        "cnt": 126,
+        "started": "2026-06-28T10:56:29.901204",
+        "ended": "2026-06-28T10:56:30.829625"
+      },
       {
         "run_id": "46718021",
         "cnt": 150,
@@ -9775,14 +10615,43 @@
         "cnt": 39,
         "started": "2026-06-20T04:46:40.694072",
         "ended": "2026-06-20T04:46:42.089692"
-      },
-      {
-        "run_id": "ac245fff",
-        "cnt": 315,
-        "started": "2026-06-20T04:01:12.516424",
-        "ended": "2026-06-20T04:21:37.321102"
       }
     ]
   },
-  "generated_at": "2026-06-25T23:19:06.367149"
+  "external_platform": {
+    "total": 777,
+    "by_ats": {
+      "workday": 554,
+      "career_page": 167,
+      "greenhouse": 35,
+      "lever": 16,
+      "ashby": 2,
+      "unknown": 1,
+      "icims": 1,
+      "smartrecruiters": 1
+    },
+    "by_action": {
+      "unevaluated": 581,
+      "apply": 181,
+      "APPLY": 12,
+      "skip": 2,
+      "REJECT": 1
+    },
+    "by_status": {
+      "discovered": 775,
+      "failed": 2
+    },
+    "naukri_redirected": 183
+  },
+  "wellfound_platform": {
+    "total": 142,
+    "relevant": 98,
+    "members": 45,
+    "by_action": {
+      "apply": 58,
+      "skip": 44,
+      "review": 40
+    }
+  },
+  "generated_at": "2026-06-28T10:59:03.023561"
 }
