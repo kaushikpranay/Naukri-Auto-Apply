@@ -211,8 +211,21 @@ function renderAllPlatforms() {
 
         const byAts = document.getElementById("ap-ext-by-ats");
         if (byAts) {
+            const colorMap = { APPLY: "success", REVIEW: "warning", REJECT: "danger", unevaluated: "secondary" };
             byAts.innerHTML = Object.entries(ext.by_ats || {})
-                .map(([k, v]) => `<span class="badge bg-secondary me-1 mb-1">${k}: ${v}</span>`)
+                .map(([atsName, totalCount]) => {
+                    const actionData = ext.by_ats_action ? (ext.by_ats_action[atsName] || {}) : {};
+                    const actionBadges = Object.entries(actionData)
+                        .map(([actionName, actionCount]) => {
+                            const badgeColor = colorMap[actionName] || "secondary";
+                            return `<span class="badge bg-${badgeColor} ms-1" style="font-size:0.75rem">${actionName}: ${actionCount}</span>`;
+                        })
+                        .join("");
+                    return `<div class="mb-2 text-white d-flex justify-content-between align-items-center">
+                        <span><strong>${atsName}</strong> <span class="badge bg-secondary ms-1">${totalCount}</span></span>
+                        <span>${actionBadges}</span>
+                    </div>`;
+                })
                 .join("");
         }
         const byAction = document.getElementById("ap-ext-by-action");
@@ -366,8 +379,8 @@ function showReasonModal(jobId) {
 
 function getApplyStatusBadgeClass(status) {
     if (status === "easy_apply" || status === "applied_successfully") return "bg-success text-white";
-    if (status === "external_portal") return "bg-info text-dark";
-    if (status === "pending") return "bg-warning text-dark";
+    if (status === "external_portal") return "bg-info text-white";
+    if (status === "pending") return "bg-warning text-white";
     if (status === "discovery_failed" || status === "quota_exhausted") return "bg-danger text-white";
     return "bg-secondary text-white";
 }
@@ -375,22 +388,48 @@ function getApplyStatusBadgeClass(status) {
 // ── External Jobs Page ───────────────────────────────────────────────────
 function renderExternalJobs() {
     let jobs = dashboardData.external_jobs.filter(j => !getHiddenJobs().includes(j.id));
-    
+
     const searchInput = document.getElementById("search-input");
+    const atsFilterSelect = document.getElementById("ats-filter");
+    const atsStatusFilter = document.getElementById("ats-status-filter");
+
+    if (atsFilterSelect) {
+        const atsTypes = [...new Set(jobs.map(j => j.ats_type).filter(Boolean))].sort();
+        atsFilterSelect.innerHTML = '<option value="all">All Platforms / ATS</option>';
+        atsTypes.forEach(type => {
+            const opt = document.createElement("option");
+            opt.value = type;
+            opt.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+            atsFilterSelect.appendChild(opt);
+        });
+    }
 
     function update() {
         searchTerm = searchInput.value.toLowerCase();
-        
+        const selectedAts = atsFilterSelect ? atsFilterSelect.value : "all";
+        const selectedStatus = atsStatusFilter ? atsStatusFilter.value : "all";
+
         let filtered = jobs.filter(j => {
-            return (j.company_name || "").toLowerCase().includes(searchTerm) ||
-                   (j.job_title || "").toLowerCase().includes(searchTerm) ||
-                   (j.location || "").toLowerCase().includes(searchTerm);
+            const matchesSearch = (j.company_name || "").toLowerCase().includes(searchTerm) ||
+                                  (j.job_title || "").toLowerCase().includes(searchTerm) ||
+                                  (j.location || "").toLowerCase().includes(searchTerm);
+            const matchesAts = selectedAts === "all" || j.ats_type === selectedAts;
+            const matchesStatus = selectedStatus === "all" || (j.ats_status || "pending") === selectedStatus;
+            return matchesSearch && matchesAts && matchesStatus;
         });
 
         renderExternalTable(filtered);
     }
 
-    searchInput.addEventListener("input", () => { currentPage = 1; update(); });
+    if (searchInput) {
+        searchInput.addEventListener("input", () => { currentPage = 1; update(); });
+    }
+    if (atsFilterSelect) {
+        atsFilterSelect.addEventListener("change", () => { currentPage = 1; update(); });
+    }
+    if (atsStatusFilter) {
+        atsStatusFilter.addEventListener("change", () => { currentPage = 1; update(); });
+    }
     update();
 }
 
@@ -407,19 +446,31 @@ function renderExternalTable(list) {
     const mCards = document.getElementById("mobile-cards");
     
     if (pageList.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-muted">No external jobs found</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center text-muted">No external jobs found</td></tr>`;
         mCards.innerHTML = `<div class="empty-state"><i class="bi bi-inbox"></i>No external jobs found</div>`;
         renderPaginationControls(totalPages);
         return;
     }
 
+    function atsStatusBadge(status) {
+        const map = {
+            applied: '<span class="badge bg-success">Applied</span>',
+            failed:  '<span class="badge bg-danger">Failed</span>',
+            skipped: '<span class="badge bg-secondary">Skipped</span>',
+            pending: '<span class="badge bg-warning text-dark">Pending</span>',
+        };
+        return map[status] || map["pending"];
+    }
+
     tbody.innerHTML = pageList.map(j => {
+        const atsStatus = j.ats_status || "pending";
         return `
         <tr>
             <td><strong>${escapeHtml(j.company_name)}</strong></td>
             <td><a href="${escapeHtml(j.job_url)}" target="_blank" class="text-white text-decoration-none fw-semibold">${escapeHtml(j.job_title)}</a></td>
             <td>${escapeHtml(j.location)}</td>
             <td><strong class="text-success">${j.interview_probability}%</strong></td>
+            <td>${atsStatusBadge(atsStatus)}</td>
             <td>
                 <div class="d-flex gap-1">
                     <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i> Apply</a>
@@ -430,6 +481,7 @@ function renderExternalTable(list) {
     }).join("");
 
     mCards.innerHTML = pageList.map(j => {
+        const atsStatus = j.ats_status || "pending";
         return `
         <div class="job-card mb-3">
             <h6 class="fw-bold text-white mb-1">${escapeHtml(j.company_name)}</h6>
@@ -437,6 +489,7 @@ function renderExternalTable(list) {
             <div class="d-flex justify-content-between align-items-center mb-3 text-muted small">
                 <span>Loc: ${escapeHtml(j.location)}</span>
                 <span>Prob: <strong class="text-success">${j.interview_probability}%</strong></span>
+                <span>ATS: ${atsStatusBadge(atsStatus)}</span>
             </div>
             <div class="d-flex gap-2">
                 <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i> Apply on Portal</a>
@@ -898,7 +951,7 @@ function renderHiddenTable(list) {
 
     if (tbody) {
         tbody.innerHTML = pageList.map(j => {
-            const catBadge = j.category === "Top Job" ? "bg-success" : j.category === "External" ? "bg-info text-dark" : j.category === "Review" ? "bg-warning text-dark" : "bg-danger";
+            const catBadge = j.category === "Top Job" ? "bg-success text-white" : j.category === "External" ? "bg-info text-white" : j.category === "Review" ? "bg-warning text-white" : "bg-danger text-white";
             return `
             <tr>
                 <td><span class="badge ${catBadge}">${escapeHtml(j.category)}</span></td>
@@ -920,7 +973,7 @@ function renderHiddenTable(list) {
 
     if (mCards) {
         mCards.innerHTML = pageList.map(j => {
-            const catBadge = j.category === "Top Job" ? "bg-success" : j.category === "External" ? "bg-info text-dark" : j.category === "Review" ? "bg-warning text-dark" : "bg-danger";
+            const catBadge = j.category === "Top Job" ? "bg-success text-white" : j.category === "External" ? "bg-info text-white" : j.category === "Review" ? "bg-warning text-white" : "bg-danger text-white";
             return `
             <div class="job-card mb-3">
                 <div class="d-flex justify-content-between align-items-center mb-1">

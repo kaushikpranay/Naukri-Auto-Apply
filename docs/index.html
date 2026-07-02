@@ -144,7 +144,7 @@
                 <div class="glass-card mb-4 p-3">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <h6 class="fw-bold text-white mb-0"><i class="bi bi-arrow-repeat text-accent"></i> Retry Queue</h6>
-                        <span class="badge bg-warning text-dark" id="retry-queue-badge">0</span>
+                        <span class="badge bg-warning text-white" id="retry-queue-badge">0</span>
                     </div>
                     <div class="d-flex justify-content-between small text-muted mb-1" style="font-size: 0.75rem;">
                         <span>Q: <strong id="retry-reason-q">0</strong></span>
@@ -167,30 +167,33 @@
             </div>
             <div class="card-body">
                 <div class="row g-3">
-                    <div class="col-md-3">
-                        <div class="mini-stat-card text-center p-3">
-                            <div class="mini-stat-label">External ATS (Total)</div>
-                            <div class="mini-stat-value text-accent" id="ap-ext-total">-</div>
-                            <small class="text-muted" id="ap-naukri-redirected"></small>
+                    <!-- Left Column: Totals & Action breakdown -->
+                    <div class="col-12 col-lg-5 d-flex flex-column gap-3">
+                        <div class="mini-stat-card p-3 flex-grow-1">
+                            <div class="mini-stat-label mb-3">Job Source Summary</div>
+                            <div class="row text-center">
+                                <div class="col-6 border-end">
+                                    <div class="text-muted small mb-1">External ATS</div>
+                                    <div class="mini-stat-value text-accent mb-1" id="ap-ext-total">-</div>
+                                    <small class="text-muted d-block" id="ap-naukri-redirected"></small>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-muted small mb-1">Wellfound</div>
+                                    <div class="mini-stat-value text-info mb-1" id="ap-wf-total">-</div>
+                                    <small class="text-muted d-block"><span id="ap-wf-relevant">-</span> rel &bull; <span id="ap-wf-members">-</span> contacts</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mini-stat-card p-3 flex-grow-1">
+                            <div class="mini-stat-label mb-2">External Jobs by Action</div>
+                            <div class="text-start mt-1" id="ap-ext-by-action" style="font-size:0.85rem"></div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="mini-stat-card text-center p-3">
-                            <div class="mini-stat-label">External by ATS Type</div>
-                            <div class="text-start mt-1" id="ap-ext-by-ats" style="font-size:0.8rem"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mini-stat-card text-center p-3">
-                            <div class="mini-stat-label">Wellfound Jobs</div>
-                            <div class="mini-stat-value text-info" id="ap-wf-total">-</div>
-                            <small class="text-muted"><span id="ap-wf-relevant">-</span> relevant &bull; <span id="ap-wf-members">-</span> contacts</small>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="mini-stat-card text-center p-3">
-                            <div class="mini-stat-label">External by Action</div>
-                            <div class="text-start mt-1" id="ap-ext-by-action" style="font-size:0.8rem"></div>
+                    <!-- Right Column: ATS Platform Breakdown -->
+                    <div class="col-12 col-lg-7">
+                        <div class="mini-stat-card p-3 h-100">
+                            <div class="mini-stat-label mb-3">External ATS Platform Breakdown</div>
+                            <div id="ap-ext-by-ats" style="font-size:0.85rem"></div>
                         </div>
                     </div>
                 </div>

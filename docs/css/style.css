@@ -180,6 +180,7 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.03);
     padding: 0.6rem 0.75rem;
     font-size: 0.85rem;
+    color: var(--text-primary) !important;
 }
 
 /* ── Job Cards (Mobile) ──────────────────────────────────────────────────── */
@@ -324,7 +325,15 @@ body {
 .sort-link:hover { color: var(--accent-light); }
 
 /* ── Badge overrides ─────────────────────────────────────────────────────── */
-.badge { font-weight: 500; font-size: 0.72rem; letter-spacing: 0.02em; }
+.badge {
+    font-weight: 500; font-size: 0.72rem; letter-spacing: 0.02em;
+    color: #ffffff !important;
+}
+.badge.text-dark { color: #ffffff !important; }
+.badge.bg-warning { background-color: var(--warning) !important; color: #ffffff !important; }
+.badge.bg-info { background-color: var(--info) !important; color: #ffffff !important; }
+.badge.bg-success { background-color: var(--success) !important; color: #ffffff !important; }
+.badge.bg-danger { background-color: var(--danger) !important; color: #ffffff !important; }
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 576px) {

@@ -19,11 +19,25 @@
 
         <div class="glass-card p-3 mb-4">
             <div class="row g-2 align-items-center">
-                <div class="col-12">
+                <div class="col-12 col-md-5">
                     <div class="input-group">
                         <span class="input-group-text glass-input-addon"><i class="bi bi-search"></i></span>
                         <input type="text" id="search-input" class="form-control glass-input" placeholder="Search role or company...">
                     </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <select id="ats-filter" class="form-select glass-input">
+                        <option value="all">All Platforms / ATS</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3">
+                    <select id="ats-status-filter" class="form-select glass-input">
+                        <option value="all">All ATS Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="applied">Applied</option>
+                        <option value="failed">Failed</option>
+                        <option value="skipped">Skipped</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -38,11 +52,12 @@
                             <th>Role</th>
                             <th>Location</th>
                             <th>Probability</th>
+                            <th>ATS Status</th>
                             <th>Apply</th>
                         </tr>
                     </thead>
                     <tbody id="jobs-tbody">
-                        <tr><td colspan="5" class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm text-accent" role="status"></div> Loading...</td></tr>
+                        <tr><td colspan="6" class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm text-accent" role="status"></div> Loading...</td></tr>
                     </tbody>
                 </table>
             </div>
