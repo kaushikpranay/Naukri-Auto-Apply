@@ -1,0 +1,56 @@
+{
+  "status": "sleeping",
+  "current_url": "N/A",
+  "pipeline": "N/A",
+  "elapsed_time_sec": 45,
+  "telemetry": {
+    "cpu_percent": 10.0,
+    "memory_percent": 35.0,
+    "process_memory_mb": 120.0
+  },
+  "timeline": [
+    {
+      "stage": "Searching",
+      "status": "completed",
+      "timestamp": "06:00:01 AM"
+    },
+    {
+      "stage": "Evaluating",
+      "status": "completed",
+      "timestamp": "06:00:15 AM"
+    },
+    {
+      "stage": "Opening Browser",
+      "status": "active",
+      "timestamp": "06:01:05 AM"
+    },
+    {
+      "stage": "Reading Fields",
+      "status": "pending",
+      "timestamp": null
+    },
+    {
+      "stage": "Resolving",
+      "status": "pending",
+      "timestamp": null
+    },
+    {
+      "stage": "Uploading Resume",
+      "status": "pending",
+      "timestamp": null
+    },
+    {
+      "stage": "Submitting",
+      "status": "pending",
+      "timestamp": null
+    }
+  ],
+  "logs": [
+    "Opening Greenhouse portal...",
+    "Navigating to job form page...",
+    "Reading input field elements...",
+    "Answer found in Question Bank for: 'First Name'",
+    "Typing first name...",
+    "Typing last name..."
+  ]
+}

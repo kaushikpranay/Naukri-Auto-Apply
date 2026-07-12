@@ -1,0 +1,144 @@
+{
+  "config": {
+    "browser": {
+      "headless": false,
+      "profile_dir": "browser_profile",
+      "slow_mo": 500,
+      "default_timeout": 30000,
+      "viewport_width": 1280,
+      "viewport_height": 720
+    },
+    "paths": {
+      "database": "database/jobs.db",
+      "exports": "exports",
+      "logs": "logs",
+      "screenshots": "screenshots",
+      "artifacts": "artifacts"
+    },
+    "naukri": {
+      "base_url": "https://www.naukri.com",
+      "search_url_template": "https://www.naukri.com/{keyword}-jobs-in-{location}?k={keyword_raw}",
+      "results_per_page": 20,
+      "max_pages_per_search": 5,
+      "page_load_wait": 3000,
+      "detail_load_wait": 2000
+    },
+    "logging": {
+      "level": "INFO",
+      "rotation": "10 MB",
+      "retention": "30 days",
+      "format": "{time:YYYY-MM-DD HH:mm:ss} | {level:<8} | {module}:{function}:{line} | {message}"
+    },
+    "evaluation": {
+      "max_ai_evaluations_per_run": 25,
+      "max_retry_count": 3
+    },
+    "discovery": {
+      "max_discovery_jobs_per_run": 10
+    }
+  },
+  "profile": {
+    "first_name": "Kaushik",
+    "last_name": "Pranay",
+    "full_name": "Kaushik Pranay",
+    "email": "",
+    "phone": "",
+    "country": "India",
+    "city": "Indore",
+    "state": "Madhya Pradesh",
+    "linkedin_profile_url": "https://www.linkedin.com/in/pranaykaushik",
+    "github_url": "https://github.com/kaushikpranay",
+    "portfolio_url": "",
+    "notice_period": "45 days",
+    "current_ctc": "3.36 LPA",
+    "expected_ctc": "8 LPA",
+    "experience_years": 2,
+    "max_target_min_experience": 4,
+    "current_role": "Associate System Engineer",
+    "current_company": "TCS",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "REST APIs",
+      "SQL",
+      "PostgreSQL",
+      "pgvector",
+      "DynamoDB",
+      "RAG",
+      "Generative AI",
+      "LLM Applications",
+      "Prompt Engineering",
+      "Semantic Search",
+      "LangChain",
+      "LangGraph",
+      "Agentic AI",
+      "AWS",
+      "Bedrock",
+      "EC2",
+      "S3",
+      "RDS",
+      "SQS",
+      "DynamoDB",
+      "TensorFlow",
+      "Keras",
+      "CNN",
+      "GitHub Actions",
+      "System Design",
+      "API Design",
+      "Microservices",
+      "OOP"
+    ],
+    "projects": [
+      "Built a production-grade Self-Improving RAG Customer Support System using LangGraph, FastAPI, AWS, and pgvector",
+      "Designed adaptive retrieval pipelines and semantic caching for LLM-based customer support applications",
+      "Implemented multi-stage LLM retry and failover workflows to improve answer reliability",
+      "Developed AI/ML microservices deployed on AWS",
+      "Built a CNN-based Indian Sign Language Recognition System with 92% accuracy"
+    ],
+    "experience": [
+      "Built and maintained LLM-powered chatbot features for customer support use cases",
+      "Implemented agent-based workflows for multi-step reasoning and tool usage",
+      "Developed and deployed AI/ML microservices on AWS",
+      "Handled API failures, retries, monitoring, and production debugging",
+      "Worked with RAG systems, retrieval pipelines, and semantic search architectures"
+    ],
+    "certifications": [
+      "AWS Certified Cloud Practitioner"
+    ],
+    "target_roles": [
+      "Generative AI Engineer",
+      "AI Engineer",
+      "Applied AI Engineer",
+      "LLM Engineer",
+      "RAG Engineer",
+      "Agentic AI Engineer",
+      "AI Backend Engineer",
+      "Python Backend Engineer",
+      "FastAPI Developer",
+      "Machine Learning Engineer"
+    ],
+    "transferable_skills": {
+      "AWS": [
+        "Azure",
+        "GCP"
+      ],
+      "Bedrock": [
+        "Azure OpenAI"
+      ],
+      "LangGraph": [
+        "LangChain"
+      ],
+      "FastAPI": [
+        "Flask",
+        "Django REST"
+      ],
+      "DynamoDB": [
+        "CosmosDB"
+      ],
+      "PostgreSQL": [
+        "MySQL",
+        "SQL Server"
+      ]
+    }
+  }
+}
