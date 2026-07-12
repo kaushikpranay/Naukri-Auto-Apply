@@ -52,9 +52,6 @@ def _normalize_resume(value: Any) -> str:
     if normalized in _ALLOWED_RESUMES:
         return normalized
 
-    if normalized in {"GENAI", "APPLIED_AI", "PYTHON", "ML", "STARTUP"}:
-        return normalized
-
     logger.warning("Unknown recommended_resume value %r; converting to STARTUP", value)
     return "STARTUP"
 

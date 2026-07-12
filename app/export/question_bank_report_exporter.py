@@ -14,6 +14,7 @@ from pathlib import Path
 import pandas as pd
 from loguru import logger
 
+from app.export.utils import autofit_sheets
 from app.question_bank.lookup_service import QuestionBankReport
 
 
@@ -87,20 +88,11 @@ class QuestionBankReportExporter:
             df_unknown.to_excel(writer, index=False, sheet_name="Unknown Questions")
             df_suggested.to_excel(writer, index=False, sheet_name="Suggested Answers")
 
-            for sheet_name, df in [
-                ("Known Questions", df_known),
+            autofit_sheets(writer, [
+                ("Known Questions",   df_known),
                 ("Unknown Questions", df_unknown),
                 ("Suggested Answers", df_suggested),
-            ]:
-                ws = writer.sheets[sheet_name]
-                for col_idx, column in enumerate(df.columns, start=1):
-                    max_len = max(
-                        len(str(column)),
-                        df[column].astype(str).str.len().max() if not df.empty else 0,
-                    )
-                    ws.column_dimensions[
-                        ws.cell(row=1, column=col_idx).column_letter
-                    ].width = min(max(max_len + 2, 14), 80)
+            ])
 
         logger.info(
             "Question bank report exported: {} ({} known, {} unknown, {} suggested)",

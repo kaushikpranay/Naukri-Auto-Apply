@@ -10,6 +10,8 @@ import sqlite3
 import pandas as pd
 from loguru import logger
 
+from app.export.utils import write_excel
+
 
 class ApplyDiscoveryExporter:
     """Export discovered application flow data to Excel."""
@@ -47,19 +49,7 @@ class ApplyDiscoveryExporter:
             df: pd.DataFrame = pd.read_sql_query(query, conn)
 
         filepath = self._export_dir / "apply_discovery.xlsx"
-        with pd.ExcelWriter(str(filepath), engine="openpyxl") as writer:
-            df.to_excel(writer, index=False, sheet_name="Apply Discovery")
-
-            worksheet = writer.sheets["Apply Discovery"]
-            for col_idx, column in enumerate(df.columns, start=1):
-                max_length = max(
-                    len(str(column)),
-                    df[column].astype(str).str.len().max() if not df[column].empty else 0,
-                )
-                worksheet.column_dimensions[
-                    worksheet.cell(row=1, column=col_idx).column_letter
-                ].width = min(max(max_length + 2, 12), 60)
-
+        write_excel(df, filepath, sheet_name="Apply Discovery")
         logger.info("Apply discovery exported to {} ({} rows)", filepath.name, len(df))
         return filepath
 
@@ -102,18 +92,6 @@ class ApplyDiscoveryExporter:
             df: pd.DataFrame = pd.read_sql_query(query, conn)
 
         filepath = self._export_dir / "apply_discovery_debug.xlsx"
-        with pd.ExcelWriter(str(filepath), engine="openpyxl") as writer:
-            df.to_excel(writer, index=False, sheet_name="Debug Discovery")
-
-            worksheet = writer.sheets["Debug Discovery"]
-            for col_idx, column in enumerate(df.columns, start=1):
-                max_length = max(
-                    len(str(column)),
-                    df[column].astype(str).str.len().max() if not df[column].empty else 0,
-                )
-                worksheet.column_dimensions[
-                    worksheet.cell(row=1, column=col_idx).column_letter
-                ].width = min(max(max_length + 2, 12), 60)
-
+        write_excel(df, filepath, sheet_name="Debug Discovery")
         logger.info("Apply discovery debug exported to {} ({} rows)", filepath.name, len(df))
         return filepath

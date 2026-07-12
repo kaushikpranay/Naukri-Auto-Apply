@@ -16,6 +16,7 @@ from pathlib import Path
 import pandas as pd
 from loguru import logger
 
+from app.export.utils import autofit_sheets
 from app.models.application_review import ApplicationReviewRecord
 
 
@@ -130,21 +131,12 @@ class ApplicationReviewExporter:
             df_unknown.to_excel(writer, index=False, sheet_name="Unknown Fields")
             df_missing.to_excel(writer, index=False, sheet_name="Required Missing")
 
-            for sheet_name, df in [
-                ("Review Summary",  df_summary),
-                ("Filled Fields",   df_filled),
-                ("Unknown Fields",  df_unknown),
-                ("Required Missing",df_missing),
-            ]:
-                ws = writer.sheets[sheet_name]
-                for col_idx, col in enumerate(df.columns, start=1):
-                    max_len = max(
-                        len(str(col)),
-                        df[col].astype(str).str.len().max() if not df.empty else 0,
-                    )
-                    ws.column_dimensions[
-                        ws.cell(row=1, column=col_idx).column_letter
-                    ].width = min(max(max_len + 2, 14), 80)
+            autofit_sheets(writer, [
+                ("Review Summary",   df_summary),
+                ("Filled Fields",    df_filled),
+                ("Unknown Fields",   df_unknown),
+                ("Required Missing", df_missing),
+            ])
 
             # Highlight Ready To Submit column (green=YES, red=NO)
             from openpyxl.styles import PatternFill

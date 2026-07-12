@@ -5,6 +5,12 @@ from pathlib import Path
 
 from loguru import logger
 
+from dotenv import load_dotenv as _load_dotenv  # noqa: E402
+
+_naukri_env = Path(__file__).parent / ".env"
+if _naukri_env.exists():
+    _load_dotenv(str(_naukri_env), override=False)
+
 from app.browser.session import BrowserSession, ProfileNotFoundError, SessionExpiredError
 from app.database.evaluations_repo import EvaluationsRepository
 from app.evaluator.evaluation_service import EvaluationService, EvaluationBatchStats
@@ -45,28 +51,31 @@ def setup_logging(settings: AppSettings) -> None:
     )
 
 
+def _collect_keys(base: str) -> list[str]:
+    """Return deduplicated list of all env keys matching base, base_2, base_3, ..."""
+    import os
+    candidates = [os.getenv(base)] + [os.getenv(f"{base}_{n}") for n in range(2, 6)]
+    return list(dict.fromkeys(k for k in candidates if k))
+
+
 def _build_providers(prompt_path: Path, profile_path: Path) -> list:
+    from app.evaluator.providers.groq_provider import GroqEvaluator
+    from app.evaluator.providers.gemini_provider import GeminiEvaluator
+
     providers = []
+    for key in _collect_keys("GROQ_API_KEY"):
+        try:
+            providers.append(GroqEvaluator(prompt_path, profile_path, api_key=key))
+            logger.info("Groq provider ready (key ...{}).", key[-4:])
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Groq key ...{} unavailable: {}", key[-4:], exc)
 
-    try:
-        from app.evaluator.providers.groq_provider import GroqEvaluator
-
-        providers.append(GroqEvaluator(prompt_path, profile_path))
-        logger.info("Groq provider initialized.")
-    except ImportError as exc:
-        logger.warning("Groq provider unavailable: {}", exc)
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Groq provider unavailable: {}", exc)
-
-    try:
-        from app.evaluator.providers.gemini_provider import GeminiEvaluator
-
-        providers.append(GeminiEvaluator(prompt_path, profile_path))
-        logger.info("Gemini provider initialized.")
-    except ImportError as exc:
-        logger.warning("Gemini provider unavailable: {}", exc)
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Gemini provider unavailable: {}", exc)
+    for key in _collect_keys("GEMINI_API_KEY"):
+        try:
+            providers.append(GeminiEvaluator(prompt_path, profile_path, api_key=key))
+            logger.info("Gemini provider ready (key ...{}).", key[-4:])
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Gemini key ...{} unavailable: {}", key[-4:], exc)
 
     return providers
 

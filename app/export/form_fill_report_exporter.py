@@ -14,6 +14,7 @@ from pathlib import Path
 import pandas as pd
 from loguru import logger
 
+from app.export.utils import autofit_sheets
 from app.models.form_fill import FormFillReport
 
 
@@ -42,7 +43,6 @@ class FormFillReportExporter:
                     "Mode":            mode,
                     "Question Key":    f.question_key,
                     "Question":        f.question_text,
-                    "Question Text":   f.question_text,
                     "Field Type":      f.field_type,
                     "Required":        "Yes" if f.required else "No",
                     "Status":          f.status,
@@ -63,7 +63,6 @@ class FormFillReportExporter:
                     "Mode":          mode,
                     "Question Key":  u.question_key,
                     "Question":      u.question_text,
-                    "Question Text": u.question_text,
                     "Field Type":    u.field_type,
                     "Required":      "Yes" if u.required else "No",
                 })
@@ -75,13 +74,13 @@ class FormFillReportExporter:
 
         _col_filled = [
             "Job ID", "Company", "Role", "Mode",
-            "Question Key", "Question", "Question Text", "Field Type", "Required",
+            "Question Key", "Question", "Field Type", "Required",
             "Status", "Answer Used", "Answer Source", "Error",
             "Screenshot Before", "Screenshot After",
         ]
         _col_unknown = [
             "Job ID", "Company", "Role", "Mode",
-            "Question Key", "Question", "Question Text", "Field Type", "Required",
+            "Question Key", "Question", "Field Type", "Required",
         ]
         _col_values = ["Question Key", "Answer Used"]
 
@@ -94,20 +93,11 @@ class FormFillReportExporter:
             df_unknown.to_excel(writer, index=False, sheet_name="Unknown Fields")
             df_values.to_excel(writer,  index=False, sheet_name="Values Used")
 
-            for sheet_name, df in [
+            autofit_sheets(writer, [
                 ("Filled Fields",  df_filled),
                 ("Unknown Fields", df_unknown),
                 ("Values Used",    df_values),
-            ]:
-                ws = writer.sheets[sheet_name]
-                for col_idx, col in enumerate(df.columns, start=1):
-                    max_len = max(
-                        len(str(col)),
-                        df[col].astype(str).str.len().max() if not df.empty else 0,
-                    )
-                    ws.column_dimensions[
-                        ws.cell(row=1, column=col_idx).column_letter
-                    ].width = min(max(max_len + 2, 14), 80)
+            ])
 
         logger.info(
             "Form fill report exported: {} ({} filled, {} unknown, {} unique answers)",

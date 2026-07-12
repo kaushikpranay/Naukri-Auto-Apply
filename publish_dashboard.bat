@@ -9,8 +9,9 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
-echo Staging docs/ files...
+echo Staging docs/ and dashboard data files...
 git add docs
+git add ../dashboard/public/data
 
 echo Committing changes...
 git commit -m "Update static dashboard data [automated]"

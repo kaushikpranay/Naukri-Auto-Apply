@@ -23,14 +23,15 @@ class GroqEvaluator(BaseEvaluator):
 
     provider_name = "Groq"
 
-    def __init__(self, prompt_path: Path, profile_path: Path) -> None:
+    def __init__(self, prompt_path: Path, profile_path: Path, *, api_key: str | None = None) -> None:
         load_dotenv()
-        api_key = os.getenv("GROQ_API_KEY")
-        if not api_key:
+        _key = api_key or os.getenv("GROQ_API_KEY")
+        if not _key:
             raise ProviderConfigurationError("GROQ_API_KEY missing from .env")
 
         self.model_id = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
-        self._client = Groq(api_key=api_key)
+        self._client = Groq(api_key=_key)
+        self.provider_name = f"Groq[...{_key[-4:]}]"
         super().__init__(prompt_path, profile_path)
 
     def _generate_response(self, prompt: str) -> str:
