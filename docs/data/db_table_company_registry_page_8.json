@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 106,
+      "company_name": "Qualcomm India",
+      "career_url": "https://www.qualcomm.com/company/careers",
+      "ats_type": "taleo",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 107,
+      "company_name": "American Express GCC",
+      "career_url": "https://aexp.eightfold.ai/careers/",
+      "ats_type": "taleo",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 108,
+      "company_name": "L&T Technology Svcs",
+      "career_url": "https://www.ltts.com/careers",
+      "ats_type": "taleo",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 109,
+      "company_name": "Emerson India GCC",
+      "career_url": "https://www.emerson.com/en-us/careers",
+      "ats_type": "taleo",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 110,
+      "company_name": "Hitachi India GCC",
+      "career_url": "https://www.hitachivantara.com/en-us/company/careers.html",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 111,
+      "company_name": "Ericsson India",
+      "career_url": "https://jobs.ericsson.com/careers/",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 112,
+      "company_name": "Capgemini India (SR)",
+      "career_url": "https://www.capgemini.com/in-en/careers/",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 113,
+      "company_name": "Google India",
+      "career_url": "https://careers.google.com/locations/india/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 114,
+      "company_name": "Microsoft India IDC",
+      "career_url": "https://careers.microsoft.com/global/en/search-results?lc=India",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 115,
+      "company_name": "Amazon India",
+      "career_url": "https://www.amazon.jobs/en/locations/india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 116,
+      "company_name": "Meta India GCC",
+      "career_url": "https://www.metacareers.com/locations/india/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 117,
+      "company_name": "Apple India GCC",
+      "career_url": "https://jobs.apple.com/en-in/search?location=india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 118,
+      "company_name": "Intel India",
+      "career_url": "https://jobs.intel.com/en/locations/india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 119,
+      "company_name": "AMD India",
+      "career_url": "https://careers.amd.com/careers-home/jobs?location=India",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 120,
+      "company_name": "IBM India",
+      "career_url": "https://www.ibm.com/in-en/employment",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 8,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

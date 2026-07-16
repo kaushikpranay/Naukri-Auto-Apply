@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 257,
+      "company_name": "WNS Global",
+      "career_url": "https://www.naukri.com/wns-jobs",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 258,
+      "company_name": "eClerx",
+      "career_url": "https://www.naukri.com/eclerx-jobs-careers-7679",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 259,
+      "company_name": "Indegene",
+      "career_url": "https://www.naukri.com/indegene-jobs",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 260,
+      "company_name": "Ramco Systems",
+      "career_url": "https://www.naukri.com/ramco-systems-jobs-careers-4342",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 261,
+      "company_name": "Nucleus Software",
+      "career_url": "https://companies.naukri.com/nucleussoftware-jobs/jobs/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 262,
+      "company_name": "3i Infotech",
+      "career_url": "https://www.naukri.com/3i-infotech-jobs",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 263,
+      "company_name": "Analog Devices India",
+      "career_url": "https://analogdevices.wd1.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 264,
+      "company_name": "BlackRock India",
+      "career_url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 265,
+      "company_name": "Invesco India",
+      "career_url": "https://invesco.wd1.myworkdayjobs.com/IVZ",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 266,
+      "company_name": "Franklin Templeton India",
+      "career_url": "https://www.franklintempletoncareers.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 267,
+      "company_name": "Coca-Cola India",
+      "career_url": "https://coke.wd1.myworkdayjobs.com/coca-cola-careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 268,
+      "company_name": "Capital One India",
+      "career_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 269,
+      "company_name": "State Street India",
+      "career_url": "https://statestreet.wd1.myworkdayjobs.com/Global",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 270,
+      "company_name": "Nasdaq India",
+      "career_url": "https://nasdaq.wd1.myworkdayjobs.com/Global_External_Site",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 271,
+      "company_name": "Microchip India",
+      "career_url": "https://microchiphr.wd5.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 18,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

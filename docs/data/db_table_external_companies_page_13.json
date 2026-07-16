@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 181,
+      "name": "Apollo Hospitals",
+      "sector": "Healthcare",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.apollohospitals.com/careers/",
+      "ai_roles": "AI/ML Engg, Health AI Dev",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 182,
+      "name": "Practo",
+      "sector": "HealthTech",
+      "ats_type": "custom_portal",
+      "career_url": "https://practo.com/company/careers",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 183,
+      "name": "Niramai",
+      "sector": "HealthTech AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://niramai.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Medical Imaging AI",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 184,
+      "name": "Mercedes-Benz R&D",
+      "sector": "Auto GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://group.mercedes-benz.com/careers/jobs/",
+      "ai_roles": "ML Engg, AI Researcher, CV Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 185,
+      "name": "Tata Elxsi",
+      "sector": "Engg Design / AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.tataelxsi.com/careers/",
+      "ai_roles": "AI/ML Engg, Computer Vision, NLP Engg",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 186,
+      "name": "Tata Motors",
+      "sector": "Auto / EV",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.tatamotors.com/careers/",
+      "ai_roles": "AI Engineer, ML Engineer",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 187,
+      "name": "Mahindra Tech",
+      "sector": "Auto / IT Svcs",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.mahindra.com/",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 188,
+      "name": "Shell India GCC",
+      "sector": "Energy GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.shell.com/careers.html",
+      "ai_roles": "ML Engg, AI Engg, Energy AI",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 189,
+      "name": "Schlumberger India",
+      "sector": "Energy / Oil & Gas",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.slb.com/",
+      "ai_roles": "AI/ML Engg, Data Scientist",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 190,
+      "name": "Honeywell India GCC",
+      "sector": "Industrial / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.honeywell.com/us/en",
+      "ai_roles": "AI Engg, ML Dev, Industrial AI",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 191,
+      "name": "DXC Technology",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.dxc.com/global/en/",
+      "ai_roles": "AI Engg, ML Dev, Data Scientist",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 192,
+      "name": "Publicis Sapient",
+      "sector": "Digital Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.publicissapient.com/",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 193,
+      "name": "Zensar Technologies",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.zensar.com/careers",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 194,
+      "name": "Mindtree (LTI)",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.mindtree.com/careers",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 195,
+      "name": "Coforge",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.coforge.com/careers",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 13,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

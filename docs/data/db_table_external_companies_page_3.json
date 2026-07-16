@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 31,
+      "name": "Dollar General GCC",
+      "sector": "Retail GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://dollargeneral.wd5.myworkdayjobs.com/Careers",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 32,
+      "name": "United Airlines GCC",
+      "sector": "Aviation GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://united.wd5.myworkdayjobs.com/United_Airlines_Careers",
+      "ai_roles": "ML Engineer, AI Operations Engg",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 33,
+      "name": "FedEx India GCC",
+      "sector": "Logistics GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.fedex.com/fedex/",
+      "ai_roles": "ML Engineer, Logistics AI",
+      "salary_lpa": "\u20b914\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 34,
+      "name": "PwC India",
+      "sector": "Big 4 Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers",
+      "ai_roles": "AI Consultant, ML Engineer, Data & AI Analyst",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 35,
+      "name": "Deloitte India",
+      "sector": "Big 4 Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://deloitte.wd1.myworkdayjobs.com/DeloitteUSCareers",
+      "ai_roles": "AI Engineer, GenAI Consultant, Data Scientist",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 36,
+      "name": "Walmart GTC India",
+      "sector": "Retail GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://careers.walmart.com/",
+      "ai_roles": "ML Engineer, AI Engg, NLP Engg, RecSys Engg",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 37,
+      "name": "SAP Labs India",
+      "sector": "Enterprise SW",
+      "ats_type": "successfactors",
+      "career_url": "https://jobs.sap.com/go/India/8807201/",
+      "ai_roles": "AI Dev, ML Engg, LLM Engg, NLP Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 38,
+      "name": "Boeing India",
+      "sector": "Aerospace GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://jobs.boeing.com/",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 39,
+      "name": "Bosch India",
+      "sector": "Auto / Engg",
+      "ats_type": "successfactors",
+      "career_url": "https://www.bosch.in/careers/",
+      "ai_roles": "ML Engg, AI Engg, Automotive AI, Embedded AI",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 40,
+      "name": "Siemens India",
+      "sector": "Industrial Tech",
+      "ats_type": "successfactors",
+      "career_url": "https://jobs.siemens.com/careers/jobs/india",
+      "ai_roles": "AI Engineer, ML Dev, Industrial AI",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 41,
+      "name": "Novartis India GCC",
+      "sector": "Pharma GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://www.novartis.com/careers/find-a-role/india",
+      "ai_roles": "ML Engineer, AI Scientist, Drug Discovery AI",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 42,
+      "name": "Bayer India GCC",
+      "sector": "Pharma GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://www.bayer.com/en/careers/",
+      "ai_roles": "ML Engineer, AI Scientist",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 43,
+      "name": "ABB India",
+      "sector": "Industrial Tech",
+      "ats_type": "successfactors",
+      "career_url": "https://careers.abb/global/en/india-jobs",
+      "ai_roles": "AI Engineer, Industrial ML Engineer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 44,
+      "name": "Continental India",
+      "sector": "Auto / Tech",
+      "ats_type": "successfactors",
+      "career_url": "https://www.continental.com/en/careers/",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b914\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 45,
+      "name": "3M India GCC",
+      "sector": "Industrial GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://www.3m.com/3M/en_US/careers/",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 3,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

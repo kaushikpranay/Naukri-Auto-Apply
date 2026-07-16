@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 271,
+      "name": "Microchip India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://microchiphr.wd5.myworkdayjobs.com/External",
+      "ai_roles": "ML Engineer, AI Engineer, Embedded AI",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 272,
+      "name": "GlobalFoundries India",
+      "sector": "Semiconductors / Foundry",
+      "ats_type": "custom_portal",
+      "career_url": "https://globalfoundries.wd1.myworkdayjobs.com/External",
+      "ai_roles": "ML Engineer, AI Engineer, Process AI",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 273,
+      "name": "Databricks India",
+      "sector": "Data / AI Platform",
+      "ats_type": "greenhouse",
+      "career_url": "https://boards.greenhouse.io/databricks",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b930\u201360 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 274,
+      "name": "GitLab India",
+      "sector": "DevTools / SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/gitlab",
+      "ai_roles": "ML Engineer, AI Engineer, GenAI Dev",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 275,
+      "name": "Twilio India",
+      "sector": "CPaaS / SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/twilio",
+      "ai_roles": "ML Engineer, AI Engineer, NLP Engineer",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 276,
+      "name": "Druva India",
+      "sector": "SaaS / Data Protection",
+      "ats_type": "greenhouse",
+      "career_url": "https://boards.greenhouse.io/druva",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 277,
+      "name": "Nestl\u00e9 India",
+      "sector": "FMCG / CPG GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://www.nestle.com/jobs",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 278,
+      "name": "Eightfold AI",
+      "sector": "HR / Talent AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://eightfold.ai/company/careers/",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 279,
+      "name": "LambdaTest (TestMu AI)",
+      "sector": "SaaS / Testing",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.testmuai.com/career/",
+      "ai_roles": "ML Engineer, AI Engineer, GenAI Dev",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 280,
+      "name": "Renesas India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.renesas.com/",
+      "ai_roles": "ML Engineer, AI Engineer, Embedded AI",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 281,
+      "name": "Infineon India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.infineon.com/careers",
+      "ai_roles": "ML Engineer, AI Engineer, Edge AI",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 282,
+      "name": "Qure.ai",
+      "sector": "HealthTech AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.qure.ai/",
+      "ai_roles": "ML Engineer, Computer Vision Engineer, AI Engineer",
+      "salary_lpa": "\u20b916\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 283,
+      "name": "Snowflake India",
+      "sector": "Data / Cloud Platform",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.snowflake.com/us/en",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b928\u201355 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 284,
+      "name": "Okta India",
+      "sector": "Identity / Security SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.okta.com/company/careers/job-listing/",
+      "ai_roles": "ML Engineer, AI Engineer, Security AI",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 285,
+      "name": "Cult.fit",
+      "sector": "HealthTech / Fitness",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.cult.fit/cult/",
+      "ai_roles": "ML Engineer, AI Engineer, RecSys Engineer",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 19,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

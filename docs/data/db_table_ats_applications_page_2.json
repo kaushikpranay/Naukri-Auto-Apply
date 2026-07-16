@@ -1,0 +1,131 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "ats_type",
+    "apply_url",
+    "status",
+    "error",
+    "screenshot_path",
+    "attempted_at",
+    "applied_at"
+  ],
+  "rows": [
+    {
+      "id": 16,
+      "job_id": 8945,
+      "ats_type": "unknown",
+      "apply_url": "https://chapter247.keka.com/careers/jobdetails/131561",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.717026",
+      "applied_at": null
+    },
+    {
+      "id": 17,
+      "job_id": 9006,
+      "ats_type": "unknown",
+      "apply_url": "https://futurense.com/careers",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.719134",
+      "applied_at": null
+    },
+    {
+      "id": 18,
+      "job_id": 9014,
+      "ats_type": "unknown",
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.721318",
+      "applied_at": null
+    },
+    {
+      "id": 19,
+      "job_id": 9015,
+      "ats_type": "unknown",
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5214470-S1923335_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.723603",
+      "applied_at": null
+    },
+    {
+      "id": 20,
+      "job_id": 9033,
+      "ats_type": "unknown",
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5218037-S1923413_en&title=LLM+Operations+Engineer&SRC=RECNau",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.727515",
+      "applied_at": null
+    },
+    {
+      "id": 21,
+      "job_id": 9035,
+      "ats_type": "unknown",
+      "apply_url": "https://www.krazymantra.com/jobdetails.php?id=610",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:29:46.051588",
+      "applied_at": null
+    },
+    {
+      "id": 22,
+      "job_id": 9042,
+      "ats_type": "unknown",
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5223638-S1918140_en&title=LLM+Model+Developer&SRC=RECNau",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:29:46.057367",
+      "applied_at": null
+    },
+    {
+      "id": 23,
+      "job_id": 9058,
+      "ats_type": "unknown",
+      "apply_url": "https://zyphratechsolutions.zohorecruit.in/jobs/Careers/185247000001424602",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:29:46.059764",
+      "applied_at": null
+    },
+    {
+      "id": 24,
+      "job_id": 9072,
+      "ats_type": "unknown",
+      "apply_url": "https://c4scale.com/careers/agentic-engineer/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:29:46.062360",
+      "applied_at": null
+    },
+    {
+      "id": 25,
+      "job_id": 9141,
+      "ats_type": "unknown",
+      "apply_url": "https://c4scale.com/careers/agentic-engineer/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:29:46.064682",
+      "applied_at": null
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "limit": 15,
+    "total_records": 25,
+    "total_pages": 2
+  }
+}

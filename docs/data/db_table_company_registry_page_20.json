@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 287,
+      "company_name": "CarDekho",
+      "career_url": "https://careers.cardekho.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 288,
+      "company_name": "Licious",
+      "career_url": "https://careers.licious.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 289,
+      "company_name": "Lam Research India",
+      "career_url": "https://www.lamresearch.com/careers/global-opportunities/india/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 290,
+      "company_name": "Unilever India",
+      "career_url": "https://unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 291,
+      "company_name": "Mondelez India",
+      "career_url": "https://mdlz.wd3.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 292,
+      "company_name": "Procter & Gamble India",
+      "career_url": "https://pg.wd5.myworkdayjobs.com/1000",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 293,
+      "company_name": "Verizon India",
+      "career_url": "https://verizon.wd12.myworkdayjobs.com/verizon-careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 294,
+      "company_name": "Adyen India",
+      "career_url": "https://job-boards.greenhouse.io/adyen",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 295,
+      "company_name": "Figma India",
+      "career_url": "https://boards.greenhouse.io/figma",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 296,
+      "company_name": "Miro India",
+      "career_url": "https://boards.greenhouse.io/realtimeboardglobal",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 297,
+      "company_name": "Cloudflare India",
+      "career_url": "https://job-boards.greenhouse.io/cloudflare",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 298,
+      "company_name": "MongoDB India",
+      "career_url": "https://boards.greenhouse.io/mongodb",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 299,
+      "company_name": "Zscaler India",
+      "career_url": "https://job-boards.greenhouse.io/zscaler",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 300,
+      "company_name": "DoorDash India",
+      "career_url": "https://job-boards.greenhouse.io/doordashindia",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 301,
+      "company_name": "Confluent India",
+      "career_url": "https://careers.confluent.io/jobs/india",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 20,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "columns": [
+    "id",
+    "session_id",
+    "user",
+    "action",
+    "reason",
+    "time"
+  ],
+  "rows": [],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 0,
+    "total_pages": 1
+  }
+}

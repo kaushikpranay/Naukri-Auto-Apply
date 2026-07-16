@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 76,
+      "name": "Krutrim",
+      "sector": "AI-First / LLM",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.krutrim.com/careers",
+      "ai_roles": "ML Engg, LLM Engg, AI Infra Engg",
+      "salary_lpa": "\u20b920\u201345 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 77,
+      "name": "Observe.AI India",
+      "sector": "Conversational AI",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.observe.ai/company/careers",
+      "ai_roles": "ML Engineer, NLP Engineer, AI Developer",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 78,
+      "name": "NightFall AI India",
+      "sector": "AI Security",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.nightfall.ai/careers",
+      "ai_roles": "ML Engineer, AI Security Engg",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 79,
+      "name": "SigTuple",
+      "sector": "HealthTech AI",
+      "ats_type": "greenhouse",
+      "career_url": "https://sigtuple.com/careers/",
+      "ai_roles": "ML Engineer, Computer Vision Engg",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 80,
+      "name": "Mad Street Den",
+      "sector": "Computer Vision AI",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.madstreetden.com/careers/",
+      "ai_roles": "ML Engg, CV Engineer, AI Engineer",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 81,
+      "name": "Ola Electric",
+      "sector": "EV / Mobility",
+      "ats_type": "greenhouse",
+      "career_url": "https://olaelectric.com/careers",
+      "ai_roles": "ML Engineer, AI Engineer, Embedded AI",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 82,
+      "name": "PhonePe",
+      "sector": "FinTech",
+      "ats_type": "lever",
+      "career_url": "https://www.phonepe.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Risk & Fraud AI",
+      "salary_lpa": "\u20b918\u201338 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 83,
+      "name": "CRED",
+      "sector": "FinTech",
+      "ats_type": "lever",
+      "career_url": "https://careers.cred.club/",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 84,
+      "name": "Groww",
+      "sector": "FinTech",
+      "ats_type": "lever",
+      "career_url": "https://groww.in/open-positions",
+      "ai_roles": "ML Engg, AI Engg, Algo Engineer",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 85,
+      "name": "Meesho",
+      "sector": "E-Commerce",
+      "ats_type": "lever",
+      "career_url": "https://meesho.io/",
+      "ai_roles": "ML Engg, AI Engg, Search & RecSys Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 86,
+      "name": "ShareChat / Moj",
+      "sector": "Social Media",
+      "ats_type": "lever",
+      "career_url": "https://careers.sharechat.com/",
+      "ai_roles": "ML Engg, NLP Engg, AI Engg, GenAI Dev",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 87,
+      "name": "InMobi",
+      "sector": "AdTech / AI",
+      "ats_type": "lever",
+      "career_url": "https://www.inmobi.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Ad Prediction Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 88,
+      "name": "Darwinbox",
+      "sector": "HRTech SaaS",
+      "ats_type": "lever",
+      "career_url": "https://darwinbox.com/about/careers",
+      "ai_roles": "ML Engg, AI Dev, NLP Engg",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 89,
+      "name": "Whatfix",
+      "sector": "Digital Adoption",
+      "ats_type": "lever",
+      "career_url": "https://whatfix.com/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 90,
+      "name": "Capillary Technologies",
+      "sector": "Loyalty Tech",
+      "ats_type": "lever",
+      "career_url": "https://capillarytech.com/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 6,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

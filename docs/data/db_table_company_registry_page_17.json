@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 242,
+      "company_name": "Mastek",
+      "career_url": "https://www.mastek.com/careers/apply-job/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 243,
+      "company_name": "Cyient",
+      "career_url": "https://careers.cyient.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 244,
+      "company_name": "Newgen Software",
+      "career_url": "https://omnirecruit.newgen.co.in/isharereferral/CareerPortal.aspx",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 245,
+      "company_name": "FIS Global India",
+      "career_url": "https://careers.fisglobal.com/us/en",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 246,
+      "company_name": "Moody's India",
+      "career_url": "https://careers.moodys.com/en",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 247,
+      "company_name": "John Deere India",
+      "career_url": "https://www.deere.co.in/en/our-company/john-deere-careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 248,
+      "company_name": "Vymo",
+      "career_url": "https://vymo.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 249,
+      "company_name": "Sagility India",
+      "career_url": "https://sagility.wd1.myworkdayjobs.com/Sagility_Careers_IND",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 250,
+      "company_name": "Tata Technologies",
+      "career_url": "https://www.tatatechnologies.com/in/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 251,
+      "company_name": "Brillio",
+      "career_url": "https://careers.brillio.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 252,
+      "company_name": "Tredence",
+      "career_url": "https://www.tredence.com/company-careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 253,
+      "company_name": "LatentView Analytics",
+      "career_url": "https://www.latentview.com/career/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 254,
+      "company_name": "Firstsource",
+      "career_url": "https://www.firstsource.com/careers-india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 255,
+      "company_name": "Sasken Technologies",
+      "career_url": "https://www.sasken.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 256,
+      "company_name": "Quest Global",
+      "career_url": "https://careers.quest-global.com/global/en",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 17,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

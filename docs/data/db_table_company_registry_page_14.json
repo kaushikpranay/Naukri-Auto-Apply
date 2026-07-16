@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 196,
+      "company_name": "Nagarro",
+      "career_url": "https://www.nagarro.com/en/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 198,
+      "company_name": "Minda Industries",
+      "career_url": "https://www.mindagroup.com/careers/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 199,
+      "company_name": "Byju's",
+      "career_url": "https://byjus.com/about/careers/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 200,
+      "company_name": "PharmEasy",
+      "career_url": "https://pharmeasy.in/blog/careers/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 201,
+      "company_name": "Ixigo",
+      "career_url": "https://www.ixigo.com/careers",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 202,
+      "company_name": "MakeMyTrip",
+      "career_url": "https://careers.makemytrip.com/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 203,
+      "company_name": "Zeta Global India",
+      "career_url": "https://zeta.tech/in/careers/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 204,
+      "company_name": "Visa India GCC",
+      "career_url": "https://visa.wd5.myworkdayjobs.com/Visa",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 205,
+      "company_name": "Mastercard India GCC",
+      "career_url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 206,
+      "company_name": "PayPal India",
+      "career_url": "https://paypal.wd1.myworkdayjobs.com/jobs",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 207,
+      "company_name": "Thomson Reuters India",
+      "career_url": "https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 208,
+      "company_name": "S&P Global India",
+      "career_url": "https://spgi.wd5.myworkdayjobs.com/SPGI_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 209,
+      "company_name": "TransUnion CIBIL India",
+      "career_url": "https://transunion.wd5.myworkdayjobs.com/TransUnion",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 210,
+      "company_name": "Medtronic India GCC",
+      "career_url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 211,
+      "company_name": "GE Aerospace India",
+      "career_url": "https://geaerospace.wd5.myworkdayjobs.com/GE_ExternalSite",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 14,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

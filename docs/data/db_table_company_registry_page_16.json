@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 227,
+      "company_name": "Philips Innovation Campus India",
+      "career_url": "https://www.careers.philips.com/in/en",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 228,
+      "company_name": "MediaTek India",
+      "career_url": "https://yourcareers.mediatek.com/en",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 229,
+      "company_name": "NXP Semiconductors India",
+      "career_url": "https://www.nxp.com/company/about-nxp/careers:CAREERS",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 230,
+      "company_name": "Nutanix India",
+      "career_url": "https://careers.nutanix.com/en/jobs/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 231,
+      "company_name": "Fiserv India",
+      "career_url": "https://fiserv.wd5.myworkdayjobs.com/EXT",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 232,
+      "company_name": "Northern Trust India",
+      "career_url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 233,
+      "company_name": "Synchrony India",
+      "career_url": "https://synchronyfinancial.wd5.myworkdayjobs.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 234,
+      "company_name": "Allstate India",
+      "career_url": "https://allstate.wd5.myworkdayjobs.com/allstate_careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 235,
+      "company_name": "Kyndryl India",
+      "career_url": "https://kyndryl.wd5.myworkdayjobs.com/KyndrylProfessionalCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 236,
+      "company_name": "Expedia Group India",
+      "career_url": "https://expedia.wd5.myworkdayjobs.com/search/jobs",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 237,
+      "company_name": "Gainsight India",
+      "career_url": "https://gainsight.wd5.myworkdayjobs.com/Gainsight_External_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 238,
+      "company_name": "Mindtickle",
+      "career_url": "https://jobs.lever.co/mindtickle",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 239,
+      "company_name": "Birlasoft",
+      "career_url": "https://jobs.birlasoft.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 240,
+      "company_name": "Happiest Minds",
+      "career_url": "https://careers.happiestminds.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 241,
+      "company_name": "Sonata Software",
+      "career_url": "https://www.sonata-software.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 16,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

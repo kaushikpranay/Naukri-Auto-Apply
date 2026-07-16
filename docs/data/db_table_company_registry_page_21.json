@@ -1,0 +1,145 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 302,
+      "company_name": "Plaid India",
+      "career_url": "https://jobs.lever.co/plaid",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 303,
+      "company_name": "Palo Alto Networks India",
+      "career_url": "https://careers.smartrecruiters.com/paloaltonetworks2",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 304,
+      "company_name": "Mamaearth (Honasa)",
+      "career_url": "https://honasa.in/pages/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 305,
+      "company_name": "Zetwerk",
+      "career_url": "https://www.zetwerk.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 306,
+      "company_name": "Xpressbees",
+      "career_url": "https://www.xpressbees.com/career",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 307,
+      "company_name": "Atlan",
+      "career_url": "https://jobs.ashbyhq.com/atlan",
+      "ats_type": "ashby",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 308,
+      "company_name": "Rocketlane",
+      "career_url": "https://careers.kula.ai/rocketlane",
+      "ats_type": "kula",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 309,
+      "company_name": "EXL Service",
+      "career_url": "https://exlcareers.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 310,
+      "company_name": "OPPO India (R&D)",
+      "career_url": "https://careers-oppo.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 311,
+      "company_name": "Bajaj Finance",
+      "career_url": "https://bflcareers.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 312,
+      "company_name": "Aditya Birla Group",
+      "career_url": "https://abgcareers.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 313,
+      "company_name": "Shadowfax",
+      "career_url": "https://shadowfax-careers.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 314,
+      "company_name": "Godrej",
+      "career_url": "https://godrejcareers.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 315,
+      "company_name": "BusinessNext (CRMNEXT)",
+      "career_url": "https://businessnext-careers.peoplestrong.com/",
+      "ats_type": "peoplestrong",
+      "source": "excel",
+      "first_seen": "2026-06-20T03:44:48",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 21,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

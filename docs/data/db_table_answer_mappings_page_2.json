@@ -1,0 +1,58 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "raw_answer",
+    "selected_option",
+    "tenant",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 16,
+      "question_key": "cards[54f317af-4ff8-42a7-b760-3bfa09ad950d][field0]",
+      "raw_answer": "I discovered Sprinto through this job post",
+      "selected_option": "Yes, through platforms like LinkedIn, Twitter, etc",
+      "tenant": "",
+      "created_at": "2026-06-18T18:27:49"
+    },
+    {
+      "id": 17,
+      "question_key": "when_would_be_able_begin_this_position",
+      "raw_answer": "45 days",
+      "selected_option": "1 \u2013 2 months",
+      "tenant": "",
+      "created_at": "2026-06-20T20:34:37"
+    },
+    {
+      "id": 18,
+      "question_key": "total_years_experience",
+      "raw_answer": "2",
+      "selected_option": "0\u20133 years",
+      "tenant": "",
+      "created_at": "2026-06-20T20:34:46"
+    },
+    {
+      "id": 19,
+      "question_key": "current_base_location",
+      "raw_answer": "Indore",
+      "selected_option": "Other Location",
+      "tenant": "",
+      "created_at": "2026-06-20T20:34:54"
+    },
+    {
+      "id": 20,
+      "question_key": "relocation_city_preference__options__bengaluru|chennai|hyderabad",
+      "raw_answer": "Noida",
+      "selected_option": "Chennai, Bengaluru",
+      "tenant": "",
+      "created_at": "2026-07-07T21:13:05.810154"
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "limit": 15,
+    "total_records": 20,
+    "total_pages": 2
+  }
+}

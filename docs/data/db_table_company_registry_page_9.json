@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 121,
+      "company_name": "Dell India GCC",
+      "career_url": "https://jobs.dell.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 122,
+      "company_name": "HP India GCC",
+      "career_url": "https://jobs.hp.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 123,
+      "company_name": "Atlassian India",
+      "career_url": "https://www.atlassian.com/company/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 124,
+      "company_name": "Intuit India",
+      "career_url": "https://careers.intuit.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 125,
+      "company_name": "ServiceNow India",
+      "career_url": "https://careers.servicenow.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 126,
+      "company_name": "Splunk India GCC",
+      "career_url": "https://www.splunk.com/en_us/careers.html",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 127,
+      "company_name": "VMware India GCC",
+      "career_url": "https://careers.vmware.com/main/jobs",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 128,
+      "company_name": "NetApp India GCC",
+      "career_url": "https://jobs.netapp.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 129,
+      "company_name": "TCS",
+      "career_url": "https://www.tcs.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 130,
+      "company_name": "Infosys",
+      "career_url": "https://career.infosys.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 131,
+      "company_name": "Wipro BPS",
+      "career_url": "https://careers.wipro.com/",
+      "ats_type": "naukri",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 132,
+      "company_name": "HCL Technologies",
+      "career_url": "https://www.hcltech.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 133,
+      "company_name": "Tech Mahindra",
+      "career_url": "https://careers.techmahindra.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 134,
+      "company_name": "LTIMindtree",
+      "career_url": "https://www.ltimindtree.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 135,
+      "company_name": "Mphasis",
+      "career_url": "https://careers.mphasis.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 9,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

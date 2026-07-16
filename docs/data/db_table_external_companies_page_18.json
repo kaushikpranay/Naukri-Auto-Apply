@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 256,
+      "name": "Quest Global",
+      "sector": "Engg Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.quest-global.com/global/en",
+      "ai_roles": "AI/ML Engineer, Autonomy/CV, Data Scientist",
+      "salary_lpa": "\u20b98\u201316 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 257,
+      "name": "WNS Global",
+      "sector": "BPM / Analytics (mid-cap)",
+      "ats_type": "naukri",
+      "career_url": "https://www.naukri.com/wns-jobs",
+      "ai_roles": "AI/ML Engineer, Data Scientist, NLP Engineer",
+      "salary_lpa": "\u20b96\u201314 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 258,
+      "name": "eClerx",
+      "sector": "BPM / Analytics (mid-cap)",
+      "ats_type": "naukri",
+      "career_url": "https://www.naukri.com/eclerx-jobs-careers-7679",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b96\u201313 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 259,
+      "name": "Indegene",
+      "sector": "Pharma / Life-Sci Analytics",
+      "ats_type": "naukri",
+      "career_url": "https://www.naukri.com/indegene-jobs",
+      "ai_roles": "AI/ML Engineer, NLP Engineer, GenAI Dev",
+      "salary_lpa": "\u20b97\u201315 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 260,
+      "name": "Ramco Systems",
+      "sector": "Enterprise SW (mid-cap)",
+      "ats_type": "naukri",
+      "career_url": "https://www.naukri.com/ramco-systems-jobs-careers-4342",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b97\u201314 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 261,
+      "name": "Nucleus Software",
+      "sector": "BFSI Product SW (mid-cap)",
+      "ats_type": "naukri",
+      "career_url": "https://companies.naukri.com/nucleussoftware-jobs/jobs/",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b97\u201314 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 262,
+      "name": "3i Infotech",
+      "sector": "IT Services (mid-cap)",
+      "ats_type": "naukri",
+      "career_url": "https://www.naukri.com/3i-infotech-jobs",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b96\u201312 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 263,
+      "name": "Analog Devices India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://analogdevices.wd1.myworkdayjobs.com/External",
+      "ai_roles": "ML Engineer, AI Engineer, Edge AI",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 264,
+      "name": "BlackRock India",
+      "sector": "BFSI / Asset Mgmt GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional",
+      "ai_roles": "ML Engineer, AI Engineer, Quant AI",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 265,
+      "name": "Invesco India",
+      "sector": "BFSI / Asset Mgmt GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://invesco.wd1.myworkdayjobs.com/IVZ",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 266,
+      "name": "Franklin Templeton India",
+      "sector": "BFSI / Asset Mgmt GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.franklintempletoncareers.com/",
+      "ai_roles": "ML Engineer, AI Engineer, Quant AI",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 267,
+      "name": "Coca-Cola India",
+      "sector": "FMCG / CPG GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://coke.wd1.myworkdayjobs.com/coca-cola-careers",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 268,
+      "name": "Capital One India",
+      "sector": "BFSI / FinTech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One",
+      "ai_roles": "ML Engineer, AI Engineer, Risk AI",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 269,
+      "name": "State Street India",
+      "sector": "BFSI / Custody GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://statestreet.wd1.myworkdayjobs.com/Global",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 270,
+      "name": "Nasdaq India",
+      "sector": "Capital Markets Tech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://nasdaq.wd1.myworkdayjobs.com/Global_External_Site",
+      "ai_roles": "ML Engineer, AI Engineer, Quant AI",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 18,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

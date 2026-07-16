@@ -91,6 +91,19 @@
     "updated_at": "2026-06-26T00:08:25"
   },
   {
+    "id": 9566,
+    "question_key": "country_phone_code",
+    "question_text": "country_phone_code",
+    "answer": "India (+91)",
+    "usage_count": 17,
+    "last_used": "2026-07-12T17:39:45",
+    "field_type": "multiselect",
+    "created_at": "2026-06-19T18:15:53",
+    "last_used_at": "2026-07-12T17:39:45",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:39:45"
+  },
+  {
     "id": 1687,
     "question_key": "yes",
     "question_text": "Yes",
@@ -104,19 +117,6 @@
     "updated_at": null
   },
   {
-    "id": 9566,
-    "question_key": "country_phone_code",
-    "question_text": "country_phone_code",
-    "answer": "India (+91)",
-    "usage_count": 16,
-    "last_used": "2026-06-25T01:22:18",
-    "field_type": "multiselect",
-    "created_at": "2026-06-19T18:15:53",
-    "last_used_at": "2026-06-25T01:22:18",
-    "confidence_score": 1.0,
-    "updated_at": "2026-06-25T01:22:18"
-  },
-  {
     "id": 9793,
     "question_key": "address_line_1",
     "question_text": "Address Line 1",
@@ -128,6 +128,19 @@
     "last_used_at": "2026-06-25T03:01:24",
     "confidence_score": 0.6666666666666666,
     "updated_at": "2026-06-25T03:01:24"
+  },
+  {
+    "id": 9886,
+    "question_key": "type_add_skills",
+    "question_text": "Type to Add Skills",
+    "answer": "Python",
+    "usage_count": 13,
+    "last_used": "2026-07-12T17:43:55",
+    "field_type": "multiselect",
+    "created_at": "2026-06-22T16:43:15",
+    "last_used_at": "2026-07-12T17:43:55",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:43:55"
   },
   {
     "id": 25,
@@ -206,19 +219,6 @@
     "last_used_at": "2026-06-24T21:41:08",
     "confidence_score": 0.5714285714285714,
     "updated_at": "2026-06-24T21:41:08"
-  },
-  {
-    "id": 9886,
-    "question_key": "type_add_skills",
-    "question_text": "Type to Add Skills",
-    "answer": "Python",
-    "usage_count": 9,
-    "last_used": "2026-06-24T21:40:01",
-    "field_type": "multiselect",
-    "created_at": "2026-06-22T16:43:15",
-    "last_used_at": "2026-06-24T21:40:01",
-    "confidence_score": 1.0,
-    "updated_at": "2026-06-24T21:40:01"
   },
   {
     "id": 6,
@@ -1456,6 +1456,19 @@
     "updated_at": "2026-06-21T22:25:14"
   },
   {
+    "id": 9798,
+    "question_key": "role_description",
+    "question_text": "Role Description",
+    "answer": "Associate System Engineer",
+    "usage_count": 1,
+    "last_used": "2026-07-12T17:39:59",
+    "field_type": "textarea",
+    "created_at": "2026-06-21T19:24:19",
+    "last_used_at": "2026-07-12T17:39:59",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:39:59"
+  },
+  {
     "id": 10673,
     "question_key": "comprehension",
     "question_text": "Comprehension",
@@ -1662,6 +1675,32 @@
     "last_used_at": "2026-07-11T00:25:31.840625",
     "confidence_score": 1.0,
     "updated_at": null
+  },
+  {
+    "id": 11396,
+    "question_key": "certain_legal_and_ethical_restrictions_may_apply_respect_rel",
+    "question_text": "Certain Legal and ethical restrictions may apply with respect to relationships with government officials. In order to avoid even the appearance of a conflict of interest, please advise: Whether you have served or are serving in a government or public body that has regulatory authority over HPE or that purchases from HPE.",
+    "answer": "No",
+    "usage_count": 1,
+    "last_used": "2026-07-12T17:46:46",
+    "field_type": "dropdown",
+    "created_at": "2026-07-12T17:46:29",
+    "last_used_at": "2026-07-12T17:46:46",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:46:46"
+  },
+  {
+    "id": 11401,
+    "question_key": "possess_valid_work_permit_country_which_position_resides",
+    "question_text": "Do you possess a valid work permit in the country for which the position resides?",
+    "answer": "Yes",
+    "usage_count": 1,
+    "last_used": "2026-07-12T17:47:26",
+    "field_type": "dropdown",
+    "created_at": "2026-07-12T17:47:12",
+    "last_used_at": "2026-07-12T17:47:26",
+    "confidence_score": 0.7777777777777778,
+    "updated_at": "2026-07-12T17:47:26"
   },
   {
     "id": 5,
@@ -2717,19 +2756,6 @@
     "updated_at": "2026-06-20T22:04:27"
   },
   {
-    "id": 9798,
-    "question_key": "role_description",
-    "question_text": "Role Description",
-    "answer": "Associate System Engineer",
-    "usage_count": 0,
-    "last_used": "2026-06-21T19:24:19",
-    "field_type": "",
-    "created_at": "2026-06-21T19:24:19",
-    "last_used_at": "2026-06-21T19:24:19",
-    "confidence_score": 1.0,
-    "updated_at": "2026-06-21T19:24:19"
-  },
-  {
     "id": 9917,
     "question_key": "language",
     "question_text": "Language",
@@ -2793,5 +2819,96 @@
     "last_used_at": "2026-06-25T23:50:32",
     "confidence_score": 1.0,
     "updated_at": "2026-06-25T23:50:32"
+  },
+  {
+    "id": 11380,
+    "question_key": "i_preferred_name",
+    "question_text": "I have a preferred name",
+    "answer": null,
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:39:46",
+    "field_type": "checkbox",
+    "created_at": "2026-07-12T17:39:40",
+    "last_used_at": "2026-07-12T17:39:46",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:39:46"
+  },
+  {
+    "id": 11382,
+    "question_key": "phone_extension",
+    "question_text": "Phone Extension",
+    "answer": null,
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:39:46",
+    "field_type": "text",
+    "created_at": "2026-07-12T17:39:46",
+    "last_used_at": "2026-07-12T17:39:46",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:39:46"
+  },
+  {
+    "id": 11390,
+    "question_key": "i_united_states_government_or_public_institution_employment",
+    "question_text": "I have United States government or public institution employment experience (federal, state, or local) either as an employee or contractor/consultant.",
+    "answer": "No",
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:45:16",
+    "field_type": "dropdown",
+    "created_at": "2026-07-12T17:45:02",
+    "last_used_at": "2026-07-12T17:45:16",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:45:16"
+  },
+  {
+    "id": 11392,
+    "question_key": "any_countries_listed_below_citizen_or_passport_or_dual_citiz",
+    "question_text": "For any of the countries listed below: \u2022 Are you a citizen or have a passport, or \u2022 Have dual citizenship status, or \u2022 Have been granted a permanent resident status, or \u2022 Have been granted refugee or asylum status? Armenia, Azerbaijan, Belarus, Burma (Myanmar), Cambodia, China(PRC), Cuba, Georgia, Hong Kong, Iran, Iraq, Kazakhstan, Kyrgyzstan, Laos, Libya, Macao (Macau), Moldova, Mongolia, Nicaragua, North Korea(DPRK), Russia, Sudan(Khartoum), Syria, Tajikistan, Turkmenistan, Ukraine, Ukraine(Crimea Region), Uzbekistan, Venezuela, Vietnam, or Yemen",
+    "answer": "No",
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:45:43",
+    "field_type": "dropdown",
+    "created_at": "2026-07-12T17:45:22",
+    "last_used_at": "2026-07-12T17:45:43",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:45:43"
+  },
+  {
+    "id": 11394,
+    "question_key": "signed_or_accepted_any_agreement_current_or_prior_employer_t",
+    "question_text": "Have you signed or accepted any agreement with a current or prior employer that includes restrictions on competition or solicitation, including, but not limited to, non-competition agreement, non-disclosure agreement, non-solicitation agreement, or are you otherwise subject to restrictions that may affect your ability to fulfill responsibilities of this HPE role?",
+    "answer": "No",
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:46:23",
+    "field_type": "dropdown",
+    "created_at": "2026-07-12T17:46:14",
+    "last_used_at": "2026-07-12T17:46:23",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:46:23"
+  },
+  {
+    "id": 11399,
+    "question_key": "those_locations_or_countries_which_seeking_employment_indica",
+    "question_text": "For those locations or countries in which you are seeking employment, indicate all locations or countries for which you now, or in the future, require sponsorship for employment with HPE. Separate each response with a comma. For example, France, India, Mexico. If this does not apply, indicate not applicable (N/A).",
+    "answer": "No",
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:47:11",
+    "field_type": "textarea",
+    "created_at": "2026-07-12T17:46:52",
+    "last_used_at": "2026-07-12T17:47:11",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:47:11"
+  },
+  {
+    "id": 11403,
+    "question_key": "possess_valid_residency_permit_country_which_position_reside",
+    "question_text": "Do you possess a valid residency permit in the country for which the position resides?",
+    "answer": null,
+    "usage_count": 0,
+    "last_used": "2026-07-12T17:47:26",
+    "field_type": "dropdown",
+    "created_at": "2026-07-12T17:47:26",
+    "last_used_at": "2026-07-12T17:47:26",
+    "confidence_score": 1.0,
+    "updated_at": "2026-07-12T17:47:26"
   }
 ]

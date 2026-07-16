@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 61,
+      "name": "Zendesk India GCC",
+      "sector": "CX SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://jobs.zendesk.com/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 62,
+      "name": "Datadog India",
+      "sector": "Observability SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.datadoghq.com/careers/",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 63,
+      "name": "BrowserStack",
+      "sector": "SaaS / Testing",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.browserstack.com/careers",
+      "ai_roles": "ML Engineer, AI Test Engineer",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 64,
+      "name": "Chargebee India",
+      "sector": "SaaS / Billing",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.chargebee.com/company/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 65,
+      "name": "Postman India",
+      "sector": "API Platform",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.postman.com/company/careers/",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 66,
+      "name": "CleverTap",
+      "sector": "Marketing Tech",
+      "ats_type": "greenhouse",
+      "career_url": "https://clevertap.com/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 67,
+      "name": "Lenskart Tech",
+      "sector": "E-commerce / Opticals",
+      "ats_type": "greenhouse",
+      "career_url": "https://lenskart.com/careers.html",
+      "ai_roles": "ML Engineer, AI Engineer, RecSys Engineer",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 68,
+      "name": "Khatabook",
+      "sector": "SME FinTech",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.khatabook.com/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 69,
+      "name": "Shiprocket",
+      "sector": "Logistics Tech",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.shiprocket.in/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 70,
+      "name": "1mg / Tata 1mg",
+      "sector": "HealthTech",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.1mg.com/careers",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 71,
+      "name": "Pristyn Care",
+      "sector": "HealthTech",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.pristyncare.com/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 72,
+      "name": "Urban Company",
+      "sector": "Home Services Tech",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.urbancompany.com/",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 73,
+      "name": "Springworks",
+      "sector": "HR Tech SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.springworks.in/careers/",
+      "ai_roles": "ML Developer, AI Engineer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 74,
+      "name": "Yellow.ai",
+      "sector": "Conversational AI",
+      "ats_type": "greenhouse",
+      "career_url": "https://yellow.ai/careers/",
+      "ai_roles": "ML Engg, NLP Engg, GenAI Dev, LLM Engg",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 75,
+      "name": "Sarvam AI",
+      "sector": "AI-First / LLM",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.sarvam.ai/careers",
+      "ai_roles": "ML Engg, LLM Engg, AI Researcher, NLP Engg",
+      "salary_lpa": "\u20b918\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 5,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

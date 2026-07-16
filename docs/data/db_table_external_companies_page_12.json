@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 166,
+      "name": "HSBC India GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.hsbc.com/careers/locations/india",
+      "ai_roles": "ML Engg, AI Dev, Risk AI Engg",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 167,
+      "name": "Citi India GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.citi.com/search-jobs/India/",
+      "ai_roles": "ML Engg, AI Dev, Quant Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 168,
+      "name": "Deutsche Bank India",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.db.com/explore-the-bank/search-open-roles/",
+      "ai_roles": "ML Engg, AI Engg, Risk AI Dev",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 169,
+      "name": "Barclays India GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://search.jobs.barclays/india-jobs/",
+      "ai_roles": "ML Engg, AI Engg, Data Scientist",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 170,
+      "name": "Morgan Stanley India",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.morganstanley.com/careers/career-opportunities-search",
+      "ai_roles": "ML Engg, Quant AI, Data Scientist",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 171,
+      "name": "UBS India GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.ubs.com/global/en/careers.html",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 172,
+      "name": "BNY Mellon India",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.bnymellon.com/us/en/careers.html",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 173,
+      "name": "Standard Chartered GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.sc.com/en/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 174,
+      "name": "HDFC Bank",
+      "sector": "Indian BFSI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a/",
+      "ai_roles": "ML Engg, AI Dev, Fraud Detection Engg",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 175,
+      "name": "ICICI Bank",
+      "sector": "Indian BFSI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.icicicareers.com/",
+      "ai_roles": "AI/ML Engg, Data Scientist",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 176,
+      "name": "Axis Bank",
+      "sector": "Indian BFSI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.axisbank.com/about-us/careers",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 177,
+      "name": "McKinsey India",
+      "sector": "Mgmt Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.mckinsey.com/careers/jobs/india",
+      "ai_roles": "AI Engg, Data Scientist, ML Dev (Analytics COE)",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 178,
+      "name": "BCG India",
+      "sector": "Mgmt Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.bcg.com/india",
+      "ai_roles": "AI Engg, ML Engg, Data Scientist (BCG Gamma)",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 179,
+      "name": "Bain India",
+      "sector": "Mgmt Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.bain.com/careers/find-a-role/",
+      "ai_roles": "AI Developer, Data Scientist, ML Analyst",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 180,
+      "name": "AstraZeneca India GCC",
+      "sector": "Pharma GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.astrazeneca.com/location/india-jobs/",
+      "ai_roles": "ML Engg, AI Scientist, Data Scientist",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 12,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

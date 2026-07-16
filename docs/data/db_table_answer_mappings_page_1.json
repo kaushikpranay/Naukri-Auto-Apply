@@ -1,0 +1,138 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "raw_answer",
+    "selected_option",
+    "tenant",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "question_key": "willing_to_relocate",
+      "raw_answer": "Yes",
+      "selected_option": "Yes",
+      "tenant": "",
+      "created_at": "2026-06-06T04:30:00.863323"
+    },
+    {
+      "id": 2,
+      "question_key": "yes__options__skip this question",
+      "raw_answer": "Yes",
+      "selected_option": "Skip this question",
+      "tenant": "",
+      "created_at": "2026-06-06T05:18:23.437307"
+    },
+    {
+      "id": 3,
+      "question_key": "python_experience__options__no, i do not have hands-on professional experience|yes",
+      "raw_answer": "2",
+      "selected_option": "Yes",
+      "tenant": "",
+      "created_at": "2026-06-08T03:47:28.922785"
+    },
+    {
+      "id": 4,
+      "question_key": "notice_period__options__no|yes",
+      "raw_answer": "45 days",
+      "selected_option": "Yes",
+      "tenant": "",
+      "created_at": "2026-06-14T01:20:35.913908"
+    },
+    {
+      "id": 5,
+      "question_key": "career_break__options__no|yes",
+      "raw_answer": "No",
+      "selected_option": "No",
+      "tenant": "",
+      "created_at": "2026-06-14T02:26:19.976524"
+    },
+    {
+      "id": 6,
+      "question_key": "relocation_city_preference__options__chennai|coimbatore|skip this question|vellore",
+      "raw_answer": "Noida",
+      "selected_option": "Chennai",
+      "tenant": "",
+      "created_at": "2026-06-14T03:23:27.536576"
+    },
+    {
+      "id": 7,
+      "question_key": "relocation_city_preference__options__bengaluru, karnataka|hyderabad, telangana|pune, maharashtra",
+      "raw_answer": "Noida",
+      "selected_option": "Hyderabad, Telangana, Bengaluru, Karnataka, Pune, Maharashtra",
+      "tenant": "",
+      "created_at": "2026-06-15T20:56:31.697086"
+    },
+    {
+      "id": 8,
+      "question_key": "python_experience__options__no|yes",
+      "raw_answer": "2",
+      "selected_option": "Yes",
+      "tenant": "",
+      "created_at": "2026-06-15T21:45:56.618987"
+    },
+    {
+      "id": 9,
+      "question_key": "question_35110995002[]",
+      "raw_answer": "None of the above",
+      "selected_option": "None of the above",
+      "tenant": "",
+      "created_at": "2026-06-18T06:53:29"
+    },
+    {
+      "id": 10,
+      "question_key": "question_35114682002[]",
+      "raw_answer": "Not applicable (i.e., I selected \u201cnone of the above\u201d for the prior question)",
+      "selected_option": "None of these apply for me",
+      "tenant": "",
+      "created_at": "2026-06-18T06:54:09"
+    },
+    {
+      "id": 11,
+      "question_key": "question_36078523002",
+      "raw_answer": "No",
+      "selected_option": "No",
+      "tenant": "",
+      "created_at": "2026-06-18T06:54:18"
+    },
+    {
+      "id": 12,
+      "question_key": "question_32662345002",
+      "raw_answer": "No",
+      "selected_option": "No",
+      "tenant": "",
+      "created_at": "2026-06-18T06:54:24"
+    },
+    {
+      "id": 13,
+      "question_key": "cards[54f317af-4ff8-42a7-b760-3bfa09ad950d][field4]",
+      "raw_answer": "2",
+      "selected_option": "0\u20132 years",
+      "tenant": "",
+      "created_at": "2026-06-18T09:46:18"
+    },
+    {
+      "id": 14,
+      "question_key": "cards[54f317af-4ff8-42a7-b760-3bfa09ad950d][field6]",
+      "raw_answer": "2",
+      "selected_option": "1\u20132 years",
+      "tenant": "",
+      "created_at": "2026-06-18T09:47:03"
+    },
+    {
+      "id": 15,
+      "question_key": "cards[8de27a8b-5a62-44e7-924c-288ec0e4dced][field4]",
+      "raw_answer": "45 days",
+      "selected_option": "30-45",
+      "tenant": "",
+      "created_at": "2026-06-18T09:47:48"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 20,
+    "total_pages": 2
+  }
+}

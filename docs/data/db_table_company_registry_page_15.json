@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 212,
+      "company_name": "Cadence Design Systems India",
+      "career_url": "https://cadence.wd1.myworkdayjobs.com/External_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 213,
+      "company_name": "Applied Materials India",
+      "career_url": "https://amat.wd1.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 214,
+      "company_name": "Micron India",
+      "career_url": "https://micron.wd1.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 215,
+      "company_name": "Autodesk India",
+      "career_url": "https://autodesk.wd1.myworkdayjobs.com/Ext",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 216,
+      "company_name": "KLA India",
+      "career_url": "https://kla.wd1.myworkdayjobs.com/Search",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 217,
+      "company_name": "Nielsen India",
+      "career_url": "https://careers.smartrecruiters.com/TheNielsenCompany",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 218,
+      "company_name": "Western Digital India",
+      "career_url": "https://careers.smartrecruiters.com/WesternDigital",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 219,
+      "company_name": "DevRev India",
+      "career_url": "https://job-boards.greenhouse.io/devrev",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 220,
+      "company_name": "Sprinto",
+      "career_url": "https://jobs.lever.co/Sprinto",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 221,
+      "company_name": "Pixxel",
+      "career_url": "https://jobs.lever.co/pixcel",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 222,
+      "company_name": "Marvell India",
+      "career_url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 223,
+      "company_name": "Tesco Bengaluru",
+      "career_url": "https://careers.smartrecruiters.com/TescoBengaluru",
+      "ats_type": "smartrecruiters",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 224,
+      "company_name": "Texas Instruments India",
+      "career_url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/jobs",
+      "ats_type": "taleo",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 225,
+      "company_name": "Optum / UnitedHealth Group India",
+      "career_url": "https://www.optum.in/about/careers.html",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 226,
+      "company_name": "Samsung R&D Institute India (SRI-B)",
+      "career_url": "https://research.samsung.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 15,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

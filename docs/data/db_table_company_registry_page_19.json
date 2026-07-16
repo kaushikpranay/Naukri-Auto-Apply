@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 272,
+      "company_name": "GlobalFoundries India",
+      "career_url": "https://globalfoundries.wd1.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 273,
+      "company_name": "Databricks India",
+      "career_url": "https://boards.greenhouse.io/databricks",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 274,
+      "company_name": "GitLab India",
+      "career_url": "https://job-boards.greenhouse.io/gitlab",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 275,
+      "company_name": "Twilio India",
+      "career_url": "https://job-boards.greenhouse.io/twilio",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 276,
+      "company_name": "Druva India",
+      "career_url": "https://boards.greenhouse.io/druva",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 277,
+      "company_name": "Nestl\u00e9 India",
+      "career_url": "https://www.nestle.com/jobs",
+      "ats_type": "successfactors",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 278,
+      "company_name": "Eightfold AI",
+      "career_url": "https://eightfold.ai/company/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 279,
+      "company_name": "LambdaTest (TestMu AI)",
+      "career_url": "https://www.testmuai.com/career/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 280,
+      "company_name": "Renesas India",
+      "career_url": "https://jobs.renesas.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 281,
+      "company_name": "Infineon India",
+      "career_url": "https://jobs.infineon.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 282,
+      "company_name": "Qure.ai",
+      "career_url": "https://jobs.qure.ai/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 283,
+      "company_name": "Snowflake India",
+      "career_url": "https://careers.snowflake.com/us/en",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 284,
+      "company_name": "Okta India",
+      "career_url": "https://www.okta.com/company/careers/job-listing/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 285,
+      "company_name": "Cult.fit",
+      "career_url": "https://careers.cult.fit/cult/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 286,
+      "company_name": "Acko",
+      "career_url": "https://www.acko.com/careers/jobs/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 19,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

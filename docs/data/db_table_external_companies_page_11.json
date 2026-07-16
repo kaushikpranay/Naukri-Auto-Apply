@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 151,
+      "name": "Tiger Analytics",
+      "sector": "AI / Analytics",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.tigeranalytics.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Data Scientist",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 152,
+      "name": "Quantiphi",
+      "sector": "AI / Analytics",
+      "ats_type": "custom_portal",
+      "career_url": "https://quantiphi.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, GenAI Dev, MLOps Engg",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 153,
+      "name": "ThoughtSpot India",
+      "sector": "Analytics SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.thoughtspot.com/careers",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 154,
+      "name": "Delhivery Tech",
+      "sector": "Logistics Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.delhivery.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Supply Chain AI",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 155,
+      "name": "BigBasket",
+      "sector": "Grocery / Retail",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.bigbasket.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Demand Forecasting",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 156,
+      "name": "Dream11",
+      "sector": "Fantasy Sports",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.dream11.com/careers",
+      "ai_roles": "ML Engg, AI Engg, Recomm. Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 157,
+      "name": "Upstox",
+      "sector": "FinTech / Trading",
+      "ats_type": "custom_portal",
+      "career_url": "https://upstox.com/careers/",
+      "ai_roles": "ML Engg, AI Engg, Algo Trading AI",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 158,
+      "name": "Navi",
+      "sector": "FinTech / Insurance",
+      "ats_type": "custom_portal",
+      "career_url": "https://navi.com/careers/",
+      "ai_roles": "ML Engg, AI Engineer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 159,
+      "name": "Cars24",
+      "sector": "Auto / E-Commerce",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.cars24.com/careers/",
+      "ai_roles": "ML Engg, AI Engineer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 160,
+      "name": "OYO Rooms",
+      "sector": "HospitalityTech",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.oyorooms.com/careers/",
+      "ai_roles": "ML Engg, AI Engineer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 161,
+      "name": "PolicyBazaar",
+      "sector": "InsurTech",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.policybazaar.com/about-us/career/",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 162,
+      "name": "Vedic Laboratories",
+      "sector": "HealthTech / AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.vediclab.com/careers",
+      "ai_roles": "ML Developer, AI Engineer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 163,
+      "name": "JPMorgan Chase GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.jpmorgan.com/global/en/locations/india",
+      "ai_roles": "ML Engg, AI Engg, Quant Dev, Risk AI",
+      "salary_lpa": "\u20b922\u201350 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 164,
+      "name": "Goldman Sachs GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.goldmansachs.com/careers/locations/india.html",
+      "ai_roles": "ML Engg, Quant Engg, AI Dev",
+      "salary_lpa": "\u20b922\u201350 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 165,
+      "name": "Wells Fargo GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.wellsfargojobs.com/en/jobs/?location=india",
+      "ai_roles": "ML Engg, AI Engg, Data Scientist",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 11,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

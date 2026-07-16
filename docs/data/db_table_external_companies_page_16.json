@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 226,
+      "name": "Samsung R&D Institute India (SRI-B)",
+      "sector": "Consumer Tech R&D",
+      "ats_type": "custom_portal",
+      "career_url": "https://research.samsung.com/careers",
+      "ai_roles": "ML Engineer, NLP Engineer, On-Device AI",
+      "salary_lpa": "\u20b918\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 227,
+      "name": "Philips Innovation Campus India",
+      "sector": "HealthTech R&D",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.careers.philips.com/in/en",
+      "ai_roles": "ML Engineer, AI Engineer, Medical Imaging AI",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 228,
+      "name": "MediaTek India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://yourcareers.mediatek.com/en",
+      "ai_roles": "ML Engineer, AI Engineer, Edge AI",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 229,
+      "name": "NXP Semiconductors India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.nxp.com/company/about-nxp/careers:CAREERS",
+      "ai_roles": "ML Engineer, Embedded AI, Edge AI",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 230,
+      "name": "Nutanix India",
+      "sector": "Cloud / Infra",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.nutanix.com/en/jobs/",
+      "ai_roles": "ML Engineer, AI Engineer, AIOps",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 231,
+      "name": "Fiserv India",
+      "sector": "FinTech / Payments GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://fiserv.wd5.myworkdayjobs.com/EXT",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 232,
+      "name": "Northern Trust India",
+      "sector": "BFSI / Asset Mgmt GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://ntrs.wd1.myworkdayjobs.com/northerntrust",
+      "ai_roles": "ML Engineer, AI Engineer, Quant AI",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 233,
+      "name": "Synchrony India",
+      "sector": "BFSI / Consumer Finance GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://synchronyfinancial.wd5.myworkdayjobs.com/careers",
+      "ai_roles": "ML Engineer, AI Engineer, Risk AI",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 234,
+      "name": "Allstate India",
+      "sector": "Insurance GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://allstate.wd5.myworkdayjobs.com/allstate_careers",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 235,
+      "name": "Kyndryl India",
+      "sector": "IT Services GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://kyndryl.wd5.myworkdayjobs.com/KyndrylProfessionalCareers",
+      "ai_roles": "ML Engineer, AI Engineer, AIOps",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 236,
+      "name": "Expedia Group India",
+      "sector": "Travel Tech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://expedia.wd5.myworkdayjobs.com/search/jobs",
+      "ai_roles": "ML Engineer, AI Engineer, RecSys Engineer",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 237,
+      "name": "Gainsight India",
+      "sector": "Customer Success SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://gainsight.wd5.myworkdayjobs.com/Gainsight_External_Careers",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 238,
+      "name": "Mindtickle",
+      "sector": "Sales Enablement SaaS",
+      "ats_type": "lever",
+      "career_url": "https://jobs.lever.co/mindtickle",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 239,
+      "name": "Birlasoft",
+      "sector": "IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.birlasoft.com/",
+      "ai_roles": "AI/ML Engineer, Data Scientist, GenAI Dev",
+      "salary_lpa": "\u20b98\u201318 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 240,
+      "name": "Happiest Minds",
+      "sector": "IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.happiestminds.com/",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b99\u201318 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 16,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

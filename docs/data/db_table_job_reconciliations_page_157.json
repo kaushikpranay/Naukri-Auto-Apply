@@ -1,0 +1,75 @@
+{
+  "columns": [
+    "job_id",
+    "job_title",
+    "company_name",
+    "job_url",
+    "status",
+    "error_category",
+    "error_message",
+    "stack_trace",
+    "failing_stage",
+    "processed_at",
+    "duration_seconds"
+  ],
+  "rows": [
+    {
+      "job_id": 8402,
+      "job_title": "AI workflow Engineer",
+      "company_name": "Aisera",
+      "job_url": "https://www.naukri.com/job-listings-ai-workflow-engineer-aisera-bengaluru-2-to-5-years-151024500449",
+      "status": "already_applied",
+      "error_category": null,
+      "error_message": null,
+      "stack_trace": null,
+      "failing_stage": null,
+      "processed_at": "2026-06-08T02:22:58.715796",
+      "duration_seconds": 0.0
+    },
+    {
+      "job_id": 8403,
+      "job_title": "AI Success Engineer",
+      "company_name": "Ikigai Labs",
+      "job_url": "https://www.naukri.com/job-listings-ai-success-engineer-ikigai-labs-bengaluru-1-to-3-years-150126502929",
+      "status": "already_applied",
+      "error_category": null,
+      "error_message": null,
+      "stack_trace": null,
+      "failing_stage": null,
+      "processed_at": "2026-06-08T02:22:58.716421",
+      "duration_seconds": 0.0
+    },
+    {
+      "job_id": 8406,
+      "job_title": "Artificial Intelligence (AI) Software Engineer",
+      "company_name": "FuGenX",
+      "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-ai-software-engineer-fugenx-technologies-private-limited-bengaluru-2-to-4-years-151117500659",
+      "status": "already_applied",
+      "error_category": null,
+      "error_message": null,
+      "stack_trace": null,
+      "failing_stage": null,
+      "processed_at": "2026-06-08T02:22:58.717138",
+      "duration_seconds": 0.0
+    },
+    {
+      "job_id": 8409,
+      "job_title": "Artificial Intelligence (AI) Software Engineer",
+      "company_name": "FuGenX",
+      "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-ai-software-engineer-fugenx-technologies-private-limited-bengaluru-2-to-4-years-260219503087",
+      "status": "already_applied",
+      "error_category": null,
+      "error_message": null,
+      "stack_trace": null,
+      "failing_stage": null,
+      "processed_at": "2026-06-08T02:22:58.717742",
+      "duration_seconds": 0.0
+    }
+  ],
+  "pagination": {
+    "page": 157,
+    "limit": 15,
+    "total_records": 2344,
+    "total_pages": 157
+  }
+}

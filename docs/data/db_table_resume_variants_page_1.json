@@ -1,0 +1,18 @@
+{
+  "columns": [
+    "id",
+    "resume_name",
+    "resume_type",
+    "resume_path",
+    "description",
+    "active",
+    "created_at"
+  ],
+  "rows": [],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 0,
+    "total_pages": 1
+  }
+}

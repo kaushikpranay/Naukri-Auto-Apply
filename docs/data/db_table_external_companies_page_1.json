@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "name": "Accenture",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://accenture.wd103.myworkdayjobs.com/AccentureCareers",
+      "ai_roles": "AI/ML Engineer, GenAI Dev, LLM Engineer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 2,
+      "name": "Cognizant",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://collaborative.wd1.myworkdayjobs.com/AllOpenings",
+      "ai_roles": "AI Engineer, ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 3,
+      "name": "Genpact",
+      "sector": "BPO / Analytics",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.genpact.com/careers",
+      "ai_roles": "ML Engineer, GenAI Developer, AI Analyst",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 4,
+      "name": "Conduent",
+      "sector": "BPS / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://conduent.wd5.myworkdayjobs.com/Conduent_Careers",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 5,
+      "name": "Xerox GCC",
+      "sector": "Tech / Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://xerox.wd1.myworkdayjobs.com/XeroxCareers",
+      "ai_roles": "AI Developer, ML Engineer",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 6,
+      "name": "Aon India",
+      "sector": "BFSI / Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://aon.wd1.myworkdayjobs.com/Careers",
+      "ai_roles": "AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 7,
+      "name": "Willis Towers Watson",
+      "sector": "BFSI / Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://wtw.wd1.myworkdayjobs.com/WTWCareers",
+      "ai_roles": "ML Engineer, AI Analyst",
+      "salary_lpa": "\u20b914\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 8,
+      "name": "Fidelity India GCC",
+      "sector": "BFSI / GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.fidelity.com/locations/india/",
+      "ai_roles": "ML Engineer, Quant AI, Data Scientist",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 9,
+      "name": "Adobe India",
+      "sector": "Software / SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced_careers",
+      "ai_roles": "ML Engineer, Applied Scientist, AI Platform Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 10,
+      "name": "Salesforce India",
+      "sector": "SaaS / CRM",
+      "ats_type": "custom_portal",
+      "career_url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
+      "ai_roles": "ML Engineer, AI Engineer, Einstein AI Dev",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 11,
+      "name": "HubSpot India",
+      "sector": "SaaS / Marketing",
+      "ats_type": "custom_portal",
+      "career_url": "https://hubspot.wd5.myworkdayjobs.com/careers",
+      "ai_roles": "ML Engineer, AI Product Engineer",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 12,
+      "name": "LinkedIn India",
+      "sector": "Social / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://linkedin.wd5.myworkdayjobs.com/LinkedIn",
+      "ai_roles": "ML Engineer, RecSys Engineer, AI Engg",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 13,
+      "name": "NVIDIA India",
+      "sector": "Semiconductors/AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
+      "ai_roles": "ML Engg, Deep Learning Engg, AI Infra Engg",
+      "salary_lpa": "\u20b925\u201355 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 14,
+      "name": "Workday India",
+      "sector": "HR / Finance SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://workday.wd5.myworkdayjobs.com/Workday",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 15,
+      "name": "Cisco India",
+      "sector": "Networking / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers",
+      "ai_roles": "AI/ML Engineer, Data Scientist, NLP Engineer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

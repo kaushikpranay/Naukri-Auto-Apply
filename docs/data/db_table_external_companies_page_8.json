@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 106,
+      "name": "Qualcomm India",
+      "sector": "Semiconductor / AI",
+      "ats_type": "taleo",
+      "career_url": "https://www.qualcomm.com/company/careers",
+      "ai_roles": "ML Engg, AI SW Engg, Edge AI Engineer",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 107,
+      "name": "American Express GCC",
+      "sector": "BFSI GCC",
+      "ats_type": "taleo",
+      "career_url": "https://aexp.eightfold.ai/careers/",
+      "ai_roles": "ML Engg, AI Engg, Fraud AI Dev",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 108,
+      "name": "L&T Technology Svcs",
+      "sector": "Engg Services",
+      "ats_type": "taleo",
+      "career_url": "https://www.ltts.com/careers",
+      "ai_roles": "AI Engineer, ML Engineer",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 109,
+      "name": "Emerson India GCC",
+      "sector": "Industrial Tech",
+      "ats_type": "taleo",
+      "career_url": "https://www.emerson.com/en-us/careers",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b914\u201322 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 110,
+      "name": "Hitachi India GCC",
+      "sector": "Industrial / Tech",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://www.hitachivantara.com/en-us/company/careers.html",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 111,
+      "name": "Ericsson India",
+      "sector": "Telecom / Tech",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://jobs.ericsson.com/careers/",
+      "ai_roles": "AI Engineer, ML Engineer, Network AI",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 112,
+      "name": "Capgemini India (SR)",
+      "sector": "IT Services",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://www.capgemini.com/in-en/careers/",
+      "ai_roles": "AI Engg, GenAI Dev, Data Scientist",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 113,
+      "name": "Google India",
+      "sector": "Big Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.google.com/locations/india/",
+      "ai_roles": "ML Engg, Applied Scientist, SWE (ML)",
+      "salary_lpa": "\u20b935\u201380 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 114,
+      "name": "Microsoft India IDC",
+      "sector": "Big Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.microsoft.com/global/en/search-results?lc=India",
+      "ai_roles": "ML Engg, AI Engg, Applied Scientist",
+      "salary_lpa": "\u20b930\u201370 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 115,
+      "name": "Amazon India",
+      "sector": "E-Commerce/Cloud",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.amazon.jobs/en/locations/india",
+      "ai_roles": "ML Engg, Applied Scientist, SDE (ML)",
+      "salary_lpa": "\u20b928\u201365 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 116,
+      "name": "Meta India GCC",
+      "sector": "Social / AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.metacareers.com/locations/india/",
+      "ai_roles": "ML Engg, Research Engg, AI SW Engg",
+      "salary_lpa": "\u20b935\u201380 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 117,
+      "name": "Apple India GCC",
+      "sector": "Consumer Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.apple.com/en-in/search?location=india",
+      "ai_roles": "ML Engg, AI Engg, Core ML roles",
+      "salary_lpa": "\u20b930\u201365 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 118,
+      "name": "Intel India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.intel.com/en/locations/india",
+      "ai_roles": "AI Architect, ML Engg, Deep Learning Engg",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 119,
+      "name": "AMD India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.amd.com/careers-home/jobs?location=India",
+      "ai_roles": "ML Engg, AI SW Engg",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 120,
+      "name": "IBM India",
+      "sector": "Tech / Consulting",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.ibm.com/in-en/employment",
+      "ai_roles": "AI Engg, ML Engg, Watson AI Dev, GenAI Engg",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 8,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

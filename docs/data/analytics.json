@@ -92,7 +92,7 @@
     },
     {
       "status": "applied_successfully",
-      "count": 62
+      "count": 63
     },
     {
       "status": "easy_apply",
@@ -100,15 +100,23 @@
     },
     {
       "status": "evaluated",
-      "count": 956
+      "count": 955
     },
     {
       "status": "external_portal",
-      "count": 78
+      "count": 74
     },
     {
       "status": "pending",
       "count": 10
+    },
+    {
+      "status": "queued",
+      "count": 1
+    },
+    {
+      "status": "skip",
+      "count": 3
     },
     {
       "status": "temporary_failure",

@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 46,
+      "name": "Caterpillar India GCC",
+      "sector": "Industrial GCC",
+      "ats_type": "successfactors",
+      "career_url": "https://careers.caterpillar.com/en/jobs/?country=India",
+      "ai_roles": "AI Engineer, ML Engg, Industrial AI",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 47,
+      "name": "Aptiv India GCC",
+      "sector": "Auto / Tech",
+      "ats_type": "successfactors",
+      "career_url": "https://www.aptiv.com/en/careers",
+      "ai_roles": "AI/ML Engineer, Embedded AI",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 48,
+      "name": "Razorpay",
+      "sector": "FinTech",
+      "ats_type": "greenhouse",
+      "career_url": "https://razorpay.com/jobs/",
+      "ai_roles": "ML Engg, AI Engg, Fraud Detection Engg",
+      "salary_lpa": "\u20b918\u201338 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 49,
+      "name": "Swiggy",
+      "sector": "FoodTech",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.swiggy.com/",
+      "ai_roles": "ML Engg, AI Engg, Forecasting Engg",
+      "salary_lpa": "\u20b918\u201340 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 50,
+      "name": "Zepto",
+      "sector": "Quick Commerce",
+      "ats_type": "greenhouse",
+      "career_url": "https://zepto.com/careers",
+      "ai_roles": "ML Engg, AI Engg, Demand Forecasting",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 51,
+      "name": "Stripe India",
+      "sector": "FinTech",
+      "ats_type": "greenhouse",
+      "career_url": "https://stripe.com/jobs/",
+      "ai_roles": "ML Engineer, AI Engineer, Risk AI",
+      "salary_lpa": "\u20b928\u201355 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 52,
+      "name": "Uber India",
+      "sector": "Mobility / Tech",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.uber.com/global/en/careers/",
+      "ai_roles": "ML Engineer, AI Engineer, MLOps Engineer",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 53,
+      "name": "Airbnb India",
+      "sector": "Travel Tech",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.airbnb.com/",
+      "ai_roles": "ML Engineer, AI Engineer, Trust & Safety AI",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 54,
+      "name": "Dropbox India",
+      "sector": "SaaS / Cloud",
+      "ats_type": "greenhouse",
+      "career_url": "https://jobs.dropbox.com/",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b922\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 55,
+      "name": "Segment (Twilio)",
+      "sector": "CDP / SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.twilio.com/en-us/company/jobs",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 56,
+      "name": "Notion India",
+      "sector": "Productivity SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.notion.so/careers",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 57,
+      "name": "Lattice India",
+      "sector": "HR SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://lattice.com/careers",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 58,
+      "name": "Scale AI India",
+      "sector": "AI Data Platform",
+      "ats_type": "greenhouse",
+      "career_url": "https://scale.com/careers",
+      "ai_roles": "ML Engineer, AI Engineer, RLHF Engineer",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 59,
+      "name": "Pendo India",
+      "sector": "Product Analytics",
+      "ats_type": "greenhouse",
+      "career_url": "https://www.pendo.io/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 60,
+      "name": "Mixpanel India",
+      "sector": "Analytics SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://mixpanel.com/jobs/",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b918\u201330 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 4,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

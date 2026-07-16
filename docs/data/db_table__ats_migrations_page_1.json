@@ -1,0 +1,13 @@
+{
+  "columns": [
+    "sql_hash",
+    "applied_at"
+  ],
+  "rows": [],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 0,
+    "total_pages": 1
+  }
+}

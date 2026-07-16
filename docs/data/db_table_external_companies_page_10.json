@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 136,
+      "name": "Persistent Systems",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.persistent.com/careers/",
+      "ai_roles": "GenAI Engg, ML Engg, AI Consultant",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 137,
+      "name": "Hexaware",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.hexaware.com/en/careers",
+      "ai_roles": "AI Engg, ML Dev",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 138,
+      "name": "NTT Data India",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://in.nttdata.com/careers",
+      "ai_roles": "AI Engg, ML Dev, Data Scientist",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 139,
+      "name": "KPIT Technologies",
+      "sector": "Auto / IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.kpit.com/careers/",
+      "ai_roles": "AI Engg, ML Engg, Automotive AI",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 140,
+      "name": "Mastech Digital",
+      "sector": "IT Staffing",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.mastechdigital.com/careers/",
+      "ai_roles": "ML Developer, AI Engineer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 141,
+      "name": "Flipkart",
+      "sector": "E-Commerce",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.flipkartcareers.com/",
+      "ai_roles": "ML Engg, Applied Scientist, RecSys Engg",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 142,
+      "name": "Zomato",
+      "sector": "FoodTech",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.zomato.com/careers",
+      "ai_roles": "ML Engg, AI Engg, Data Scientist",
+      "salary_lpa": "\u20b918\u201338 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 143,
+      "name": "Paytm",
+      "sector": "FinTech",
+      "ats_type": "custom_portal",
+      "career_url": "https://paytm.com/about-us/careers/",
+      "ai_roles": "ML Engg, AI Dev, NLP Engg",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 144,
+      "name": "Nykaa",
+      "sector": "E-Commerce Beauty",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.nykaa.com/careers",
+      "ai_roles": "ML Engg, AI RecSys Engg",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 145,
+      "name": "Ola",
+      "sector": "Mobility / EV",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.olacabs.com/careers",
+      "ai_roles": "ML Engg, AI Engg, Autonomous AI",
+      "salary_lpa": "\u20b915\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 146,
+      "name": "Freshworks India",
+      "sector": "SaaS / CRM",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.freshworks.com/company/careers/",
+      "ai_roles": "ML Engg, AI Engg, NLP Dev, GenAI Engg",
+      "salary_lpa": "\u20b915\u201330 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 147,
+      "name": "Zoho",
+      "sector": "SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.zoho.com/",
+      "ai_roles": "ML Engg, AI Dev, NLP Engg",
+      "salary_lpa": "\u20b910\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 148,
+      "name": "Haptik",
+      "sector": "Conversational AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://haptik.ai/careers/",
+      "ai_roles": "ML Engg, NLP Engg, AI Dev",
+      "salary_lpa": "\u20b912\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 149,
+      "name": "Mu Sigma",
+      "sector": "Analytics / AI",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.mu-sigma.com/careers",
+      "ai_roles": "Data Scientist, ML Analyst, AI Engg",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 150,
+      "name": "Fractal Analytics",
+      "sector": "AI / Analytics",
+      "ats_type": "custom_portal",
+      "career_url": "https://fractal.ai/careers/",
+      "ai_roles": "AI Engg, ML Engg, Data Scientist",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 10,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

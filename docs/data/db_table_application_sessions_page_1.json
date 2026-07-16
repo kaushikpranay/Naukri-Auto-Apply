@@ -1,0 +1,21 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "started_at",
+    "ended_at",
+    "browser_id",
+    "applied_by",
+    "automation",
+    "human",
+    "duration",
+    "status"
+  ],
+  "rows": [],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 0,
+    "total_pages": 1
+  }
+}

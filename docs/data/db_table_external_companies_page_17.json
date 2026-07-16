@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 241,
+      "name": "Sonata Software",
+      "sector": "IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.sonata-software.com/careers",
+      "ai_roles": "AI/ML Engineer, GenAI Dev, Data Engineer",
+      "salary_lpa": "\u20b98\u201318 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 242,
+      "name": "Mastek",
+      "sector": "IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.mastek.com/careers/apply-job/",
+      "ai_roles": "AI/ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b98\u201318 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 243,
+      "name": "Cyient",
+      "sector": "Engg / IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.cyient.com/",
+      "ai_roles": "AI/ML Engineer, Embedded AI, Data Scientist",
+      "salary_lpa": "\u20b98\u201316 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 244,
+      "name": "Newgen Software",
+      "sector": "Enterprise SW (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://omnirecruit.newgen.co.in/isharereferral/CareerPortal.aspx",
+      "ai_roles": "AI/ML Engineer, NLP Engineer",
+      "salary_lpa": "\u20b97\u201315 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 245,
+      "name": "FIS Global India",
+      "sector": "FinTech / Payments GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.fisglobal.com/us/en",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 246,
+      "name": "Moody's India",
+      "sector": "BFSI / Ratings GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.moodys.com/en",
+      "ai_roles": "ML Engineer, NLP Engineer, Quant AI",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 247,
+      "name": "John Deere India",
+      "sector": "Industrial / AgTech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.deere.co.in/en/our-company/john-deere-careers/",
+      "ai_roles": "ML Engineer, AI Engineer, Autonomy/CV",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 248,
+      "name": "Vymo",
+      "sector": "Sales-AI SaaS (mid-market)",
+      "ats_type": "custom_portal",
+      "career_url": "https://vymo.com/careers/",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 249,
+      "name": "Sagility India",
+      "sector": "Healthcare BPM",
+      "ats_type": "custom_portal",
+      "career_url": "https://sagility.wd1.myworkdayjobs.com/Sagility_Careers_IND",
+      "ai_roles": "ML Engineer, AI Engineer, Healthcare AI",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 250,
+      "name": "Tata Technologies",
+      "sector": "Engg / IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.tatatechnologies.com/in/careers/",
+      "ai_roles": "AI/ML Engineer, Autonomy/CV, Data Scientist",
+      "salary_lpa": "\u20b99\u201318 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 251,
+      "name": "Brillio",
+      "sector": "Digital / IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.brillio.com/",
+      "ai_roles": "AI/ML Engineer, GenAI Dev, Data Scientist",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 252,
+      "name": "Tredence",
+      "sector": "AI / Analytics (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.tredence.com/company-careers",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 253,
+      "name": "LatentView Analytics",
+      "sector": "AI / Analytics (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.latentview.com/career/",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b910\u201322 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 254,
+      "name": "Firstsource",
+      "sector": "BPM / IT Services (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.firstsource.com/careers-india",
+      "ai_roles": "AI/ML Engineer, NLP Engineer, Data Scientist",
+      "salary_lpa": "\u20b98\u201316 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 255,
+      "name": "Sasken Technologies",
+      "sector": "Product Engg (mid-cap)",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.sasken.com/careers",
+      "ai_roles": "AI/ML Engineer, Embedded AI, Edge AI",
+      "salary_lpa": "\u20b98\u201316 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 17,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

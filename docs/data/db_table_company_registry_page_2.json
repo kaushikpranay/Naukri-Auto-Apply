@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 16,
+      "company_name": "Wolters Kluwer",
+      "career_url": "https://wk.wd3.myworkdayjobs.com/en-US/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 17,
+      "company_name": "Dow Jones India",
+      "career_url": "https://dowjones.wd1.myworkdayjobs.com/Dow_Jones_Career",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 18,
+      "company_name": "Avnet India",
+      "career_url": "https://avnet.wd1.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 19,
+      "company_name": "Akamai India",
+      "career_url": "https://akamai.wd5.myworkdayjobs.com/External",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 20,
+      "company_name": "Nuance India GCC",
+      "career_url": "https://microsoft.wd1.myworkdayjobs.com/en-US/Microsoft_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 21,
+      "company_name": "AT&T GCC",
+      "career_url": "https://att.wd1.myworkdayjobs.com/ATTGeneral",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 22,
+      "company_name": "Comcast GCC",
+      "career_url": "https://comcast.wd5.myworkdayjobs.com/Comcast_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 23,
+      "company_name": "Warner Bros. GCC",
+      "career_url": "https://warnerbros.wd5.myworkdayjobs.com/WarnerBrosCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 24,
+      "company_name": "T-Mobile GCC",
+      "career_url": "https://tmobile.wd1.myworkdayjobs.com/Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 25,
+      "company_name": "J&J India GCC",
+      "career_url": "https://jj.wd5.myworkdayjobs.com/JJ",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 26,
+      "company_name": "Pfizer India GCC",
+      "career_url": "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 27,
+      "company_name": "Sanofi India GCC",
+      "career_url": "https://sanofi.wd3.myworkdayjobs.com/External_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 28,
+      "company_name": "CVS Health GCC",
+      "career_url": "https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 29,
+      "company_name": "Becton Dickinson",
+      "career_url": "https://bdx.wd1.myworkdayjobs.com/BD",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 30,
+      "company_name": "Target India GCC",
+      "career_url": "https://target.wd5.myworkdayjobs.com/targetcareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

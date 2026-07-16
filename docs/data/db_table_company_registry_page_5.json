@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 61,
+      "company_name": "Zendesk India GCC",
+      "career_url": "https://jobs.zendesk.com/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 62,
+      "company_name": "Datadog India",
+      "career_url": "https://www.datadoghq.com/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 63,
+      "company_name": "BrowserStack",
+      "career_url": "https://www.browserstack.com/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 64,
+      "company_name": "Chargebee India",
+      "career_url": "https://www.chargebee.com/company/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 65,
+      "company_name": "Postman India",
+      "career_url": "https://www.postman.com/company/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 66,
+      "company_name": "CleverTap",
+      "career_url": "https://clevertap.com/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 67,
+      "company_name": "Lenskart Tech",
+      "career_url": "https://lenskart.com/careers.html",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 68,
+      "company_name": "Khatabook",
+      "career_url": "https://careers.khatabook.com/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 69,
+      "company_name": "Shiprocket",
+      "career_url": "https://careers.shiprocket.in/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 70,
+      "company_name": "1mg / Tata 1mg",
+      "career_url": "https://www.1mg.com/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 71,
+      "company_name": "Pristyn Care",
+      "career_url": "https://careers.pristyncare.com/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 72,
+      "company_name": "Urban Company",
+      "career_url": "https://careers.urbancompany.com/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 73,
+      "company_name": "Springworks",
+      "career_url": "https://www.springworks.in/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 74,
+      "company_name": "Yellow.ai",
+      "career_url": "https://yellow.ai/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 75,
+      "company_name": "Sarvam AI",
+      "career_url": "https://www.sarvam.ai/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 5,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

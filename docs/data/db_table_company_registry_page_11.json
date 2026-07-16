@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 151,
+      "company_name": "Tiger Analytics",
+      "career_url": "https://www.tigeranalytics.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 152,
+      "company_name": "Quantiphi",
+      "career_url": "https://quantiphi.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 153,
+      "company_name": "ThoughtSpot India",
+      "career_url": "https://www.thoughtspot.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 154,
+      "company_name": "Delhivery Tech",
+      "career_url": "https://www.delhivery.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 155,
+      "company_name": "BigBasket",
+      "career_url": "https://www.bigbasket.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 156,
+      "company_name": "Dream11",
+      "career_url": "https://www.dream11.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 157,
+      "company_name": "Upstox",
+      "career_url": "https://upstox.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 158,
+      "company_name": "Navi",
+      "career_url": "https://navi.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 159,
+      "company_name": "Cars24",
+      "career_url": "https://www.cars24.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 160,
+      "company_name": "OYO Rooms",
+      "career_url": "https://www.oyorooms.com/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 161,
+      "company_name": "PolicyBazaar",
+      "career_url": "https://www.policybazaar.com/about-us/career/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 162,
+      "company_name": "Vedic Laboratories",
+      "career_url": "https://www.vediclab.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 163,
+      "company_name": "JPMorgan Chase GCC",
+      "career_url": "https://careers.jpmorgan.com/global/en/locations/india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 164,
+      "company_name": "Goldman Sachs GCC",
+      "career_url": "https://www.goldmansachs.com/careers/locations/india.html",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 165,
+      "company_name": "Wells Fargo GCC",
+      "career_url": "https://www.wellsfargojobs.com/en/jobs/?location=india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 11,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "columns": [
+    "sql_hash",
+    "applied_at"
+  ],
+  "rows": [
+    {
+      "sql_hash": "20499ff7feea072f017afa45cbc9173e",
+      "applied_at": "2026-06-15T18:57:23.944428"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 1,
+    "total_pages": 1
+  }
+}

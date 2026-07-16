@@ -679,6 +679,63 @@ def generate_placeholders():
     write_json("status_placeholder.json", {"status": "success"})
     write_json("db_placeholder.json", {"tables": ["jobs", "ai_evaluations", "job_applications", "question_bank", "ats_applications"]})
 
+def generate_db_explorer_data(conn):
+    c = conn.cursor()
+    try:
+        # Get list of tables
+        c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")
+        tables = [row[0] for row in c.fetchall()]
+        
+        # Write list of tables directly as a JSON array (so it matches list_db_tables API response)
+        write_json("db_tables.json", tables)
+        
+        for table_name in tables:
+            try:
+                # Get column info
+                c.execute(f"PRAGMA table_info({table_name})")
+                columns = [row[1] for row in c.fetchall()]
+                
+                # Get all rows
+                c.execute(f'SELECT * FROM "{table_name}"')
+                rows = [dict(row) for row in c.fetchall()]
+                
+                total_records = len(rows)
+                limit = 15
+                total_pages = (total_records + limit - 1) // limit if total_records > 0 else 1
+                
+                for page in range(1, total_pages + 1):
+                    offset = (page - 1) * limit
+                    page_rows = rows[offset:offset+limit]
+                    page_data = {
+                        "columns": columns,
+                        "rows": page_rows,
+                        "pagination": {
+                            "page": page,
+                            "limit": limit,
+                            "total_records": total_records,
+                            "total_pages": total_pages
+                        }
+                    }
+                    write_json(f"db_table_{table_name}_page_{page}.json", page_data)
+                
+                # If no records, write page 1
+                if total_records == 0:
+                    page_data = {
+                        "columns": columns,
+                        "rows": [],
+                        "pagination": {
+                            "page": 1,
+                            "limit": limit,
+                            "total_records": 0,
+                            "total_pages": 1
+                        }
+                    }
+                    write_json(f"db_table_{table_name}_page_1.json", page_data)
+            except Exception as e:
+                print(f"Error generating data for table {table_name}: {e}")
+    except Exception as e:
+        print(f"Error generating database explorer data: {e}")
+
 def main():
     print("Generating Next.js Dashboard static JSON API exports...")
     setup_directories()
@@ -699,6 +756,7 @@ def main():
     generate_settings()
     generate_monitor(conn)
     generate_placeholders()
+    generate_db_explorer_data(conn)
     
     conn.close()
     print("Static JSON files successfully generated!")

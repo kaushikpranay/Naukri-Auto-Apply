@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 211,
+      "name": "GE Aerospace India",
+      "sector": "Aerospace GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://geaerospace.wd5.myworkdayjobs.com/GE_ExternalSite",
+      "ai_roles": "ML Engineer, AI/ML Engineer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 212,
+      "name": "Cadence Design Systems India",
+      "sector": "Semiconductor / EDA",
+      "ats_type": "custom_portal",
+      "career_url": "https://cadence.wd1.myworkdayjobs.com/External_Careers",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 213,
+      "name": "Applied Materials India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://amat.wd1.myworkdayjobs.com/External",
+      "ai_roles": "ML Engineer, AI Engineer, CV Engineer",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 214,
+      "name": "Micron India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://micron.wd1.myworkdayjobs.com/External",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 215,
+      "name": "Autodesk India",
+      "sector": "Design Software",
+      "ats_type": "custom_portal",
+      "career_url": "https://autodesk.wd1.myworkdayjobs.com/Ext",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 216,
+      "name": "KLA India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://kla.wd1.myworkdayjobs.com/Search",
+      "ai_roles": "ML Engineer, Computer Vision Engineer",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 217,
+      "name": "Nielsen India",
+      "sector": "Media / Analytics GCC",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://careers.smartrecruiters.com/TheNielsenCompany",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 218,
+      "name": "Western Digital India",
+      "sector": "Storage / Semiconductors",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://careers.smartrecruiters.com/WesternDigital",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b918\u201334 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 219,
+      "name": "DevRev India",
+      "sector": "DevTools / AI SaaS",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/devrev",
+      "ai_roles": "ML Engineer, AI Engineer, LLM Engineer",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 220,
+      "name": "Sprinto",
+      "sector": "SaaS / GRC Security",
+      "ats_type": "lever",
+      "career_url": "https://jobs.lever.co/Sprinto",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 221,
+      "name": "Pixxel",
+      "sector": "SpaceTech / Geospatial AI",
+      "ats_type": "lever",
+      "career_url": "https://jobs.lever.co/pixcel",
+      "ai_roles": "ML Engineer, Computer Vision Engineer, AI Engineer",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 222,
+      "name": "Marvell India",
+      "sector": "Semiconductors",
+      "ats_type": "custom_portal",
+      "career_url": "https://marvell.wd1.myworkdayjobs.com/MarvellCareers",
+      "ai_roles": "ML Engineer, AI Engineer, Applied Scientist",
+      "salary_lpa": "\u20b924\u201348 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 223,
+      "name": "Tesco Bengaluru",
+      "sector": "Retail GCC",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://careers.smartrecruiters.com/TescoBengaluru",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 224,
+      "name": "Texas Instruments India",
+      "sector": "Semiconductors",
+      "ats_type": "taleo",
+      "career_url": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/jobs",
+      "ai_roles": "ML Engineer, AI Engineer, Edge AI",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 225,
+      "name": "Optum / UnitedHealth Group India",
+      "sector": "Healthcare GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.optum.in/about/careers.html",
+      "ai_roles": "ML Engineer, AI Engineer, Healthcare AI",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 15,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

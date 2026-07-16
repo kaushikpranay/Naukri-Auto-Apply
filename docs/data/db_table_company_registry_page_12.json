@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 166,
+      "company_name": "HSBC India GCC",
+      "career_url": "https://www.hsbc.com/careers/locations/india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 167,
+      "company_name": "Citi India GCC",
+      "career_url": "https://jobs.citi.com/search-jobs/India/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 168,
+      "company_name": "Deutsche Bank India",
+      "career_url": "https://careers.db.com/explore-the-bank/search-open-roles/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 169,
+      "company_name": "Barclays India GCC",
+      "career_url": "https://search.jobs.barclays/india-jobs/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 170,
+      "company_name": "Morgan Stanley India",
+      "career_url": "https://www.morganstanley.com/careers/career-opportunities-search",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 171,
+      "company_name": "UBS India GCC",
+      "career_url": "https://www.ubs.com/global/en/careers.html",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 172,
+      "company_name": "BNY Mellon India",
+      "career_url": "https://www.bnymellon.com/us/en/careers.html",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 173,
+      "company_name": "Standard Chartered GCC",
+      "career_url": "https://www.sc.com/en/careers/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 174,
+      "company_name": "HDFC Bank",
+      "career_url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 175,
+      "company_name": "ICICI Bank",
+      "career_url": "https://www.icicicareers.com/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 176,
+      "company_name": "Axis Bank",
+      "career_url": "https://www.axisbank.com/about-us/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 177,
+      "company_name": "McKinsey India",
+      "career_url": "https://www.mckinsey.com/careers/jobs/india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 178,
+      "company_name": "BCG India",
+      "career_url": "https://careers.bcg.com/india",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 179,
+      "company_name": "Bain India",
+      "career_url": "https://www.bain.com/careers/find-a-role/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 180,
+      "company_name": "AstraZeneca India GCC",
+      "career_url": "https://careers.astrazeneca.com/location/india-jobs/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 12,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

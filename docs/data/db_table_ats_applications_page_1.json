@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "ats_type",
+    "apply_url",
+    "status",
+    "error",
+    "screenshot_path",
+    "attempted_at",
+    "applied_at"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "job_id": 8531,
+      "ats_type": "unknown",
+      "apply_url": "https://careers.amgen.com/en/job/-/-/87/87104854864?source=rd_naukri&utm_source=naukri.com&utm_medium=job_posting&utm_campaign=Healthcare_General&utm_content=job_board&utm_term=402434614&ss=paid",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.683005",
+      "applied_at": null
+    },
+    {
+      "id": 2,
+      "job_id": 8546,
+      "ats_type": "unknown",
+      "apply_url": "https://careers.vestas.com/job/Chennai-ML-Engineer-(NLPGenAI)-TN-600-117/1399981733/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.685124",
+      "applied_at": null
+    },
+    {
+      "id": 3,
+      "job_id": 8575,
+      "ats_type": "unknown",
+      "apply_url": "https://www.everestek.com/careers/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.686697",
+      "applied_at": null
+    },
+    {
+      "id": 4,
+      "job_id": 8576,
+      "ats_type": "unknown",
+      "apply_url": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5217983-S1923384_en&title=LLM+Model+Developer&SRC=RECNau",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.688163",
+      "applied_at": null
+    },
+    {
+      "id": 5,
+      "job_id": 8596,
+      "ats_type": "unknown",
+      "apply_url": "https://www.tecorb.com/career/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.690610",
+      "applied_at": null
+    },
+    {
+      "id": 6,
+      "job_id": 8645,
+      "ats_type": "unknown",
+      "apply_url": "https://www.brigosha.com/join-us/job-description/jobId=365/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.692750",
+      "applied_at": null
+    },
+    {
+      "id": 7,
+      "job_id": 8646,
+      "ats_type": "unknown",
+      "apply_url": "https://search.jobs.barclays/job/bengaluru/gen-ai-engineer/13015/96289709680",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.694998",
+      "applied_at": null
+    },
+    {
+      "id": 8,
+      "job_id": 8660,
+      "ats_type": "unknown",
+      "apply_url": "https://fa-etvl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/145117_2",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.696873",
+      "applied_at": null
+    },
+    {
+      "id": 9,
+      "job_id": 8689,
+      "ats_type": "unknown",
+      "apply_url": "https://fa-etvl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/146626",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.698723",
+      "applied_at": null
+    },
+    {
+      "id": 10,
+      "job_id": 8702,
+      "ats_type": "unknown",
+      "apply_url": "https://fa-etvl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/145117_2",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.700946",
+      "applied_at": null
+    },
+    {
+      "id": 11,
+      "job_id": 8750,
+      "ats_type": "unknown",
+      "apply_url": "https://nitsan.ai/career/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.702811",
+      "applied_at": null
+    },
+    {
+      "id": 12,
+      "job_id": 8790,
+      "ats_type": "unknown",
+      "apply_url": "https://www.materialplus.io/careers/job-openings-apac#op-699029-data-architect",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.704967",
+      "applied_at": null
+    },
+    {
+      "id": 13,
+      "job_id": 8791,
+      "ats_type": "unknown",
+      "apply_url": "https://srijantech.hire.trakstar.com/jobs/fk0zzfv/",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.707709",
+      "applied_at": null
+    },
+    {
+      "id": 14,
+      "job_id": 8792,
+      "ats_type": "unknown",
+      "apply_url": "https://www.materialplus.io/careers/job-openings-apac",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.710474",
+      "applied_at": null
+    },
+    {
+      "id": 15,
+      "job_id": 8917,
+      "ats_type": "unknown",
+      "apply_url": "https://tristone-partners.zohorecruit.in/jobs/Careers/96063000009050003",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-06-28T15:28:19.714824",
+      "applied_at": null
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 25,
+    "total_pages": 2
+  }
+}

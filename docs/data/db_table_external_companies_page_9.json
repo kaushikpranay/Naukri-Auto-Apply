@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 121,
+      "name": "Dell India GCC",
+      "sector": "Hardware / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.dell.com/",
+      "ai_roles": "ML Engg, AI Engg, Data Scientist",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 122,
+      "name": "HP India GCC",
+      "sector": "Hardware / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.hp.com/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 123,
+      "name": "Atlassian India",
+      "sector": "DevTools / SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.atlassian.com/company/careers",
+      "ai_roles": "ML Engg, AI Engg, Search AI Engg",
+      "salary_lpa": "\u20b925\u201350 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 124,
+      "name": "Intuit India",
+      "sector": "FinSaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.intuit.com/",
+      "ai_roles": "ML Engg, AI Engg, GenAI Dev",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 125,
+      "name": "ServiceNow India",
+      "sector": "Enterprise SaaS",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.servicenow.com/",
+      "ai_roles": "ML Engg, AI Engg, Now Intelligence",
+      "salary_lpa": "\u20b922\u201345 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 126,
+      "name": "Splunk India GCC",
+      "sector": "SIEM / Observability",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.splunk.com/en_us/careers.html",
+      "ai_roles": "ML Engg, AI Engineer",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 127,
+      "name": "VMware India GCC",
+      "sector": "Cloud / Virtualiz.",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.vmware.com/main/jobs",
+      "ai_roles": "ML Engg, AI Developer",
+      "salary_lpa": "\u20b920\u201340 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 128,
+      "name": "NetApp India GCC",
+      "sector": "Storage / Cloud",
+      "ats_type": "custom_portal",
+      "career_url": "https://jobs.netapp.com/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 129,
+      "name": "TCS",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.tcs.com/careers",
+      "ai_roles": "AI/ML Engg, GenAI Dev, NLP Engg",
+      "salary_lpa": "\u20b98\u201316 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 130,
+      "name": "Infosys",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://career.infosys.com/",
+      "ai_roles": "AI Engg, ML Engg, GenAI Engg, Data Scientist",
+      "salary_lpa": "\u20b99\u201318 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 131,
+      "name": "Wipro",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.wipro.com/",
+      "ai_roles": "AI Engg, ML Dev, Data Scientist",
+      "salary_lpa": "\u20b98\u201315 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 132,
+      "name": "HCL Technologies",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.hcltech.com/careers",
+      "ai_roles": "ML Engg, AI Engg, NLP Specialist",
+      "salary_lpa": "\u20b98\u201316 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 133,
+      "name": "Tech Mahindra",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.techmahindra.com/",
+      "ai_roles": "AI Engg, ML Dev, GenAI Dev",
+      "salary_lpa": "\u20b98\u201315 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 134,
+      "name": "LTIMindtree",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.ltimindtree.com/careers/",
+      "ai_roles": "ML Engg, AI Dev, NLP Engg",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 135,
+      "name": "Mphasis",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.mphasis.com/",
+      "ai_roles": "AI Engg, GenAI Dev, ML Engg",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 9,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

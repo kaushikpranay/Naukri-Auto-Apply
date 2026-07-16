@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 76,
+      "company_name": "Krutrim",
+      "career_url": "https://www.krutrim.com/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 77,
+      "company_name": "Observe.AI India",
+      "career_url": "https://www.observe.ai/company/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 78,
+      "company_name": "NightFall AI India",
+      "career_url": "https://www.nightfall.ai/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 79,
+      "company_name": "SigTuple",
+      "career_url": "https://sigtuple.com/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 80,
+      "company_name": "Mad Street Den",
+      "career_url": "https://www.madstreetden.com/careers/",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 81,
+      "company_name": "Ola Electric",
+      "career_url": "https://olaelectric.com/careers",
+      "ats_type": "greenhouse",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 82,
+      "company_name": "PhonePe",
+      "career_url": "https://www.phonepe.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 83,
+      "company_name": "CRED",
+      "career_url": "https://careers.cred.club/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 84,
+      "company_name": "Groww",
+      "career_url": "https://groww.in/open-positions",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 85,
+      "company_name": "Meesho",
+      "career_url": "https://meesho.io/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 86,
+      "company_name": "ShareChat / Moj",
+      "career_url": "https://careers.sharechat.com/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 87,
+      "company_name": "InMobi",
+      "career_url": "https://www.inmobi.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 88,
+      "company_name": "Darwinbox",
+      "career_url": "https://darwinbox.com/about/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 89,
+      "company_name": "Whatfix",
+      "career_url": "https://whatfix.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 90,
+      "company_name": "Capillary Technologies",
+      "career_url": "https://capillarytech.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 6,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 196,
+      "name": "Nagarro",
+      "sector": "IT Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.nagarro.com/en/careers",
+      "ai_roles": "AI Engineer, ML Developer",
+      "salary_lpa": "\u20b910\u201318 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 197,
+      "name": "Wipro BPS",
+      "sector": "BPO / IT",
+      "ats_type": "naukri",
+      "career_url": "https://careers.wipro.com/",
+      "ai_roles": "AI Developer, ML Analyst",
+      "salary_lpa": "\u20b98\u201314 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 198,
+      "name": "Minda Industries",
+      "sector": "Auto Components",
+      "ats_type": "naukri",
+      "career_url": "https://www.mindagroup.com/careers/",
+      "ai_roles": "AI Engineer",
+      "salary_lpa": "\u20b98\u201314 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 199,
+      "name": "Byju's",
+      "sector": "EdTech",
+      "ats_type": "naukri",
+      "career_url": "https://byjus.com/about/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b910\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 200,
+      "name": "PharmEasy",
+      "sector": "HealthTech",
+      "ats_type": "naukri",
+      "career_url": "https://pharmeasy.in/blog/careers/",
+      "ai_roles": "ML Engineer, Data Scientist",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 201,
+      "name": "Ixigo",
+      "sector": "Travel Tech",
+      "ats_type": "naukri",
+      "career_url": "https://www.ixigo.com/careers",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 202,
+      "name": "MakeMyTrip",
+      "sector": "Travel Tech",
+      "ats_type": "naukri",
+      "career_url": "https://careers.makemytrip.com/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 203,
+      "name": "Zeta Global India",
+      "sector": "FinTech Infra",
+      "ats_type": "naukri",
+      "career_url": "https://zeta.tech/in/careers/",
+      "ai_roles": "ML Engineer, AI Developer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 204,
+      "name": "Visa India GCC",
+      "sector": "BFSI / Payments GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://visa.wd5.myworkdayjobs.com/Visa",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 205,
+      "name": "Mastercard India GCC",
+      "sector": "BFSI / Payments GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
+      "ai_roles": "ML Engineer, AI Engineer, GenAI Dev",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 206,
+      "name": "PayPal India",
+      "sector": "FinTech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://paypal.wd1.myworkdayjobs.com/jobs",
+      "ai_roles": "ML Engineer, AI Engineer, Risk/Fraud AI",
+      "salary_lpa": "\u20b922\u201342 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 207,
+      "name": "Thomson Reuters India",
+      "sector": "Info Services GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site",
+      "ai_roles": "ML Engineer, NLP Engineer, AI Engineer",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 208,
+      "name": "S&P Global India",
+      "sector": "Financial Data GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://spgi.wd5.myworkdayjobs.com/SPGI_Careers",
+      "ai_roles": "ML Engineer, NLP Engineer, Data Scientist",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 209,
+      "name": "TransUnion CIBIL India",
+      "sector": "BFSI / Credit GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://transunion.wd5.myworkdayjobs.com/TransUnion",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 210,
+      "name": "Medtronic India GCC",
+      "sector": "MedTech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://medtronic.wd1.myworkdayjobs.com/MedtronicCareers",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b916\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 14,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

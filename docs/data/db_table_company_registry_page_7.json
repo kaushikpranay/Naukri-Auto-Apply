@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 91,
+      "company_name": "Leadsquared",
+      "career_url": "https://www.leadsquared.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 92,
+      "company_name": "MoEngage",
+      "career_url": "https://www.moengage.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 93,
+      "company_name": "Unacademy",
+      "career_url": "https://unacademy.com/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 94,
+      "company_name": "Vedantu",
+      "career_url": "https://www.vedantu.com/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 95,
+      "company_name": "Dunzo",
+      "career_url": "https://www.dunzo.com/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 96,
+      "company_name": "Cashfree Payments",
+      "career_url": "https://www.cashfree.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 97,
+      "company_name": "BharatPe",
+      "career_url": "https://bharatpe.com/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 98,
+      "company_name": "Slice",
+      "career_url": "https://www.sliceit.com/about-us#careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 99,
+      "company_name": "Jupiter Money",
+      "career_url": "https://jupiter.money/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 100,
+      "company_name": "Fi Money",
+      "career_url": "https://fi.money/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 101,
+      "company_name": "Smallcase",
+      "career_url": "https://smallcase.com/careers",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 102,
+      "company_name": "Sprinklr India",
+      "career_url": "https://www.sprinklr.com/careers/",
+      "ats_type": "lever",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 103,
+      "company_name": "EY India",
+      "career_url": "https://careers.ey.com/",
+      "ats_type": "icims",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 104,
+      "company_name": "KPMG India",
+      "career_url": "https://kpmg.com/in/en/careers.html",
+      "ats_type": "icims",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 105,
+      "company_name": "Oracle India",
+      "career_url": "https://oracle.taleo.net/careersection/2/jobsearch.ftl",
+      "ats_type": "taleo",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 7,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

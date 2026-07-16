@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 286,
+      "name": "Acko",
+      "sector": "InsurTech",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.acko.com/careers/jobs/",
+      "ai_roles": "ML Engineer, AI Engineer, Risk AI",
+      "salary_lpa": "\u20b914\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 287,
+      "name": "CarDekho",
+      "sector": "Auto / E-Commerce",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.cardekho.com/",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 288,
+      "name": "Licious",
+      "sector": "FoodTech / D2C",
+      "ats_type": "custom_portal",
+      "career_url": "https://careers.licious.com/",
+      "ai_roles": "ML Engineer, AI Engineer, Demand-Forecast AI",
+      "salary_lpa": "\u20b912\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 289,
+      "name": "Lam Research India",
+      "sector": "Semiconductor Equip",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.lamresearch.com/careers/global-opportunities/india/",
+      "ai_roles": "ML Engineer, AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 290,
+      "name": "Unilever India",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 291,
+      "name": "Mondelez India",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://mdlz.wd3.myworkdayjobs.com/External",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 292,
+      "name": "Procter & Gamble India",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://pg.wd5.myworkdayjobs.com/1000",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 293,
+      "name": "Verizon India",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://verizon.wd12.myworkdayjobs.com/verizon-careers",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 294,
+      "name": "Adyen India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/adyen",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 295,
+      "name": "Figma India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://boards.greenhouse.io/figma",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 296,
+      "name": "Miro India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://boards.greenhouse.io/realtimeboardglobal",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 297,
+      "name": "Cloudflare India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/cloudflare",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 298,
+      "name": "MongoDB India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://boards.greenhouse.io/mongodb",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 299,
+      "name": "Zscaler India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/zscaler",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 300,
+      "name": "DoorDash India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://job-boards.greenhouse.io/doordashindia",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 20,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

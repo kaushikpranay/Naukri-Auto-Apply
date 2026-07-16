@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 16,
+      "name": "Wolters Kluwer",
+      "sector": "Info Services",
+      "ats_type": "custom_portal",
+      "career_url": "https://wk.wd3.myworkdayjobs.com/en-US/External",
+      "ai_roles": "AI Engineer, NLP Engineer, ML Developer",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 17,
+      "name": "Dow Jones India",
+      "sector": "Media / Tech",
+      "ats_type": "custom_portal",
+      "career_url": "https://dowjones.wd1.myworkdayjobs.com/Dow_Jones_Career",
+      "ai_roles": "ML Engineer, AI Data Engineer",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 18,
+      "name": "Avnet India",
+      "sector": "Electronics Dist.",
+      "ats_type": "custom_portal",
+      "career_url": "https://avnet.wd1.myworkdayjobs.com/External",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b912\u201320 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 19,
+      "name": "Akamai India",
+      "sector": "CDN / Cloud",
+      "ats_type": "custom_portal",
+      "career_url": "https://akamai.wd5.myworkdayjobs.com/External",
+      "ai_roles": "AI Engineer, ML Developer, Data Scientist",
+      "salary_lpa": "\u20b918\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 20,
+      "name": "Nuance India GCC",
+      "sector": "AI / Speech",
+      "ats_type": "custom_portal",
+      "career_url": "https://microsoft.wd1.myworkdayjobs.com/en-US/Microsoft_Careers",
+      "ai_roles": "NLP Engineer, Speech AI, ML Engineer",
+      "salary_lpa": "\u20b920\u201338 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 21,
+      "name": "AT&T GCC",
+      "sector": "Telecom GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://att.wd1.myworkdayjobs.com/ATTGeneral",
+      "ai_roles": "AI/ML Engineer, Data Engineer",
+      "salary_lpa": "\u20b915\u201325 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 22,
+      "name": "Comcast GCC",
+      "sector": "Media / Tech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://comcast.wd5.myworkdayjobs.com/Comcast_Careers",
+      "ai_roles": "ML Engineer, Data Scientist, AI Dev",
+      "salary_lpa": "\u20b918\u201330 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 23,
+      "name": "Warner Bros. GCC",
+      "sector": "Media GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://warnerbros.wd5.myworkdayjobs.com/WarnerBrosCareers",
+      "ai_roles": "ML Engineer, Content AI Dev",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 24,
+      "name": "T-Mobile GCC",
+      "sector": "Telecom GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://tmobile.wd1.myworkdayjobs.com/Careers",
+      "ai_roles": "AI/ML Engineer, Network AI",
+      "salary_lpa": "\u20b916\u201328 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 25,
+      "name": "J&J India GCC",
+      "sector": "Healthcare GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://jj.wd5.myworkdayjobs.com/JJ",
+      "ai_roles": "ML Engineer, Applied Scientist, AI Data Engg",
+      "salary_lpa": "\u20b918\u201332 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 26,
+      "name": "Pfizer India GCC",
+      "sector": "Pharma GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers",
+      "ai_roles": "ML Scientist, AI/ML Engineer",
+      "salary_lpa": "\u20b915\u201328 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 27,
+      "name": "Sanofi India GCC",
+      "sector": "Pharma GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://sanofi.wd3.myworkdayjobs.com/External_Careers",
+      "ai_roles": "ML Engineer, AI Scientist",
+      "salary_lpa": "\u20b914\u201326 LPA",
+      "priority": "MEDIUM",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 28,
+      "name": "CVS Health GCC",
+      "sector": "Healthcare GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers",
+      "ai_roles": "ML Engineer, AI Engineer",
+      "salary_lpa": "\u20b915\u201325 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 29,
+      "name": "Becton Dickinson",
+      "sector": "MedTech GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://bdx.wd1.myworkdayjobs.com/BD",
+      "ai_roles": "AI Engineer, Data Scientist",
+      "salary_lpa": "\u20b914\u201324 LPA",
+      "priority": "LOW",
+      "created_at": "2026-06-17T23:05:25"
+    },
+    {
+      "id": 30,
+      "name": "Target India GCC",
+      "sector": "Retail GCC",
+      "ats_type": "custom_portal",
+      "career_url": "https://target.wd5.myworkdayjobs.com/targetcareers",
+      "ai_roles": "ML Engineer, AI Engg, RecSys Engineer",
+      "salary_lpa": "\u20b918\u201335 LPA",
+      "priority": "HIGH",
+      "created_at": "2026-06-17T23:05:25"
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

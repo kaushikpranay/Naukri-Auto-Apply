@@ -1,0 +1,186 @@
+{
+  "columns": [
+    "id",
+    "name",
+    "sector",
+    "ats_type",
+    "career_url",
+    "ai_roles",
+    "salary_lpa",
+    "priority",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 301,
+      "name": "Confluent India",
+      "sector": "",
+      "ats_type": "greenhouse",
+      "career_url": "https://careers.confluent.io/jobs/india",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 302,
+      "name": "Plaid India",
+      "sector": "",
+      "ats_type": "lever",
+      "career_url": "https://jobs.lever.co/plaid",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 303,
+      "name": "Palo Alto Networks India",
+      "sector": "",
+      "ats_type": "smartrecruiters",
+      "career_url": "https://careers.smartrecruiters.com/paloaltonetworks2",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 304,
+      "name": "Mamaearth (Honasa)",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://honasa.in/pages/careers",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 305,
+      "name": "Zetwerk",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.zetwerk.com/careers/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 306,
+      "name": "Xpressbees",
+      "sector": "",
+      "ats_type": "custom_portal",
+      "career_url": "https://www.xpressbees.com/career",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 307,
+      "name": "Atlan",
+      "sector": "",
+      "ats_type": "ashby",
+      "career_url": "https://jobs.ashbyhq.com/atlan",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 308,
+      "name": "Rocketlane",
+      "sector": "",
+      "ats_type": "kula",
+      "career_url": "https://careers.kula.ai/rocketlane",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 309,
+      "name": "EXL Service",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://exlcareers.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 310,
+      "name": "OPPO India (R&D)",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://careers-oppo.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 311,
+      "name": "Bajaj Finance",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://bflcareers.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 312,
+      "name": "Aditya Birla Group",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://abgcareers.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 313,
+      "name": "Shadowfax",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://shadowfax-careers.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 314,
+      "name": "Godrej",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://godrejcareers.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 315,
+      "name": "BusinessNext (CRMNEXT)",
+      "sector": "",
+      "ats_type": "peoplestrong",
+      "career_url": "https://businessnext-careers.peoplestrong.com/",
+      "ai_roles": "",
+      "salary_lpa": "",
+      "priority": "",
+      "created_at": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 21,
+    "limit": 15,
+    "total_records": 315,
+    "total_pages": 21
+  }
+}

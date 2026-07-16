@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "id",
+    "company_name",
+    "career_url",
+    "ats_type",
+    "source",
+    "first_seen",
+    "last_seen"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "company_name": "Accenture",
+      "career_url": "https://accenture.wd103.myworkdayjobs.com/AccentureCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 2,
+      "company_name": "Cognizant",
+      "career_url": "https://collaborative.wd1.myworkdayjobs.com/AllOpenings",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 3,
+      "company_name": "Genpact",
+      "career_url": "https://www.genpact.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 4,
+      "company_name": "Conduent",
+      "career_url": "https://conduent.wd5.myworkdayjobs.com/Conduent_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 5,
+      "company_name": "Xerox GCC",
+      "career_url": "https://xerox.wd1.myworkdayjobs.com/XeroxCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 6,
+      "company_name": "Aon India",
+      "career_url": "https://aon.wd1.myworkdayjobs.com/Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 7,
+      "company_name": "Willis Towers Watson",
+      "career_url": "https://wtw.wd1.myworkdayjobs.com/WTWCareers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 8,
+      "company_name": "Fidelity India GCC",
+      "career_url": "https://jobs.fidelity.com/locations/india/",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 9,
+      "company_name": "Adobe India",
+      "career_url": "https://adobe.wd5.myworkdayjobs.com/external_experienced_careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 10,
+      "company_name": "Salesforce India",
+      "career_url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 11,
+      "company_name": "HubSpot India",
+      "career_url": "https://hubspot.wd5.myworkdayjobs.com/careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 12,
+      "company_name": "LinkedIn India",
+      "career_url": "https://linkedin.wd5.myworkdayjobs.com/LinkedIn",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 13,
+      "company_name": "NVIDIA India",
+      "career_url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 14,
+      "company_name": "Workday India",
+      "career_url": "https://workday.wd5.myworkdayjobs.com/Workday",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    },
+    {
+      "id": 15,
+      "company_name": "Cisco India",
+      "career_url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers",
+      "ats_type": "custom_portal",
+      "source": "excel",
+      "first_seen": "2026-06-17T23:05:25",
+      "last_seen": "2026-06-20T03:44:48"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 314,
+    "total_pages": 21
+  }
+}

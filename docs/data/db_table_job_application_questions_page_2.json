@@ -1,0 +1,140 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 495,
+      "job_id": 25970,
+      "question_key": "llm_experience",
+      "question_text": "How many years of experience do you have in LLM APIs?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-07-11T00:03:21.974281"
+    },
+    {
+      "id": 497,
+      "job_id": 26247,
+      "question_key": "exp_angular",
+      "question_text": "How many years of experience do you have in Angular or React?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-07-11T00:06:33.870174"
+    },
+    {
+      "id": 498,
+      "job_id": 22297,
+      "question_key": "when_last_working_day",
+      "question_text": "When is your last working day?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-07-11T00:07:34.436329"
+    },
+    {
+      "id": 509,
+      "job_id": 23333,
+      "question_key": "available_face_face_interview_18th_july_at_kolkata_mention_o",
+      "question_text": "Are you available for a Face-to-Face interview on 18th July at Kolkata? Mention only if you are available",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "No",
+      "detected_at": "2026-07-11T00:11:50.434772"
+    },
+    {
+      "id": 511,
+      "job_id": 23333,
+      "question_key": "exp_aws",
+      "question_text": "How many years of experience in AWS/GCP? Please mention in numbers",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-07-11T00:12:27.665517"
+    },
+    {
+      "id": 514,
+      "job_id": 24616,
+      "question_key": "exp_development",
+      "question_text": "How many years of experience do you have in Development?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-07-11T00:15:54.912497"
+    },
+    {
+      "id": 515,
+      "job_id": 24680,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in Azure Cloud?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-07-11T00:16:39.355096"
+    },
+    {
+      "id": 518,
+      "job_id": 25209,
+      "question_key": "aws_experience",
+      "question_text": "How many years of experience do you have in Aws Bedrock?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-07-11T00:19:32.074336"
+    },
+    {
+      "id": 519,
+      "job_id": 25234,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in Azure?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-07-11T00:20:37.413929"
+    },
+    {
+      "id": 520,
+      "job_id": 25212,
+      "question_key": "exp_azure",
+      "question_text": "Do you have experience in Azure?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-07-11T00:22:58.370374"
+    },
+    {
+      "id": 521,
+      "job_id": 22674,
+      "question_key": "available_face_face_technical_interview",
+      "question_text": "Are you available for a face-to-face technical interview?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "No",
+      "detected_at": "2026-07-11T00:24:10.340309"
+    },
+    {
+      "id": 522,
+      "job_id": 22312,
+      "question_key": "date_birth",
+      "question_text": "Date of Birth",
+      "field_type": "input",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-07-11T00:25:31.840625"
+    }
+  ],
+  "pagination": {
+    "page": 2,
+    "limit": 15,
+    "total_records": 27,
+    "total_pages": 2
+  }
+}
