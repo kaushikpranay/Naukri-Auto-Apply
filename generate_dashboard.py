@@ -268,8 +268,8 @@ def generate_jobs_and_details(conn):
     applied_list = [j for j in all_jobs if j.get("status") in ("applied", "applied_successfully", "already_applied")]
     write_paginated_set("applied_jobs", applied_list)
 
-    # 3. Write applications audit log (applied + failed)
-    apps_list = [j for j in all_jobs if j.get("status") in ("applied", "applied_successfully", "already_applied", "failed", "discovery_failed")]
+    # 3. Write applications audit log (applied + failed + external)
+    apps_list = [j for j in all_jobs if j.get("status") in ("applied", "applied_successfully", "already_applied", "external_portal", "failed", "discovery_failed")]
     write_paginated_set("applications", apps_list)
 
     # 4. Write external portal jobs
