@@ -269,12 +269,42 @@
       "dropdown_count": 0,
       "buttons_count": 12,
       "quota_message": null
+    },
+    {
+      "id": 8763,
+      "job_id": 27973,
+      "apply_type": "unknown",
+      "apply_url": "https://www.naukri.com/job-listings-gen-ai-engineer-innodata-india-noida-4-to-6-years-270326034390",
+      "email": null,
+      "hr_name": null,
+      "button_text": "Apply",
+      "button_selector": "#apply-button",
+      "url_before": "https://www.naukri.com/job-listings-gen-ai-engineer-innodata-india-noida-4-to-6-years-270326034390",
+      "url_after": "https://www.naukri.com/job-listings-gen-ai-engineer-innodata-india-noida-4-to-6-years-270326034390",
+      "redirect_count": 0,
+      "status": "discovered",
+      "screenshot_before": "screenshots\\20260810_041443_job_27973_before.png",
+      "screenshot_after": "screenshots\\20260810_041455_job_27973_after.png",
+      "screenshot_modal": null,
+      "redirect_chain": null,
+      "html_before_path": "artifacts\\job_27973_before.html",
+      "html_path": "artifacts\\job_27973_after.html",
+      "elements_path": "artifacts\\job_27973_elements.json",
+      "detected_at": "2026-08-10T04:14:57.998264",
+      "page_title": "Gen AI Engineer - Noida - Innodata India - 4 to 6 years of experience",
+      "modal_detected": 0,
+      "forms_count": 0,
+      "inputs_count": 0,
+      "radio_count": 0,
+      "dropdown_count": 0,
+      "buttons_count": 12,
+      "quota_message": null
     }
   ],
   "pagination": {
     "page": 11,
     "limit": 15,
-    "total_records": 158,
+    "total_records": 159,
     "total_pages": 11
   }
 }

@@ -25,8 +25,8 @@
     "app_type": "external_portal",
     "app_status": "discovered",
     "app_date": "2026-08-09T21:38:08.140877",
-    "ats_status": null,
-    "ats_platform": null
+    "ats_status": "skipped",
+    "ats_platform": "unknown"
   },
   "ai_evaluation": {
     "id": 4593,
@@ -73,7 +73,17 @@
     "buttons_count": 27,
     "quota_message": null
   },
-  "ats_application": null,
+  "ats_application": {
+    "id": 26,
+    "job_id": 26325,
+    "ats_type": "unknown",
+    "apply_url": "https://novelpatterns.ai/careers#open-roles",
+    "status": "skipped",
+    "error": "No handler implemented for this ATS platform",
+    "screenshot_path": null,
+    "attempted_at": "2026-08-10T04:16:46.486496",
+    "applied_at": null
+  },
   "session": null,
   "events": [],
   "questions": []

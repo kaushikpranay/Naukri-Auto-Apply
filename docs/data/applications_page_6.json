@@ -606,8 +606,8 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-08-09T21:38:08.140877",
-      "ats_status": null,
-      "ats_platform": null
+      "ats_status": "skipped",
+      "ats_platform": "unknown"
     },
     {
       "id": 26330,

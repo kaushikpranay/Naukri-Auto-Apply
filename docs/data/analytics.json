@@ -54,7 +54,7 @@
   "ats_distribution": [
     {
       "platform": "unknown",
-      "count": 25
+      "count": 26
     }
   ],
   "success_rates": [
@@ -76,11 +76,11 @@
     },
     {
       "status": "pending",
-      "count": 5
+      "count": 4
     },
     {
       "status": "unknown",
-      "count": 10
+      "count": 11
     }
   ],
   "top_companies": [
@@ -128,7 +128,7 @@
   "failure_reasons": [
     {
       "reason": "No handler implemented for this ATS platform",
-      "count": 25
+      "count": 26
     }
   ]
 }

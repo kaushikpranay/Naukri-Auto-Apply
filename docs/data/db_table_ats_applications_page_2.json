@@ -120,12 +120,23 @@
       "screenshot_path": null,
       "attempted_at": "2026-06-28T15:29:46.064682",
       "applied_at": null
+    },
+    {
+      "id": 26,
+      "job_id": 26325,
+      "ats_type": "unknown",
+      "apply_url": "https://novelpatterns.ai/careers#open-roles",
+      "status": "skipped",
+      "error": "No handler implemented for this ATS platform",
+      "screenshot_path": null,
+      "attempted_at": "2026-08-10T04:16:46.486496",
+      "applied_at": null
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 25,
+    "total_records": 26,
     "total_pages": 2
   }
 }

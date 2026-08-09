@@ -1711,7 +1711,7 @@
   },
   {
     "name": "Novel Patterns",
-    "ats_type": "Naukri",
+    "ats_type": "unknown",
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
@@ -2236,7 +2236,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },

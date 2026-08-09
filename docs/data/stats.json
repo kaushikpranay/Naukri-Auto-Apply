@@ -4,7 +4,7 @@
     "naukri_jobs": 611,
     "external_jobs": 953,
     "pending_review": 129,
-    "queued": 114,
+    "queued": 113,
     "applying": 0,
     "applied": 82,
     "failed": 0,
@@ -13,9 +13,16 @@
     "success_rate": 100.0,
     "avg_ai_score": 37.4,
     "today_jobs": 150,
-    "today_applications": 98
+    "today_applications": 99
   },
   "recent_activity": [
+    {
+      "type": "applied",
+      "company_name": "Innodata India",
+      "job_title": "Gen AI Engineer",
+      "timestamp": "2026-08-10T04:14:57.998264",
+      "details": "Type: unknown, Status: discovered"
+    },
     {
       "type": "applied",
       "company_name": "Dharampal Satyapal Group (DS Group)",
@@ -42,13 +49,6 @@
       "company_name": "Accion Labs",
       "job_title": "Forward Deployed Engineer.",
       "timestamp": "2026-08-10T03:52:23.515938",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "PwC",
-      "job_title": "GenAI Data Engineer with GenAI projects expertise, Python, Azure/AWS",
-      "timestamp": "2026-08-10T03:52:06.263395",
       "details": "Type: unknown, Status: discovered"
     },
     {

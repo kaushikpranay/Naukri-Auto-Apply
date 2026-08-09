@@ -1,17 +1,6 @@
 {
   "ready_to_apply": [
     {
-      "id": 27973,
-      "company_name": "Innodata India",
-      "job_title": "Gen AI Engineer",
-      "experience_required": "4-6 Yrs",
-      "location": "Hybrid - Noida",
-      "score": 85.0,
-      "action": "apply",
-      "status": "pending",
-      "ats_type": null
-    },
-    {
       "id": 28034,
       "company_name": "Healthasyst",
       "job_title": "AI Engineer",
@@ -215,6 +204,17 @@
       "job_title": "AI Agent Engineer",
       "experience_required": "3-8 Yrs",
       "location": "Remote",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 28465,
+      "company_name": "Impressico Business Solutions",
+      "job_title": "Artificial Intelligence Engineer",
+      "experience_required": "4-8 Yrs",
+      "location": "Noida",
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
