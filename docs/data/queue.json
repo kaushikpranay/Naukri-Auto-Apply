@@ -1,7 +1,237 @@
 {
-  "ready_to_apply": [],
+  "ready_to_apply": [
+    {
+      "id": 26483,
+      "company_name": "Keywords Studios",
+      "job_title": "AI Engineer",
+      "experience_required": "3-6 Yrs",
+      "location": "Remote",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26486,
+      "company_name": "HCLTech",
+      "job_title": "GEN AI Engineer",
+      "experience_required": "2-5 Yrs",
+      "location": "Noida, Chennai, Hyderabad",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26489,
+      "company_name": "Sparix Global",
+      "job_title": "Gen AI Engineer",
+      "experience_required": "1-5 Yrs",
+      "location": "Noida",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26491,
+      "company_name": "Infosys",
+      "job_title": "AI Engineer",
+      "experience_required": "3-5 Yrs",
+      "location": "Noida, Bengaluru, Pune",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26498,
+      "company_name": "TO THE NEW",
+      "job_title": "Senior Generative AI Engineer | To THE New | Immediate Joiners",
+      "experience_required": "4-9 Yrs",
+      "location": "Hybrid - Noida",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26696,
+      "company_name": "Finicity",
+      "job_title": "AI Engineer",
+      "experience_required": "1-5 Yrs",
+      "location": "Gurugram",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26699,
+      "company_name": "Truefan",
+      "job_title": "Hiring For AI Engineer",
+      "experience_required": "2-6 Yrs",
+      "location": "Gurugram",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26702,
+      "company_name": "Elevondata Labs",
+      "job_title": "Generative AI Engineer",
+      "experience_required": "3-5 Yrs",
+      "location": "Gurugram",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26701,
+      "company_name": "Impetus Technologies",
+      "job_title": "Generative AI Engineer",
+      "experience_required": "4-9 Yrs",
+      "location": "Gurugram, Bengaluru, Chennai",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26707,
+      "company_name": "Hack And Grow Consultancy",
+      "job_title": "Artificial Intelligence Engineer",
+      "experience_required": "3-8 Yrs",
+      "location": "Gurugram",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26709,
+      "company_name": "Itforte Staffing Services",
+      "job_title": "Senior Generative AI Engineer - RAG, LLMs and MLOps | WFH | UK Client",
+      "experience_required": "3-8 Yrs",
+      "location": "Remote",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26713,
+      "company_name": "Innovationm",
+      "job_title": "Artificial Intelligence Engineer",
+      "experience_required": "4-5 Yrs",
+      "location": "Gurugram, Bengaluru, Hyderabad",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26715,
+      "company_name": "Capgemini",
+      "job_title": "Walk-in || GEN AI Engineer",
+      "experience_required": "",
+      "location": "Hybrid - Bengaluru, Pune, Kolkata",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26718,
+      "company_name": "Delostyle Studio",
+      "job_title": "Artificial Intelligence Engineer",
+      "experience_required": "1-5 Yrs",
+      "location": "Kolkata(EP Block Sector 5 Salt Lake +1)",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26719,
+      "company_name": "Infosys",
+      "job_title": "Generative Ai developer.m",
+      "experience_required": "3-8 Yrs",
+      "location": "Hybrid - Noida, Pune, Kolkata",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26720,
+      "company_name": "Infosys",
+      "job_title": "Generative Ai developer......m",
+      "experience_required": "3-8 Yrs",
+      "location": "Hybrid - Bengaluru, Pune, Kolkata",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26727,
+      "company_name": "Infosys",
+      "job_title": "Artificial Intelligence Developer ........................m",
+      "experience_required": "3-8 Yrs",
+      "location": "Hybrid - Kolkata, Indore, Coimbatore",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26728,
+      "company_name": "Black and white Business Solution",
+      "job_title": "Ai Engineer / Gen AI Engineer / Gen AI Developer / Data Scientist /",
+      "experience_required": "4-9 Yrs",
+      "location": "Bengaluru, Kolkata, Chennai",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26732,
+      "company_name": "Infosys",
+      "job_title": "Generative AI_M",
+      "experience_required": "3-5 Yrs",
+      "location": "Hybrid - Bengaluru, Pune, Kolkata",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    },
+    {
+      "id": 26733,
+      "company_name": "EY",
+      "job_title": "GEN AI Engineer",
+      "experience_required": "4-7 Yrs",
+      "location": "Hybrid - Kolkata",
+      "score": 85.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null
+    }
+  ],
   "currently_applying": [],
-  "waiting_user": [],
+  "waiting_user": [
+    {
+      "id": 26482,
+      "company_name": "Trinamix Systems",
+      "job_title": "Gen AI Specialist",
+      "score": 85.0,
+      "status": "waiting_for_user",
+      "ats_type": null
+    }
+  ],
   "retry_queue": [],
   "completed": [],
   "failed": []
