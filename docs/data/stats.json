@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 1150,
-    "naukri_jobs": 1150,
+    "total_jobs": 166,
+    "naukri_jobs": 166,
     "external_jobs": 25,
-    "pending_review": 433,
-    "queued": 1,
+    "pending_review": 0,
+    "queued": 0,
     "applying": 0,
-    "applied": 63,
+    "applied": 0,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
-    "avg_ai_score": 17.0,
-    "today_jobs": 0,
+    "avg_ai_score": 21.7,
+    "today_jobs": 166,
     "today_applications": 0
   },
   "recent_activity": [
     {
-      "type": "applied",
-      "company_name": "Thinkhub Technologies And Consulting",
-      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
-      "timestamp": "2026-07-11T00:25:07.577028",
-      "details": "Type: external_portal, Status: discovered"
+      "type": "ai_evaluated",
+      "company_name": "Capgemini",
+      "job_title": "GenAI Engineer",
+      "timestamp": "2026-08-09T16:39:58.935591",
+      "details": "Score: 75.0%, Action: apply"
     },
     {
-      "type": "applied",
+      "type": "ai_evaluated",
+      "company_name": "Coforge",
+      "job_title": "GEN AI Lead",
+      "timestamp": "2026-08-09T16:39:43.214674",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "SmarTek21",
+      "job_title": "Saviynt IGA Consultant",
+      "timestamp": "2026-08-09T16:39:43.206288",
+      "details": "Score: 10.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
       "company_name": "Sparix Global",
-      "job_title": "Fullstack Developer",
-      "timestamp": "2026-07-11T00:24:51.448517",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Lincoln International",
-      "job_title": "Python Backend Engineer",
-      "timestamp": "2026-07-11T00:24:32.876249",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Portcast",
-      "job_title": "Backend Engineer [Mid-Level]",
-      "timestamp": "2026-07-11T00:24:16.225506",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "TO THE NEW",
-      "job_title": "Senior Generative AI Engineer | To THE New | Immediate Joiners",
-      "timestamp": "2026-07-11T00:24:10.338467",
-      "details": "Type: easy_apply, Status: discovered"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Mocktheta",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-07-10T23:49:24.532919",
-      "details": "Score: 90.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Acenet",
-      "job_title": "Full Stack Developer - AI+Pyt",
-      "timestamp": "2026-07-10T23:49:12.406277",
+      "job_title": "GenAI Developer",
+      "timestamp": "2026-08-09T16:39:26.505741",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Full Stack Engineer",
-      "timestamp": "2026-07-10T23:49:12.403889",
+      "company_name": "Iris Software",
+      "job_title": "Gen AI - Lead",
+      "timestamp": "2026-08-09T16:39:26.498441",
       "details": "Score: 0.0%, Action: skip"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Cendyn",
-      "job_title": "Software Engineer - AI",
-      "timestamp": "2026-07-10T23:49:12.249238",
-      "details": "Score: 85.0%, Action: apply"
+      "type": "job_discovered",
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-08-09T16:39:01.135191",
+      "details": null
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "SSD Shared Services",
-      "job_title": "Java+AI Developer",
-      "timestamp": "2026-07-10T23:48:52.461212",
-      "details": "Score: 0.0%, Action: skip"
+      "type": "job_discovered",
+      "company_name": "Hackajob",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-08-09T16:39:01.135191",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "HCLTech",
+      "job_title": "GEN AI Engineer",
+      "timestamp": "2026-08-09T16:39:01.135191",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Training Basket",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-08-09T16:39:01.135191",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Omnie Solutions",
+      "job_title": "AI Engineer (Generative AI/ Agents)",
+      "timestamp": "2026-08-09T16:39:01.135191",
+      "details": null
     }
   ]
 }

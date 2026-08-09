@@ -1,37 +1,8 @@
 {
-  "ready_to_apply": [
-    {
-      "id": 22258,
-      "company_name": "Thinkhub Technologies And Consulting",
-      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
-      "experience_required": "2-4 Yrs",
-      "location": "Gurugram",
-      "score": 75.0,
-      "action": "apply",
-      "status": "queued",
-      "ats_type": null
-    }
-  ],
+  "ready_to_apply": [],
   "currently_applying": [],
   "waiting_user": [],
-  "retry_queue": [
-    {
-      "id": 22674,
-      "company_name": "TO THE NEW",
-      "job_title": "Senior Generative AI Engineer | To THE New | Immediate Joiners",
-      "retry_count": 1,
-      "status": "temporary_failure",
-      "score": 80.0
-    },
-    {
-      "id": 25212,
-      "company_name": "Thoughtsol Infotech",
-      "job_title": "Artificial Intelligence Engineer",
-      "retry_count": 1,
-      "status": "temporary_failure",
-      "score": 85.0
-    }
-  ],
+  "retry_queue": [],
   "completed": [],
   "failed": []
 }

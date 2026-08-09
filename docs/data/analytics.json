@@ -1,82 +1,30 @@
 {
   "applications_per_day": [
     {
-      "date": "2026-06-25",
-      "count": 45
-    },
-    {
-      "date": "2026-06-28",
-      "count": 126
-    },
-    {
-      "date": "2026-06-29",
-      "count": 45
-    },
-    {
-      "date": "2026-07-03",
-      "count": 310
-    },
-    {
-      "date": "2026-07-04",
-      "count": 26
-    },
-    {
-      "date": "2026-07-05",
-      "count": 241
-    },
-    {
-      "date": "2026-07-07",
-      "count": 191
-    },
-    {
-      "date": "2026-07-08",
-      "count": 51
-    },
-    {
-      "date": "2026-07-10",
-      "count": 115
+      "date": "2026-08-09",
+      "count": 166
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 879
-    },
-    {
-      "score_range": 10,
       "count": 16
     },
     {
-      "score_range": 20,
-      "count": 6
-    },
-    {
-      "score_range": 30,
-      "count": 4
-    },
-    {
-      "score_range": 40,
-      "count": 2
-    },
-    {
-      "score_range": 50,
-      "count": 4
-    },
-    {
-      "score_range": 60,
-      "count": 5
+      "score_range": 10,
+      "count": 1
     },
     {
       "score_range": 70,
-      "count": 50
+      "count": 2
     },
     {
       "score_range": 80,
-      "count": 154
+      "count": 3
     },
     {
       "score_range": 90,
-      "count": 20
+      "count": 1
     }
   ],
   "ats_distribution": [
@@ -87,90 +35,54 @@
   ],
   "success_rates": [
     {
-      "status": "already_applied",
-      "count": 29
-    },
-    {
-      "status": "applied_successfully",
-      "count": 63
-    },
-    {
-      "status": "easy_apply",
-      "count": 1
-    },
-    {
       "status": "evaluated",
-      "count": 955
-    },
-    {
-      "status": "external_portal",
-      "count": 74
+      "count": 23
     },
     {
       "status": "pending",
-      "count": 10
-    },
-    {
-      "status": "queued",
-      "count": 1
-    },
-    {
-      "status": "skip",
-      "count": 3
-    },
-    {
-      "status": "temporary_failure",
-      "count": 2
-    },
-    {
-      "status": "unknown",
-      "count": 11
-    },
-    {
-      "status": "waiting_for_user",
-      "count": 1
+      "count": 143
     }
   ],
   "top_companies": [
     {
-      "name": "Leading Client",
-      "count": 51
-    },
-    {
-      "name": "Accenture",
-      "count": 37
-    },
-    {
-      "name": "Infosys",
-      "count": 34
-    },
-    {
-      "name": "Tata Consultancy Services",
-      "count": 25
-    },
-    {
       "name": "Sparix Global",
-      "count": 19
-    },
-    {
-      "name": "EY",
-      "count": 17
-    },
-    {
-      "name": "Grid Dynamics",
-      "count": 15
-    },
-    {
-      "name": "Iris Software",
       "count": 11
     },
     {
-      "name": "Micro1",
-      "count": 9
+      "name": "Infosys",
+      "count": 8
     },
     {
-      "name": "Coforge",
-      "count": 9
+      "name": "Epam Systems",
+      "count": 8
+    },
+    {
+      "name": "PwC",
+      "count": 4
+    },
+    {
+      "name": "Impetus Technologies",
+      "count": 4
+    },
+    {
+      "name": "Bajaj General Insurance",
+      "count": 4
+    },
+    {
+      "name": "Tata Consultancy Services",
+      "count": 3
+    },
+    {
+      "name": "Sigmasoft Infotech",
+      "count": 3
+    },
+    {
+      "name": "Sia Partners",
+      "count": 3
+    },
+    {
+      "name": "Qloron Technology",
+      "count": 3
     }
   ],
   "failure_reasons": [
