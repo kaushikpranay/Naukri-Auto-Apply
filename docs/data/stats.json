@@ -4,18 +4,32 @@
     "naukri_jobs": 611,
     "external_jobs": 953,
     "pending_review": 129,
-    "queued": 113,
+    "queued": 111,
     "applying": 0,
-    "applied": 82,
+    "applied": 83,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
     "avg_ai_score": 37.4,
     "today_jobs": 150,
-    "today_applications": 99
+    "today_applications": 101
   },
   "recent_activity": [
+    {
+      "type": "applied",
+      "company_name": "Paralucent",
+      "job_title": "Azure GenAI Backend Engineer",
+      "timestamp": "2026-08-10T04:29:00.457151",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Sparix Global",
+      "job_title": "Agentic AI and GenAI Engineer",
+      "timestamp": "2026-08-10T04:28:46.333955",
+      "details": "Type: already_applied, Status: discovered"
+    },
     {
       "type": "applied",
       "company_name": "Innodata India",
@@ -35,20 +49,6 @@
       "company_name": "Fatakpay Digital",
       "job_title": "Gen AI Engineer",
       "timestamp": "2026-08-10T03:53:00.798121",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Accenture",
-      "job_title": "Custom Software Engineer",
-      "timestamp": "2026-08-10T03:52:39.409833",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Accion Labs",
-      "job_title": "Forward Deployed Engineer.",
-      "timestamp": "2026-08-10T03:52:23.515938",
       "details": "Type: unknown, Status: discovered"
     },
     {

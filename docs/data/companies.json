@@ -13,7 +13,7 @@
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 19,
-    "applications_count": 5,
+    "applications_count": 6,
     "success_count": 0,
     "failure_count": 0
   },
@@ -409,7 +409,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 2,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },

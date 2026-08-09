@@ -729,7 +729,7 @@
   "pagination": {
     "page": 1,
     "limit": 25,
-    "total_records": 66,
+    "total_records": 67,
     "total_pages": 3
   }
 }

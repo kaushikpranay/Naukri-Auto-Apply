@@ -60,7 +60,7 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 29
+      "count": 30
     },
     {
       "status": "applied_successfully",
@@ -68,11 +68,11 @@
     },
     {
       "status": "evaluated",
-      "count": 448
+      "count": 446
     },
     {
       "status": "external_portal",
-      "count": 66
+      "count": 67
     },
     {
       "status": "pending",
