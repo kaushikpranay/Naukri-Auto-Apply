@@ -238,41 +238,44 @@ def generate_jobs_and_details(conn):
     
     total_records = len(all_jobs)
     limit = 25
-    total_pages = (total_records + limit - 1) // limit if total_records > 0 else 1
-    
-    # Write paginated files
-    for page in range(1, total_pages + 1):
-        offset = (page - 1) * limit
-        page_jobs = all_jobs[offset:offset+limit]
-        page_data = {
-            "jobs": page_jobs,
-            "pagination": {
-                "page": page,
-                "limit": limit,
-                "total_records": total_records,
-                "total_pages": total_pages
+
+    def write_paginated_set(prefix, items):
+        tot = len(items)
+        tot_pages = (tot + limit - 1) // limit if tot > 0 else 1
+        for p in range(1, tot_pages + 1):
+            off = (p - 1) * limit
+            p_data = {
+                "jobs": items[off:off+limit],
+                "pagination": {
+                    "page": p,
+                    "limit": limit,
+                    "total_records": tot,
+                    "total_pages": tot_pages
+                }
             }
-        }
-        write_json(f"jobs_page_{page}.json", page_data)
-        
-        # Write default jobs.json (page 1)
-        if page == 1:
-            write_json("jobs.json", page_data)
-            
-    # If no records, write an empty page 1
-    if total_records == 0:
-        page_data = {
-            "jobs": [],
-            "pagination": {
-                "page": 1,
-                "limit": limit,
-                "total_records": 0,
-                "total_pages": 1
-            }
-        }
-        write_json("jobs_page_1.json", page_data)
-        write_json("jobs.json", page_data)
-        
+            write_json(f"{prefix}_page_{p}.json", p_data)
+            if p == 1:
+                write_json(f"{prefix}.json", p_data)
+        if tot == 0:
+            p_data = {"jobs": [], "pagination": {"page": 1, "limit": limit, "total_records": 0, "total_pages": 1}}
+            write_json(f"{prefix}_page_1.json", p_data)
+            write_json(f"{prefix}.json", p_data)
+
+    # 1. Write all jobs
+    write_paginated_set("jobs", all_jobs)
+
+    # 2. Write applied jobs
+    applied_list = [j for j in all_jobs if j.get("status") in ("applied", "applied_successfully", "already_applied")]
+    write_paginated_set("applied_jobs", applied_list)
+
+    # 3. Write applications audit log (applied + failed)
+    apps_list = [j for j in all_jobs if j.get("status") in ("applied", "applied_successfully", "already_applied", "failed", "discovery_failed")]
+    write_paginated_set("applications", apps_list)
+
+    # 4. Write external portal jobs
+    ext_list = [j for j in all_jobs if j.get("status") == "external_portal"]
+    write_paginated_set("external_jobs", ext_list)
+
     # Write details for each job: job_{job_id}.json
     print(f"Generating individual job detail files for {total_records} jobs...")
     for job in all_jobs:
@@ -345,7 +348,7 @@ def generate_queue(conn):
             FROM jobs j
             JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
-            WHERE UPPER(e.action) = 'APPLY' AND j.status IN ('queued', 'pending')
+            WHERE UPPER(e.action) = 'APPLY' AND (j.status IN ('evaluated', 'queued', 'pending') OR j.status IS NULL)
             ORDER BY e.interview_probability DESC LIMIT 20
         """)
         ready = [dict(row) for row in c.fetchall()]
@@ -375,7 +378,7 @@ def generate_queue(conn):
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
-            WHERE j.status IN ('unknown_question', 'waiting_otp', 'waiting_captcha')
+            WHERE j.status IN ('unknown_question', 'waiting_otp', 'waiting_captcha', 'waiting_for_user')
         """)
         waiting = [dict(row) for row in c.fetchall()]
     except sqlite3.OperationalError:

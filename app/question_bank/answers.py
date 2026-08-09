@@ -75,7 +75,7 @@ _STATIC_ANSWERS: dict[str, str] = {
     "dl_experience":            "1",
     "nlp_experience":           "1",
     "sql_experience":           "2",
-    "devops_experience":        "0.5",
+    "devops_experience":        "1",
     "web_framework_experience": "1",
     "ml_framework_experience":  "1",
     "cloud_experience":         "2",
