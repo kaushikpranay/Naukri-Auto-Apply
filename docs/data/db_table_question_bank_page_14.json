@@ -200,11 +200,11 @@
       "question_key": "available_face_face_technical_interview",
       "question_text": "Are you available for a face-to-face technical interview?",
       "answer": "No",
-      "usage_count": 6,
-      "last_used": "2026-07-11T00:24:10.340309",
+      "usage_count": 10,
+      "last_used": "2026-08-10T03:44:59.698425",
       "field_type": "radio",
       "created_at": "2026-07-11T00:09:27.603369",
-      "last_used_at": "2026-07-11T00:24:10.340309",
+      "last_used_at": "2026-08-10T03:44:59.698425",
       "confidence_score": 1.0,
       "updated_at": null
     }
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 236,
-    "total_pages": 16
+    "total_records": 247,
+    "total_pages": 17
   }
 }

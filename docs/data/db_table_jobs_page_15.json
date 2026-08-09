@@ -70,7 +70,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Bangalore",
@@ -127,7 +127,7 @@
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Bangalore",
@@ -222,7 +222,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Pune",
@@ -260,7 +260,7 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Pune",
@@ -308,7 +308,7 @@
   "pagination": {
     "page": 15,
     "limit": 15,
-    "total_records": 461,
-    "total_pages": 31
+    "total_records": 611,
+    "total_pages": 41
   }
 }

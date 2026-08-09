@@ -3,20 +3,32 @@
     {
       "date": "2026-08-09",
       "count": 461
+    },
+    {
+      "date": "2026-08-10",
+      "count": 150
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 253
+      "count": 328
     },
     {
       "score_range": 10,
-      "count": 2
+      "count": 3
+    },
+    {
+      "score_range": 20,
+      "count": 1
     },
     {
       "score_range": 30,
       "count": 1
+    },
+    {
+      "score_range": 40,
+      "count": 2
     },
     {
       "score_range": 50,
@@ -24,19 +36,19 @@
     },
     {
       "score_range": 60,
-      "count": 3
+      "count": 5
     },
     {
       "score_range": 70,
-      "count": 29
+      "count": 43
     },
     {
       "score_range": 80,
-      "count": 134
+      "count": 181
     },
     {
       "score_range": 90,
-      "count": 31
+      "count": 42
     }
   ],
   "ats_distribution": [
@@ -48,69 +60,69 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 13
+      "count": 29
     },
     {
       "status": "applied_successfully",
-      "count": 22
+      "count": 53
     },
     {
       "status": "evaluated",
-      "count": 393
+      "count": 448
     },
     {
       "status": "external_portal",
-      "count": 25
+      "count": 66
     },
     {
       "status": "pending",
-      "count": 7
+      "count": 5
     },
     {
-      "status": "waiting_for_user",
-      "count": 1
+      "status": "unknown",
+      "count": 10
     }
   ],
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 25
+      "count": 30
     },
     {
       "name": "Sparix Global",
-      "count": 18
+      "count": 19
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 13
+      "count": 15
     },
     {
       "name": "PwC",
+      "count": 14
+    },
+    {
+      "name": "Grid Dynamics",
       "count": 12
     },
     {
       "name": "Leading Client",
-      "count": 10
+      "count": 11
     },
     {
       "name": "Epam Systems",
-      "count": 9
+      "count": 11
     },
     {
       "name": "Impetus Technologies",
-      "count": 8
+      "count": 9
     },
     {
       "name": "Micro1",
+      "count": 8
+    },
+    {
+      "name": "Codvo",
       "count": 7
-    },
-    {
-      "name": "Sia Partners",
-      "count": 6
-    },
-    {
-      "name": "HCLTech",
-      "count": 6
     }
   ],
   "failure_reasons": [

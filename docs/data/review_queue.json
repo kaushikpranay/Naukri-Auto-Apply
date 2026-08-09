@@ -432,6 +432,165 @@
     "priority": "high"
   },
   {
+    "id": 28254,
+    "company_name": "Avirasoft Digital Technologies",
+    "job_title": "AL/LLM Engineer with Python",
+    "location": "Hyderabad",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-al-llm-engineer-with-python-avirasoft-digital-gcc-hyderabad-4-to-8-years-071125035088",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS, but lacks Azure OpenAI, PyTorch, Docker.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "PyTorch",
+      "Docker"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28272,
+    "company_name": "Geak Minds",
+    "job_title": "Software Developer | Ansible, Shell Scripting | GeakMinds | Chennai",
+    "location": "Chennai",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-developer-ansible-shell-scripting-geakminds-chennai-geak-minds-chennai-1-to-3-years-310726025676",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience, but lacks Ansible/Shell scripting.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Ansible",
+      "Shell Scripting"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28285,
+    "company_name": "Accenture",
+    "job_title": "LLM Model Developer",
+    "location": "Mumbai",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-mumbai-2-to-5-years-030826918712",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28299,
+    "company_name": "Nway Technologies",
+    "job_title": "Senior AI Backend Engineer (Python, LLMs & OCR)",
+    "location": "Indore",
+    "experience_required": "1-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-ai-backend-engineer-python-llms-ocr-nway-erp-indore-1-to-4-years-270126500303",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, FastAPI, LangChain, AWS experience; lacks OCR and Django.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "OCR tools"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28355,
+    "company_name": "Yinghuali Automotive Interiors",
+    "job_title": "RAG Engineer",
+    "location": "Pune",
+    "experience_required": "4-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-rag-engineer-yinghuali-automotive-interiors-pune-4-to-5-years-040626022328",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills, but lacks Azure OpenAI and Qdrant knowledge.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Qdrant"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28338,
+    "company_name": "Grid Dynamics",
+    "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+    "location": "Bengaluru",
+    "experience_required": "3-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-llm-rag-engineer-legacy-modernization-grid-dynamics-bengaluru-3-to-9-years-130326504142",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS Bedrock, but lacks vector DB like Milvus/Pinecone and code transformation expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Milvus",
+      "Pinecone",
+      "AST code transformation"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28480,
+    "company_name": "Amh Services",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Remote",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-amh-services-gurugram-4-to-8-years-030826014273",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS, but lacks Azure OpenAI and container orchestration.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Kubernetes",
+      "Docker",
+      "OpenAI",
+      "Qdrant"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28491,
+    "company_name": "Alphaspec Consulting Llp",
+    "job_title": "Senior Agentic AI Engineer",
+    "location": "Kolkata",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-agentic-ai-engineer-alphaspec-consulting-llp-kolkata-4-to-7-years-270726502200",
+    "score": 75.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable cloud skills, but lacks vector DB and Azure OpenAI.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "FAISS",
+      "Pinecone",
+      "Qdrant",
+      "ChromaDB"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28520,
+    "company_name": "BSC Solutions India Pvt Ltd",
+    "job_title": "Agentic AI Engineer",
+    "location": "Bengaluru(HRBR Layout)",
+    "experience_required": "4-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-agentic-ai-engineer-bsc-solutions-india-pvt-ltd-bengaluru-4-to-5-years-230726018912",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26346,
     "company_name": "Two95 International",
     "job_title": "GenAI / AI-ML Engineer",
@@ -516,6 +675,101 @@
     "priority": "high"
   },
   {
+    "id": 28244,
+    "company_name": "Leading Client",
+    "job_title": "LLM Engineer",
+    "location": "Hyderabad",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-llm-engineer-zorba-consulting-india-pvt-ltd-hyderabad-4-to-8-years-200726922830",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks PyTorch and Docker.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "PyTorch",
+      "Hugging Face",
+      "FAISS",
+      "Docker",
+      "Kubernetes",
+      "Quantization",
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28298,
+    "company_name": "Qloron Technology",
+    "job_title": "GenAI Developer",
+    "location": "Navi Mumbai",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-genai-developer-qloron-technology-navi-mumbai-4-to-8-years-170726031828",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks Spark/Databricks and HPC expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Apache Spark",
+      "Databricks",
+      "Delta Lake",
+      "HPC Clusters",
+      "GPU Computing"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28432,
+    "company_name": "Codvo",
+    "job_title": "Copilot Studio / Agentic AI Engineer",
+    "location": "Remote",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-copilot-studio-agentic-ai-engineer-codvo-ai-remote-4-to-8-years-150526503670",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28340,
+    "company_name": "Grid Dynamics",
+    "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+    "location": "Bengaluru",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-llm-rag-engineer-legacy-modernization-grid-dynamics-bengaluru-4-to-8-years-300126506581",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LLM experience, AWS Bedrock, FastAPI, LangGraph; missing vector DBs and Java AST skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Milvus",
+      "Pinecone",
+      "Java"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28490,
+    "company_name": "EY",
+    "job_title": "EY - GDS Consulting - AIA - Agentic AI Engineer - Senior",
+    "location": "Kolkata",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ey-gds-consulting-aia-agentic-ai-engineer-senior-ernst-young-llp-kolkata-4-to-8-years-270726902036",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; missing Azure OpenAI and process mining.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Process Mining",
+      "MDM"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26445,
     "company_name": "Capgemini",
     "job_title": "Amazon Connect Developer",
@@ -554,6 +808,31 @@
     "priority": "high"
   },
   {
+    "id": 28294,
+    "company_name": "Lexlegis",
+    "job_title": "Mid-level Developer",
+    "location": "Mumbai",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-mid-level-developer-lexlegis-mumbai-4-to-6-years-291225505722",
+    "score": 65.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG and LLM experience, transferable cloud and AI skills, but missing Django.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Django",
+      "Django Rest Framework",
+      "Docker",
+      "Redis",
+      "Celery",
+      "OAuth2",
+      "JWT",
+      "Unit Testing",
+      "Legal Tech",
+      "GraphQL"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26900,
     "company_name": "The Veca",
     "job_title": "Agentic AI Engineer",
@@ -571,6 +850,57 @@
       "Claude Code"
     ],
     "priority": "high"
+  },
+  {
+    "id": 28280,
+    "company_name": "Talent Corner HR Services",
+    "job_title": "Sr AI/LLM Engineer with Node.js",
+    "location": "Mumbai (All Areas)(kurla west)",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-sr-ai-llm-engineer-with-node-js-talent-corner-hr-services-mumbai-all-areas-4-to-6-years-240426009620",
+    "score": 60.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience but lacks Node.js and vector DB expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Node.js",
+      "FAISS"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 28274,
+    "company_name": "E2E Networks",
+    "job_title": "Accelerated Computing Engineer",
+    "location": "Chennai",
+    "experience_required": "2-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-accelerated-computing-engineer-e2e-networks-limited-chennai-2-to-4-years-270526501545",
+    "score": 45.0,
+    "confidence": 60.0,
+    "reason": "Strong AI production experience but lacks GPU cluster ops and Slurm expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "GPU cluster ops",
+      "Slurm",
+      "vLLM"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 28277,
+    "company_name": "Axis Services",
+    "job_title": "Hiring For AI/ML Software Developers",
+    "location": "Bengaluru, Chennai, Hyderabad",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-hiring-for-ai-ml-software-developers-axis-services-hyderabad-chennai-bengaluru-3-to-8-years-060826011799",
+    "score": 45.0,
+    "confidence": 55.0,
+    "reason": "Strong production RAG and LLM experience but lacks RCM domain expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Revenue Cycle Management"
+    ],
+    "priority": "medium"
   },
   {
     "id": 26485,

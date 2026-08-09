@@ -1,0 +1,114 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "question_text",
+    "answer",
+    "usage_count",
+    "last_used",
+    "field_type",
+    "created_at",
+    "last_used_at",
+    "confidence_score",
+    "updated_at"
+  ],
+  "rows": [
+    {
+      "id": 11734,
+      "question_key": "ex_infosys_employee_if_yes_mention_infosys_employee_id_if_no",
+      "question_text": "Are you ex-infosys employee ?if yes mention your infosys employee id if not, write NA",
+      "answer": "NA",
+      "usage_count": 2,
+      "last_used": "2026-08-10T03:19:44.094107",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-10T03:19:34.438626",
+      "last_used_at": "2026-08-10T03:19:44.094107",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 11738,
+      "question_key": "exp_deloying_in_cloud",
+      "question_text": "Do you have experience in deloying in Cloud ?",
+      "answer": null,
+      "usage_count": 3,
+      "last_used": "2026-08-10T03:35:25.795597",
+      "field_type": "radio",
+      "created_at": "2026-08-10T03:22:40.359113",
+      "last_used_at": "2026-08-10T03:35:25.795597",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 11741,
+      "question_key": "currently_serving_lwd",
+      "question_text": "Are you currently serving, what is your LWD?",
+      "answer": "15 Sep 2026",
+      "usage_count": 3,
+      "last_used": "2026-08-10T03:24:51.498844",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-10T03:24:13.332480",
+      "last_used_at": "2026-08-10T03:24:51.498844",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 11748,
+      "question_key": "exp_ai_prompt_engineer",
+      "question_text": "How many years of experience do you have in AI Prompt Engineer ?",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-10T03:30:11.247270",
+      "field_type": "radio",
+      "created_at": "2026-08-10T03:30:11.247270",
+      "last_used_at": "2026-08-10T03:30:11.247270",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 11752,
+      "question_key": "microsoft_graph_api_experience",
+      "question_text": "Microsoft Graph API experience",
+      "answer": "1",
+      "usage_count": 3,
+      "last_used": "2026-08-10T03:38:19.067593",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-10T03:36:51.020901",
+      "last_used_at": "2026-08-10T03:38:19.067593",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 11754,
+      "question_key": "enterprise_identity_platforms_which_platforms_worked",
+      "question_text": "Enterprise identity platforms,which platforms worked with?",
+      "answer": "AWS",
+      "usage_count": 2,
+      "last_used": "2026-08-10T03:37:39.928579",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-10T03:37:25.681129",
+      "last_used_at": "2026-08-10T03:37:39.928579",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 11758,
+      "question_key": "exp_gen_ai",
+      "question_text": "How many years of experience do you have in Gen AI OR Agentic Ai",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-10T03:42:43.430912",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-10T03:42:43.430912",
+      "last_used_at": "2026-08-10T03:42:43.430912",
+      "confidence_score": 1.0,
+      "updated_at": null
+    }
+  ],
+  "pagination": {
+    "page": 17,
+    "limit": 15,
+    "total_records": 247,
+    "total_pages": 17
+  }
+}

@@ -51,7 +51,7 @@
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Gurgaon",
@@ -127,7 +127,7 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Gurgaon",
@@ -165,7 +165,7 @@
       "posted_date": "Just now",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "unknown",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
@@ -222,7 +222,7 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
@@ -241,7 +241,7 @@
       "posted_date": "3 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
@@ -260,7 +260,7 @@
       "posted_date": "3 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
@@ -308,7 +308,7 @@
   "pagination": {
     "page": 13,
     "limit": 15,
-    "total_records": 461,
-    "total_pages": 31
+    "total_records": 611,
+    "total_pages": 41
   }
 }

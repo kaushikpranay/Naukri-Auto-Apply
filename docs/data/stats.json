@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 461,
-    "naukri_jobs": 461,
+    "total_jobs": 611,
+    "naukri_jobs": 611,
     "external_jobs": 25,
-    "pending_review": 79,
+    "pending_review": 81,
     "queued": 0,
     "applying": 0,
-    "applied": 22,
+    "applied": 53,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
-    "avg_ai_score": 36.3,
-    "today_jobs": 0,
-    "today_applications": 0
+    "avg_ai_score": 37.4,
+    "today_jobs": 150,
+    "today_applications": 98
   },
   "recent_activity": [
     {
-      "type": "job_discovered",
-      "company_name": "Statusneo Technology Consulting",
-      "job_title": "GenAI Engineer",
-      "timestamp": "2026-08-09T22:03:43.676570",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Coforge",
-      "job_title": "AI Engineers | GenAI | LLM | Agentic AI",
-      "timestamp": "2026-08-09T22:02:37.429878",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Sourcefuse Technologies",
-      "job_title": "Polyglot Developer",
-      "timestamp": "2026-08-09T22:02:37.429878",
-      "details": null
-    },
-    {
       "type": "applied",
-      "company_name": "Macrosoft",
-      "job_title": "Agentic AI Developer",
-      "timestamp": "2026-08-09T21:49:20.533592",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Huzzle",
+      "company_name": "Dharampal Satyapal Group (DS Group)",
       "job_title": "AI Engineer",
-      "timestamp": "2026-08-09T21:49:15.260903",
+      "timestamp": "2026-08-10T03:53:13.629253",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Fatakpay Digital",
+      "job_title": "Gen AI Engineer",
+      "timestamp": "2026-08-10T03:53:00.798121",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Accenture",
+      "job_title": "Custom Software Engineer",
+      "timestamp": "2026-08-10T03:52:39.409833",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Neotechie",
-      "job_title": "AI Prompt Engineer",
-      "timestamp": "2026-08-09T21:48:59.466408",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "Accion Labs",
+      "job_title": "Forward Deployed Engineer.",
+      "timestamp": "2026-08-10T03:52:23.515938",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Pulsepoint",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-09T21:48:44.853471",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "My Next Developer",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-09T21:48:29.934603",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "PwC",
+      "job_title": "GenAI Data Engineer with GenAI projects expertise, Python, Azure/AWS",
+      "timestamp": "2026-08-10T03:52:06.263395",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "LLM Engineer",
-      "timestamp": "2026-08-09T20:20:22.985819",
-      "details": "Score: 0.0%, Action: review"
+      "company_name": "Grid Dynamics",
+      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+      "timestamp": "2026-08-10T03:02:35.722549",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Net Connect",
-      "job_title": "Senior AI/LLM Engineer",
-      "timestamp": "2026-08-09T20:20:17.748711",
-      "details": "Score: 0.0%, Action: review"
+      "company_name": "Grid Dynamics",
+      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+      "timestamp": "2026-08-10T03:02:20.368042",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Grid Dynamics",
+      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+      "timestamp": "2026-08-10T03:02:05.967842",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Grid Dynamics",
+      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+      "timestamp": "2026-08-10T03:01:55.419520",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Grid Dynamics",
+      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
+      "timestamp": "2026-08-10T03:01:41.937764",
+      "details": "Score: 80.0%, Action: apply"
     }
   ]
 }
