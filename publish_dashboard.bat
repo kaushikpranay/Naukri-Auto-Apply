@@ -9,17 +9,21 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
-echo Staging docs/ and dashboard data files...
+echo Committing and pushing docs/ [Naukri-Automation repo]...
 git add docs
-git add ../dashboard/public/data
-
-echo Committing changes...
 git commit -m "Update static dashboard data [automated]"
-
-echo Pushing to GitHub...
 git push
 if %ERRORLEVEL% neq 0 (
-    echo Error pushing to remote repository!
+    echo Error pushing docs to remote repository!
+    exit /b %ERRORLEVEL%
+)
+
+echo Committing and pushing dashboard data [dashboard repo]...
+git -C ../dashboard add public/data
+git -C ../dashboard commit -m "Update static dashboard data [automated]"
+git -C ../dashboard push
+if %ERRORLEVEL% neq 0 (
+    echo Error pushing dashboard data to remote repository!
     exit /b %ERRORLEVEL%
 )
 
