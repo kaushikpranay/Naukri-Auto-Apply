@@ -47,12 +47,20 @@
       "selected_option": "Chennai, Bengaluru",
       "tenant": "",
       "created_at": "2026-07-07T21:13:05.810154"
+    },
+    {
+      "id": 21,
+      "question_key": "veteran_status__options__currently serving|never served|previously served",
+      "raw_answer": "No",
+      "selected_option": "Never served",
+      "tenant": "",
+      "created_at": "2026-08-09T21:39:11.975163"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 20,
+    "total_records": 21,
     "total_pages": 2
   }
 }

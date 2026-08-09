@@ -194,12 +194,25 @@
       "last_used_at": "2026-07-12T17:47:26",
       "confidence_score": 1.0,
       "updated_at": "2026-07-12T17:47:26"
+    },
+    {
+      "id": 11503,
+      "question_key": "willing_to_relocate_gurugram",
+      "question_text": "Are you currently residing in Gurugram or willing to relocate to Gurugram?",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-09T19:28:09.070236",
+      "field_type": "radio",
+      "created_at": "2026-08-09T19:28:09.070236",
+      "last_used_at": "2026-08-09T19:28:09.070236",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 15,
     "limit": 15,
-    "total_records": 224,
-    "total_pages": 15
+    "total_records": 236,
+    "total_pages": 16
   }
 }

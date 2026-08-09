@@ -30,7 +30,7 @@
       "id": 5907,
       "question_key": "3_years",
       "question_text": "<3 years",
-      "answer": "0.5",
+      "answer": "1",
       "usage_count": 2,
       "last_used": "2026-06-08T02:31:48.462189",
       "field_type": "contenteditable",
@@ -162,7 +162,7 @@
       "question_text": "interview_availability",
       "answer": "Yes",
       "usage_count": 0,
-      "last_used": "2026-08-09T16:27:34.418755",
+      "last_used": "2026-08-09T22:01:15.068196",
       "field_type": null,
       "created_at": null,
       "last_used_at": "2026-06-18T18:34:01",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 5,
     "limit": 15,
-    "total_records": 224,
-    "total_pages": 15
+    "total_records": 236,
+    "total_pages": 16
   }
 }

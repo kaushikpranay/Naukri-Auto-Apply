@@ -44,11 +44,11 @@
       "question_key": "willing_to_relocate_mumbai",
       "question_text": "Are you currently residing in Mumbai (All Areas) or willing to relocate to Mumbai (All Areas)?",
       "answer": "Yes",
-      "usage_count": 2,
-      "last_used": "2026-06-17T18:52:50.689078",
+      "usage_count": 3,
+      "last_used": "2026-08-09T19:26:24.657747",
       "field_type": "radio",
       "created_at": "2026-06-14T14:45:23.555943",
-      "last_used_at": "2026-06-17T18:52:50.689078",
+      "last_used_at": "2026-08-09T19:26:24.657747",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 7,
     "limit": 15,
-    "total_records": 224,
-    "total_pages": 15
+    "total_records": 236,
+    "total_pages": 16
   }
 }
