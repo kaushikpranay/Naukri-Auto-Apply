@@ -54,16 +54,10 @@ def generate_stats(conn):
     # Core Counters
     c.execute("SELECT COUNT(*) FROM jobs")
     total_jobs = c.fetchone()[0]
+    naukri_jobs = total_jobs
     
-    # Check if normalized_url column exists, otherwise fallback
     try:
-        c.execute("SELECT COUNT(*) FROM jobs WHERE normalized_url LIKE '%naukri.com%'")
-        naukri_jobs = c.fetchone()[0]
-    except sqlite3.OperationalError:
-        naukri_jobs = total_jobs # fallback
-        
-    try:
-        c.execute("SELECT COUNT(*) FROM ats_applications")
+        c.execute("SELECT COUNT(*) FROM external_jobs")
         external_jobs = c.fetchone()[0]
     except sqlite3.OperationalError:
         external_jobs = 0
@@ -72,19 +66,26 @@ def generate_stats(conn):
         c.execute("""
             SELECT COUNT(*) FROM jobs j 
             JOIN ai_evaluations e ON e.job_id = j.id 
-            WHERE UPPER(e.action) = 'REVIEW'
+            WHERE UPPER(e.action) = 'REVIEW' OR (e.interview_probability >= 60 AND e.interview_probability <= 75)
         """)
         pending_review = c.fetchone()[0]
     except sqlite3.OperationalError:
         pending_review = 0
         
-    c.execute("SELECT COUNT(*) FROM jobs WHERE status = 'queued'")
-    queued = c.fetchone()[0]
+    try:
+        c.execute("""
+            SELECT COUNT(*) FROM jobs j 
+            LEFT JOIN ai_evaluations e ON e.job_id = j.id 
+            WHERE UPPER(e.action) = 'APPLY' AND (j.status IN ('evaluated', 'queued', 'pending') OR j.status IS NULL)
+        """)
+        queued = c.fetchone()[0]
+    except sqlite3.OperationalError:
+        queued = 0
     
     c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('submitting', 'applying')")
     applying = c.fetchone()[0]
     
-    c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('applied', 'applied_successfully')")
+    c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('applied', 'applied_successfully', 'already_applied')")
     applied = c.fetchone()[0]
     
     c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('failed', 'discovery_failed')")
