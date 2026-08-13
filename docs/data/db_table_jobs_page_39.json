@@ -32,7 +32,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Chennai",
@@ -165,7 +165,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Remote",
@@ -222,7 +222,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Remote",
@@ -308,7 +308,7 @@
   "pagination": {
     "page": 39,
     "limit": 15,
-    "total_records": 611,
-    "total_pages": 41
+    "total_records": 923,
+    "total_pages": 62
   }
 }

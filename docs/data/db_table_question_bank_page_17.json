@@ -94,13 +94,104 @@
     {
       "id": 11758,
       "question_key": "exp_gen_ai",
-      "question_text": "How many years of experience do you have in Gen AI OR Agentic Ai",
+      "question_text": "How many years of experience do you have in Gen-Ai?",
       "answer": null,
-      "usage_count": 1,
-      "last_used": "2026-08-10T03:42:43.430912",
+      "usage_count": 2,
+      "last_used": "2026-08-12T15:55:56.477087",
       "field_type": "contenteditable",
       "created_at": "2026-08-10T03:42:43.430912",
-      "last_used_at": "2026-08-10T03:42:43.430912",
+      "last_used_at": "2026-08-12T15:55:56.477087",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12007,
+      "question_key": "0_3_years",
+      "question_text": "0\u20133 years",
+      "answer": "Indore",
+      "usage_count": 2,
+      "last_used": "2026-08-12T15:18:11.832439",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-12T15:18:04.078270",
+      "last_used_at": "2026-08-12T15:18:11.832439",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12010,
+      "question_key": "worked_agentic_frameworks_such_as_langgraph_and_llamaindex",
+      "question_text": "Have you worked with agentic frameworks such as LangGraph and Llamaindex?",
+      "answer": "Yes",
+      "usage_count": 4,
+      "last_used": "2026-08-12T15:47:51.871406",
+      "field_type": "radio",
+      "created_at": "2026-08-12T15:23:51.796015",
+      "last_used_at": "2026-08-12T15:47:51.871406",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12063,
+      "question_key": "exp_agenetic_ai",
+      "question_text": "How many years of experience do you have in Agenetic Ai?",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-12T15:48:15.976681",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-12T15:48:15.976681",
+      "last_used_at": "2026-08-12T15:48:15.976681",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12067,
+      "question_key": "exp_csharp",
+      "question_text": "How many years of experience do you have in C#?",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-12T15:54:07.295529",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-12T15:54:07.295529",
+      "last_used_at": "2026-08-12T15:54:07.295529",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12265,
+      "question_key": "which_frontend_technologies_worked_reactdotjs_nextdotjs_angu",
+      "question_text": "Which frontend technologies have you worked with? (React.js, Next.js, Angular, etc.)",
+      "answer": "React.js",
+      "usage_count": 3,
+      "last_used": "2026-08-13T17:40:18.652507",
+      "field_type": "radio",
+      "created_at": "2026-08-13T17:38:58.799286",
+      "last_used_at": "2026-08-13T17:40:18.652507",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12267,
+      "question_key": "which_backend_technologies_worked_java_spring_boot_nodedotjs",
+      "question_text": "Which backend technologies have you worked with? (Java/Spring Boot, Node.js, Python/Django, etc.)",
+      "answer": "Python/Django",
+      "usage_count": 2,
+      "last_used": "2026-08-13T17:39:28.069994",
+      "field_type": "radio",
+      "created_at": "2026-08-13T17:39:18.593008",
+      "last_used_at": "2026-08-13T17:39:28.069994",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12269,
+      "question_key": "which_databases_worked_mysql_postgresql_mongodb_sql_server_e",
+      "question_text": "Which databases have you worked with? (MySQL, PostgreSQL, MongoDB, SQL Server, etc.)",
+      "answer": "PostgreSQL",
+      "usage_count": 2,
+      "last_used": "2026-08-13T17:39:41.684545",
+      "field_type": "radio",
+      "created_at": "2026-08-13T17:39:35.351080",
+      "last_used_at": "2026-08-13T17:39:41.684545",
       "confidence_score": 1.0,
       "updated_at": null
     }
@@ -108,7 +199,7 @@
   "pagination": {
     "page": 17,
     "limit": 15,
-    "total_records": 247,
+    "total_records": 254,
     "total_pages": 17
   }
 }

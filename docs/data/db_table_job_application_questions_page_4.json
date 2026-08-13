@@ -1,0 +1,30 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 607,
+      "job_id": 26361,
+      "question_key": "notice_period",
+      "question_text": "Are you currently serving Notice Period , if yes -please mention LWD , If not what is official notice period",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "45 days",
+      "detected_at": "2026-08-13T17:40:42.168524"
+    }
+  ],
+  "pagination": {
+    "page": 4,
+    "limit": 15,
+    "total_records": 46,
+    "total_pages": 4
+  }
+}

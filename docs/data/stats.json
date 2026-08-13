@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 611,
-    "naukri_jobs": 611,
+    "total_jobs": 923,
+    "naukri_jobs": 923,
     "external_jobs": 953,
-    "pending_review": 129,
-    "queued": 111,
+    "pending_review": 316,
+    "queued": 0,
     "applying": 0,
-    "applied": 83,
+    "applied": 122,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
-    "avg_ai_score": 37.4,
-    "today_jobs": 150,
-    "today_applications": 101
+    "avg_ai_score": 27.0,
+    "today_jobs": 56,
+    "today_applications": 4
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Paralucent",
-      "job_title": "Azure GenAI Backend Engineer",
-      "timestamp": "2026-08-10T04:29:00.457151",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "PwC India",
+      "job_title": "Databricks Engineer",
+      "timestamp": "2026-08-13T17:40:42.167538",
+      "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Sparix Global",
-      "job_title": "Agentic AI and GenAI Engineer",
-      "timestamp": "2026-08-10T04:28:46.333955",
+      "company_name": "HeapTrace",
+      "job_title": "Fullstack Developer",
+      "timestamp": "2026-08-13T17:40:18.650539",
+      "details": "Type: applied_successfully, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Cctech",
+      "job_title": "Fullstack Developer",
+      "timestamp": "2026-08-13T17:38:35.310230",
       "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Innodata India",
-      "job_title": "Gen AI Engineer",
-      "timestamp": "2026-08-10T04:14:57.998264",
-      "details": "Type: unknown, Status: discovered"
+      "company_name": "HeapTrace",
+      "job_title": "Full stack Developer",
+      "timestamp": "2026-08-13T17:38:27.405136",
+      "details": "Type: applied_successfully, Status: discovered"
     },
     {
-      "type": "applied",
-      "company_name": "Dharampal Satyapal Group (DS Group)",
+      "type": "ai_evaluated",
+      "company_name": "Sandhata Technologies",
       "job_title": "AI Engineer",
-      "timestamp": "2026-08-10T03:53:13.629253",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Fatakpay Digital",
-      "job_title": "Gen AI Engineer",
-      "timestamp": "2026-08-10T03:53:00.798121",
-      "details": "Type: unknown, Status: discovered"
+      "timestamp": "2026-08-13T17:02:26.633608",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Grid Dynamics",
-      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
-      "timestamp": "2026-08-10T03:02:35.722549",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "purview services",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-08-13T17:02:26.630555",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Grid Dynamics",
-      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
-      "timestamp": "2026-08-10T03:02:20.368042",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Exavalu",
+      "job_title": "AI Software Engineer (Agentic AI)",
+      "timestamp": "2026-08-13T17:02:26.626945",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Grid Dynamics",
-      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
-      "timestamp": "2026-08-10T03:02:05.967842",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Astes Healthcare Solutions",
+      "job_title": "Software Developer - AI/ML",
+      "timestamp": "2026-08-13T17:02:26.615860",
+      "details": "Score: 0.0%, Action: review"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Grid Dynamics",
-      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
-      "timestamp": "2026-08-10T03:01:55.419520",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Nasu Group",
+      "job_title": "Gen AI Engineers",
+      "timestamp": "2026-08-13T17:02:21.519474",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Grid Dynamics",
-      "job_title": "Senior LLM/RAG Engineer (Legacy Modernization)",
-      "timestamp": "2026-08-10T03:01:41.937764",
-      "details": "Score: 80.0%, Action: apply"
+      "type": "job_discovered",
+      "company_name": "Capgemini",
+      "job_title": "Agentic AI Developer",
+      "timestamp": "2026-08-13T16:37:42.536502",
+      "details": null
     }
   ]
 }

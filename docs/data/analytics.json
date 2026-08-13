@@ -7,24 +7,36 @@
     {
       "date": "2026-08-10",
       "count": 150
+    },
+    {
+      "date": "2026-08-11",
+      "count": 99
+    },
+    {
+      "date": "2026-08-12",
+      "count": 157
+    },
+    {
+      "date": "2026-08-13",
+      "count": 56
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 328
+      "count": 604
     },
     {
       "score_range": 10,
-      "count": 3
+      "count": 4
     },
     {
       "score_range": 20,
-      "count": 1
+      "count": 2
     },
     {
       "score_range": 30,
-      "count": 1
+      "count": 2
     },
     {
       "score_range": 40,
@@ -32,23 +44,23 @@
     },
     {
       "score_range": 50,
-      "count": 1
+      "count": 3
     },
     {
       "score_range": 60,
-      "count": 5
+      "count": 6
     },
     {
       "score_range": 70,
-      "count": 43
+      "count": 44
     },
     {
       "score_range": 80,
-      "count": 181
+      "count": 198
     },
     {
       "score_range": 90,
-      "count": 42
+      "count": 43
     }
   ],
   "ats_distribution": [
@@ -60,69 +72,73 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 30
+      "count": 41
     },
     {
       "status": "applied_successfully",
-      "count": 53
+      "count": 81
     },
     {
-      "status": "evaluated",
-      "count": 446
-    },
-    {
-      "status": "external_portal",
-      "count": 67
-    },
-    {
-      "status": "pending",
+      "status": "easy_apply",
       "count": 4
     },
     {
+      "status": "evaluated",
+      "count": 614
+    },
+    {
+      "status": "external_portal",
+      "count": 124
+    },
+    {
+      "status": "pending",
+      "count": 15
+    },
+    {
       "status": "unknown",
-      "count": 11
+      "count": 44
     }
   ],
   "top_companies": [
     {
       "name": "Infosys",
+      "count": 38
+    },
+    {
+      "name": "Tata Consultancy Services",
       "count": 30
     },
     {
       "name": "Sparix Global",
-      "count": 19
-    },
-    {
-      "name": "Tata Consultancy Services",
-      "count": 15
+      "count": 25
     },
     {
       "name": "PwC",
-      "count": 14
-    },
-    {
-      "name": "Grid Dynamics",
-      "count": 12
+      "count": 19
     },
     {
       "name": "Leading Client",
-      "count": 11
+      "count": 15
     },
     {
       "name": "Epam Systems",
+      "count": 15
+    },
+    {
+      "name": "Grid Dynamics",
+      "count": 13
+    },
+    {
+      "name": "Capgemini",
       "count": 11
     },
     {
       "name": "Impetus Technologies",
-      "count": 9
+      "count": 10
     },
     {
       "name": "Micro1",
-      "count": 8
-    },
-    {
-      "name": "Codvo",
-      "count": 7
+      "count": 9
     }
   ],
   "failure_reasons": [

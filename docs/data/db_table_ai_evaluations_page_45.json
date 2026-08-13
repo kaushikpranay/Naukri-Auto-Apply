@@ -16,9 +16,9 @@
   ],
   "rows": [
     {
-      "id": 4102,
-      "job_id": 21233,
-      "run_id": "f546b62b",
+      "id": 5242,
+      "job_id": 28956,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -26,14 +26,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.632911"
+      "created_at": "2026-08-12T14:58:37.871055"
     },
     {
-      "id": 4103,
-      "job_id": 21234,
-      "run_id": "f546b62b",
+      "id": 5243,
+      "job_id": 28958,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -41,14 +41,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.635963"
+      "created_at": "2026-08-12T14:58:43.169532"
     },
     {
-      "id": 4104,
-      "job_id": 21235,
-      "run_id": "f546b62b",
+      "id": 5244,
+      "job_id": 28959,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -56,59 +56,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.639291"
+      "created_at": "2026-08-12T14:58:48.318410"
     },
     {
-      "id": 4105,
-      "job_id": 21215,
-      "run_id": "f546b62b",
-      "model_name": "Requires Review",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
-      "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.666984"
-    },
-    {
-      "id": 4106,
-      "job_id": 21236,
-      "run_id": "f546b62b",
-      "model_name": "Requires Review",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
-      "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.669486"
-    },
-    {
-      "id": 4107,
-      "job_id": 21237,
-      "run_id": "f546b62b",
-      "model_name": "Requires Review",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
-      "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.672958"
-    },
-    {
-      "id": 4108,
-      "job_id": 21238,
-      "run_id": "f546b62b",
+      "id": 5245,
+      "job_id": 28961,
+      "run_id": "1e256b5d",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -118,12 +73,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.677523"
+      "created_at": "2026-08-12T14:58:48.324259"
     },
     {
-      "id": 4109,
-      "job_id": 21239,
-      "run_id": "f546b62b",
+      "id": 5246,
+      "job_id": 28973,
+      "run_id": "1e256b5d",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -133,12 +88,27 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.680539"
+      "created_at": "2026-08-12T14:58:48.331208"
     },
     {
-      "id": 4110,
-      "job_id": 21243,
-      "run_id": "f546b62b",
+      "id": 5247,
+      "job_id": 28977,
+      "run_id": "1e256b5d",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-08-12T14:58:48.335251"
+    },
+    {
+      "id": 5248,
+      "job_id": 28979,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -146,14 +116,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.682985"
+      "created_at": "2026-08-12T14:58:53.443841"
     },
     {
-      "id": 4111,
-      "job_id": 21244,
-      "run_id": "f546b62b",
+      "id": 5249,
+      "job_id": 28981,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -161,14 +131,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.685855"
+      "created_at": "2026-08-12T14:58:59.029079"
     },
     {
-      "id": 4112,
-      "job_id": 21247,
-      "run_id": "f546b62b",
+      "id": 5250,
+      "job_id": 29006,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -176,14 +146,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.688403"
+      "created_at": "2026-08-12T14:59:04.181057"
     },
     {
-      "id": 4113,
-      "job_id": 21249,
-      "run_id": "f546b62b",
+      "id": 5251,
+      "job_id": 29014,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -191,14 +161,29 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.693654"
+      "created_at": "2026-08-12T14:59:09.483224"
     },
     {
-      "id": 4114,
-      "job_id": 21262,
-      "run_id": "f546b62b",
+      "id": 5252,
+      "job_id": 29017,
+      "run_id": "1e256b5d",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-08-12T14:59:09.501883"
+    },
+    {
+      "id": 5253,
+      "job_id": 29020,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -206,14 +191,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.697217"
+      "created_at": "2026-08-12T14:59:14.949923"
     },
     {
-      "id": 4115,
-      "job_id": 21264,
-      "run_id": "f546b62b",
+      "id": 5254,
+      "job_id": 29021,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -221,14 +206,14 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.700512"
+      "created_at": "2026-08-12T14:59:20.515868"
     },
     {
-      "id": 4116,
-      "job_id": 21266,
-      "run_id": "f546b62b",
+      "id": 5255,
+      "job_id": 29028,
+      "run_id": "1e256b5d",
       "model_name": "Requires Review",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -236,15 +221,30 @@
       "priority": "medium",
       "action": "review",
       "confidence": 0.0,
-      "reason": "Requires review after provider failures.",
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
       "missing_skills": "[]",
-      "created_at": "2026-07-05T19:01:46.703784"
+      "created_at": "2026-08-12T14:59:25.829424"
+    },
+    {
+      "id": 5256,
+      "job_id": 29030,
+      "run_id": "1e256b5d",
+      "model_name": "Requires Review",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "medium",
+      "action": "review",
+      "confidence": 0.0,
+      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
+      "missing_skills": "[]",
+      "created_at": "2026-08-12T14:59:31.532082"
     }
   ],
   "pagination": {
     "page": 45,
     "limit": 15,
-    "total_records": 1140,
-    "total_pages": 76
+    "total_records": 908,
+    "total_pages": 61
   }
 }

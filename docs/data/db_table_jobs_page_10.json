@@ -260,7 +260,7 @@
       "posted_date": "4 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
@@ -308,7 +308,7 @@
   "pagination": {
     "page": 10,
     "limit": 15,
-    "total_records": 611,
-    "total_pages": 41
+    "total_records": 923,
+    "total_pages": 62
   }
 }
