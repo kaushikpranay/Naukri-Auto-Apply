@@ -76,6 +76,7 @@ class ApplyDiscoveryService:
         "applications limit",
     ]
     _QUOTA_CONSECUTIVE_THRESHOLD: int = 3
+    _BROWSER_ERROR_CONSECUTIVE_THRESHOLD: int = 5
 
     def __init__(
         self,
@@ -90,6 +91,8 @@ class ApplyDiscoveryService:
         self._artifacts_dir: Path = resolve_path(settings.paths.artifacts)
         self._form_filler = FormFiller(settings, selectors, self._screenshots_dir, self._repo)
         self._quota_consecutive: int = 0  # reset on every service.run() call from the loop
+        self._browser_error_consecutive: int = 0  # reset on every service.run() call
+        self._max_retry_count: int = settings.discovery.max_retry_count
 
     async def run(
         self,
@@ -112,6 +115,7 @@ class ApplyDiscoveryService:
                                 detected, the loop should stop immediately.
         """
         self._quota_consecutive = 0
+        self._browser_error_consecutive = 0
         summary = DiscoverySummary()
 
         if force_job_id is not None:
@@ -122,11 +126,13 @@ class ApplyDiscoveryService:
             jobs = [job]
         elif only_retryable:
             jobs = self._repo.get_retryable_jobs(
-                limit=self._settings.discovery.max_discovery_jobs_per_run
+                limit=self._settings.discovery.max_discovery_jobs_per_run,
+                max_retry_count=self._max_retry_count,
             )
         else:
             jobs = self._repo.get_jobs_for_discovery(
-                limit=self._settings.discovery.max_discovery_jobs_per_run
+                limit=self._settings.discovery.max_discovery_jobs_per_run,
+                max_retry_count=self._max_retry_count,
             )
 
         if not jobs:
@@ -227,9 +233,10 @@ class ApplyDiscoveryService:
                             summary=summary,
                         )
                 else:
-                    # Any successful classification resets the counter
+                    # Any successful classification resets the counters
                     if outcome.record.apply_type not in ("discovery_failed", None):
                         self._quota_consecutive = 0
+                        self._browser_error_consecutive = 0
 
             except QuotaExhaustedStop:
                 raise  # propagate to caller without wrapping
@@ -253,12 +260,27 @@ class ApplyDiscoveryService:
                     )
                 )
                 import playwright.async_api
-                if isinstance(exc, (playwright.async_api.Error, asyncio.TimeoutError)):
+                is_browser_error = isinstance(exc, (playwright.async_api.Error, asyncio.TimeoutError))
+                if is_browser_error:
                     self._repo.update_job_status(job.id, "browser_error")
                 else:
                     self._repo.update_job_status(job.id, "temporary_failure")
                 self._repo.increment_retry_count(job.id)
                 summary.failed += 1
+
+                # ── Consecutive browser-error circuit breaker ─────────
+                if is_browser_error:
+                    self._browser_error_consecutive += 1
+                    if self._browser_error_consecutive >= self._BROWSER_ERROR_CONSECUTIVE_THRESHOLD:
+                        logger.error(
+                            "NETWORK_CIRCUIT_BREAKER: {} consecutive browser errors — "
+                            "aborting discovery batch (likely internet outage).",
+                            self._browser_error_consecutive,
+                        )
+                        break
+                else:
+                    self._browser_error_consecutive = 0
+
                 if page.is_closed():
                     logger.error("Browser page was closed/crashed during processing. Aborting discovery batch.")
                     break

@@ -164,7 +164,7 @@ class ApplyDiscoveryRepository:
         self._conn.commit()
         logger.debug("Apply discovery schema verified")
 
-    def get_pending_discovery_count(self) -> int:
+    def get_pending_discovery_count(self, max_retry_count: int = 3) -> int:
         """Return count of APPLY-evaluated jobs still awaiting discovery."""
         cursor = self._conn.cursor()
         cursor.execute("""
@@ -173,6 +173,7 @@ class ApplyDiscoveryRepository:
             JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN job_applications a ON a.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
+              AND COALESCE(j.retry_count, 0) < ?
               AND (
                   j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
                   OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
@@ -181,11 +182,11 @@ class ApplyDiscoveryRepository:
                       'applied_successfully', 'failed', 'external_portal'
                   ))
               )
-        """)
+        """, (max_retry_count,))
         row = cursor.fetchone()
         return int(row[0]) if row else 0
 
-    def get_jobs_for_discovery(self, limit: int) -> list[JobData]:
+    def get_jobs_for_discovery(self, limit: int, max_retry_count: int = 3) -> list[JobData]:
         """Return shortlisted jobs that still need discovery, prioritizing retryable ones."""
         query = """
             SELECT
@@ -209,6 +210,7 @@ class ApplyDiscoveryRepository:
             JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN job_applications a ON a.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
+              AND COALESCE(j.retry_count, 0) < ?
               AND (
                   j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
                   OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
@@ -224,11 +226,11 @@ class ApplyDiscoveryRepository:
             LIMIT ?
         """
         cursor = self._conn.cursor()
-        cursor.execute(query, (limit,))
+        cursor.execute(query, (max_retry_count, limit))
         rows = cursor.fetchall()
         return [JobData(**dict(row)) for row in rows]
 
-    def get_retryable_jobs(self, limit: int) -> list[JobData]:
+    def get_retryable_jobs(self, limit: int, max_retry_count: int = 3) -> list[JobData]:
         """Return jobs that failed with a retryable status."""
         query = """
             SELECT
@@ -252,11 +254,12 @@ class ApplyDiscoveryRepository:
             JOIN ai_evaluations e ON e.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
               AND j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+              AND COALESCE(j.retry_count, 0) < ?
             ORDER BY e.interview_probability DESC, j.id ASC
             LIMIT ?
         """
         cursor = self._conn.cursor()
-        cursor.execute(query, (limit,))
+        cursor.execute(query, (max_retry_count, limit))
         rows = cursor.fetchall()
         return [JobData(**dict(row)) for row in rows]
 

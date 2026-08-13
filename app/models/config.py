@@ -77,6 +77,7 @@ class DiscoveryConfig(BaseModel):
     """Apply-discovery limits."""
 
     max_discovery_jobs_per_run: int = Field(default=20)
+    max_retry_count: int = Field(default=3)
 
 
 class AppSettings(BaseModel):

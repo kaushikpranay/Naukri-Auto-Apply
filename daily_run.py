@@ -191,6 +191,7 @@ async def _run_discovery_stage(
     page,
     repo_discovery: ApplyDiscoveryRepository,
     discovery_service: ApplyDiscoveryService,
+    settings: AppSettings,
     run_id: str,
     total_discovery: DiscoverySummary,
     pipeline_batch: int,
@@ -201,9 +202,10 @@ async def _run_discovery_stage(
         True  — loop should continue.
         False — quota exhaustion detected, stop the pipeline.
     """
+    max_retries = settings.discovery.max_retry_count
     batch_number = 1
     while True:
-        pending_count = repo_discovery.get_pending_discovery_count()
+        pending_count = repo_discovery.get_pending_discovery_count(max_retries)
 
         if pending_count == 0:
             break
@@ -232,6 +234,15 @@ async def _run_discovery_stage(
             break
 
         if batch_summary.processed == 0:
+            break
+
+        # If every job in the batch failed, stop — avoids re-looping the
+        # same jobs when all errors are non-transient (e.g. internet down).
+        if batch_summary.failed >= batch_summary.processed:
+            logger.warning(
+                "All {} jobs in discovery sub-batch {} failed. Stopping.",
+                batch_summary.processed, batch_number,
+            )
             break
 
         batch_number += 1
@@ -385,7 +396,7 @@ async def main_async() -> None:
                 logger.info("Pipeline batch {}: Starting discovery stage...", pipeline_batch)
                 should_continue = await _run_discovery_stage(
                     page, repo_discovery, discovery_service,
-                    run_id, discovery_summary, pipeline_batch,
+                    settings, run_id, discovery_summary, pipeline_batch,
                 )
 
                 if not should_continue:

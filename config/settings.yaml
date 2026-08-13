@@ -37,3 +37,4 @@ evaluation:
 
 discovery:
   max_discovery_jobs_per_run: 10
+  max_retry_count: 3
