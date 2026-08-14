@@ -1,9 +1,9 @@
 {
   "summary": {
-    "total_jobs": 923,
-    "naukri_jobs": 923,
+    "total_jobs": 948,
+    "naukri_jobs": 948,
     "external_jobs": 953,
-    "pending_review": 316,
+    "pending_review": 328,
     "queued": 0,
     "applying": 0,
     "applied": 122,
@@ -11,79 +11,79 @@
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
-    "avg_ai_score": 27.0,
-    "today_jobs": 0,
+    "avg_ai_score": 26.3,
+    "today_jobs": 25,
     "today_applications": 0
   },
   "recent_activity": [
     {
-      "type": "applied",
-      "company_name": "PwC India",
-      "job_title": "Databricks Engineer",
-      "timestamp": "2026-08-13T17:40:42.167538",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "HeapTrace",
-      "job_title": "Fullstack Developer",
-      "timestamp": "2026-08-13T17:40:18.650539",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Cctech",
-      "job_title": "Fullstack Developer",
-      "timestamp": "2026-08-13T17:38:35.310230",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "HeapTrace",
-      "job_title": "Full stack Developer",
-      "timestamp": "2026-08-13T17:38:27.405136",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
       "type": "ai_evaluated",
-      "company_name": "Sandhata Technologies",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-13T17:02:26.633608",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "purview services",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-08-13T17:02:26.630555",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Exavalu",
-      "job_title": "AI Software Engineer (Agentic AI)",
-      "timestamp": "2026-08-13T17:02:26.626945",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Astes Healthcare Solutions",
-      "job_title": "Software Developer - AI/ML",
-      "timestamp": "2026-08-13T17:02:26.615860",
+      "company_name": "Infosys",
+      "job_title": "AI Engineer-Pan India",
+      "timestamp": "2026-08-14T13:37:11.758173",
       "details": "Score: 0.0%, Action: review"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Nasu Group",
-      "job_title": "Gen AI Engineers",
-      "timestamp": "2026-08-13T17:02:21.519474",
+      "company_name": "Unionsys Technologies",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-08-14T13:37:06.215745",
+      "details": "Score: 0.0%, Action: review"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Albireo Recruiters",
+      "job_title": "Senior AI Engineer",
+      "timestamp": "2026-08-14T13:37:01.028101",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Prospus Consulting",
+      "job_title": "Lead Engineer - AI",
+      "timestamp": "2026-08-14T13:37:01.024578",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Product based IT Company",
+      "job_title": "Freelancing opportunity AI Engineer",
+      "timestamp": "2026-08-14T13:37:01.020210",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "job_discovered",
-      "company_name": "Capgemini",
-      "job_title": "Agentic AI Developer",
-      "timestamp": "2026-08-13T16:37:42.536502",
+      "company_name": "Shj International",
+      "job_title": "AI Agent Developer",
+      "timestamp": "2026-08-14T13:35:40.148612",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Unionsys Technologies",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-08-14T13:29:40.155450",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Albireo Recruiters",
+      "job_title": "Senior AI Engineer",
+      "timestamp": "2026-08-14T13:28:22.636123",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Prospus Consulting",
+      "job_title": "Lead Engineer - AI",
+      "timestamp": "2026-08-14T13:24:26.916354",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Product based IT Company",
+      "job_title": "Freelancing opportunity AI Engineer",
+      "timestamp": "2026-08-14T13:22:53.584690",
       "details": null
     }
   ]

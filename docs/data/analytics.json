@@ -19,12 +19,16 @@
     {
       "date": "2026-08-13",
       "count": 56
+    },
+    {
+      "date": "2026-08-14",
+      "count": 25
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 604
+      "count": 628
     },
     {
       "score_range": 10,
@@ -84,7 +88,7 @@
     },
     {
       "status": "evaluated",
-      "count": 614
+      "count": 638
     },
     {
       "status": "external_portal",
@@ -92,7 +96,7 @@
     },
     {
       "status": "pending",
-      "count": 15
+      "count": 16
     },
     {
       "status": "unknown",
@@ -102,11 +106,11 @@
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 38
+      "count": 41
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 30
+      "count": 31
     },
     {
       "name": "Sparix Global",
