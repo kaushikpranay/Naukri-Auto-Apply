@@ -1,0 +1,138 @@
+{
+  "columns": [
+    "id",
+    "keyword",
+    "location",
+    "last_run_at",
+    "jobs_found",
+    "jobs_inserted"
+  ],
+  "rows": [
+    {
+      "id": 37,
+      "keyword": "Generative AI Engineer",
+      "location": "Bangalore",
+      "last_run_at": "2026-08-14T14:12:56",
+      "jobs_found": 23,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 38,
+      "keyword": "Generative AI Engineer",
+      "location": "Chennai",
+      "last_run_at": "2026-08-14T14:17:24",
+      "jobs_found": 24,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 39,
+      "keyword": "Generative AI Engineer",
+      "location": "Gurgaon",
+      "last_run_at": "2026-08-14T14:10:26",
+      "jobs_found": 27,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 40,
+      "keyword": "Generative AI Engineer",
+      "location": "Hyderabad",
+      "last_run_at": "2026-08-14T14:15:34",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 41,
+      "keyword": "Generative AI Engineer",
+      "location": "Indore",
+      "last_run_at": "2026-08-14T14:20:11",
+      "jobs_found": 6,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 42,
+      "keyword": "Generative AI Engineer",
+      "location": "Kolkata",
+      "last_run_at": "2026-08-14T14:11:44",
+      "jobs_found": 24,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 43,
+      "keyword": "Generative AI Engineer",
+      "location": "Mumbai",
+      "last_run_at": "2026-08-14T14:18:55",
+      "jobs_found": 28,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 44,
+      "keyword": "Generative AI Engineer",
+      "location": "Noida",
+      "last_run_at": "2026-08-14T14:10:26.741717",
+      "jobs_found": 25,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 45,
+      "keyword": "Generative AI Engineer",
+      "location": "Pune",
+      "last_run_at": "2026-08-14T14:14:21",
+      "jobs_found": 30,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 46,
+      "keyword": "Generative AI Engineer",
+      "location": "Remote",
+      "last_run_at": "2026-08-14T14:08:32",
+      "jobs_found": 14,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 47,
+      "keyword": "LLM Engineer",
+      "location": "Bangalore",
+      "last_run_at": "2026-08-14T13:35:42",
+      "jobs_found": 21,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 48,
+      "keyword": "LLM Engineer",
+      "location": "Chennai",
+      "last_run_at": "2026-08-14T13:35:43",
+      "jobs_found": 18,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 49,
+      "keyword": "LLM Engineer",
+      "location": "Gurgaon",
+      "last_run_at": "2026-08-14T13:35:41",
+      "jobs_found": 13,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 50,
+      "keyword": "LLM Engineer",
+      "location": "Hyderabad",
+      "last_run_at": "2026-08-14T13:35:43",
+      "jobs_found": 12,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 51,
+      "keyword": "LLM Engineer",
+      "location": "Indore",
+      "last_run_at": "2026-08-14T13:35:44",
+      "jobs_found": 2,
+      "jobs_inserted": 0
+    }
+  ],
+  "pagination": {
+    "page": 3,
+    "limit": 15,
+    "total_records": 80,
+    "total_pages": 6
+  }
+}

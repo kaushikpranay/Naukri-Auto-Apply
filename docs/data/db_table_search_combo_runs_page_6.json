@@ -1,0 +1,58 @@
+{
+  "columns": [
+    "id",
+    "keyword",
+    "location",
+    "last_run_at",
+    "jobs_found",
+    "jobs_inserted"
+  ],
+  "rows": [
+    {
+      "id": 146,
+      "keyword": "FastAPI Developer",
+      "location": "Pune",
+      "last_run_at": "2026-08-14T13:36:04",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 147,
+      "keyword": "FastAPI Developer",
+      "location": "Hyderabad",
+      "last_run_at": "2026-08-14T13:36:04",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 148,
+      "keyword": "FastAPI Developer",
+      "location": "Chennai",
+      "last_run_at": "2026-08-14T13:36:05",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 149,
+      "keyword": "FastAPI Developer",
+      "location": "Mumbai",
+      "last_run_at": "2026-08-14T13:36:05",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 150,
+      "keyword": "FastAPI Developer",
+      "location": "Indore",
+      "last_run_at": "2026-08-14T13:36:06",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    }
+  ],
+  "pagination": {
+    "page": 6,
+    "limit": 15,
+    "total_records": 80,
+    "total_pages": 6
+  }
+}

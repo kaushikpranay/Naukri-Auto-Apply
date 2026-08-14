@@ -1,0 +1,138 @@
+{
+  "columns": [
+    "id",
+    "keyword",
+    "location",
+    "last_run_at",
+    "jobs_found",
+    "jobs_inserted"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "keyword": "GenAI Engineer",
+      "location": "Remote",
+      "last_run_at": "2026-08-14T14:38:37.766347",
+      "jobs_found": 4,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 2,
+      "keyword": "GenAI Engineer",
+      "location": "Noida",
+      "last_run_at": "2026-08-14T14:39:46.670779",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 3,
+      "keyword": "GenAI Engineer",
+      "location": "Gurgaon",
+      "last_run_at": "2026-08-14T14:40:56.230806",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 4,
+      "keyword": "GenAI Engineer",
+      "location": "Kolkata",
+      "last_run_at": "2026-08-14T14:41:26.806828",
+      "jobs_found": 8,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 5,
+      "keyword": "GenAI Engineer",
+      "location": "Bangalore",
+      "last_run_at": "2026-08-14T14:42:36.919648",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 6,
+      "keyword": "GenAI Engineer",
+      "location": "Pune",
+      "last_run_at": "2026-08-14T14:44:15.957743",
+      "jobs_found": 20,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 7,
+      "keyword": "AI Engineer",
+      "location": "Bangalore",
+      "last_run_at": "2026-08-14T14:25:24",
+      "jobs_found": 24,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 8,
+      "keyword": "AI Engineer",
+      "location": "Chennai",
+      "last_run_at": "2026-08-14T14:29:01",
+      "jobs_found": 10,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 9,
+      "keyword": "AI Engineer",
+      "location": "Gurgaon",
+      "last_run_at": "2026-08-14T14:23:17",
+      "jobs_found": 16,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 10,
+      "keyword": "AI Engineer",
+      "location": "Hyderabad",
+      "last_run_at": "2026-08-14T14:27:32",
+      "jobs_found": 13,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 11,
+      "keyword": "AI Engineer",
+      "location": "Indore",
+      "last_run_at": "2026-08-14T14:32:08",
+      "jobs_found": 26,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 12,
+      "keyword": "AI Engineer",
+      "location": "Kolkata",
+      "last_run_at": "2026-08-14T14:24:21",
+      "jobs_found": 23,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 13,
+      "keyword": "AI Engineer",
+      "location": "Mumbai",
+      "last_run_at": "2026-08-14T14:30:25",
+      "jobs_found": 13,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 14,
+      "keyword": "AI Engineer",
+      "location": "Noida",
+      "last_run_at": "2026-08-14T14:22:05",
+      "jobs_found": 17,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 15,
+      "keyword": "AI Engineer",
+      "location": "Pune",
+      "last_run_at": "2026-08-14T14:26:28",
+      "jobs_found": 15,
+      "jobs_inserted": 0
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 80,
+    "total_pages": 6
+  }
+}

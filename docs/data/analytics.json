@@ -22,13 +22,13 @@
     },
     {
       "date": "2026-08-14",
-      "count": 25
+      "count": 36
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 628
+      "count": 635
     },
     {
       "score_range": 10,
@@ -48,7 +48,7 @@
     },
     {
       "score_range": 50,
-      "count": 3
+      "count": 4
     },
     {
       "score_range": 60,
@@ -56,11 +56,11 @@
     },
     {
       "score_range": 70,
-      "count": 44
+      "count": 45
     },
     {
       "score_range": 80,
-      "count": 198
+      "count": 200
     },
     {
       "score_range": 90,
@@ -80,7 +80,7 @@
     },
     {
       "status": "applied_successfully",
-      "count": 81
+      "count": 83
     },
     {
       "status": "easy_apply",
@@ -88,11 +88,11 @@
     },
     {
       "status": "evaluated",
-      "count": 638
+      "count": 645
     },
     {
       "status": "external_portal",
-      "count": 124
+      "count": 126
     },
     {
       "status": "pending",
@@ -110,7 +110,7 @@
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 31
+      "count": 32
     },
     {
       "name": "Sparix Global",

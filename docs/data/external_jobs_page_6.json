@@ -1,0 +1,39 @@
+{
+  "jobs": [
+    {
+      "id": 26316,
+      "job_title": "Azure GenAI Backend Engineer",
+      "company_name": "Paralucent",
+      "job_description": "Overview\nOur client in the consulting space is seeking a Senior Consultant Azure GenAI Backend Engineer to design and implement scalable Generative AI solutions with a strong focus on RAG architectures and Azure-native serverless platforms.\nThis role requires deep expertise in Azure AI services, backend system design, authentication mechanisms, and cloud-native architecture to deliver secure, production-grade AI systems.\nKey Responsibilities\nDesign and implement RAG-based architectures using Azure OpenAI and Azure AI Search.\nDevelop backend APIs and services to support GenAI applications.\nArchitect and deploy Azure serverless solutions (Azure Functions, Logic Apps, Container Apps).\nBuild scalable data pipelines for indexing, embedding, and retrieval workflows.\nImplement CI/CD pipelines for AI systems using Azure DevOps or GitHub Actions.\nDefine and implement system architecture ensuring performance, scalability, and high availability.\nApply infrastructure as code using Terraform or Bicep.\nCollaborate with frontend, data, and AI teams to deliver end-to-end GenAI solutions.\nEnforce security, governance, and compliance best practices.\nRequired Skills Experience\nCore GenAI Architecture\nHands-on experience building RAG solutions in production.\nStrong understanding of LLMs, embeddings, vector search, prompt engineering.\nExperience with Azure AI Search and Azure OpenAI.\nKnowledge of agentic workflows (preferred).\nAzure Cloud\nStrong experience with:\nAzure Functions\nAzure Container Apps\nAzure App Services\nAzure Storage Key Vault\nSolid understanding of Azure networking identity management.\nExperience designing serverless architectures.\nBackend Development\nStrong proficiency in Python, Java or node.js .\nREST API development and microservices.\nStrong system design capabilities.\nDevOps\nCI/CD pipelines (Azure DevOps / GitHub Actions).\nDocker Kubernetes (good to have).\nInfrastructure as Code (Terraform / Bicep).\nNice to Have\nAWS exposure.\nConsulting experience.\nExperience deploying AI systems in regulated environments.\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
+      "job_url": "https://www.naukri.com/job-listings-azure-genai-backend-engineer-paralucent-remote-2-to-6-years-140726504050",
+      "normalized_url": "https://www.naukri.com/job-listings-azure-genai-backend-engineer-paralucent-remote-2-to-6-years-140726504050",
+      "apply_url": "",
+      "experience_required": "2-6 Yrs",
+      "location": "Remote",
+      "posted_date": "3 weeks ago",
+      "recruiter_name": "",
+      "recruiter_email": "",
+      "status": "external_portal",
+      "retry_count": 0,
+      "search_keyword": "GenAI Engineer",
+      "search_location": "Remote",
+      "created_at": "2026-08-09T16:27:52.560857",
+      "ai_score": 80.0,
+      "ai_action": "apply",
+      "ai_priority": "high",
+      "ai_confidence": 80.0,
+      "ai_reason": "Strong production RAG experience and transferable cloud skills.",
+      "app_type": "external_portal",
+      "app_status": "discovered",
+      "app_date": "2026-08-10T04:29:00.457151",
+      "ats_status": null,
+      "ats_platform": null
+    }
+  ],
+  "pagination": {
+    "page": 6,
+    "limit": 25,
+    "total_records": 126,
+    "total_pages": 6
+  }
+}

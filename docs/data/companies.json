@@ -12,9 +12,9 @@
     "name": "Tata Consultancy Services",
     "ats_type": "Naukri",
     "priority": "medium",
-    "jobs_count": 31,
-    "applications_count": 1,
-    "success_count": 1,
+    "jobs_count": 32,
+    "applications_count": 2,
+    "success_count": 2,
     "failure_count": 0
   },
   {
@@ -108,6 +108,15 @@
     "failure_count": 0
   },
   {
+    "name": "HCLTech",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 7,
+    "applications_count": 2,
+    "success_count": 2,
+    "failure_count": 0
+  },
+  {
     "name": "Codvo",
     "ats_type": "Naukri",
     "priority": "medium",
@@ -144,11 +153,11 @@
     "failure_count": 0
   },
   {
-    "name": "HCLTech",
+    "name": "Coforge",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 6,
-    "applications_count": 2,
+    "applications_count": 4,
     "success_count": 2,
     "failure_count": 0
   },
@@ -189,12 +198,12 @@
     "failure_count": 0
   },
   {
-    "name": "Coforge",
+    "name": "Data Economy",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 5,
     "applications_count": 3,
-    "success_count": 1,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -270,15 +279,6 @@
     "failure_count": 0
   },
   {
-    "name": "Data Economy",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 4,
-    "applications_count": 3,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Crescendo Global",
     "ats_type": "Naukri",
     "priority": "medium",
@@ -330,6 +330,15 @@
     "jobs_count": 4,
     "applications_count": 3,
     "success_count": 1,
+    "failure_count": 0
+  },
+  {
+    "name": "Visa Consolidated Support Services India",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 3,
+    "applications_count": 1,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -561,6 +570,15 @@
     "name": "Virtusa",
     "ats_type": "Naukri",
     "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Vayavya Labs",
+    "ats_type": "Naukri",
+    "priority": "medium",
     "jobs_count": 2,
     "applications_count": 0,
     "success_count": 0,
@@ -815,6 +833,15 @@
     "priority": "medium",
     "jobs_count": 2,
     "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Hewlett Packard Enterprise",
+    "ats_type": "Naukri",
+    "priority": "medium",
+    "jobs_count": 2,
+    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1296,6 +1323,15 @@
     "failure_count": 0
   },
   {
+    "name": "Wabtec",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "WOW Softech",
     "ats_type": "Naukri",
     "priority": "low",
@@ -1332,18 +1368,18 @@
     "failure_count": 0
   },
   {
-    "name": "Visa Consolidated Support Services India",
+    "name": "Vipsa Talent Solutions",
     "ats_type": "Naukri",
-    "priority": "low",
+    "priority": "medium",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
   {
-    "name": "Vipsa Talent Solutions",
+    "name": "Viacom18",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
@@ -1396,15 +1432,6 @@
   },
   {
     "name": "Vee Healthtek",
-    "ats_type": "Naukri",
-    "priority": "medium",
-    "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Vayavya Labs",
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 1,
@@ -1711,6 +1738,15 @@
   },
   {
     "name": "Teamified",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "TeamLease",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -3637,15 +3673,6 @@
   },
   {
     "name": "Hexaconcepts",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Hewlett Packard Enterprise",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,

@@ -1,0 +1,138 @@
+{
+  "columns": [
+    "id",
+    "keyword",
+    "location",
+    "last_run_at",
+    "jobs_found",
+    "jobs_inserted"
+  ],
+  "rows": [
+    {
+      "id": 52,
+      "keyword": "LLM Engineer",
+      "location": "Kolkata",
+      "last_run_at": "2026-08-14T13:35:41",
+      "jobs_found": 7,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 53,
+      "keyword": "LLM Engineer",
+      "location": "Mumbai",
+      "last_run_at": "2026-08-14T13:35:44",
+      "jobs_found": 17,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 54,
+      "keyword": "LLM Engineer",
+      "location": "Noida",
+      "last_run_at": "2026-08-14T14:34:24",
+      "jobs_found": 15,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 55,
+      "keyword": "LLM Engineer",
+      "location": "Pune",
+      "last_run_at": "2026-08-14T13:35:42",
+      "jobs_found": 8,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 56,
+      "keyword": "LLM Engineer",
+      "location": "Remote",
+      "last_run_at": "2026-08-14T14:33:22",
+      "jobs_found": 14,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 57,
+      "keyword": "Python Backend Engineer",
+      "location": "Bangalore",
+      "last_run_at": "2026-08-14T13:35:58",
+      "jobs_found": 19,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 58,
+      "keyword": "Python Backend Engineer",
+      "location": "Gurgaon",
+      "last_run_at": "2026-08-14T13:35:57",
+      "jobs_found": 15,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 59,
+      "keyword": "Python Backend Engineer",
+      "location": "Kolkata",
+      "last_run_at": "2026-08-14T13:35:57",
+      "jobs_found": 19,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 60,
+      "keyword": "Python Backend Engineer",
+      "location": "Noida",
+      "last_run_at": "2026-08-14T13:35:56",
+      "jobs_found": 19,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 61,
+      "keyword": "Python Backend Engineer",
+      "location": "Pune",
+      "last_run_at": "2026-08-14T13:35:58",
+      "jobs_found": 12,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 62,
+      "keyword": "Python Backend Engineer",
+      "location": "Remote",
+      "last_run_at": "2026-08-14T13:35:56",
+      "jobs_found": 19,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 63,
+      "keyword": "RAG Engineer",
+      "location": "Bangalore",
+      "last_run_at": "2026-08-14T13:35:47",
+      "jobs_found": 12,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 64,
+      "keyword": "RAG Engineer",
+      "location": "Chennai",
+      "last_run_at": "2026-08-14T13:35:49",
+      "jobs_found": 7,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 65,
+      "keyword": "RAG Engineer",
+      "location": "Gurgaon",
+      "last_run_at": "2026-08-14T13:35:46",
+      "jobs_found": 2,
+      "jobs_inserted": 0
+    },
+    {
+      "id": 66,
+      "keyword": "RAG Engineer",
+      "location": "Hyderabad",
+      "last_run_at": "2026-08-14T13:35:48",
+      "jobs_found": 13,
+      "jobs_inserted": 0
+    }
+  ],
+  "pagination": {
+    "page": 4,
+    "limit": 15,
+    "total_records": 80,
+    "total_pages": 6
+  }
+}

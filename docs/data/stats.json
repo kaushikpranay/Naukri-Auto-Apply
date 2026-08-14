@@ -1,89 +1,89 @@
 {
   "summary": {
-    "total_jobs": 948,
-    "naukri_jobs": 948,
+    "total_jobs": 959,
+    "naukri_jobs": 959,
     "external_jobs": 953,
-    "pending_review": 328,
+    "pending_review": 329,
     "queued": 0,
     "applying": 0,
-    "applied": 122,
+    "applied": 124,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
     "avg_ai_score": 26.3,
-    "today_jobs": 25,
-    "today_applications": 0
+    "today_jobs": 36,
+    "today_applications": 4
   },
   "recent_activity": [
     {
-      "type": "ai_evaluated",
-      "company_name": "Infosys",
-      "job_title": "AI Engineer-Pan India",
-      "timestamp": "2026-08-14T13:37:11.758173",
-      "details": "Score: 0.0%, Action: review"
+      "type": "applied",
+      "company_name": "Hewlett Packard Enterprise",
+      "job_title": "QA Automation Engineer GenAI, Storage & System Testing",
+      "timestamp": "2026-08-14T14:47:39.724890",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Coforge",
+      "job_title": "Coforge Hiring | Python GenAI / Agentic AI Engineer | Pune|Hyd|Noida",
+      "timestamp": "2026-08-14T14:47:18.744816",
+      "details": "Type: applied_successfully, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Visa Consolidated Support Services India",
+      "job_title": "Senior SW Engineer - Python- GenAI",
+      "timestamp": "2026-08-14T14:46:57.703648",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Tata Consultancy Services",
+      "job_title": "Tcs Hiring | GenAI / AI-ML Engineer | 4 To 10 Years | F2F Int | B'lore",
+      "timestamp": "2026-08-14T14:46:38.869444",
+      "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Unionsys Technologies",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-14T13:37:06.215745",
-      "details": "Score: 0.0%, Action: review"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Albireo Recruiters",
-      "job_title": "Senior AI Engineer",
-      "timestamp": "2026-08-14T13:37:01.028101",
+      "company_name": "HCLTech",
+      "job_title": "AI Engineer (LLM / Generative AI/Ops)",
+      "timestamp": "2026-08-14T14:46:17.030173",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Prospus Consulting",
-      "job_title": "Lead Engineer - AI",
-      "timestamp": "2026-08-14T13:37:01.024578",
+      "company_name": "Data Economy",
+      "job_title": "Lead GenAI Engineer",
+      "timestamp": "2026-08-14T14:46:17.026929",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Product based IT Company",
-      "job_title": "Freelancing opportunity AI Engineer",
-      "timestamp": "2026-08-14T13:37:01.020210",
+      "company_name": "Visa Consolidated Support Services India",
+      "job_title": "Senior SW Engineer - Python- GenAI",
+      "timestamp": "2026-08-14T14:46:17.020857",
+      "details": "Score: 80.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Visa Consolidated Support Services India",
+      "job_title": "Software Engineer - Senior Consultant level (Java/Python/GenAI/Cloud)",
+      "timestamp": "2026-08-14T14:46:09.682928",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Vayavya Labs",
+      "job_title": "GenAI Staff Engineer",
+      "timestamp": "2026-08-14T14:46:09.680052",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "job_discovered",
-      "company_name": "Shj International",
-      "job_title": "AI Agent Developer",
-      "timestamp": "2026-08-14T13:35:40.148612",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Unionsys Technologies",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-14T13:29:40.155450",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Albireo Recruiters",
-      "job_title": "Senior AI Engineer",
-      "timestamp": "2026-08-14T13:28:22.636123",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Prospus Consulting",
-      "job_title": "Lead Engineer - AI",
-      "timestamp": "2026-08-14T13:24:26.916354",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Product based IT Company",
-      "job_title": "Freelancing opportunity AI Engineer",
-      "timestamp": "2026-08-14T13:22:53.584690",
+      "company_name": "HCLTech",
+      "job_title": "AI Engineer (LLM / Generative AI/Ops)",
+      "timestamp": "2026-08-14T14:10:26.741717",
       "details": null
     }
   ]

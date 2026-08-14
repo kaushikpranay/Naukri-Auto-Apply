@@ -21,5 +21,6 @@
   "application_sessions",
   "automation_events",
   "manual_actions",
-  "browser_sessions"
+  "browser_sessions",
+  "search_combo_runs"
 ]

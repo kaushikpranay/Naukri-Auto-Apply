@@ -786,6 +786,22 @@
     "priority": "high"
   },
   {
+    "id": 32221,
+    "company_name": "Coforge",
+    "job_title": "Coforge Hiring | Python GenAI / Agentic AI Engineer | Pune|Hyd|Noida",
+    "location": "Bengaluru, Pune, Hyderabad",
+    "experience_required": "3-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-coforge-hiring-python-genai-agentic-ai-engineer-pune-hyd-noida-coforge-hyderabad-pune-bengaluru-3-to-6-years-310726022957",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, and AWS experience with transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26445,
     "company_name": "Capgemini",
     "job_title": "Amazon Connect Developer",
