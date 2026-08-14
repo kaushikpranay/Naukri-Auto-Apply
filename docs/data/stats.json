@@ -6,85 +6,85 @@
     "pending_review": 329,
     "queued": 0,
     "applying": 0,
-    "applied": 124,
+    "applied": 126,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
-    "avg_ai_score": 26.3,
+    "avg_ai_score": 26.6,
     "today_jobs": 36,
-    "today_applications": 4
+    "today_applications": 12
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Hewlett Packard Enterprise",
-      "job_title": "QA Automation Engineer GenAI, Storage & System Testing",
-      "timestamp": "2026-08-14T14:47:39.724890",
+      "company_name": "Shj International",
+      "job_title": "AI Agent Developer",
+      "timestamp": "2026-08-14T15:19:22.068491",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Coforge",
-      "job_title": "Coforge Hiring | Python GenAI / Agentic AI Engineer | Pune|Hyd|Noida",
-      "timestamp": "2026-08-14T14:47:18.744816",
+      "company_name": "Capgemini",
+      "job_title": "Agentic AI Developer",
+      "timestamp": "2026-08-14T15:18:57.348887",
       "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Visa Consolidated Support Services India",
-      "job_title": "Senior SW Engineer - Python- GenAI",
-      "timestamp": "2026-08-14T14:46:57.703648",
+      "company_name": "Deservely",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-08-14T15:18:36.913096",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Tata Consultancy Services",
-      "job_title": "Tcs Hiring | GenAI / AI-ML Engineer | 4 To 10 Years | F2F Int | B'lore",
-      "timestamp": "2026-08-14T14:46:38.869444",
-      "details": "Type: applied_successfully, Status: discovered"
+      "company_name": "Deservely",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-08-14T15:18:17.108633",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Inspiredge It Solutions",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-08-14T15:17:53.577789",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "HCLTech",
-      "job_title": "AI Engineer (LLM / Generative AI/Ops)",
-      "timestamp": "2026-08-14T14:46:17.030173",
+      "company_name": "PURVIEW",
+      "job_title": "AIML / Agentic AI Engineer",
+      "timestamp": "2026-08-14T15:16:03.628881",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Data Economy",
-      "job_title": "Lead GenAI Engineer",
-      "timestamp": "2026-08-14T14:46:17.026929",
+      "company_name": "Deservely",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-08-14T15:16:03.609428",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "PURVIEW",
+      "job_title": "AIML / Agentic AI Engineer",
+      "timestamp": "2026-08-14T15:15:51.354469",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Visa Consolidated Support Services India",
-      "job_title": "Senior SW Engineer - Python- GenAI",
-      "timestamp": "2026-08-14T14:46:17.020857",
-      "details": "Score: 80.0%, Action: apply"
+      "company_name": "Shj International",
+      "job_title": "AI Agent Developer",
+      "timestamp": "2026-08-14T15:15:51.328945",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Visa Consolidated Support Services India",
-      "job_title": "Software Engineer - Senior Consultant level (Java/Python/GenAI/Cloud)",
-      "timestamp": "2026-08-14T14:46:09.682928",
+      "company_name": "Crescendo Global",
+      "job_title": "Data Scientist",
+      "timestamp": "2026-08-14T15:15:36.226103",
       "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Vayavya Labs",
-      "job_title": "GenAI Staff Engineer",
-      "timestamp": "2026-08-14T14:46:09.680052",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "HCLTech",
-      "job_title": "AI Engineer (LLM / Generative AI/Ops)",
-      "timestamp": "2026-08-14T14:10:26.741717",
-      "details": null
     }
   ]
 }

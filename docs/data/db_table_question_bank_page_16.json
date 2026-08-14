@@ -30,9 +30,9 @@
       "id": 11554,
       "question_key": "willing_to_relocate_chennai",
       "question_text": "Are you currently living in or ready to relocate to Chennai ?",
-      "answer": null,
+      "answer": "Yes",
       "usage_count": 1,
-      "last_used": "2026-08-09T21:32:34.494111",
+      "last_used": "2026-08-14T15:26:39.660653",
       "field_type": "radio",
       "created_at": "2026-08-09T21:32:34.494111",
       "last_used_at": "2026-08-09T21:32:34.494111",
@@ -43,9 +43,9 @@
       "id": 11555,
       "question_key": "exp_artificial_intelligence_engineer",
       "question_text": "How many years of experience do you have in Artificial Intelligence Engineer ?",
-      "answer": null,
+      "answer": "2",
       "usage_count": 1,
-      "last_used": "2026-08-09T21:34:23.615796",
+      "last_used": "2026-08-14T15:26:39.660653",
       "field_type": "contenteditable",
       "created_at": "2026-08-09T21:34:23.615796",
       "last_used_at": "2026-08-09T21:34:23.615796",
@@ -95,9 +95,9 @@
       "id": 11566,
       "question_key": "willing_to_relocate_pune",
       "question_text": "Are you currently living in or ready to relocate to Pune ?",
-      "answer": null,
+      "answer": "Yes",
       "usage_count": 2,
-      "last_used": "2026-08-12T15:52:27.671472",
+      "last_used": "2026-08-14T15:26:39.660653",
       "field_type": "radio",
       "created_at": "2026-08-09T21:43:36.750831",
       "last_used_at": "2026-08-12T15:52:27.671472",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 16,
     "limit": 15,
-    "total_records": 254,
-    "total_pages": 17
+    "total_records": 262,
+    "total_pages": 18
   }
 }

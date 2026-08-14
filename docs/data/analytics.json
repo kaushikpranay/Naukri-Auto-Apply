@@ -28,7 +28,7 @@
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 635
+      "count": 642
     },
     {
       "score_range": 10,
@@ -40,7 +40,7 @@
     },
     {
       "score_range": 30,
-      "count": 2
+      "count": 3
     },
     {
       "score_range": 40,
@@ -60,11 +60,11 @@
     },
     {
       "score_range": 80,
-      "count": 200
+      "count": 207
     },
     {
       "score_range": 90,
-      "count": 43
+      "count": 44
     }
   ],
   "ats_distribution": [
@@ -76,11 +76,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 41
+      "count": 42
     },
     {
       "status": "applied_successfully",
-      "count": 83
+      "count": 84
     },
     {
       "status": "easy_apply",
@@ -88,15 +88,11 @@
     },
     {
       "status": "evaluated",
-      "count": 645
+      "count": 653
     },
     {
       "status": "external_portal",
-      "count": 126
-    },
-    {
-      "status": "pending",
-      "count": 16
+      "count": 132
     },
     {
       "status": "unknown",

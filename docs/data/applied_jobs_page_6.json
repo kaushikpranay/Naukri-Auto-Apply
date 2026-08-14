@@ -1,0 +1,39 @@
+{
+  "jobs": [
+    {
+      "id": 26315,
+      "job_title": "AI Engineer (LLM / GenAI)",
+      "company_name": "Prescience Decision Solutions",
+      "job_description": "We are looking for a highly skilled AI Engineer with expertise in LLM/GenAI to join our team at Prescience Decision Solutions. The ideal candidate will have a strong background in artificial intelligence and machine learning, with the ability to develop and implement predictive models.\n\n\n\nRoles and Responsibility\n\n\n\n\nDesign and develop scalable and efficient AI and ML models using LLM/GenAI.\n\n\nCollaborate with cross-functional teams to identify business problems and develop solutions.\n\n\nDevelop and maintain large-scale data pipelines and architectures.\n\n\nConduct research and stay updated on the latest trends and technologies in AI and ML.\n\n\nWork closely with stakeholders to understand requirements and deliver high-quality results.\n\n\nParticipate in code reviews and contribute to improving overall code quality.\n\n\n\n\nJob Requirements\n\n\n\n\nStrong proficiency in programming languages such as Python or Java.\n\n\nExperience with deep learning frameworks like TensorFlow or PyTorch.\n\n\nKnowledge of cloud platforms such as AWS or Google Cloud.\n\n\nExcellent problem-solving skills and attention to detail.\n\n\nAbility to work independently and collaboratively as part of a team.\n\n\nStrong communication and interpersonal skills.\n\n\n\n\nDisclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
+      "job_url": "https://www.naukri.com/job-listings-ai-engineer-llm-genai-prescience-decision-solutions-remote-2-to-5-years-220626503887",
+      "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-llm-genai-prescience-decision-solutions-remote-2-to-5-years-220626503887",
+      "apply_url": "",
+      "experience_required": "2-5 Yrs",
+      "location": "Remote",
+      "posted_date": "3+ weeks ago",
+      "recruiter_name": "",
+      "recruiter_email": "",
+      "status": "already_applied",
+      "retry_count": 0,
+      "search_keyword": "GenAI Engineer",
+      "search_location": "Remote",
+      "created_at": "2026-08-09T16:27:52.560857",
+      "ai_score": 90.0,
+      "ai_action": "apply",
+      "ai_priority": "high",
+      "ai_confidence": 88.0,
+      "ai_reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployments, and LLM applications align with role.",
+      "app_type": "already_applied",
+      "app_status": "discovered",
+      "app_date": "2026-08-09T19:24:36.989764",
+      "ats_status": null,
+      "ats_platform": null
+    }
+  ],
+  "pagination": {
+    "page": 6,
+    "limit": 25,
+    "total_records": 126,
+    "total_pages": 6
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "question_text",
+    "answer",
+    "usage_count",
+    "last_used",
+    "field_type",
+    "created_at",
+    "last_used_at",
+    "confidence_score",
+    "updated_at"
+  ],
+  "rows": [
+    {
+      "id": 12556,
+      "question_key": "willing_to_relocate_noida",
+      "question_text": "willing_to_relocate_noida",
+      "answer": "Yes",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12559,
+      "question_key": "csharp_experience",
+      "question_text": "csharp_experience",
+      "answer": "0",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12561,
+      "question_key": "gen_ai_experience",
+      "question_text": "gen_ai_experience",
+      "answer": "2",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12563,
+      "question_key": "ai_prompt_engineer_experience",
+      "question_text": "ai_prompt_engineer_experience",
+      "answer": "2",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12565,
+      "question_key": "artificial_intelligence_engineer_experience",
+      "question_text": "artificial_intelligence_engineer_experience",
+      "answer": "2",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12567,
+      "question_key": "exp_agentic_ai",
+      "question_text": "exp_agentic_ai",
+      "answer": "2",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 12568,
+      "question_key": "agentic_ai_experience",
+      "question_text": "agentic_ai_experience",
+      "answer": "2",
+      "usage_count": 0,
+      "last_used": "2026-08-14T15:26:39.660653",
+      "field_type": null,
+      "created_at": null,
+      "last_used_at": null,
+      "confidence_score": 1.0,
+      "updated_at": null
+    }
+  ],
+  "pagination": {
+    "page": 18,
+    "limit": 15,
+    "total_records": 262,
+    "total_pages": 18
+  }
+}

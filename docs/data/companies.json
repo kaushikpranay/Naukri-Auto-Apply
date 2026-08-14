@@ -67,8 +67,8 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 11,
-    "applications_count": 3,
-    "success_count": 0,
+    "applications_count": 4,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -148,7 +148,7 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 6,
-    "applications_count": 1,
+    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -265,7 +265,7 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 4,
-    "applications_count": 0,
+    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -281,7 +281,7 @@
   {
     "name": "Crescendo Global",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 4,
     "applications_count": 0,
     "success_count": 0,
@@ -380,7 +380,7 @@
   {
     "name": "PURVIEW",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 3,
     "applications_count": 0,
     "success_count": 0,
@@ -425,7 +425,7 @@
   {
     "name": "LTM",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 3,
     "applications_count": 0,
     "success_count": 0,
@@ -1361,9 +1361,9 @@
   {
     "name": "Visulon Technologies",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1802,7 +1802,7 @@
   {
     "name": "Talent Sketchers",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
@@ -2108,9 +2108,9 @@
   {
     "name": "Shj International",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -3485,9 +3485,9 @@
   {
     "name": "Inspiredge It Solutions",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -4043,9 +4043,9 @@
   {
     "name": "Ellicium Solutions",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -4943,7 +4943,7 @@
   {
     "name": "Aifa Labs",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
@@ -5051,7 +5051,7 @@
   {
     "name": "99yellow",
     "ats_type": "Naukri",
-    "priority": "medium",
+    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
