@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Chennai",
-      "created_at": "2026-08-11T18:46:45.205518"
+      "created_at": "2026-08-11T18:46:45.205518",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29197,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-11T18:47:46.410790"
+      "created_at": "2026-08-11T18:47:46.410790",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29251,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:51:11.438834"
+      "created_at": "2026-08-11T18:51:11.438834",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29274,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T18:52:17.487623"
+      "created_at": "2026-08-11T18:52:17.487623",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29291,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-11T18:53:25.010408"
+      "created_at": "2026-08-11T18:53:25.010408",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29350,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-11T18:56:14.522541"
+      "created_at": "2026-08-11T18:56:14.522541",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29368,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-11T18:57:20.796139"
+      "created_at": "2026-08-11T18:57:20.796139",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29369,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-11T18:57:20.796139"
+      "created_at": "2026-08-11T18:57:20.796139",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29389,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-11T18:58:26.379474"
+      "created_at": "2026-08-11T18:58:26.379474",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29390,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-11T18:58:26.379474"
+      "created_at": "2026-08-11T18:58:26.379474",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29399,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-11T18:59:10.206668"
+      "created_at": "2026-08-11T18:59:10.206668",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29422,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T19:00:17.775710"
+      "created_at": "2026-08-11T19:00:17.775710",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29423,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T19:00:17.775710"
+      "created_at": "2026-08-11T19:00:17.775710",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29428,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T19:01:24.262878"
+      "created_at": "2026-08-11T19:01:24.262878",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29429,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T19:01:24.262878"
+      "created_at": "2026-08-11T19:01:24.262878",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

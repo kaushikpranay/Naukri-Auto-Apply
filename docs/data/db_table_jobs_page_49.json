@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-12T12:59:34.064686"
+      "created_at": "2026-08-12T12:59:34.064686",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29548,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T13:01:57.710292"
+      "created_at": "2026-08-12T13:01:57.710292",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29555,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T13:01:57.710292"
+      "created_at": "2026-08-12T13:01:57.710292",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29604,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-12T13:05:35.483231"
+      "created_at": "2026-08-12T13:05:35.483231",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29606,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-12T13:05:35.483231"
+      "created_at": "2026-08-12T13:05:35.483231",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29617,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Indore",
-      "created_at": "2026-08-12T13:05:50.296958"
+      "created_at": "2026-08-12T13:05:50.296958",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29636,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-12T13:07:38.705057"
+      "created_at": "2026-08-12T13:07:38.705057",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29670,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-12T13:09:54.809173"
+      "created_at": "2026-08-12T13:09:54.809173",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29718,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T13:12:21.961944"
+      "created_at": "2026-08-12T13:12:21.961944",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29719,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T13:12:21.961944"
+      "created_at": "2026-08-12T13:12:21.961944",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29720,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T13:12:21.961944"
+      "created_at": "2026-08-12T13:12:21.961944",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29742,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-12T13:13:34.929189"
+      "created_at": "2026-08-12T13:13:34.929189",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29743,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-12T13:13:34.929189"
+      "created_at": "2026-08-12T13:13:34.929189",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29744,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-12T13:13:34.929189"
+      "created_at": "2026-08-12T13:13:34.929189",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29753,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Chennai",
-      "created_at": "2026-08-12T13:14:46.789941"
+      "created_at": "2026-08-12T13:14:46.789941",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

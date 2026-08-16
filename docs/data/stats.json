@@ -7,10 +7,10 @@
     "queued": 83,
     "applying": 0,
     "applied": 126,
-    "failed": 0,
+    "failed": 1,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 100.0,
+    "success_rate": 12600.0,
     "avg_ai_score": 29.6,
     "today_jobs": 0,
     "today_applications": 0

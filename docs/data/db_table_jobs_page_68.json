@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-16T15:28:33.575317"
+      "created_at": "2026-08-16T15:28:33.575317",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33855,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-16T15:29:42.750971"
+      "created_at": "2026-08-16T15:29:42.750971",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33856,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-16T15:29:42.750971"
+      "created_at": "2026-08-16T15:29:42.750971",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33868,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-16T15:29:42.750971"
+      "created_at": "2026-08-16T15:29:42.750971",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33887,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-16T15:30:53.767986"
+      "created_at": "2026-08-16T15:30:53.767986",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33889,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-16T15:32:04.303235"
+      "created_at": "2026-08-16T15:32:04.303235",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33899,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-16T15:32:04.303235"
+      "created_at": "2026-08-16T15:32:04.303235",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33900,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-16T15:32:04.303235"
+      "created_at": "2026-08-16T15:32:04.303235",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33907,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-16T15:32:04.303235"
+      "created_at": "2026-08-16T15:32:04.303235",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33908,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-16T15:32:04.303235"
+      "created_at": "2026-08-16T15:32:04.303235",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33924,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-16T15:33:14.728279"
+      "created_at": "2026-08-16T15:33:14.728279",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33925,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-16T15:33:14.728279"
+      "created_at": "2026-08-16T15:33:14.728279",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33926,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-16T15:33:14.728279"
+      "created_at": "2026-08-16T15:33:14.728279",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33930,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-16T15:34:23.933573"
+      "created_at": "2026-08-16T15:34:23.933573",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 33931,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-16T15:34:23.933573"
+      "created_at": "2026-08-16T15:34:23.933573",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

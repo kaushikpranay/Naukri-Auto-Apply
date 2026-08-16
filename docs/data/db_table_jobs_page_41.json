@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-10T02:41:43.756493"
+      "created_at": "2026-08-10T02:41:43.756493",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28493,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-10T02:41:43.756493"
+      "created_at": "2026-08-10T02:41:43.756493",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28503,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28507,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28509,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28511,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28512,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28513,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28518,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28519,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28520,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-10T02:42:50.343932"
+      "created_at": "2026-08-10T02:42:50.343932",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28532,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-11T18:10:05.103696"
+      "created_at": "2026-08-11T18:10:05.103696",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28538,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-11T18:10:05.103696"
+      "created_at": "2026-08-11T18:10:05.103696",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28541,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-11T18:10:05.103696"
+      "created_at": "2026-08-11T18:10:05.103696",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28572,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:12:46.626210"
+      "created_at": "2026-08-11T18:12:46.626210",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

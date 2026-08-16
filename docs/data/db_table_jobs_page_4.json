@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-09T16:30:43.090824"
+      "created_at": "2026-08-09T16:30:43.090824",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26364,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-09T16:30:43.090824"
+      "created_at": "2026-08-09T16:30:43.090824",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26365,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Kolkata",
-      "created_at": "2026-08-09T16:30:43.090824"
+      "created_at": "2026-08-09T16:30:43.090824",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26366,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26367,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26368,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26369,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26370,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26371,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26372,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26374,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26375,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26376,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26377,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26378,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-09T16:31:53.001512"
+      "created_at": "2026-08-09T16:31:53.001512",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

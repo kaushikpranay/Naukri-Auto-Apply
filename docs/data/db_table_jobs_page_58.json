@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30543,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30544,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30545,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30548,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30550,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30552,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30553,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30554,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30556,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30557,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30558,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-12T14:03:07.997557"
+      "created_at": "2026-08-12T14:03:07.997557",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30577,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-13T13:31:25.216258"
+      "created_at": "2026-08-13T13:31:25.216258",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30579,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-13T13:31:25.216258"
+      "created_at": "2026-08-13T13:31:25.216258",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 30584,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-13T13:32:34.087423"
+      "created_at": "2026-08-13T13:32:34.087423",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

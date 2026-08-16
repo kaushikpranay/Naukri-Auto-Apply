@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
-      "created_at": "2026-08-09T20:06:22.684066"
+      "created_at": "2026-08-09T20:06:22.684066",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27455,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
-      "created_at": "2026-08-09T20:06:22.684066"
+      "created_at": "2026-08-09T20:06:22.684066",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27456,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
-      "created_at": "2026-08-09T20:06:22.684066"
+      "created_at": "2026-08-09T20:06:22.684066",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27458,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27460,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27461,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27462,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27463,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27464,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27465,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27466,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27467,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27468,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27469,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 27470,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T20:07:10.946373"
+      "created_at": "2026-08-09T20:07:10.946373",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

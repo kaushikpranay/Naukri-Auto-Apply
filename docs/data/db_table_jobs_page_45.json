@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:32:59.167535"
+      "created_at": "2026-08-11T18:32:59.167535",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28938,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:32:59.167535"
+      "created_at": "2026-08-11T18:32:59.167535",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28940,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:32:59.167535"
+      "created_at": "2026-08-11T18:32:59.167535",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28941,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:32:59.167535"
+      "created_at": "2026-08-11T18:32:59.167535",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28942,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
-      "created_at": "2026-08-11T18:32:59.167535"
+      "created_at": "2026-08-11T18:32:59.167535",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28956,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T18:34:06.493217"
+      "created_at": "2026-08-11T18:34:06.493217",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28958,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T18:34:06.493217"
+      "created_at": "2026-08-11T18:34:06.493217",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28959,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T18:34:06.493217"
+      "created_at": "2026-08-11T18:34:06.493217",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28961,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Pune",
-      "created_at": "2026-08-11T18:34:06.493217"
+      "created_at": "2026-08-11T18:34:06.493217",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28973,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-11T18:35:11.884612"
+      "created_at": "2026-08-11T18:35:11.884612",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28977,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-11T18:35:11.884612"
+      "created_at": "2026-08-11T18:35:11.884612",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28979,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-11T18:35:11.884612"
+      "created_at": "2026-08-11T18:35:11.884612",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28981,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Hyderabad",
-      "created_at": "2026-08-11T18:35:11.884612"
+      "created_at": "2026-08-11T18:35:11.884612",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29006,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-11T18:37:22.973140"
+      "created_at": "2026-08-11T18:37:22.973140",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 29014,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-11T18:37:22.973140"
+      "created_at": "2026-08-11T18:37:22.973140",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

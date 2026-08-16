@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26488,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26489,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26490,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26491,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26492,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26493,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26494,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26495,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26496,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26497,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26498,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26499,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26500,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26501,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:39:01.135191"
+      "created_at": "2026-08-09T16:39:01.135191",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

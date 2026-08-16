@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T16:27:52.560857"
+      "created_at": "2026-08-09T16:27:52.560857",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26315,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T16:27:52.560857"
+      "created_at": "2026-08-09T16:27:52.560857",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26316,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T16:27:52.560857"
+      "created_at": "2026-08-09T16:27:52.560857",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26317,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-09T16:27:52.560857"
+      "created_at": "2026-08-09T16:27:52.560857",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26318,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26319,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26320,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26321,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26322,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26323,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26324,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26325,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26326,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26327,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 26328,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-09T16:28:59.950151"
+      "created_at": "2026-08-09T16:28:59.950151",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

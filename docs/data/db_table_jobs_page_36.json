@@ -16,7 +16,12 @@
     "retry_count",
     "search_keyword",
     "search_location",
-    "created_at"
+    "created_at",
+    "failure_type",
+    "failure_category",
+    "failure_reason",
+    "last_fill_error",
+    "failed_at"
   ],
   "rows": [
     {
@@ -36,7 +41,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28291,
@@ -55,7 +65,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28294,
@@ -74,7 +89,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28295,
@@ -93,7 +113,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28296,
@@ -112,7 +137,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28297,
@@ -131,7 +161,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28298,
@@ -150,7 +185,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Mumbai",
-      "created_at": "2026-08-10T02:29:58.826784"
+      "created_at": "2026-08-10T02:29:58.826784",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28299,
@@ -169,7 +209,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Indore",
-      "created_at": "2026-08-10T02:30:15.902210"
+      "created_at": "2026-08-10T02:30:15.902210",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28302,
@@ -188,7 +233,12 @@
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Indore",
-      "created_at": "2026-08-10T02:30:15.902210"
+      "created_at": "2026-08-10T02:30:15.902210",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28306,
@@ -207,7 +257,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-10T02:30:42.936696"
+      "created_at": "2026-08-10T02:30:42.936696",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28308,
@@ -226,7 +281,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-10T02:30:42.936696"
+      "created_at": "2026-08-10T02:30:42.936696",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28309,
@@ -245,7 +305,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Remote",
-      "created_at": "2026-08-10T02:30:42.936696"
+      "created_at": "2026-08-10T02:30:42.936696",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28317,
@@ -264,7 +329,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Noida",
-      "created_at": "2026-08-10T02:31:13.135687"
+      "created_at": "2026-08-10T02:31:13.135687",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28325,
@@ -283,7 +353,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-10T02:32:01.269761"
+      "created_at": "2026-08-10T02:32:01.269761",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     },
     {
       "id": 28331,
@@ -302,7 +377,12 @@
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Gurgaon",
-      "created_at": "2026-08-10T02:32:01.269761"
+      "created_at": "2026-08-10T02:32:01.269761",
+      "failure_type": null,
+      "failure_category": null,
+      "failure_reason": null,
+      "last_fill_error": null,
+      "failed_at": null
     }
   ],
   "pagination": {

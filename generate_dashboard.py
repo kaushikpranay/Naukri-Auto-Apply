@@ -241,25 +241,25 @@ def generate_jobs_and_details(conn):
     except Exception:
         pass
 
+    # Ensure failure tracking columns exist on jobs
+    for col, col_type in [
+        ("failure_type", "TEXT"),
+        ("failure_category", "TEXT"),
+        ("failure_reason", "TEXT"),
+        ("last_fill_error", "TEXT"),
+        ("failed_at", "TEXT")
+    ]:
+        try:
+            c.execute(f"ALTER TABLE jobs ADD COLUMN {col} {col_type}")
+        except Exception:
+            pass
+
+
     query = """
         SELECT j.*, 
-               COALESCE(j.failure_type, 
-                   CASE 
-                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%timeout%' THEN 'TIMEOUT'
-                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%unrecognized%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%unknown_question%' THEN 'UNRECOGNIZED_QUESTION'
-                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%not found%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%element%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%selector%' THEN 'DOM_ELEMENT_NOT_FOUND'
-                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%session%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%login%' THEN 'SESSION_DROP'
-                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%loop%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%stuck%' THEN 'INFINITE_DRAWER_LOOP'
-                       ELSE 'OTHER'
-                   END
-               ) as failure_type,
-               COALESCE(j.failure_category,
-                   CASE
-                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%timeout%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%session%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%login%' THEN 'TRANSIENT'
-                       ELSE 'DETERMINISTIC'
-                   END
-               ) as failure_category,
-               COALESCE(j.failure_reason, j.last_fill_error, aa.error, a.quota_message, 'Automated form fill failed / timed out') as failure_reason,
+               COALESCE(j.failure_type, 'OTHER') as failure_type,
+               COALESCE(j.failure_category, 'DETERMINISTIC') as failure_category,
+               COALESCE(j.failure_reason, aa.error, a.quota_message, 'Automated form fill failed / timed out') as failure_reason,
                COALESCE(j.failed_at, j.created_at) as failed_at,
                COALESCE(j.retry_count, 0) as retry_count,
                e.interview_probability as ai_score, e.action as ai_action, e.priority as ai_priority, e.confidence as ai_confidence, e.reason as ai_reason,
@@ -283,16 +283,23 @@ def generate_jobs_and_details(conn):
     try:
         c.execute(query)
         all_jobs = [dict(row) for row in c.fetchall()]
-    except sqlite3.OperationalError:
+    except Exception as ex:
         # Fallback if some table/columns don't exist
         try:
-            c.execute("SELECT * FROM jobs WHERE (normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs)) ORDER BY created_at DESC")
-        except sqlite3.OperationalError:
+            c.execute("""
+                SELECT j.*, e.interview_probability as ai_score, e.action as ai_action, e.priority as ai_priority,
+                       e.confidence as ai_confidence, e.reason as ai_reason
+                FROM jobs j
+                LEFT JOIN ai_evaluations e ON e.job_id = j.id
+                WHERE (j.normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs))
+                ORDER BY j.created_at DESC
+            """)
+        except Exception:
             c.execute("SELECT * FROM jobs ORDER BY created_at DESC")
         all_jobs = [dict(row) for row in c.fetchall()]
         for job in all_jobs:
-            job["ai_score"] = 0
-            job["ai_action"] = "SKIP"
+            if "ai_score" not in job or job["ai_score"] is None:
+                job["ai_score"] = None
             job["app_status"] = job.get("status", "pending")
             job["retry_count"] = job.get("retry_count", 0)
             job["failure_reason"] = job.get("failure_reason") or job.get("last_fill_error") or "Automated form fill failed / timed out"
@@ -301,6 +308,7 @@ def generate_jobs_and_details(conn):
             job["failure_category"] = "TRANSIENT" if ft in ("TIMEOUT", "SESSION_DROP") else "DETERMINISTIC"
             is_ext = job.get("status") == "external_portal" or (job.get("apply_url") and "naukri.com" not in job.get("apply_url").lower())
             job["application_type"] = "EXTERNAL" if is_ext else "INTERNAL"
+
 
     
     total_records = len(all_jobs)
