@@ -196,8 +196,15 @@ class FormFiller:
                     timeout=_RESOLVE_TIMEOUT,
                 )
             except asyncio.TimeoutError:
+                from app.models.form_fill import FailureType, classify_failure_category
                 logger.error("RESOLVE_CHATBOT_TIMEOUT: Chatbot question resolution exceeded {}s — breaking loop", _RESOLVE_TIMEOUT)
+                report.error_message = f"Chatbot question resolution timed out (exceeded {_RESOLVE_TIMEOUT}s)"
+                report.failure_type = FailureType.TIMEOUT
+                report.failure_category = classify_failure_category(FailureType.TIMEOUT)
+                report.status = "error"
                 active = None
+
+
             if active:
                 if active.get("field_type") == "unknown":
                     await self._final_drawer_refresh_scan(page, active)
@@ -269,9 +276,16 @@ class FormFiller:
             norm_text = " ".join(target_text.lower().strip().split())
             if norm_text in processed_texts:
                 if target_key not in _error_keys:
+                    from app.models.form_fill import FailureType, classify_failure_category
                     logger.warning("STUCK_ON_SAME_QUESTION_TEXT — breaking loop: '{}'", target_text[:60])
+                    report.error_message = f"Stuck in chatbot drawer loop on question: '{target_text[:80]}'"
+                    report.failure_type = FailureType.INFINITE_DRAWER_LOOP
+                    report.failure_category = classify_failure_category(FailureType.INFINITE_DRAWER_LOOP)
+                    report.status = "error"
                     break
                 logger.info("RETRY_SAME_QUESTION_TEXT — previous fill errored, retrying: '{}'", target_text[:60])
+
+
             processed_texts.add(norm_text)
             processed_keys[target_key] = target_text
 
@@ -501,6 +515,12 @@ class FormFiller:
                             "NO_PROGRESS_LIMIT_REACHED: {} consecutive non-fills — breaking loop for job_id={}",
                             _no_progress_count, job_id,
                         )
+                        if not report.error_message:
+                            from app.models.form_fill import FailureType, classify_failure_category
+                            report.error_message = f"Drawer failed to advance after {_no_progress_count} consecutive attempts"
+                            report.failure_type = FailureType.DOM_ELEMENT_NOT_FOUND
+                            report.failure_category = classify_failure_category(FailureType.DOM_ELEMENT_NOT_FOUND)
+                            report.status = "error"
                         break
 
                 # ── Post-fill: click Save button ───────────────────────────
@@ -510,10 +530,32 @@ class FormFiller:
                         logger.info("APPLICATION_SUBMITTED_SUCCESSFULLY - exiting form filler loop")
                         break
 
-            except PipelineSuspendedException:
+            except PipelineSuspendedException as pse:
+                from app.models.form_fill import FailureType, classify_failure_category
+                report.error_message = f"User input suspended: {pse}"
+                report.failure_type = FailureType.UNRECOGNIZED_QUESTION
+                report.failure_category = classify_failure_category(FailureType.UNRECOGNIZED_QUESTION)
+                report.status = "error"
                 raise
             except Exception as exc:
+                from app.models.form_fill import FailureType, classify_failure_category
                 logger.warning("Phase 2 container error key={} job_id={}: {}", target_key, job_id, exc)
+                if not report.error_message:
+                    err_str = str(exc).lower()
+                    if "timeout" in err_str:
+                        ft = FailureType.TIMEOUT
+                    elif "not found" in err_str or "selector" in err_str or "element" in err_str:
+                        ft = FailureType.DOM_ELEMENT_NOT_FOUND
+                    elif "session" in err_str or "login" in err_str:
+                        ft = FailureType.SESSION_DROP
+                    else:
+                        ft = FailureType.OTHER
+                    report.error_message = f"Phase 2 error on field '{target_key}': {exc}"
+                    report.failure_type = ft
+                    report.failure_category = classify_failure_category(ft)
+                    report.status = "error"
+
+
 
         report.screenshot_after = await self._capture_screenshot(page, f"job_{job_id}_phase2_after")
         logger.info(

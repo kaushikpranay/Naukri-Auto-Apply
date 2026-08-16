@@ -88,8 +88,18 @@ def generate_stats(conn):
     c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('applied', 'applied_successfully', 'already_applied')")
     applied = c.fetchone()[0]
     
-    c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('failed', 'discovery_failed')")
-    failed = c.fetchone()[0]
+    try:
+        c.execute("""
+            SELECT COUNT(*) FROM jobs 
+            WHERE (status IN ('failed', 'discovery_failed', 'temporary_failure', 'browser_error') OR failure_reason IS NOT NULL)
+              AND status NOT IN ('applied', 'applied_successfully', 'already_applied', 'external_portal', 'skip', 'skipped')
+              AND (normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs))
+        """)
+        failed = c.fetchone()[0]
+    except sqlite3.OperationalError:
+        c.execute("SELECT COUNT(*) FROM jobs WHERE status IN ('failed', 'discovery_failed')")
+        failed = c.fetchone()[0]
+
     
     # Second Row Stats
     auto_sessions = 0
@@ -214,15 +224,60 @@ def generate_jobs_and_details(conn):
     c = conn.cursor()
     
     # Get all jobs matching the format used in main.py
+    # Ensure excluded_jobs exists
+    try:
+        c.execute("""
+            CREATE TABLE IF NOT EXISTS excluded_jobs (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                job_id INTEGER,
+                normalized_url TEXT UNIQUE,
+                job_url TEXT,
+                company_name TEXT,
+                job_title TEXT,
+                reason TEXT DEFAULT 'destroyed_by_user',
+                excluded_at TEXT NOT NULL DEFAULT (datetime('now'))
+            )
+        """)
+    except Exception:
+        pass
+
     query = """
         SELECT j.*, 
+               COALESCE(j.failure_type, 
+                   CASE 
+                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%timeout%' THEN 'TIMEOUT'
+                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%unrecognized%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%unknown_question%' THEN 'UNRECOGNIZED_QUESTION'
+                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%not found%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%element%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%selector%' THEN 'DOM_ELEMENT_NOT_FOUND'
+                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%session%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%login%' THEN 'SESSION_DROP'
+                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%loop%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%stuck%' THEN 'INFINITE_DRAWER_LOOP'
+                       ELSE 'OTHER'
+                   END
+               ) as failure_type,
+               COALESCE(j.failure_category,
+                   CASE
+                       WHEN LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%timeout%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%session%' OR LOWER(COALESCE(j.failure_reason, j.last_fill_error, '')) LIKE '%login%' THEN 'TRANSIENT'
+                       ELSE 'DETERMINISTIC'
+                   END
+               ) as failure_category,
+               COALESCE(j.failure_reason, j.last_fill_error, aa.error, a.quota_message, 'Automated form fill failed / timed out') as failure_reason,
+               COALESCE(j.failed_at, j.created_at) as failed_at,
+               COALESCE(j.retry_count, 0) as retry_count,
                e.interview_probability as ai_score, e.action as ai_action, e.priority as ai_priority, e.confidence as ai_confidence, e.reason as ai_reason,
                a.apply_type as app_type, a.status as app_status, a.detected_at as app_date,
-               aa.status as ats_status, aa.ats_type as ats_platform
+               aa.status as ats_status, COALESCE(aa.ats_type, 'Naukri') as ats_platform,
+               CASE 
+                   WHEN j.status = 'external_portal' 
+                        OR a.apply_type = 'external_portal' 
+                        OR (aa.ats_type IS NOT NULL AND aa.ats_type != '' AND LOWER(aa.ats_type) != 'naukri') 
+                        OR (j.apply_url IS NOT NULL AND j.apply_url != '' AND j.apply_url NOT LIKE '%naukri.com%') 
+                   THEN 'EXTERNAL'
+                   ELSE 'INTERNAL'
+               END AS application_type
         FROM jobs j
         LEFT JOIN ai_evaluations e ON e.job_id = j.id
         LEFT JOIN job_applications a ON a.job_id = j.id
         LEFT JOIN ats_applications aa ON aa.job_id = j.id
+        WHERE (j.normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs))
         ORDER BY j.created_at DESC
     """
     try:
@@ -230,17 +285,28 @@ def generate_jobs_and_details(conn):
         all_jobs = [dict(row) for row in c.fetchall()]
     except sqlite3.OperationalError:
         # Fallback if some table/columns don't exist
-        c.execute("SELECT * FROM jobs ORDER BY created_at DESC")
+        try:
+            c.execute("SELECT * FROM jobs WHERE (normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs)) ORDER BY created_at DESC")
+        except sqlite3.OperationalError:
+            c.execute("SELECT * FROM jobs ORDER BY created_at DESC")
         all_jobs = [dict(row) for row in c.fetchall()]
         for job in all_jobs:
             job["ai_score"] = 0
             job["ai_action"] = "SKIP"
             job["app_status"] = job.get("status", "pending")
+            job["retry_count"] = job.get("retry_count", 0)
+            job["failure_reason"] = job.get("failure_reason") or job.get("last_fill_error") or "Automated form fill failed / timed out"
+            ft = "TIMEOUT" if "timeout" in (job["failure_reason"] or "").lower() else "OTHER"
+            job["failure_type"] = ft
+            job["failure_category"] = "TRANSIENT" if ft in ("TIMEOUT", "SESSION_DROP") else "DETERMINISTIC"
+            is_ext = job.get("status") == "external_portal" or (job.get("apply_url") and "naukri.com" not in job.get("apply_url").lower())
+            job["application_type"] = "EXTERNAL" if is_ext else "INTERNAL"
+
     
     total_records = len(all_jobs)
     limit = 25
 
-    def write_paginated_set(prefix, items):
+    def write_paginated_set(prefix, items, extra_payload=None):
         tot = len(items)
         tot_pages = (tot + limit - 1) // limit if tot > 0 else 1
         for p in range(1, tot_pages + 1):
@@ -254,10 +320,12 @@ def generate_jobs_and_details(conn):
                     "total_pages": tot_pages
                 }
             }
+            if extra_payload:
+                p_data.update(extra_payload)
             write_json(f"{prefix}_page_{p}.json", p_data)
         
         # Also write the complete dataset to {prefix}.json for filter-before-paginate clients
-        write_json(f"{prefix}.json", {
+        full_data = {
             "jobs": items,
             "pagination": {
                 "page": 1,
@@ -265,7 +333,10 @@ def generate_jobs_and_details(conn):
                 "total_records": tot,
                 "total_pages": 1
             }
-        })
+        }
+        if extra_payload:
+            full_data.update(extra_payload)
+        write_json(f"{prefix}.json", full_data)
 
     # 1. Write all jobs
     write_paginated_set("jobs", all_jobs)
@@ -281,6 +352,44 @@ def generate_jobs_and_details(conn):
     # 4. Write external portal jobs
     ext_list = [j for j in all_jobs if j.get("status") == "external_portal"]
     write_paginated_set("external_jobs", ext_list)
+
+    # 5. Write failed jobs store
+    failed_list = [
+        j for j in all_jobs 
+        if (j.get("status") in ("failed", "discovery_failed", "temporary_failure", "browser_error") or j.get("failure_reason"))
+        and j.get("status") not in ("applied", "applied_successfully", "already_applied", "external_portal", "skip", "skipped")
+    ]
+    # Ensure failure_type and failure_category are normalized
+    for j in failed_list:
+        ft = (j.get("failure_type") or "OTHER").upper()
+        j["failure_type"] = ft
+        j["failure_category"] = "TRANSIENT" if ft in ("TIMEOUT", "SESSION_DROP") else "DETERMINISTIC"
+
+    # Compute diagnostic summary counts grouped by failure_type, most frequent first
+    type_counts: dict[str, int] = {}
+    for j in failed_list:
+        ft = j["failure_type"]
+        type_counts[ft] = type_counts.get(ft, 0) + 1
+
+    summary_by_type = [
+        {
+            "type": ft,
+            "count": count,
+            "category": "TRANSIENT" if ft in ("TIMEOUT", "SESSION_DROP") else "DETERMINISTIC"
+        }
+        for ft, count in sorted(type_counts.items(), key=lambda x: x[1], reverse=True)
+    ]
+
+    # Default sort by failure_type so clusters are visually grouped, then by failed_at desc
+    failed_list.sort(key=lambda x: (x.get("failure_type") or "OTHER", x.get("failed_at") or x.get("created_at") or ""), reverse=False)
+
+    write_paginated_set(
+        "failed_jobs", 
+        failed_list, 
+        extra_payload={"summary": {"by_type": summary_by_type, "total_failed": len(failed_list)}}
+    )
+
+
 
     # Write details for each job: job_{job_id}.json
     print(f"Generating individual job detail files for {total_records} jobs...")
@@ -346,11 +455,22 @@ def generate_jobs_and_details(conn):
 def generate_queue(conn):
     c = conn.cursor()
     
+    app_type_sql = """
+        CASE 
+            WHEN j.status = 'external_portal' 
+                 OR (aa.ats_type IS NOT NULL AND aa.ats_type != '' AND LOWER(aa.ats_type) != 'naukri') 
+                 OR (j.apply_url IS NOT NULL AND j.apply_url != '' AND j.apply_url NOT LIKE '%naukri.com%') 
+            THEN 'EXTERNAL'
+            ELSE 'INTERNAL'
+        END AS application_type
+    """
+
     # Ready to apply
     ready = []
     try:
-        c.execute("""
-            SELECT j.id, j.company_name, j.job_title, j.experience_required, j.location, e.interview_probability as score, e.action, j.status, aa.ats_type
+        c.execute(f"""
+            SELECT j.id, j.company_name, j.job_title, j.experience_required, j.location, e.interview_probability as score, e.action, j.status, aa.ats_type,
+                   {app_type_sql}
             FROM jobs j
             JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
@@ -364,8 +484,9 @@ def generate_queue(conn):
     # Currently applying
     applying = []
     try:
-        c.execute("""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.ats_type, bs.current_url, bs.pipeline
+        c.execute(f"""
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.ats_type, bs.current_url, bs.pipeline,
+                   {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
@@ -379,8 +500,9 @@ def generate_queue(conn):
     # Waiting user
     waiting = []
     try:
-        c.execute("""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.ats_type
+        c.execute(f"""
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.ats_type,
+                   {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
@@ -393,8 +515,14 @@ def generate_queue(conn):
     # Retry Queue
     retry = []
     try:
-        c.execute("""
-            SELECT j.id, j.company_name, j.job_title, j.retry_count, j.status, e.interview_probability as score
+        c.execute(f"""
+            SELECT j.id, j.company_name, j.job_title, j.retry_count, j.status, e.interview_probability as score,
+                   CASE 
+                       WHEN j.status = 'external_portal' 
+                            OR (j.apply_url IS NOT NULL AND j.apply_url != '' AND j.apply_url NOT LIKE '%naukri.com%') 
+                       THEN 'EXTERNAL'
+                       ELSE 'INTERNAL'
+                   END AS application_type
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             WHERE j.status IN ('temporary_failure', 'browser_error') AND j.retry_count < 3
@@ -406,8 +534,9 @@ def generate_queue(conn):
     # Completed
     completed = []
     try:
-        c.execute("""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.applied_at
+        c.execute(f"""
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.applied_at,
+                   {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
@@ -421,8 +550,9 @@ def generate_queue(conn):
     # Failed
     failed = []
     try:
-        c.execute("""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.error
+        c.execute(f"""
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.error,
+                   {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN ats_applications aa ON aa.job_id = j.id
@@ -432,6 +562,7 @@ def generate_queue(conn):
         failed = [dict(row) for row in c.fetchall()]
     except sqlite3.OperationalError:
         pass
+
         
     queue_data = {
         "ready_to_apply": ready,

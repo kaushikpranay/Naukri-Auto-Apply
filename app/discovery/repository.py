@@ -127,6 +127,15 @@ class ApplyDiscoveryRepository:
         "ALTER TABLE question_bank ADD COLUMN last_used_at TEXT",
         # Quota exhaustion detection
         "ALTER TABLE job_applications ADD COLUMN quota_message TEXT",
+        # Failed jobs & exclusion store
+        "ALTER TABLE jobs ADD COLUMN failure_reason TEXT",
+        "ALTER TABLE jobs ADD COLUMN failed_at TEXT",
+        "ALTER TABLE jobs ADD COLUMN last_fill_error TEXT",
+        "ALTER TABLE jobs ADD COLUMN failure_type TEXT DEFAULT 'OTHER'",
+        "ALTER TABLE jobs ADD COLUMN failure_category TEXT DEFAULT 'DETERMINISTIC'",
+        "CREATE TABLE IF NOT EXISTS excluded_jobs (id INTEGER PRIMARY KEY AUTOINCREMENT, job_id INTEGER, normalized_url TEXT UNIQUE, job_url TEXT, company_name TEXT, job_title TEXT, reason TEXT DEFAULT 'destroyed_by_user', excluded_at TEXT NOT NULL DEFAULT (datetime('now')))",
+        "CREATE INDEX IF NOT EXISTS idx_excluded_jobs_url ON excluded_jobs(normalized_url)",
+
         # Sync jobs.status for evaluated jobs whose discovery outcome was saved but
         # status was never updated (old code omitted update_job_status call)
         "UPDATE jobs SET status = (SELECT apply_type FROM job_applications WHERE job_id = jobs.id AND apply_type NOT IN ('', 'discovery_failed') LIMIT 1) WHERE status = 'evaluated' AND EXISTS (SELECT 1 FROM job_applications WHERE job_id = jobs.id AND apply_type NOT IN ('', 'discovery_failed'))",
@@ -263,24 +272,133 @@ class ApplyDiscoveryRepository:
         rows = cursor.fetchall()
         return [JobData(**dict(row)) for row in rows]
 
-    def update_job_status(self, job_id: int, status: str, apply_url: str | None = None) -> None:
-        """Update the status (and optionally apply_url) of a job in the jobs table."""
+    def update_job_status(
+        self,
+        job_id: int,
+        status: str,
+        apply_url: str | None = None,
+        failure_reason: str | None = None,
+        failure_type: str | None = None,
+        failed_at: str | None = None,
+    ) -> None:
+        """Update the status (and optionally apply_url, failure_reason, failure_type, failed_at) of a job."""
+        from app.models.form_fill import classify_failure_category
         cursor = self._conn.cursor()
+        sets = ["status = ?"]
+        params = [status]
+
         if apply_url:
-            cursor.execute(
-                "UPDATE jobs SET status = ?, apply_url = COALESCE(NULLIF(?, ''), apply_url) WHERE id = ?"
-                " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
-                (status, apply_url, job_id, status),
-            )
-        else:
-            cursor.execute(
-                "UPDATE jobs SET status = ? WHERE id = ?"
-                " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
-                (status, job_id, status),
-            )
+            sets.append("apply_url = COALESCE(NULLIF(?, ''), apply_url)")
+            params.append(apply_url)
+        if failure_reason is not None:
+            sets.append("failure_reason = ?")
+            sets.append("last_fill_error = ?")
+            params.extend([failure_reason[:500], failure_reason[:500]])
+        if failure_type is not None:
+            sets.append("failure_type = ?")
+            sets.append("failure_category = ?")
+            params.extend([failure_type, classify_failure_category(failure_type)])
+        if failed_at is not None:
+            sets.append("failed_at = ?")
+            params.append(failed_at)
+
+        params.extend([job_id, status])
+        sql = f"UPDATE jobs SET {', '.join(sets)} WHERE id = ? AND (status != 'applied_successfully' OR ? = 'applied_successfully')"
+        cursor.execute(sql, tuple(params))
         self._conn.commit()
         if cursor.rowcount == 0:
             logger.warning("update_job_status: no row updated for job_id={} status={}", job_id, status)
+
+    def mark_job_failed(
+        self,
+        job_id: int,
+        reason: str,
+        failure_type: str = "OTHER",
+        apply_url: str | None = None,
+        is_retry: bool = False,
+    ) -> None:
+        """Mark a job as failed with specific failure_type, failure_category, reason and timestamp.
+        
+        If is_retry is True, bumps retry_count; otherwise sets/preserves retry_count.
+        """
+        from app.models.form_fill import classify_failure_category
+        now = datetime.now().isoformat()
+        category = classify_failure_category(failure_type)
+        cursor = self._conn.cursor()
+        if is_retry:
+            cursor.execute(
+                """
+                UPDATE jobs 
+                SET status = 'failed',
+                    failure_type = ?,
+                    failure_category = ?,
+                    failure_reason = ?,
+                    last_fill_error = ?,
+                    failed_at = ?,
+                    retry_count = COALESCE(retry_count, 0) + 1,
+                    apply_url = COALESCE(NULLIF(?, ''), apply_url)
+                WHERE id = ? AND status != 'applied_successfully'
+                """,
+                (failure_type, category, reason[:500], reason[:500], now, apply_url or "", job_id),
+            )
+        else:
+            cursor.execute(
+                """
+                UPDATE jobs 
+                SET status = 'failed',
+                    failure_type = ?,
+                    failure_category = ?,
+                    failure_reason = ?,
+                    last_fill_error = ?,
+                    failed_at = ?,
+                    retry_count = COALESCE(retry_count, 0),
+                    apply_url = COALESCE(NULLIF(?, ''), apply_url)
+                WHERE id = ? AND status != 'applied_successfully'
+                """,
+                (failure_type, category, reason[:500], reason[:500], now, apply_url or "", job_id),
+            )
+        self._conn.commit()
+        logger.info("Marked job_id={} as failed ({} / {}): reason='{}' (is_retry={})", job_id, failure_type, category, reason[:100], is_retry)
+
+
+    def is_url_excluded(self, normalized_url: str) -> bool:
+        """Check if normalized_url is in the persistent excluded_jobs list."""
+        if not normalized_url:
+            return False
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT 1 FROM excluded_jobs WHERE normalized_url = ?", (normalized_url,))
+        return cursor.fetchone() is not None
+
+    def exclude_job(self, job_id: int, reason: str = "destroyed_by_user") -> bool:
+        """Permanently exclude a job and remove it from active queue."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT * FROM jobs WHERE id = ?", (job_id,))
+        row = cursor.fetchone()
+        if not row:
+            return False
+        job = dict(row)
+        cursor.execute(
+            """
+            INSERT OR IGNORE INTO excluded_jobs (job_id, normalized_url, job_url, company_name, job_title, reason, excluded_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                job["id"],
+                job.get("normalized_url") or str(job["id"]),
+                job.get("job_url") or job.get("apply_url") or "",
+                job.get("company_name") or "",
+                job.get("job_title") or "",
+                reason,
+                datetime.now().isoformat(),
+            ),
+        )
+        cursor.execute("DELETE FROM jobs WHERE id = ?", (job_id,))
+        cursor.execute("DELETE FROM job_applications WHERE job_id = ?", (job_id,))
+        cursor.execute("DELETE FROM ats_applications WHERE job_id = ?", (job_id,))
+        cursor.execute("DELETE FROM ai_evaluations WHERE job_id = ?", (job_id,))
+        self._conn.commit()
+        logger.info("Permanently destroyed job_id={} and added to excluded_jobs", job_id)
+        return True
 
     def increment_retry_count(self, job_id: int) -> int:
         """Increment retry_count on the jobs table and return the new value."""
@@ -293,6 +411,7 @@ class ApplyDiscoveryRepository:
             logger.error("increment_retry_count: job_id={} not found", job_id)
             return -1
         return int(row[0])
+
 
     def get_job_by_id(self, job_id: int) -> JobData | None:
         """Fetch a single job by its ID regardless of discovery status."""

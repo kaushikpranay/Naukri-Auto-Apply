@@ -50,10 +50,29 @@ CREATE TABLE IF NOT EXISTS jobs (
     recruiter_email TEXT    DEFAULT '',
     status          TEXT    DEFAULT 'pending',
     retry_count     INTEGER DEFAULT 0,
+    failure_type    TEXT    DEFAULT 'OTHER',
+    failure_category TEXT   DEFAULT 'DETERMINISTIC',
+    failure_reason  TEXT,
+    last_fill_error TEXT,
+    failed_at       TEXT,
     search_keyword  TEXT,
     search_location TEXT,
     created_at      TEXT    NOT NULL
 );
+
+
+CREATE TABLE IF NOT EXISTS excluded_jobs (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    job_id          INTEGER,
+    normalized_url  TEXT    NOT NULL UNIQUE,
+    job_url         TEXT,
+    company_name    TEXT,
+    job_title       TEXT,
+    reason          TEXT    DEFAULT 'destroyed_by_user',
+    excluded_at     TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_excluded_jobs_url ON excluded_jobs(normalized_url);
 
 CREATE TABLE IF NOT EXISTS search_combo_runs (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -74,6 +93,7 @@ INSERT OR IGNORE INTO jobs (
     search_keyword, search_location, created_at
 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 """
+
 
 
 _auto_cleanup_done: set[str] = set()
@@ -283,16 +303,28 @@ class JobRepository:
                 pass
             logger.warning("Legacy database migration skipped: {}", e)
 
+    def is_url_excluded(self, normalized_url: str) -> bool:
+        """Check if normalized_url is in the persistent excluded_jobs list."""
+        if not normalized_url:
+            return False
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT 1 FROM excluded_jobs WHERE normalized_url = ?", (normalized_url,))
+        return cursor.fetchone() is not None
+
     def insert_job(self, job: JobData) -> bool:
         """
-        Insert a single job. Skips if normalized_url already exists.
+        Insert a single job. Skips if normalized_url already exists or is in excluded_jobs.
 
         Args:
             job: The job data to insert.
 
         Returns:
-            True if the job was inserted, False if it was a duplicate.
+            True if the job was inserted, False if it was duplicate or excluded.
         """
+        if self.is_url_excluded(job.normalized_url):
+            logger.debug("Excluded job skipped: {}", job.normalized_url[:80])
+            return False
+
         cursor: sqlite3.Cursor = self._conn.cursor()
         now: str = datetime.now().isoformat()
 
@@ -311,8 +343,7 @@ class JobRepository:
             job.status,
             job.retry_count,
             job.search_keyword or "",
-            job.search_location or "", # JobData must define: search_location: str = ""
-            
+            job.search_location or "",
             now,
         ))
         commit_with_retry(self._conn)
@@ -328,7 +359,7 @@ class JobRepository:
 
     def insert_many(self, jobs: list[JobData]) -> tuple[int, int]:
         """
-        Insert multiple jobs with deduplication tracking.
+        Insert multiple jobs with deduplication and exclusion tracking.
         Uses a single transaction for performance.
 
         Args:
@@ -343,7 +374,15 @@ class JobRepository:
         cursor: sqlite3.Cursor = self._conn.cursor()
 
         try:
+            # Fetch all excluded urls once for efficient lookup
+            cursor.execute("SELECT normalized_url FROM excluded_jobs")
+            excluded_set = {row[0] for row in cursor.fetchall()}
+
             for job in jobs:
+                if job.normalized_url in excluded_set:
+                    duplicates += 1
+                    continue
+
                 cursor.execute(_INSERT_JOB_SQL, (
                     job.job_title,
                     job.company_name,
@@ -372,11 +411,87 @@ class JobRepository:
             raise
 
         logger.info(
-            "Batch insert complete: {} inserted, {} duplicates",
+            "Batch insert complete: {} inserted, {} duplicates/excluded",
             inserted,
             duplicates,
         )
         return inserted, duplicates
+
+    def mark_job_failed(
+        self,
+        job_id: int,
+        reason: str,
+        failure_type: str = "OTHER",
+        bump_retry: bool = False,
+    ) -> None:
+        """Mark a job as failed with failure_type, failure_category, reason, failed_at, and optional retry bump."""
+        from app.models.form_fill import classify_failure_category
+        now = datetime.now().isoformat()
+        category = classify_failure_category(failure_type)
+        cursor = self._conn.cursor()
+        if bump_retry:
+            cursor.execute(
+                """
+                UPDATE jobs
+                SET status = 'failed',
+                    failure_type = ?,
+                    failure_category = ?,
+                    failure_reason = ?,
+                    last_fill_error = ?,
+                    failed_at = ?,
+                    retry_count = COALESCE(retry_count, 0) + 1
+                WHERE id = ? AND status != 'applied_successfully'
+                """,
+                (failure_type, category, reason[:500], reason[:500], now, job_id),
+            )
+        else:
+            cursor.execute(
+                """
+                UPDATE jobs
+                SET status = 'failed',
+                    failure_type = ?,
+                    failure_category = ?,
+                    failure_reason = ?,
+                    last_fill_error = ?,
+                    failed_at = ?,
+                    retry_count = COALESCE(retry_count, 0)
+                WHERE id = ? AND status != 'applied_successfully'
+                """,
+                (failure_type, category, reason[:500], reason[:500], now, job_id),
+            )
+        commit_with_retry(self._conn)
+
+
+    def exclude_job(self, job_id: int, reason: str = "destroyed_by_user") -> bool:
+        """Permanently exclude a job, add to excluded_jobs, and delete from active tables."""
+        cursor = self._conn.cursor()
+        cursor.execute("SELECT * FROM jobs WHERE id = ?", (job_id,))
+        row = cursor.fetchone()
+        if not row:
+            return False
+        job = dict(row)
+        cursor.execute(
+            """
+            INSERT OR IGNORE INTO excluded_jobs (job_id, normalized_url, job_url, company_name, job_title, reason, excluded_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                job["id"],
+                job.get("normalized_url") or str(job["id"]),
+                job.get("job_url") or job.get("apply_url") or "",
+                job.get("company_name") or "",
+                job.get("job_title") or "",
+                reason,
+                datetime.now().isoformat(),
+            ),
+        )
+        cursor.execute("DELETE FROM jobs WHERE id = ?", (job_id,))
+        cursor.execute("DELETE FROM job_applications WHERE job_id = ?", (job_id,))
+        cursor.execute("DELETE FROM ats_applications WHERE job_id = ?", (job_id,))
+        cursor.execute("DELETE FROM ai_evaluations WHERE job_id = ?", (job_id,))
+        commit_with_retry(self._conn)
+        return True
+
 
     def get_all_jobs(self) -> list[dict]:
         """

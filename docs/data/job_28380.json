@@ -17,16 +17,13 @@
     "search_keyword": "RAG Engineer",
     "search_location": "Hyderabad",
     "created_at": "2026-08-10T02:35:37.997684",
-    "ai_score": 85.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 90.0,
-    "ai_reason": "Candidate demonstrates exceptional production-grade RAG, LLM, and Agentic AI experience with AWS Bedrock and pgvector. Strong alignment with core job functions, despite fewer years of experience. Primary gap is specific legacy code transformation (AST/RPG).",
-    "app_type": "external_portal",
-    "app_status": "discovered",
-    "app_date": "2026-08-12T15:19:50.100626",
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "external_portal",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "EXTERNAL"
   },
   "ai_evaluation": {
     "id": 5185,

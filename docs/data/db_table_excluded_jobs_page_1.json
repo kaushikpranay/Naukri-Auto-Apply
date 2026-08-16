@@ -1,0 +1,19 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "normalized_url",
+    "job_url",
+    "company_name",
+    "job_title",
+    "reason",
+    "excluded_at"
+  ],
+  "rows": [],
+  "pagination": {
+    "page": 1,
+    "limit": 15,
+    "total_records": 0,
+    "total_pages": 1
+  }
+}

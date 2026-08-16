@@ -17,16 +17,13 @@
     "search_keyword": "LLM Engineer",
     "search_location": "Mumbai",
     "created_at": "2026-08-10T02:29:58.826784",
-    "ai_score": 60.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 70.0,
-    "ai_reason": "Strong production RAG experience but lacks Node.js and vector DB expertise.",
-    "app_type": "unknown",
-    "app_status": "discovered",
-    "app_date": "2026-08-12T16:16:05.403667",
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "unknown",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "INTERNAL"
   },
   "ai_evaluation": {
     "id": 5094,

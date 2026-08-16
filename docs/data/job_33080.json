@@ -17,16 +17,13 @@
     "search_keyword": "Generative AI Engineer",
     "search_location": "Pune",
     "created_at": "2026-08-16T12:56:06.952778",
-    "ai_score": 85.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 85.0,
-    "ai_reason": "Strong production RAG and LLM experience, FastAPI backend, AWS deployment, but lacks specific Lex/Polly/Connect and Azure OpenAI.",
-    "app_type": null,
-    "app_status": null,
-    "app_date": null,
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "evaluated",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "INTERNAL"
   },
   "ai_evaluation": {
     "id": 5551,

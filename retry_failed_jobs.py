@@ -106,10 +106,12 @@ async def run() -> None:
                 FROM jobs j
                 JOIN ai_evaluations e ON e.job_id = j.id
                 WHERE UPPER(e.action) = 'APPLY'
-                  AND j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  AND j.status IN ('failed', 'queued', 'unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  AND (j.normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs))
                 ORDER BY e.interview_probability DESC, j.id ASC
             """)
             retry_job_ids = [row[0] for row in cursor.fetchall()]
+
 
             if not retry_job_ids:
                 logger.info("No retryable jobs in the queue.")

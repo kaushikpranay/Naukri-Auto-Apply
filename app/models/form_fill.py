@@ -27,6 +27,34 @@ class FieldFillResult:
     answer_source: str | None = None  # "AUTO" or "USER_LEARNED"
 
 
+class FailureType:
+    TIMEOUT = "TIMEOUT"
+    UNRECOGNIZED_QUESTION = "UNRECOGNIZED_QUESTION"
+    DOM_ELEMENT_NOT_FOUND = "DOM_ELEMENT_NOT_FOUND"
+    SESSION_DROP = "SESSION_DROP"
+    INFINITE_DRAWER_LOOP = "INFINITE_DRAWER_LOOP"
+    OTHER = "OTHER"
+
+
+class FailureCategory:
+    TRANSIENT = "TRANSIENT"
+    DETERMINISTIC = "DETERMINISTIC"
+
+
+TRANSIENT_FAILURE_TYPES = {
+    FailureType.TIMEOUT,
+    FailureType.SESSION_DROP,
+}
+
+
+def classify_failure_category(failure_type: str | None) -> str:
+    """Classify failure type as TRANSIENT or DETERMINISTIC."""
+    if not failure_type:
+        return FailureCategory.DETERMINISTIC
+    norm = str(failure_type).upper().strip()
+    return FailureCategory.TRANSIENT if norm in TRANSIENT_FAILURE_TYPES else FailureCategory.DETERMINISTIC
+
+
 @dataclass
 class FormFillReport:
     """Aggregated fill report for one job's application form."""
@@ -39,7 +67,13 @@ class FormFillReport:
     unknown: list[FieldFillResult] = field(default_factory=list)
     screenshot_before: str | None = None
     screenshot_after: str | None = None
+    error_message: str | None = None
+    failure_type: str | None = None
+    failure_category: str | None = None
+    status: str = "ok"  # "ok" or "error"
     filled_at: datetime = field(default_factory=datetime.now)
+
+
 
     @property
     def total_fields(self) -> int:

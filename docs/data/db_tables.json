@@ -22,5 +22,6 @@
   "automation_events",
   "manual_actions",
   "browser_sessions",
-  "search_combo_runs"
+  "search_combo_runs",
+  "excluded_jobs"
 ]

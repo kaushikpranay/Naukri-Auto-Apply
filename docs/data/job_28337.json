@@ -17,16 +17,13 @@
     "search_keyword": "RAG Engineer",
     "search_location": "Bangalore",
     "created_at": "2026-08-10T02:33:21.882541",
-    "ai_score": 85.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 82.0,
-    "ai_reason": "Strong production RAG and LLM application experience with direct AWS Bedrock and vector database expertise.",
-    "app_type": "external_portal",
-    "app_status": "discovered",
-    "app_date": "2026-08-12T15:19:04.125528",
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "external_portal",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "EXTERNAL"
   },
   "ai_evaluation": {
     "id": 5120,

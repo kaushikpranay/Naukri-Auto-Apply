@@ -17,16 +17,13 @@
     "search_keyword": "Generative AI Engineer",
     "search_location": "Pune",
     "created_at": "2026-08-11T18:23:49.107599",
-    "ai_score": 85.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 82.0,
-    "ai_reason": "Strong production RAG and LangGraph experience with FastAPI and AWS; transferable cloud skills cover missing Azure OpenAI.",
-    "app_type": "applied_successfully",
-    "app_status": "discovered",
-    "app_date": "2026-08-12T15:23:20.395297",
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "applied_successfully",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "INTERNAL"
   },
   "ai_evaluation": {
     "id": 5213,

@@ -17,16 +17,13 @@
     "search_keyword": "Python Backend Engineer",
     "search_location": "Kolkata",
     "created_at": "2026-08-16T15:30:53.767986",
-    "ai_score": 5.0,
-    "ai_action": "skip",
-    "ai_priority": "low",
-    "ai_confidence": 20.0,
-    "ai_reason": "No evidence of frontend framework experience; lacks Next.js, TypeScript, React, and Tailwind skills.",
-    "app_type": null,
-    "app_status": null,
-    "app_date": null,
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "evaluated",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "INTERNAL"
   },
   "ai_evaluation": {
     "id": 5591,

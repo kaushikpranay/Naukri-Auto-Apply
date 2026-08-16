@@ -17,16 +17,13 @@
     "search_keyword": "AI Engineer",
     "search_location": "Gurgaon",
     "created_at": "2026-08-13T13:52:42.450129",
-    "ai_score": 0.0,
-    "ai_action": "review",
-    "ai_priority": "medium",
-    "ai_confidence": 0.0,
-    "ai_reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
-    "app_type": null,
-    "app_status": null,
-    "app_date": null,
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "evaluated",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "INTERNAL"
   },
   "ai_evaluation": {
     "id": 5455,

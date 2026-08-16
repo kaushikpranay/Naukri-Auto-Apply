@@ -9,7 +9,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33230,
@@ -20,7 +21,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33704,
@@ -31,7 +33,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33848,
@@ -42,7 +45,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33925,
@@ -53,7 +57,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33969,
@@ -64,7 +69,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33970,
@@ -75,7 +81,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33996,
@@ -86,7 +93,8 @@
       "score": 90.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33346,
@@ -97,7 +105,8 @@
       "score": 88.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33889,
@@ -108,7 +117,8 @@
       "score": 88.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 32821,
@@ -119,7 +129,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 32990,
@@ -130,7 +141,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33033,
@@ -141,7 +153,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33066,
@@ -152,7 +165,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33080,
@@ -163,7 +177,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33098,
@@ -174,7 +189,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33347,
@@ -185,7 +201,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33471,
@@ -196,7 +213,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33477,
@@ -207,7 +225,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     },
     {
       "id": 33789,
@@ -218,7 +237,8 @@
       "score": 85.0,
       "action": "apply",
       "status": "evaluated",
-      "ats_type": null
+      "ats_type": null,
+      "application_type": "INTERNAL"
     }
   ],
   "currently_applying": [],
@@ -230,7 +250,8 @@
       "job_title": "Backend Developer Intern (Python, FastAPI)",
       "retry_count": 1,
       "status": "browser_error",
-      "score": 95.0
+      "score": 95.0,
+      "application_type": "INTERNAL"
     }
   ],
   "completed": [],

@@ -211,10 +211,41 @@ class ApplyDiscoveryService:
                     elif outcome.record.apply_type == "quota_exhausted":
                         self._repo.update_job_status(job.id, "quota_exhausted", apply_url=outcome.record.apply_url)
                     elif has_unknown:
-                        self._repo.update_job_status(job.id, "unknown_question", apply_url=outcome.record.apply_url)
+                        from app.models.form_fill import FailureType
+                        unknown_keys = [q.question_key for q in outcome.questions if q.field_type == "unknown"]
+                        reason = f"Unrecognized question(s) require user answer: {', '.join(unknown_keys[:3])}" if unknown_keys else "Unrecognized chatbot question"
+                        self._repo.update_job_status(
+                            job.id,
+                            "failed",
+                            apply_url=outcome.record.apply_url,
+                            failure_reason=reason,
+                            failure_type=FailureType.UNRECOGNIZED_QUESTION,
+                            failed_at=datetime.now().isoformat(),
+                        )
                     elif has_error:
+                        from app.models.form_fill import FailureType
+                        err_msg = ""
+                        ft = FailureType.OTHER
+                        if outcome.form_fill_report and outcome.form_fill_report.error_message:
+                            err_msg = outcome.form_fill_report.error_message
+                            ft = outcome.form_fill_report.failure_type or FailureType.OTHER
+                        elif outcome.form_fill_report:
+                            failed_fields = [f"{f.question_key}: {f.error or 'fill failed'}" for f in outcome.form_fill_report.filled if f.status == "error"]
+                            err_msg = f"Form fill error on: {'; '.join(failed_fields[:2])}"
+                            ft = FailureType.DOM_ELEMENT_NOT_FOUND
+                        else:
+                            err_msg = "Form fill error encountered during apply"
+                            ft = FailureType.OTHER
+                        
                         self._repo.increment_retry_count(job.id)
-                        self._repo.update_job_status(job.id, "temporary_failure", apply_url=outcome.record.apply_url)
+                        self._repo.update_job_status(
+                            job.id,
+                            "failed",
+                            apply_url=outcome.record.apply_url,
+                            failure_reason=err_msg,
+                            failure_type=ft,
+                            failed_at=datetime.now().isoformat(),
+                        )
                     else:
                         # Successful or non-retryable apply type
                         status_val = outcome.record.apply_type or "pending"
@@ -279,15 +310,35 @@ class ApplyDiscoveryService:
                             detected_at=datetime.now().isoformat(),
                         )
                     )
+                    from app.models.form_fill import FailureType
                     import playwright.async_api
                     is_browser_error = isinstance(exc, (playwright.async_api.Error, asyncio.TimeoutError))
-                    if is_browser_error:
-                        self._repo.update_job_status(job.id, "browser_error")
+                    err_desc = f"{type(exc).__name__}: {str(exc)[:300]}"
+                    
+                    exc_str = str(exc).lower()
+                    if isinstance(exc, asyncio.TimeoutError) or "timeout" in exc_str:
+                        ft = FailureType.TIMEOUT
+                    elif "session" in exc_str or "login" in exc_str:
+                        ft = FailureType.SESSION_DROP
+                    elif "not found" in exc_str or "selector" in exc_str or "element" in exc_str:
+                        ft = FailureType.DOM_ELEMENT_NOT_FOUND
+                    elif "loop" in exc_str or "stuck" in exc_str:
+                        ft = FailureType.INFINITE_DRAWER_LOOP
                     else:
-                        self._repo.update_job_status(job.id, "temporary_failure")
+                        ft = FailureType.OTHER
+
+                    self._repo.update_job_status(
+                        job.id,
+                        "failed",
+                        failure_reason=err_desc,
+                        failure_type=ft,
+                        failed_at=datetime.now().isoformat(),
+                    )
                     self._repo.increment_retry_count(job.id)
                     summary.failed += 1
                     summary.processed += 1
+
+
 
                     # ── Consecutive browser-error circuit breaker ─────────
                     if is_browser_error:

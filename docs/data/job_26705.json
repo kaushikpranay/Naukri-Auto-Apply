@@ -17,16 +17,13 @@
     "search_keyword": "Generative AI Engineer",
     "search_location": "Gurgaon",
     "created_at": "2026-08-09T18:30:10.288523",
-    "ai_score": 90.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 85.0,
-    "ai_reason": "Strong production RAG and LLM experience, plus FastAPI and AWS deployment, aligns with role.",
-    "app_type": "already_applied",
-    "app_status": "discovered",
-    "app_date": "2026-08-09T19:27:09.500313",
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "already_applied",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "INTERNAL"
   },
   "ai_evaluation": {
     "id": 4758,

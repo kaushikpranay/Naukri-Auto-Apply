@@ -17,16 +17,13 @@
     "search_keyword": "Generative AI Engineer",
     "search_location": "Mumbai",
     "created_at": "2026-08-11T18:27:07.776475",
-    "ai_score": 85.0,
-    "ai_action": "apply",
-    "ai_priority": "high",
-    "ai_confidence": 82.0,
-    "ai_reason": "Strong production RAG experience and transferable cloud skills.",
-    "app_type": "external_portal",
-    "app_status": "discovered",
-    "app_date": "2026-08-12T15:48:56.949461",
-    "ats_status": null,
-    "ats_platform": null
+    "ai_score": 0,
+    "ai_action": "SKIP",
+    "app_status": "external_portal",
+    "failure_reason": "Automated form fill failed / timed out",
+    "failure_type": "OTHER",
+    "failure_category": "DETERMINISTIC",
+    "application_type": "EXTERNAL"
   },
   "ai_evaluation": {
     "id": 5222,
