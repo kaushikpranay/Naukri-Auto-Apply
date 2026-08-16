@@ -400,17 +400,39 @@ class ApplyDiscoveryRepository:
         logger.info("Permanently destroyed job_id={} and added to excluded_jobs", job_id)
         return True
 
-    def increment_retry_count(self, job_id: int) -> int:
-        """Increment retry_count on the jobs table and return the new value."""
+    def increment_retry_count(self, job_id: int, max_retry_count: int = 3) -> int:
+        """Increment retry_count on the jobs table and return the new value.
+
+        If new retry_count >= max_retry_count and the job is in a non-terminal status,
+        marks it as failed.
+        """
         cursor = self._conn.cursor()
         cursor.execute("UPDATE jobs SET retry_count = COALESCE(retry_count, 0) + 1 WHERE id = ?", (job_id,))
         self._conn.commit()
-        cursor.execute("SELECT retry_count FROM jobs WHERE id = ?", (job_id,))
+        cursor.execute("SELECT retry_count, status FROM jobs WHERE id = ?", (job_id,))
         row = cursor.fetchone()
         if row is None:
             logger.error("increment_retry_count: job_id={} not found", job_id)
             return -1
-        return int(row[0])
+        new_count = int(row[0])
+        current_status = row[1]
+
+        non_terminal_statuses = (
+            "unknown_question", "waiting_for_user",
+            "temporary_failure", "browser_error", "unknown"
+        )
+        if new_count >= max_retry_count and current_status in non_terminal_statuses:
+            self.update_job_status(
+                job_id,
+                "failed",
+                failure_reason="max_retry_count exceeded",
+                failed_at=datetime.now().isoformat(),
+            )
+            logger.warning(
+                "job_id={} reached max_retry_count={} in status '{}' -> marked as failed",
+                job_id, max_retry_count, current_status,
+            )
+        return new_count
 
 
     def get_job_by_id(self, job_id: int) -> JobData | None:

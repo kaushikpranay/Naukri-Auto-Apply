@@ -27,6 +27,7 @@ from app.models.discovery import (
     ApplicationDiscoveryRecord,
     DiscoverySummary,
     DiscoveredQuestion,
+    PipelineSuspendedException,
     QuotaExhaustedStop,
 )
 from app.models.form_fill import FormFillReport
@@ -281,6 +282,11 @@ class ApplyDiscoveryService:
 
                 except QuotaExhaustedStop:
                     raise  # propagate to caller without wrapping
+                except PipelineSuspendedException as pse:
+                    logger.warning("Pipeline suspended on job_id={} (waiting_for_user): {}. Continuing to next job.", job.id, pse)
+                    self._repo.increment_retry_count(job.id)
+                    summary.processed += 1
+                    break
                 except Exception as exc:  # noqa: BLE001
                     if not is_internet_connected() or is_network_exception(exc):
                         logger.warning(
