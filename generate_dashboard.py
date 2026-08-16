@@ -364,8 +364,7 @@ def generate_jobs_and_details(conn):
     # 5. Write failed jobs store
     failed_list = [
         j for j in all_jobs 
-        if (j.get("status") in ("failed", "discovery_failed", "temporary_failure", "browser_error") or j.get("failure_reason"))
-        and j.get("status") not in ("applied", "applied_successfully", "already_applied", "external_portal", "skip", "skipped")
+        if j.get("status") in ("failed", "discovery_failed", "temporary_failure", "browser_error")
     ]
     # Ensure failure_type and failure_category are normalized
     for j in failed_list:
