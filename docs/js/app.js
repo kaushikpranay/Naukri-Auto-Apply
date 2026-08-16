@@ -473,7 +473,7 @@ function renderExternalTable(list) {
             <td>${atsStatusBadge(atsStatus)}</td>
             <td>
                 <div class="d-flex gap-1">
-                    <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i> Apply</a>
+                    ${j.apply_url ? `<a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent"><i class="bi bi-box-arrow-up-right me-1"></i> Apply</a>` : `<span class="btn btn-sm btn-secondary disabled" title="URL not yet resolved"><i class="bi bi-hourglass-split me-1"></i> Not yet resolved</span>`}
                     ${renderToggleButton(j.id)}
                 </div>
             </td>
@@ -492,7 +492,7 @@ function renderExternalTable(list) {
                 <span>ATS: ${atsStatusBadge(atsStatus)}</span>
             </div>
             <div class="d-flex gap-2">
-                <a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i> Apply on Portal</a>
+                ${j.apply_url ? `<a href="${escapeHtml(j.apply_url)}" target="_blank" class="btn btn-sm btn-accent flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i> Apply on Portal</a>` : `<span class="btn btn-sm btn-secondary disabled flex-grow-1" title="URL not yet resolved"><i class="bi bi-hourglass-split me-1"></i> Not yet resolved</span>`}
                 ${renderToggleButton(j.id)}
             </div>
         </div>`;

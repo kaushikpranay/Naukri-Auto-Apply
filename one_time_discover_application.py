@@ -292,7 +292,7 @@ async def run(args: argparse.Namespace) -> None:
                         detected_at=datetime.now().isoformat()
                     )
                     repo.save_application(record)
-                    repo.update_job_status(ej_id, apply_type)
+                    repo.update_job_status(ej_id, apply_type, apply_url=apply_url)
         else:
             missing_count += 1
             logger.info(

@@ -33,6 +33,11 @@ from app.models.form_fill import FormFillReport
 from app.models.job import JobData
 from app.question_bank.form_filler import FormFiller
 from app.utils.config_loader import resolve_path, PROJECT_ROOT
+from app.utils.network import (
+    async_wait_for_internet_connection,
+    is_internet_connected,
+    is_network_exception,
+)
 
 
 @dataclass
@@ -151,141 +156,156 @@ class ApplyDiscoveryService:
             pass
 
         for index, job in enumerate(jobs, start=1):
-            if page.is_closed():
-                try:
-                    page = await page.context.new_page()
-                    logger.info("Page was closed (e.g. post-submit); opened a new page to continue batch.")
-                except Exception as reopen_exc:
-                    logger.error("Page is closed and could not reopen: {}. Aborting batch.", reopen_exc)
+            while True:
+                await async_wait_for_internet_connection()
+                if page.is_closed():
+                    try:
+                        page = await page.context.new_page()
+                        logger.info("Page was closed (e.g. post-submit); opened a new page to continue batch.")
+                    except Exception as reopen_exc:
+                        logger.error("Page is closed and could not reopen: {}. Aborting batch.", reopen_exc)
+                        break
+                logger.info("Job Opened: [{} / {}] {} - {}", index, len(jobs), job.company_name, job.job_title)
+                started_at = datetime.now()
+                # Clear existing application to avoid duplicate entries and allow fresh discovery
+                if job.status == "applied_successfully":
+                    logger.warning("Skipping job_id={} — jobs.status is applied_successfully", job.id)
                     break
-            logger.info("Job Opened: [{} / {}] {} - {}", index, len(jobs), job.company_name, job.job_title)
-            started_at = datetime.now()
-            # Clear existing application to avoid duplicate entries and allow fresh discovery
-            if job.status == "applied_successfully":
-                logger.warning("Skipping job_id={} — jobs.status is applied_successfully", job.id)
-                continue
-            existing = self._repo.get_application(job.id)
-            if existing and existing.apply_type == "applied_successfully":
-                logger.warning("Skipping job_id={} — job_applications.apply_type is applied_successfully", job.id)
-                continue
-            self._repo.clear_application(job.id)
-            try:
-                outcome = await self._discover_job(page, job)
-                self._repo.save_application(outcome.record)
-                for question in outcome.questions:
-                    self._repo.save_question(job.id or 0, question)
-                self._log_outcome(outcome, job, summary)
-                # Accumulate Phase 2 form fill reports
-                if outcome.form_fill_report is not None:
-                    summary.form_fill_reports.append(outcome.form_fill_report)
-                logger.info(
-                    "Discovery Finished: job_id={} apply_type={} duration={:.2f}s",
-                    job.id,
-                    outcome.record.apply_type or outcome.record.status,
-                    (datetime.now() - started_at).total_seconds(),
-                )
-
-                # Determine retryable status or successful status update
-                has_unknown = False
-                has_error = False
-                if outcome.form_fill_report is not None:
-                    if len(outcome.form_fill_report.unknown) > 0:
-                        has_unknown = True
-                    if any(f.status == "error" for f in outcome.form_fill_report.filled):
-                        has_error = True
-                else:
-                    if any(q.field_type == "unknown" for q in outcome.questions):
-                        has_unknown = True
-
-                if outcome.record.apply_type == "applied_successfully":
-                    # Confirmed submission is terminal — it wins over any leftover
-                    # unknown/error fields detected during the fill.
-                    self._repo.update_job_status(job.id, "applied_successfully")
-                elif outcome.record.apply_type == "quota_exhausted":
-                    self._repo.update_job_status(job.id, "quota_exhausted")
-                elif has_unknown:
-                    self._repo.update_job_status(job.id, "unknown_question")
-                elif has_error:
-                    self._repo.increment_retry_count(job.id)
-                    self._repo.update_job_status(job.id, "temporary_failure")
-                else:
-                    # Successful or non-retryable apply type
-                    status_val = outcome.record.apply_type or "pending"
-                    self._repo.update_job_status(job.id, status_val)
-                    if status_val == "login_required":
-                        from app.browser.session import SessionExpiredError
-                        logger.error("Session expired during discovery. Aborting run.")
-                        raise SessionExpiredError("Login required detected during apply.")
-
-                # ── Consecutive quota protection ──────────────────────────
-                if outcome.record.apply_type == "quota_exhausted":
-                    self._quota_consecutive += 1
-                    logger.warning(
-                        "QUOTA_EXHAUSTED_DETECTED: job_id={} consecutive={} message='{}'",
-                        job.id, self._quota_consecutive,
-                        outcome.record.quota_message or "",
+                existing = self._repo.get_application(job.id)
+                if existing and existing.apply_type == "applied_successfully":
+                    logger.warning("Skipping job_id={} — job_applications.apply_type is applied_successfully", job.id)
+                    break
+                self._repo.clear_application(job.id)
+                try:
+                    outcome = await self._discover_job(page, job)
+                    self._repo.save_application(outcome.record)
+                    for question in outcome.questions:
+                        self._repo.save_question(job.id or 0, question)
+                    self._log_outcome(outcome, job, summary)
+                    # Accumulate Phase 2 form fill reports
+                    if outcome.form_fill_report is not None:
+                        summary.form_fill_reports.append(outcome.form_fill_report)
+                    logger.info(
+                        "Discovery Finished: job_id={} apply_type={} duration={:.2f}s",
+                        job.id,
+                        outcome.record.apply_type or outcome.record.status,
+                        (datetime.now() - started_at).total_seconds(),
                     )
-                    if self._quota_consecutive >= self._QUOTA_CONSECUTIVE_THRESHOLD:
-                        summary.quota_stopped = True
-                        summary.processed += 1
-                        raise QuotaExhaustedStop(
-                            f"{self._quota_consecutive} consecutive quota exhaustion events detected.",
-                            summary=summary,
+
+                    # Determine retryable status or successful status update
+                    has_unknown = False
+                    has_error = False
+                    if outcome.form_fill_report is not None:
+                        if len(outcome.form_fill_report.unknown) > 0:
+                            has_unknown = True
+                        if any(f.status == "error" for f in outcome.form_fill_report.filled):
+                            has_error = True
+                    else:
+                        if any(q.field_type == "unknown" for q in outcome.questions):
+                            has_unknown = True
+
+                    if outcome.record.apply_type == "applied_successfully":
+                        # Confirmed submission is terminal — it wins over any leftover
+                        # unknown/error fields detected during the fill.
+                        self._repo.update_job_status(job.id, "applied_successfully", apply_url=outcome.record.apply_url)
+                    elif outcome.record.apply_type == "quota_exhausted":
+                        self._repo.update_job_status(job.id, "quota_exhausted", apply_url=outcome.record.apply_url)
+                    elif has_unknown:
+                        self._repo.update_job_status(job.id, "unknown_question", apply_url=outcome.record.apply_url)
+                    elif has_error:
+                        self._repo.increment_retry_count(job.id)
+                        self._repo.update_job_status(job.id, "temporary_failure", apply_url=outcome.record.apply_url)
+                    else:
+                        # Successful or non-retryable apply type
+                        status_val = outcome.record.apply_type or "pending"
+                        self._repo.update_job_status(job.id, status_val, apply_url=outcome.record.apply_url)
+                        if status_val == "login_required":
+                            from app.browser.session import SessionExpiredError
+                            logger.error("Session expired during discovery. Aborting run.")
+                            raise SessionExpiredError("Login required detected during apply.")
+
+                    # ── Consecutive quota protection ──────────────────────────
+                    if outcome.record.apply_type == "quota_exhausted":
+                        self._quota_consecutive += 1
+                        logger.warning(
+                            "QUOTA_EXHAUSTED_DETECTED: job_id={} consecutive={} message='{}'",
+                            job.id, self._quota_consecutive,
+                            outcome.record.quota_message or "",
                         )
-                else:
-                    # Any successful classification resets the counters
-                    if outcome.record.apply_type not in ("discovery_failed", None):
-                        self._quota_consecutive = 0
+                        if self._quota_consecutive >= self._QUOTA_CONSECUTIVE_THRESHOLD:
+                            summary.quota_stopped = True
+                            summary.processed += 1
+                            raise QuotaExhaustedStop(
+                                f"{self._quota_consecutive} consecutive quota exhaustion events detected.",
+                                summary=summary,
+                            )
+                    else:
+                        # Any successful classification resets the counters
+                        if outcome.record.apply_type not in ("discovery_failed", None):
+                            self._quota_consecutive = 0
+                            self._browser_error_consecutive = 0
+
+                    summary.processed += 1
+                    break  # Successfully completed job, proceed to next job
+
+                except QuotaExhaustedStop:
+                    raise  # propagate to caller without wrapping
+                except Exception as exc:  # noqa: BLE001
+                    if not is_internet_connected() or is_network_exception(exc):
+                        logger.warning(
+                            "INTERNET_DISCONNECTED: Network failure during discovery of job {}: {}. Waiting for internet connection...",
+                            job.id,
+                            exc,
+                        )
+                        await async_wait_for_internet_connection()
+                        # Re-attempt the same job now that internet is back
+                        continue
+
+                    logger.exception("Discovery Failed: job_id={} error={}", job.id, exc)
+                    # Capture diagnostic screenshot before recording failure
+                    try:
+                        from app.utils.screenshot import capture_screenshot
+                        await capture_screenshot(
+                            page,
+                            reason=f"discovery_failed_job_{job.id}",
+                            screenshots_dir=str(self._screenshots_dir),
+                        )
+                    except Exception as screenshot_exc:
+                        logger.warning("Failed to capture error screenshot: {}", screenshot_exc)
+                    self._repo.save_application(
+                        ApplicationDiscoveryRecord(
+                            job_id=int(job.id or 0),
+                            status="discovery_failed",
+                            detected_at=datetime.now().isoformat(),
+                        )
+                    )
+                    import playwright.async_api
+                    is_browser_error = isinstance(exc, (playwright.async_api.Error, asyncio.TimeoutError))
+                    if is_browser_error:
+                        self._repo.update_job_status(job.id, "browser_error")
+                    else:
+                        self._repo.update_job_status(job.id, "temporary_failure")
+                    self._repo.increment_retry_count(job.id)
+                    summary.failed += 1
+                    summary.processed += 1
+
+                    # ── Consecutive browser-error circuit breaker ─────────
+                    if is_browser_error:
+                        self._browser_error_consecutive += 1
+                        if self._browser_error_consecutive >= self._BROWSER_ERROR_CONSECUTIVE_THRESHOLD:
+                            logger.error(
+                                "BROWSER_ERROR_LIMIT: {} consecutive browser errors — "
+                                "aborting discovery batch.",
+                                self._browser_error_consecutive,
+                            )
+                            break
+                    else:
                         self._browser_error_consecutive = 0
 
-            except QuotaExhaustedStop:
-                raise  # propagate to caller without wrapping
-            except Exception as exc:  # noqa: BLE001
-                logger.exception("Discovery Failed: job_id={} error={}", job.id, exc)
-                # Capture diagnostic screenshot before recording failure
-                try:
-                    from app.utils.screenshot import capture_screenshot
-                    await capture_screenshot(
-                        page,
-                        reason=f"discovery_failed_job_{job.id}",
-                        screenshots_dir=str(self._screenshots_dir),
-                    )
-                except Exception as screenshot_exc:
-                    logger.warning("Failed to capture error screenshot: {}", screenshot_exc)
-                self._repo.save_application(
-                    ApplicationDiscoveryRecord(
-                        job_id=int(job.id or 0),
-                        status="discovery_failed",
-                        detected_at=datetime.now().isoformat(),
-                    )
-                )
-                import playwright.async_api
-                is_browser_error = isinstance(exc, (playwright.async_api.Error, asyncio.TimeoutError))
-                if is_browser_error:
-                    self._repo.update_job_status(job.id, "browser_error")
-                else:
-                    self._repo.update_job_status(job.id, "temporary_failure")
-                self._repo.increment_retry_count(job.id)
-                summary.failed += 1
-
-                # ── Consecutive browser-error circuit breaker ─────────
-                if is_browser_error:
-                    self._browser_error_consecutive += 1
-                    if self._browser_error_consecutive >= self._BROWSER_ERROR_CONSECUTIVE_THRESHOLD:
-                        logger.error(
-                            "NETWORK_CIRCUIT_BREAKER: {} consecutive browser errors — "
-                            "aborting discovery batch (likely internet outage).",
-                            self._browser_error_consecutive,
-                        )
+                    if page.is_closed():
+                        logger.error("Browser page was closed/crashed during processing. Aborting discovery batch.")
                         break
-                else:
-                    self._browser_error_consecutive = 0
-
-                if page.is_closed():
-                    logger.error("Browser page was closed/crashed during processing. Aborting discovery batch.")
                     break
-
-            summary.processed += 1
 
             # Close any extra tabs opened during apply (prevents tab accumulation)
             try:

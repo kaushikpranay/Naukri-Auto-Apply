@@ -6,7 +6,7 @@
     "job_description": "Role Summary\nWe are looking for a Senior Gen AI Engineer to design and scale production-ready AI systems. You will move beyond simple API prompts to architect custom LLM workflows, fine-tune models, and optimize enterprise-grade RAG pipelines.\n\nKey Responsibilities\nLLM Architecting: Design and deploy advanced RAG systems using vector databases (Pinecone, Weaviate)\nModel Engineering: Fine-tune open-source models (Llama, Mistral) using LoRA/QLoRA and PEFT\nAgentic Workflows: Build autonomous agents using LangChain, LangGraph, or LlamaIndex\nOptimization: Implement quantization and performance tuning to reduce latency/cost\nEvaluation: Build frameworks to mitigate hallucinations and ensure model safety/accuracy.\n\nRequired Skills\n\n\n\nCore: Expert Python, PyTorch/TensorFlow, and Hugging Face\nInfrastructure: Proficiency in AWS Bedrock, Azure AI, or Vertex AI\nData: Expertise in vector embeddings, prompt engineering, and semantic search.",
     "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-bizbrolly-noida-pune-4-to-8-years-050826928404",
     "normalized_url": "https://www.naukri.com/job-listings-generative-ai-engineer-bizbrolly-noida-pune-4-to-8-years-050826928404",
-    "apply_url": "",
+    "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[050826928404]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22050826928404%22%3A200%7D&jobTitle=Generative%20AI%20Engineer",
     "experience_required": "4-8 Yrs",
     "location": "Noida, Pune",
     "posted_date": "4 days ago",

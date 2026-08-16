@@ -263,14 +263,21 @@ class ApplyDiscoveryRepository:
         rows = cursor.fetchall()
         return [JobData(**dict(row)) for row in rows]
 
-    def update_job_status(self, job_id: int, status: str) -> None:
-        """Update the status column of a job in the jobs table."""
+    def update_job_status(self, job_id: int, status: str, apply_url: str | None = None) -> None:
+        """Update the status (and optionally apply_url) of a job in the jobs table."""
         cursor = self._conn.cursor()
-        cursor.execute(
-            "UPDATE jobs SET status = ? WHERE id = ?"
-            " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
-            (status, job_id, status),
-        )
+        if apply_url:
+            cursor.execute(
+                "UPDATE jobs SET status = ?, apply_url = COALESCE(NULLIF(?, ''), apply_url) WHERE id = ?"
+                " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
+                (status, apply_url, job_id, status),
+            )
+        else:
+            cursor.execute(
+                "UPDATE jobs SET status = ? WHERE id = ?"
+                " AND (status != 'applied_successfully' OR ? = 'applied_successfully')",
+                (status, job_id, status),
+            )
         self._conn.commit()
         if cursor.rowcount == 0:
             logger.warning("update_job_status: no row updated for job_id={} status={}", job_id, status)

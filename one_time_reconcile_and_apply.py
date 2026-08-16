@@ -518,17 +518,17 @@ async def run(args: argparse.Namespace) -> None:
                             status = 'failed'
                             error_category = 'rate_limit_error'
                             error_msg = outcome.record.quota_message or "Quota exhausted"
-                            repo.update_job_status(job_obj.id, "quota_exhausted")
+                            repo.update_job_status(job_obj.id, "quota_exhausted", apply_url=outcome.record.apply_url)
                         elif apply_type == "external_portal":
                             status = 'failed'
                             error_category = 'external_portal'
                             error_msg = f"Redirected to external portal: {outcome.record.apply_url}"
-                            repo.update_job_status(job_obj.id, "external_portal")
+                            repo.update_job_status(job_obj.id, "external_portal", apply_url=outcome.record.apply_url)
                         elif apply_type in ("login_required", "register"):
                             status = 'failed'
                             error_category = 'login_error'
                             error_msg = f"Requires {apply_type}"
-                            repo.update_job_status(job_obj.id, apply_type)
+                            repo.update_job_status(job_obj.id, apply_type, apply_url=outcome.record.apply_url)
                         elif apply_type == "unknown":
                             page_text = await page.locator("body").inner_text()
                             expired_keywords = ["expired", "no longer active", "deactivated", "removed by the recruiter"]
@@ -540,7 +540,7 @@ async def run(args: argparse.Namespace) -> None:
                                 status = 'failed'
                                 error_category = 'unknown_error'
                                 error_msg = "Unknown apply flow or no apply button found"
-                            repo.update_job_status(job_obj.id, "unknown")
+                            repo.update_job_status(job_obj.id, "unknown", apply_url=outcome.record.apply_url)
                         elif apply_type == "easy_apply":
                             # Check form fill results
                             has_unknown = False
@@ -567,25 +567,25 @@ async def run(args: argparse.Namespace) -> None:
                                 error_msg = "Form fill errors: " + ", ".join(fill_error_details)
                                 failing_stage = 'form_fill'
                                 repo.increment_retry_count(job_obj.id)
-                                repo.update_job_status(job_obj.id, "temporary_failure")
+                                repo.update_job_status(job_obj.id, "temporary_failure", apply_url=outcome.record.apply_url)
                             elif has_unknown:
                                 status = 'failed'
                                 error_category = 'question_answering_error'
                                 error_msg = "Unanswered/unknown questions: " + ", ".join(unknown_questions)
                                 failing_stage = 'form_fill'
-                                repo.update_job_status(job_obj.id, "unknown_question")
+                                repo.update_job_status(job_obj.id, "unknown_question", apply_url=outcome.record.apply_url)
                             else:
                                 status = 'applied'
-                                repo.update_job_status(job_obj.id, "easy_apply")
+                                repo.update_job_status(job_obj.id, "easy_apply", apply_url=outcome.record.apply_url)
                         elif apply_type == "applied_successfully":
                             status = 'applied'
-                            repo.update_job_status(job_obj.id, "applied_successfully")
+                            repo.update_job_status(job_obj.id, "applied_successfully", apply_url=outcome.record.apply_url)
                         elif apply_type == "already_applied":
                             status = 'already_applied'
-                            repo.update_job_status(job_obj.id, "already_applied")
+                            repo.update_job_status(job_obj.id, "already_applied", apply_url=outcome.record.apply_url)
                         else:
                             status = 'applied'
-                            repo.update_job_status(job_obj.id, apply_type)
+                            repo.update_job_status(job_obj.id, apply_type, apply_url=outcome.record.apply_url)
 
                     except PipelineSuspendedException as exc:
                         logger.warning("Pipeline suspended for Job ID {}: {}", ej_id, exc)
