@@ -16,8 +16,8 @@ for attempt in $(seq 1 $MAX_ATTEMPTS); do
     bash watchdog.sh
 
     # SUCCESS: pipeline ran to completion and exited cleanly
-    # Condition: run.log contains EXIT_CODE=0 AND the "DAILY RUN SUMMARY" banner
-    if grep -q "EXIT_CODE=0" run.log && grep -q "DAILY RUN SUMMARY" run.log; then
+    # Condition: run.log contains EXIT_CODE=0 AND the "APPLY DISCOVERY SUMMARY" banner
+    if grep -q "EXIT_CODE=0" run.log && grep -q "APPLY DISCOVERY SUMMARY" run.log; then
         echo "FIXED"
         exit 0
     fi

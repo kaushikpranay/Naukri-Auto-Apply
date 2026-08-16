@@ -184,10 +184,10 @@ class ApplyDiscoveryRepository:
             WHERE UPPER(e.action) = 'APPLY'
               AND COALESCE(j.retry_count, 0) < ?
               AND (
-                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error', 'unknown')
                   OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
                       'unknown_question', 'waiting_for_user', 'quota_exhausted',
-                      'temporary_failure', 'browser_error',
+                      'temporary_failure', 'browser_error', 'unknown',
                       'applied_successfully', 'failed', 'external_portal'
                   ))
               )
@@ -221,15 +221,15 @@ class ApplyDiscoveryRepository:
             WHERE UPPER(e.action) = 'APPLY'
               AND COALESCE(j.retry_count, 0) < ?
               AND (
-                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+                  j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error', 'unknown')
                   OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
                       'unknown_question', 'waiting_for_user', 'quota_exhausted',
-                      'temporary_failure', 'browser_error',
+                      'temporary_failure', 'browser_error', 'unknown',
                       'applied_successfully', 'failed', 'external_portal'
                   ))
               )
             ORDER BY
-              CASE WHEN j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error') THEN 0 ELSE 1 END ASC,
+              CASE WHEN j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error', 'unknown') THEN 0 ELSE 1 END ASC,
               e.interview_probability DESC,
               j.id ASC
             LIMIT ?
@@ -262,7 +262,7 @@ class ApplyDiscoveryRepository:
             FROM jobs j
             JOIN ai_evaluations e ON e.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY'
-              AND j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
+              AND j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error', 'unknown')
               AND COALESCE(j.retry_count, 0) < ?
             ORDER BY e.interview_probability DESC, j.id ASC
             LIMIT ?

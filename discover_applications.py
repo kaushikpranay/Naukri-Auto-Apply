@@ -140,19 +140,7 @@ async def run(args: argparse.Namespace) -> None:
             else:
                 batch_number = 1
                 while True:
-                    cursor = repo._conn.cursor()
-                    cursor.execute("""
-                        SELECT COUNT(*)
-                        FROM jobs j
-                        JOIN ai_evaluations e ON e.job_id = j.id
-                        LEFT JOIN job_applications a ON a.job_id = j.id
-                        WHERE UPPER(e.action) = 'APPLY'
-                          AND (
-                               j.status IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error')
-                               OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN ('unknown_question', 'waiting_for_user', 'quota_exhausted', 'temporary_failure', 'browser_error'))
-                          )
-                    """)
-                    pending_count = cursor.fetchone()[0]
+                    pending_count = repo.get_pending_discovery_count(settings.discovery.max_retry_count)
 
                     if pending_count == 0:
                         logger.info("Final:\nNo pending APPLY jobs.")
