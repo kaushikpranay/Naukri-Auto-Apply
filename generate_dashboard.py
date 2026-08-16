@@ -255,12 +255,17 @@ def generate_jobs_and_details(conn):
                 }
             }
             write_json(f"{prefix}_page_{p}.json", p_data)
-            if p == 1:
-                write_json(f"{prefix}.json", p_data)
-        if tot == 0:
-            p_data = {"jobs": [], "pagination": {"page": 1, "limit": limit, "total_records": 0, "total_pages": 1}}
-            write_json(f"{prefix}_page_1.json", p_data)
-            write_json(f"{prefix}.json", p_data)
+        
+        # Also write the complete dataset to {prefix}.json for filter-before-paginate clients
+        write_json(f"{prefix}.json", {
+            "jobs": items,
+            "pagination": {
+                "page": 1,
+                "limit": tot if tot > 0 else limit,
+                "total_records": tot,
+                "total_pages": 1
+            }
+        })
 
     # 1. Write all jobs
     write_paginated_set("jobs", all_jobs)
