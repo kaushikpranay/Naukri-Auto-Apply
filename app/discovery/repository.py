@@ -478,7 +478,7 @@ class ApplyDiscoveryRepository:
         cursor.execute(
             "DELETE FROM job_application_questions WHERE job_id = ?", (job_id,)
         )
-        cursor.execute("UPDATE jobs SET status = 'pending', retry_count = 0 WHERE id = ?", (job_id,))
+        cursor.execute("UPDATE jobs SET status = 'pending' WHERE id = ?", (job_id,))
         self._conn.commit()
         logger.info("Cleared existing discovery record for job_id={}", job_id)
 
