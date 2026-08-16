@@ -347,6 +347,20 @@ async def main_async() -> None:
                 while combo_index < total_combos:
                     keyword, location = search_combos[combo_index]
                     combo_index += 1
+
+                    # ── Check 12-Hour Cooldown ────────────────────────
+                    is_recent, last_run_at = repo_coll.is_search_combo_recent(
+                        keyword.display, location.display, max_age_hours=12.0
+                    )
+                    if is_recent:
+                        logger.info(
+                            "[{}/{}] Skipping '{}' in '{}' — already ran in the last 12h (last run: {})",
+                            combo_index, total_combos,
+                            keyword.display, location.display,
+                            last_run_at,
+                        )
+                        continue
+
                     batch_combos_processed += 1
 
                     logger.info(
@@ -356,11 +370,17 @@ async def main_async() -> None:
                     )
                     try:
                         jobs = await collector.collect_for_search(keyword, location)
+                        inserted = 0
                         if jobs:
                             jobs = await collector.enrich_with_details(jobs)
                             inserted, _ = repo_coll.insert_many(jobs)
                             jobs_collected += inserted
                             batch_new_jobs += inserted
+                        repo_coll.record_search_combo_run(
+                            keyword.display, location.display,
+                            jobs_found=len(jobs) if jobs else 0,
+                            jobs_inserted=inserted,
+                        )
                     except (SessionExpiredError, ProfileNotFoundError):
                         raise
                     except Exception as e:

@@ -23,6 +23,7 @@ from app.evaluator.errors import (
 from app.evaluator.response_normalizer import normalize_provider_payload
 from app.models.evaluation import EvaluationResult
 from app.models.job import JobData
+from app.utils.network import is_internet_connected, is_network_exception, wait_for_internet_connection
 
 
 class BaseEvaluator(ABC):
@@ -49,6 +50,7 @@ class BaseEvaluator(ABC):
 
         for attempt in range(1, self.max_attempts + 1):
             try:
+                wait_for_internet_connection()
                 raw_response = self._generate_response(prompt)
                 payload = self._parse_response(raw_response)
                 normalized_payload = normalize_provider_payload(payload)
@@ -67,36 +69,25 @@ class BaseEvaluator(ABC):
                     job.id,
                     exc,
                 )
-            except ProviderTransientError as exc:
+            except (ProviderTransientError, ProviderError, Exception) as exc:
                 last_error = exc
-                logger.warning(
-                    "{} transient failure on attempt {}/{} for job {}: {}",
-                    self.provider_name,
-                    attempt,
-                    self.max_attempts,
-                    job.id,
-                    exc,
-                )
-            except ProviderError as exc:
-                last_error = exc
-                logger.warning(
-                    "{} provider failure on attempt {}/{} for job {}: {}",
-                    self.provider_name,
-                    attempt,
-                    self.max_attempts,
-                    job.id,
-                    exc,
-                )
-            except Exception as exc:
-                last_error = ProviderTransientError(str(exc))
-                logger.warning(
-                    "{} unexpected failure on attempt {}/{} for job {}: {}",
-                    self.provider_name,
-                    attempt,
-                    self.max_attempts,
-                    job.id,
-                    exc,
-                )
+                if not is_internet_connected() or is_network_exception(exc):
+                    logger.warning(
+                        "{} network/connection failure for job {}: {}. Waiting for internet connection...",
+                        self.provider_name,
+                        job.id,
+                        exc,
+                    )
+                    wait_for_internet_connection()
+                else:
+                    logger.warning(
+                        "{} failure on attempt {}/{} for job {}: {}",
+                        self.provider_name,
+                        attempt,
+                        self.max_attempts,
+                        job.id,
+                        exc,
+                    )
 
         message = f"{self.provider_name} failed to return valid JSON after {self.max_attempts} attempts"
         if last_error:

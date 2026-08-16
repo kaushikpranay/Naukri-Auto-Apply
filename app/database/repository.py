@@ -54,6 +54,16 @@ CREATE TABLE IF NOT EXISTS jobs (
     search_location TEXT,
     created_at      TEXT    NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS search_combo_runs (
+    id              INTEGER PRIMARY KEY AUTOINCREMENT,
+    keyword         TEXT    NOT NULL,
+    location        TEXT    NOT NULL,
+    last_run_at     TEXT    NOT NULL,
+    jobs_found      INTEGER DEFAULT 0,
+    jobs_inserted   INTEGER DEFAULT 0,
+    UNIQUE(keyword, location)
+);
 """
 
 _INSERT_JOB_SQL: str = """
@@ -176,9 +186,17 @@ class JobRepository:
         logger.info("Database initialized: {}", self._db_path)
 
     def _init_schema(self) -> None:
-        """Create the jobs table if it doesn't exist."""
+        """Create the jobs and search_combo_runs tables if they don't exist."""
         cursor: sqlite3.Cursor = self._conn.cursor()
-        cursor.execute(_CREATE_TABLE_SQL)
+        cursor.executescript(_CREATE_TABLE_SQL)
+        cursor.execute("""
+            INSERT OR IGNORE INTO search_combo_runs (keyword, location, last_run_at, jobs_found, jobs_inserted)
+            SELECT search_keyword, search_location, MAX(created_at), COUNT(*), 0
+            FROM jobs
+            WHERE search_keyword IS NOT NULL AND search_keyword != ''
+              AND search_location IS NOT NULL AND search_location != ''
+            GROUP BY search_keyword, search_location;
+        """)
         self._conn.commit()
         logger.debug("Database schema verified")
 
@@ -420,6 +438,62 @@ class JobRepository:
             logger.error("increment_retry_count: job_id={} not found in DB", job_id)
             return -1  # Sentinel: caller must handle this
         return int(result[0])
+
+    def is_search_combo_recent(
+        self, keyword: str, location: str, max_age_hours: float = 12.0
+    ) -> tuple[bool, str | None]:
+        """
+        Check if a (keyword, location) search combination was executed within max_age_hours.
+
+        Returns:
+            (is_recent, last_run_at)
+        """
+        cursor: sqlite3.Cursor = self._conn.cursor()
+        cursor.execute(
+            "SELECT last_run_at FROM search_combo_runs WHERE keyword = ? AND location = ?",
+            (keyword.strip(), location.strip()),
+        )
+        row = cursor.fetchone()
+        if not row or not row[0]:
+            return False, None
+
+        last_run_str = row[0]
+        try:
+            last_run_dt = datetime.fromisoformat(last_run_str)
+            age_seconds = (datetime.now() - last_run_dt).total_seconds()
+            if age_seconds < (max_age_hours * 3600):
+                return True, last_run_str
+        except Exception as exc:
+            logger.warning(
+                "Failed to parse last_run_at '{}' for combo ({}, {}): {}",
+                last_run_str, keyword, location, exc,
+            )
+        return False, last_run_str
+
+    def record_search_combo_run(
+        self,
+        keyword: str,
+        location: str,
+        jobs_found: int = 0,
+        jobs_inserted: int = 0,
+    ) -> None:
+        """
+        Record or update the execution timestamp for a (keyword, location) search combination.
+        """
+        now_iso = datetime.now().isoformat()
+        cursor: sqlite3.Cursor = self._conn.cursor()
+        cursor.execute(
+            """
+            INSERT INTO search_combo_runs (keyword, location, last_run_at, jobs_found, jobs_inserted)
+            VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(keyword, location) DO UPDATE SET
+                last_run_at = excluded.last_run_at,
+                jobs_found = excluded.jobs_found,
+                jobs_inserted = excluded.jobs_inserted;
+            """,
+            (keyword.strip(), location.strip(), now_iso, jobs_found, jobs_inserted),
+        )
+        commit_with_retry(self._conn)
 
     def close(self) -> None:
         """Close the database connection."""

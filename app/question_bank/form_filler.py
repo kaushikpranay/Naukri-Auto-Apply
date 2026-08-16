@@ -304,8 +304,47 @@ class FormFiller:
                             final_answer = str(int(resolved_years))
                             answer_source = "PROFILE_SKILL_EXP"
                         else:
-                            final_answer = "0"
-                            answer_source = "PROFILE_SKILL_EXP_ZERO"
+                            # Skill not in profile — ask the user instead of silently filling 0
+                            skill_name = target_key[len("exp_"):].replace("_", " ").title()
+                            logger.info("SKILL_NOT_IN_PROFILE key={} — asking user for experience", target_key)
+
+                            if self._repo:
+                                try:
+                                    self._repo.update_job_status(job_id, "waiting_for_user")
+                                except Exception:
+                                    pass
+
+                            response = await self._interactive_prompt_user(
+                                page=page,
+                                question_text=f"Experience in '{skill_name}' (years)?\n\nThis skill was not found in your profile.\nEnter years of experience (e.g. 0, 1, 2.5):",
+                                options=[],
+                                is_case2=False,
+                            )
+
+                            if isinstance(response, dict) and response.get("answer") is not None:
+                                user_exp = str(response["answer"]).strip()
+                                final_answer = user_exp
+                                answer_source = "USER_LEARNED"
+                                # Save to question bank so it's never asked again
+                                if self._repo:
+                                    self._repo.save_question(job_id, DiscoveredQuestion(
+                                        question_key=target_key,
+                                        question_text=target_text,
+                                        field_type=field_type,
+                                        required=required,
+                                        answer=user_exp,
+                                    ))
+                                answer_map[target_key] = DiscoveredQuestion(
+                                    question_key=target_key,
+                                    question_text=target_text,
+                                    field_type=field_type,
+                                    required=required,
+                                    answer=user_exp,
+                                )
+                            else:
+                                logger.info("USER_CANCELLED_SKILL_INPUT key={}", target_key)
+                                raise PipelineSuspendedException("User cancelled or skipped skill experience input.")
+
                         logger.info("RESOLVED_SKILL_EXPERIENCE key={} -> {} (source={})", target_key, final_answer, answer_source)
 
                 if final_answer:

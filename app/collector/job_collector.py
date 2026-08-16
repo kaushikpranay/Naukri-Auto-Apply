@@ -20,6 +20,11 @@ from app.models.config import (
     SelectorsConfig,
 )
 from app.models.job import JobData
+from app.utils.network import (
+    async_wait_for_internet_connection,
+    is_internet_connected,
+    is_network_exception,
+)
 from app.utils.screenshot import capture_screenshot
 from app.utils.url_normalizer import normalize_url
 
@@ -58,12 +63,23 @@ class JobCollector:
             url: str = self._build_search_url(keyword, location, page_num)
             logger.debug("  Page {}: {}", page_num, url)
 
-            try:
-                await self._page.goto(url, wait_until="domcontentloaded")
-                await self._page.wait_for_timeout(self._settings.naukri.page_load_wait)
-            except Exception as e:
-                logger.warning("  Failed to load page {}: {}", page_num, str(e))
-                break
+            while True:
+                await async_wait_for_internet_connection()
+                try:
+                    await self._page.goto(url, wait_until="domcontentloaded")
+                    await self._page.wait_for_timeout(self._settings.naukri.page_load_wait)
+                    break
+                except Exception as e:
+                    if not is_internet_connected() or is_network_exception(e):
+                        logger.warning(
+                            "INTERNET_DISCONNECTED: Connection lost while loading page {}: {}. Waiting for internet...",
+                            page_num,
+                            e,
+                        )
+                        await async_wait_for_internet_connection()
+                        continue
+                    logger.warning("  Failed to load page {}: {}", page_num, str(e))
+                    break
 
             # Check for "no results"
             no_results_selectors: list[str] = [
@@ -298,12 +314,31 @@ class JobCollector:
                 job.job_title[:60],
             )
 
-            try:
-                await self._page.goto(job.job_url, wait_until="domcontentloaded", timeout=30000)
-                await self._page.wait_for_timeout(
-                    self._settings.naukri.detail_load_wait
-                )
+            while True:
+                await async_wait_for_internet_connection()
+                try:
+                    await self._page.goto(job.job_url, wait_until="domcontentloaded", timeout=30000)
+                    await self._page.wait_for_timeout(
+                        self._settings.naukri.detail_load_wait
+                    )
+                    break
+                except Exception as e:
+                    if not is_internet_connected() or is_network_exception(e):
+                        logger.warning(
+                            "INTERNET_DISCONNECTED: Connection lost while enriching job '{}': {}. Waiting for internet...",
+                            job.job_title[:60],
+                            e,
+                        )
+                        await async_wait_for_internet_connection()
+                        continue
+                    logger.warning(
+                        "  Failed to load detail page for '{}': {}",
+                        job.job_title[:60],
+                        str(e),
+                    )
+                    break
 
+            try:
                 # --- Description ---
                 desc_selectors: list[str] = [
                     s.strip()

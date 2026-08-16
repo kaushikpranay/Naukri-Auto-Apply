@@ -23,6 +23,11 @@ from playwright.async_api import (
 
 from app.models.config import AppSettings, SelectorsConfig
 from app.utils.config_loader import load_auth_selectors, resolve_path
+from app.utils.network import (
+    async_wait_for_internet_connection,
+    is_internet_connected,
+    is_network_exception,
+)
 from app.utils.screenshot import capture_screenshot
 
 
@@ -191,12 +196,24 @@ class BrowserSession:
 
         page: Page = await self._context.new_page()
 
-        logger.info("Navigating to Naukri to validate session...")
-        await page.goto(
-            self._settings.naukri.base_url,
-            wait_until="domcontentloaded",
-            timeout=30000,
-        )
+        while True:
+            await async_wait_for_internet_connection()
+            try:
+                logger.info("Navigating to Naukri to validate session...")
+                await page.goto(
+                    self._settings.naukri.base_url,
+                    wait_until="domcontentloaded",
+                    timeout=30000,
+                )
+                break
+            except Exception as exc:
+                if not is_internet_connected() or is_network_exception(exc):
+                    logger.warning(
+                        "INTERNET_DISCONNECTED: Connection lost during session validation. Waiting for internet..."
+                    )
+                    await async_wait_for_internet_connection()
+                    continue
+                raise
 
         await page.wait_for_timeout(self._settings.naukri.page_load_wait)
 

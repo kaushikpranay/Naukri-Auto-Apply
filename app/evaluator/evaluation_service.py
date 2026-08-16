@@ -17,6 +17,7 @@ from app.evaluator.errors import (
 )
 from app.evaluator.providers.base_evaluator import BaseEvaluator
 from app.models.evaluation import EvaluationResult, JobEvaluation
+from app.utils.network import is_internet_connected, is_network_exception, wait_for_internet_connection
 
 
 @dataclass
@@ -94,11 +95,7 @@ class EvaluationService:
                 stats.errors += 1
                 continue
 
-            if not job.job_description or not job.job_description.strip():
-                logger.info("Skipping job {} for now: job description is empty (not yet enriched)", job.id)
-                continue
-
-            # Apply eligibility logic
+            # Apply eligibility logic based on experience required
             min_exp = parse_min_experience(job.experience_required)
             if min_exp is not None:
                 if min_exp <= self._max_target_min_exp:
@@ -142,6 +139,11 @@ class EvaluationService:
                 )
                 continue
 
+            if not job.job_description or not job.job_description.strip():
+                # Fallback to job title if detail description is not yet populated
+                job.job_description = f"{job.job_title} at {job.company_name} in {job.location}"
+                logger.debug("Job {} has empty description, using title fallback for evaluation", job.id)
+
             started_at = perf_counter()
             evaluation, provider_used = self._evaluate_with_fallback(job)
             duration = perf_counter() - started_at
@@ -167,49 +169,64 @@ class EvaluationService:
         return stats
 
     def _evaluate_with_fallback(self, job) -> tuple[EvaluationResult, str]:
-        """Try Groq first, then Gemini, then return a review result."""
-        last_error: Exception | None = None
+        """Try Groq first, then Gemini, retrying if internet is lost, then return a review result."""
+        while True:
+            wait_for_internet_connection()
+            last_error: Exception | None = None
+            has_network_failure = False
 
-        for provider in self._providers:
-            logger.info(
-                "Provider selected: {} ({}) for job {}",
-                provider.provider_name,
-                provider.model_id,
+            for provider in self._providers:
+                logger.info(
+                    "Provider selected: {} ({}) for job {}",
+                    provider.provider_name,
+                    provider.model_id,
+                    job.id,
+                )
+                try:
+                    result = provider.evaluate_job(job)
+                    return result, provider.provider_name
+                except ProviderQuotaError as exc:
+                    last_error = exc
+                    logger.warning(
+                        "Quota failure from {} for job {}: {}",
+                        provider.provider_name,
+                        job.id,
+                        exc,
+                    )
+                except (ProviderValidationError, ProviderTransientError, ProviderConfigurationError) as exc:
+                    last_error = exc
+                    if not is_internet_connected() or is_network_exception(exc):
+                        has_network_failure = True
+                    logger.warning(
+                        "Provider failure from {} for job {}: {}",
+                        provider.provider_name,
+                        job.id,
+                        exc,
+                    )
+                except Exception as exc:  # noqa: BLE001
+                    last_error = exc
+                    if not is_internet_connected() or is_network_exception(exc):
+                        has_network_failure = True
+                    logger.error(
+                        "Unexpected provider failure from {} for job {}: {}",
+                        provider.provider_name,
+                        job.id,
+                        exc,
+                    )
+
+            if has_network_failure or not is_internet_connected():
+                logger.warning(
+                    "Network failure detected during evaluation of job {}. Waiting for internet connection...",
+                    job.id,
+                )
+                wait_for_internet_connection()
+                continue
+
+            logger.warning(
+                "All providers failed for job {}. Marking as requires review.",
                 job.id,
             )
-            try:
-                result = provider.evaluate_job(job)
-                return result, provider.provider_name
-            except ProviderQuotaError as exc:
-                last_error = exc
-                logger.warning(
-                    "Quota failure from {} for job {}: {}",
-                    provider.provider_name,
-                    job.id,
-                    exc,
-                )
-            except (ProviderValidationError, ProviderTransientError, ProviderConfigurationError) as exc:
-                last_error = exc
-                logger.warning(
-                    "Provider failure from {} for job {}: {}",
-                    provider.provider_name,
-                    job.id,
-                    exc,
-                )
-            except Exception as exc:  # noqa: BLE001
-                last_error = exc
-                logger.error(
-                    "Unexpected provider failure from {} for job {}: {}",
-                    provider.provider_name,
-                    job.id,
-                    exc,
-                )
-
-        logger.warning(
-            "All providers failed for job {}. Marking as requires review.",
-            job.id,
-        )
-        return self._requires_review_result(last_error), "Requires Review"
+            return self._requires_review_result(last_error), "Requires Review"
 
     def _requires_review_result(self, last_error: Exception | None) -> EvaluationResult:
         reason = "Requires review after provider failures."
