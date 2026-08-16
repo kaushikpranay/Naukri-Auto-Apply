@@ -1,2 +1,10 @@
-﻿artifacts/
+﻿.venv/
+.env
+__pycache__/
+*.pyc
+logs/
+database/
+exports/
+browser_profile/
+artifacts/
 screenshots/
