@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 959,
-    "naukri_jobs": 959,
+    "total_jobs": 1110,
+    "naukri_jobs": 1110,
     "external_jobs": 953,
-    "pending_review": 329,
-    "queued": 0,
+    "pending_review": 363,
+    "queued": 83,
     "applying": 0,
     "applied": 126,
     "failed": 0,
     "automation_applied": 0,
     "human_applied": 0,
     "success_rate": 100.0,
-    "avg_ai_score": 26.6,
-    "today_jobs": 0,
-    "today_applications": 0
+    "avg_ai_score": 29.6,
+    "today_jobs": 151,
+    "today_applications": 1
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Shj International",
-      "job_title": "AI Agent Developer",
-      "timestamp": "2026-08-14T15:19:22.068491",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Capgemini",
-      "job_title": "Agentic AI Developer",
-      "timestamp": "2026-08-14T15:18:57.348887",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Deservely",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-08-14T15:18:36.913096",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Deservely",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-08-14T15:18:17.108633",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Inspiredge It Solutions",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-08-14T15:17:53.577789",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "Starlabs Technologies",
+      "job_title": "Backend Developer Intern (Python, FastAPI)",
+      "timestamp": "2026-08-16T16:07:56.796887",
+      "details": null
     },
     {
       "type": "ai_evaluated",
-      "company_name": "PURVIEW",
-      "job_title": "AIML / Agentic AI Engineer",
-      "timestamp": "2026-08-14T15:16:03.628881",
+      "company_name": "Accenture",
+      "job_title": "Large Language Model Architect",
+      "timestamp": "2026-08-16T16:07:52.429123",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Deservely",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-08-14T15:16:03.609428",
-      "details": "Score: 85.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "PURVIEW",
-      "job_title": "AIML / Agentic AI Engineer",
-      "timestamp": "2026-08-14T15:15:51.354469",
+      "company_name": "Accenture",
+      "job_title": "Large Language Model Architect",
+      "timestamp": "2026-08-16T16:07:52.406706",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Shj International",
-      "job_title": "AI Agent Developer",
-      "timestamp": "2026-08-14T15:15:51.328945",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Accenture",
+      "job_title": "Large Language Model Architect",
+      "timestamp": "2026-08-16T16:07:52.384148",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Crescendo Global",
-      "job_title": "Data Scientist",
-      "timestamp": "2026-08-14T15:15:36.226103",
+      "company_name": "Accenture",
+      "job_title": "Large Language Model Architect",
+      "timestamp": "2026-08-16T16:07:52.353666",
       "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Accenture",
+      "job_title": "Large Language Model Architect",
+      "timestamp": "2026-08-16T16:07:52.328515",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "CMM Level 5 IT Company",
+      "job_title": "Python FastAPI Developer",
+      "timestamp": "2026-08-16T15:41:16.681040",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Virtusa",
+      "job_title": "Python and Fastapi developer",
+      "timestamp": "2026-08-16T15:41:16.681040",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Seventh Contact Hiring Solutions",
+      "job_title": "Full Stack Developer | Python (FastAPI) | React.js | Product based Co.",
+      "timestamp": "2026-08-16T15:41:16.681040",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Qcentrio",
+      "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+      "timestamp": "2026-08-16T15:41:16.681040",
+      "details": null
     }
   ]
 }

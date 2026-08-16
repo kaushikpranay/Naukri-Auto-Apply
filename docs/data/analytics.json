@@ -23,48 +23,52 @@
     {
       "date": "2026-08-14",
       "count": 36
+    },
+    {
+      "date": "2026-08-16",
+      "count": 151
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 642
+      "count": 694
     },
     {
       "score_range": 10,
-      "count": 4
+      "count": 8
     },
     {
       "score_range": 20,
-      "count": 2
-    },
-    {
-      "score_range": 30,
-      "count": 3
-    },
-    {
-      "score_range": 40,
-      "count": 2
-    },
-    {
-      "score_range": 50,
       "count": 4
     },
     {
-      "score_range": 60,
+      "score_range": 30,
+      "count": 7
+    },
+    {
+      "score_range": 40,
       "count": 6
     },
     {
+      "score_range": 50,
+      "count": 5
+    },
+    {
+      "score_range": 60,
+      "count": 9
+    },
+    {
       "score_range": 70,
-      "count": 45
+      "count": 69
     },
     {
       "score_range": 80,
-      "count": 207
+      "count": 255
     },
     {
       "score_range": 90,
-      "count": 44
+      "count": 53
     }
   ],
   "ats_distribution": [
@@ -83,12 +87,16 @@
       "count": 84
     },
     {
+      "status": "browser_error",
+      "count": 1
+    },
+    {
       "status": "easy_apply",
       "count": 4
     },
     {
       "status": "evaluated",
-      "count": 653
+      "count": 803
     },
     {
       "status": "external_portal",
@@ -102,26 +110,30 @@
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 41
+      "count": 43
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 32
+      "count": 36
     },
     {
       "name": "Sparix Global",
-      "count": 25
+      "count": 27
     },
     {
       "name": "PwC",
-      "count": 19
+      "count": 21
     },
     {
-      "name": "Leading Client",
-      "count": 15
+      "name": "Accenture",
+      "count": 21
     },
     {
       "name": "Epam Systems",
+      "count": 17
+    },
+    {
+      "name": "Leading Client",
       "count": 15
     },
     {
@@ -135,10 +147,6 @@
     {
       "name": "Impetus Technologies",
       "count": 10
-    },
-    {
-      "name": "Micro1",
-      "count": 9
     }
   ],
   "failure_reasons": [

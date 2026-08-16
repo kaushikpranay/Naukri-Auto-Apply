@@ -591,6 +591,281 @@
     "priority": "high"
   },
   {
+    "id": 33767,
+    "company_name": "Alation",
+    "job_title": "DCX Agentic AI Engineer",
+    "location": "Chennai",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-dcx-agentic-ai-engineer-alation-chennai-3-to-5-years-140826500778",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and agentic workflow experience, transferable cloud skills, but lacks Azure OpenAI exposure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33900,
+    "company_name": "Gitlab",
+    "job_title": "Intermediate Backend Engineer",
+    "location": "Bengaluru",
+    "experience_required": "3-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-intermediate-backend-engineer-gitlab-bengaluru-3-to-7-years-120826501330",
+    "score": 75.0,
+    "confidence": 75.0,
+    "reason": "Strong Python backend with PostgreSQL and production RAG experience; transferable cloud skills; lacks Ruby on Rails but willing to learn.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Ruby on Rails",
+      "Go"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33907,
+    "company_name": "LG Soft India",
+    "job_title": "Backend Engineer",
+    "location": "Bengaluru",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-backend-engineer-lg-soft-india-private-limited-bengaluru-4-to-8-years-230426500262",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience, transferable AWS skills, but lacks MongoDB and container orchestration.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "MongoDB",
+      "Docker",
+      "Kubernetes",
+      "SQLAlchemy",
+      "Pandas",
+      "NumPy",
+      "time-series databases"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33908,
+    "company_name": "Mobile Programming",
+    "job_title": "AI Backend Engineer",
+    "location": "Bengaluru",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-backend-engineer-mobile-programming-bengaluru-4-to-8-years-180726009631",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33935,
+    "company_name": "Spadtek Solutions",
+    "job_title": "Python Backend Engineer LLM, Agentic AI & MCP",
+    "location": "Hyderabad",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-llm-agentic-ai-mcp-spadtek-solutions-pvt-ltd-hyderabad-3-to-8-years-160726501190",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and agentic AI experience, but lacks JavaScript/TypeScript and Azure OpenAI.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "JavaScript",
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33939,
+    "company_name": "Crew Kraftorz",
+    "job_title": "SDET Backend QA Engineer - Python & AWS",
+    "location": "Hyderabad",
+    "experience_required": "1-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-sdet-backend-qa-engineer-python-aws-crew-kraftorz-llp-hyderabad-1-to-4-years-130826501947",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong Python, AWS, and distributed systems experience from GenAI development. Lacks explicit SDET/Pytest experience but has relevant production debugging and transferable message queue skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Pytest",
+      "Kafka"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33965,
+    "company_name": "Ninos It Solution",
+    "job_title": "Django Backend Developer",
+    "location": "Chennai",
+    "experience_required": "1-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-django-backend-developer-ninos-it-solution-chennai-1-to-6-years-270726506067",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong Python backend and REST API experience, but lacks Django and related ecosystem skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Django",
+      "DRF",
+      "Celery",
+      "Redis",
+      "Docker",
+      "Linux",
+      "Nginx",
+      "Gunicorn",
+      "GitFlow",
+      "MySQL",
+      "Razorpay",
+      "Cashfree",
+      "JWT",
+      "OAuth2"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33993,
+    "company_name": "Yashvitech It Solution",
+    "job_title": "Backend Developer",
+    "location": "Indore",
+    "experience_required": "2-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-backend-developer-yashvitech-it-solution-pvt-ltd-indore-2-to-4-years-250626504762",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong backend production experience with microservices, API design, database, and cloud deployments; transferable skills cover backend development.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Node.js"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33997,
+    "company_name": "Endeavor IT Solution",
+    "job_title": "Search For java developer(Freshers)",
+    "location": "Indore",
+    "experience_required": "0-1 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-search-for-java-developer-freshers-endeavor-it-solutions-indore-0-to-1-years-300626502674",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong Python backend, OOP, and production experience align with Java developer role.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Java"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34000,
+    "company_name": "Endeavor IT Solution",
+    "job_title": "Back end developer",
+    "location": "Indore",
+    "experience_required": "0-2 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-back-end-developer-endeavor-it-solutions-indore-0-to-2-years-290626502673",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong FastAPI, RAG, AWS experience; missing JavaScript, PHP, GCP.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "PHP",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Node.js",
+      "React.js",
+      "Angular.js",
+      "GCP"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34011,
+    "company_name": "Sparix Global",
+    "job_title": "Software Engineer",
+    "location": "Remote",
+    "experience_required": "1-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-engineer-sparix-global-private-limited-remote-1-to-4-years-240426500817",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience with AWS, but missing Glue, PySpark, React, Terraform.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "AWS Glue",
+      "PySpark",
+      "ECS",
+      "React",
+      "Terraform"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34013,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Noida",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-noida-4-to-8-years-210726908730",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience with transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "React.js"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34017,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Gurugram",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-gurugram-4-to-8-years-210726909017",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "React.js"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34028,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Bengaluru",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-bengaluru-4-to-8-years-210726908967",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34049,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Pune",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-pune-4-to-8-years-210726908896",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26346,
     "company_name": "Two95 International",
     "job_title": "GenAI / AI-ML Engineer",
@@ -802,6 +1077,177 @@
     "priority": "high"
   },
   {
+    "id": 33082,
+    "company_name": "Movate Technologies",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Hybrid - Pune, Chennai, Hyderabad",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-movate-technologies-hyderabad-pune-chennai-4-to-7-years-140826019523",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LangGraph experience, but lacks Snowflake and dbt.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Snowflake",
+      "dbt"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33139,
+    "company_name": "Godrej Properties",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Mumbai (All Areas)",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-godrej-properties-mumbai-all-areas-4-to-7-years-150826003456",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG experience, vector db pgvector, FastAPI, AWS, semantic search, but lacks OpenSearch/Pinecone and enterprise doc handling.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "OpenSearch",
+      "Pinecone",
+      "Airflow",
+      "PDF extraction"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33432,
+    "company_name": "Talentica",
+    "job_title": "QA LLM Engineer | Talentica.com",
+    "location": "Bengaluru",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-qa-llm-engineer-talentica-com-talentica-software-india-pvt-ltd-bengaluru-3-to-5-years-011225505259",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience, but missing Playwright and explicit observability focus.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Playwright",
+      "LLM observability tools"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33451,
+    "company_name": "Ascendion Engineering",
+    "job_title": "AI+Data Engineer",
+    "location": "Pune",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-data-engineer-ascendion-engineering-pune-3-to-5-years-150826001567",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LLM experience, transferable AWS skills, but lacks Spark, Azure OpenAI, and orchestration tools.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Apache Spark/PySpark",
+      "Airflow",
+      "Delta Lake",
+      "Databricks",
+      "Docker",
+      "Kubernetes",
+      "Kafka",
+      "Vector DB"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33855,
+    "company_name": "Innovatione India",
+    "job_title": "Back End Developer",
+    "location": "Gurugram",
+    "experience_required": "0-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-back-end-developer-innovatione-india-gurugram-0-to-3-years-120826025751",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong backend experience with FastAPI, REST APIs, AWS, and system design, but lacks JavaScript/Node.js and Snowflake.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "Snowflake",
+      "Lambda",
+      "API Gateway",
+      "IAM",
+      "CloudWatch",
+      "Docker"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33924,
+    "company_name": "Meyrahkee",
+    "job_title": "Full stack developers",
+    "location": "Pune",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developers-meyrahkee-pune-2-to-6-years-280526502098",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong backend and AI production experience, but lacks front-end framework exposure.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "ReactJS",
+      "AngularJS"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33984,
+    "company_name": "ICICI Lombard",
+    "job_title": "Fullstack Developer",
+    "location": "Mumbai(Vikhroli)",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-icici-lombard-mumbai-1-to-3-years-070826028535",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and FastAPI experience, but lacks frontend stack.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Angular",
+      "MERN",
+      "MEAN"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34058,
+    "company_name": "Codvo",
+    "job_title": "MLOps Engineer",
+    "location": "Pune",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-mlops-engineer-codvo-ai-pune-4-to-9-years-200326507019",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 34022,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Kolkata",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-kolkata-4-to-8-years-210726908921",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience; transferable AWS to Azure; missing Azure OpenAI.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26445,
     "company_name": "Capgemini",
     "job_title": "Amazon Connect Developer",
@@ -865,6 +1311,49 @@
     "priority": "high"
   },
   {
+    "id": 34035,
+    "company_name": "Impelsys",
+    "job_title": "Software Engineer",
+    "location": "Bengaluru",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-engineer-impelsys-bengaluru-3-to-5-years-290726005818",
+    "score": 65.0,
+    "confidence": 70.0,
+    "reason": "Strong FastAPI and AWS backend experience but lacks front-end and required certification.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "React.js",
+      "Node.js",
+      "AWS Certified Developer \u2013 Associate"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 34046,
+    "company_name": "Seventh Contact Hiring Solutions",
+    "job_title": "Full Stack Developer | Python (FastAPI) | React.js | Product based Co.",
+    "location": "Pune(Pimpri)",
+    "experience_required": "2-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-python-fastapi-react-js-product-based-co-seventh-contact-hiring-solutions-pune-2-to-4-years-060826025572",
+    "score": 65.0,
+    "confidence": 75.0,
+    "reason": "Strong FastAPI and PostgreSQL production experience, but lacks front\u2011end and related stack skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "React.js",
+      "JavaScript/TypeScript",
+      "Redis",
+      "Celery",
+      "Docker",
+      "Linux",
+      "WebSockets",
+      "CI/CD",
+      "Testing",
+      "MQTT"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26900,
     "company_name": "The Veca",
     "job_title": "Agentic AI Engineer",
@@ -921,6 +1410,42 @@
     "priority": "medium"
   },
   {
+    "id": 34023,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django / Flask / FastAPI",
+    "location": "Kolkata",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-kolkata-4-to-8-years-210726908975",
+    "score": 60.0,
+    "confidence": 70.0,
+    "reason": "Strong backend and AI experience but lacks front-end and Azure cloud skills.",
+    "recommended_resume": "STARTUP",
+    "missing_skills": [
+      "React.js",
+      "Django",
+      "Azure"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 34004,
+    "company_name": "Siya Tech Ventures",
+    "job_title": "Fullstack Developer",
+    "location": "Indore",
+    "experience_required": "3-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-siya-tech-ventures-indore-3-to-4-years-050626502457",
+    "score": 50.0,
+    "confidence": 60.0,
+    "reason": "Strong backend AI experience but lacks front-end React/Next.js and Node.js.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React",
+      "Next.js",
+      "Node.js"
+    ],
+    "priority": "medium"
+  },
+  {
     "id": 28274,
     "company_name": "E2E Networks",
     "job_title": "Accelerated Computing Engineer",
@@ -955,6 +1480,79 @@
     "priority": "medium"
   },
   {
+    "id": 33566,
+    "company_name": "Data Economy",
+    "job_title": "Snowflake CortexAI Engineer",
+    "location": "Pune",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-snowflake-cortexai-engineer-dataeconomy-pune-2-to-5-years-140826500462",
+    "score": 45.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience but lacks Snowflake expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Snowflake",
+      "Snowflake Cortex AI",
+      "Capital Markets"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 33811,
+    "company_name": "Workiy Technologies",
+    "job_title": "Full Stack Developer",
+    "location": "Remote",
+    "experience_required": "1-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-workiy-inc-remote-1-to-4-years-140826504585",
+    "score": 45.0,
+    "confidence": 60.0,
+    "reason": "Strong backend and AWS experience but missing frontend TypeScript/React skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "TypeScript",
+      "Angular",
+      "React"
+    ],
+    "priority": "low"
+  },
+  {
+    "id": 33974,
+    "company_name": "Crimson Interactive",
+    "job_title": "Python Backend Engineer - Crimson Interactive",
+    "location": "Mumbai",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-backend-engineer-crimson-interactive-crimson-interactive-pvt-ltd-mumbai-3-to-5-years-040626501255",
+    "score": 45.0,
+    "confidence": 70.0,
+    "reason": "Strong Python backend and AWS experience but lacks Java/Spring Boot and Django.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Java",
+      "Spring Boot",
+      "Django",
+      "Kafka"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 34018,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django / Flask / FastAPI",
+    "location": "Gurugram",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-gurugram-4-to-8-years-210726908968",
+    "score": 45.0,
+    "confidence": 60.0,
+    "reason": "Strong backend and AI experience but missing front-end and Azure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "React.js",
+      "Django"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26485,
     "company_name": "Hackajob",
     "job_title": "Artificial Intelligence Engineer",
@@ -987,6 +1585,61 @@
       "JavaScript",
       "HTML5",
       "CSS3"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 34019,
+    "company_name": "Evalueserve",
+    "job_title": "Consultant",
+    "location": "Gurugram",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-consultant-evalueserve-com-pvt-ltd-gurugram-4-to-6-years-060826504022",
+    "score": 35.0,
+    "confidence": 50.0,
+    "reason": "Strong backend and AI experience but lacks frontend framework skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Angular",
+      "React",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "SCSS",
+      "Redux",
+      "NgRx",
+      "Context API",
+      "JWT",
+      "OAuth",
+      "MongoDB",
+      "Docker",
+      "CI/CD",
+      "Kubernetes",
+      "Kafka",
+      "RabbitMQ",
+      "Automated testing",
+      "Security best practices",
+      "Application monitoring"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 34026,
+    "company_name": "Infinite",
+    "job_title": "Software Engineer",
+    "location": "Bengaluru",
+    "experience_required": "1-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-engineer-infinite-computer-solutions-india-pvt-ltd-bengaluru-1-to-5-years-070826502241",
+    "score": 35.0,
+    "confidence": 60.0,
+    "reason": "Strong backend and AI experience but lacks front\u2011end and CI/CD tools required for the role.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Angular",
+      "JavaScript",
+      "CSS",
+      "GitLab",
+      "Jenkins"
     ],
     "priority": "medium"
   },

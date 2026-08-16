@@ -12,121 +12,121 @@
       "id": 67,
       "keyword": "RAG Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-14T13:35:49",
-      "jobs_found": 2,
+      "last_run_at": "2026-08-16T15:15:47.358958",
+      "jobs_found": 7,
       "jobs_inserted": 0
     },
     {
       "id": 68,
       "keyword": "RAG Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-14T13:35:45",
-      "jobs_found": 1,
+      "last_run_at": "2026-08-16T13:22:44.794380",
+      "jobs_found": 9,
       "jobs_inserted": 0
     },
     {
       "id": 69,
       "keyword": "RAG Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-14T13:35:48",
-      "jobs_found": 14,
-      "jobs_inserted": 0
+      "last_run_at": "2026-08-16T13:26:08.967076",
+      "jobs_found": 20,
+      "jobs_inserted": 1
     },
     {
       "id": 70,
       "keyword": "RAG Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-14T13:35:45",
-      "jobs_found": 3,
+      "last_run_at": "2026-08-16T13:22:10.937082",
+      "jobs_found": 5,
       "jobs_inserted": 0
     },
     {
       "id": 114,
       "keyword": "RAG Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-14T13:35:47",
-      "jobs_found": 20,
+      "last_run_at": "2026-08-16T13:23:51.059827",
+      "jobs_found": 3,
       "jobs_inserted": 0
     },
     {
       "id": 120,
       "keyword": "RAG Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-14T13:35:50",
-      "jobs_found": 20,
+      "last_run_at": "2026-08-16T15:15:54.541003",
+      "jobs_found": 1,
       "jobs_inserted": 0
     },
     {
       "id": 137,
       "keyword": "Python Backend Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-14T13:35:59",
+      "last_run_at": "2026-08-16T15:34:23.937751",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 8
     },
     {
       "id": 138,
       "keyword": "Python Backend Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-14T13:35:59",
+      "last_run_at": "2026-08-16T15:35:34.912994",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 7
     },
     {
       "id": 139,
       "keyword": "Python Backend Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-14T13:36:00",
+      "last_run_at": "2026-08-16T15:36:45.736373",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 12
     },
     {
       "id": 140,
       "keyword": "Python Backend Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-14T13:36:00",
+      "last_run_at": "2026-08-16T15:37:54.514150",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 18
     },
     {
       "id": 141,
       "keyword": "FastAPI Developer",
       "location": "Remote",
-      "last_run_at": "2026-08-14T13:36:01",
-      "jobs_found": 20,
-      "jobs_inserted": 0
+      "last_run_at": "2026-08-16T15:38:08.601680",
+      "jobs_found": 3,
+      "jobs_inserted": 2
     },
     {
       "id": 142,
       "keyword": "FastAPI Developer",
       "location": "Noida",
-      "last_run_at": "2026-08-14T13:36:01",
-      "jobs_found": 20,
-      "jobs_inserted": 0
+      "last_run_at": "2026-08-16T15:38:19.425923",
+      "jobs_found": 2,
+      "jobs_inserted": 2
     },
     {
       "id": 143,
       "keyword": "FastAPI Developer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-14T13:36:02",
-      "jobs_found": 20,
-      "jobs_inserted": 0
+      "last_run_at": "2026-08-16T15:38:49.164483",
+      "jobs_found": 8,
+      "jobs_inserted": 7
     },
     {
       "id": 144,
       "keyword": "FastAPI Developer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-14T13:36:03",
-      "jobs_found": 20,
-      "jobs_inserted": 0
+      "last_run_at": "2026-08-16T15:38:59.761718",
+      "jobs_found": 2,
+      "jobs_inserted": 2
     },
     {
       "id": 145,
       "keyword": "FastAPI Developer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-14T13:36:03",
+      "last_run_at": "2026-08-16T15:40:07.605095",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 19
     }
   ],
   "pagination": {

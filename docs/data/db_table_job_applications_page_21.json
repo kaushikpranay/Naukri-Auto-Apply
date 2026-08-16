@@ -209,12 +209,42 @@
       "dropdown_count": 0,
       "buttons_count": 1,
       "quota_message": null
+    },
+    {
+      "id": 10285,
+      "job_id": 34009,
+      "apply_type": null,
+      "apply_url": null,
+      "email": null,
+      "hr_name": null,
+      "button_text": null,
+      "button_selector": null,
+      "url_before": null,
+      "url_after": null,
+      "redirect_count": 0,
+      "status": "discovery_failed",
+      "screenshot_before": null,
+      "screenshot_after": null,
+      "screenshot_modal": null,
+      "redirect_chain": null,
+      "html_before_path": null,
+      "html_path": null,
+      "elements_path": null,
+      "detected_at": "2026-08-16T16:07:56.796887",
+      "page_title": null,
+      "modal_detected": 0,
+      "forms_count": 0,
+      "inputs_count": 0,
+      "radio_count": 0,
+      "dropdown_count": 0,
+      "buttons_count": 0,
+      "quota_message": null
     }
   ],
   "pagination": {
     "page": 21,
     "limit": 15,
-    "total_records": 306,
+    "total_records": 307,
     "total_pages": 21
   }
 }
