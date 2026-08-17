@@ -251,6 +251,11 @@ class ApplyDiscoveryService:
                         # Successful or non-retryable apply type
                         status_val = outcome.record.apply_type or "pending"
                         self._repo.update_job_status(job.id, status_val, apply_url=outcome.record.apply_url)
+                        if status_val in (
+                            "unknown_question", "waiting_for_user",
+                            "temporary_failure", "browser_error", "unknown"
+                        ):
+                            self._repo.increment_retry_count(job.id)
                         if status_val == "login_required":
                             from app.browser.session import SessionExpiredError
                             logger.error("Session expired during discovery. Aborting run.")
