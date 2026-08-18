@@ -1,0 +1,160 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 670,
+      "job_id": 26878,
+      "question_key": "type_role",
+      "question_text": "TYPE OF ROLE",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "FULL TIME",
+      "detected_at": "2026-08-18T18:23:33.564751"
+    },
+    {
+      "id": 672,
+      "job_id": 26878,
+      "question_key": "open_work_individual_role_or_small_team_startup",
+      "question_text": "ARE YOU OPEN TO WORK IN INDIVIDUAL ROLE OR WITH A SMALL TEAM IN STARTUP",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "YES",
+      "detected_at": "2026-08-18T18:23:50.793408"
+    },
+    {
+      "id": 675,
+      "job_id": 33080,
+      "question_key": "overall_yrs_exp_and_relevant_exp_ai",
+      "question_text": "what is your overall yrs of exp and relevant exp in AI",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-08-18T18:25:32.786352"
+    },
+    {
+      "id": 677,
+      "job_id": 33080,
+      "question_key": "current_ctc",
+      "question_text": "What is your current CTC, ECTC in Lacs per annum?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "3.36 LPA",
+      "detected_at": "2026-08-18T18:26:37.611562"
+    },
+    {
+      "id": 678,
+      "job_id": 33098,
+      "question_key": "ex_employee_infosys_if_no_mention_na_if_yes_mention_ex_infy",
+      "question_text": "Are you ex-employee of Infosys, if no mention NA, if yes please mention ex infy ID.",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "NA",
+      "detected_at": "2026-08-18T18:27:30.559649"
+    },
+    {
+      "id": 681,
+      "job_id": 33805,
+      "question_key": "exp_last_2_years",
+      "question_text": "Share your agentic Ai project experience in last 2 years ? Project Problem Statement , Approach Followed for using Agentic Ai and Project Outcome",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-18T18:34:24.215016"
+    },
+    {
+      "id": 683,
+      "job_id": 34016,
+      "question_key": "python_experience",
+      "question_text": "How many years of professional experience do you have with Python and FastAPI (or similar frameworks like Flask/Django)?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-18T18:37:47.462258"
+    },
+    {
+      "id": 684,
+      "job_id": 34044,
+      "question_key": "if_holding_any_offer_mention_value",
+      "question_text": "If you are holding any offer, please mention the value",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "N/A",
+      "detected_at": "2026-08-18T18:39:16.819847"
+    },
+    {
+      "id": 686,
+      "job_id": 34044,
+      "question_key": "mention_last_working_day",
+      "question_text": "Please mention your Last Working Day",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "25-sep-2026",
+      "detected_at": "2026-08-18T18:39:36.767390"
+    },
+    {
+      "id": 688,
+      "job_id": 34044,
+      "question_key": "pan_number_mandatory",
+      "question_text": "PAN Number (Mandatory)",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "GEMPP2391H",
+      "detected_at": "2026-08-18T18:40:01.849853"
+    },
+    {
+      "id": 690,
+      "job_id": 34044,
+      "question_key": "date_birth_mandatory",
+      "question_text": "Date Of Birth (Mandatory)",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "22/01/2002",
+      "detected_at": "2026-08-18T18:40:18.327543"
+    },
+    {
+      "id": 692,
+      "job_id": 34044,
+      "question_key": "ready_work_contract_hire_environment",
+      "question_text": "Ready to work in Contract to hire environment?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "YES",
+      "detected_at": "2026-08-18T18:40:36.372356"
+    },
+    {
+      "id": 694,
+      "job_id": 34044,
+      "question_key": "expected_ctc",
+      "question_text": "Expected CTC?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "8 LPA",
+      "detected_at": "2026-08-18T18:41:14.557685"
+    },
+    {
+      "id": 696,
+      "job_id": 34637,
+      "question_key": "exp_langraph",
+      "question_text": "How many years of experience do you have in Langraph?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-08-18T18:44:09.829480"
+    }
+  ],
+  "pagination": {
+    "page": 6,
+    "limit": 15,
+    "total_records": 89,
+    "total_pages": 6
+  }
+}

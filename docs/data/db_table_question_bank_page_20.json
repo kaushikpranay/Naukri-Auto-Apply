@@ -1,0 +1,114 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "question_text",
+    "answer",
+    "usage_count",
+    "last_used",
+    "field_type",
+    "created_at",
+    "last_used_at",
+    "confidence_score",
+    "updated_at"
+  ],
+  "rows": [
+    {
+      "id": 13730,
+      "question_key": "exp_last_2_years",
+      "question_text": "Share your agentic Ai project experience in last 2 years ? Project Problem Statement , Approach Followed for using Agentic Ai and Project Outcome",
+      "answer": "Customer Care RAG System: It remove the repetation of questions only edge cases need to handle by associates. After 1 or 2 times system can handles edge cases too.",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:34:24.215016",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:33:37.066117",
+      "last_used_at": "2026-08-18T18:34:24.215016",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13733,
+      "question_key": "if_holding_any_offer_mention_value",
+      "question_text": "If you are holding any offer, please mention the value",
+      "answer": "N/A",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:39:16.819847",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:39:07.908354",
+      "last_used_at": "2026-08-18T18:39:16.819847",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13735,
+      "question_key": "mention_last_working_day",
+      "question_text": "Please mention your Last Working Day",
+      "answer": "25-sep-2026",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:39:36.767390",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:39:27.567110",
+      "last_used_at": "2026-08-18T18:39:36.767390",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13737,
+      "question_key": "pan_number_mandatory",
+      "question_text": "PAN Number (Mandatory)",
+      "answer": "GEMPP2391H",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:40:01.849853",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:39:47.904329",
+      "last_used_at": "2026-08-18T18:40:01.849853",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13739,
+      "question_key": "date_birth_mandatory",
+      "question_text": "Date Of Birth (Mandatory)",
+      "answer": "22/01/2002",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:40:18.327543",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:40:11.717387",
+      "last_used_at": "2026-08-18T18:40:18.327543",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13741,
+      "question_key": "ready_work_contract_hire_environment",
+      "question_text": "Ready to work in Contract to hire environment?",
+      "answer": "YES",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:40:36.372356",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:40:27.401380",
+      "last_used_at": "2026-08-18T18:40:36.372356",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13744,
+      "question_key": "exp_langraph",
+      "question_text": "How many years of experience do you have in Langraph?",
+      "answer": "1.5",
+      "usage_count": 2,
+      "last_used": "2026-08-18T18:44:09.829480",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-18T18:42:59.632728",
+      "last_used_at": "2026-08-18T18:44:09.829480",
+      "confidence_score": 1.0,
+      "updated_at": null
+    }
+  ],
+  "pagination": {
+    "page": 20,
+    "limit": 15,
+    "total_records": 292,
+    "total_pages": 20
+  }
+}

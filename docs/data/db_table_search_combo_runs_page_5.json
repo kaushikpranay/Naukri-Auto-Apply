@@ -12,7 +12,7 @@
       "id": 67,
       "keyword": "RAG Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-17T17:05:56.294670",
+      "last_run_at": "2026-08-18T17:32:15.604375",
       "jobs_found": 4,
       "jobs_inserted": 0
     },
@@ -20,15 +20,15 @@
       "id": 68,
       "keyword": "RAG Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-17T17:00:03.960445",
-      "jobs_found": 9,
+      "last_run_at": "2026-08-18T17:26:20.823290",
+      "jobs_found": 8,
       "jobs_inserted": 0
     },
     {
       "id": 69,
       "keyword": "RAG Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-17T17:03:23.569841",
+      "last_run_at": "2026-08-18T17:29:38.978941",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -36,15 +36,15 @@
       "id": 70,
       "keyword": "RAG Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-17T16:59:30.864625",
+      "last_run_at": "2026-08-18T17:25:52.178927",
       "jobs_found": 6,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 114,
       "keyword": "RAG Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-17T17:01:09.472806",
+      "last_run_at": "2026-08-18T17:27:23.031573",
       "jobs_found": 3,
       "jobs_inserted": 0
     },
@@ -52,7 +52,7 @@
       "id": 120,
       "keyword": "RAG Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-17T17:06:04.053098",
+      "last_run_at": "2026-08-18T17:32:22.609358",
       "jobs_found": 1,
       "jobs_inserted": 0
     },
@@ -60,31 +60,31 @@
       "id": 137,
       "keyword": "Python Backend Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-17T17:24:36.038440",
+      "last_run_at": "2026-08-18T17:50:00.642836",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 2
     },
     {
       "id": 138,
       "keyword": "Python Backend Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-17T17:25:43.701393",
+      "last_run_at": "2026-08-18T17:51:06.591680",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 2
     },
     {
       "id": 139,
       "keyword": "Python Backend Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-17T17:26:51.789884",
+      "last_run_at": "2026-08-18T17:52:10.704449",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 140,
       "keyword": "Python Backend Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-17T17:27:58.985554",
+      "last_run_at": "2026-08-18T17:53:16.413437",
       "jobs_found": 20,
       "jobs_inserted": 1
     },
@@ -92,7 +92,7 @@
       "id": 141,
       "keyword": "FastAPI Developer",
       "location": "Remote",
-      "last_run_at": "2026-08-17T17:28:12.303029",
+      "last_run_at": "2026-08-18T17:53:29.235534",
       "jobs_found": 3,
       "jobs_inserted": 0
     },
@@ -100,7 +100,7 @@
       "id": 142,
       "keyword": "FastAPI Developer",
       "location": "Noida",
-      "last_run_at": "2026-08-17T17:28:22.336196",
+      "last_run_at": "2026-08-18T17:53:39.107060",
       "jobs_found": 2,
       "jobs_inserted": 0
     },
@@ -108,7 +108,7 @@
       "id": 143,
       "keyword": "FastAPI Developer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-17T17:28:51.513294",
+      "last_run_at": "2026-08-18T17:54:06.909502",
       "jobs_found": 8,
       "jobs_inserted": 0
     },
@@ -116,7 +116,7 @@
       "id": 144,
       "keyword": "FastAPI Developer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-17T17:29:02.507777",
+      "last_run_at": "2026-08-18T17:54:17.305194",
       "jobs_found": 2,
       "jobs_inserted": 0
     },
@@ -124,9 +124,9 @@
       "id": 145,
       "keyword": "FastAPI Developer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-17T17:30:12.175317",
+      "last_run_at": "2026-08-18T17:55:21.947987",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 3
     }
   ],
   "pagination": {

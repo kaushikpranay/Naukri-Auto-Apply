@@ -31,12 +31,16 @@
     {
       "date": "2026-08-17",
       "count": 61
+    },
+    {
+      "date": "2026-08-18",
+      "count": 96
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 716
+      "count": 767
     },
     {
       "score_range": 10,
@@ -44,7 +48,7 @@
     },
     {
       "score_range": 20,
-      "count": 5
+      "count": 7
     },
     {
       "score_range": 30,
@@ -52,27 +56,27 @@
     },
     {
       "score_range": 40,
-      "count": 6
+      "count": 8
     },
     {
       "score_range": 50,
-      "count": 6
+      "count": 7
     },
     {
       "score_range": 60,
-      "count": 12
+      "count": 13
     },
     {
       "score_range": 70,
-      "count": 76
+      "count": 83
     },
     {
       "score_range": 80,
-      "count": 275
+      "count": 304
     },
     {
       "score_range": 90,
-      "count": 59
+      "count": 62
     }
   ],
   "ats_distribution": [
@@ -84,39 +88,39 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 45
+      "count": 64
     },
     {
       "status": "applied_successfully",
-      "count": 108
+      "count": 126
     },
     {
       "status": "easy_apply",
-      "count": 4
+      "count": 10
     },
     {
       "status": "evaluated",
-      "count": 862
+      "count": 855
     },
     {
       "status": "external_portal",
-      "count": 134
+      "count": 176
     },
     {
       "status": "failed",
-      "count": 13
+      "count": 23
     },
     {
       "status": "pending",
-      "count": 2
-    },
-    {
-      "status": "waiting_for_user",
       "count": 1
     },
     {
+      "status": "unknown",
+      "count": 4
+    },
+    {
       "status": "walk_in",
-      "count": 2
+      "count": 8
     }
   ],
   "top_companies": [
@@ -126,11 +130,15 @@
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 38
+      "count": 42
     },
     {
       "name": "Accenture",
-      "count": 29
+      "count": 34
+    },
+    {
+      "name": "Leading Client",
+      "count": 31
     },
     {
       "name": "Sparix Global",
@@ -138,15 +146,11 @@
     },
     {
       "name": "PwC",
-      "count": 21
+      "count": 22
     },
     {
       "name": "Epam Systems",
-      "count": 17
-    },
-    {
-      "name": "Leading Client",
-      "count": 15
+      "count": 18
     },
     {
       "name": "Grid Dynamics",
@@ -157,8 +161,8 @@
       "count": 12
     },
     {
-      "name": "Capgemini",
-      "count": 11
+      "name": "HCLTech",
+      "count": 12
     }
   ],
   "failure_reasons": [

@@ -367,13 +367,13 @@
       "job_description": "Design, develop, and deploy AI/ML models using various algorithms and techniques.\nCollaborate with cross-functional teams to identify business problems and develop solutions.\nWork with large datasets to train and validate AI/ML models.\nDevelop and maintain technical documentation for AI/ML projects.\nTroubleshoot and resolve issues related to AI/ML model performance.\nStay updated with industry trends and advancements in AI/ML.\n\n\nDisclaimer: This job posting & Location has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-genai-llm-engineer-datawind-remote-2-to-5-years-140826504811",
       "normalized_url": "https://www.naukri.com/job-listings-genai-llm-engineer-datawind-remote-2-to-5-years-140826504811",
-      "apply_url": "",
+      "apply_url": "https://datawind.in/pages/careers.html",
       "experience_required": "2-5 Yrs",
       "location": "Remote",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Remote",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 64,
     "limit": 15,
-    "total_records": 1171,
-    "total_pages": 79
+    "total_records": 1267,
+    "total_pages": 85
   }
 }

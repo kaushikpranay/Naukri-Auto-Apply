@@ -951,6 +951,39 @@
     "priority": "high"
   },
   {
+    "id": 36373,
+    "company_name": "SmartDocs Business Solutions",
+    "job_title": "Software Developer",
+    "location": "Hyderabad",
+    "experience_required": "0-2 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-developer-smartdocs-inc-hyderabad-0-to-2-years-130326502966",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong backend, cloud, and AI production experience; missing front-end and containerization skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React",
+      "Docker"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 36393,
+    "company_name": "Cyces Innovation Labs Llp",
+    "job_title": "Django Developer",
+    "location": "Chennai",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-django-developer-cyces-innovation-labs-llp-chennai-1-to-3-years-290526506282",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong backend experience with FastAPI, REST, PostgreSQL, and transferable skills to Django.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Django"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26346,
     "company_name": "Two95 International",
     "job_title": "GenAI / AI-ML Engineer",
@@ -1367,6 +1400,92 @@
     "priority": "high"
   },
   {
+    "id": 35319,
+    "company_name": "ZeMoSo Technologies",
+    "job_title": "Senior GenAI Engineer",
+    "location": "Hybrid - Bengaluru",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-genai-engineer-zemoso-technologies-bengaluru-4-to-6-years-180826023244",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS, and agentic AI experience, though limited years.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35899,
+    "company_name": "Tata Consultancy Services",
+    "job_title": "Walk-in || pri Tcs Walk In Drive_AI/Data Platform Engineer - Python, LLM, ML",
+    "location": "Chennai, Hyderabad",
+    "experience_required": "",
+    "job_url": "https://www.naukri.com/job-listings-pri-tcs-walk-in-drive-ai-data-platform-engineer-python-llm-ml-tata-consultancy-services-hyderabad-chennai-6-to-11-years-170826023225",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LangGraph experience; transferable Azure OpenAI skill; meets core AI/LLM requirements.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 36293,
+    "company_name": "Collegedunia",
+    "job_title": "FullStack Developer",
+    "location": "Gurugram",
+    "experience_required": "1-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-collegedunia-web-private-limited-gurugram-1-to-5-years-081024502539",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong backend, AWS, FastAPI, but lacks front-end skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vue"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 36345,
+    "company_name": "Avoma",
+    "job_title": "Lead Backend Engineer",
+    "location": "Pune",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-lead-backend-engineer-avoma-pune-2-to-5-years-290825503399",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM experience with transferable cloud and framework skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 36413,
+    "company_name": "Meyrahkee",
+    "job_title": "Full stack developers",
+    "location": "Mumbai",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developers-meyrahkee-mumbai-2-to-6-years-280526502097",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and backend experience, but lacks front-end frameworks.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "ReactJS",
+      "AngularJS",
+      "Push Notifications"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26445,
     "company_name": "Capgemini",
     "job_title": "Amazon Connect Developer",
@@ -1505,6 +1624,22 @@
       "JWT-OAuth-SSO",
       "Docker",
       "Kubernetes"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 36361,
+    "company_name": "ElevateCareer.AI Learning Solutions",
+    "job_title": "Backend Developer/Tester",
+    "location": "Hybrid - Hyderabad(Financial District)",
+    "experience_required": "0-2 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-backend-developer-tester-elevatecareer-ai-learning-solutions-hyderabad-0-to-2-years-180826027617",
+    "score": 65.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and AI experience, but lacks Django experience.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Django"
     ],
     "priority": "high"
   },
@@ -1726,6 +1861,46 @@
       "Django"
     ],
     "priority": "high"
+  },
+  {
+    "id": 36379,
+    "company_name": "Full Creative",
+    "job_title": "Full Stack Developer",
+    "location": "Chennai",
+    "experience_required": "2-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-full-creative-pvt-ltd-chennai-2-to-3-years-180826501994",
+    "score": 45.0,
+    "confidence": 70.0,
+    "reason": "Strong backend and AI experience but missing React/TypeScript and GCP skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React",
+      "TypeScript",
+      "GCP",
+      "Docker",
+      "CI/CD",
+      "pytest",
+      "AI-assisted tools"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 36455,
+    "company_name": "Impelsys",
+    "job_title": "Software Engineer",
+    "location": "Hybrid - Bengaluru",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-engineer-impelsys-bengaluru-4-to-6-years-180826010187",
+    "score": 45.0,
+    "confidence": 60.0,
+    "reason": "Strong backend and AI experience, but lacks front-end and required AWS certification.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "Node.js",
+      "AWS Certified Developer \u2013 Associate"
+    ],
+    "priority": "medium"
   },
   {
     "id": 26485,

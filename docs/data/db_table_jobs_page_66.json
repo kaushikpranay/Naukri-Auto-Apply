@@ -109,7 +109,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
@@ -133,7 +133,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
@@ -229,7 +229,7 @@
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "walk_in",
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Hyderabad",
@@ -253,7 +253,7 @@
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "walk_in",
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 66,
     "limit": 15,
-    "total_records": 1171,
-    "total_pages": 79
+    "total_records": 1267,
+    "total_pages": 85
   }
 }

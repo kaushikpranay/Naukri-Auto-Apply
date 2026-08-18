@@ -61,7 +61,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "FastAPI Developer",
       "search_location": "Bangalore",
@@ -229,7 +229,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "FastAPI Developer",
       "search_location": "Bangalore",
@@ -325,7 +325,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "FastAPI Developer",
       "search_location": "Bangalore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 73,
     "limit": 15,
-    "total_records": 1171,
-    "total_pages": 79
+    "total_records": 1267,
+    "total_pages": 85
   }
 }

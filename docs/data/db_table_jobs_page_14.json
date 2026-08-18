@@ -205,16 +205,16 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "pending",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
       "created_at": "2026-08-09T18:31:16.057572",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-08-18T18:27:47.766576"
     },
     {
       "id": 26734,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 1171,
-    "total_pages": 79
+    "total_records": 1267,
+    "total_pages": 85
   }
 }

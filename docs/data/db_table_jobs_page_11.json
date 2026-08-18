@@ -61,16 +61,16 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "pending",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
       "created_at": "2026-08-09T16:39:01.135191",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-08-18T18:58:31.511333"
     },
     {
       "id": 26489,
@@ -301,16 +301,16 @@
       "posted_date": "4 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 1,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
       "created_at": "2026-08-09T16:39:01.135191",
-      "failure_type": null,
+      "failure_type": "DOM_ELEMENT_NOT_FOUND",
       "failure_category": "DETERMINISTIC",
-      "failure_reason": null,
-      "last_fill_error": "max_retry_count exceeded",
-      "failed_at": null
+      "failure_reason": "Form fill error on: exp_deloying_in_cloud: No radio option matched '1' or verification failed",
+      "last_fill_error": "Form fill error on: exp_deloying_in_cloud: No radio option matched '1' or verification failed",
+      "failed_at": "2026-08-18T18:18:59.045425"
     },
     {
       "id": 26499,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 11,
     "limit": 15,
-    "total_records": 1171,
-    "total_pages": 79
+    "total_records": 1267,
+    "total_pages": 85
   }
 }

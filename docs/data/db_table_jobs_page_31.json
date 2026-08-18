@@ -349,7 +349,7 @@
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Pune",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 31,
     "limit": 15,
-    "total_records": 1171,
-    "total_pages": 79
+    "total_records": 1267,
+    "total_pages": 85
   }
 }

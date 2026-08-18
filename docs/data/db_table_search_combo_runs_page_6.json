@@ -12,41 +12,41 @@
       "id": 146,
       "keyword": "FastAPI Developer",
       "location": "Pune",
-      "last_run_at": "2026-08-17T17:31:19.531930",
+      "last_run_at": "2026-08-18T17:56:26.861013",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 147,
       "keyword": "FastAPI Developer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-17T17:32:27.779365",
+      "last_run_at": "2026-08-18T17:57:31.454136",
       "jobs_found": 20,
-      "jobs_inserted": 15
+      "jobs_inserted": 2
     },
     {
       "id": 148,
       "keyword": "FastAPI Developer",
       "location": "Chennai",
-      "last_run_at": "2026-08-17T17:33:10.657714",
-      "jobs_found": 12,
-      "jobs_inserted": 10
+      "last_run_at": "2026-08-18T17:58:05.333230",
+      "jobs_found": 10,
+      "jobs_inserted": 0
     },
     {
       "id": 149,
       "keyword": "FastAPI Developer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-17T17:33:36.431205",
+      "last_run_at": "2026-08-18T17:58:30.593125",
       "jobs_found": 7,
-      "jobs_inserted": 6
+      "jobs_inserted": 0
     },
     {
       "id": 150,
       "keyword": "FastAPI Developer",
       "location": "Indore",
-      "last_run_at": "2026-08-17T17:33:47.049241",
+      "last_run_at": "2026-08-18T17:58:40.717106",
       "jobs_found": 2,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     }
   ],
   "pagination": {

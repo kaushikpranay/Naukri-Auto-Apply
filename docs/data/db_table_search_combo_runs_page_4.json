@@ -12,7 +12,7 @@
       "id": 52,
       "keyword": "LLM Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-17T16:53:25.541661",
+      "last_run_at": "2026-08-18T17:19:40.916131",
       "jobs_found": 10,
       "jobs_inserted": 0
     },
@@ -20,15 +20,15 @@
       "id": 53,
       "keyword": "LLM Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-17T16:58:54.857738",
+      "last_run_at": "2026-08-18T17:25:12.593786",
       "jobs_found": 13,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 54,
       "keyword": "LLM Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-17T16:51:43.353468",
+      "last_run_at": "2026-08-18T17:17:57.143812",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -36,15 +36,15 @@
       "id": 55,
       "keyword": "LLM Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-17T16:55:50.623791",
+      "last_run_at": "2026-08-18T17:22:07.783885",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 56,
       "keyword": "LLM Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-17T16:50:36.408144",
+      "last_run_at": "2026-08-18T17:16:48.754101",
       "jobs_found": 13,
       "jobs_inserted": 0
     },
@@ -52,7 +52,7 @@
       "id": 57,
       "keyword": "Python Backend Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-17T17:22:20.963483",
+      "last_run_at": "2026-08-18T17:47:50.828316",
       "jobs_found": 20,
       "jobs_inserted": 1
     },
@@ -60,39 +60,39 @@
       "id": 58,
       "keyword": "Python Backend Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-17T17:20:04.492254",
+      "last_run_at": "2026-08-18T17:45:40.711686",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 59,
       "keyword": "Python Backend Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-17T17:21:12.331247",
+      "last_run_at": "2026-08-18T17:46:45.192468",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 60,
       "keyword": "Python Backend Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-17T17:18:55.478723",
+      "last_run_at": "2026-08-18T17:44:36.067675",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 61,
       "keyword": "Python Backend Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-17T17:23:29.334458",
+      "last_run_at": "2026-08-18T17:48:55.749258",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 18
     },
     {
       "id": 62,
       "keyword": "Python Backend Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-17T17:17:47.794224",
+      "last_run_at": "2026-08-18T17:43:30.542171",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -100,7 +100,7 @@
       "id": 63,
       "keyword": "RAG Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-17T17:02:16.325082",
+      "last_run_at": "2026-08-18T17:28:31.505386",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -108,23 +108,23 @@
       "id": 64,
       "keyword": "RAG Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-17T17:05:39.562280",
+      "last_run_at": "2026-08-18T17:31:57.806661",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 65,
       "keyword": "RAG Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-17T17:00:55.570504",
-      "jobs_found": 15,
+      "last_run_at": "2026-08-18T17:27:09.145870",
+      "jobs_found": 14,
       "jobs_inserted": 0
     },
     {
       "id": 66,
       "keyword": "RAG Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-17T17:04:32.578345",
+      "last_run_at": "2026-08-18T17:30:49.450418",
       "jobs_found": 20,
       "jobs_inserted": 2
     }
