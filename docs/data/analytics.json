@@ -27,20 +27,24 @@
     {
       "date": "2026-08-16",
       "count": 151
+    },
+    {
+      "date": "2026-08-17",
+      "count": 61
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 694
+      "count": 716
     },
     {
       "score_range": 10,
-      "count": 8
+      "count": 9
     },
     {
       "score_range": 20,
-      "count": 4
+      "count": 5
     },
     {
       "score_range": 30,
@@ -52,23 +56,23 @@
     },
     {
       "score_range": 50,
-      "count": 5
+      "count": 6
     },
     {
       "score_range": 60,
-      "count": 9
+      "count": 12
     },
     {
       "score_range": 70,
-      "count": 69
+      "count": 76
     },
     {
       "score_range": 80,
-      "count": 255
+      "count": 275
     },
     {
       "score_range": 90,
-      "count": 53
+      "count": 59
     }
   ],
   "ats_distribution": [
@@ -80,15 +84,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 42
+      "count": 45
     },
     {
       "status": "applied_successfully",
-      "count": 84
-    },
-    {
-      "status": "browser_error",
-      "count": 1
+      "count": 108
     },
     {
       "status": "easy_apply",
@@ -96,15 +96,27 @@
     },
     {
       "status": "evaluated",
-      "count": 803
+      "count": 862
     },
     {
       "status": "external_portal",
-      "count": 132
+      "count": 134
     },
     {
-      "status": "unknown",
-      "count": 44
+      "status": "failed",
+      "count": 13
+    },
+    {
+      "status": "pending",
+      "count": 2
+    },
+    {
+      "status": "waiting_for_user",
+      "count": 1
+    },
+    {
+      "status": "walk_in",
+      "count": 2
     }
   ],
   "top_companies": [
@@ -114,7 +126,11 @@
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 36
+      "count": 38
+    },
+    {
+      "name": "Accenture",
+      "count": 29
     },
     {
       "name": "Sparix Global",
@@ -122,10 +138,6 @@
     },
     {
       "name": "PwC",
-      "count": 21
-    },
-    {
-      "name": "Accenture",
       "count": 21
     },
     {
@@ -141,12 +153,12 @@
       "count": 13
     },
     {
-      "name": "Capgemini",
-      "count": 11
+      "name": "Qcentrio",
+      "count": 12
     },
     {
-      "name": "Impetus Technologies",
-      "count": 10
+      "name": "Capgemini",
+      "count": 11
     }
   ],
   "failure_reasons": [

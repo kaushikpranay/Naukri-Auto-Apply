@@ -205,7 +205,7 @@
       "posted_date": "Just now",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "walk_in",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
@@ -213,7 +213,7 @@
       "failure_type": null,
       "failure_category": null,
       "failure_reason": null,
-      "last_fill_error": null,
+      "last_fill_error": "max_retry_count exceeded",
       "failed_at": null
     },
     {
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 13,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

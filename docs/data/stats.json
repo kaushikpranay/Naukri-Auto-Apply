@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 1110,
-    "naukri_jobs": 1110,
+    "total_jobs": 1171,
+    "naukri_jobs": 1171,
     "external_jobs": 953,
-    "pending_review": 363,
-    "queued": 83,
+    "pending_review": 373,
+    "queued": 120,
     "applying": 0,
-    "applied": 126,
-    "failed": 1,
+    "applied": 153,
+    "failed": 13,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 12600.0,
-    "avg_ai_score": 29.6,
+    "success_rate": 1176.9,
+    "avg_ai_score": 30.6,
     "today_jobs": 0,
     "today_applications": 0
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Starlabs Technologies",
-      "job_title": "Backend Developer Intern (Python, FastAPI)",
-      "timestamp": "2026-08-16T16:07:56.796887",
-      "details": null
+      "company_name": "Farmers For Forests",
+      "job_title": "Software Developer",
+      "timestamp": "2026-08-17T17:53:38.280359",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Talent Corner HR Services",
+      "job_title": "Sr AI/LLM Engineer with Node.js",
+      "timestamp": "2026-08-17T17:53:22.070566",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Capgemini",
+      "job_title": "Amazon Connect Developer",
+      "timestamp": "2026-08-17T17:53:13.329707",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Epic Web Techno",
+      "job_title": "BackEnd Developer",
+      "timestamp": "2026-08-17T17:53:04.182512",
+      "details": "Type: already_applied, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Tata Consultancy Services",
+      "job_title": "Walk-in || Artificial Intelligence Engineer",
+      "timestamp": "2026-08-17T17:52:59.432199",
+      "details": "Type: walk_in, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "Large Language Model Architect",
-      "timestamp": "2026-08-16T16:07:52.429123",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "Large Language Model Architect",
-      "timestamp": "2026-08-16T16:07:52.406706",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "Large Language Model Architect",
-      "timestamp": "2026-08-16T16:07:52.384148",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "Large Language Model Architect",
-      "timestamp": "2026-08-16T16:07:52.353666",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "Large Language Model Architect",
-      "timestamp": "2026-08-16T16:07:52.328515",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "CMM Level 5 IT Company",
-      "job_title": "Python FastAPI Developer",
-      "timestamp": "2026-08-16T15:41:16.681040",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Virtusa",
-      "job_title": "Python and Fastapi developer",
-      "timestamp": "2026-08-16T15:41:16.681040",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Seventh Contact Hiring Solutions",
-      "job_title": "Full Stack Developer | Python (FastAPI) | React.js | Product based Co.",
-      "timestamp": "2026-08-16T15:41:16.681040",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
       "company_name": "Qcentrio",
       "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
-      "timestamp": "2026-08-16T15:41:16.681040",
-      "details": null
+      "timestamp": "2026-08-17T17:43:30.544763",
+      "details": "Score: 70.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Accenture",
+      "job_title": "Custom Software Engineer",
+      "timestamp": "2026-08-17T17:43:12.666821",
+      "details": "Score: 65.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Morningstar",
+      "job_title": "Software Engineer",
+      "timestamp": "2026-08-17T17:42:53.433258",
+      "details": "Score: 75.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Qcentrio",
+      "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+      "timestamp": "2026-08-17T17:42:33.790263",
+      "details": "Score: 75.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Accenture",
+      "job_title": "Large Language Model Architect",
+      "timestamp": "2026-08-17T17:42:26.869509",
+      "details": "Score: 0.0%, Action: skip"
     }
   ]
 }

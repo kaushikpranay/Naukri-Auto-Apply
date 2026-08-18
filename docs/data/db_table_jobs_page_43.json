@@ -229,13 +229,13 @@
       "posted_date": "4 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
-      "retry_count": 0,
+      "status": "applied_successfully",
+      "retry_count": 1,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Hyderabad",
       "created_at": "2026-08-11T18:24:55.387828",
-      "failure_type": null,
-      "failure_category": null,
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
       "failure_reason": null,
       "last_fill_error": null,
       "failed_at": null
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 43,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

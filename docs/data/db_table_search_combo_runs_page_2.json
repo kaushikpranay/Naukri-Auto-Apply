@@ -12,15 +12,15 @@
       "id": 16,
       "keyword": "AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-16T13:01:38.170376",
+      "last_run_at": "2026-08-17T16:39:42.487570",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 17,
       "keyword": "Agentic AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-16T15:21:23.421201",
+      "last_run_at": "2026-08-17T17:11:58.078138",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -28,31 +28,31 @@
       "id": 18,
       "keyword": "Agentic AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-16T15:24:51.498535",
+      "last_run_at": "2026-08-17T17:15:18.128068",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 0
     },
     {
       "id": 19,
       "keyword": "Agentic AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-16T15:19:14.690380",
+      "last_run_at": "2026-08-17T17:09:23.692713",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 2
     },
     {
       "id": 20,
       "keyword": "Agentic AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-16T15:23:43.244908",
+      "last_run_at": "2026-08-17T17:14:10.978437",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 21,
       "keyword": "Agentic AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-16T15:26:14.687444",
+      "last_run_at": "2026-08-17T17:16:39.278259",
       "jobs_found": 3,
       "jobs_inserted": 0
     },
@@ -60,23 +60,23 @@
       "id": 22,
       "keyword": "Agentic AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-16T15:20:13.364428",
+      "last_run_at": "2026-08-17T17:10:39.633192",
       "jobs_found": 16,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     },
     {
       "id": 23,
       "keyword": "Agentic AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-16T15:26:00.954691",
+      "last_run_at": "2026-08-17T17:16:25.633961",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 24,
       "keyword": "Agentic AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-16T15:18:05.248479",
+      "last_run_at": "2026-08-17T17:08:12.753303",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -84,7 +84,7 @@
       "id": 25,
       "keyword": "Agentic AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-16T15:22:34.281532",
+      "last_run_at": "2026-08-17T17:13:03.691479",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -92,7 +92,7 @@
       "id": 26,
       "keyword": "Agentic AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-16T15:16:56.061014",
+      "last_run_at": "2026-08-17T17:07:06.858817",
       "jobs_found": 18,
       "jobs_inserted": 0
     },
@@ -100,15 +100,15 @@
       "id": 28,
       "keyword": "GenAI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-16T12:46:44.474264",
+      "last_run_at": "2026-08-17T15:05:31.955734",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     },
     {
       "id": 30,
       "keyword": "GenAI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-16T12:45:28.066297",
+      "last_run_at": "2026-08-17T15:04:17.625329",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -116,7 +116,7 @@
       "id": 31,
       "keyword": "GenAI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-16T12:48:15.480200",
+      "last_run_at": "2026-08-17T15:06:56.637770",
       "jobs_found": 3,
       "jobs_inserted": 0
     },
@@ -124,7 +124,7 @@
       "id": 33,
       "keyword": "GenAI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-16T12:48:01.609879",
+      "last_run_at": "2026-08-17T15:06:42.152054",
       "jobs_found": 20,
       "jobs_inserted": 0
     }

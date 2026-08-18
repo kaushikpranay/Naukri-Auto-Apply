@@ -205,13 +205,13 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Gurgaon",
       "created_at": "2026-08-09T18:30:10.288523",
-      "failure_type": null,
-      "failure_category": null,
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
       "failure_reason": null,
       "last_fill_error": null,
       "failed_at": null
@@ -277,13 +277,13 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Gurgaon",
       "created_at": "2026-08-09T18:30:10.288523",
-      "failure_type": null,
-      "failure_category": null,
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
       "failure_reason": null,
       "last_fill_error": null,
       "failed_at": null
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 12,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

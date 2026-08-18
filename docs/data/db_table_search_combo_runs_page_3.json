@@ -12,15 +12,15 @@
       "id": 37,
       "keyword": "Generative AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-16T12:54:45.906879",
+      "last_run_at": "2026-08-17T16:33:41.575361",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 2
     },
     {
       "id": 38,
       "keyword": "Generative AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-16T12:59:00.042738",
+      "last_run_at": "2026-08-17T16:37:13.151188",
       "jobs_found": 20,
       "jobs_inserted": 1
     },
@@ -28,7 +28,7 @@
       "id": 39,
       "keyword": "Generative AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-16T12:51:55.294957",
+      "last_run_at": "2026-08-17T15:09:53.361549",
       "jobs_found": 20,
       "jobs_inserted": 0
     },
@@ -36,39 +36,39 @@
       "id": 40,
       "keyword": "Generative AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-16T12:57:43.342319",
+      "last_run_at": "2026-08-17T16:36:06.276986",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 41,
       "keyword": "Generative AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-16T13:00:27.668192",
+      "last_run_at": "2026-08-17T16:38:34.531388",
       "jobs_found": 3,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 42,
       "keyword": "Generative AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-16T12:53:25.802940",
-      "jobs_found": 20,
-      "jobs_inserted": 1
+      "last_run_at": "2026-08-17T16:32:29.022462",
+      "jobs_found": 19,
+      "jobs_inserted": 0
     },
     {
       "id": 43,
       "keyword": "Generative AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-16T13:00:13.189399",
+      "last_run_at": "2026-08-17T16:38:20.803408",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 44,
       "keyword": "Generative AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-16T12:50:31.980528",
+      "last_run_at": "2026-08-17T15:08:42.837910",
       "jobs_found": 20,
       "jobs_inserted": 1
     },
@@ -76,55 +76,55 @@
       "id": 45,
       "keyword": "Generative AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-16T12:56:06.955155",
+      "last_run_at": "2026-08-17T16:34:55.118484",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     },
     {
       "id": 46,
       "keyword": "Generative AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-16T12:49:01.412307",
-      "jobs_found": 10,
-      "jobs_inserted": 1
+      "last_run_at": "2026-08-17T15:07:30.394101",
+      "jobs_found": 9,
+      "jobs_inserted": 0
     },
     {
       "id": 47,
       "keyword": "LLM Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-16T13:17:11.424401",
+      "last_run_at": "2026-08-17T16:54:40.902685",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 48,
       "keyword": "LLM Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-16T13:20:41.076426",
+      "last_run_at": "2026-08-17T16:58:07.450860",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 49,
       "keyword": "LLM Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-16T13:15:25.537239",
+      "last_run_at": "2026-08-17T16:52:50.098354",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 50,
       "keyword": "LLM Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-16T13:19:31.601396",
+      "last_run_at": "2026-08-17T16:56:57.127970",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 2
     },
     {
       "id": 51,
       "keyword": "LLM Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-16T13:21:50.647159",
+      "last_run_at": "2026-08-17T16:59:08.355091",
       "jobs_found": 3,
       "jobs_inserted": 0
     }

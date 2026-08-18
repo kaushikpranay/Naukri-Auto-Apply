@@ -55,13 +55,13 @@
       "job_description": "Responsibilities\nBuild AI agents using LLM APIs per established design patterns\nWrite, test, and iterate on prompts within the prompt governance framework\nIntegrate agents with backend APIs and tool-calling interfaces\nSupport RAG pipeline development: ingestion, embedding, and retrieval\nWrite agent evaluation test cases and contribute to the evaluation harness\nParticipate in code reviews and prompt review processes\nRequired Skills\n1 3 years in AI/ML or software engineering with LLM exposure\nPython proficiency\nUnderstanding of RAG concepts: chunking, embeddings, vector search\nHands-on experience with LLM APIs (OpenAI, Anthropic, or equivalent)\nPrompt engineering fundamentals: system prompts, few-shot, structured outputs\nGit-based workflows\nNice to have\nExposure to LangChain, LlamaIndex, or similar agentic frameworks\nExperience with agent evaluation metrics (RAGAS or equivalent)\nBackground in ITSM or IT operations domains\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-junior-movate-bengaluru-1-to-3-years-140826501311",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-junior-movate-bengaluru-1-to-3-years-140826501311",
-      "apply_url": "",
+      "apply_url": "https://www.movate.com/jobs/ai-engineer-junior/",
       "experience_required": "1-3 Yrs",
       "location": "Bengaluru",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 66,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

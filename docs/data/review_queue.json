@@ -866,6 +866,91 @@
     "priority": "high"
   },
   {
+    "id": 35212,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Hyderabad",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-hyderabad-4-to-8-years-210726908728",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience; transferable cloud skills; lacks frontend and Azure specifics.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "Azure App Services",
+      "Docker"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35231,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Chennai",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-chennai-4-to-8-years-210726908772",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience; transferable cloud skills; lacks frontend and Azure specifics.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "Azure App Services",
+      "Docker"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35243,
+    "company_name": "Accenture",
+    "job_title": "Custom Software Engineer",
+    "location": "Mumbai",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-mumbai-3-to-8-years-050826926294",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35241,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Mumbai",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-mumbai-4-to-8-years-210726908620",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience with transferable AWS skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35242,
+    "company_name": "Morningstar",
+    "job_title": "Software Engineer",
+    "location": "Navi Mumbai",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-engineer-morningstar-navi-mumbai-2-to-5-years-050826021499",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong FastAPI, RAG, AWS, PostgreSQL, but lacks Java experience.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Java Spring Boot",
+      "Kafka"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26346,
     "company_name": "Two95 International",
     "job_title": "GenAI / AI-ML Engineer",
@@ -1248,6 +1333,40 @@
     "priority": "high"
   },
   {
+    "id": 35211,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django / Flask / FastAPI",
+    "location": "Hyderabad",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-hyderabad-4-to-8-years-210726908815",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and FastAPI experience, but lacks React and Azure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "Azure"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35246,
+    "company_name": "Qcentrio",
+    "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+    "location": "Indore",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-python-full-stack-developer-django-flask-fastapi-qcentrio-private-limited-indore-4-to-8-years-210726908987",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong FastAPI backend and RAG production experience, but lacks React and Azure expertise.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "React.js",
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26445,
     "company_name": "Capgemini",
     "job_title": "Amazon Connect Developer",
@@ -1354,6 +1473,42 @@
     "priority": "high"
   },
   {
+    "id": 35221,
+    "company_name": "Amgen Inc",
+    "job_title": "Specialist IS Architect",
+    "location": "Hyderabad",
+    "experience_required": "3-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-specialist-is-architect-amgen-inc-hyderabad-3-to-4-years-040826920862",
+    "score": 65.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 35244,
+    "company_name": "Accenture",
+    "job_title": "Custom Software Engineer",
+    "location": "Mumbai",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-mumbai-4-to-9-years-070826936945",
+    "score": 65.0,
+    "confidence": 70.0,
+    "reason": "Strong RAG and FastAPI production experience, but missing front\u2011end and auth skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "React.js",
+      "Angular",
+      "JWT-OAuth-SSO",
+      "Docker",
+      "Kubernetes"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26900,
     "company_name": "The Veca",
     "job_title": "Agentic AI Engineer",
@@ -1424,6 +1579,26 @@
       "React.js",
       "Django",
       "Azure"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 34832,
+    "company_name": "Espire Infolabs",
+    "job_title": "Agentic AI/Copilot Engineer",
+    "location": "Remote",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-agentic-ai-copilot-engineer-espire-infolabs-gurugram-4-to-9-years-040826028039",
+    "score": 60.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG and LangGraph experience, but lacks direct Azure Copilot Studio and Power Automate exposure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure AI Foundry",
+      "Copilot Studio",
+      "Power Automate",
+      "Power Apps",
+      "AI Builder"
     ],
     "priority": "medium"
   },

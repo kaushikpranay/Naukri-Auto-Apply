@@ -175,19 +175,19 @@
       "job_description": "Job Summary\nJob Title: GenAI context engineer\nPosition: Senior Software Engineer\nExperience: 8+ yrs\nMain location: Hyderabad\nEmployment Type: Full Time\nRequired Qualifications\n8+ years of experience in knowledge engineering, enterprise search, data engineering, AI engineering, or platform engineering roles.\nExperience building enterprise AI search or knowledge platforms in banking, financial services, healthcare, or other regulated industries.\nFamiliarity with knowledge graphs, ontology modeling, AI observability, and enterprise governance frameworks.\nUnderstanding of responsible AI, groundedness evaluation, and enterprise compliance requirements for GenAI systems.\nHands on experience with Retrieval Augmented Generation (RAG), semantic search, embeddings, vector databases, and enterprise knowledge systems.\nStrong programming skills in Python and experience with API based integrations.\nExperience with GenAI and retrieval technologies such as:\nAzure OpenAI / OpenAI\nAzure AI Search\nLangChain / Semantic Kernel\nElasticsearch / OpenSearch\nVector databases and embedding frameworks\nExperience designing ingestion pipelines, metadata frameworks, chunking strategies, and contextual retrieval systems.\nStrong understanding of enterprise data governance, access control, lineage, and permission aware retrieval. Experience integrating enterprise content systems including SharePoint, Confluence, Jira, document repositories, and enterprise APIs.\nFamiliarity with cloud platforms such as Azure, AWS, or GCP and containerized environments.\nStrong analytical, troubleshooting, and problem solving skills.\nExcellent communication and collaboration skills with the ability to work across engineering, architecture, governance, and business teams.\nSkills\nPython\nSQLite\nGenerative AI",
       "job_url": "https://www.naukri.com/job-listings-genai-context-engineer-cgi-information-systems-and-management-consultants-hyderabad-2-to-7-years-310726916012",
       "normalized_url": "https://www.naukri.com/job-listings-genai-context-engineer-cgi-information-systems-and-management-consultants-hyderabad-2-to-7-years-310726916012",
-      "apply_url": "https://www.naukri.com/job-listings-genai-context-engineer-cgi-information-systems-and-management-consultants-hyderabad-2-to-7-years-310726916012",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[310726916012]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22310726916012%22%3A200%7D&jobTitle=GENAI%20context%20engineer",
       "experience_required": "2-7 Yrs",
       "location": "Hyderabad",
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Hyderabad",
       "created_at": "2026-08-09T16:34:20.448118",
-      "failure_type": null,
-      "failure_category": null,
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
       "failure_reason": null,
       "last_fill_error": null,
       "failed_at": null
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 7,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

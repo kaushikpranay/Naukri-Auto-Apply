@@ -1,0 +1,101 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "question_text",
+    "answer",
+    "usage_count",
+    "last_used",
+    "field_type",
+    "created_at",
+    "last_used_at",
+    "confidence_score",
+    "updated_at"
+  ],
+  "rows": [
+    {
+      "id": 13616,
+      "question_key": "hsc",
+      "question_text": "What is your HSC % ?",
+      "answer": "69.8",
+      "usage_count": 2,
+      "last_used": "2026-08-17T17:47:02.961167",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-17T17:46:11.494255",
+      "last_used_at": "2026-08-17T17:47:02.961167",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13618,
+      "question_key": "ug_cgpa",
+      "question_text": "What is your UG CGPA ?",
+      "answer": "8.62",
+      "usage_count": 2,
+      "last_used": "2026-08-17T17:47:25.111441",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-17T17:47:13.664107",
+      "last_used_at": "2026-08-17T17:47:25.111441",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13626,
+      "question_key": "exp_panda",
+      "question_text": "How many years of experience do you have in Panda/NumPy?",
+      "answer": "1",
+      "usage_count": 1,
+      "last_used": "2026-08-17T17:51:03.822823",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-17T17:51:03.822823",
+      "last_used_at": "2026-08-17T17:51:03.822823",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13627,
+      "question_key": "scale_1_10_would_rate_proficiency_python_programming_and_cod",
+      "question_text": "On a scale of 1 to 10, how would you rate your proficiency in Python programming and coding?",
+      "answer": "7",
+      "usage_count": 2,
+      "last_used": "2026-08-17T17:51:50.849735",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-17T17:51:12.277383",
+      "last_used_at": "2026-08-17T17:51:50.849735",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13630,
+      "question_key": "which_backend_framework_worked",
+      "question_text": "Which backend framework have you worked on?",
+      "answer": "LangGraph, LlamaIndex",
+      "usage_count": 2,
+      "last_used": "2026-08-17T17:54:41.102764",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-17T17:54:04.455620",
+      "last_used_at": "2026-08-17T17:54:41.102764",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13632,
+      "question_key": "designed_database_schemas",
+      "question_text": "Have you designed database schemas?",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-17T17:54:53.204734",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-17T17:54:53.204734",
+      "last_used_at": "2026-08-17T17:54:53.204734",
+      "confidence_score": 1.0,
+      "updated_at": null
+    }
+  ],
+  "pagination": {
+    "page": 19,
+    "limit": 15,
+    "total_records": 276,
+    "total_pages": 19
+  }
+}

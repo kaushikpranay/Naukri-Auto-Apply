@@ -49,12 +49,22 @@
       "version": "2026_06_20_resume_fields",
       "description": "Add recommended_resume, resume_confidence, resume_reason to external_jobs",
       "applied_at": "2026-06-20T05:56:08"
+    },
+    {
+      "version": "2026_08_17_add_failed_and_excluded_jobs",
+      "description": "Add failure_reason, failed_at, last_fill_error columns to jobs and create excluded_jobs table",
+      "applied_at": "2026-08-17T15:01:21.916539"
+    },
+    {
+      "version": "2026_08_17_add_failure_type_and_category",
+      "description": "Add failure_type and failure_category columns to jobs and backfill existing failures",
+      "applied_at": "2026-08-17T15:01:21.935733"
     }
   ],
   "pagination": {
     "page": 1,
     "limit": 15,
-    "total_records": 9,
+    "total_records": 11,
     "total_pages": 1
   }
 }

@@ -55,19 +55,19 @@
       "job_description": "- Preference for at least one of the following fields of study: Artificial Intelligence and Robotics, Business Analytics, Computer and Information Science, Computer Engineering, Computer Programming, Data Processing/Analytics/Science, Engineering, Information Technology, Machine Learning, Management Information Systems, Mathematics, Statistics, Systems Engineering\n- Leveraging programming languages such as Python, R, and MATLAB\n- Applying natural language processing and neural network methodologies\n- Utilize cloud platforms such as Azure, AWS, or GCP for model training, deployment, and scaling.\n\n- Exposure\u00a0Generative AI or advanced AI frameworks (Langchain, Crew AI etc.)",
       "job_url": "https://www.naukri.com/job-listings-data-scientist-pricewater-house-coopers-service-delivery-center-bangalore-kolkata-pune-bengaluru-4-to-8-years-170726014868",
       "normalized_url": "https://www.naukri.com/job-listings-data-scientist-pricewater-house-coopers-service-delivery-center-bangalore-kolkata-pune-bengaluru-4-to-8-years-170726014868",
-      "apply_url": "https://www.naukri.com/job-listings-data-scientist-pricewater-house-coopers-service-delivery-center-bangalore-kolkata-pune-bengaluru-4-to-8-years-170726014868",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[170726014868]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22170726014868%22%3A200%7D&jobTitle=Data%20Scientist",
       "experience_required": "4-8 Yrs",
       "location": "Hybrid - Bengaluru, Pune, Kolkata",
       "posted_date": "3 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
       "created_at": "2026-08-09T18:31:16.057572",
-      "failure_type": null,
-      "failure_category": null,
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
       "failure_reason": null,
       "last_fill_error": null,
       "failed_at": null
@@ -205,7 +205,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "pending",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Kolkata",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

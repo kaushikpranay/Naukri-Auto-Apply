@@ -19,12 +19,152 @@
       "required": 0,
       "answer": "45 days",
       "detected_at": "2026-08-13T17:40:42.168524"
+    },
+    {
+      "id": 609,
+      "job_id": 27754,
+      "question_key": "total_years_experience",
+      "question_text": "Total Years of experience ?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-17T04:47:05.677044"
+    },
+    {
+      "id": 610,
+      "job_id": 27972,
+      "question_key": "salutation",
+      "question_text": "Salutation",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Mr.",
+      "detected_at": "2026-08-17T04:48:22.522309"
+    },
+    {
+      "id": 612,
+      "job_id": 27973,
+      "question_key": "llm_experience",
+      "question_text": "How many years of experience do you have in LLM?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-17T04:56:28.047237"
+    },
+    {
+      "id": 619,
+      "job_id": 26878,
+      "question_key": "4dot_motivates_be_associated_startup_long_term",
+      "question_text": "4. WHAT MOTIVATES YOU TO BE ASSOCIATED WITH STARTUP FOR A LONG TERM?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-17T05:37:10.221108"
+    },
+    {
+      "id": 621,
+      "job_id": 26700,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you willing to relocate?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-17T15:20:51.802315"
+    },
+    {
+      "id": 622,
+      "job_id": 26703,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you willing to relocate?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-17T15:21:28.367452"
+    },
+    {
+      "id": 623,
+      "job_id": 28254,
+      "question_key": "rag_experience",
+      "question_text": "How many years of experience do you have in Rag and Agentic AI?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-08-17T15:24:46.899026"
+    },
+    {
+      "id": 628,
+      "job_id": 26900,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in Azure Cloud?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-17T15:44:21.055274"
+    },
+    {
+      "id": 629,
+      "job_id": 28272,
+      "question_key": "exp_ansible",
+      "question_text": "How many years of experience do you have in Ansible?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-17T17:48:05.629374"
+    },
+    {
+      "id": 630,
+      "job_id": 28272,
+      "question_key": "exp_shell_scripting",
+      "question_text": "How many years of experience do you have in Shell scripting?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-17T17:44:44.411424"
+    },
+    {
+      "id": 631,
+      "job_id": 28272,
+      "question_key": "exp_devops_ci",
+      "question_text": "How many years of experience do you have in DevOps CI/CD?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1",
+      "detected_at": "2026-08-17T17:45:06.795514"
+    },
+    {
+      "id": 632,
+      "job_id": 28272,
+      "question_key": "sslc",
+      "question_text": "What is your SSLC %",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "N/A",
+      "detected_at": "2026-08-17T17:46:01.860441"
+    },
+    {
+      "id": 634,
+      "job_id": 28272,
+      "question_key": "hsc",
+      "question_text": "What is your HSC % ?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "69.8",
+      "detected_at": "2026-08-17T17:47:02.961167"
+    },
+    {
+      "id": 636,
+      "job_id": 28272,
+      "question_key": "ug_cgpa",
+      "question_text": "What is your UG CGPA ?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "8.62",
+      "detected_at": "2026-08-17T17:47:25.111441"
     }
   ],
   "pagination": {
     "page": 4,
     "limit": 15,
-    "total_records": 46,
-    "total_pages": 4
+    "total_records": 68,
+    "total_pages": 5
   }
 }

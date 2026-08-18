@@ -1,0 +1,40 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "run_id",
+    "model_name",
+    "prompt_version",
+    "interview_probability",
+    "recommended_resume",
+    "priority",
+    "action",
+    "confidence",
+    "reason",
+    "missing_skills",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 5752,
+      "job_id": 35246,
+      "run_id": "da3f7233",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 70.0,
+      "recommended_resume": "PYTHON",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 75.0,
+      "reason": "Strong FastAPI backend and RAG production experience, but lacks React and Azure expertise.",
+      "missing_skills": "[\"React.js\", \"Azure OpenAI\"]",
+      "created_at": "2026-08-17T17:43:30.544763"
+    }
+  ],
+  "pagination": {
+    "page": 79,
+    "limit": 15,
+    "total_records": 1171,
+    "total_pages": 79
+  }
+}

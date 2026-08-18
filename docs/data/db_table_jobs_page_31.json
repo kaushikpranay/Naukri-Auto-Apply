@@ -229,16 +229,16 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
       "created_at": "2026-08-09T22:02:37.429878",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-08-17T15:16:55.822351"
     },
     {
       "id": 27585,
@@ -349,15 +349,15 @@
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "evaluated",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Pune",
       "created_at": "2026-08-10T01:55:45.428084",
       "failure_type": null,
-      "failure_category": null,
+      "failure_category": "DETERMINISTIC",
       "failure_reason": null,
-      "last_fill_error": null,
+      "last_fill_error": "max_retry_count exceeded",
       "failed_at": null
     },
     {
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 31,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }

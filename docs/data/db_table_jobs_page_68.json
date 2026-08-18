@@ -37,7 +37,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Noida",
@@ -295,13 +295,13 @@
       "job_description": "We are seeking a skilled Software Developer to join our technology team and contribute to building scalable digital solutions that support climate resilience and environmental impact initiatives\n\nThe ideal candidate has a strong foundation in backend and frontend development using either Python, PHP, or React\n\nRoles and Responsibilities Develop, maintain, and enhance web applications using Python, PHP, or React\n\nCollaborate with cross-functional teams to understand requirements and translate them into efficient technical solutions\n\nBuild and integrate APIs for internal systems and third-party tools\n\nOptimize application performance and ensure security, scalability, and maintainability\n\nAssist in designing databases and managing data flow across different systems\n\nWrite clean, modular, and well-documented code following best practices\n\nSupport deployment processes and assist in testing, debugging, and continuous improvement\n\nRequirements Minimum 2 years of professional experience in software development\n\nBachelordegree in Computer Science, Engineering, or related field\n\nProficiency in at least one of the following: Python, PHP, Node\n\njs, React\n\nExperience with databases such as MySQL or PostgreSQL\n\nFamiliarity with REST APIs, Git, and cloud deployment (AWS or similar)\n\nStrong problem-solving and analytical skills\n\nBenefits Salary Range: 8 to 10 LPA\"",
       "job_url": "https://www.naukri.com/job-listings-software-developer-farmers-for-forests-pune-2-to-7-years-241225502743",
       "normalized_url": "https://www.naukri.com/job-listings-software-developer-farmers-for-forests-pune-2-to-7-years-241225502743",
-      "apply_url": "",
+      "apply_url": "https://farmersforforests.zohorecruit.in/jobs/Careers/199415000000366076",
       "experience_required": "2-7 Yrs",
       "location": "Pune",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 68,
     "limit": 15,
-    "total_records": 1110,
-    "total_pages": 74
+    "total_records": 1171,
+    "total_pages": 79
   }
 }
