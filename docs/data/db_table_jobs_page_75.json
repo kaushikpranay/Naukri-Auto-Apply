@@ -367,13 +367,13 @@
       "job_description": "Overview:-;We are seeking a talented Lead/Senior Engineer AI/LLM Developer to join our team and drive the development of cutting-edge artificial intelligence solutions using large language models. In this role, you will design, build, and optimize LLM-based applications that solve complex business problems while maintaining high standards of performance, scalability, and reliability.\n\n\nKey Responsibilities:-\nDesign and implement sophisticated AI applications leveraging state-of-the-art LLM technologies\nDevelop efficient solutions for LLM integration, fine-tuning, and deployment\nOptimize model performance, latency, and resource utilization\nBuild and maintain robust data pipelines for training and inference\nImplement advanced prompt engineering techniques and retrieval-augmented generation (RAG)\nDevelop evaluation frameworks to measure AI system performance and output quality\nCollaborate with cross-functional teams to understand requirements and deliver solutions\nMentor junior developers and share AI/LLM knowledge across the organization\nParticipate in code reviews and ensure adherence to best practices\n\n\nRole Requirement :-\n5+ years of software development experience with at least 3 years focused on AI/ML technologies\nStrong experience working with transformer-based models and LLM APIs Proficiency in Python and relevant AI/ML frameworks (PyTorch, TensorFlow, Hugging Face)\nExperience with vector databases and semantic search technologies Solid understanding of prompt engineering, RAG, and fine-tuning techniques\nFamiliarity with cloud platforms (AWS, Azure, GCP) for AI model deployment Strong problem-solving skills and attention to detail.'\nExperience with LLM optimization techniques like quantization and distillation\nKnowledge of AI evaluation metrics and benchmarking methodologies Understanding of multimodal AI systems (text, image, audio)\nExperience with containerization and orchestration tools (Docker, Kubernetes)\nContributions to open-source AI projects or research publications Familiarity with AI ethics and responsible AI development\n\n\nQualifications:-\nBachelors degree in computer science, AI, Machine Learning, or related field\nMaster's in AI, B,Tech,MCA, or related field",
       "job_url": "https://www.naukri.com/job-listings-senior-data-science-engineer-gen-ai-llm-techstar-software-development-india-pvt-ltd-hyderabad-3-to-6-years-310726928016",
       "normalized_url": "https://www.naukri.com/job-listings-senior-data-science-engineer-gen-ai-llm-techstar-software-development-india-pvt-ltd-hyderabad-3-to-6-years-310726928016",
-      "apply_url": "https://www.naukri.com/job-listings-senior-data-science-engineer-gen-ai-llm-techstar-software-development-india-pvt-ltd-hyderabad-3-to-6-years-310726928016",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[310726928016]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22310726928016%22%3A200%7D&jobTitle=Senior%20Data%20Science%20Engineer%20%28Gen%20AI%2FLLM%29",
       "experience_required": "3-6 Yrs",
       "location": "Hyderabad",
       "posted_date": "4 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 1,
       "search_keyword": "LLM Engineer",
       "search_location": "Hyderabad",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 75,
     "limit": 15,
-    "total_records": 1267,
-    "total_pages": 85
+    "total_records": 1407,
+    "total_pages": 94
   }
 }

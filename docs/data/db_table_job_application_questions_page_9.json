@@ -1,0 +1,30 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 746,
+      "job_id": 37383,
+      "question_key": "available_take_interview_virtual",
+      "question_text": "Are you available to take an interview(virtual)?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-20T19:16:59.188880"
+    }
+  ],
+  "pagination": {
+    "page": 9,
+    "limit": 15,
+    "total_records": 121,
+    "total_pages": 9
+  }
+}

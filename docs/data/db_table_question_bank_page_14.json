@@ -70,11 +70,11 @@
       "question_key": "willing_to_relocate_bengaluru",
       "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
       "answer": null,
-      "usage_count": 1,
-      "last_used": "2026-07-08T21:22:57.601719",
+      "usage_count": 3,
+      "last_used": "2026-08-19T20:21:57.042064",
       "field_type": "radio",
       "created_at": "2026-07-08T21:22:57.601719",
-      "last_used_at": "2026-07-08T21:22:57.601719",
+      "last_used_at": "2026-08-19T20:21:57.042064",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -123,7 +123,7 @@
       "question_text": "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?",
       "answer": "Yes",
       "usage_count": 1,
-      "last_used": "2026-08-18T16:43:16.881791",
+      "last_used": "2026-08-20T17:20:43.040099",
       "field_type": "radio",
       "created_at": "2026-07-10T23:50:57.344002",
       "last_used_at": "2026-07-10T23:50:57.344002",
@@ -148,11 +148,11 @@
       "question_key": "ex_employee_infosys_if_no_mention_na_if_yes_mention_ex_infy",
       "question_text": "Are you ex-employee of Infosys, if no mention NA, if yes please mention ex infy ID.",
       "answer": "NA",
-      "usage_count": 4,
-      "last_used": "2026-08-18T18:27:30.559649",
+      "usage_count": 5,
+      "last_used": "2026-08-20T19:13:01.422949",
       "field_type": "contenteditable",
       "created_at": "2026-07-10T23:54:43.592039",
-      "last_used_at": "2026-08-18T18:27:30.559649",
+      "last_used_at": "2026-08-20T19:13:01.422949",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 292,
-    "total_pages": 20
+    "total_records": 310,
+    "total_pages": 21
   }
 }

@@ -70,11 +70,11 @@
       "question_key": "available_take_interview_virtual",
       "question_text": "Are you available to take an interview(virtual)?",
       "answer": "Yes",
-      "usage_count": 6,
-      "last_used": "2026-08-10T03:27:48.452136",
+      "usage_count": 7,
+      "last_used": "2026-08-20T19:16:59.188880",
       "field_type": "radio",
       "created_at": "2026-06-25T23:02:39.204698",
-      "last_used_at": "2026-08-10T03:27:48.452136",
+      "last_used_at": "2026-08-20T19:16:59.188880",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 13,
     "limit": 15,
-    "total_records": 292,
-    "total_pages": 20
+    "total_records": 310,
+    "total_pages": 21
   }
 }

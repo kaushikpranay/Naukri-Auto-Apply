@@ -35,28 +35,32 @@
     {
       "date": "2026-08-18",
       "count": 96
+    },
+    {
+      "date": "2026-08-20",
+      "count": 140
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 767
+      "count": 832
     },
     {
       "score_range": 10,
-      "count": 9
+      "count": 13
     },
     {
       "score_range": 20,
-      "count": 7
+      "count": 11
     },
     {
       "score_range": 30,
-      "count": 7
+      "count": 8
     },
     {
       "score_range": 40,
-      "count": 8
+      "count": 10
     },
     {
       "score_range": 50,
@@ -64,19 +68,19 @@
     },
     {
       "score_range": 60,
-      "count": 13
+      "count": 15
     },
     {
       "score_range": 70,
-      "count": 83
+      "count": 97
     },
     {
       "score_range": 80,
-      "count": 304
+      "count": 346
     },
     {
       "score_range": 90,
-      "count": 62
+      "count": 68
     }
   ],
   "ats_distribution": [
@@ -88,45 +92,45 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 64
+      "count": 70
     },
     {
       "status": "applied_successfully",
-      "count": 126
+      "count": 179
     },
     {
       "status": "easy_apply",
-      "count": 10
+      "count": 11
     },
     {
       "status": "evaluated",
-      "count": 855
+      "count": 885
     },
     {
       "status": "external_portal",
-      "count": 176
+      "count": 216
     },
     {
       "status": "failed",
-      "count": 23
+      "count": 35
+    },
+    {
+      "status": "needs_human_review",
+      "count": 1
     },
     {
       "status": "pending",
       "count": 1
     },
     {
-      "status": "unknown",
-      "count": 4
-    },
-    {
       "status": "walk_in",
-      "count": 8
+      "count": 9
     }
   ],
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 43
+      "count": 45
     },
     {
       "name": "Tata Consultancy Services",
@@ -134,11 +138,11 @@
     },
     {
       "name": "Accenture",
-      "count": 34
+      "count": 39
     },
     {
       "name": "Leading Client",
-      "count": 31
+      "count": 37
     },
     {
       "name": "Sparix Global",
@@ -146,23 +150,23 @@
     },
     {
       "name": "PwC",
-      "count": 22
+      "count": 24
     },
     {
       "name": "Epam Systems",
-      "count": 18
+      "count": 20
+    },
+    {
+      "name": "Qcentrio",
+      "count": 15
+    },
+    {
+      "name": "Shashwath Solution",
+      "count": 13
     },
     {
       "name": "Grid Dynamics",
       "count": 13
-    },
-    {
-      "name": "Qcentrio",
-      "count": 12
-    },
-    {
-      "name": "HCLTech",
-      "count": 12
     }
   ],
   "failure_reasons": [

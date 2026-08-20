@@ -103,12 +103,116 @@
       "last_used_at": "2026-08-18T18:44:09.829480",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 13813,
+      "question_key": "exp_html",
+      "question_text": "How many years of experience do you have in HTML?",
+      "answer": "2",
+      "usage_count": 1,
+      "last_used": "2026-08-19T19:55:59.953012",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-19T19:55:59.953012",
+      "last_used_at": "2026-08-19T19:55:59.953012",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13814,
+      "question_key": "proceed_next_steps_fill_out_form_below_mandatory_https_forms",
+      "question_text": "To proceed with the next steps, please fill out the form below (Mandatory):https://forms.gle/BSzQBcsLZ1AvVanXA",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-08-19T19:56:13.509676",
+      "field_type": "radio",
+      "created_at": "2026-08-19T19:56:13.509676",
+      "last_used_at": "2026-08-19T19:56:13.509676",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13815,
+      "question_key": "number_llm_rag_projects_made_worked_that_production",
+      "question_text": "Number of LLM/RAG projects made/worked on that are in production?",
+      "answer": "1-2",
+      "usage_count": 3,
+      "last_used": "2026-08-19T19:59:37.787959",
+      "field_type": "radio",
+      "created_at": "2026-08-19T19:59:24.231674",
+      "last_used_at": "2026-08-19T19:59:37.787959",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13818,
+      "question_key": "percentage_sdotsdotc_10th_standard_dot_verification_will_be",
+      "question_text": "Please specify your percentage in S.S.C (10th Standard). Verification will be required later.",
+      "answer": "More than 90%",
+      "usage_count": 3,
+      "last_used": "2026-08-19T20:04:17.977155",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:00:50.944355",
+      "last_used_at": "2026-08-19T20:04:17.977155",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13820,
+      "question_key": "percentage_hdotsdotc_12th_standard_diplomadot_verification_w",
+      "question_text": "Please specify your percentage in H.S.C (12th Standard)/Diploma. Verification will be required later.",
+      "answer": "Less than 80%",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:01:17.649011",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:01:12.875835",
+      "last_used_at": "2026-08-19T20:01:17.649011",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13822,
+      "question_key": "would_rate_expertise_django_rest_framework",
+      "question_text": "How would you rate your expertise in Django REST framework?",
+      "answer": "7",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:01:35.702502",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:01:26.500271",
+      "last_used_at": "2026-08-19T20:01:35.702502",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13824,
+      "question_key": "would_rate_understanding_django_s_orm_and_query_optimization",
+      "question_text": "How would you rate your understanding of Django's ORM and query optimization?",
+      "answer": "6",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:02:09.704986",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:01:53.975736",
+      "last_used_at": "2026-08-19T20:02:09.704986",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13826,
+      "question_key": "exp_asynchronous_task_processing",
+      "question_text": "How would you rate your experience with asynchronous task processing using Celery and Celery Beat?",
+      "answer": "1.5",
+      "usage_count": 1,
+      "last_used": "2026-08-19T20:02:28.738011",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:02:28.738011",
+      "last_used_at": "2026-08-19T20:02:28.738011",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 20,
     "limit": 15,
-    "total_records": 292,
-    "total_pages": 20
+    "total_records": 310,
+    "total_pages": 21
   }
 }

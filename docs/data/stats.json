@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 1267,
-    "naukri_jobs": 1267,
+    "total_jobs": 1407,
+    "naukri_jobs": 1407,
     "external_jobs": 953,
-    "pending_review": 383,
-    "queued": 57,
+    "pending_review": 402,
+    "queued": 11,
     "applying": 0,
-    "applied": 190,
-    "failed": 23,
+    "applied": 249,
+    "failed": 36,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 826.1,
-    "avg_ai_score": 31.0,
-    "today_jobs": 96,
-    "today_applications": 105
+    "success_rate": 691.7,
+    "avg_ai_score": 31.8,
+    "today_jobs": 140,
+    "today_applications": 53
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "TEKsystems",
-      "job_title": "Hiring Python Fullstack Developer in Chennai",
-      "timestamp": "2026-08-18T19:00:08.545800",
+      "company_name": "Value Research",
+      "job_title": "Quant Developer",
+      "timestamp": "2026-08-20T19:35:06.457646",
       "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Caterpillar Inc",
-      "job_title": "Software Engineer",
-      "timestamp": "2026-08-18T18:59:55.402679",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Velocitai Digital",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-18T18:59:42.190483",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Techstar Group",
-      "job_title": "Senior Data Science Engineer (Gen AI/LLM)",
-      "timestamp": "2026-08-18T18:59:29.417997",
+      "company_name": "Tekskills",
+      "job_title": "Gen AI Engineer",
+      "timestamp": "2026-08-20T19:34:48.875669",
       "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Hiring for - IT Consulting MNC",
-      "job_title": "Artificial Intelligence Engineer | IT Consulting MNC | Bangalore",
-      "timestamp": "2026-08-18T18:59:12.244433",
+      "company_name": "Einfochips",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-08-20T19:34:31.405336",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Ini8 Labs",
+      "job_title": "Backend Engineer",
+      "timestamp": "2026-08-20T19:34:14.138854",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Thinkhub Technologies And Consulting",
+      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
+      "timestamp": "2026-08-20T19:33:56.227015",
       "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
+      "company_name": "Accenture",
+      "job_title": "Custom Software Engineer",
+      "timestamp": "2026-08-20T18:57:18.062953",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Tekskills",
       "job_title": "Generative AI Engineer",
-      "timestamp": "2026-08-18T18:10:39.433837",
+      "timestamp": "2026-08-20T18:57:18.056868",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Service based MNC in B2B IT Services Sector",
+      "job_title": "Snaplogic consultant",
+      "timestamp": "2026-08-20T18:57:05.083566",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Generative AI Engineer",
-      "timestamp": "2026-08-18T18:10:39.416559",
+      "company_name": "Accenture",
+      "job_title": "Custom Software Engineer",
+      "timestamp": "2026-08-20T18:57:05.080169",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-18T18:10:39.399896",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Generative AI Engineer",
-      "timestamp": "2026-08-18T18:10:39.396449",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-18T18:10:39.378658",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Qcentrio",
+      "job_title": "Python Full Stack Developer - Django/Flask/FastAPI",
+      "timestamp": "2026-08-20T18:57:05.073947",
+      "details": "Score: 75.0%, Action: apply"
     }
   ]
 }

@@ -1,0 +1,153 @@
+{
+  "columns": [
+    "id",
+    "question_key",
+    "question_text",
+    "answer",
+    "usage_count",
+    "last_used",
+    "field_type",
+    "created_at",
+    "last_used_at",
+    "confidence_score",
+    "updated_at"
+  ],
+  "rows": [
+    {
+      "id": 13827,
+      "question_key": "worked_agentic_workflows_context_engineering_or_other_ai_bas",
+      "question_text": "Have you worked on agentic workflows, context-engineering or other AI-based applications? Briefly describe",
+      "answer": "Yes, I worked on RAG System and Automation System by using LLM.",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:03:15.390306",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-19T20:02:36.764920",
+      "last_used_at": "2026-08-19T20:03:15.390306",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13829,
+      "question_key": "would_rate_english_communication_skills",
+      "question_text": "How would you rate your English Communication skills?",
+      "answer": "7",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:03:39.980419",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:03:28.352138",
+      "last_used_at": "2026-08-19T20:03:39.980419",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13837,
+      "question_key": "exp_snowflake",
+      "question_text": "How many years of experience do you have in Snowflake?",
+      "answer": "1",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:14:58.803384",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-19T20:13:59.205518",
+      "last_used_at": "2026-08-19T20:14:58.803384",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13838,
+      "question_key": "exp_data_build_tool",
+      "question_text": "How many years of experience do you have in Data Build Tool?",
+      "answer": "1",
+      "usage_count": 1,
+      "last_used": "2026-08-19T20:14:19.240110",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-19T20:14:19.240110",
+      "last_used_at": "2026-08-19T20:14:19.240110",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13840,
+      "question_key": "ok_6_days_working",
+      "question_text": "Are you ok with 6 days of working?",
+      "answer": "Yes",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:16:54.337461",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:16:33.323675",
+      "last_used_at": "2026-08-19T20:16:54.337461",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13846,
+      "question_key": "ready_5_days_work_from_office",
+      "question_text": "Are you ready for 5 days work from office?",
+      "answer": "Yes",
+      "usage_count": 3,
+      "last_used": "2026-08-19T20:22:57.911566",
+      "field_type": "radio",
+      "created_at": "2026-08-19T20:22:13.577678",
+      "last_used_at": "2026-08-19T20:22:57.911566",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13849,
+      "question_key": "web_framework_experience__how_many_years_of_experience_do_you_have",
+      "question_text": "How many years of experience do you have in Django Framework?",
+      "answer": "1",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:24:25.565564",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-19T20:24:19.246113",
+      "last_used_at": "2026-08-19T20:24:25.565564",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13852,
+      "question_key": "exp_copilot",
+      "question_text": "How many years of experience do you have in Copilot?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-08-19T20:26:26.094126",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-19T20:25:46.983276",
+      "last_used_at": "2026-08-19T20:26:26.094126",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13923,
+      "question_key": "exp_artificial_intelligence",
+      "question_text": "How many years of experience do you have in Artificial Intelligence ?",
+      "answer": "2",
+      "usage_count": 1,
+      "last_used": "2026-08-20T19:05:50.841179",
+      "field_type": "radio",
+      "created_at": "2026-08-20T19:05:50.841179",
+      "last_used_at": "2026-08-20T19:05:50.841179",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 13925,
+      "question_key": "exp_openai",
+      "question_text": "How many years of experience do you have in Openai?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-08-20T19:08:10.082372",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-20T19:07:58.734315",
+      "last_used_at": "2026-08-20T19:08:10.082372",
+      "confidence_score": 1.0,
+      "updated_at": null
+    }
+  ],
+  "pagination": {
+    "page": 21,
+    "limit": 15,
+    "total_records": 310,
+    "total_pages": 21
+  }
+}

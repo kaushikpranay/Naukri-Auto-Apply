@@ -149,12 +149,22 @@
       "required": 0,
       "answer": "1.5",
       "detected_at": "2026-08-18T18:44:09.829480"
+    },
+    {
+      "id": 697,
+      "job_id": 33985,
+      "question_key": "exp_html",
+      "question_text": "How many years of experience do you have in HTML?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-19T19:55:59.953012"
     }
   ],
   "pagination": {
     "page": 6,
     "limit": 15,
-    "total_records": 89,
-    "total_pages": 6
+    "total_records": 121,
+    "total_pages": 9
   }
 }

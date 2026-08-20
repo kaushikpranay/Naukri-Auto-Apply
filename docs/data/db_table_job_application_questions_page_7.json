@@ -1,0 +1,170 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 698,
+      "job_id": 33985,
+      "question_key": "proceed_next_steps_fill_out_form_below_mandatory_https_forms",
+      "question_text": "To proceed with the next steps, please fill out the form below (Mandatory):https://forms.gle/BSzQBcsLZ1AvVanXA",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T19:56:13.509676"
+    },
+    {
+      "id": 699,
+      "job_id": 35816,
+      "question_key": "number_llm_rag_projects_made_worked_that_production",
+      "question_text": "Number of LLM/RAG projects made/worked on that are in production?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T19:59:37.787959"
+    },
+    {
+      "id": 702,
+      "job_id": 36337,
+      "question_key": "percentage_sdotsdotc_10th_standard_dot_verification_will_be",
+      "question_text": "Please specify your percentage in S.S.C (10th Standard). Verification will be required later.",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T20:04:17.977155"
+    },
+    {
+      "id": 704,
+      "job_id": 36337,
+      "question_key": "percentage_hdotsdotc_12th_standard_diplomadot_verification_w",
+      "question_text": "Please specify your percentage in H.S.C (12th Standard)/Diploma. Verification will be required later.",
+      "field_type": "radio",
+      "required": 1,
+      "answer": "Less than 80%",
+      "detected_at": "2026-08-19T20:01:17.649011"
+    },
+    {
+      "id": 706,
+      "job_id": 36337,
+      "question_key": "would_rate_expertise_django_rest_framework",
+      "question_text": "How would you rate your expertise in Django REST framework?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "7",
+      "detected_at": "2026-08-19T20:01:35.702502"
+    },
+    {
+      "id": 708,
+      "job_id": 36337,
+      "question_key": "would_rate_understanding_django_s_orm_and_query_optimization",
+      "question_text": "How would you rate your understanding of Django's ORM and query optimization?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "6",
+      "detected_at": "2026-08-19T20:02:09.704986"
+    },
+    {
+      "id": 710,
+      "job_id": 36337,
+      "question_key": "exp_asynchronous_task_processing",
+      "question_text": "How would you rate your experience with asynchronous task processing using Celery and Celery Beat?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-08-19T20:02:28.738011"
+    },
+    {
+      "id": 711,
+      "job_id": 36337,
+      "question_key": "worked_agentic_workflows_context_engineering_or_other_ai_bas",
+      "question_text": "Have you worked on agentic workflows, context-engineering or other AI-based applications? Briefly describe",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes, I worked on RAG System and Automation System by using LLM.",
+      "detected_at": "2026-08-19T20:03:15.390306"
+    },
+    {
+      "id": 713,
+      "job_id": 36337,
+      "question_key": "would_rate_english_communication_skills",
+      "question_text": "How would you rate your English Communication skills?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "7",
+      "detected_at": "2026-08-19T20:03:39.980419"
+    },
+    {
+      "id": 716,
+      "job_id": 26434,
+      "question_key": "if_serving_tice_period_mention_official_last_working_daydot",
+      "question_text": "If serving tice period, please mention official last working day. (If t then mention NA)",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-19T20:05:11.788672"
+    },
+    {
+      "id": 718,
+      "job_id": 26434,
+      "question_key": "notice_period",
+      "question_text": "If serving notice period, please mention official last working day. (If not then mention NA)",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "45 days",
+      "detected_at": "2026-08-19T20:05:49.541224"
+    },
+    {
+      "id": 719,
+      "job_id": 33908,
+      "question_key": "willing_to_relocate_bengaluru",
+      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T20:06:59.273866"
+    },
+    {
+      "id": 720,
+      "job_id": 35242,
+      "question_key": "education_qualification",
+      "question_text": "What is your current education status? (Please select the most appropriate option)",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "B.Tech in Computer Science",
+      "detected_at": "2026-08-19T20:12:44.990558"
+    },
+    {
+      "id": 721,
+      "job_id": 33082,
+      "question_key": "exp_snowflake",
+      "question_text": "How many years of experience do you have in Snowflake?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T20:14:58.803384"
+    },
+    {
+      "id": 722,
+      "job_id": 33082,
+      "question_key": "exp_data_build_tool",
+      "question_text": "How many years of experience do you have in Data Build Tool?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1",
+      "detected_at": "2026-08-19T20:14:19.240110"
+    }
+  ],
+  "pagination": {
+    "page": 7,
+    "limit": 15,
+    "total_records": 121,
+    "total_pages": 9
+  }
+}

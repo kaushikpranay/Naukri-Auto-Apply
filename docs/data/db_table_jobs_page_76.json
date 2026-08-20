@@ -175,13 +175,13 @@
       "job_description": "Job Description:\n\nClient is setting up an Agents Factory (based on copilot studio) and will need an expert\non both Copilot Studio & Azure AI Foundry scope (part of Azure AI).\nThe objective is to build complex retrieval/action/autonomous agents and globally\nsystem of agents.\nAn expert who can manage the technology and possesses strong soft skills (clear\ncommunication, problem-solving explanations, and bot descriptions).\nCo-Pilot agents' categories, agentic systems, or describe the use cases for both Low\nCode agents and Pro Dev Azure AI.\n\n\n\nMain requirements from:\n\nExperience with Data: Experience in data analysis, machine learning, and AI\ntechnologies (Ex: developing AI models and integrating them with Power Apps).\nKnowledge of Power Automate.\nIdeally with knowledge about AI Driven Power Apps. experienced in AI and Power\nAutomate\nAnalytical Skills: Strong problem-solving skills and the ability to analyze complex\nbusiness requirements\nSkill with Power automates\nAI builder Skill\nSupport stakeholders on power automate query.\nBuild power automate complex ow based on premium licence.\nThis role is not part of RPA of power automate but required to work with the team\nMore Focus on O365 capability cloud ows.\nKnowledge on AI module.\nHow many bots on copilot studio you have developed\nWhich source you use to design copilot.\nAI builder with power automate experience.",
       "job_url": "https://www.naukri.com/job-listings-agentic-ai-copilot-engineer-espire-infolabs-gurugram-4-to-9-years-040826028039",
       "normalized_url": "https://www.naukri.com/job-listings-agentic-ai-copilot-engineer-espire-infolabs-gurugram-4-to-9-years-040826028039",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-agentic-ai-copilot-engineer-espire-infolabs-gurugram-4-to-9-years-040826028039",
       "experience_required": "4-9 Yrs",
       "location": "Remote",
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Gurgaon",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 76,
     "limit": 15,
-    "total_records": 1267,
-    "total_pages": 85
+    "total_records": 1407,
+    "total_pages": 94
   }
 }

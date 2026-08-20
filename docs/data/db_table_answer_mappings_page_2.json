@@ -63,12 +63,28 @@
       "selected_option": "Bengaluru, Karnataka, Mumbai (All Areas)",
       "tenant": "",
       "created_at": "2026-08-12T15:15:22.778412"
+    },
+    {
+      "id": 23,
+      "question_key": "education_qualification__options__completed bachelors degree|completed masters/postgraduate degree|pursuing bachelors degree|pursuing masters/postgraduate degree",
+      "raw_answer": "B.Tech in Computer Science",
+      "selected_option": "Completed Bachelors Degree",
+      "tenant": "",
+      "created_at": "2026-08-19T20:12:37.533089"
+    },
+    {
+      "id": 24,
+      "question_key": "aws_experience__options__3-5 years|5-7 years|7-8 years|<3 years|>8 years",
+      "raw_answer": "2",
+      "selected_option": "<3 years",
+      "tenant": "",
+      "created_at": "2026-08-20T19:08:55.380466"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 22,
+    "total_records": 24,
     "total_pages": 2
   }
 }

@@ -804,19 +804,89 @@
       "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
+    },
+    {
+      "id": 35237,
+      "job_title": "Software Engineer",
+      "company_name": "Ford",
+      "job_description": "As a Software Engineer Data AI Platforms, you will work closely with business stakeholders, product teams, data engineers and software engineers to create scalable and reliable solutions. You will participate in the complete software development lifecycle, from understanding business requirements and designing technical solutions to implementing, testing, deploying and supporting production applications.\nYou will build and maintain modern data pipelines that ingest, transform and curate large volumes of enterprise data from multiple sources. These data assets will support dashboards, analytics products, reporting solutions and AI applications. The role also requires developing backend APIs and cloud-native services that enable seamless integration between data platforms and business applications.\nIn addition, you will contribute to machine learning, Generative AI and intelligent automation initiatives by leveraging modern AI tools and cloud services. This includes identifying opportunities to streamline processes, improve user experiences and accelerate delivery through AI-powered solutions.\nDesign, develop and maintain scalable software applications, backend services and APIs to support enterprise analytics, business processes and digital transformation initiatives.\nBuild and optimize cloud-native data platforms and data pipelines that enable reliable ingestion, transformation and delivery of enterprise data for reporting, analytics and operational applications.\nDevelop and manage ETL/ELT frameworks, data models and analytical datasets to ensure high-quality, trusted and business-ready data assets.\nLeverage cloud technologies, primarily Google Cloud Platform (GCP), to build secure, scalable and cost-effective data, software and AI solutions.\nApply advanced analytics, machine learning and Generative AI capabilities to solve business challenges, improve decision-making and drive intelligent automation.\nCollaborate with business stakeholders and product teams to translate business requirements into scalable technical solutions and production-ready features.\nOwn end-to-end solution delivery including requirements analysis, solution design, development, testing, deployment, monitoring and production support.\nImplement engineering best practices including code reviews, version control, automated testing, CI/CD and technical documentation to ensure solution quality and maintainability.\nLead technical initiatives and mentor team members by providing technical guidance, sharing best practices and fostering engineering excellence.\nDrive innovation through AI, automation and emerging technologies, continuously identifying opportunities to enhance productivity, user experience and business value.\nMonitor, troubleshoot and optimize applications, data pipelines and cloud platforms to ensure reliability, performance, security and operational excellence.\nWork effectively in Agile cross-functional teams to deliver high-impact data, software and AI products that support enterprise objectives and customer needs.\nMasters degree in Computer Science, Data Science, Software Engineering, Artificial Intelligence, Information Technology or a related discipline.\nExperience designing and delivering enterprise-scale data, analytics and cloud-native software solutions.\nStrong hands-on experience with Google Cloud Platform (GCP) services including BigQuery, Cloud Run, Cloud SQL, Dataflow, Dataproc, Pub/Sub and Vertex AI.\nExperience developing scalable backend services and APIs using Python, FastAPI or similar frameworks.\nExperience building modern data platforms using ETL/ELT frameworks, DBT, Apache Airflow and data modelling best practices.\nExperience with enterprise data platforms and databases such as PostgreSQL, Snowflake, Databricks, Oracle, SQL Server and BigQuery.\nKnowledge of Machine Learning, Advanced Analytics, Generative AI, Large Language Models (LLMs) and AI-assisted development tools.\nExperience implementing intelligent automation, AI-powered workflows and cloud-based analytics solutions.\nExperience with software engineering best practices including Git/GitHub, CI/CD, automated testing, code reviews and DevOps methodologies.\nProven ability to lead technical work streams, mentor engineers and drive Agile delivery across cross-functional teams\nExperience collaborating with business stakeholders and translating business requirements into scalable technical solutions.\nDomain knowledge in Automotive, Manufacturing, Supply Chain Logistics.",
+      "job_url": "https://www.naukri.com/job-listings-software-engineer-ford-motor-private-limited-chennai-1-to-6-years-140826914691",
+      "normalized_url": "https://www.naukri.com/job-listings-software-engineer-ford-motor-private-limited-chennai-1-to-6-years-140826914691",
+      "apply_url": "",
+      "experience_required": "1-6 Yrs",
+      "location": "Chennai",
+      "posted_date": "3 days ago",
+      "recruiter_name": "",
+      "recruiter_email": "",
+      "status": "failed",
+      "retry_count": 3,
+      "search_keyword": "FastAPI Developer",
+      "search_location": "Chennai",
+      "created_at": "2026-08-17T17:33:10.654096",
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-08-19T20:07:24.301269",
+      "ai_score": 80.0,
+      "ai_action": "apply",
+      "ai_priority": "high",
+      "ai_confidence": 80.0,
+      "ai_reason": "Strong production RAG experience and transferable cloud skills.",
+      "app_type": "unknown",
+      "app_status": "discovered",
+      "app_date": "2026-08-19T20:07:24.290277",
+      "ats_status": null,
+      "ats_platform": "Naukri",
+      "application_type": "INTERNAL"
+    },
+    {
+      "id": 33451,
+      "job_title": "AI+Data Engineer",
+      "company_name": "Ascendion Engineering",
+      "job_description": "About Ascendion\nAscendion is a leader in AI-Native platform driven software engineering company that underwrites outcomes, helping businesses innovate faster, smarter, and with greater impact. We partner with Global 2000 clients across North America, UK, Europe, and APAC to solve complex challenges in data, experience design, software product engineering, and workforce transformation. Powered by expert engineers, thousands of AI agents, and our Engineering to the Power of AI\u2122 (EngineeringAI) method, we deliver measurable outcomes that build trust, unlock value, and accelerate growth. Learn more at ascendion.com\n\n\nAscendion | Engineering to elevate life\nWe have a culture built on opportunity, inclusion, and a spirit of partnership. Come, change the world with us:\n- Build the coolest tech for world's leading brands\n- Solve complex problems \u2013 and learn new skills\n- Experience the power of transforming digital engineering for Fortune 500 clients\n- Master your craft with leading training programs and hands-on experience\n\n\nExperience a community of change makers! Join a culture of high-performing innovators with endless ideas and a passion for tech. Our culture is the fabric of our company, and it is what makes us unique and diverse. The way we share ideas, learning, experiences, successes, and joy allows everyone to be their best at Ascendion.\n\n\nAbout the Role\nWe are looking for a AI Data Engineer to join our team. In this role, you will design, develop, and maintain scalable ETL/ELT pipelines for structured and unstructured data.\n\n\nJob Title: AI Data Engineer\n\n\nKey Responsibilities:\n\n\n- Hands-on experience with Apache Spark or PySpark.\n- Experience with cloud platforms (Azure, AWS, or GCP).\n- Knowledge of data storage technologies such as Data Lake, Data Warehouse, and Delta Lake.\n- Familiarity with orchestration tools like Apache Airflow or Azure Data Factory.\n- Understanding of machine learning workflows and MLOps concepts.\n- Experience using Git, CI/CD pipelines, and Agile methodologies.\n- Strong analytical and problem-solving skills.\n- Preferred Skills Experience with Databricks.\n- Knowledge of Generative AI, LLMs, LangChain, Azure OpenAI, or similar AI frameworks.\n- Familiarity with vector databases (e.g., Pinecone, FAISS, ChromaDB).\n- Experience with Docker and Kubernetes.\n- Knowledge of streaming technologies such as Kafka or Azure Event Hubs.\n- Exposure to data governance and security best practices.\n\n\nMinimum Qualifications:\n- Design, develop, and maintain scalable ETL/ELT pipelines for structured and unstructured data.\n- Build and optimize data pipelines for AI/ML and Generative AI applications.\n- Prepare, clean, and transform datasets for machine learning model training and inference.\n- Integrate AI/ML models into production environments and applications.\n- Develop and maintain data lakes, data warehouses, and feature stores.\n- Work with cloud platforms (Azure, AWS, or GCP) to deploy and manage data solutions.\n- Implement data quality, governance, security, and monitoring practices.\n- Optimize SQL queries and big data processing jobs for performance and scalability.\n- Collaborate with Data Scientists, ML Engineers, and Software Engineers to deliver AI-powered products.\n- Create technical documentation and support CI/CD for data and AI pipelines.\n- Required Skills Strong proficiency in Python and SQL.\n- Experience with ETL/ELT tools and data pipeline development.\n\n\nLocation: Pune\n\n\nWant to change the world? Let us know. Tell us about your experiences, education, and ambitions. Bring your knowledge, unique viewpoint, and creativity to the table. Let's talk!",
+      "job_url": "https://www.naukri.com/job-listings-ai-data-engineer-ascendion-engineering-pune-3-to-5-years-150826001567",
+      "normalized_url": "https://www.naukri.com/job-listings-ai-data-engineer-ascendion-engineering-pune-3-to-5-years-150826001567",
+      "apply_url": "",
+      "experience_required": "3-5 Yrs",
+      "location": "Pune",
+      "posted_date": "1 day ago",
+      "recruiter_name": "",
+      "recruiter_email": "",
+      "status": "failed",
+      "retry_count": 3,
+      "search_keyword": "LLM Engineer",
+      "search_location": "Pune",
+      "created_at": "2026-08-16T13:18:21.875505",
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-08-19T20:23:38.477062",
+      "ai_score": 70.0,
+      "ai_action": "apply",
+      "ai_priority": "high",
+      "ai_confidence": 75.0,
+      "ai_reason": "Strong production RAG and LLM experience, transferable AWS skills, but lacks Spark, Azure OpenAI, and orchestration tools.",
+      "app_type": "unknown",
+      "app_status": "discovered",
+      "app_date": "2026-08-19T20:23:38.468946",
+      "ats_status": null,
+      "ats_platform": "Naukri",
+      "application_type": "INTERNAL"
     }
   ],
   "pagination": {
     "page": 1,
     "limit": 25,
-    "total_records": 23,
-    "total_pages": 1
+    "total_records": 35,
+    "total_pages": 2
   },
   "summary": {
     "by_type": [
       {
         "type": "OTHER",
-        "count": 22,
+        "count": 34,
         "category": "DETERMINISTIC"
       },
       {
@@ -825,6 +895,6 @@
         "category": "DETERMINISTIC"
       }
     ],
-    "total_failed": 23
+    "total_failed": 35
   }
 }

@@ -37,7 +37,7 @@
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 8,
     "limit": 15,
-    "total_records": 1267,
-    "total_pages": 85
+    "total_records": 1407,
+    "total_pages": 94
   }
 }

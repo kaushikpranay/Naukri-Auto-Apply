@@ -1,0 +1,170 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 724,
+      "job_id": 33855,
+      "question_key": "ok_6_days_working",
+      "question_text": "Are you ok with 6 days of working?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-19T20:16:54.337461"
+    },
+    {
+      "id": 726,
+      "job_id": 33855,
+      "question_key": "willing_to_relocate_gurugram",
+      "question_text": "Are you currently residing in Gurugram or willing to relocate to Gurugram?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-19T20:17:05.877569"
+    },
+    {
+      "id": 727,
+      "job_id": 33984,
+      "question_key": "total_years_experience",
+      "question_text": "Total years of experience",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-19T20:18:11.274545"
+    },
+    {
+      "id": 729,
+      "job_id": 34035,
+      "question_key": "willing_to_relocate_bengaluru",
+      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T20:21:57.042064"
+    },
+    {
+      "id": 730,
+      "job_id": 34046,
+      "question_key": "ready_5_days_work_from_office",
+      "question_text": "Are you ready for 5 days work from office?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T20:22:57.911566"
+    },
+    {
+      "id": 733,
+      "job_id": 36361,
+      "question_key": "web_framework_experience__how_many_years_of_experience_do_you_have",
+      "question_text": "How many years of experience do you have in Django Framework?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1",
+      "detected_at": "2026-08-19T20:24:25.565564"
+    },
+    {
+      "id": 735,
+      "job_id": 36361,
+      "question_key": "web_framework_experience",
+      "question_text": "How many years of experience do you have in Django?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1",
+      "detected_at": "2026-08-19T20:25:06.030513"
+    },
+    {
+      "id": 736,
+      "job_id": 34832,
+      "question_key": "exp_copilot",
+      "question_text": "How many years of experience do you have in Copilot?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-19T20:26:26.094126"
+    },
+    {
+      "id": 738,
+      "job_id": 36905,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you willing to relocate?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-20T19:00:10.901241"
+    },
+    {
+      "id": 739,
+      "job_id": 36641,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in GCP / Azure ?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-20T19:04:11.170074"
+    },
+    {
+      "id": 740,
+      "job_id": 36670,
+      "question_key": "exp_artificial_intelligence",
+      "question_text": "How many years of experience do you have in Artificial Intelligence ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-20T19:05:50.841179"
+    },
+    {
+      "id": 741,
+      "job_id": 36670,
+      "question_key": "willing_to_relocate_mumbai",
+      "question_text": "Are you currently living in or ready to relocate to Mumbai (All Areas) ?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-20T19:06:34.726213"
+    },
+    {
+      "id": 742,
+      "job_id": 37752,
+      "question_key": "exp_openai",
+      "question_text": "How many years of experience do you have in Openai?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-20T19:08:10.082372"
+    },
+    {
+      "id": 744,
+      "job_id": 36696,
+      "question_key": "aws_experience",
+      "question_text": "How many years of experience do you have in Azure and AWS?",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-20T19:09:33.108958"
+    },
+    {
+      "id": 745,
+      "job_id": 36808,
+      "question_key": "ex_employee_infosys_if_no_mention_na_if_yes_mention_ex_infy",
+      "question_text": "Are you ex-employee of Infosys, if no mention NA, if yes please mention ex infy ID.",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "NA",
+      "detected_at": "2026-08-20T19:13:01.422949"
+    }
+  ],
+  "pagination": {
+    "page": 8,
+    "limit": 15,
+    "total_records": 121,
+    "total_pages": 9
+  }
+}

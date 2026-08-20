@@ -12,39 +12,39 @@
       "id": 1,
       "keyword": "GenAI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-18T16:43:41.086825",
-      "jobs_found": 6,
+      "last_run_at": "2026-08-20T17:21:04.036484",
+      "jobs_found": 5,
       "jobs_inserted": 1
     },
     {
       "id": 2,
       "keyword": "GenAI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-18T16:44:51.802189",
+      "last_run_at": "2026-08-20T17:22:08.485839",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 4
     },
     {
       "id": 3,
       "keyword": "GenAI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-18T16:46:01.239502",
+      "last_run_at": "2026-08-20T17:23:12.664482",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 4,
       "keyword": "GenAI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-18T16:46:31.670959",
-      "jobs_found": 8,
-      "jobs_inserted": 0
+      "last_run_at": "2026-08-20T17:23:46.432221",
+      "jobs_found": 10,
+      "jobs_inserted": 2
     },
     {
       "id": 5,
       "keyword": "GenAI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-18T16:47:43.568032",
+      "last_run_at": "2026-08-20T17:24:50.697772",
       "jobs_found": 20,
       "jobs_inserted": 2
     },
@@ -52,7 +52,7 @@
       "id": 6,
       "keyword": "GenAI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-18T16:48:55.005383",
+      "last_run_at": "2026-08-20T17:25:57.094268",
       "jobs_found": 20,
       "jobs_inserted": 2
     },
@@ -60,55 +60,55 @@
       "id": 7,
       "keyword": "AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-18T17:09:46.606047",
+      "last_run_at": "2026-08-20T17:45:04.011196",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 1
     },
     {
       "id": 8,
       "keyword": "AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-18T17:13:26.842990",
+      "last_run_at": "2026-08-20T17:48:28.444053",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 2
     },
     {
       "id": 9,
       "keyword": "AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-18T17:07:18.976958",
+      "last_run_at": "2026-08-20T17:42:50.753270",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 2
     },
     {
       "id": 10,
       "keyword": "AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-18T17:12:14.156504",
+      "last_run_at": "2026-08-20T17:47:19.409696",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 11,
       "keyword": "AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-18T17:15:55.707935",
+      "last_run_at": "2026-08-20T17:50:42.904597",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 2
     },
     {
       "id": 12,
       "keyword": "AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-18T17:08:33.694863",
+      "last_run_at": "2026-08-20T17:43:58.161536",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 13,
       "keyword": "AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-18T17:14:42.598267",
+      "last_run_at": "2026-08-20T17:49:35.359572",
       "jobs_found": 20,
       "jobs_inserted": 1
     },
@@ -116,15 +116,15 @@
       "id": 14,
       "keyword": "AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-18T17:06:07.105448",
+      "last_run_at": "2026-08-20T17:41:43.295045",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 7
     },
     {
       "id": 15,
       "keyword": "AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-18T17:10:59.897816",
+      "last_run_at": "2026-08-20T17:46:11.120944",
       "jobs_found": 20,
       "jobs_inserted": 1
     }
