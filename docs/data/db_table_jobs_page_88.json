@@ -151,13 +151,13 @@
       "job_description": "Roles and Responsibilities :\n\nDesign, develop, test, and deploy AI models using deep learning techniques such as generative adversarial networks (GANs) and transformers.\nCollaborate with cross-functional teams to integrate computer vision solutions into existing systems.\nDevelop high-quality code in Python using popular libraries like PyTorch or TensorFlow.\nTroubleshoot complex issues related to image processing, machine learning algorithms, and data preprocessing.\n\nJob Requirements :\n\n4-6 years of experience in Artificial Intelligence Engineering with expertise in computer vision and machine learning.\nStrong proficiency in programming languages such as Python and familiarity with popular frameworks like PyTorch or TensorFlow.\nExperience working on projects involving image processing, machine learning, or deep learning is essential.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-naukri-assist-navi-mumbai-4-to-6-years-200826017279",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-naukri-assist-navi-mumbai-4-to-6-years-200826017279",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-ai-engineer-naukri-assist-navi-mumbai-4-to-6-years-200826017279",
       "experience_required": "4-6 Yrs",
       "location": "Navi Mumbai",
       "posted_date": "Few hours ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Mumbai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 88,
     "limit": 15,
-    "total_records": 1407,
-    "total_pages": 94
+    "total_records": 1489,
+    "total_pages": 100
   }
 }

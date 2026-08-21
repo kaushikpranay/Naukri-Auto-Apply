@@ -1,0 +1,85 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "run_id",
+    "model_name",
+    "prompt_version",
+    "interview_probability",
+    "recommended_resume",
+    "priority",
+    "action",
+    "confidence",
+    "reason",
+    "missing_skills",
+    "created_at"
+  ],
+  "rows": [
+    {
+      "id": 6067,
+      "job_id": 39052,
+      "run_id": "5fe04a10",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-08-21T20:03:57.743711"
+    },
+    {
+      "id": 6068,
+      "job_id": 38279,
+      "run_id": "5fe04a10",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 75.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG and LLM experience, transferable cloud skills, but lacks Kubernetes/Docker and SageMaker.",
+      "missing_skills": "[\"Kubernetes\", \"Docker\", \"Azure\", \"GCP\", \"SageMaker\", \"Azure DevOps\", \"Linux internals\"]",
+      "created_at": "2026-08-21T20:04:14.419694"
+    },
+    {
+      "id": 6069,
+      "job_id": 38944,
+      "run_id": "5fe04a10",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-08-21T20:04:14.425336"
+    },
+    {
+      "id": 6070,
+      "job_id": 38296,
+      "run_id": "5fe04a10",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-08-21T20:04:14.443438"
+    }
+  ],
+  "pagination": {
+    "page": 100,
+    "limit": 15,
+    "total_records": 1489,
+    "total_pages": 100
+  }
+}

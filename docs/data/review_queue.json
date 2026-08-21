@@ -1125,6 +1125,145 @@
     "priority": "high"
   },
   {
+    "id": 38167,
+    "company_name": "Leading Client",
+    "job_title": "Gen AI Engineer",
+    "location": "Mumbai",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-gen-ai-engineer-tekskills-india-private-limited-mumbai-4-to-8-years-210826917148",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38176,
+    "company_name": "Cibirix",
+    "job_title": "AI Prompt Engineer",
+    "location": "Indore(Vijay Nagar )",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-prompt-engineer-cibirix-indore-4-to-7-years-200826035835",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and prompt engineering experience, transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "ChatGPT"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38419,
+    "company_name": "Airtel",
+    "job_title": "Developer AIML",
+    "location": "Gurugram",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-developer-aiml-airtel-gurugram-4-to-9-years-241125006899",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core AI/ML requirements.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "scikit-learn",
+      "PyTorch",
+      "Docker",
+      "Kubernetes",
+      "Pandas",
+      "NumPy",
+      "GitLab",
+      "ArgoCD",
+      "Jenkins",
+      "Prometheus",
+      "Grafana",
+      "MLflow",
+      "Weights & Biases",
+      "Elasticsearch"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38812,
+    "company_name": "MNC Group",
+    "job_title": "Senior Agentic AI Engineer with expertise in Python, FastAPI, Google's",
+    "location": "Pune, Chennai",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-agentic-ai-engineer-with-expertise-in-python-fastapi-google-s-pracyva-consulting-services-pune-chennai-4-to-8-years-210826037638",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and Agentic AI experience, transferable cloud skills, but lacks Google ADK/MCP.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Google ADK",
+      "Google MCP"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38938,
+    "company_name": "Shashwath Solution",
+    "job_title": "Backend Engineer ( Founding Engineer )",
+    "location": "Pune",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-backend-engineer-founding-engineer-shashwath-solution-pune-2-to-5-years-200826932173",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM experience, AWS cloud skills, but lacks Java/C++/Go and founding engineer experience.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Java",
+      "C++",
+      "Go",
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 39037,
+    "company_name": "Ignatiuz Software",
+    "job_title": "MLOps Engineer",
+    "location": "Indore",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-mlops-engineer-ignatiuz-software-indore-3-to-8-years-200826017106",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM experience with AWS and FastAPI; transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "PyTorch",
+      "Onnx",
+      "TensorRT",
+      "Docker",
+      "Linux"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38279,
+    "company_name": "Shashwath Solution",
+    "job_title": "AI Engineer",
+    "location": "Pune, Peenya",
+    "experience_required": "2-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-shashwath-solution-pune-peenya-2-to-3-years-200826930764",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM experience, transferable cloud skills, but lacks Kubernetes/Docker and SageMaker.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Kubernetes",
+      "Docker",
+      "Azure",
+      "GCP",
+      "SageMaker",
+      "Azure DevOps",
+      "Linux internals"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26346,
     "company_name": "Two95 International",
     "job_title": "GenAI / AI-ML Engineer",
@@ -1724,6 +1863,113 @@
     "missing_skills": [
       "Azure OpenAI",
       "React.js"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 37867,
+    "company_name": "Optum",
+    "job_title": "AI/ML Engineer",
+    "location": "Noida",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-optum-global-solutions-india-private-limited-noida-3-to-8-years-210826907284",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LLM experience, but lacks Java, Kafka, and front-end skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "React",
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 37905,
+    "company_name": "Calsoft",
+    "job_title": "GenAI Engineer",
+    "location": "Hybrid - Bengaluru",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-genai-engineer-calsoft-bengaluru-4-to-7-years-210826015217",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 37946,
+    "company_name": "Tanisha Systems",
+    "job_title": "AI/GenAI Engineer - Contract",
+    "location": "Hybrid - Hyderabad",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-genai-engineer-contract-tanisha-systems-hyderabad-4-to-8-years-200826038028",
+    "score": 70.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Google Vertex AI",
+      "Gemini API",
+      "GCP data services"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38579,
+    "company_name": "Leading Client",
+    "job_title": "MERN+ LLM Developer",
+    "location": "Bengaluru",
+    "experience_required": "1-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-mern-llm-developer-ave-promagne-business-solutions-bengaluru-1-to-6-years-210826925687",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LLM backend experience, but lacks MERN front-end skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React",
+      "Node.js",
+      "Express",
+      "GraphQL",
+      "MongoDB"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 38902,
+    "company_name": "Siro Clinpharm",
+    "job_title": "Full Stack Databricks Apps Developer",
+    "location": "Bengaluru, Kolkata, Delhi / NCR",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-databricks-apps-developer-siro-clinpharm-kolkata-bengaluru-delhi-ncr-4-to-9-years-210826009986",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 39012,
+    "company_name": "Miles Education",
+    "job_title": "Fullstack Developer",
+    "location": "Mumbai (All Areas)",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-miles-education-mumbai-all-areas-4-to-9-years-200826038484",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience, transferable AWS to Azure, but lacks Next.js and Azure expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Next.js",
+      "Azure"
     ],
     "priority": "high"
   },

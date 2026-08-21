@@ -39,16 +39,20 @@
     {
       "date": "2026-08-20",
       "count": 140
+    },
+    {
+      "date": "2026-08-21",
+      "count": 82
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 832
+      "count": 872
     },
     {
       "score_range": 10,
-      "count": 13
+      "count": 14
     },
     {
       "score_range": 20,
@@ -72,15 +76,15 @@
     },
     {
       "score_range": 70,
-      "count": 97
+      "count": 110
     },
     {
       "score_range": 80,
-      "count": 346
+      "count": 371
     },
     {
       "score_range": 90,
-      "count": 68
+      "count": 71
     }
   ],
   "ats_distribution": [
@@ -92,23 +96,23 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 70
+      "count": 72
     },
     {
       "status": "applied_successfully",
-      "count": 179
+      "count": 203
     },
     {
       "status": "easy_apply",
-      "count": 11
+      "count": 12
     },
     {
       "status": "evaluated",
-      "count": 885
+      "count": 924
     },
     {
       "status": "external_portal",
-      "count": 216
+      "count": 232
     },
     {
       "status": "failed",
@@ -129,28 +133,32 @@
   ],
   "top_companies": [
     {
+      "name": "Leading Client",
+      "count": 51
+    },
+    {
       "name": "Infosys",
       "count": 45
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 42
+      "count": 43
     },
     {
       "name": "Accenture",
-      "count": 39
-    },
-    {
-      "name": "Leading Client",
-      "count": 37
+      "count": 42
     },
     {
       "name": "Sparix Global",
       "count": 27
     },
     {
+      "name": "Shashwath Solution",
+      "count": 26
+    },
+    {
       "name": "PwC",
-      "count": 24
+      "count": 25
     },
     {
       "name": "Epam Systems",
@@ -159,10 +167,6 @@
     {
       "name": "Qcentrio",
       "count": 15
-    },
-    {
-      "name": "Shashwath Solution",
-      "count": 13
     },
     {
       "name": "Grid Dynamics",

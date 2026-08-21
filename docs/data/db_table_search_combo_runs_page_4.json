@@ -12,7 +12,7 @@
       "id": 52,
       "keyword": "LLM Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-20T17:54:26.150443",
+      "last_run_at": "2026-08-21T19:12:58.729997",
       "jobs_found": 12,
       "jobs_inserted": 0
     },
@@ -20,23 +20,23 @@
       "id": 53,
       "keyword": "LLM Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-20T17:59:43.628751",
+      "last_run_at": "2026-08-21T19:18:21.160419",
       "jobs_found": 13,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 54,
       "keyword": "LLM Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-20T17:52:35.859707",
+      "last_run_at": "2026-08-21T19:11:09.088885",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 0
     },
     {
       "id": 55,
       "keyword": "LLM Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-20T17:56:42.520196",
+      "last_run_at": "2026-08-21T19:15:14.438368",
       "jobs_found": 20,
       "jobs_inserted": 2
     },
@@ -44,7 +44,7 @@
       "id": 56,
       "keyword": "LLM Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-20T17:51:28.359634",
+      "last_run_at": "2026-08-21T19:10:00.649307",
       "jobs_found": 13,
       "jobs_inserted": 0
     },
@@ -52,81 +52,81 @@
       "id": 57,
       "keyword": "Python Backend Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-20T18:23:43.750934",
+      "last_run_at": "2026-08-21T19:41:24.766537",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 1
     },
     {
       "id": 58,
       "keyword": "Python Backend Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-20T18:21:12.915323",
+      "last_run_at": "2026-08-21T19:39:08.651037",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 59,
       "keyword": "Python Backend Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-20T18:22:28.816019",
+      "last_run_at": "2026-08-21T19:40:16.836320",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 1
     },
     {
       "id": 60,
       "keyword": "Python Backend Engineer",
       "location": "Noida",
-      "last_run_at": "2026-08-20T18:20:00.620885",
+      "last_run_at": "2026-08-21T19:38:00.315396",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 3
     },
     {
       "id": 61,
       "keyword": "Python Backend Engineer",
       "location": "Pune",
-      "last_run_at": "2026-08-20T18:24:57.951494",
+      "last_run_at": "2026-08-21T19:42:32.711782",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 4
     },
     {
       "id": 62,
       "keyword": "Python Backend Engineer",
       "location": "Remote",
-      "last_run_at": "2026-08-20T18:18:46.804426",
+      "last_run_at": "2026-08-21T19:36:53.464400",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 0
     },
     {
       "id": 63,
       "keyword": "RAG Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-20T18:03:09.401115",
+      "last_run_at": "2026-08-21T19:21:42.273828",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 1
     },
     {
       "id": 64,
       "keyword": "RAG Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-20T18:06:35.503876",
+      "last_run_at": "2026-08-21T19:25:04.555337",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     },
     {
       "id": 65,
       "keyword": "RAG Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-20T18:01:44.825569",
+      "last_run_at": "2026-08-21T19:20:17.912253",
       "jobs_found": 16,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 66,
       "keyword": "RAG Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-20T18:05:26.374180",
+      "last_run_at": "2026-08-21T19:23:58.192876",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     }
   ],
   "pagination": {

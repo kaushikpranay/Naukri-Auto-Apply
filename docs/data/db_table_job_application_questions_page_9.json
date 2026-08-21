@@ -19,12 +19,112 @@
       "required": 0,
       "answer": "Yes",
       "detected_at": "2026-08-20T19:16:59.188880"
+    },
+    {
+      "id": 747,
+      "job_id": 36855,
+      "question_key": "currently_living_navi_mumbai",
+      "question_text": "Are you currently living in Navi Mumbai ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-21T17:33:12.321480"
+    },
+    {
+      "id": 749,
+      "job_id": 36855,
+      "question_key": "if_serving_will_be_lwd",
+      "question_text": "If you are serving what will be your LWD?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "25 sep 2026",
+      "detected_at": "2026-08-21T17:32:12.661731"
+    },
+    {
+      "id": 751,
+      "job_id": 36855,
+      "question_key": "ever_applied_or_interview_reserve_bank_information_technolog",
+      "question_text": "Have you ever applied or interview with Reserve Bank Information Technology?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "No",
+      "detected_at": "2026-08-21T17:32:34.093238"
+    },
+    {
+      "id": 754,
+      "job_id": 38065,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you willing to relocate?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-21T20:06:07.758235"
+    },
+    {
+      "id": 755,
+      "job_id": 37971,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in Azure OpenAI?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-21T20:15:12.175960"
+    },
+    {
+      "id": 756,
+      "job_id": 38165,
+      "question_key": "willing_to_relocate_mumbai",
+      "question_text": "Are you currently residing in Mumbai, Maharashtra or willing to relocate to Mumbai, Maharashtra?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-21T20:16:31.018395"
+    },
+    {
+      "id": 757,
+      "job_id": 38829,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you based in Mumbai or Willing to Relocated?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-21T20:18:49.399867"
+    },
+    {
+      "id": 758,
+      "job_id": 38176,
+      "question_key": "exp_ai_solutions",
+      "question_text": "How many years of experience do you have in Ai Solutions?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-21T20:20:33.381222"
+    },
+    {
+      "id": 759,
+      "job_id": 38176,
+      "question_key": "exp_optimize_prompts",
+      "question_text": "How many years of experience do you have in optimize prompts?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-08-21T20:19:30.442311"
+    },
+    {
+      "id": 760,
+      "job_id": 38176,
+      "question_key": "exp_chatgpt",
+      "question_text": "How many years of experience do you have in ChatGPT?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "3",
+      "detected_at": "2026-08-21T20:19:48.193410"
     }
   ],
   "pagination": {
     "page": 9,
     "limit": 15,
-    "total_records": 121,
+    "total_records": 131,
     "total_pages": 9
   }
 }
