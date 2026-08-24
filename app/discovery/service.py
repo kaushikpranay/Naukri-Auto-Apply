@@ -61,6 +61,8 @@ class ApplyDiscoveryService:
         "input[value*='Apply']",
         "button:has-text('Easy Apply')",
         "a:has-text('Easy Apply')",
+        "button:has-text('I am interested')",
+        "a:has-text('I am interested')",
         "button:has-text('Register')",
         "a:has-text('Register')",
         "a[href*='apply']",
@@ -217,7 +219,7 @@ class ApplyDiscoveryService:
                         reason = f"Unrecognized question(s) require user answer: {', '.join(unknown_keys[:3])}" if unknown_keys else "Unrecognized chatbot question"
                         self._repo.update_job_status(
                             job.id,
-                            "failed",
+                            "needs_human_review",
                             apply_url=outcome.record.apply_url,
                             failure_reason=reason,
                             failure_type=FailureType.UNRECOGNIZED_QUESTION,
@@ -415,6 +417,9 @@ class ApplyDiscoveryService:
         elif apply_type == "login_required":
             summary.discovered += 1
             summary.login_required += 1
+        elif apply_type == "walk_in":
+            summary.discovered += 1
+            summary.requires_review += 1
         elif apply_type == "quota_exhausted":
             summary.quota_exhausted += 1
         elif apply_type == "unknown":
@@ -582,7 +587,7 @@ class ApplyDiscoveryService:
                 )
 
         detect_apply_type = await self._detect_button_apply_type(page, button_text)
-        if detect_apply_type in ("register", "login_required"):
+        if detect_apply_type in ("register", "login_required", "walk_in"):
             return _DiscoveryOutcome(
                 record=ApplicationDiscoveryRecord(
                     job_id=job_id,
@@ -884,9 +889,9 @@ class ApplyDiscoveryService:
                 questions=[],
             )
 
-        # 5. ELSE: unknown (or check registration/login)
+        # 5. ELSE: unknown (or check registration/login/walk_in)
         post_click_type = await self._detect_post_click_apply_type(active_page, button_text)
-        if post_click_type in ("register", "login_required"):
+        if post_click_type in ("register", "login_required", "walk_in"):
             return _DiscoveryOutcome(
                 record=ApplicationDiscoveryRecord(
                     job_id=job_id,
@@ -1016,6 +1021,8 @@ class ApplyDiscoveryService:
     async def _detect_button_apply_type(self, page: Page, button_text: str) -> str | None:
         """Check button text for non-standard apply types before clicking."""
         lower = button_text.lower()
+        if "interested" in lower or "walk-in" in lower or "walk in" in lower:
+            return "walk_in"
         if "register" in lower:
             return "register"
         if "login" in lower:
@@ -1027,6 +1034,8 @@ class ApplyDiscoveryService:
     async def _detect_post_click_apply_type(self, page: Page, button_text: str) -> str | None:
         """Classify the page after clicking the apply button."""
         lower = button_text.lower()
+        if "interested" in lower or "walk-in" in lower or "walk in" in lower:
+            return "walk_in"
         if "register" in lower:
             return "register"
         if "login" in lower or "sign" in lower:

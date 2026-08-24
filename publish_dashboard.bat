@@ -18,10 +18,10 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
-echo Committing and pushing dashboard data & code [dashboard repo]...
-git -C ../dashboard add public/data src backend
-git -C ../dashboard commit -m "Update static dashboard data & code [automated]"
-git -C ../dashboard push
+echo Committing and pushing dashboard data & code [parent repo]...
+git -C .. add dashboard/public/data dashboard/src dashboard/backend
+git -C .. commit -m "Update static dashboard data & code [automated]"
+git -C .. push
 if %ERRORLEVEL% neq 0 (
     echo Error pushing dashboard data to remote repository!
     exit /b %ERRORLEVEL%

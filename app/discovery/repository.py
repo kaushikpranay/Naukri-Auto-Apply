@@ -188,7 +188,7 @@ class ApplyDiscoveryRepository:
                   OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
                       'unknown_question', 'waiting_for_user', 'quota_exhausted',
                       'temporary_failure', 'browser_error', 'unknown',
-                      'applied_successfully', 'failed', 'external_portal'
+                      'applied_successfully', 'failed', 'external_portal', 'needs_human_review'
                   ))
               )
         """, (max_retry_count,))
@@ -225,7 +225,7 @@ class ApplyDiscoveryRepository:
                   OR (a.job_id IS NULL AND COALESCE(j.status, '') NOT IN (
                       'unknown_question', 'waiting_for_user', 'quota_exhausted',
                       'temporary_failure', 'browser_error', 'unknown',
-                      'applied_successfully', 'failed', 'external_portal'
+                      'applied_successfully', 'failed', 'external_portal', 'needs_human_review'
                   ))
               )
             ORDER BY
@@ -409,28 +409,32 @@ class ApplyDiscoveryRepository:
         cursor = self._conn.cursor()
         cursor.execute("UPDATE jobs SET retry_count = COALESCE(retry_count, 0) + 1 WHERE id = ?", (job_id,))
         self._conn.commit()
-        cursor.execute("SELECT retry_count, status FROM jobs WHERE id = ?", (job_id,))
+        cursor.execute("SELECT retry_count, status, failure_type FROM jobs WHERE id = ?", (job_id,))
         row = cursor.fetchone()
         if row is None:
             logger.error("increment_retry_count: job_id={} not found", job_id)
             return -1
         new_count = int(row[0])
         current_status = row[1]
+        failure_type = row[2] if len(row) > 2 else None
 
         non_terminal_statuses = (
             "unknown_question", "waiting_for_user",
             "temporary_failure", "browser_error", "unknown"
         )
         if new_count >= max_retry_count and current_status in non_terminal_statuses:
+            is_unmapped_q = current_status in ("unknown_question", "waiting_for_user") or failure_type == "UNRECOGNIZED_QUESTION"
+            target_status = "needs_human_review" if is_unmapped_q else "failed"
+            reason = "unmapped question requires human review" if is_unmapped_q else "max_retry_count exceeded"
             self.update_job_status(
                 job_id,
-                "failed",
-                failure_reason="max_retry_count exceeded",
+                target_status,
+                failure_reason=reason,
                 failed_at=datetime.now().isoformat(),
             )
             logger.warning(
-                "job_id={} reached max_retry_count={} in status '{}' -> marked as failed",
-                job_id, max_retry_count, current_status,
+                "job_id={} reached max_retry_count={} in status '{}' -> marked as '{}'",
+                job_id, max_retry_count, current_status, target_status,
             )
         return new_count
 
