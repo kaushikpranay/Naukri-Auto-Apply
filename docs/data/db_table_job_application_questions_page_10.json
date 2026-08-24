@@ -1,0 +1,110 @@
+{
+  "columns": [
+    "id",
+    "job_id",
+    "question_key",
+    "question_text",
+    "field_type",
+    "required",
+    "answer",
+    "detected_at"
+  ],
+  "rows": [
+    {
+      "id": 770,
+      "job_id": 40859,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you willing to relocate?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-24T17:44:32.483648"
+    },
+    {
+      "id": 772,
+      "job_id": 41064,
+      "question_key": "total_years_experience",
+      "question_text": "How many years of relevant experience do you hold in Agentic AI Testing?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-24T17:47:29.668733"
+    },
+    {
+      "id": 773,
+      "job_id": 41049,
+      "question_key": "available_take_attend_interview_virtual",
+      "question_text": "Are you available to take an attend interview(virtual)?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T17:47:53.633608"
+    },
+    {
+      "id": 775,
+      "job_id": 40899,
+      "question_key": "proceed_further_steps_fill_out_formdot_mandatory_https_forms",
+      "question_text": "To proceed with the further steps, please fill out the form.(Mandatory):https://forms.gle/5eEZfAMWMpj2EPz29",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T17:53:36.687079"
+    },
+    {
+      "id": 776,
+      "job_id": 40886,
+      "question_key": "notice_period",
+      "question_text": "Can you join immediately or within 15 days? If yes then please apply",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "45 days",
+      "detected_at": "2026-08-24T17:56:16.704222"
+    },
+    {
+      "id": 781,
+      "job_id": 37905,
+      "question_key": "open_for_f2f_interview",
+      "question_text": "The final interview (L2) will be conducted in-person (F2F) at our Bangalore office. Confirm if you are open for F2F interview",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T18:13:05.145534"
+    },
+    {
+      "id": 782,
+      "job_id": 37946,
+      "question_key": "comfortable_contract_role",
+      "question_text": "comfortable for Contract Role?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T18:14:56.910015"
+    },
+    {
+      "id": 783,
+      "job_id": 40889,
+      "question_key": "willing_to_relocate_gurugram",
+      "question_text": "Are you currently living in or ready to relocate to Gurugram ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-24T18:22:37.114790"
+    },
+    {
+      "id": 786,
+      "job_id": 41383,
+      "question_key": "worked_travel_apis",
+      "question_text": "Have you worked with travel APIs?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T18:33:05.657106"
+    }
+  ],
+  "pagination": {
+    "page": 10,
+    "limit": 15,
+    "total_records": 144,
+    "total_pages": 10
+  }
+}

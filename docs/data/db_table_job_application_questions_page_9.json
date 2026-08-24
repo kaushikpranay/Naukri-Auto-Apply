@@ -119,12 +119,52 @@
       "required": 0,
       "answer": "3",
       "detected_at": "2026-08-21T20:19:48.193410"
+    },
+    {
+      "id": 762,
+      "job_id": 39945,
+      "question_key": "willing_to_relocate",
+      "question_text": "Are you willing to relocate?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-08-24T17:25:00.713389"
+    },
+    {
+      "id": 764,
+      "job_id": 40892,
+      "question_key": "python_experience",
+      "question_text": "How many years of experience do you have in AI PYTHON AUTOMATION?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-08-24T17:31:05.498437"
+    },
+    {
+      "id": 767,
+      "job_id": 41372,
+      "question_key": "willing_to_relocate_indore",
+      "question_text": "Are you currently residing in Indore, Madhya Pradesh or willing to relocate to Indore, Madhya Pradesh?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T17:38:56.518107"
+    },
+    {
+      "id": 768,
+      "job_id": 40454,
+      "question_key": "worked_aws_cloud_which_services_use_such_as_ec2_s3dot_sagema",
+      "question_text": "Have you worked on AWS Cloud? Which services do you use, such as EC2, S3. sagemaker,llamda,neptune,opensearch?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-08-24T17:39:52.875389"
     }
   ],
   "pagination": {
     "page": 9,
     "limit": 15,
-    "total_records": 131,
-    "total_pages": 9
+    "total_records": 144,
+    "total_pages": 10
   }
 }

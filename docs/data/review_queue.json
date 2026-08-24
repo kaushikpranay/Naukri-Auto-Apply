@@ -1264,6 +1264,93 @@
     "priority": "high"
   },
   {
+    "id": 39834,
+    "company_name": "Buildingblocks Software Services",
+    "job_title": "Data Engineer (LLM Data Pipeline)",
+    "location": "Chennai",
+    "experience_required": "3-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-data-engineer-llm-data-pipeline-buildingblocks-software-services-chennai-3-to-6-years-101125503559",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM pipeline experience, transferable AWS and FastAPI skills, but lacks Spark/Pandas and GCS expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Pandas",
+      "Spark",
+      "GCS",
+      "Blob Storage",
+      "SentencePiece",
+      "BPE"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40326,
+    "company_name": "Tata Consultancy Services",
+    "job_title": "Walk-in || GenAi Engineer- Walk-in Drive (Chennai)",
+    "location": "Chennai",
+    "experience_required": "",
+    "job_url": "https://www.naukri.com/job-listings-genai-engineer-walk-in-drive-chennai-tata-consultancy-services-chennai-5-to-10-years-240826009737",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable to GCP.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Google Cloud Services",
+      "MLflow"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40886,
+    "company_name": "Futops",
+    "job_title": "Senior Software Engineer - AI",
+    "location": "Hybrid - Gurugram",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-software-engineer-ai-futops-gurugram-4-to-6-years-310726010226",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "AWS SageMaker",
+      "Hugging Face"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40900,
+    "company_name": "Payoneer",
+    "job_title": "Senior Software Engineer - AI",
+    "location": "Gurugram",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-software-engineer-ai-payoneer-gurugram-3-to-5-years-290426505049",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks AI coding assistant usage.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "AI coding assistant usage"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 41029,
+    "company_name": "Anaptyss",
+    "job_title": "Artificial Intelligence Developer",
+    "location": "Noida, Gurugram",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-developer-nlb-services-noida-gurugram-4-to-9-years-240826006631",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26346,
     "company_name": "Two95 International",
     "job_title": "GenAI / AI-ML Engineer",
@@ -1974,6 +2061,82 @@
     "priority": "high"
   },
   {
+    "id": 39508,
+    "company_name": "Ansr Source",
+    "job_title": "Microsoft Forward Deployed AI Engineer Subject Matter Experts",
+    "location": "Remote",
+    "experience_required": "0-1 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-microsoft-forward-deployed-ai-engineer-subject-matter-experts-ansr-source-remote-0-to-1-years-090726507317",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG experience and transferable cloud skills, but lacks Azure certification.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Docker/K8s",
+      "Azure AI Engineer certification"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 39720,
+    "company_name": "Elaarson Industries",
+    "job_title": "AI Test Engineer",
+    "location": "Greater Noida",
+    "experience_required": "3-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-test-engineer-elaarson-industries-greater-noida-3-to-6-years-290526502178",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LangGraph experience, but missing explicit AI testing and tool experience.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "OpenAI",
+      "Gemini",
+      "Claude",
+      "Llama",
+      "Postman",
+      "Selenium"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40726,
+    "company_name": "Shyftlabs",
+    "job_title": "Software Developer",
+    "location": "Noida",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-developer-shyftlabs-noida-4-to-9-years-240826502334",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience, transferable AWS and PostgreSQL skills, but lacks explicit async, Celery, and multi-tenant design.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Celery",
+      "asyncio",
+      "Alembic",
+      "EXPLAIN ANALYZE",
+      "Multi-tenant Architecture"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40897,
+    "company_name": "MKS Instruments",
+    "job_title": "Sr. Engineer I - AI Developer",
+    "location": "Gurugram",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-sr-engineer-i-ai-developer-mks-instruments-gurugram-3-to-5-years-290726501451",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 26445,
     "company_name": "Capgemini",
     "job_title": "Amazon Connect Developer",
@@ -2260,6 +2423,86 @@
     "priority": "medium"
   },
   {
+    "id": 40884,
+    "company_name": "JSM Consulting Inc",
+    "job_title": "Ai Ml Engineer",
+    "location": "Gurugram",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-jsm-consulting-inc-gurugram-4-to-7-years-310726026117",
+    "score": 60.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience and transferable cloud skills, but lacks Java and core AWS services.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Java",
+      "Node JS",
+      "Angular",
+      "Oracle 11",
+      "Terraform",
+      "Lambda",
+      "API Gateway",
+      "SageMaker",
+      "ECS"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40885,
+    "company_name": "Vlink",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Gurugram",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-vlink-gurugram-4-to-6-years-310726010787",
+    "score": 60.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG experience and transferable cloud skills, but lacks Java expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Advanced Java",
+      "OpenAI APIs"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 40889,
+    "company_name": "Air India",
+    "job_title": "AI Security Engineer",
+    "location": "Gurugram",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-security-engineer-air-india-gurugram-2-to-5-years-300726032501",
+    "score": 60.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG and LangGraph experience, but lacks AI security and threat modeling expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Azure AI Foundry",
+      "GCP Vertex AI",
+      "Microsoft Copilot Studio",
+      "AccuKnox AISPM",
+      "OWASP AI Exchange",
+      "MITRE ATLAS",
+      "Burp Suite"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 41167,
+    "company_name": "Tristone Strategic Partners",
+    "job_title": "Lead Ai Engineer",
+    "location": "Mumbai",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-tristone-strategic-partners-llp-mumbai-4-to-9-years-220726503610",
+    "score": 60.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG and LangGraph experience, but lacks leadership and fintech domain.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 34004,
     "company_name": "Siya Tech Ventures",
     "job_title": "Fullstack Developer",
@@ -2463,6 +2706,49 @@
       "CSS",
       "Node.js",
       "MySQL"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 40161,
+    "company_name": "Forward Eye Technologies",
+    "job_title": "Full Stack Developer",
+    "location": "Noida",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-forward-eye-technologies-noida-1-to-3-years-210826930355",
+    "score": 40.0,
+    "confidence": 60.0,
+    "reason": "Strong backend experience but lacks front-end React.js skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "React.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Material UI",
+      "Tailwind CSS"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 40166,
+    "company_name": "Forward Eye Technologies",
+    "job_title": "Full Stack Developer",
+    "location": "Noida",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-forward-eye-technologies-noida-1-to-3-years-210826931322",
+    "score": 40.0,
+    "confidence": 70.0,
+    "reason": "Strong backend and AI production experience, but lacks core front\u2011end stack.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Docker",
+      "JWT/OAuth",
+      "Google BigQuery"
     ],
     "priority": "medium"
   },

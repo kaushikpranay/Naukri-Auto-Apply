@@ -31,13 +31,13 @@
       "job_description": "Key points:\n\nShouldhave 2-5 years of professional backend building experience\nShouldhave experience of working in Java/C++/Go with experience in Multithreading, object-oriented design patterns, microservices architecture\nExperience developing cloud architecture on leading cloud providers (Azure/AWS/GCP) is a must Shouldhave startup experience, preferably as founding engineer\nShouldbefrom top engineering college, preferably with CS degree Prior work with LLM/ML applications would be a bonus.",
       "job_url": "https://www.naukri.com/job-listings-backend-engineer-founding-engineer-shashwath-solution-pune-2-to-5-years-200826932173",
       "normalized_url": "https://www.naukri.com/job-listings-backend-engineer-founding-engineer-shashwath-solution-pune-2-to-5-years-200826932173",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[200826932173]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22200826932173%22%3A200%7D&jobTitle=Backend%20Engineer%20%28%20Founding%20Engineer%20%29",
       "experience_required": "2-5 Yrs",
       "location": "Pune",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Pune",
@@ -229,16 +229,16 @@
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "needs_human_review",
+      "retry_count": 3,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Mumbai",
       "created_at": "2026-08-21T19:45:55.397221",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "unmapped question requires human review",
+      "last_fill_error": "unmapped question requires human review",
+      "failed_at": "2026-08-24T18:27:08.698789"
     },
     {
       "id": 39017,
@@ -349,16 +349,16 @@
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Indore",
       "created_at": "2026-08-21T19:47:04.090329",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-08-24T18:03:38.828622"
     },
     {
       "id": 39041,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 99,
     "limit": 15,
-    "total_records": 1489,
-    "total_pages": 100
+    "total_records": 1589,
+    "total_pages": 106
   }
 }

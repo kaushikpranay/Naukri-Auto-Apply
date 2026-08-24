@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 1489,
-    "naukri_jobs": 1489,
+    "total_jobs": 1589,
+    "naukri_jobs": 1589,
     "external_jobs": 953,
-    "pending_review": 415,
-    "queued": 9,
+    "pending_review": 430,
+    "queued": 0,
     "applying": 0,
-    "applied": 275,
-    "failed": 36,
+    "applied": 297,
+    "failed": 49,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 763.9,
-    "avg_ai_score": 32.3,
-    "today_jobs": 82,
-    "today_applications": 43
+    "success_rate": 606.1,
+    "avg_ai_score": 32.8,
+    "today_jobs": 65,
+    "today_applications": 48
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Airtel",
-      "job_title": "Developer AIML",
-      "timestamp": "2026-08-21T20:21:02.465022",
-      "details": "Type: easy_apply, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Shashwath Solution",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-21T20:20:48.235575",
+      "company_name": "Forward Eye Technologies",
+      "job_title": "Full Stack Developer",
+      "timestamp": "2026-08-24T18:23:13.521805",
       "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Cibirix",
-      "job_title": "AI Prompt Engineer",
-      "timestamp": "2026-08-21T20:20:33.379782",
+      "company_name": "Tristone Strategic Partners",
+      "job_title": "Lead Ai Engineer",
+      "timestamp": "2026-08-24T18:22:53.547913",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Air India",
+      "job_title": "AI Security Engineer",
+      "timestamp": "2026-08-24T18:22:37.113566",
       "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Slidexpress",
-      "job_title": "Developer - AI Agentic",
-      "timestamp": "2026-08-21T20:18:49.397461",
+      "company_name": "JSM Consulting Inc",
+      "job_title": "Ai Ml Engineer",
+      "timestamp": "2026-08-24T18:12:43.347685",
       "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Leading Client",
-      "job_title": "Gen AI Engineer",
-      "timestamp": "2026-08-21T20:17:45.606361",
-      "details": "Type: applied_successfully, Status: discovered"
+      "company_name": "MKS Instruments",
+      "job_title": "Sr. Engineer I - AI Developer",
+      "timestamp": "2026-08-24T18:12:22.349298",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Shashwath Solution",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-21T20:04:14.443438",
+      "company_name": "Quarks Technosoft",
+      "job_title": "AI Backend Engineer",
+      "timestamp": "2026-08-24T17:20:04.062769",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Senior Python Backend Engineer",
-      "timestamp": "2026-08-21T20:04:14.425336",
+      "company_name": "Quarks Technosoft",
+      "job_title": "AI Backend Engineer",
+      "timestamp": "2026-08-24T17:20:04.040714",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Shashwath Solution",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-08-21T20:04:14.419694",
-      "details": "Score: 75.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Full Stack Developer (React + Node + Python + FastAPI)",
-      "timestamp": "2026-08-21T20:03:57.743711",
+      "company_name": "Crew Kraftorz",
+      "job_title": "Full Stack Developer Python FastAPI ReactJS",
+      "timestamp": "2026-08-24T17:20:04.020024",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "Full Stack Engineer",
-      "timestamp": "2026-08-21T20:03:57.739641",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Wissen Infotech",
+      "job_title": "Consultant",
+      "timestamp": "2026-08-24T17:20:04.013318",
+      "details": "Score: 80.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Capitall",
+      "job_title": "Software Engineer- Django",
+      "timestamp": "2026-08-24T17:19:54.164963",
+      "details": "Score: 90.0%, Action: apply"
     }
   ]
 }
