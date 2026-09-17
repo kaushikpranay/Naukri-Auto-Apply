@@ -70,11 +70,11 @@
       "question_key": "willing_to_relocate_bengaluru",
       "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
       "answer": null,
-      "usage_count": 3,
-      "last_used": "2026-08-19T20:21:57.042064",
+      "usage_count": 4,
+      "last_used": "2026-09-17T15:20:21.399747",
       "field_type": "radio",
       "created_at": "2026-07-08T21:22:57.601719",
-      "last_used_at": "2026-08-19T20:21:57.042064",
+      "last_used_at": "2026-09-17T15:20:21.399747",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -82,12 +82,12 @@
       "id": 11283,
       "question_key": "exp_software_engineering",
       "question_text": "How many years of experience do you have in Software Engineering?",
-      "answer": null,
-      "usage_count": 1,
-      "last_used": "2026-07-08T21:24:05.622982",
+      "answer": "2",
+      "usage_count": 3,
+      "last_used": "2026-09-17T15:26:39.308803",
       "field_type": "contenteditable",
       "created_at": "2026-07-08T21:24:05.622982",
-      "last_used_at": "2026-07-08T21:24:05.622982",
+      "last_used_at": "2026-09-17T15:26:39.308803",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -123,7 +123,7 @@
       "question_text": "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?",
       "answer": "Yes",
       "usage_count": 1,
-      "last_used": "2026-08-24T15:47:02.185665",
+      "last_used": "2026-09-17T14:39:23.235452",
       "field_type": "radio",
       "created_at": "2026-07-10T23:50:57.344002",
       "last_used_at": "2026-07-10T23:50:57.344002",
@@ -200,11 +200,11 @@
       "question_key": "available_face_face_technical_interview",
       "question_text": "Are you available for a face-to-face technical interview?",
       "answer": "No",
-      "usage_count": 11,
-      "last_used": "2026-08-18T18:18:59.038685",
+      "usage_count": 12,
+      "last_used": "2026-08-26T19:03:26.578140",
       "field_type": "radio",
       "created_at": "2026-07-11T00:09:27.603369",
-      "last_used_at": "2026-08-18T18:18:59.038685",
+      "last_used_at": "2026-08-26T19:03:26.578140",
       "confidence_score": 1.0,
       "updated_at": null
     }
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 323,
+    "total_records": 329,
     "total_pages": 22
   }
 }

@@ -16,39 +16,9 @@
   ],
   "rows": [
     {
-      "id": 4642,
-      "job_id": 26379,
-      "run_id": "47215b6d",
-      "model_name": "Groq[...ixmA]",
-      "prompt_version": "v2.0",
-      "interview_probability": 80.0,
-      "recommended_resume": "GENAI",
-      "priority": "high",
-      "action": "apply",
-      "confidence": 80.0,
-      "reason": "Strong production RAG experience, LangGraph, FastAPI, AWS, but lacks TypeScript/JavaScript and container orchestration skills.",
-      "missing_skills": "[\"TypeScript\", \"JavaScript\", \"Docker\", \"Kubernetes\", \"Weaviate\"]",
-      "created_at": "2026-08-09T18:45:03.762461"
-    },
-    {
-      "id": 4643,
-      "job_id": 26380,
-      "run_id": "47215b6d",
-      "model_name": "Groq[...ixmA]",
-      "prompt_version": "v2.0",
-      "interview_probability": 75.0,
-      "recommended_resume": "GENAI",
-      "priority": "high",
-      "action": "apply",
-      "confidence": 80.0,
-      "reason": "Strong production RAG experience, LangGraph workflows, FastAPI backend, AWS deployment with transferable Azure skills.",
-      "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-08-09T18:45:20.276549"
-    },
-    {
-      "id": 4644,
-      "job_id": 26381,
-      "run_id": "47215b6d",
+      "id": 6381,
+      "job_id": 42040,
+      "run_id": "76ffd633",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
@@ -58,12 +28,27 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-08-09T18:45:36.193037"
+      "created_at": "2026-09-17T14:56:29.192677"
     },
     {
-      "id": 4645,
-      "job_id": 26382,
-      "run_id": "47215b6d",
+      "id": 6382,
+      "job_id": 42041,
+      "run_id": "76ffd633",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 85.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 85.0,
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-09-17T14:56:42.674222"
+    },
+    {
+      "id": 6383,
+      "job_id": 42046,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -73,12 +58,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:45:36.199407"
+      "created_at": "2026-09-17T14:56:42.680894"
     },
     {
-      "id": 4646,
-      "job_id": 26383,
-      "run_id": "47215b6d",
+      "id": 6384,
+      "job_id": 42047,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -88,12 +73,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:45:36.203751"
+      "created_at": "2026-09-17T14:56:42.686752"
     },
     {
-      "id": 4647,
-      "job_id": 26384,
-      "run_id": "47215b6d",
+      "id": 6385,
+      "job_id": 42053,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -103,12 +88,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:45:36.207273"
+      "created_at": "2026-09-17T14:56:42.692151"
     },
     {
-      "id": 4648,
-      "job_id": 26385,
-      "run_id": "47215b6d",
+      "id": 6386,
+      "job_id": 42054,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -118,12 +103,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:45:36.211984"
+      "created_at": "2026-09-17T14:56:42.699736"
     },
     {
-      "id": 4649,
-      "job_id": 26386,
-      "run_id": "47215b6d",
+      "id": 6387,
+      "job_id": 42055,
+      "run_id": "76ffd633",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 90.0,
@@ -131,14 +116,14 @@
       "priority": "high",
       "action": "apply",
       "confidence": 85.0,
-      "reason": "Strong production RAG and LangGraph experience with AWS deployment; transferable cloud skills support GenAI role.",
+      "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-08-09T18:45:50.725099"
+      "created_at": "2026-09-17T14:56:53.932147"
     },
     {
-      "id": 4650,
-      "job_id": 26389,
-      "run_id": "47215b6d",
+      "id": 6388,
+      "job_id": 42056,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -148,27 +133,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:45:50.730754"
+      "created_at": "2026-09-17T14:56:53.939706"
     },
     {
-      "id": 4651,
-      "job_id": 26394,
-      "run_id": "47215b6d",
-      "model_name": "Groq[...ixmA]",
-      "prompt_version": "v2.0",
-      "interview_probability": 80.0,
-      "recommended_resume": "GENAI",
-      "priority": "high",
-      "action": "apply",
-      "confidence": 80.0,
-      "reason": "Strong production RAG, LangGraph, FastAPI, and AWS experience with transferable cloud skills.",
-      "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-08-09T18:45:55.971182"
-    },
-    {
-      "id": 4652,
-      "job_id": 26395,
-      "run_id": "47215b6d",
+      "id": 6389,
+      "job_id": 42058,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -178,27 +148,42 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:45:56.016302"
+      "created_at": "2026-09-17T14:56:53.944837"
     },
     {
-      "id": 4653,
-      "job_id": 26396,
-      "run_id": "47215b6d",
-      "model_name": "Groq[...ixmA]",
+      "id": 6390,
+      "job_id": 42059,
+      "run_id": "76ffd633",
+      "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
-      "interview_probability": 90.0,
-      "recommended_resume": "GENAI",
-      "priority": "high",
-      "action": "apply",
-      "confidence": 85.0,
-      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets 1-4 yr requirement.",
-      "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-08-09T18:46:12.105904"
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-09-17T14:56:53.949707"
     },
     {
-      "id": 4654,
-      "job_id": 26397,
-      "run_id": "47215b6d",
+      "id": 6391,
+      "job_id": 42060,
+      "run_id": "76ffd633",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-09-17T14:56:53.955431"
+    },
+    {
+      "id": 6392,
+      "job_id": 42061,
+      "run_id": "76ffd633",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
@@ -208,12 +193,27 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-08-09T18:46:27.885341"
+      "created_at": "2026-09-17T14:57:06.899226"
     },
     {
-      "id": 4655,
-      "job_id": 26392,
-      "run_id": "47215b6d",
+      "id": 6393,
+      "job_id": 42063,
+      "run_id": "76ffd633",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 80.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 75.0,
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable skills cover Azure OpenAI; missing MCP, Google A2A, Copilot.",
+      "missing_skills": "[\"Azure OpenAI\", \"MCP\", \"Google A2A\", \"Microsoft Copilot\"]",
+      "created_at": "2026-09-17T14:57:27.822962"
+    },
+    {
+      "id": 6394,
+      "job_id": 42067,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -223,12 +223,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:46:27.936538"
+      "created_at": "2026-09-17T14:57:27.860026"
     },
     {
-      "id": 4656,
-      "job_id": 26393,
-      "run_id": "47215b6d",
+      "id": 6395,
+      "job_id": 42068,
+      "run_id": "76ffd633",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -238,13 +238,13 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-09T18:46:27.941338"
+      "created_at": "2026-09-17T14:57:27.867998"
     }
   ],
   "pagination": {
     "page": 5,
     "limit": 15,
-    "total_records": 1589,
-    "total_pages": 106
+    "total_records": 305,
+    "total_pages": 21
   }
 }

@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 1589,
-    "naukri_jobs": 1589,
+    "total_jobs": 305,
+    "naukri_jobs": 305,
     "external_jobs": 953,
-    "pending_review": 430,
-    "queued": 0,
+    "pending_review": 28,
+    "queued": 3,
     "applying": 0,
-    "applied": 297,
-    "failed": 49,
+    "applied": 72,
+    "failed": 23,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 606.1,
-    "avg_ai_score": 32.8,
-    "today_jobs": 65,
-    "today_applications": 48
+    "success_rate": 313.0,
+    "avg_ai_score": 44.0,
+    "today_jobs": 305,
+    "today_applications": 158
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Forward Eye Technologies",
-      "job_title": "Full Stack Developer",
-      "timestamp": "2026-08-24T18:23:13.521805",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Tristone Strategic Partners",
-      "job_title": "Lead Ai Engineer",
-      "timestamp": "2026-08-24T18:22:53.547913",
+      "company_name": "AU Small Finance Bank",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-17T16:49:41.036953",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Air India",
-      "job_title": "AI Security Engineer",
-      "timestamp": "2026-08-24T18:22:37.113566",
-      "details": "Type: applied_successfully, Status: discovered"
+      "company_name": "EY",
+      "job_title": "GEN AI Engineer",
+      "timestamp": "2026-09-17T16:49:26.312070",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "JSM Consulting Inc",
-      "job_title": "Ai Ml Engineer",
-      "timestamp": "2026-08-24T18:12:43.347685",
-      "details": "Type: applied_successfully, Status: discovered"
+      "company_name": "Logibee",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-17T16:49:08.845540",
+      "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "MKS Instruments",
-      "job_title": "Sr. Engineer I - AI Developer",
-      "timestamp": "2026-08-24T18:12:22.349298",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "ERM Placement Services",
+      "job_title": "Gen AI developer",
+      "timestamp": "2026-09-17T16:49:02.968341",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Linkageit",
+      "job_title": "Artificial Intelligence Engineer - Data Modeling",
+      "timestamp": "2026-09-17T16:48:44.734745",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Quarks Technosoft",
-      "job_title": "AI Backend Engineer",
-      "timestamp": "2026-08-24T17:20:04.062769",
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-09-17T16:12:19.029550",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Quarks Technosoft",
-      "job_title": "AI Backend Engineer",
-      "timestamp": "2026-08-24T17:20:04.040714",
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-09-17T16:12:19.019546",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Crew Kraftorz",
-      "job_title": "Full Stack Developer Python FastAPI ReactJS",
-      "timestamp": "2026-08-24T17:20:04.020024",
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-09-17T16:12:19.000605",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Wissen Infotech",
-      "job_title": "Consultant",
-      "timestamp": "2026-08-24T17:20:04.013318",
-      "details": "Score: 80.0%, Action: apply"
+      "company_name": "Leading Client",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-17T16:12:18.992388",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Capitall",
-      "job_title": "Software Engineer- Django",
-      "timestamp": "2026-08-24T17:19:54.164963",
-      "details": "Score: 90.0%, Action: apply"
+      "company_name": "Sparix Global",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-17T16:12:18.985394",
+      "details": "Score: 85.0%, Action: apply"
     }
   ]
 }

@@ -120,13 +120,13 @@
     {
       "id": 13923,
       "question_key": "exp_artificial_intelligence",
-      "question_text": "How many years of experience do you have in Artificial Intelligence ?",
+      "question_text": "How many years of experience do you have in Artificial Intelligence?",
       "answer": "2",
-      "usage_count": 1,
-      "last_used": "2026-08-20T19:05:50.841179",
-      "field_type": "radio",
+      "usage_count": 2,
+      "last_used": "2026-08-26T19:10:48.685251",
+      "field_type": "contenteditable",
       "created_at": "2026-08-20T19:05:50.841179",
-      "last_used_at": "2026-08-20T19:05:50.841179",
+      "last_used_at": "2026-08-26T19:10:48.685251",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 21,
     "limit": 15,
-    "total_records": 323,
+    "total_records": 329,
     "total_pages": 22
   }
 }

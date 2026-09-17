@@ -70,11 +70,11 @@
       "question_key": "relocation_city_preference",
       "question_text": "Please select the city you are currently residing or willing to relocate to",
       "answer": "Noida",
-      "usage_count": 8,
-      "last_used": "2026-08-12T15:16:00.963065",
+      "usage_count": 9,
+      "last_used": "2026-09-17T15:16:03.655851",
       "field_type": "checkbox",
       "created_at": "2026-06-07T04:54:08.774386",
-      "last_used_at": "2026-08-12T15:16:00.963065",
+      "last_used_at": "2026-09-17T15:16:03.655851",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 4,
     "limit": 15,
-    "total_records": 323,
+    "total_records": 329,
     "total_pages": 22
   }
 }

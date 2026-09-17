@@ -55,13 +55,13 @@
     {
       "id": 14285,
       "question_key": "willing_to_relocate_indore",
-      "question_text": "Are you currently residing in Indore, Madhya Pradesh or willing to relocate to Indore, Madhya Pradesh?",
+      "question_text": "Are you currently living in or ready to relocate to Indore ?",
       "answer": null,
-      "usage_count": 1,
-      "last_used": "2026-08-24T17:38:56.518107",
+      "usage_count": 2,
+      "last_used": "2026-09-17T15:27:55.812723",
       "field_type": "radio",
       "created_at": "2026-08-24T17:38:56.518107",
-      "last_used_at": "2026-08-24T17:38:56.518107",
+      "last_used_at": "2026-09-17T15:27:55.812723",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -116,12 +116,90 @@
       "last_used_at": "2026-08-24T18:33:05.657106",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 14374,
+      "question_key": "exp_mlops",
+      "question_text": "How many years of experience do you have in MLOps?",
+      "answer": "1",
+      "usage_count": 3,
+      "last_used": "2026-09-17T15:34:09.984054",
+      "field_type": "contenteditable",
+      "created_at": "2026-08-26T19:00:48.997396",
+      "last_used_at": "2026-09-17T15:34:09.984054",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14378,
+      "question_key": "exp_building",
+      "question_text": "Do you have experience in building and deploying production-grade workflows, applications, and data pipelines .",
+      "answer": "yes",
+      "usage_count": 2,
+      "last_used": "2026-08-26T19:08:41.201267",
+      "field_type": "radio",
+      "created_at": "2026-08-26T19:08:03.608260",
+      "last_used_at": "2026-08-26T19:08:41.201267",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14449,
+      "question_key": "exp_automation",
+      "question_text": "How many years of experience do you have in Automation?",
+      "answer": "1.5",
+      "usage_count": 2,
+      "last_used": "2026-09-17T15:13:31.516608",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-17T15:12:44.821454",
+      "last_used_at": "2026-09-17T15:13:31.516608",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14451,
+      "question_key": "woman_professional_looking_restart_career_after_break_6_mont",
+      "question_text": "Are you a woman professional looking to restart your career after a break of 6 months or more?",
+      "answer": "No",
+      "usage_count": 3,
+      "last_used": "2026-09-17T15:14:59.088454",
+      "field_type": "radio",
+      "created_at": "2026-09-17T15:14:39.518627",
+      "last_used_at": "2026-09-17T15:14:59.088454",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14457,
+      "question_key": "comfortable_work_5_day_wfo_mode",
+      "question_text": "Are you comfortable to work in 5 Day WFO mode",
+      "answer": "yes",
+      "usage_count": 3,
+      "last_used": "2026-09-17T15:24:14.341482",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-17T15:23:21.610875",
+      "last_used_at": "2026-09-17T15:24:14.341482",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14464,
+      "question_key": "pan_number",
+      "question_text": "What is your Pan number?",
+      "answer": "Gempp2391h",
+      "usage_count": 5,
+      "last_used": "2026-09-17T15:37:23.181830",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-17T15:31:41.205595",
+      "last_used_at": "2026-09-17T15:37:23.181830",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 22,
     "limit": 15,
-    "total_records": 323,
+    "total_records": 329,
     "total_pages": 22
   }
 }

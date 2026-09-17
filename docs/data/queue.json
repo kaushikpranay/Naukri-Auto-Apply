@@ -1,5 +1,42 @@
 {
-  "ready_to_apply": [],
+  "ready_to_apply": [
+    {
+      "id": 42302,
+      "company_name": "Tata Consultancy Services",
+      "job_title": "Principal Generative AI & ML Ops Engineer (SME)",
+      "experience_required": "4-7 Yrs",
+      "location": "Chennai, Indore, Gandhinagar",
+      "score": 65.0,
+      "action": "apply",
+      "status": "pending",
+      "ats_type": null,
+      "application_type": "INTERNAL"
+    },
+    {
+      "id": 42176,
+      "company_name": "Vlink",
+      "job_title": "Artificial Intelligence Engineer",
+      "experience_required": "4-9 Yrs",
+      "location": "Gurugram",
+      "score": 60.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null,
+      "application_type": "INTERNAL"
+    },
+    {
+      "id": 42289,
+      "company_name": "PwC",
+      "job_title": "AI QE Engineer -",
+      "experience_required": "3-8 Yrs",
+      "location": "Hybrid - Bengaluru, Hyderabad, Mumbai (All Areas)",
+      "score": 60.0,
+      "action": "apply",
+      "status": "evaluated",
+      "ats_type": null,
+      "application_type": "INTERNAL"
+    }
+  ],
   "currently_applying": [],
   "waiting_user": [],
   "retry_queue": [],
