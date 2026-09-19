@@ -31,13 +31,13 @@
       "job_description": "Key Responsibilities\n\nDevelop and deploy AI-based applications leveraging LLMs and Generative AI models like GPT, Gemini, or similar frameworks\nBuild scalable backend systems using Python, ensuring seamless integration with UI/UX components\nDesign and optimize generative AI models to address diverse business challenges\nFine-tune pre-trained LLMs to align with specific use cases\nWork closely with cross-functional teams, including data scientists, UI/UX developers, and product managers, to deliver robust solutions\nCollaborate with clients to gather requirements and develop customized AI capabilities\nDeploy solutions on cloud platforms (Azure, AWS, or GCP) and ensure system scalability and performance\n\n\n\nQualifications\n\nBachelors Degree (preferred CS/IT) in advanced analytics or ML or Master's in Machine Learning, Statistics, Econometrics, or a related field\n4-7 years of professional experience in Data Science or AI/ML application development.\nHands-on experience with Generative AI models and frameworks\nStay updated on industry trends, emerging technologies and best practices in Gen AI & Data Science\n\n\n\nMust-Have Skills:\n\nProficiency in Python for application development\nExperience working with Generative AI frameworks and libraries (e.g., Hugging Face, OpenAI API, LangChain)\nStrong knowledge of LLMs and fine-tuning techniques\nExperience with RAG (Retrieval-Augmented Generation) techniques & Agentic workflow\nHands-on experience with Python web frameworks like Flask, FastAPI, or Django\nFamiliarity with cloud platforms (Azure, AWS, or GCP) for deployment and scaling",
       "job_url": "https://www.naukri.com/job-listings-gen-ai-developer-erm-placement-services-indore-4-to-7-years-310826921477",
       "normalized_url": "https://www.naukri.com/job-listings-gen-ai-developer-erm-placement-services-indore-4-to-7-years-310826921477",
-      "apply_url": "https://www.naukri.com/job-listings-gen-ai-developer-erm-placement-services-indore-4-to-7-years-310826921477",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[310826921477]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22310826921477%22%3A200%7D&jobTitle=Gen%20AI%20developer",
       "experience_required": "4-7 Yrs",
       "location": "Indore",
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 2,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Indore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 19,
     "limit": 15,
-    "total_records": 305,
-    "total_pages": 21
+    "total_records": 464,
+    "total_pages": 31
   }
 }

@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 305,
-    "naukri_jobs": 305,
+    "total_jobs": 464,
+    "naukri_jobs": 464,
     "external_jobs": 953,
-    "pending_review": 28,
-    "queued": 3,
+    "pending_review": 41,
+    "queued": 34,
     "applying": 0,
-    "applied": 72,
-    "failed": 23,
+    "applied": 105,
+    "failed": 26,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 313.0,
-    "avg_ai_score": 44.0,
-    "today_jobs": 305,
-    "today_applications": 158
+    "success_rate": 403.8,
+    "avg_ai_score": 46.0,
+    "today_jobs": 159,
+    "today_applications": 67
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "AU Small Finance Bank",
+      "company_name": "Datazoic Machines",
       "job_title": "AI Engineer",
-      "timestamp": "2026-09-17T16:49:41.036953",
+      "timestamp": "2026-09-19T16:26:26.065844",
+      "details": null
+    },
+    {
+      "type": "applied",
+      "company_name": "Datazoic Machines",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-19T16:26:18.069050",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Sensiple",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-19T16:25:32.771608",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "EY",
-      "job_title": "GEN AI Engineer",
-      "timestamp": "2026-09-17T16:49:26.312070",
-      "details": "Type: unknown, Status: discovered"
+      "company_name": "V Group Inc",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-19T16:25:17.695851",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Logibee",
+      "company_name": "Kodo",
       "job_title": "AI Engineer",
-      "timestamp": "2026-09-17T16:49:08.845540",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "ERM Placement Services",
-      "job_title": "Gen AI developer",
-      "timestamp": "2026-09-17T16:49:02.968341",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Linkageit",
-      "job_title": "Artificial Intelligence Engineer - Data Modeling",
-      "timestamp": "2026-09-17T16:48:44.734745",
-      "details": "Type: unknown, Status: discovered"
+      "timestamp": "2026-09-19T16:25:02.893367",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Generative AI Engineer",
-      "timestamp": "2026-09-17T16:12:19.029550",
+      "company_name": "Jalopeura Technology",
+      "job_title": "Prompt Engineer",
+      "timestamp": "2026-09-19T13:29:55.405318",
+      "details": "Score: 70.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Crop.photo",
+      "job_title": "Webflow Developer",
+      "timestamp": "2026-09-19T13:29:50.354500",
+      "details": "Score: 5.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Nacre Capital",
+      "job_title": "Senior AI Engineer, Agents",
+      "timestamp": "2026-09-19T13:29:29.062928",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Generative AI Engineer",
-      "timestamp": "2026-09-17T16:12:19.019546",
+      "company_name": "Netomi",
+      "job_title": "Prompt Engineer",
+      "timestamp": "2026-09-19T13:29:29.060709",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Generative AI Engineer",
-      "timestamp": "2026-09-17T16:12:19.000605",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-09-17T16:12:18.992388",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Sparix Global",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-09-17T16:12:18.985394",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Knowforth Tech",
+      "job_title": "Prompt Engineer",
+      "timestamp": "2026-09-19T13:29:29.056932",
+      "details": "Score: 80.0%, Action: apply"
     }
   ]
 }

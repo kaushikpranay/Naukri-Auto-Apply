@@ -31,13 +31,13 @@
       "job_description": "AI Developer (Python) Experience 4-8 years\u2019 experience\n\nSkills and attributes for success\n\nCandidate must possess proficiency in the following technologies:\nCore AI Engineering & LLM Frameworks:\nPython, LangChain, LangGraph, Auto Gen, Google Agent SDK, Model Context Protocol, Skills-based agent frameworks.\nGenAI / Agentic AI Systems:\nLLM application development, agentic AI architectures, multi-agent workflows, prompt engineering, AI system design, tool/function calling, enterprise AI integration.\nRAG, Embeddings & Vector Search:\nRetrieval-Augmented Generation pipelines, embeddings, semantic search, context retrieval strategies, Azure AI Search, Pinecone, FAISS, Redis Vector, pgvector.\nBackend & API Engineering:\nPython, Fast API, REST API design, scalable API platforms, event-driven systems, microservices architecture, third-party system integration.\nCloud, Infrastructure & Containers:\nAzure OpenAI, Azure AI Services, Docker, Kubernetes, OpenShift, cloud-native application development, containerized deployments.\nDatabases & Data Platforms:\nSQL, NoSQL, MongoDB, Redis, ClickHouse, database design, performance optimization, data accuracy and integrity.\nAI Model Engineering:\nModel fine-tuning, LoRA, BERT, LLM architecture understanding, evaluation techniques, AI performance monitoring.\nAI Governance, Security & Responsible AI:\nPII protection, data privacy, AI security, compliance, responsible AI practices, governance controls, monitoring and observability frameworks.",
       "job_url": "https://www.naukri.com/job-listings-gen-ai-engineer-ey-chennai-bengaluru-4-to-8-years-170626006839",
       "normalized_url": "https://www.naukri.com/job-listings-gen-ai-engineer-ey-chennai-bengaluru-4-to-8-years-170626006839",
-      "apply_url": "https://www.naukri.com/job-listings-gen-ai-engineer-ey-chennai-bengaluru-4-to-8-years-170626006839",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[170626006839]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22170626006839%22%3A200%7D&jobTitle=GEN%20AI%20Engineer",
       "experience_required": "4-8 Yrs",
       "location": "Hybrid - Bengaluru, Chennai",
       "posted_date": "2 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 1,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 17,
     "limit": 15,
-    "total_records": 305,
-    "total_pages": 21
+    "total_records": 464,
+    "total_pages": 31
   }
 }

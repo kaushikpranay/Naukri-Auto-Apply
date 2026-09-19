@@ -103,13 +103,13 @@
       "job_description": "We are seeking a highly skilled and motivated AI Architect to join our dynamic team. The ideal candidate is a process-oriented, self-learner, and passionate professional with over 8 years of experience in application development, product delivery, and client-relationship management. As an AI Architect, you will play a key role in designing, developing, and deploying innovative AI-based solutions that leverage the power of machine learning, Gen AI and Deep learning techniques.\n\n\n\n\nKey Responsibilities :\n\n\n\n\n- Design, develop, and deploy generative AI-based solutions using cutting-edge technologies and methodologies.\n\n\n\n- Collaborate with cross-functional teams to gather requirements, design architecture, and plan development and deployment strategies.\n\n\n\n\n- Utilize statistical analysis and data mining techniques to extract meaningful insights from data and build machine learning models.\n\n\n\n- Develop and enhance chatbot solutions by integrating language models and rule-based functions to provide accurate and reliable recommendations.\n\n\n\n- Implement moderation layers and fine-tune models to improve chatbot performance and user experience.\n\n\n\n- The design process flows for on-demand availability of AI models without the need for extra coding.\n\n\n\n- Fine-tune models using advanced techniques and enterprise data to optimize performance.\n\n\n\n- Design architecture for information retrieval and implement caching mechanisms for faster retrievals.\n\n\n\n- Perform data gathering, preprocessing, and model building tasks for various AI projects, including Q&A systems and healthcare applications.\n\n\n\n- Utilize NLP techniques and libraries such as NLTK for text processing, cleaning, and\n\ninformation extraction.\n\n\n\n\nRequired Skills :\n\n\n\n\n- Bachelor's or Master's degree in Computer Science, Engineering, or related field.\n\n\n\n- 2+ years of experience in application development, enhancement, and product delivery.\n\n\n\n- Proficiency in Python programming language.\n\n\n\n- Experience with Langchain.\n\n\n- Hands-on experience with LLM",
       "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-data-modeling-linkage-it-private-limited-mumbai-4-to-9-years-140926905308",
       "normalized_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-data-modeling-linkage-it-private-limited-mumbai-4-to-9-years-140926905308",
-      "apply_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-data-modeling-linkage-it-private-limited-mumbai-4-to-9-years-140926905308",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[140926905308]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22140926905308%22%3A200%7D&jobTitle=Artificial%20Intelligence%20Engineer%20-%20Data%20Modeling",
       "experience_required": "4-9 Yrs",
       "location": "Remote",
       "posted_date": "3 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 2,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Mumbai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 18,
     "limit": 15,
-    "total_records": 305,
-    "total_pages": 21
+    "total_records": 464,
+    "total_pages": 31
   }
 }

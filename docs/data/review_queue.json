@@ -344,6 +344,131 @@
     "priority": "high"
   },
   {
+    "id": 42576,
+    "company_name": "Acesoft",
+    "job_title": "Generative AI Engineer",
+    "location": "Hybrid - Bengaluru",
+    "experience_required": "3-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-acesoft-labs-bengaluru-3-to-6-years-180926918621",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "Streamlit",
+      "Django",
+      "Angular",
+      "Semantic Kernel",
+      "function calling",
+      "public speaking"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42711,
+    "company_name": "CorroHealth",
+    "job_title": "AI Engineer",
+    "location": "Noida",
+    "experience_required": "3-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-corrohealth-noida-3-to-7-years-180926034447",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LangGraph experience, AWS deployments, but lacks fine-tuning and React.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Fine-tuning LLMs",
+      "Hugging Face Transformers",
+      "React",
+      "Guardrails AI",
+      "MLOps tools"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42740,
+    "company_name": "Careallianz",
+    "job_title": "Conversational AI Engineer",
+    "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-conversational-ai-engineer-allianz-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-1-to-3-years-060226506993",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM experience, transferable cloud and backend skills, but lacks Cognigy platform experience.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Cognigy"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42742,
+    "company_name": "LLP S3bglobal Technologies",
+    "job_title": "AI Engineer",
+    "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-s3b-global-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-5-years-040825507229",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42743,
+    "company_name": "Elevation Capital",
+    "job_title": "AI Engineer",
+    "location": "New Delhi, Bengaluru, Pune, Kolkata, Chennai, Hyderabad, Mumbai",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-elevation-capital-kolkata-mumbai-new-delhi-hyderabad-pune-chennai-bengaluru-3-to-8-years-040825507220",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LLM experience, transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42762,
+    "company_name": "Flam",
+    "job_title": "AI Engineer",
+    "location": "Bengaluru",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-flam-bengaluru-2-to-5-years-110926502836",
+    "score": 75.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42872,
+    "company_name": "Five Exceptions Software Solutions",
+    "job_title": "AI Security Engineer",
+    "location": "Indore",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-security-engineer-fiveexceptions-software-solutions-indore-2-to-6-years-140926503782",
+    "score": 75.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "SAST",
+      "SCA",
+      "IaC scanning",
+      "Security tools"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 42032,
     "company_name": "Qloron Technology",
     "job_title": "GenAI Engineer",
@@ -412,6 +537,96 @@
       "Amazon Redshift",
       "Text-to-SQL",
       "AgentCore"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42374,
+    "company_name": "Sourcefuse Technologies",
+    "job_title": "Polyglot Developer",
+    "location": "Noida",
+    "experience_required": "3-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-polyglot-developer-sourcefuse-technologies-india-pvt-ltd-noida-3-to-6-years-100726501488",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and AI experience, but lacks core frontend and containerization skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "TypeScript",
+      "Node.js",
+      "Angular",
+      "Docker",
+      "Kubernetes"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42478,
+    "company_name": "Capgemini",
+    "job_title": "Amazon Connect Developer",
+    "location": "Bengaluru, Chennai, Hyderabad",
+    "experience_required": "1-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-amazon-connect-developer-capgemini-technology-services-india-limited-hyderabad-chennai-bengaluru-1-to-6-years-180926926091",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG experience and AWS expertise, but lacks Amazon Connect and Lex experience.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Amazon Connect",
+      "Lex",
+      "Polly",
+      "Kinesis",
+      "Amazon Q",
+      "NodeJS",
+      "Terraform"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42516,
+    "company_name": "EY",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Hybrid - Noida, Bengaluru, Kochi",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-ey-kochi-noida-bengaluru-4-to-8-years-190726003802",
+    "score": 70.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks Azure OpenAI.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42760,
+    "company_name": "Ecolab Global Services",
+    "job_title": "Lead AI Engineer",
+    "location": "Bengaluru",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-lead-ai-engineer-ecolab-global-services-private-limited-bengaluru-2-to-6-years-140926916330",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks Azure OpenAI.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 42892,
+    "company_name": "Jalopeura Technology",
+    "job_title": "Prompt Engineer",
+    "location": "Remote",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-prompt-engineer-jalopeura-technology-remote-4-to-9-years-180526507151",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and prompt engineering experience; lacks Azure OpenAI exposure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
     ],
     "priority": "high"
   },
@@ -504,6 +719,24 @@
       "Oracle AI",
       "Fusion AI Agent Studio",
       "OCI GenAI"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 42886,
+    "company_name": "Oliv Ai",
+    "job_title": "GTM Engineer",
+    "location": "Remote",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-gtm-engineer-oliv-ai-remote-4-to-9-years-240726506165",
+    "score": 35.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG and AI workflow experience but lacks marketing automation and campaign experience.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Marketing Automation Tools",
+      "ABM",
+      "CRM Integration"
     ],
     "priority": "medium"
   }
