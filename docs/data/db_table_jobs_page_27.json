@@ -127,13 +127,13 @@
       "job_description": "JOB DETAILS:\n\nJob Title: AI Engineer\n\nLocations: PAN India\n\nExperience Range: 3+ years\n\nRequired Skills: Open AI or Gen AI or Azure AI or AWS AI, Python or Java or Node.js or .Net, Angular or React, Langchain and LangGraph\n\nJob Description:\n\n\" GenAI: Hands-on integrating AI APIs (OpenAI/Azure OpenAI/AWS Bedrock), building RAG pipelines, prompt engineering, model fine-tuning, and working with vector DBs/semantic search.\n\nLLM app frameworks & orchestration: hands-on with LangChain and LangGraph for production agentic workflows.\n\nBackend: Strong in at least onePython (FastAPI/Flask/Django) or Node.js (Express) or Java (Spring Boot) or C# (.NET).\n\nFrontend: Proficiency with modern JS frameworks (React/Angular preferred), responsive design, and UX principles.\n\nAPIs & Integration: Strong experience with REST, GraphQL, and common integration patterns.\"",
       "job_url": "https://www.naukri.com/job-listings-ai-artificial-intelligence-engineer-cloudxtreme-kolkata-pune-delhi-ncr-3-to-8-years-040926928022",
       "normalized_url": "https://www.naukri.com/job-listings-ai-artificial-intelligence-engineer-cloudxtreme-kolkata-pune-delhi-ncr-3-to-8-years-040926928022",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[040926928022]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22040926928022%22%3A200%7D&jobTitle=AI%2FArtificial%20Intelligence%20Engineer",
       "experience_required": "3-8 Yrs",
       "location": "Hybrid - Pune, Kolkata, Delhi / NCR",
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Kolkata",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 27,
     "limit": 15,
-    "total_records": 464,
-    "total_pages": 31
+    "total_records": 622,
+    "total_pages": 42
   }
 }

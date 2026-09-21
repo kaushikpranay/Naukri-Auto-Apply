@@ -95,12 +95,20 @@
       "selected_option": "Indore",
       "tenant": "",
       "created_at": "2026-09-17T15:15:26.267228"
+    },
+    {
+      "id": 27,
+      "question_key": "exp_python__options__no|yes",
+      "raw_answer": "2",
+      "selected_option": "No",
+      "tenant": "",
+      "created_at": "2026-09-22T00:18:33.763421"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 26,
+    "total_records": 27,
     "total_pages": 2
   }
 }

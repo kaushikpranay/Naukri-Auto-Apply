@@ -205,16 +205,16 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "GenAI Engineer",
       "search_location": "Remote",
       "created_at": "2026-09-19T12:36:15.057242",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-22T00:39:04.197575"
     },
     {
       "id": 42352,
@@ -319,13 +319,13 @@
       "job_description": "The Role\n\nAre you passionate about protecting companies from cyber threatsDo you want to be part of a team that safeguards the digital assets of cutting-edge organizationsKyndryl is seeking a Cybersecurity Specialist to join our team of Technical Specialists.\n\nAs a Cybersecurity Specialist, you will be at the forefront of protecting Kyndryl's customers computer systems and networks from unauthorized access, use, disclosure, disruption, modification, or destruction. You will use a variety of tools and techniques to defend against a wide range of cyber threats, such as malware, ransomware, phishing attacks, and data breaches.\n\nBut this is not all. You will implement new cybersecurity systems and policies to ensure the protection of our customers data and assets. You will monitor and review potential threats from various cybersecurity systems and conduct proofs-of-concept (POCs) with new cyber security software to evaluate its effectiveness and potential integration into the organization's systems.\n\nNot only will you be responsible for ensuring the security of customers' network and systems, but you will also enrich the organization's knowledge towards potential cyber threats and best practices. You will provide automation scripts for threat hunting in customer environments using lessons learned from cyber-attacks.\n\nYou will also have the opportunity to conduct penetration testing and threat and vulnerability assessments of applications, operating systems, and networks, responding to cybersecurity breaches and identifying intrusions. You will research and evaluate cybersecurity threats and perform root cause analysis, all while assisting in the creation and implementation of security solutions.\n\nAdditionally, you will have the opportunity to work in the area of security innovation, creating and experimenting with outside the box ideas that could change the trajectory of cybersecurity.\n\nThis is a unique opportunity to work with cutting-edge technology and be part of a dynamic team, making a significant impact in the world of cybersecurity.\n\n\n\nDisclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-soar-automation-engineer-genai-engineer-kyndryl-noida-2-to-7-years-200526503159",
       "normalized_url": "https://www.naukri.com/job-listings-soar-automation-engineer-genai-engineer-kyndryl-noida-2-to-7-years-200526503159",
-      "apply_url": "",
+      "apply_url": "https://kyndryl.wd5.myworkdayjobs.com/en-US/kyndrylprofessionalcareers/job/Greater-Noida-Uttar-Pradesh-India/Cybersecurity_R-52995-1",
       "experience_required": "2-7 Yrs",
       "location": "Noida",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 21,
     "limit": 15,
-    "total_records": 464,
-    "total_pages": 31
+    "total_records": 622,
+    "total_pages": 42
   }
 }

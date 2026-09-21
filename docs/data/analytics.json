@@ -7,16 +7,24 @@
     {
       "date": "2026-09-19",
       "count": 159
+    },
+    {
+      "date": "2026-09-21",
+      "count": 158
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 205
+      "count": 272
+    },
+    {
+      "score_range": 10,
+      "count": 6
     },
     {
       "score_range": 20,
-      "count": 2
+      "count": 5
     },
     {
       "score_range": 30,
@@ -28,19 +36,19 @@
     },
     {
       "score_range": 60,
-      "count": 4
+      "count": 6
     },
     {
       "score_range": 70,
-      "count": 36
+      "count": 53
     },
     {
       "score_range": 80,
-      "count": 175
+      "count": 227
     },
     {
       "score_range": 90,
-      "count": 40
+      "count": 51
     }
   ],
   "ats_distribution": [
@@ -52,11 +60,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 44
+      "count": 58
     },
     {
       "status": "applied_successfully",
-      "count": 61
+      "count": 83
     },
     {
       "status": "easy_apply",
@@ -64,15 +72,15 @@
     },
     {
       "status": "evaluated",
-      "count": 242
+      "count": 321
     },
     {
       "status": "external_portal",
-      "count": 82
+      "count": 116
     },
     {
       "status": "failed",
-      "count": 25
+      "count": 32
     },
     {
       "status": "needs_human_review",
@@ -80,7 +88,7 @@
     },
     {
       "status": "pending",
-      "count": 1
+      "count": 2
     },
     {
       "status": "unknown",
@@ -88,49 +96,49 @@
     },
     {
       "status": "walk_in",
-      "count": 1
+      "count": 2
     }
   ],
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 25
+      "count": 31
     },
     {
       "name": "Leading Client",
-      "count": 19
+      "count": 22
     },
     {
       "name": "Sparix Global",
-      "count": 17
+      "count": 20
+    },
+    {
+      "name": "Tata Consultancy Services",
+      "count": 18
     },
     {
       "name": "Soul Ai",
       "count": 13
     },
     {
-      "name": "Tata Consultancy Services",
+      "name": "PwC",
       "count": 12
     },
     {
-      "name": "Fractal Analytics",
-      "count": 7
-    },
-    {
-      "name": "Ascendion Engineering",
-      "count": 7
-    },
-    {
       "name": "Epam Systems",
-      "count": 6
+      "count": 10
+    },
+    {
+      "name": "Fractal Analytics",
+      "count": 8
     },
     {
       "name": "BIG4",
-      "count": 6
+      "count": 8
     },
     {
-      "name": "PwC",
-      "count": 5
+      "name": "Ascendion Engineering",
+      "count": 8
     }
   ],
   "failure_reasons": [

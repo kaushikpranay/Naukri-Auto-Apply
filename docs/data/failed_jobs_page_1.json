@@ -1,6 +1,41 @@
 {
   "jobs": [
     {
+      "id": 42874,
+      "job_title": "AI / ML Engineer",
+      "company_name": "Cerebra",
+      "job_description": "Role & responsibilities\n\n\n\nExpected to perform independently and become an SME.\nRequired active participation/contribution in team discussions.\nContribute in providing solutions to work related problems.\nCollaborate with team members to continuously improve AI models and system architectures.\nAssist in documenting technical processes and best practices to support knowledge sharing.\nSupport junior team members by providing guidance and sharing expertise.\nEngage in research and evaluation of emerging AI technologies to enhance project outcomes.\n\n\n\nPreferred candidate profile\n\n\n\nMust To Have Skills: Proficiency in Machine Learning (ML).\nGood To Have Skills: Experience with Generative AI.\nStrong understanding of machine learning algorithms and their practical applications.\nExperience in developing and deploying AI models within cloud or on-premises environments.\nFamiliarity with deep learning frameworks and neural network architectures.\nAbility to work with AI tools to build scalable and production-quality solutions.",
+      "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-cerebra-indore-hyderabad-bengaluru-4-to-6-years-070726001383",
+      "normalized_url": "https://www.naukri.com/job-listings-ai-ml-engineer-cerebra-indore-hyderabad-bengaluru-4-to-6-years-070726001383",
+      "apply_url": "https://www.naukri.com/job-listings-ai-ml-engineer-cerebra-indore-hyderabad-bengaluru-4-to-6-years-070726001383",
+      "experience_required": "4-6 Yrs",
+      "location": "Bengaluru, Hyderabad, Indore",
+      "posted_date": "1 day ago",
+      "recruiter_name": "",
+      "recruiter_email": "",
+      "status": "failed",
+      "retry_count": 1,
+      "search_keyword": "AI Engineer",
+      "search_location": "Indore",
+      "created_at": "2026-09-19T13:04:49.751073",
+      "failure_type": "DOM_ELEMENT_NOT_FOUND",
+      "failure_category": "DETERMINISTIC",
+      "failure_reason": "Form fill error on: relocation_city_preference: No checkbox option matched answer 'Noida'",
+      "last_fill_error": "Form fill error on: relocation_city_preference: No checkbox option matched answer 'Noida'",
+      "failed_at": "2026-09-22T00:22:58.740692",
+      "ai_score": 85.0,
+      "ai_action": "apply",
+      "ai_priority": "high",
+      "ai_confidence": 82.0,
+      "ai_reason": "Strong production RAG experience and transferable cloud skills.",
+      "app_type": "easy_apply",
+      "app_status": "discovered",
+      "app_date": "2026-09-22T00:22:58.735057",
+      "ats_status": null,
+      "ats_platform": "Naukri",
+      "application_type": "INTERNAL"
+    },
+    {
       "id": 42077,
       "job_title": "AI/GenAI Engineer - Contract",
       "company_name": "Tanisha Systems",
@@ -839,54 +874,24 @@
       "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
-    },
-    {
-      "id": 42833,
-      "job_title": "AI Engineer",
-      "company_name": "Datazoic Machines",
-      "job_description": "Role & Responsibilities\n\nConversational AI & Chatbot Development\nDesign and implement intelligent chatbot solutions using modern LLMs like GPT-4, Claude, LLaMA, etc.\nBuild prompt strategies, chains, and RAG (Retrieval-Augmented Generation) pipelines for enhanced context-aware responses.\nIntegrate chatbot systems with APIs, databases, and enterprise applications.\nOptimize model usage to balance cost, latency, and accuracy.\nDevelop fallback logic, session tracking, and context management for multi-turn conversations.\nEnsure secure, ethical, and responsible AI usage.\nAI/ML for Predictive Analytics\nAnalyze historical and real-time data to identify trends, anomalies, and patterns.\nWork with structured and unstructured data including text, time series, and tabular data.\nPresent actionable insights from models to stakeholders in clear and explainable ways.\nArchitecture & Deployment\nDesign and maintain scalable AI/ML pipelines and architecture.\nUse MLOps tools to automate model training, testing, deployment, and monitoring (e.g., MLflow, DVC, Airflow, Kubeflow).\nIntegrate models into production-grade applications using APIs and cloud ML services.\n\nQualifications\n\n4 years of relevant experience in AI Engineering.\nStrong experience with LLM-based chatbot frameworks: LangChain, LlamaIndex, Langgraph, etc.\nExpertise in prompt engineering, embeddings, and transformer-based models.\nProficiency in Python (preferred) or other languages for ML and scripting.\nFamiliarity with data pipelines, feature stores, and ETL processes.\nExperience with vector databases (e.g., Pinecone, FAISS, Weaviate).\nStrong understanding of machine learning algorithms, statistics, and data modeling.",
-      "job_url": "https://www.naukri.com/job-listings-ai-engineer-datazoic-machines-private-limited-chennai-2-to-4-years-080926912715",
-      "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-datazoic-machines-private-limited-chennai-2-to-4-years-080926912715",
-      "apply_url": "https://www.naukri.com/job-listings-ai-engineer-datazoic-machines-private-limited-chennai-2-to-4-years-080926912715",
-      "experience_required": "2-4 Yrs",
-      "location": "Chennai",
-      "posted_date": "1 week ago",
-      "recruiter_name": "",
-      "recruiter_email": "",
-      "status": "failed",
-      "retry_count": 2,
-      "search_keyword": "AI Engineer",
-      "search_location": "Chennai",
-      "created_at": "2026-09-19T13:02:39.165709",
-      "failure_type": "TIMEOUT",
-      "failure_category": "TRANSIENT",
-      "failure_reason": "TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed",
-      "last_fill_error": "TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed",
-      "failed_at": "2026-09-19T16:26:26.071610",
-      "ai_score": 85.0,
-      "ai_action": "apply",
-      "ai_priority": "high",
-      "ai_confidence": 82.0,
-      "ai_reason": "Strong production RAG experience and transferable cloud skills.",
-      "app_type": null,
-      "app_status": "discovery_failed",
-      "app_date": "2026-09-19T16:26:26.065844",
-      "ats_status": null,
-      "ats_platform": "Naukri",
-      "application_type": "INTERNAL"
     }
   ],
   "pagination": {
     "page": 1,
     "limit": 25,
-    "total_records": 25,
-    "total_pages": 1
+    "total_records": 32,
+    "total_pages": 2
   },
   "summary": {
     "by_type": [
       {
         "type": "OTHER",
-        "count": 24,
+        "count": 30,
+        "category": "DETERMINISTIC"
+      },
+      {
+        "type": "DOM_ELEMENT_NOT_FOUND",
+        "count": 1,
         "category": "DETERMINISTIC"
       },
       {
@@ -895,6 +900,6 @@
         "category": "TRANSIENT"
       }
     ],
-    "total_failed": 25
+    "total_failed": 32
   }
 }

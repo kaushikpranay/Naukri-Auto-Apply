@@ -19,12 +19,82 @@
       "required": 0,
       "answer": null,
       "detected_at": "2026-09-19T16:22:10.278107"
+    },
+    {
+      "id": 824,
+      "job_id": 42844,
+      "question_key": "exp_backend_engineering",
+      "question_text": "How many years of experience do you have in Backend Engineering?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-09-22T00:19:19.160179"
+    },
+    {
+      "id": 825,
+      "job_id": 42844,
+      "question_key": "applied_link_given_jd",
+      "question_text": "Have you applied on the link given in the jd?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Ys",
+      "detected_at": "2026-09-22T00:19:37.074781"
+    },
+    {
+      "id": 827,
+      "job_id": 42844,
+      "question_key": "exp_python",
+      "question_text": "Do you have 4 6 years of experience in Python, FastAPI, distributed systems, and Kubernetes/GCP?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-09-22T00:20:14.222618"
+    },
+    {
+      "id": 828,
+      "job_id": 42874,
+      "question_key": "interested_contract_hire_opportunity",
+      "question_text": "Are you Interested In Contract to hire Opportunity",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-09-22T00:22:34.176405"
+    },
+    {
+      "id": 830,
+      "job_id": 42874,
+      "question_key": "python_experience",
+      "question_text": "How many years of experience do you have in Python & AI Model Development?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-09-22T00:22:58.737170"
+    },
+    {
+      "id": 831,
+      "job_id": 43472,
+      "question_key": "available_take_interview_virtual",
+      "question_text": "Are you available to take an interview(virtual)?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-09-22T00:28:29.852176"
+    },
+    {
+      "id": 833,
+      "job_id": 43567,
+      "question_key": "used_any_ai_tools_if_yes_which_ai_tools_used",
+      "question_text": "Have you used any AI tools? If yes, which AI tools have you used?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-09-22T00:37:14.022675"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 16,
+    "total_records": 23,
     "total_pages": 2
   }
 }

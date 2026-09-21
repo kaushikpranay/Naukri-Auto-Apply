@@ -277,16 +277,16 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "GenAI Engineer",
       "search_location": "Pune",
       "created_at": "2026-09-19T12:40:58.410122",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-22T00:39:12.426300"
     },
     {
       "id": 42439,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 22,
     "limit": 15,
-    "total_records": 464,
-    "total_pages": 31
+    "total_records": 622,
+    "total_pages": 42
   }
 }
