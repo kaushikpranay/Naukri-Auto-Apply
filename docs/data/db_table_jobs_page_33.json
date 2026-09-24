@@ -31,13 +31,13 @@
       "job_description": "Close\nArtificial Intelligence Engineer\n\n\nJob Description\n\n\n\nDesigning and implementing AI-enabled solutions.\n\n\nWorking closely with the client to understand business needs and translate them into a technical solution.\n\n\nDefining the success metrics.\n\n\nDeploying and monitoring the solution.\n\n\n\n\nJob Specification\n\n\n\n4-8 years experience in Data Science, focused on generative AI, agentic AI, LLMs, and NLP\n\n\nHands-on with RAG pipelines, knowledge graphs, and prompt engineering\n\n\nSkilled in Azure AI tools: Azure OpenAI, Cognitive Services, and Azure ML\n\n\nExperience with LangChain, Agentic AI frameworks, and orchestration tools\n\n\nProficient in Hugging Face for model building and fine-tuning\n\n\nStrong Python development skills for AI applications\n\n\nWorked with vector databases, embeddings, and semantic search implementations\n\n\nGreat problem-solver who enjoys debugging and improving AI systems",
       "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-impressico-business-solutions-pvt-ltd-noida-4-to-8-years-171025501308",
       "normalized_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-impressico-business-solutions-pvt-ltd-noida-4-to-8-years-171025501308",
-      "apply_url": "",
+      "apply_url": "https://www.impressico.com/career/",
       "experience_required": "4-8 Yrs",
       "location": "Noida",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Noida",
@@ -367,14 +367,14 @@
       "job_description": "Generative Models (e.g., GPT, LLaMA, Claude, Stable Diffusion) for text, image, audio, or video generation.\nDesign and build end-to-end GenAI pipelines, from data collection and preprocessing to model training, evaluation, and deployment.\nIntegrate LLMs and multimodal AI models into production systems using frameworks like LangChain, LlamaIndex, or OpenAI APIs.\nConduct RAG (Retrieval-Augmented Generation) implementations for enterprise use cases.\nCollaborate with cross-functional teams (data science, product, and engineering) to design intelligent AI-driven applications.\nOptimize model inference, cost efficiency & response latency.\nStrong knowledge of Python and ML frameworks such as PyTorch or TensorFlow.\nExperience with LLMs (e.g., OpenAI, Anthropic, Mistral, LLaMA) and open-source libraries (LangChain, Hugging Face Transformers, etc.).\nUnderstanding of prompt engineering, embeddings, vector databases (e.g., FAISS, Pinecone, Weaviate, Milvus).\nFamiliarity with cloud platforms (AWS, Azure, or GCP) and MLOps best practices.\nExperience with diffusion or image generation models (e.g., Stable Diffusion, Midjourney, DALL\u2022E).\nExposure to multimodal systems combining text, vision, and speech.\nExposure to Azure services like Azure AI foundry, AI search etc.\nKnowledge of API development, containerization (Docker, Kubernetes) & CI/CD pipelines.",
       "job_url": "https://www.naukri.com/job-listings-gen-ai-engineer-blackstraw-technologies-chennai-4-to-8-years-210926015180",
       "normalized_url": "https://www.naukri.com/job-listings-gen-ai-engineer-blackstraw-technologies-chennai-4-to-8-years-210926015180",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-gen-ai-engineer-blackstraw-technologies-chennai-4-to-8-years-210926015180",
       "experience_required": "4-8 Yrs",
       "location": "Chennai(Pallavaram Thuraipakkam Road)",
       "posted_date": "Today",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "unknown",
+      "retry_count": 1,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Chennai",
       "created_at": "2026-09-21T23:29:02.935076",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 33,
     "limit": 15,
-    "total_records": 622,
-    "total_pages": 42
+    "total_records": 779,
+    "total_pages": 52
   }
 }

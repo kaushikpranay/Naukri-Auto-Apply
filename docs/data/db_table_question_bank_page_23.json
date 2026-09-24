@@ -77,12 +77,90 @@
       "last_used_at": "2026-09-22T00:37:14.022675",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 14689,
+      "question_key": "interested_working_infosys",
+      "question_text": "Are you interested working with infosys",
+      "answer": "Yes",
+      "usage_count": 3,
+      "last_used": "2026-09-24T23:01:21.878361",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-24T23:01:04.355965",
+      "last_used_at": "2026-09-24T23:01:21.878361",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14692,
+      "question_key": "exp_cloud_technologies",
+      "question_text": "How many years of experience do you have in Cloud Technologies?",
+      "answer": "1.5",
+      "usage_count": 2,
+      "last_used": "2026-09-24T23:05:57.196820",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-24T23:04:53.902608",
+      "last_used_at": "2026-09-24T23:05:57.196820",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14693,
+      "question_key": "currently_residing_chennai",
+      "question_text": "Are you currently residing in Chennai?",
+      "answer": "No",
+      "usage_count": 2,
+      "last_used": "2026-09-24T23:05:12.946333",
+      "field_type": "radio",
+      "created_at": "2026-09-24T23:05:04.425802",
+      "last_used_at": "2026-09-24T23:05:12.946333",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14697,
+      "question_key": "exp_claude_ai",
+      "question_text": "How many years of experience do you have in Claude AI?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-09-24T23:11:22.416541",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-24T23:11:12.342029",
+      "last_used_at": "2026-09-24T23:11:22.416541",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14699,
+      "question_key": "ready_work_5_days_wfo",
+      "question_text": "Ready to work 5 Days WFo?",
+      "answer": "Yes",
+      "usage_count": 3,
+      "last_used": "2026-09-24T23:13:33.742180",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-24T23:12:37.466561",
+      "last_used_at": "2026-09-24T23:13:33.742180",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 14702,
+      "question_key": "voice_bot_developed_and_deployed",
+      "question_text": "How many Voice bot have you developed and deployed",
+      "answer": "1",
+      "usage_count": 3,
+      "last_used": "2026-09-24T23:18:32.970375",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-24T23:17:25.914807",
+      "last_used_at": "2026-09-24T23:18:32.970375",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 23,
     "limit": 15,
-    "total_records": 335,
+    "total_records": 341,
     "total_pages": 23
   }
 }

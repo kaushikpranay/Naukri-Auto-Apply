@@ -31,13 +31,13 @@
       "job_description": "Flam is building the next generation of interactive media through its content format. We are an AI-native technology company transforming how brands and consumers interact through immersive, interactive content. Our technology enables rich, app-less experiences that can be launched instantly on smartphones, creating a fundamentally different way for brands to engage consumers. We are backed by leading investors and already work with some of the worlds largest brands. We are now building Flicks, our interactive media format for the US market.\n\nAbout the role\n\nFlam builds multimodal AI systems that ship to real customers. Our stack spans four production surfaces:\n\nFalcon - Our LLM system, built on a sparse-MoE backbone.\nFinesse - Our TTS and cross-lingual voice cloning system.\nWe are a small team. Whoever joins will own systems end-to-end training, evaluation, serving, and the latency budget.\nResponsibilities\nFine-tune and evaluate open-weight models LoRA/QLoRA, full SFT, preference tuning) and get them into production without a quality regression.\nOptimize inference: quantization FP8/NVFP4/INT4, speculative decoding, prefix and KV-cache strategies, batching and scheduling on vLLM or SGLang.\nBuild evaluation harnesses that tell us something true - benchmark suites, regression gates, and per-release comparisons against both our own prior checkpoints and external baselines.\nOwn latency. Profile the pipeline, find where the milliseconds go, and remove them.\nTake research to production: read the paper, replicate it, decide honestly whether its worth shipping, and then ship it.\nWrite and maintain the serving infrastructure around your models -containers, autoscaling, GPU scheduling, observability\nWhat were looking for\nRequired\n2+ years building ML systems that ran in production, not only in notebooks.\nStrong Python and PyTorch. You can read a model implementation and modify it, not just call .fit.\nHands-on experience with at least one modern inference stack (vLLM, SGLang, TensorRTLLM, or TGI) and a real understanding of what makes it fast.\nDemonstrated fine-tuning experience - youve trained something, evaluated it properly, and know why your eval numbers meant what you claimed.\nComfort with GPU-level reasoning: memory layout, precision trade-offs, where the bottleneck actually is.\nAbility to work from a paper. We move on recent research and expect you to be able to read it.\nStrongly preferred\nExperience in one or more of: speech ASR/TTS, diffusion and image generation, or video/avatar generation.\nQuantization experience beyond running an off-the-shelf script.\nReal-time streaming systems WebRTC, low-latency audio/video pipelines).\nIndic language NLP, multilingual tokenizer work, or code-mixed data.\nCloud GPU deployment on GCP, AWS, or RunPod - including the unglamorous parts.\nOur stack\n\nPyTorch vLLM SGLang TensorRT / ONNX Unsloth LLaMAFactory TRL Milvus BGEM3 Redis NATS Docker GCP RunPod WebRTC ComfyUI.\n\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-flam-bengaluru-2-to-5-years-110926502836",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-flam-bengaluru-2-to-5-years-110926502836",
-      "apply_url": "",
+      "apply_url": "https://flamapp.keka.com/careers/jobdetails/87993",
       "experience_required": "2-5 Yrs",
       "location": "Bengaluru",
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 28,
     "limit": 15,
-    "total_records": 622,
-    "total_pages": 42
+    "total_records": 779,
+    "total_pages": 52
   }
 }

@@ -11,20 +11,24 @@
     {
       "date": "2026-09-21",
       "count": 158
+    },
+    {
+      "date": "2026-09-24",
+      "count": 157
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 272
+      "count": 344
     },
     {
       "score_range": 10,
-      "count": 6
+      "count": 7
     },
     {
       "score_range": 20,
-      "count": 5
+      "count": 6
     },
     {
       "score_range": 30,
@@ -35,20 +39,24 @@
       "count": 1
     },
     {
+      "score_range": 50,
+      "count": 2
+    },
+    {
       "score_range": 60,
-      "count": 6
+      "count": 7
     },
     {
       "score_range": 70,
-      "count": 53
+      "count": 66
     },
     {
       "score_range": 80,
-      "count": 227
+      "count": 284
     },
     {
       "score_range": 90,
-      "count": 51
+      "count": 61
     }
   ],
   "ats_distribution": [
@@ -60,11 +68,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 58
+      "count": 66
     },
     {
       "status": "applied_successfully",
-      "count": 83
+      "count": 105
     },
     {
       "status": "easy_apply",
@@ -72,15 +80,15 @@
     },
     {
       "status": "evaluated",
-      "count": 321
+      "count": 397
     },
     {
       "status": "external_portal",
-      "count": 116
+      "count": 150
     },
     {
       "status": "failed",
-      "count": 32
+      "count": 46
     },
     {
       "status": "needs_human_review",
@@ -92,20 +100,24 @@
     },
     {
       "status": "unknown",
-      "count": 1
+      "count": 3
     },
     {
       "status": "walk_in",
-      "count": 2
+      "count": 3
     }
   ],
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 31
+      "count": 38
     },
     {
       "name": "Leading Client",
+      "count": 35
+    },
+    {
+      "name": "Tata Consultancy Services",
       "count": 22
     },
     {
@@ -113,32 +125,28 @@
       "count": 20
     },
     {
-      "name": "Tata Consultancy Services",
+      "name": "Accenture",
       "count": 18
+    },
+    {
+      "name": "PwC",
+      "count": 14
     },
     {
       "name": "Soul Ai",
       "count": 13
     },
     {
-      "name": "PwC",
-      "count": 12
-    },
-    {
       "name": "Epam Systems",
-      "count": 10
+      "count": 13
     },
     {
-      "name": "Fractal Analytics",
-      "count": 8
-    },
-    {
-      "name": "BIG4",
-      "count": 8
+      "name": "Capgemini",
+      "count": 9
     },
     {
       "name": "Ascendion Engineering",
-      "count": 8
+      "count": 9
     }
   ],
   "failure_reasons": [

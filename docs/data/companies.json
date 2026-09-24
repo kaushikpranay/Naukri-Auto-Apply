@@ -3,18 +3,27 @@
     "name": "Infosys",
     "ats_type": "Naukri",
     "priority": "low",
-    "jobs_count": 31,
-    "applications_count": 9,
-    "success_count": 5,
+    "jobs_count": 38,
+    "applications_count": 10,
+    "success_count": 6,
     "failure_count": 0
   },
   {
     "name": "Leading Client",
     "ats_type": "Naukri",
     "priority": "low",
+    "jobs_count": 35,
+    "applications_count": 13,
+    "success_count": 9,
+    "failure_count": 4
+  },
+  {
+    "name": "Tata Consultancy Services",
+    "ats_type": "Naukri",
+    "priority": "low",
     "jobs_count": 22,
     "applications_count": 2,
-    "success_count": 2,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -27,13 +36,22 @@
     "failure_count": 0
   },
   {
-    "name": "Tata Consultancy Services",
+    "name": "Accenture",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 18,
-    "applications_count": 2,
+    "applications_count": 8,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
+  },
+  {
+    "name": "PwC",
+    "ats_type": "Naukri",
+    "priority": "medium",
+    "jobs_count": 14,
+    "applications_count": 4,
+    "success_count": 3,
+    "failure_count": 1
   },
   {
     "name": "Soul Ai",
@@ -45,22 +63,40 @@
     "failure_count": 0
   },
   {
-    "name": "PwC",
-    "ats_type": "Naukri",
-    "priority": "medium",
-    "jobs_count": 12,
-    "applications_count": 3,
-    "success_count": 3,
-    "failure_count": 0
-  },
-  {
     "name": "Epam Systems",
     "ats_type": "Naukri",
     "priority": "low",
-    "jobs_count": 10,
+    "jobs_count": 13,
     "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
+  },
+  {
+    "name": "Capgemini",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 9,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
+    "name": "Ascendion Engineering",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 9,
+    "applications_count": 2,
+    "success_count": 2,
+    "failure_count": 0
+  },
+  {
+    "name": "Shashwath Solution",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 8,
+    "applications_count": 2,
+    "success_count": 1,
+    "failure_count": 1
   },
   {
     "name": "Fractal Analytics",
@@ -69,6 +105,15 @@
     "jobs_count": 8,
     "applications_count": 5,
     "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "EY",
+    "ats_type": "Naukri",
+    "priority": "medium",
+    "jobs_count": 8,
+    "applications_count": 3,
+    "success_count": 2,
     "failure_count": 0
   },
   {
@@ -81,12 +126,12 @@
     "failure_count": 1
   },
   {
-    "name": "Ascendion Engineering",
+    "name": "Nagarro",
     "ats_type": "Naukri",
     "priority": "low",
-    "jobs_count": 8,
-    "applications_count": 2,
-    "success_count": 2,
+    "jobs_count": 7,
+    "applications_count": 0,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -99,20 +144,38 @@
     "failure_count": 0
   },
   {
-    "name": "EY",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 6,
-    "applications_count": 3,
-    "success_count": 2,
-    "failure_count": 0
-  },
-  {
     "name": "Crisil",
     "ats_type": "Naukri",
     "priority": "low",
-    "jobs_count": 6,
+    "jobs_count": 7,
     "applications_count": 2,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "LTM",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 6,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Innocode Ventures",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 6,
+    "applications_count": 6,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Cognizant",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 6,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -126,30 +189,21 @@
     "failure_count": 1
   },
   {
-    "name": "Capgemini",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 6,
-    "applications_count": 1,
-    "success_count": 1,
-    "failure_count": 0
-  },
-  {
-    "name": "Accenture",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 6,
-    "applications_count": 2,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Synechron",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 5,
-    "applications_count": 2,
+    "applications_count": 4,
     "success_count": 2,
+    "failure_count": 1
+  },
+  {
+    "name": "Rarr Technologies",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 5,
+    "applications_count": 0,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -162,20 +216,20 @@
     "failure_count": 0
   },
   {
+    "name": "Experis",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 5,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Exavalu",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 5,
     "applications_count": 2,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Cognizant",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 5,
-    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -198,15 +252,6 @@
     "failure_count": 0
   },
   {
-    "name": "Shashwath Solution",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 4,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Qloron Technology",
     "ats_type": "Naukri",
     "priority": "high",
@@ -216,7 +261,7 @@
     "failure_count": 0
   },
   {
-    "name": "Nagarro",
+    "name": "Optum",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 4,
@@ -225,20 +270,29 @@
     "failure_count": 0
   },
   {
-    "name": "LTM",
+    "name": "Luxoft",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 4,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 3,
+    "success_count": 1,
+    "failure_count": 2
+  },
+  {
+    "name": "Iris Software",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 4,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
-    "name": "Experis",
+    "name": "CorroHealth",
     "ats_type": "Naukri",
-    "priority": "low",
+    "priority": "high",
     "jobs_count": 4,
-    "applications_count": 0,
+    "applications_count": 4,
     "success_count": 0,
     "failure_count": 0
   },
@@ -250,6 +304,15 @@
     "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
+  },
+  {
+    "name": "Third Essential It Solution",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 3,
+    "applications_count": 3,
+    "success_count": 0,
+    "failure_count": 2
   },
   {
     "name": "Tech Mahindra",
@@ -288,31 +351,22 @@
     "failure_count": 0
   },
   {
-    "name": "Rarr Technologies",
+    "name": "Paramatrix Technologies",
     "ats_type": "Naukri",
-    "priority": "low",
+    "priority": "high",
     "jobs_count": 3,
-    "applications_count": 0,
+    "applications_count": 3,
     "success_count": 0,
     "failure_count": 0
   },
   {
-    "name": "Optum",
+    "name": "Nasu Group",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 3,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
-  },
-  {
-    "name": "Luxoft",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 3,
-    "applications_count": 2,
-    "success_count": 0,
-    "failure_count": 2
   },
   {
     "name": "Lorven Technologies",
@@ -339,15 +393,6 @@
     "jobs_count": 3,
     "applications_count": 3,
     "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Iris Software",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 3,
-    "applications_count": 1,
-    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -387,20 +432,20 @@
     "failure_count": 0
   },
   {
+    "name": "EXL",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 3,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Databricks",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 3,
     "applications_count": 3,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "CorroHealth",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 3,
-    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -411,6 +456,24 @@
     "jobs_count": 3,
     "applications_count": 0,
     "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Blackstraw Technologies",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 3,
+    "applications_count": 3,
+    "success_count": 0,
+    "failure_count": 1
+  },
+  {
+    "name": "BMC Software",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 3,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -450,12 +513,39 @@
     "failure_count": 0
   },
   {
+    "name": "Willware Technologies",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Wells Fargo",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Vbeyond Corporation",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 2,
     "applications_count": 2,
     "success_count": 1,
+    "failure_count": 1
+  },
+  {
+    "name": "VOLKSWAGEN GROUP DIGITAL SOLUTIONS PRIVATE LIMITED",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 1,
+    "success_count": 0,
     "failure_count": 1
   },
   {
@@ -477,13 +567,22 @@
     "failure_count": 0
   },
   {
-    "name": "Third Essential It Solution",
+    "name": "Tristone Strategic Partners",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 2,
     "applications_count": 2,
     "success_count": 0,
-    "failure_count": 2
+    "failure_count": 0
+  },
+  {
+    "name": "Synopsys",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
   },
   {
     "name": "Srijan",
@@ -491,6 +590,24 @@
     "priority": "low",
     "jobs_count": 2,
     "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Soothsayer Analytics",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Snowrelic",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -504,11 +621,29 @@
     "failure_count": 0
   },
   {
+    "name": "Saanvi Nexus",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
     "name": "Rejolut",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 2,
     "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "PwC India",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -520,6 +655,15 @@
     "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
+  },
+  {
+    "name": "Navlakha Management Services",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 1,
+    "failure_count": 1
   },
   {
     "name": "NTT DATA BUSINESS SOLUTIONS",
@@ -549,6 +693,24 @@
     "failure_count": 0
   },
   {
+    "name": "Kyndryl",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Kodo",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Invarsys Consultancy",
     "ats_type": "Naukri",
     "priority": "low",
@@ -562,12 +724,30 @@
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 2,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
   {
     "name": "Hiring for Leading MNC Company!!",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Hiring for Infosys",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
+    "name": "Fyerx",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 2,
@@ -612,15 +792,6 @@
     "failure_count": 0
   },
   {
-    "name": "EXL",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 2,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Deloitte Shared Services India",
     "ats_type": "Naukri",
     "priority": "low",
@@ -637,6 +808,15 @@
     "applications_count": 2,
     "success_count": 1,
     "failure_count": 1
+  },
+  {
+    "name": "Data Economy",
+    "ats_type": "Naukri",
+    "priority": "medium",
+    "jobs_count": 2,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
   },
   {
     "name": "Crescendo Global Leadership Hiring India",
@@ -666,11 +846,11 @@
     "failure_count": 0
   },
   {
-    "name": "Blackstraw Technologies",
+    "name": "Bounteous",
     "ats_type": "Naukri",
-    "priority": "high",
+    "priority": "low",
     "jobs_count": 2,
-    "applications_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -693,12 +873,39 @@
     "failure_count": 0
   },
   {
+    "name": "Baker Hughes",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Axtria",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 2,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Avya Technology",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 2,
     "applications_count": 0,
     "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Aptech Limited",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -729,6 +936,15 @@
     "failure_count": 1
   },
   {
+    "name": "AU Small Finance Bank",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 2,
+    "applications_count": 2,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "pepcus software services",
     "ats_type": "Naukri",
     "priority": "high",
@@ -756,12 +972,48 @@
     "failure_count": 0
   },
   {
+    "name": "fluid.live",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
     "name": "e Software Solutions",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
     "success_count": 1,
+    "failure_count": 0
+  },
+  {
+    "name": "delaPlex",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Zippyops Consulting Services",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "ZettaMine Labs",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -837,6 +1089,15 @@
     "failure_count": 0
   },
   {
+    "name": "Wissen Infotech",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Wiom",
     "ats_type": "Naukri",
     "priority": "high",
@@ -847,15 +1108,6 @@
   },
   {
     "name": "Wilco Source",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Wells Fargo",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -900,6 +1152,24 @@
     "failure_count": 0
   },
   {
+    "name": "Walking Tree",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "WSNE Consulting",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Voiceplug",
     "ats_type": "Naukri",
     "priority": "high",
@@ -933,6 +1203,15 @@
     "jobs_count": 1,
     "applications_count": 1,
     "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Vinove Software",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -990,15 +1269,6 @@
     "failure_count": 0
   },
   {
-    "name": "VOLKSWAGEN GROUP DIGITAL SOLUTIONS PRIVATE LIMITED",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "V Group Inc",
     "ats_type": "Naukri",
     "priority": "high",
@@ -1026,16 +1296,16 @@
     "failure_count": 0
   },
   {
-    "name": "Tristone Strategic Partners",
+    "name": "Trigent Software,",
     "ats_type": "Naukri",
-    "priority": "high",
+    "priority": "low",
     "jobs_count": 1,
-    "applications_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
   {
-    "name": "Trigent Software,",
+    "name": "Tranzeal",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -1072,6 +1342,24 @@
   },
   {
     "name": "Tiger Analytics",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Three Across",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Teksystems",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -1121,15 +1409,6 @@
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Synopsys",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 1,
-    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1215,15 +1494,6 @@
     "failure_count": 0
   },
   {
-    "name": "Soothsayer Analytics",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Software Development",
     "ats_type": "Naukri",
     "priority": "high",
@@ -1251,15 +1521,6 @@
     "failure_count": 0
   },
   {
-    "name": "Snowrelic",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Sii India IT",
     "ats_type": "Naukri",
     "priority": "high",
@@ -1267,6 +1528,15 @@
     "applications_count": 1,
     "success_count": 0,
     "failure_count": 1
+  },
+  {
+    "name": "Shyftlabs",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
   },
   {
     "name": "Service Industry",
@@ -1283,6 +1553,15 @@
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Savitr Software Services",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1377,9 +1656,36 @@
     "failure_count": 0
   },
   {
+    "name": "Quess Corp",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Quantumloop Ai",
     "ats_type": "Naukri",
     "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Quadrasystems.net",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
+    "name": "Qentelli",
+    "ats_type": "Naukri",
+    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
@@ -1395,7 +1701,7 @@
     "failure_count": 0
   },
   {
-    "name": "PwC India",
+    "name": "Purplefront Technologies",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -1409,6 +1715,15 @@
     "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Predii",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1440,7 +1755,25 @@
     "failure_count": 0
   },
   {
+    "name": "Persistent",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Perisync Technologies",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Pcds Infotech",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -1458,7 +1791,7 @@
     "failure_count": 0
   },
   {
-    "name": "Paramatrix Technologies",
+    "name": "Pairsoft Technologies",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -1485,6 +1818,15 @@
     "failure_count": 0
   },
   {
+    "name": "Omozing",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Omnie Solutions",
     "ats_type": "Naukri",
     "priority": "high",
@@ -1499,6 +1841,15 @@
     "priority": "medium",
     "jobs_count": 1,
     "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Nway Technologies",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1557,15 +1908,6 @@
     "failure_count": 0
   },
   {
-    "name": "Navlakha Management Services",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 1
-  },
-  {
     "name": "Navgurukul Foundation For Social Welfare",
     "ats_type": "Naukri",
     "priority": "high",
@@ -1602,6 +1944,15 @@
     "failure_count": 0
   },
   {
+    "name": "Mypulse Io",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
     "name": "My Next Developer",
     "ats_type": "Naukri",
     "priority": "high",
@@ -1612,6 +1963,24 @@
   },
   {
     "name": "Multivac India",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Multinational Company",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Moolya Software Testing",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -1633,7 +2002,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1684,6 +2053,15 @@
   },
   {
     "name": "Maxridge",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Maruti Suzuki",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -1800,16 +2178,16 @@
     "failure_count": 0
   },
   {
-    "name": "LLP S3bglobal Technologies",
+    "name": "LTIMindtree",
     "ats_type": "Naukri",
-    "priority": "high",
+    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
   {
-    "name": "Kyndryl",
+    "name": "LLP S3bglobal Technologies",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -1822,21 +2200,12 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Kuku Fm",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
     "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
   {
-    "name": "Kodo",
+    "name": "Kuku Fm",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -1870,6 +2239,15 @@
     "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
+  },
+  {
+    "name": "Kanerika Software",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 1
   },
   {
     "name": "KPMG India",
@@ -2016,6 +2394,15 @@
     "failure_count": 0
   },
   {
+    "name": "IBM",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 1
+  },
+  {
     "name": "I Knowledge Factory",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2026,15 +2413,6 @@
   },
   {
     "name": "Huzzle",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Hiring for Infosys",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
@@ -2084,6 +2462,15 @@
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Hackajob",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2142,11 +2529,29 @@
     "failure_count": 0
   },
   {
+    "name": "Global MNC",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Global Business Ser 4u",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Genpact",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2232,6 +2637,15 @@
     "failure_count": 0
   },
   {
+    "name": "Flytbase",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
     "name": "Flexm",
     "ats_type": "Naukri",
     "priority": "low",
@@ -2245,7 +2659,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2254,7 +2668,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2304,7 +2718,34 @@
     "failure_count": 0
   },
   {
+    "name": "F5",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
+    "failure_count": 0
+  },
+  {
+    "name": "Extend Future",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Expedia",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Everforth Quinnox",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -2362,7 +2803,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2381,6 +2822,15 @@
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Ekloud Inc",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2448,6 +2898,15 @@
     "failure_count": 0
   },
   {
+    "name": "Docusign",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Digital It Hub",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2484,6 +2943,24 @@
     "failure_count": 0
   },
   {
+    "name": "Devlats",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Dentsu Webchutney",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Deloitte US-India Offices",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2491,6 +2968,15 @@
     "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
+  },
+  {
+    "name": "Datawrkz",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 1
   },
   {
     "name": "Datawind",
@@ -2503,15 +2989,6 @@
   },
   {
     "name": "Databuzz",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Data Economy",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -2574,6 +3051,24 @@
     "failure_count": 0
   },
   {
+    "name": "Confidential Firm",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Confidential",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Comviva Technology",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2584,6 +3079,15 @@
   },
   {
     "name": "Collinson",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Cognisive Solutions",
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 1,
@@ -2646,6 +3150,15 @@
     "failure_count": 0
   },
   {
+    "name": "Chryselys",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Cerebraix",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2686,8 +3199,8 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -2709,6 +3222,15 @@
     "failure_count": 0
   },
   {
+    "name": "C1X",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Buzzboard",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2721,15 +3243,6 @@
     "name": "Brihat Infotech",
     "ats_type": "Naukri",
     "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "Bounteous",
-    "ats_type": "Naukri",
-    "priority": "low",
     "jobs_count": 1,
     "applications_count": 0,
     "success_count": 0,
@@ -2781,15 +3294,6 @@
     "failure_count": 0
   },
   {
-    "name": "Baker Hughes",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
     "name": "Bajaj General Insurance",
     "ats_type": "Naukri",
     "priority": "high",
@@ -2804,24 +3308,6 @@
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
-    "success_count": 0,
-    "failure_count": 0
-  },
-  {
-    "name": "BMC Software",
-    "ats_type": "Naukri",
-    "priority": "high",
-    "jobs_count": 1,
-    "applications_count": 1,
-    "success_count": 1,
-    "failure_count": 0
-  },
-  {
-    "name": "Axtria",
-    "ats_type": "Naukri",
-    "priority": "low",
-    "jobs_count": 1,
-    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2841,6 +3327,15 @@
     "jobs_count": 1,
     "applications_count": 1,
     "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "Avom Consultants",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -2898,12 +3393,12 @@
     "failure_count": 0
   },
   {
-    "name": "Aptech Limited",
+    "name": "Arivonix Corporation",
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
-    "success_count": 1,
+    "success_count": 0,
     "failure_count": 0
   },
   {
@@ -2988,6 +3483,15 @@
     "failure_count": 0
   },
   {
+    "name": "Algoleap Technologies",
+    "ats_type": "Naukri",
+    "priority": "medium",
+    "jobs_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
     "name": "Ajackus Consulting",
     "ats_type": "Naukri",
     "priority": "high",
@@ -3013,6 +3517,15 @@
     "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
+  },
+  {
+    "name": "AgileWaters Consulting",
+    "ats_type": "Naukri",
+    "priority": "high",
+    "jobs_count": 1,
+    "applications_count": 1,
+    "success_count": 0,
+    "failure_count": 1
   },
   {
     "name": "Aezion Technologies",
@@ -3051,11 +3564,20 @@
     "failure_count": 0
   },
   {
-    "name": "AU Small Finance Bank",
+    "name": "A.P. Moller Maersk",
     "ats_type": "Naukri",
-    "priority": "high",
+    "priority": "low",
     "jobs_count": 1,
-    "applications_count": 1,
+    "applications_count": 0,
+    "success_count": 0,
+    "failure_count": 0
+  },
+  {
+    "name": "A Client of Anlage",
+    "ats_type": "Naukri",
+    "priority": "low",
+    "jobs_count": 1,
+    "applications_count": 0,
     "success_count": 0,
     "failure_count": 0
   },

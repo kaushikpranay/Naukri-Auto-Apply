@@ -89,12 +89,82 @@
       "required": 0,
       "answer": null,
       "detected_at": "2026-09-22T00:37:14.022675"
+    },
+    {
+      "id": 836,
+      "job_id": 43557,
+      "question_key": "interested_working_infosys",
+      "question_text": "Are you interested working with infosys",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-09-24T23:01:21.878361"
+    },
+    {
+      "id": 839,
+      "job_id": 43693,
+      "question_key": "exp_cloud_technologies",
+      "question_text": "How many years of experience do you have in Cloud Technologies?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-09-24T23:05:57.196820"
+    },
+    {
+      "id": 840,
+      "job_id": 43693,
+      "question_key": "currently_residing_chennai",
+      "question_text": "Are you currently residing in Chennai?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "No",
+      "detected_at": "2026-09-24T23:05:12.946333"
+    },
+    {
+      "id": 843,
+      "job_id": 43828,
+      "question_key": "willing_to_relocate_pune",
+      "question_text": "Are you currently residing in Pune, Maharashtra or willing to relocate to Pune, Maharashtra?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-09-24T23:09:28.786566"
+    },
+    {
+      "id": 844,
+      "job_id": 43905,
+      "question_key": "exp_claude_ai",
+      "question_text": "How many years of experience do you have in Claude AI?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-09-24T23:11:22.416541"
+    },
+    {
+      "id": 846,
+      "job_id": 43953,
+      "question_key": "ready_work_5_days_wfo",
+      "question_text": "Ready to work 5 Days WFo?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-09-24T23:13:33.742180"
+    },
+    {
+      "id": 849,
+      "job_id": 44091,
+      "question_key": "voice_bot_developed_and_deployed",
+      "question_text": "How many Voice bot have you developed and deployed",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-09-24T23:18:32.970375"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 23,
+    "total_records": 30,
     "total_pages": 2
   }
 }

@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 622,
-    "naukri_jobs": 622,
+    "total_jobs": 779,
+    "naukri_jobs": 779,
     "external_jobs": 953,
-    "pending_review": 60,
-    "queued": 38,
+    "pending_review": 74,
+    "queued": 40,
     "applying": 0,
-    "applied": 141,
-    "failed": 33,
+    "applied": 171,
+    "failed": 47,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 427.3,
-    "avg_ai_score": 45.4,
-    "today_jobs": 0,
-    "today_applications": 79
+    "success_rate": 363.8,
+    "avg_ai_score": 45.1,
+    "today_jobs": 157,
+    "today_applications": 82
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "S&A Law Offices",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-09-22T00:42:06.497584",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Coforge",
+      "company_name": "Blackstraw Technologies",
       "job_title": "Gen AI Engineer",
-      "timestamp": "2026-09-22T00:41:41.028105",
+      "timestamp": "2026-09-24T23:42:14.577853",
       "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "HONEYBEEZ CONSULTANCY",
-      "job_title": "AI Engineer Stock Broking & BFSI",
-      "timestamp": "2026-09-22T00:41:19.641467",
+      "company_name": "Impressico Business Solutions",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-09-24T23:42:01.494540",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Mmnovatech",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-09-24T23:41:44.057179",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Synechron",
+      "job_title": "GenAI Engineering Professional",
+      "timestamp": "2026-09-24T23:41:27.340635",
       "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Hiring for Infosys",
-      "job_title": "Hiring For MLOPS Engineer",
-      "timestamp": "2026-09-22T00:41:01.766880",
-      "details": "Type: unknown, Status: discovered"
+      "company_name": "Five Exceptions Software Solutions",
+      "job_title": "AI Security Engineer",
+      "timestamp": "2026-09-24T23:41:06.978572",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
-      "type": "applied",
-      "company_name": "Mirabilis Design Incorporation",
-      "job_title": "AI Engineer (LLM & Applied AI For Engineering Software)",
-      "timestamp": "2026-09-22T00:40:49.011748",
-      "details": "Type: already_applied, Status: discovered"
+      "type": "ai_evaluated",
+      "company_name": "Leading Client",
+      "job_title": "Prompt Engineer",
+      "timestamp": "2026-09-24T23:00:44.898439",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
       "company_name": "Accenture",
       "job_title": "LLM Model Developer",
-      "timestamp": "2026-09-22T00:14:17.466448",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Mijas Consultants Jaipur",
-      "job_title": "Forward Deployed AI Engineer",
-      "timestamp": "2026-09-22T00:14:17.451418",
-      "details": "Score: 75.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Synechron",
-      "job_title": "Prompt Engineer",
-      "timestamp": "2026-09-22T00:13:59.751128",
+      "timestamp": "2026-09-24T23:00:32.215344",
       "details": "Score: 80.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Environmental Resources Management (ERM)",
-      "job_title": "Data Science and Machine Learning Specialist",
-      "timestamp": "2026-09-22T00:13:44.170579",
+      "company_name": "Devlats",
+      "job_title": "Prompt Engineer",
+      "timestamp": "2026-09-24T23:00:17.065650",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Rarr Technologies",
-      "job_title": "GenAI Developer",
-      "timestamp": "2026-09-22T00:13:44.167320",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Hiring for Infosys",
+      "job_title": "Hiring For Google CCAI / GECX Developer",
+      "timestamp": "2026-09-24T23:00:17.057129",
+      "details": "Score: 75.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "IBM",
+      "job_title": "GenAI Enginner",
+      "timestamp": "2026-09-24T23:00:02.174400",
+      "details": "Score: 85.0%, Action: apply"
     }
   ]
 }

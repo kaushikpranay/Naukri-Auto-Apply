@@ -879,27 +879,27 @@
   "pagination": {
     "page": 1,
     "limit": 25,
-    "total_records": 32,
+    "total_records": 46,
     "total_pages": 2
   },
   "summary": {
     "by_type": [
       {
         "type": "OTHER",
-        "count": 30,
+        "count": 43,
         "category": "DETERMINISTIC"
+      },
+      {
+        "type": "TIMEOUT",
+        "count": 2,
+        "category": "TRANSIENT"
       },
       {
         "type": "DOM_ELEMENT_NOT_FOUND",
         "count": 1,
         "category": "DETERMINISTIC"
-      },
-      {
-        "type": "TIMEOUT",
-        "count": 1,
-        "category": "TRANSIENT"
       }
     ],
-    "total_failed": 32
+    "total_failed": 46
   }
 }
