@@ -103,13 +103,13 @@
       "job_description": "As an AI Engineer, you'll bridge the gap between AI research and production-ready systems. you'll design, develop, and deploy AI models while ensuring seamless integration with robust backend infrastructure. Your expertise in prompt engineering, Cursor (AI-assisted code editor), PostgreSQL, Python, and FastAPI will be critical to delivering scalable, performant solutions. This role requires staying ahead of industry trends, including advancements in LLMs, vector databases, and MLOps.\n\u00a0\nKey Responsibilities:\n\u00a0\nPrompt Engineering & LLM Optimization :\nDesign, test, and refine prompts for large language models (eg, GPT-4, Claude, Deepseek, Gemini) to achieve optimal performance.\nImplement retrieval-augmented generation (RAG) and fine-tuning strategies for domain-specific tasks.\nAI Model Development :\nBuild, train, and deploy machine learning models (eg, NLP, computer vision) using frameworks like PyTorch/TensorFlow.\nCollaborate with data scientists to prototype and iterate on AI solutions.\nBackend Development :\nDevelop RESTful APIs with FastAPI to serve AI models at scale.\nOptimize database interactions using PostgreSQL and ORM tools (eg, SQLAlchemy).\nTooling & Automation :\nUse Cursor to streamline coding workflows, debug efficiently, and maintain code quality.\nIntegrate tools like LangChain, Pinecone, or Hugging Face into production pipelines.\nMarket & Trend Analysis :\nStay updated on AI advancements (eg, generative AI, vector search) and propose innovative solutions.\nEvaluate new tools/libraries to enhance our tech stack.\nRequirements:\nBachelor s/Master s in Computer Science, Engineering, or related field.\n3+ years of hands-on experience in AI/ML engineering.\nProficiency in Python , PostgreSQL , and FastAPI .\nExpertise in prompt engineering and LLMs (eg, OpenAI, Anthropic).\nExperience using Cursor for code optimization and pair programming.\nStrong understanding of cloud platforms (AWS, GCP, Azure) and containerization (Docker/Kubernetes).\nFamiliarity with version control (Git) and CI/CD pipelines.\nPreferred Qualifications:\nCertifications in AI/ML (eg, AWS ML Specialty, TensorFlow Developer).\nExperience with vector databases (Pinecone, Chroma) or MLOps tools (MLflow, TFX).\nContributions to open-source AI projects or publications in ML conferences.\nWhat We Offer:\nCompetitive salary + equity (based on experience).\nFlexible remote/hybrid work model.\nAccess to cutting-edge AI tools and training resources.\nCollaborative, innovation-driven environment.\nProfessional development budget for conferences/courses",
       "job_url": "https://www.naukri.com/job-listings-prompt-engineering-llm-optimization-professional-webfries-gurugram-3-to-8-years-170225504528",
       "normalized_url": "https://www.naukri.com/job-listings-prompt-engineering-llm-optimization-professional-webfries-gurugram-3-to-8-years-170225504528",
-      "apply_url": "",
+      "apply_url": "https://www.webfries.com/career/",
       "experience_required": "3-8 Yrs",
       "location": "Gurugram",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Gurgaon",
@@ -229,16 +229,16 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "LLM Engineer",
       "search_location": "Gurgaon",
       "created_at": "2026-09-21T23:44:29.916717",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-30T08:34:32.623251"
     },
     {
       "id": 43466,
@@ -271,22 +271,22 @@
       "job_description": "Design, build, configure, and maintain operational applications in Palantir Foundry using Workshop, Ontology-backed objects, actions, functions and workflows.\n\n- Collaborate with business users, product owners, data engineers, AI engineers and platform teams to translate requirements into intuitive user-facing applications.\n\n- Develop application experiences enabling users to search, review, analyze, update and act on Ontology objects such as customers, assets, orders, cases and events.\n\n- Configure Workshop modules, including object views, forms, tables, charts, filters, layouts, navigation flows and reusable components to streamline business workflows.\n\n- Implement writeback patterns with Ontology Actions, approvals, validations and user input flows while ensuring governance and auditability.\n\n- Develop and integrate Foundry Functions, APIs, and application logic to support low-latency workflows, business rules and operational decision-making.\n\n- Partner with data engineering teams to ensure applications rely on reliable datasets, well-modeled Ontology objects and high-quality source data.\n\n- Support application testing phases, defect resolution, deployment readiness, documentation and promote user adoption.\n\n- Troubleshoot issues related to application behavior, data access, performance, permissions and workflow blockers in production environments.\n\n- Apply design thinking and user feedback to enhance usability, workflow efficiency, accessibility, and deliver measurable business value, while maintaining thorough documentation and communicating effectively with stakeholders.\n\n\nWhat You Must Have\n\n\n- At least a Bachelor's & Master's degree\n- At least 4 years of experience\n- Oral and written proficiency in English required\n\n\nWhat Sets You Apart\n\n\n- Strong understanding of data engineering fundamentals including datasets, data quality, data modeling, access controls, lineage and dependency management.\n\n- Experience with Palantir AIP and AI-enabled operational workflows, including chatbots and applications leveraging LLM outputs within governed environments.\n\n- Proficiency in user experience design, rapid prototyping, usability testing, stakeholder demos and iterative feedback incorporation.\n\n- Knowledge of role-based access control, governance, privacy, auditability, approval workflows and compliance in regulated enterprise settings.\n\n- Familiarity with CI/CD processes, Git-based delivery, automated testing, monitoring, incident resolution and change management for production applications.\n\n- Relevant certifications or training in Palantir Foundry, Application Development, Ontology, AIP, cloud platforms, or software engineering practices, combined with strong stakeholder engagement and change management skills.",
       "job_url": "https://www.naukri.com/job-listings-palantir-engineer-developer-pwc-hyderabad-gurugram-bengaluru-4-to-8-years-030926031317",
       "normalized_url": "https://www.naukri.com/job-listings-palantir-engineer-developer-pwc-hyderabad-gurugram-bengaluru-4-to-8-years-030926031317",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-palantir-engineer-developer-pwc-hyderabad-gurugram-bengaluru-4-to-8-years-030926031317",
       "experience_required": "4-8 Yrs",
       "location": "Hybrid - Gurugram, Bengaluru, Hyderabad",
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "LLM Engineer",
       "search_location": "Gurgaon",
       "created_at": "2026-09-21T23:44:29.916717",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-30T08:34:55.278302"
     },
     {
       "id": 43468,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 37,
     "limit": 15,
-    "total_records": 779,
-    "total_pages": 52
+    "total_records": 930,
+    "total_pages": 62
   }
 }

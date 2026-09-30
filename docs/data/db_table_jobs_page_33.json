@@ -373,7 +373,7 @@
       "posted_date": "Today",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 1,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 33,
     "limit": 15,
-    "total_records": 779,
-    "total_pages": 52
+    "total_records": 930,
+    "total_pages": 62
   }
 }

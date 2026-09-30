@@ -155,12 +155,25 @@
       "last_used_at": "2026-09-24T23:18:32.970375",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 14775,
+      "question_key": "exp_api_integration",
+      "question_text": "How many years of experience do you have in Api Integration?",
+      "answer": "1.5",
+      "usage_count": 2,
+      "last_used": "2026-09-30T08:24:56.454325",
+      "field_type": "contenteditable",
+      "created_at": "2026-09-30T08:23:47.470043",
+      "last_used_at": "2026-09-30T08:24:56.454325",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 23,
     "limit": 15,
-    "total_records": 341,
+    "total_records": 342,
     "total_pages": 23
   }
 }

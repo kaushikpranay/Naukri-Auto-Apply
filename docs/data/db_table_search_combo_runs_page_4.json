@@ -12,41 +12,41 @@
       "id": 52,
       "keyword": "LLM Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-09-24T22:27:50.072228",
-      "jobs_found": 8,
-      "jobs_inserted": 1
+      "last_run_at": "2026-09-30T07:36:26.320678",
+      "jobs_found": 10,
+      "jobs_inserted": 2
     },
     {
       "id": 53,
       "keyword": "LLM Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-09-24T22:33:24.344795",
+      "last_run_at": "2026-09-30T07:42:20.073707",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 9
     },
     {
       "id": 54,
       "keyword": "LLM Engineer",
       "location": "Noida",
-      "last_run_at": "2026-09-24T22:26:16.619954",
+      "last_run_at": "2026-09-30T07:34:38.596639",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 6
     },
     {
       "id": 55,
       "keyword": "LLM Engineer",
       "location": "Pune",
-      "last_run_at": "2026-09-24T22:29:59.976979",
+      "last_run_at": "2026-09-30T07:38:48.255291",
       "jobs_found": 20,
-      "jobs_inserted": 8
+      "jobs_inserted": 5
     },
     {
       "id": 56,
       "keyword": "LLM Engineer",
       "location": "Remote",
-      "last_run_at": "2026-09-24T22:25:11.413711",
+      "last_run_at": "2026-09-30T07:33:27.770945",
       "jobs_found": 18,
-      "jobs_inserted": 5
+      "jobs_inserted": 1
     },
     {
       "id": 57,
@@ -100,9 +100,9 @@
       "id": 63,
       "keyword": "RAG Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-09-24T22:37:03.863401",
+      "last_run_at": "2026-09-30T07:46:27.836612",
       "jobs_found": 20,
-      "jobs_inserted": 7
+      "jobs_inserted": 4
     },
     {
       "id": 64,
@@ -116,9 +116,9 @@
       "id": 65,
       "keyword": "RAG Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-09-24T22:35:25.457523",
-      "jobs_found": 13,
-      "jobs_inserted": 2
+      "last_run_at": "2026-09-30T07:45:05.179363",
+      "jobs_found": 15,
+      "jobs_inserted": 1
     },
     {
       "id": 66,

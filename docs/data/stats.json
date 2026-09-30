@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 779,
-    "naukri_jobs": 779,
+    "total_jobs": 930,
+    "naukri_jobs": 930,
     "external_jobs": 953,
-    "pending_review": 74,
-    "queued": 40,
+    "pending_review": 87,
+    "queued": 27,
     "applying": 0,
-    "applied": 171,
-    "failed": 47,
+    "applied": 199,
+    "failed": 59,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 363.8,
-    "avg_ai_score": 45.1,
-    "today_jobs": 157,
+    "success_rate": 337.3,
+    "avg_ai_score": 43.6,
+    "today_jobs": 151,
     "today_applications": 82
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Blackstraw Technologies",
-      "job_title": "Gen AI Engineer",
-      "timestamp": "2026-09-24T23:42:14.577853",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Impressico Business Solutions",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-09-24T23:42:01.494540",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Mmnovatech",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-09-24T23:41:44.057179",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Synechron",
-      "job_title": "GenAI Engineering Professional",
-      "timestamp": "2026-09-24T23:41:27.340635",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Five Exceptions Software Solutions",
-      "job_title": "AI Security Engineer",
-      "timestamp": "2026-09-24T23:41:06.978572",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Prompt Engineer",
-      "timestamp": "2026-09-24T23:00:44.898439",
-      "details": "Score: 85.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
       "company_name": "Accenture",
       "job_title": "LLM Model Developer",
-      "timestamp": "2026-09-24T23:00:32.215344",
-      "details": "Score: 80.0%, Action: apply"
+      "timestamp": "2026-09-30T08:43:54.138183",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Devlabs Alliance",
+      "job_title": "Ai Ml Engineer",
+      "timestamp": "2026-09-30T08:43:40.133099",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Hexaware Technologies",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-09-30T08:43:25.754558",
+      "details": "Type: easy_apply, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "MNC",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-09-30T08:43:02.194873",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Go Digital Technology Consulting",
+      "job_title": "Senior GenAI Engineer",
+      "timestamp": "2026-09-30T08:42:42.254954",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Devlats",
-      "job_title": "Prompt Engineer",
-      "timestamp": "2026-09-24T23:00:17.065650",
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-09-30T08:02:19.867608",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Hiring for Infosys",
-      "job_title": "Hiring For Google CCAI / GECX Developer",
-      "timestamp": "2026-09-24T23:00:17.057129",
-      "details": "Score: 75.0%, Action: apply"
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-09-30T08:02:19.834283",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "IBM",
-      "job_title": "GenAI Enginner",
-      "timestamp": "2026-09-24T23:00:02.174400",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-09-30T08:02:19.799373",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-09-30T08:02:19.761319",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "AI Enabled SDLC Engineer / Architect",
+      "timestamp": "2026-09-30T08:02:19.755365",
+      "details": "Score: 0.0%, Action: skip"
     }
   ]
 }

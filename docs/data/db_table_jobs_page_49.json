@@ -79,22 +79,22 @@
       "job_description": "Sr. Data Scientist\n\nAI/ML Engineer\n\nRole Summary\n\nWe are looking for an AI/ML Engineer to design and deliver AI-driven solutions across Computer Vision, Generative AI, and intelligent automation. The role combines visual AI, multimodal learning, LLM engineering, and cloud-native solution development to build scalable, enterprise-grade AI products.\n\nRequired Skills\n\n4+ years of experience in AI/ML engineering.\nExperience in Computer Vision including object detection, OCR, image analysis, and anomaly detection.\nHands-on experience with LLMs and foundation models (GPT, Claude, Gemini, Llama, etc.).\nStrong knowledge of RAG, embeddings, vector databases, prompt engineering, and AI agent frameworks.\nExperience designing and deploying cloud-native AI solutions.\nFamiliarity with solution architecture, APIs, microservices, Docker, Kubernetes, and CI/CD.\nStrong software engineering and system design fundamentals.\nStrong understanding of and experience in python programming\n\nPreferred Skills\n\nExperience with multimodal and vision-language models.\nExposure to MLOps and LLMOps practices.\nCloud solution architecture experience (AWS preferred).\nExperience in intelligent test automation, quality engineering, or industrial AI use cases.",
       "job_url": "https://www.naukri.com/job-listings-sr-data-scientist-volkswagen-group-technology-solutions-india-private-limited-pune-gurugram-bengaluru-4-to-9-years-230926930256",
       "normalized_url": "https://www.naukri.com/job-listings-sr-data-scientist-volkswagen-group-technology-solutions-india-private-limited-pune-gurugram-bengaluru-4-to-9-years-230926930256",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-sr-data-scientist-volkswagen-group-technology-solutions-india-private-limited-pune-gurugram-bengaluru-4-to-9-years-230926930256",
       "experience_required": "4-9 Yrs",
       "location": "Gurugram, Bengaluru, Pune",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "LLM Engineer",
       "search_location": "Gurgaon",
       "created_at": "2026-09-24T22:27:21.343890",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-30T08:41:31.774799"
     },
     {
       "id": 44175,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 49,
     "limit": 15,
-    "total_records": 779,
-    "total_pages": 52
+    "total_records": 930,
+    "total_pages": 62
   }
 }

@@ -79,13 +79,13 @@
       "job_description": "We are looking for an Entry-Level Full Stack Developer to join our engineering team. This role is ideal for a recent graduate or early-career developer with hands-on exposure to building web applications through internships, hackathons, or academic/personal projects. Youll work across the stack building responsive user interfaces with React.js and robust backend services with Python (Flask/Django) while collaborating closely with senior engineers to ship real features.\nDesign and develop responsive, user-friendly frontend interfaces using React.js\nBuild and maintain RESTful APIs and backend services using Python (Flask or Django)\nIntegrate frontend applications with backend services and third-party APIs\nWork with relational and/or NoSQL databases (MySQL / MongoDB) for data modeling and queries\nWrite clean, maintainable, and well-documented code\nParticipate in code reviews, testing (including manual and API testing via tools like Postman), and debugging\nCollaborate with designers, product managers, and other engineers to understand requirements and deliver features within timelines\nAssist in identifying and fixing bugs, and improving application performance and usability\nRequired Skills\nSolid understanding of HTML, CSS, JavaScript, and React.js\nWorking knowledge of Python with experience in Flask or Django\nFamiliarity with REST API design and integration\nBasic experience with MySQL and/or MongoDB\nUnderstanding of version control tools (Git/GitHub)\nExposure to API testing tools such as Postman\nStrong analytical thinking and problem-solving ability\nGood communication skills and ability to work in a collaborative team environment\nGood to Have\nExposure to LLM models and AI integration.\nExperience with web scraping or data extraction modules\nBasic understanding of ML-assisted or rule-based analysis (e.g., security/fraud detection use cases)\nPrior internship experience in a full-stack role\nParticipation in hackathons or coding competitions\nA portfolio of personal or academic full-stack projects (GitHub links welcome)\nQualifications\nBachelors degree in Computer Science, Information Technology, or a related field.\nStrong academic record preferred\n0-1 years of relevant experience through internships, projects, or hackathons\nLocation:\nIndia - Maharashtra- Pune - Baner - Amar Madhuban Tech Park\nBrand:\nSokrati\nTime Type:\nFull time\nContract Type:\nPermanent\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-developer-dentsu-inc-pune-0-to-1-years-230926500152",
       "normalized_url": "https://www.naukri.com/job-listings-developer-dentsu-inc-pune-0-to-1-years-230926500152",
-      "apply_url": "",
+      "apply_url": "https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/India---Maharashtra--Pune---Baner---Amar-Madhuban-Tech-Park/Developer_R1128861",
       "experience_required": "0-1 Yrs",
       "location": "Pune",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "LLM Engineer",
       "search_location": "Pune",
@@ -319,14 +319,14 @@
       "job_description": "Palantir Profiles\n\nJob Descriptions\n\nRole\n\nExperience Snapshot\n\n1\n\nPalantir Architect\n\n12+ years enterprise data architecture; 5+ years leading large-scale Palantir deployments\n\n2\n\nPalantir Ontology & Data Engineer\n\n8+ years data engineering; 4+ years hands-on pipeline building within Palantir Foundry\n\n3\n\nPalantir AIP & AI/ML Specialist\n\n7+ years data science; 2+ years integrating LLMs via Palantir AIP\n\n4\n\nPalantir Workshop Specialist (Application Developer)\n\n8+ years full-stack/frontend development; 4+ years building inside Palantir\n\nPalantir Architect\n\n12+ years in enterprise data architecture; 5+ years leading large-scale Palantir deployments.\nExperience of Palantir Foundry Ontology design, multi-tenant architecture, and Palantir Apollo for continuous deployment.\nDeep expertise in cloud infrastructure (AWS, Azure, GCP) and enterprise ERP systems like SAP.\nDefine the strategic technical roadmap, data governance policies, and cross-platform integration patterns to/from Palantir\nAlign technical capabilities with business outcomes while aligning to platform health and cost optimization.\n\nPalantir Ontology - Data Engineer\n\n8+ years in data engineering; 4+ years of hands-on pipeline building within Palantir Foundry.\nExperience of Data Connection, Contour, Pipeline Builder, and object-oriented Ontology modeling with Palantir\nAdvanced proficiency in Apache Spark, PySpark, SQL, and dbt (Data Build Tool).\nStandardize data ingestion frameworks, clean source data, and optimize complex pipeline performance.\nMentor engineering teams on best practices for data lineage, security marking, and semantic modeling.\n\nPalantir AIP - AI/ML Specialist\n\n7+ years in data science; 2+ years integrating Large Language Models (LLMs) via Palantir AIP (Artificial Intelligence Platform).\nKnowledge of Palantir AIP Logic, AIP Assist, Model Asset Folders, and Workshop AI widgets.\nProficient in Python, PyTorch, Hugging Face transformers, RAG pipelines, vector databases like Milvus or Pinecone and Graph DBs like Neo4j.\nArchitect secure LLM orchestration, agentic workflows, and retrieval-augmented generation (RAG) within Foundry.\nEstablish guidelines for AI safety, model evaluation, and cost-effective generative AI application design.\nPalantir Workshop Specialist (Application Developer)\n8+ years in full-stack or frontend application development; 2+ years building inside Palantir.\nWorked on Palantir Workshop, Slate, Functions (TypeScript), and Action frameworks.\nStrong foundations in TypeScript/JavaScript, React, CSS, and RESTful API development.\nDesign high-performance, user-friendly operational applications and decision-making dashboards for executives.\n\nStandardize UI/UX.",
       "job_url": "https://www.naukri.com/job-listings-palantir-developer-tata-consultancy-services-hyderabad-chennai-bengaluru-4-to-9-years-230926012034",
       "normalized_url": "https://www.naukri.com/job-listings-palantir-developer-tata-consultancy-services-hyderabad-chennai-bengaluru-4-to-9-years-230926012034",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-palantir-developer-tata-consultancy-services-hyderabad-chennai-bengaluru-4-to-9-years-230926012034",
       "experience_required": "4-9 Yrs",
       "location": "Bengaluru, Chennai, Hyderabad",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "pending",
+      "retry_count": 2,
       "search_keyword": "LLM Engineer",
       "search_location": "Chennai",
       "created_at": "2026-09-24T22:32:13.638444",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 50,
     "limit": 15,
-    "total_records": 779,
-    "total_pages": 52
+    "total_records": 930,
+    "total_pages": 62
   }
 }

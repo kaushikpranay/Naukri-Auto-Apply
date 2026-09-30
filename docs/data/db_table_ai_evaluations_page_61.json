@@ -16,9 +16,9 @@
   ],
   "rows": [
     {
-      "id": 5482,
-      "job_id": 31341,
-      "run_id": "dab34931",
+      "id": 7221,
+      "job_id": 44912,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -28,12 +28,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:21.478328"
+      "created_at": "2026-09-30T08:01:11.274991"
     },
     {
-      "id": 5483,
-      "job_id": 31342,
-      "run_id": "dab34931",
+      "id": 7222,
+      "job_id": 44963,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -43,12 +43,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:21.482237"
+      "created_at": "2026-09-30T08:01:11.281508"
     },
     {
-      "id": 5484,
-      "job_id": 31344,
-      "run_id": "dab34931",
+      "id": 7223,
+      "job_id": 44969,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -58,12 +58,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:21.488453"
+      "created_at": "2026-09-30T08:01:11.286119"
     },
     {
-      "id": 5485,
-      "job_id": 31033,
-      "run_id": "dab34931",
+      "id": 7224,
+      "job_id": 44981,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -73,27 +73,27 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:21.519474"
+      "created_at": "2026-09-30T08:01:11.294043"
     },
     {
-      "id": 5486,
-      "job_id": 31364,
-      "run_id": "dab34931",
-      "model_name": "Requires Review",
+      "id": 7225,
+      "job_id": 45004,
+      "run_id": "f53cae07",
+      "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
-      "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:26.615860"
+      "interview_probability": 85.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 85.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-09-30T08:01:18.983116"
     },
     {
-      "id": 5487,
-      "job_id": 31379,
-      "run_id": "dab34931",
+      "id": 7226,
+      "job_id": 45021,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -103,12 +103,27 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:26.626945"
+      "created_at": "2026-09-30T08:01:19.029835"
     },
     {
-      "id": 5488,
-      "job_id": 31524,
-      "run_id": "dab34931",
+      "id": 7227,
+      "job_id": 45148,
+      "run_id": "f53cae07",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 90.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 88.0,
+      "reason": "Strong production RAG and LangGraph experience with AWS deployment.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-09-30T08:01:30.247871"
+    },
+    {
+      "id": 7228,
+      "job_id": 44701,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -118,12 +133,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:26.630555"
+      "created_at": "2026-09-30T08:01:30.341685"
     },
     {
-      "id": 5489,
-      "job_id": 31525,
-      "run_id": "dab34931",
+      "id": 7229,
+      "job_id": 44914,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -133,12 +148,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-13T17:02:26.633608"
+      "created_at": "2026-09-30T08:01:30.349972"
     },
     {
-      "id": 5490,
-      "job_id": 31644,
-      "run_id": "906724a1",
+      "id": 7230,
+      "job_id": 44978,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -148,57 +163,27 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:07.132522"
+      "created_at": "2026-09-30T08:01:30.358797"
     },
     {
-      "id": 5491,
-      "job_id": 31694,
-      "run_id": "906724a1",
-      "model_name": "Requires Review",
+      "id": 7231,
+      "job_id": 45005,
+      "run_id": "f53cae07",
+      "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
-      "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:12.755023"
+      "interview_probability": 80.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure\", \"GCP\", \"Docker\", \"Kubernetes\", \"Compliance Standards\"]",
+      "created_at": "2026-09-30T08:01:50.724253"
     },
     {
-      "id": 5492,
-      "job_id": 31713,
-      "run_id": "906724a1",
-      "model_name": "Requires Review",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
-      "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:18.007506"
-    },
-    {
-      "id": 5493,
-      "job_id": 31731,
-      "run_id": "906724a1",
-      "model_name": "Requires Review",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 0.0,
-      "reason": "Requires review after provider failures. Last error: Gemini[...j2Yg] failed to return valid JSON after 2 attempts: Gemini transient error: [Errno 11001] getaddrinfo failed",
-      "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:23.188639"
-    },
-    {
-      "id": 5494,
-      "job_id": 31742,
-      "run_id": "906724a1",
+      "id": 7232,
+      "job_id": 45071,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -208,12 +193,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:23.193569"
+      "created_at": "2026-09-30T08:01:50.774130"
     },
     {
-      "id": 5495,
-      "job_id": 31791,
-      "run_id": "906724a1",
+      "id": 7233,
+      "job_id": 45083,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -223,12 +208,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:23.199024"
+      "created_at": "2026-09-30T08:01:50.780404"
     },
     {
-      "id": 5496,
-      "job_id": 31845,
-      "run_id": "906724a1",
+      "id": 7234,
+      "job_id": 44702,
+      "run_id": "f53cae07",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -238,13 +223,28 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-08-14T13:36:23.204614"
+      "created_at": "2026-09-30T08:01:50.826436"
+    },
+    {
+      "id": 7235,
+      "job_id": 45013,
+      "run_id": "f53cae07",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 75.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-09-30T08:02:03.171671"
     }
   ],
   "pagination": {
     "page": 61,
     "limit": 15,
-    "total_records": 1589,
-    "total_pages": 106
+    "total_records": 930,
+    "total_pages": 62
   }
 }

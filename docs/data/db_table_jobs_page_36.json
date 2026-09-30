@@ -127,22 +127,22 @@
       "job_description": "Design and develop multi-agent AI orchestration pipelines and AI agent workflows.\n\u2022 Build Human-in-the-Loop (HITL) workflows with approval, review, and escalation mechanisms.\n\u2022 Develop and maintain LLM integration layers / Model Abstraction Layers.\n\u2022 Perform advanced Prompt Engineering, including system prompts, few-shot prompting and structured outputs.\n\u2022 Build RAG (Retrieval Augmented Generation) pipelines using embeddings and vector databases.\n\u2022 Integrate Azure OpenAI / Vertex AI models through managed APIs.\n\u2022 Develop deterministic tools for REST APIs, database queries, file parsing, validation, and enterprise data retrieval.\n\u2022 Implement robust error handling, retry mechanisms, token management, and LLM failure mitigation.\n\u2022 Build audit-ready logging covering agent actions, evidence retrieval, decisions, and outputs.\n\u2022 Containerize applications using Docker and deploy on Kubernetes (AKS/GKE).\n\nMUST-HAVE SKILLS\n\nPython Expert level\nLLM / Generative AI application development\nAgentic AI / Multi-Agent Systems\nPrompt Engineering\nRAG / Embeddings / Vector Databases\nAzure OpenAI and/or Vertex AI\nREST API / OpenAPI / API Integration\nPostgreSQL / Cloud SQL\nDocker & Kubernetes (AKS/GKE)\nGit / CI/CD\n\nAGENTIC AI EXPERIENCE\n\nCandidates should have hands-on experience with concepts such as:\n\nReAct | Tool Calling | Multi-Agent Orchestration | Agent State Management | HITL | Structured Outputs | Prompt Injection Mitigation | LLM Evaluation\n\nExperience with LangChain, LlamaIndex, AutoGen, or similar agentic frameworks is an advantage.\n\nSECURITY & ENTERPRISE EXPERIENCE\n\nGood understanding of:\n\nEncryption at rest/in transit\n\u2022 Secrets management & Key Vault / Secret Manager\n\u2022 Least-privilege access\n\u2022 Audit logging & traceability\n\u2022 Data residency\n\u2022 Secure API integrations\n\u2022 Cloud-native security\n\nExperience in BFSI / Financial Services / regulated environments is highly preferred.\n\nGOOD TO HAVE\n\nMLOps / LLMOps\n\u2022 Model versioning & regression testing\n\u2022 Blue-Green deployments\n\u2022 Azure Confidential Computing / GCP Confidential VMs\n\u2022 TypeScript / Node.js\n\u2022 Experience deploying AI solutions in regulated environments\n\nIDEAL PROFILE\n\nWe are looking for a hands-on AI/LLM Engineer, not a traditional Data Scientist or research-only profile.\n\nThe ideal candidate should have experience taking LLM/Agentic AI solutions from development to production, with strong focus on reliability, security, auditability, and enterprise integration.\n\nInterested candidates can share their updated CV at:\n[Pallabi.jha@nlbtech.com]",
       "job_url": "https://www.naukri.com/job-listings-ai-developer-agentic-ai-llm-engineering-nlb-services-noida-gurugram-greater-noida-4-to-9-years-180926016783",
       "normalized_url": "https://www.naukri.com/job-listings-ai-developer-agentic-ai-llm-engineering-nlb-services-noida-gurugram-greater-noida-4-to-9-years-180926016783",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-ai-developer-agentic-ai-llm-engineering-nlb-services-noida-gurugram-greater-noida-4-to-9-years-180926016783",
       "experience_required": "4-9 Yrs",
       "location": "Noida, Greater Noida, Gurugram",
       "posted_date": "3 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "LLM Engineer",
       "search_location": "Noida",
       "created_at": "2026-09-21T23:43:24.252264",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-30T08:31:49.425520"
     },
     {
       "id": 43434,
@@ -205,16 +205,16 @@
       "posted_date": "6 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "LLM Engineer",
       "search_location": "Noida",
       "created_at": "2026-09-21T23:43:24.252264",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-30T08:31:58.253958"
     },
     {
       "id": 43439,
@@ -271,22 +271,22 @@
       "job_description": "Software Developer Full Stack | React, Node.js, .NET & Python\n\n\nJob Summary\n\nWe are looking for a Software Developer with 45 years of hands-on experience in Full Stack Application Development, with strong exposure to React, Node.js, .NET/.NET Core and Python.\n\nThe candidate will be responsible for designing, developing, integrating, testing and supporting secure, scalable and enterprise-grade applications. The role also requires practical experience with databases, REST APIs and modern AI-assisted software development tools to improve coding productivity, testing, debugging and application quality.\n\nKey Responsibilities\n\nDesign, develop, test, deploy and maintain scalable web and enterprise applications.\nDevelop backend applications and REST APIs using Node.js, .NET/.NET Core, ASP.NET and Python.\nDevelop responsive frontend applications using React, JavaScript/TypeScript, HTML5 and CSS.\nDesign and integrate REST APIs, Web Services and third-party APIs.\nWork with databases such as MongoDB, Oracle, MS SQL Server and PostgreSQL.\nDevelop efficient SQL queries, stored procedures and database integration components.\nParticipate in application architecture, database design, code reviews and technical discussions.\nTroubleshoot application, API, integration and database-related issues.\nFollow secure coding, version control, testing and deployment best practices.\nCollaborate with business users, functional teams and IT teams to understand requirements and deliver technical solutions.\nPrepare and maintain technical and application documentation.\n\nAI-Assisted Software Development\n\nThe candidate should have exposure to modern AI-assisted development tools and be able to leverage them for:\n\nCode generation, optimization and refactoring\nDebugging and troubleshooting\nCode reviews\nUnit test and test-case generation\nAPI and technical documentation\nSQL/query optimization\nRapid prototyping and PoCs\nUnderstanding and modernizing legacy applications\nImproving overall development productivity\n\nExposure to GitHub Copilot, ChatGPT, Claude, Cursor or equivalent AI coding assistants will be an advantage.\n\nBasic understanding of Generative AI, LLMs, APIs and AI integration concepts is preferred.\n\nRequired Technical Skills\n\nBackend\n\nNode.js\n.NET / .NET Core\nASP.NET\nPython\nREST API Development\n\nFrontend\n\nReact\nJavaScript / TypeScript\nHTML5 / CSS\n\nDatabases\n\nMongoDB\nOracle\nMS SQL Server (MSSQL)\nPostgreSQL\n\nIntegration & Tools\n\nREST APIs, Web Services, JSON\nThird-party API Integration\nGit\nVisual Studio / VS Code\nCI/CD\n\nSecurity\n\nApplication Security\nAuthentication & Authorization\nAPI Security\nSecure Coding Practices\n\nPreferred / Good to Have\n\nMicroservices architecture using .NET, Node.js or Python\nDocker / Kubernetes\nCI/CD pipelines\nAzure, AWS or GCP\nAgile/Scrum methodology\nEnterprise application development and integration\nAI/ML or Generative AI application development\n\nCandidate Profile\n\n45 years of relevant software development experience\nB.E./B.Tech in Computer Science, IT or related discipline\nStrong hands-on application development and debugging skills\nGood understanding of SDLC and software engineering practices\nAbility to independently understand business requirements and translate them into technical solutions\nStrong analytical and problem-solving skills\nGood communication and documentation skills\nWillingness to learn and adopt AI-enabled development practices and emerging technologies",
       "job_url": "https://www.naukri.com/job-listings-software-developer-dharampal-satyapal-group-ds-group-noida-4-to-6-years-100926015372",
       "normalized_url": "https://www.naukri.com/job-listings-software-developer-dharampal-satyapal-group-ds-group-noida-4-to-6-years-100926015372",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-software-developer-dharampal-satyapal-group-ds-group-noida-4-to-6-years-100926015372",
       "experience_required": "4-6 Yrs",
       "location": "Noida",
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "LLM Engineer",
       "search_location": "Noida",
       "created_at": "2026-09-21T23:43:24.252264",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-09-30T08:32:21.973288"
     },
     {
       "id": 43443,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 36,
     "limit": 15,
-    "total_records": 779,
-    "total_pages": 52
+    "total_records": 930,
+    "total_pages": 62
   }
 }

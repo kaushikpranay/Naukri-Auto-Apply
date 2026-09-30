@@ -12,71 +12,71 @@
       "id": 1,
       "keyword": "GenAI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-09-24T19:10:11.259314",
-      "jobs_found": 6,
+      "last_run_at": "2026-09-30T07:01:02.288206",
+      "jobs_found": 7,
       "jobs_inserted": 1
     },
     {
       "id": 2,
       "keyword": "GenAI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-09-24T19:11:23.142656",
+      "last_run_at": "2026-09-30T07:02:09.837542",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     },
     {
       "id": 3,
       "keyword": "GenAI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-09-24T19:12:34.979701",
+      "last_run_at": "2026-09-30T07:03:17.737929",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 5
     },
     {
       "id": 4,
       "keyword": "GenAI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-09-24T19:12:59.290364",
-      "jobs_found": 6,
+      "last_run_at": "2026-09-30T07:03:35.042998",
+      "jobs_found": 4,
       "jobs_inserted": 1
     },
     {
       "id": 5,
       "keyword": "GenAI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-09-24T19:14:09.000664",
+      "last_run_at": "2026-09-30T07:04:42.069558",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 4
     },
     {
       "id": 6,
       "keyword": "GenAI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-09-24T19:15:14.454399",
+      "last_run_at": "2026-09-30T07:05:48.010092",
       "jobs_found": 19,
-      "jobs_inserted": 3
+      "jobs_inserted": 4
     },
     {
       "id": 7,
       "keyword": "AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-09-24T22:18:45.784719",
+      "last_run_at": "2026-09-30T07:26:28.107589",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 4
     },
     {
       "id": 8,
       "keyword": "AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-09-24T22:22:01.406328",
+      "last_run_at": "2026-09-30T07:30:01.613537",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 18
     },
     {
       "id": 9,
       "keyword": "AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-09-24T19:33:41.137780",
+      "last_run_at": "2026-09-30T07:24:05.152927",
       "jobs_found": 20,
       "jobs_inserted": 2
     },
@@ -84,7 +84,7 @@
       "id": 10,
       "keyword": "AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-09-24T22:20:55.753399",
+      "last_run_at": "2026-09-30T07:28:50.951039",
       "jobs_found": 20,
       "jobs_inserted": 3
     },
@@ -92,15 +92,15 @@
       "id": 11,
       "keyword": "AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-09-24T22:24:12.102731",
+      "last_run_at": "2026-09-30T07:32:23.768706",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 6
     },
     {
       "id": 12,
       "keyword": "AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-09-24T19:34:50.961922",
+      "last_run_at": "2026-09-30T07:25:16.755137",
       "jobs_found": 20,
       "jobs_inserted": 1
     },
@@ -108,25 +108,25 @@
       "id": 13,
       "keyword": "AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-09-24T22:23:06.919705",
+      "last_run_at": "2026-09-30T07:31:12.464923",
       "jobs_found": 20,
-      "jobs_inserted": 6
+      "jobs_inserted": 1
     },
     {
       "id": 14,
       "keyword": "AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-09-24T19:32:30.723578",
+      "last_run_at": "2026-09-30T07:22:55.126845",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 3
     },
     {
       "id": 15,
       "keyword": "AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-09-24T22:19:50.625390",
+      "last_run_at": "2026-09-30T07:27:39.421652",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 2
     }
   ],
   "pagination": {

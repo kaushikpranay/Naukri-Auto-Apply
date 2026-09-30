@@ -879,14 +879,14 @@
   "pagination": {
     "page": 1,
     "limit": 25,
-    "total_records": 46,
-    "total_pages": 2
+    "total_records": 58,
+    "total_pages": 3
   },
   "summary": {
     "by_type": [
       {
         "type": "OTHER",
-        "count": 43,
+        "count": 55,
         "category": "DETERMINISTIC"
       },
       {
@@ -900,6 +900,6 @@
         "category": "DETERMINISTIC"
       }
     ],
-    "total_failed": 46
+    "total_failed": 58
   }
 }

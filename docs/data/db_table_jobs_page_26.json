@@ -31,13 +31,13 @@
       "job_description": "We are hiring for AI Engineer role for Noida sector 135.\n\nLooking for Immediate Joiners\n\n\n\n\nRequirement-\n\nExperience fine-tuning LLMs (LoRA, QLoRA, PEFT) and working with Hugging Face Transformers\nExperience designing multi-agent systems or tool-using/agentic AI workflows\nFamiliarity with LLM evaluation tools (RAGAS, DeepEval, promptfoo, human-in-the-loop eval pipelines)\nWorking knowledge of React to build or collaborate on UI components for LLM-driven features (chat interfaces, streaming responses, etc.)\nUnderstanding of guardrails/safety tooling (Guardrails AI, NeMo Guardrails, content moderation APIs)\nExperience with MLOps/LLMOps practices CI/CD, model/prompt versioning, observability (LangSmith, Weights & Biases, Arize)\nBackground in NLP or contributions to open-source LLM/GenAI projects",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-corrohealth-noida-3-to-7-years-180926034447",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-corrohealth-noida-3-to-7-years-180926034447",
-      "apply_url": "https://www.naukri.com/job-listings-ai-engineer-corrohealth-noida-3-to-7-years-180926034447",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[180926034447]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22180926034447%22%3A200%7D&jobTitle=AI%20Engineer",
       "experience_required": "3-7 Yrs",
       "location": "Noida",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 2,
       "search_keyword": "AI Engineer",
       "search_location": "Noida",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 26,
     "limit": 15,
-    "total_records": 779,
-    "total_pages": 52
+    "total_records": 930,
+    "total_pages": 62
   }
 }
