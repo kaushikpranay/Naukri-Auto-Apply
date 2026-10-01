@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 930,
-    "naukri_jobs": 930,
+    "total_jobs": 1098,
+    "naukri_jobs": 1098,
     "external_jobs": 953,
-    "pending_review": 87,
-    "queued": 27,
+    "pending_review": 109,
+    "queued": 75,
     "applying": 0,
-    "applied": 199,
-    "failed": 59,
+    "applied": 212,
+    "failed": 60,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 337.3,
-    "avg_ai_score": 43.6,
-    "today_jobs": 151,
-    "today_applications": 82
+    "success_rate": 353.3,
+    "avg_ai_score": 43.1,
+    "today_jobs": 168,
+    "today_applications": 37
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Accenture",
-      "job_title": "LLM Model Developer",
-      "timestamp": "2026-09-30T08:43:54.138183",
+      "company_name": "Infosys",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-10-01T23:05:19.495934",
+      "details": "Type: applied_successfully, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Getsubstance",
+      "job_title": "Agentic AI Engineer (Fractional)",
+      "timestamp": "2026-10-01T23:05:04.144305",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Devlabs Alliance",
-      "job_title": "Ai Ml Engineer",
-      "timestamp": "2026-09-30T08:43:40.133099",
-      "details": "Type: unknown, Status: discovered"
+      "company_name": "Velocitai Digital",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-01T23:04:50.648498",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Hexaware Technologies",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-09-30T08:43:25.754558",
-      "details": "Type: easy_apply, Status: discovered"
+      "company_name": "Newrocket",
+      "job_title": "AI/ML Developer",
+      "timestamp": "2026-10-01T23:04:37.753324",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "MNC",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-09-30T08:43:02.194873",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Go Digital Technology Consulting",
-      "job_title": "Senior GenAI Engineer",
-      "timestamp": "2026-09-30T08:42:42.254954",
-      "details": "Type: unknown, Status: discovered"
+      "company_name": "Cognifyr Co",
+      "job_title": "AI Agent Engineer",
+      "timestamp": "2026-10-01T23:04:24.763627",
+      "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-09-30T08:02:19.867608",
+      "company_name": "Infosys",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-10-01T22:53:17.233418",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Jobaaj com",
+      "job_title": "Fullstack Developer",
+      "timestamp": "2026-10-01T22:53:07.681613",
+      "details": "Score: 75.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Connect iO",
+      "job_title": "MLOps Engineer",
+      "timestamp": "2026-10-01T22:52:47.627581",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-09-30T08:02:19.834283",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Agicent Technologies",
+      "job_title": "Backend Developer",
+      "timestamp": "2026-10-01T22:52:47.623611",
+      "details": "Score: 90.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-09-30T08:02:19.799373",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-09-30T08:02:19.761319",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "AI Enabled SDLC Engineer / Architect",
-      "timestamp": "2026-09-30T08:02:19.755365",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "N53 TECHWORKS LLP",
+      "job_title": "Back End Engineer",
+      "timestamp": "2026-10-01T22:52:46.544415",
+      "details": "Score: 85.0%, Action: apply"
     }
   ]
 }

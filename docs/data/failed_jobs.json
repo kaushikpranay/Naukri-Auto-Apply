@@ -1961,6 +1961,41 @@
       "application_type": "INTERNAL"
     },
     {
+      "id": 44358,
+      "job_title": "Here is An Exciting Opportunity - GEN AI Engineer - Capgemini",
+      "company_name": "Capgemini",
+      "job_description": "Below is the Job Description:\n\nRequired Technical Skills & Qualifications\n\nExperience: 4-12 years of professional software development experience with a strong focus on Python and libraries like NumPy, Panda, Scikit-learn etc\nGenerative AI: Proven expertise in LLM implementations, LangChain (or similar orchestration frameworks), Agentic AI, and RAG pipelines.\nMachine Learning: Solid understanding of foundational Machine Learning concepts, algorithms, and workflows.\nWeb Frameworks: Strong hands-on experience building robust APIs using Flask, Django, FastAPI, or equivalent Python frameworks.\nData & Storage: Good understanding of structured and unstructured data, modelling and exceptional SQL skills with deep knowledge of database design and query optimization. Database Postgres/MS SQL/ Oracle\nCloud : Hands-on experience with cloud platforms such as GCP or AWS, Azure\n\nProfessional & Soft Skills\n\nAutonomy: Proven ability to work independently, self-manage, and resolve engineering blockers proactively.\nAdaptability: Thrives in fast-paced, high-pressure, and agile delivery environments.\nMindset: A continuous learner with a growth mindset, passionate about keeping up with rapid advancements in AI.\nCommunication: Excellent interpersonal and collaborative skills to work effectively within a team.\nAvailability: Immediate or near-immediate availability to join the team is highly preferred.\n\nPreferred (Nice-to-Have) Skills\n\nDevOps Practice: Exposure to CI/CD pipelines, containerization (Docker/Kubernetes), and infrastructure as code.\nFull-Stack Capability: Basic front-end development experience (React, Vue, or Angular) to build internal tool prototypes.",
+      "job_url": "https://www.naukri.com/job-listings-here-is-an-exciting-opportunity-gen-ai-engineer-capgemini-capgemini-hyderabad-pune-bengaluru-4-to-6-years-270826015312",
+      "normalized_url": "https://www.naukri.com/job-listings-here-is-an-exciting-opportunity-gen-ai-engineer-capgemini-capgemini-hyderabad-pune-bengaluru-4-to-6-years-270826015312",
+      "apply_url": "",
+      "experience_required": "4-6 Yrs",
+      "location": "Bengaluru, Pune, Hyderabad",
+      "posted_date": "3+ weeks ago",
+      "recruiter_name": "",
+      "recruiter_email": "",
+      "status": "failed",
+      "retry_count": 3,
+      "search_keyword": "RAG Engineer",
+      "search_location": "Pune",
+      "created_at": "2026-09-24T22:38:19.866514",
+      "failure_type": "OTHER",
+      "failure_category": "DETERMINISTIC",
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-10-01T22:53:26.849389",
+      "ai_score": 75.0,
+      "ai_action": "apply",
+      "ai_priority": "high",
+      "ai_confidence": 78.0,
+      "ai_reason": "Strong production RAG experience and transferable cloud skills.",
+      "app_type": "unknown",
+      "app_status": "discovered",
+      "app_date": "2026-10-01T22:53:26.843078",
+      "ats_status": null,
+      "ats_platform": "Naukri",
+      "application_type": "INTERNAL"
+    },
+    {
       "id": 42833,
       "job_title": "AI Engineer",
       "company_name": "Datazoic Machines",
@@ -2033,15 +2068,15 @@
   ],
   "pagination": {
     "page": 1,
-    "limit": 58,
-    "total_records": 58,
+    "limit": 59,
+    "total_records": 59,
     "total_pages": 1
   },
   "summary": {
     "by_type": [
       {
         "type": "OTHER",
-        "count": 55,
+        "count": 56,
         "category": "DETERMINISTIC"
       },
       {
@@ -2055,6 +2090,6 @@
         "category": "DETERMINISTIC"
       }
     ],
-    "total_failed": 58
+    "total_failed": 59
   }
 }

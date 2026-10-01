@@ -12,15 +12,15 @@
       "id": 67,
       "keyword": "RAG Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-09-19T16:26:29.803849",
-      "jobs_found": 0,
-      "jobs_inserted": 0
+      "last_run_at": "2026-10-01T22:19:26.363718",
+      "jobs_found": 20,
+      "jobs_inserted": 7
     },
     {
       "id": 68,
       "keyword": "RAG Engineer",
       "location": "Noida",
-      "last_run_at": "2026-09-30T07:44:09.661237",
+      "last_run_at": "2026-10-01T22:13:12.137716",
       "jobs_found": 15,
       "jobs_inserted": 0
     },
@@ -28,23 +28,23 @@
       "id": 69,
       "keyword": "RAG Engineer",
       "location": "Pune",
-      "last_run_at": "2026-09-24T22:38:19.870019",
+      "last_run_at": "2026-10-01T22:16:14.053168",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 3
     },
     {
       "id": 70,
       "keyword": "RAG Engineer",
       "location": "Remote",
-      "last_run_at": "2026-09-30T07:43:14.978629",
+      "last_run_at": "2026-10-01T22:12:21.711560",
       "jobs_found": 7,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 114,
       "keyword": "RAG Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-09-30T07:45:16.195533",
+      "last_run_at": "2026-10-01T22:14:08.469494",
       "jobs_found": 2,
       "jobs_inserted": 0
     },
@@ -52,8 +52,8 @@
       "id": 120,
       "keyword": "RAG Engineer",
       "location": "Indore",
-      "last_run_at": "2026-09-19T16:26:29.974635",
-      "jobs_found": 0,
+      "last_run_at": "2026-10-01T22:19:36.130247",
+      "jobs_found": 2,
       "jobs_inserted": 0
     },
     {

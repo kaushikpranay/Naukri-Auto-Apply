@@ -12,121 +12,121 @@
       "id": 37,
       "keyword": "Generative AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-09-30T07:15:09.452723",
+      "last_run_at": "2026-10-01T21:46:19.835111",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 2
     },
     {
       "id": 38,
       "keyword": "Generative AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-09-30T07:18:41.949482",
+      "last_run_at": "2026-10-01T21:49:38.728502",
       "jobs_found": 20,
-      "jobs_inserted": 6
+      "jobs_inserted": 2
     },
     {
       "id": 39,
       "keyword": "Generative AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-09-30T07:12:50.825091",
+      "last_run_at": "2026-10-01T21:44:08.585665",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 6
     },
     {
       "id": 40,
       "keyword": "Generative AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-09-30T07:17:31.722950",
+      "last_run_at": "2026-10-01T21:48:32.986980",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 0
     },
     {
       "id": 41,
       "keyword": "Generative AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-09-30T07:20:30.680006",
+      "last_run_at": "2026-10-01T21:51:17.654089",
       "jobs_found": 10,
-      "jobs_inserted": 3
+      "jobs_inserted": 0
     },
     {
       "id": 42,
       "keyword": "Generative AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-09-30T07:13:59.831446",
+      "last_run_at": "2026-10-01T21:45:13.902892",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 2
     },
     {
       "id": 43,
       "keyword": "Generative AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-09-30T07:19:53.032802",
+      "last_run_at": "2026-10-01T21:50:43.339574",
       "jobs_found": 20,
-      "jobs_inserted": 8
+      "jobs_inserted": 2
     },
     {
       "id": 44,
       "keyword": "Generative AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-09-30T07:11:40.218412",
+      "last_run_at": "2026-10-01T21:43:04.055556",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 1
     },
     {
       "id": 45,
       "keyword": "Generative AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-09-30T07:16:20.497603",
+      "last_run_at": "2026-10-01T21:47:25.767942",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 2
     },
     {
       "id": 46,
       "keyword": "Generative AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-09-30T07:10:28.585534",
-      "jobs_found": 16,
-      "jobs_inserted": 6
+      "last_run_at": "2026-10-01T21:41:55.990828",
+      "jobs_found": 11,
+      "jobs_inserted": 0
     },
     {
       "id": 47,
       "keyword": "LLM Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-09-30T07:37:37.446999",
+      "last_run_at": "2026-10-01T22:07:14.398480",
       "jobs_found": 20,
-      "jobs_inserted": 6
+      "jobs_inserted": 4
     },
     {
       "id": 48,
       "keyword": "LLM Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-09-30T07:41:08.689124",
+      "last_run_at": "2026-10-01T22:10:24.640448",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 2
     },
     {
       "id": 49,
       "keyword": "LLM Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-09-30T07:35:48.454616",
+      "last_run_at": "2026-10-01T22:05:36.635405",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 2
     },
     {
       "id": 50,
       "keyword": "LLM Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-09-30T07:39:57.979821",
+      "last_run_at": "2026-10-01T22:09:20.208441",
       "jobs_found": 20,
-      "jobs_inserted": 0
+      "jobs_inserted": 3
     },
     {
       "id": 51,
       "keyword": "LLM Engineer",
       "location": "Indore",
-      "last_run_at": "2026-09-30T07:42:47.270405",
+      "last_run_at": "2026-10-01T22:11:56.920935",
       "jobs_found": 7,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     }
   ],
   "pagination": {

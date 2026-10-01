@@ -49,12 +49,52 @@
       "required": 0,
       "answer": null,
       "detected_at": "2026-09-30T08:24:56.454325"
+    },
+    {
+      "id": 857,
+      "job_id": 44377,
+      "question_key": "interested_working_infosys",
+      "question_text": "Are you interested working with infosys",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-01T22:54:06.582721"
+    },
+    {
+      "id": 858,
+      "job_id": 44575,
+      "question_key": "ml_experience",
+      "question_text": "How many years of hands on professional experience do you have specifically in AI/ML?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-01T22:55:15.649035"
+    },
+    {
+      "id": 859,
+      "job_id": 44906,
+      "question_key": "exp_building_ai_agents",
+      "question_text": "Do you have experience in building AI Agents using frameworks Lang Graph, Langchain?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-10-01T22:55:46.875446"
+    },
+    {
+      "id": 860,
+      "job_id": 44906,
+      "question_key": "current_location",
+      "question_text": "What is you current location?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Indore",
+      "detected_at": "2026-10-01T22:56:26.328200"
     }
   ],
   "pagination": {
     "page": 3,
     "limit": 15,
-    "total_records": 34,
+    "total_records": 38,
     "total_pages": 3
   }
 }

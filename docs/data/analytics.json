@@ -19,48 +19,52 @@
     {
       "date": "2026-09-30",
       "count": 151
+    },
+    {
+      "date": "2026-10-01",
+      "count": 168
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 427
+      "count": 508
     },
     {
       "score_range": 10,
-      "count": 7
+      "count": 9
     },
     {
       "score_range": 20,
-      "count": 7
+      "count": 8
     },
     {
       "score_range": 30,
-      "count": 2
+      "count": 5
     },
     {
       "score_range": 40,
-      "count": 1
-    },
-    {
-      "score_range": 50,
       "count": 2
     },
     {
+      "score_range": 50,
+      "count": 3
+    },
+    {
       "score_range": 60,
-      "count": 10
+      "count": 11
     },
     {
       "score_range": 70,
-      "count": 76
+      "count": 94
     },
     {
       "score_range": 80,
-      "count": 331
+      "count": 382
     },
     {
       "score_range": 90,
-      "count": 67
+      "count": 76
     }
   ],
   "ats_distribution": [
@@ -72,11 +76,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 70
+      "count": 73
     },
     {
       "status": "applied_successfully",
-      "count": 129
+      "count": 139
     },
     {
       "status": "easy_apply",
@@ -84,15 +88,15 @@
     },
     {
       "status": "evaluated",
-      "count": 469
+      "count": 604
     },
     {
       "status": "external_portal",
-      "count": 185
+      "count": 208
     },
     {
       "status": "failed",
-      "count": 58
+      "count": 59
     },
     {
       "status": "needs_human_review",
@@ -100,11 +104,7 @@
     },
     {
       "status": "pending",
-      "count": 2
-    },
-    {
-      "status": "unknown",
-      "count": 5
+      "count": 3
     },
     {
       "status": "walk_in",
@@ -114,27 +114,27 @@
   "top_companies": [
     {
       "name": "Infosys",
-      "count": 41
-    },
-    {
-      "name": "Leading Client",
-      "count": 40
+      "count": 49
     },
     {
       "name": "CMMI Level 5 IT Company - MNC",
-      "count": 39
+      "count": 48
+    },
+    {
+      "name": "Leading Client",
+      "count": 44
     },
     {
       "name": "Accenture",
-      "count": 34
+      "count": 35
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 25
+      "count": 30
     },
     {
       "name": "Sparix Global",
-      "count": 20
+      "count": 25
     },
     {
       "name": "PwC",
@@ -142,15 +142,15 @@
     },
     {
       "name": "Epam Systems",
-      "count": 15
+      "count": 17
     },
     {
       "name": "Soul Ai",
       "count": 13
     },
     {
-      "name": "Ascendion Engineering",
-      "count": 11
+      "name": "Capgemini",
+      "count": 12
     }
   ],
   "failure_reasons": [

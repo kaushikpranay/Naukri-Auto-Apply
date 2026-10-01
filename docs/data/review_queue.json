@@ -1032,6 +1032,184 @@
     "priority": "high"
   },
   {
+    "id": 45175,
+    "company_name": "Coforge",
+    "job_title": "Coforge is Hiring GEN AI Engineers",
+    "location": "Hybrid - Greater Noida, Pune",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-coforge-is-hiring-gen-ai-engineers-coforge-pune-greater-noida-3-to-5-years-300926017085",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience with transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 45320,
+    "company_name": "Tech Mahindra",
+    "job_title": "AI Engineer (0- 6)",
+    "location": "Hybrid - Noida, Bengaluru, Pune",
+    "experience_required": "1-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-0-6-tech-mahindra-noida-pune-bengaluru-1-to-6-years-300926016792",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 45767,
+    "company_name": "Optum",
+    "job_title": "Senior AI/ML Engineer - LLM, RAG and Agentic AI",
+    "location": "Bengaluru",
+    "experience_required": "2-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-ai-ml-engineer-llm-rag-and-agentic-ai-optum-global-solutions-india-private-limited-bengaluru-2-to-7-years-011026927484",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 45996,
+    "company_name": "Quantiphi Analytics Solutions",
+    "job_title": "Senior Machine Learning Engineer",
+    "location": "Hybrid - Bengaluru, Mumbai, Thiruvananthapuram",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-senior-machine-learning-engineer-quantiphi-analytics-solutions-mumbai-bengaluru-thiruvananthapuram-4-to-7-years-070926029157",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience with transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI",
+      "GCP Vertex AI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46014,
+    "company_name": "Tangentia",
+    "job_title": "AI AE Professional",
+    "location": "Remote",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-ae-professional-tangentia-remote-3-to-5-years-280926500844",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and Agentic AI experience, transferable cloud and Python skills, but lacks MSSQL/Oracle and A360 knowledge.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "MSSQL",
+      "Oracle",
+      "A360"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46085,
+    "company_name": "ERM Placement Services",
+    "job_title": "Gen AI developer",
+    "location": "Kolkata",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-gen-ai-developer-erm-placement-services-kolkata-4-to-7-years-310826921474",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46151,
+    "company_name": "Alation",
+    "job_title": "DCX Agentic AI Engineer",
+    "location": "Chennai",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-dcx-agentic-ai-engineer-alation-chennai-3-to-5-years-140826500778",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and agentic workflow experience, transferable cloud skills, but lacks Azure OpenAI exposure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46221,
+    "company_name": "Codeacious",
+    "job_title": "Fullstack Developer",
+    "location": "Noida(Sector 142)",
+    "experience_required": "1-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-codeacious-noida-1-to-3-years-200726010452",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and AI backend experience, transferable cloud skills, but lacks core frontend stack.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redis"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46228,
+    "company_name": "TagTaste Foods",
+    "job_title": "Backend Developer",
+    "location": "Noida",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-backend-developer-tagtaste-foods-pvt-ltd-noida-2-to-5-years-220925503867",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and AWS/DevOps skills, but missing PHP/NodeJs and configuration management tools.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "PHP",
+      "NodeJs",
+      "Jenkins",
+      "Ansible",
+      "Linux",
+      "Bash"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46234,
+    "company_name": "Jobaaj com",
+    "job_title": "Fullstack Developer",
+    "location": "Noida",
+    "experience_required": "0-1 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-jobaaj-com-noida-0-to-1-years-230926044420",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production backend experience with FastAPI, AWS, and RAG, but lacks front-end React.js skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.js",
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 42032,
     "company_name": "Qloron Technology",
     "job_title": "GenAI Engineer",
@@ -1361,6 +1539,161 @@
     "priority": "high"
   },
   {
+    "id": 45812,
+    "company_name": "Yext",
+    "job_title": "Demo Engineer",
+    "location": "Hyderabad",
+    "experience_required": "2-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-demo-engineer-yext-hyderabad-2-to-7-years-011026502537",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and AI backend experience, but lacks Yext platform and front-end skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Yext platform",
+      "HTML/CSS",
+      "JavaScript",
+      "SEO best practices"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 45842,
+    "company_name": "Designcentric",
+    "job_title": "Software Developer",
+    "location": "Mumbai(Grant Road East)",
+    "experience_required": "2-3 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-developer-designcentric-mumbai-2-to-3-years-011026036046",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong Python backend with FastAPI, transferable to Flask/Django, but missing front\u2011end and WordPress skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Node.js",
+      "React.js",
+      "WordPress",
+      "Ubuntu/Linux",
+      "Nginx/Apache",
+      "SSL",
+      "Git"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46163,
+    "company_name": "Amiseq",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Pune, Chennai",
+    "experience_required": "4-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-amiseq-pune-chennai-4-to-6-years-180926008299",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and Agentic AI experience, transferable cloud skills, but lacks Cursor IDE and Azure OpenAI exposure.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Cursor IDE",
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46199,
+    "company_name": "Workiy Technologies",
+    "job_title": "Full Stack Developer",
+    "location": "Remote",
+    "experience_required": "1-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-workiy-inc-remote-1-to-4-years-140826504585",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong backend and AWS experience but lacks frontend TypeScript/React/Angular.",
+    "recommended_resume": "STARTUP",
+    "missing_skills": [
+      "TypeScript",
+      "React",
+      "Angular"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 46203,
+    "company_name": "Sparix Global",
+    "job_title": "Fullstack Developer",
+    "location": "Remote",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-sparix-global-private-limited-remote-2-to-6-years-280426500594",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong Python backend, FastAPI, cloud experience, but lacks Angular.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Angular"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46204,
+    "company_name": "Upstack",
+    "job_title": "Full Stack Developer",
+    "location": "Remote",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-upstack-remote-2-to-6-years-260822501614",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and FastAPI experience, transferable AWS skills, but lacks front-end frameworks.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React.JS",
+      "Node.JS",
+      "Angular",
+      "Vue",
+      "Typescript"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46206,
+    "company_name": "Sparix Global",
+    "job_title": "Golang Developer",
+    "location": "Remote",
+    "experience_required": "2-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-golang-developer-sparix-global-private-limited-remote-2-to-5-years-240426500746",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong Python backend and API experience, but lacks Go and containerization skills.",
+    "recommended_resume": "PYTHON",
+    "missing_skills": [
+      "Go",
+      "Gin",
+      "Echo",
+      "Fiber",
+      "Kubernetes"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 46210,
+    "company_name": "PD Consulting",
+    "job_title": "Full-stack app developer (Part-time, Equity only)",
+    "location": "Remote",
+    "experience_required": "3-10 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-app-developer-part-time-equity-only-pd-consulting-remote-3-to-10-years-280926500520",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and FastAPI experience, but lacks front-end and healthcare integration skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React",
+      "React Native",
+      "Node.js",
+      "Java/Kotlin",
+      "Mobile App Development",
+      "Healthcare Data Integration",
+      "Wearable Integration",
+      "Security/Privacy"
+    ],
+    "priority": "high"
+  },
+  {
     "id": 42302,
     "company_name": "Tata Consultancy Services",
     "job_title": "Principal Generative AI & ML Ops Engineer (SME)",
@@ -1416,6 +1749,26 @@
       "Braintrust",
       "Langfuse",
       "MCP"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 45775,
+    "company_name": "JPMorgan Chase Bank",
+    "job_title": "Software Engineer III - Java Full Stack Developer + GenAI / LLM + AWS",
+    "location": "Bengaluru",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-software-engineer-iii-java-full-stack-developer-genai-llm-aws-jp-morgan-and-chase-bengaluru-3-to-8-years-300926503340",
+    "score": 65.0,
+    "confidence": 70.0,
+    "reason": "Strong RAG and AWS experience, but missing Java and core full\u2011stack stack.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Java",
+      "Spring Boot",
+      "Camunda",
+      "Docker",
+      "Kubernetes"
     ],
     "priority": "high"
   },
@@ -1570,6 +1923,30 @@
     "priority": "medium"
   },
   {
+    "id": 46208,
+    "company_name": "Construe Labs",
+    "job_title": "Full Stack Developer",
+    "location": "Remote",
+    "experience_required": "2-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-construe-labs-remote-2-to-4-years-120526500155",
+    "score": 45.0,
+    "confidence": 50.0,
+    "reason": "Strong back-end and cloud experience but lacks front-end skills required for full stack role.",
+    "recommended_resume": "STARTUP",
+    "missing_skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vue",
+      "Angular",
+      "Sass",
+      "Less",
+      "webpack"
+    ],
+    "priority": "medium"
+  },
+  {
     "id": 42886,
     "company_name": "Oliv Ai",
     "job_title": "GTM Engineer",
@@ -1584,6 +1961,41 @@
       "Marketing Automation Tools",
       "ABM",
       "CRM Integration"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 45837,
+    "company_name": "Bonfiglioli",
+    "job_title": "Mendix Engineer",
+    "location": "Chennai",
+    "experience_required": "2-6 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-mendix-engineer-bonfiglioli-chennai-2-to-6-years-080726015860",
+    "score": 35.0,
+    "confidence": 70.0,
+    "reason": "Strong AI, RAG, and agentic experience but no Mendix background.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Mendix"
+    ],
+    "priority": "medium"
+  },
+  {
+    "id": 46211,
+    "company_name": "Robust Softech",
+    "job_title": "Full Stack Developer",
+    "location": "Remote",
+    "experience_required": "2-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-full-stack-developer-robust-softech-private-limited-remote-2-to-7-years-280926500628",
+    "score": 35.0,
+    "confidence": 60.0,
+    "reason": "Strong backend experience but lacks front-end skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "React",
+      "Next.js",
+      "JavaScript/TypeScript",
+      "Node.js"
     ],
     "priority": "medium"
   }

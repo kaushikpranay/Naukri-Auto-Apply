@@ -83,11 +83,11 @@
       "question_key": "interested_working_infosys",
       "question_text": "Are you interested working with infosys",
       "answer": "Yes",
-      "usage_count": 3,
-      "last_used": "2026-09-24T23:01:21.878361",
+      "usage_count": 4,
+      "last_used": "2026-10-01T22:54:06.582721",
       "field_type": "contenteditable",
       "created_at": "2026-09-24T23:01:04.355965",
-      "last_used_at": "2026-09-24T23:01:21.878361",
+      "last_used_at": "2026-10-01T22:54:06.582721",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -168,12 +168,25 @@
       "last_used_at": "2026-09-30T08:24:56.454325",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 14913,
+      "question_key": "exp_building_ai_agents",
+      "question_text": "Do you have experience in building AI Agents using frameworks Lang Graph, Langchain?",
+      "answer": "1.5",
+      "usage_count": 1,
+      "last_used": "2026-10-01T22:55:46.875446",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-01T22:55:46.875446",
+      "last_used_at": "2026-10-01T22:55:46.875446",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 23,
     "limit": 15,
-    "total_records": 342,
+    "total_records": 343,
     "total_pages": 23
   }
 }
