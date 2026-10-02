@@ -1,89 +1,89 @@
 {
   "summary": {
-    "total_jobs": 1098,
-    "naukri_jobs": 1098,
+    "total_jobs": 945,
+    "naukri_jobs": 945,
     "external_jobs": 953,
-    "pending_review": 109,
-    "queued": 75,
+    "pending_review": 89,
+    "queued": 122,
     "applying": 0,
-    "applied": 212,
-    "failed": 60,
+    "applied": 155,
+    "failed": 36,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 353.3,
-    "avg_ai_score": 43.1,
-    "today_jobs": 168,
-    "today_applications": 37
+    "success_rate": 430.6,
+    "avg_ai_score": 43.0,
+    "today_jobs": 152,
+    "today_applications": 30
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Infosys",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-10-01T23:05:19.495934",
+      "company_name": "N53 TECHWORKS LLP",
+      "job_title": "Back End Engineer",
+      "timestamp": "2026-10-02T19:59:39.926416",
       "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Getsubstance",
-      "job_title": "Agentic AI Engineer (Fractional)",
-      "timestamp": "2026-10-01T23:05:04.144305",
+      "company_name": "Plux Infosystems Noida",
+      "job_title": "Backend Developer",
+      "timestamp": "2026-10-02T19:59:13.629615",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Velocitai Digital",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-01T23:04:50.648498",
+      "company_name": "Zorba Ai",
+      "job_title": "Backend Developer",
+      "timestamp": "2026-10-02T19:58:54.023681",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Newrocket",
-      "job_title": "AI/ML Developer",
-      "timestamp": "2026-10-01T23:04:37.753324",
+      "company_name": "Enveritas",
+      "job_title": "Backend Software Engineer - Python/Postgres [ / Global]",
+      "timestamp": "2026-10-02T19:58:34.961003",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Cognifyr Co",
-      "job_title": "AI Agent Engineer",
-      "timestamp": "2026-10-01T23:04:24.763627",
-      "details": "Type: already_applied, Status: discovered"
+      "company_name": "Vikisol Technologies",
+      "job_title": "Python Backend Engineer",
+      "timestamp": "2026-10-02T19:58:14.225459",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Infosys",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-10-01T22:53:17.233418",
+      "company_name": "Sparix Global",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-02T19:49:34.829741",
       "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Jobaaj com",
-      "job_title": "Fullstack Developer",
-      "timestamp": "2026-10-01T22:53:07.681613",
-      "details": "Score: 75.0%, Action: apply"
+      "company_name": "Exavalu",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-02T19:49:15.950640",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Connect iO",
-      "job_title": "MLOps Engineer",
-      "timestamp": "2026-10-01T22:52:47.627581",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "RNF Technologies",
+      "job_title": "AI Prompt Engineer",
+      "timestamp": "2026-10-02T19:49:13.313637",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Agicent Technologies",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-10-01T22:52:47.623611",
+      "company_name": "Realty Assistant",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-02T19:48:56.534920",
       "details": "Score: 90.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "N53 TECHWORKS LLP",
-      "job_title": "Back End Engineer",
-      "timestamp": "2026-10-01T22:52:46.544415",
+      "company_name": "Devnagri",
+      "job_title": "Jr AI Engineer",
+      "timestamp": "2026-10-02T19:48:48.798700",
       "details": "Score: 85.0%, Action: apply"
     }
   ]

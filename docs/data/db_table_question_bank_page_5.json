@@ -70,11 +70,11 @@
       "question_key": "total_years_experience",
       "question_text": "What is your total IT experience?",
       "answer": "2",
-      "usage_count": 27,
-      "last_used": "2026-09-17T15:22:21.144926",
+      "usage_count": 28,
+      "last_used": "2026-10-02T19:50:51.436043",
       "field_type": "contenteditable",
       "created_at": "2026-06-08T03:43:52.159950",
-      "last_used_at": "2026-09-17T15:22:21.144926",
+      "last_used_at": "2026-10-02T19:50:51.436043",
       "confidence_score": 1.0,
       "updated_at": "2026-06-20T19:31:06"
     },
@@ -162,7 +162,7 @@
       "question_text": "interview_availability",
       "answer": "Yes",
       "usage_count": 0,
-      "last_used": "2026-10-01T21:32:39.292595",
+      "last_used": "2026-10-02T19:07:45.953527",
       "field_type": null,
       "created_at": null,
       "last_used_at": "2026-06-18T18:34:01",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 5,
     "limit": 15,
-    "total_records": 343,
+    "total_records": 344,
     "total_pages": 23
   }
 }
