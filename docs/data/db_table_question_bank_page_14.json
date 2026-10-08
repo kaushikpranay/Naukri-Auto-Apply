@@ -70,11 +70,11 @@
       "question_key": "willing_to_relocate_bengaluru",
       "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
       "answer": null,
-      "usage_count": 4,
-      "last_used": "2026-09-17T15:20:21.399747",
+      "usage_count": 6,
+      "last_used": "2026-10-08T18:39:11.417032",
       "field_type": "radio",
       "created_at": "2026-07-08T21:22:57.601719",
-      "last_used_at": "2026-09-17T15:20:21.399747",
+      "last_used_at": "2026-10-08T18:39:11.417032",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -83,11 +83,11 @@
       "question_key": "exp_software_engineering",
       "question_text": "How many years of experience do you have in Software Engineering?",
       "answer": "2",
-      "usage_count": 3,
-      "last_used": "2026-09-17T15:26:39.308803",
+      "usage_count": 4,
+      "last_used": "2026-10-08T18:33:58.404771",
       "field_type": "contenteditable",
       "created_at": "2026-07-08T21:24:05.622982",
-      "last_used_at": "2026-09-17T15:26:39.308803",
+      "last_used_at": "2026-10-08T18:33:58.404771",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -123,7 +123,7 @@
       "question_text": "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?",
       "answer": "Yes",
       "usage_count": 1,
-      "last_used": "2026-10-02T19:07:45.953527",
+      "last_used": "2026-10-08T17:34:48.288256",
       "field_type": "radio",
       "created_at": "2026-07-10T23:50:57.344002",
       "last_used_at": "2026-07-10T23:50:57.344002",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 344,
-    "total_pages": 23
+    "total_records": 353,
+    "total_pages": 24
   }
 }

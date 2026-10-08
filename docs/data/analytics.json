@@ -1,14 +1,6 @@
 {
   "applications_per_day": [
     {
-      "date": "2026-09-19",
-      "count": 159
-    },
-    {
-      "date": "2026-09-21",
-      "count": 158
-    },
-    {
       "date": "2026-09-24",
       "count": 157
     },
@@ -23,24 +15,28 @@
     {
       "date": "2026-10-02",
       "count": 152
+    },
+    {
+      "date": "2026-10-08",
+      "count": 152
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 436
+      "count": 375
     },
     {
       "score_range": 10,
-      "count": 9
+      "count": 4
     },
     {
       "score_range": 20,
-      "count": 9
+      "count": 7
     },
     {
       "score_range": 30,
-      "count": 5
+      "count": 4
     },
     {
       "score_range": 40,
@@ -48,7 +44,7 @@
     },
     {
       "score_range": 50,
-      "count": 3
+      "count": 4
     },
     {
       "score_range": 60,
@@ -56,15 +52,15 @@
     },
     {
       "score_range": 70,
-      "count": 77
+      "count": 67
     },
     {
       "score_range": 80,
-      "count": 327
+      "count": 259
     },
     {
       "score_range": 90,
-      "count": 69
+      "count": 50
     }
   ],
   "ats_distribution": [
@@ -76,27 +72,27 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 47
+      "count": 49
     },
     {
       "status": "applied_successfully",
-      "count": 108
+      "count": 84
     },
     {
       "status": "easy_apply",
-      "count": 2
+      "count": 4
     },
     {
       "status": "evaluated",
-      "count": 580
+      "count": 492
     },
     {
       "status": "external_portal",
-      "count": 168
+      "count": 127
     },
     {
       "status": "failed",
-      "count": 36
+      "count": 21
     },
     {
       "status": "pending",
@@ -104,7 +100,7 @@
     },
     {
       "status": "walk_in",
-      "count": 2
+      "count": 1
     }
   ],
   "top_companies": [
@@ -114,39 +110,39 @@
     },
     {
       "name": "Infosys",
-      "count": 36
+      "count": 32
     },
     {
       "name": "Accenture",
-      "count": 35
-    },
-    {
-      "name": "Leading Client",
-      "count": 28
-    },
-    {
-      "name": "Sparix Global",
-      "count": 24
+      "count": 32
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 23
+      "count": 22
+    },
+    {
+      "name": "Leading Client",
+      "count": 22
+    },
+    {
+      "name": "Sparix Global",
+      "count": 20
     },
     {
       "name": "Epam Systems",
-      "count": 15
-    },
-    {
-      "name": "PwC",
-      "count": 14
+      "count": 16
     },
     {
       "name": "Capgemini",
       "count": 11
     },
     {
-      "name": "Optum",
-      "count": 9
+      "name": "PwC",
+      "count": 8
+    },
+    {
+      "name": "Innocode Ventures",
+      "count": 7
     }
   ],
   "failure_reasons": [

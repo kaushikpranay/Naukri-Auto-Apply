@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 945,
-    "naukri_jobs": 945,
+    "total_jobs": 780,
+    "naukri_jobs": 780,
     "external_jobs": 953,
-    "pending_review": 89,
-    "queued": 122,
+    "pending_review": 79,
+    "queued": 103,
     "applying": 0,
-    "applied": 155,
-    "failed": 36,
+    "applied": 133,
+    "failed": 21,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 430.6,
-    "avg_ai_score": 43.0,
+    "success_rate": 633.3,
+    "avg_ai_score": 41.5,
     "today_jobs": 152,
-    "today_applications": 30
+    "today_applications": 89
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "N53 TECHWORKS LLP",
-      "job_title": "Back End Engineer",
-      "timestamp": "2026-10-02T19:59:39.926416",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Plux Infosystems Noida",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-10-02T19:59:13.629615",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Zorba Ai",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-10-02T19:58:54.023681",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Enveritas",
-      "job_title": "Backend Software Engineer - Python/Postgres [ / Global]",
-      "timestamp": "2026-10-02T19:58:34.961003",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Vikisol Technologies",
-      "job_title": "Python Backend Engineer",
-      "timestamp": "2026-10-02T19:58:14.225459",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Sparix Global",
+      "company_name": "Infosys",
       "job_title": "AI Engineer",
-      "timestamp": "2026-10-02T19:49:34.829741",
-      "details": "Score: 85.0%, Action: apply"
+      "timestamp": "2026-10-08T19:02:00.346442",
+      "details": "Type: easy_apply, Status: discovered"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Exavalu",
+      "type": "applied",
+      "company_name": "Infosys",
       "job_title": "AI Engineer",
-      "timestamp": "2026-10-02T19:49:15.950640",
-      "details": "Score: 85.0%, Action: apply"
+      "timestamp": "2026-10-08T19:01:45.396723",
+      "details": "Type: easy_apply, Status: discovered"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "RNF Technologies",
-      "job_title": "AI Prompt Engineer",
-      "timestamp": "2026-10-02T19:49:13.313637",
-      "details": "Score: 85.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Realty Assistant",
+      "type": "applied",
+      "company_name": "Keeptruckin",
       "job_title": "AI Engineer",
-      "timestamp": "2026-10-02T19:48:56.534920",
-      "details": "Score: 90.0%, Action: apply"
+      "timestamp": "2026-10-08T19:01:30.045179",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Elasticsearch",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-10-08T19:01:16.058365",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Micro1",
+      "job_title": "Mid-level AI Engineer (India)",
+      "timestamp": "2026-10-08T19:01:02.297604",
+      "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Devnagri",
-      "job_title": "Jr AI Engineer",
-      "timestamp": "2026-10-02T19:48:48.798700",
+      "company_name": "Five Exceptions Software Solutions",
+      "job_title": "AI Security Engineer",
+      "timestamp": "2026-10-08T18:29:26.773664",
+      "details": "Score: 70.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Infosys",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-08T18:29:12.630750",
       "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Tata Consultancy Services",
+      "job_title": "AI-ML Engineer",
+      "timestamp": "2026-10-08T18:28:59.330984",
+      "details": "Score: 0.0%, Action: skip"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Cerebra",
+      "job_title": "AI / ML Engineer",
+      "timestamp": "2026-10-08T18:28:59.322310",
+      "details": "Score: 85.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Digiflex",
+      "job_title": "AI Full Stack Engineer (Agentic AI + SaaS)",
+      "timestamp": "2026-10-08T18:28:51.541069",
+      "details": "Score: 80.0%, Action: apply"
     }
   ]
 }

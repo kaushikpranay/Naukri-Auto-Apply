@@ -11,30 +11,90 @@
   ],
   "rows": [
     {
-      "id": 865,
-      "job_id": 46182,
-      "question_key": "experience_building_fraud_detection_or_risk_modeling_systems",
-      "question_text": "What is your experience building fraud detection or risk modeling systems?",
+      "id": 888,
+      "job_id": 46682,
+      "question_key": "willing_meet_leadership_hiring_team_friday_9th_oct_bangalore",
+      "question_text": "Are you willing to Meet the Leadership Hiring Team on Friday(9th Oct)- Bangalore- Manyata Tech Park",
       "field_type": "radio",
       "required": 0,
       "answer": null,
-      "detected_at": "2026-10-02T19:56:57.276515"
+      "detected_at": "2026-10-08T18:51:08.203462"
     },
     {
-      "id": 868,
-      "job_id": 46231,
-      "question_key": "python_experience",
-      "question_text": "How many years of experience do you have in Java / Python / Go?",
+      "id": 891,
+      "job_id": 46790,
+      "question_key": "relocation_city_preference",
+      "question_text": "Please select the city you are currently residing or willing to relocate to",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": "Noida",
+      "detected_at": "2026-10-08T18:52:10.481716"
+    },
+    {
+      "id": 892,
+      "job_id": 46799,
+      "question_key": "notice_period",
+      "question_text": "What is your notice period or LWD?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "45 days",
+      "detected_at": "2026-10-08T18:53:14.300902"
+    },
+    {
+      "id": 893,
+      "job_id": 46878,
+      "question_key": "notice_period",
+      "question_text": "If serving notice, what is your LAST WORKING DAY ?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "45 days",
+      "detected_at": "2026-10-08T18:55:58.664914"
+    },
+    {
+      "id": 894,
+      "job_id": 46889,
+      "question_key": "intrested_towards_night_shift",
+      "question_text": "Are you intrested towards Night Shift ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "No",
+      "detected_at": "2026-10-08T18:56:32.474389"
+    },
+    {
+      "id": 896,
+      "job_id": 46889,
+      "question_key": "sql_experience",
+      "question_text": "How many years of experience do you have in SQL Scripting?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": "2",
-      "detected_at": "2026-10-02T19:59:39.931329"
+      "detected_at": "2026-10-08T18:57:10.050527"
+    },
+    {
+      "id": 897,
+      "job_id": 46911,
+      "question_key": "available_person_interview_at_office_location",
+      "question_text": "Are You Available to Attend the F2F Interview at Hexaware Office on 10th Oct 2026?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-08T18:58:24.391140"
+    },
+    {
+      "id": 898,
+      "job_id": 46947,
+      "question_key": "exp_ai_agents",
+      "question_text": "How many years of experience do you have in AI Agents?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-08T19:00:22.310415"
     }
   ],
   "pagination": {
     "page": 3,
     "limit": 15,
-    "total_records": 32,
+    "total_records": 38,
     "total_pages": 3
   }
 }
