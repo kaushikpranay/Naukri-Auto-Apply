@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 780,
-    "naukri_jobs": 780,
+    "total_jobs": 774,
+    "naukri_jobs": 774,
     "external_jobs": 953,
-    "pending_review": 79,
-    "queued": 103,
+    "pending_review": 85,
+    "queued": 88,
     "applying": 0,
-    "applied": 133,
-    "failed": 21,
+    "applied": 146,
+    "failed": 8,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 633.3,
-    "avg_ai_score": 41.5,
-    "today_jobs": 152,
-    "today_applications": 89
+    "success_rate": 1825.0,
+    "avg_ai_score": 40.2,
+    "today_jobs": 151,
+    "today_applications": 74
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Infosys",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-08T19:02:00.346442",
-      "details": "Type: easy_apply, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Infosys",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-08T19:01:45.396723",
-      "details": "Type: easy_apply, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Keeptruckin",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-08T19:01:30.045179",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Elasticsearch",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-10-08T19:01:16.058365",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Micro1",
-      "job_title": "Mid-level AI Engineer (India)",
-      "timestamp": "2026-10-08T19:01:02.297604",
+      "company_name": "Crisil",
+      "job_title": "Senior AI Engineer GenAI & ML solutions",
+      "timestamp": "2026-10-11T19:02:21.691426",
       "details": "Type: already_applied, Status: discovered"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Five Exceptions Software Solutions",
-      "job_title": "AI Security Engineer",
-      "timestamp": "2026-10-08T18:29:26.773664",
-      "details": "Score: 70.0%, Action: apply"
+      "type": "applied",
+      "company_name": "Smartncode",
+      "job_title": "AI/GenAI Engineer (LLM Integration Specialist)",
+      "timestamp": "2026-10-11T19:02:17.312849",
+      "details": "Type: already_applied, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Sii Polska",
+      "job_title": "AI Engineer - GenAI & Cloud (f/m/x)",
+      "timestamp": "2026-10-11T19:02:09.607738",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Flairdeck",
+      "job_title": "Gen AI Engineer",
+      "timestamp": "2026-10-11T19:01:48.751066",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Global Business Ser 4u",
+      "job_title": "Generative AI Engineer - Remote",
+      "timestamp": "2026-10-11T19:01:30.002278",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Infosys",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-08T18:29:12.630750",
+      "company_name": "Accenture",
+      "job_title": "LLM Operations Engineer",
+      "timestamp": "2026-10-11T18:36:40.349580",
       "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Tata Consultancy Services",
-      "job_title": "AI-ML Engineer",
-      "timestamp": "2026-10-08T18:28:59.330984",
+      "company_name": "Accenture",
+      "job_title": "LLM Operations Engineer",
+      "timestamp": "2026-10-11T18:36:22.857315",
+      "details": "Score: 75.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Accenture",
+      "job_title": "LLM Model Developer",
+      "timestamp": "2026-10-11T18:36:12.884791",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Cerebra",
-      "job_title": "AI / ML Engineer",
-      "timestamp": "2026-10-08T18:28:59.322310",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Accenture",
+      "job_title": "LLM Full Stack Engineer",
+      "timestamp": "2026-10-11T18:36:12.879345",
+      "details": "Score: 75.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Digiflex",
-      "job_title": "AI Full Stack Engineer (Agentic AI + SaaS)",
-      "timestamp": "2026-10-08T18:28:51.541069",
-      "details": "Score: 80.0%, Action: apply"
+      "company_name": "Accenture",
+      "job_title": "LLM Operations Engineer",
+      "timestamp": "2026-10-11T18:35:58.637916",
+      "details": "Score: 85.0%, Action: apply"
     }
   ]
 }

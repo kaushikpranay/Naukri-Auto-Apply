@@ -1,10 +1,6 @@
 {
   "applications_per_day": [
     {
-      "date": "2026-09-24",
-      "count": 157
-    },
-    {
       "date": "2026-09-30",
       "count": 151
     },
@@ -19,20 +15,24 @@
     {
       "date": "2026-10-08",
       "count": 152
+    },
+    {
+      "date": "2026-10-11",
+      "count": 151
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 375
+      "count": 382
     },
     {
       "score_range": 10,
-      "count": 4
+      "count": 5
     },
     {
       "score_range": 20,
-      "count": 7
+      "count": 8
     },
     {
       "score_range": 30,
@@ -44,23 +44,23 @@
     },
     {
       "score_range": 50,
-      "count": 4
+      "count": 3
     },
     {
       "score_range": 60,
-      "count": 9
+      "count": 10
     },
     {
       "score_range": 70,
-      "count": 67
+      "count": 71
     },
     {
       "score_range": 80,
-      "count": 259
+      "count": 243
     },
     {
       "score_range": 90,
-      "count": 50
+      "count": 47
     }
   ],
   "ats_distribution": [
@@ -72,19 +72,19 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 49
+      "count": 58
     },
     {
       "status": "applied_successfully",
-      "count": 84
+      "count": 88
     },
     {
       "status": "easy_apply",
-      "count": 4
+      "count": 3
     },
     {
       "status": "evaluated",
-      "count": 492
+      "count": 488
     },
     {
       "status": "external_portal",
@@ -92,14 +92,14 @@
     },
     {
       "status": "failed",
-      "count": 21
+      "count": 8
     },
     {
       "status": "pending",
-      "count": 2
+      "count": 1
     },
     {
-      "status": "walk_in",
+      "status": "unknown",
       "count": 1
     }
   ],
@@ -114,35 +114,35 @@
     },
     {
       "name": "Accenture",
-      "count": 32
-    },
-    {
-      "name": "Tata Consultancy Services",
-      "count": 22
-    },
-    {
-      "name": "Leading Client",
-      "count": 22
+      "count": 31
     },
     {
       "name": "Sparix Global",
+      "count": 24
+    },
+    {
+      "name": "Tata Consultancy Services",
       "count": 20
     },
     {
       "name": "Epam Systems",
-      "count": 16
-    },
-    {
-      "name": "Capgemini",
-      "count": 11
+      "count": 18
     },
     {
       "name": "PwC",
-      "count": 8
+      "count": 16
     },
     {
-      "name": "Innocode Ventures",
-      "count": 7
+      "name": "Leading Client",
+      "count": 10
+    },
+    {
+      "name": "Capgemini",
+      "count": 10
+    },
+    {
+      "name": "Zensar",
+      "count": 6
     }
   ],
   "failure_reasons": [

@@ -116,12 +116,103 @@
       "last_used_at": "2026-10-08T19:00:22.310415",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 15158,
+      "question_key": "willing_freelancer_role",
+      "question_text": "Are you willing for freelancer role",
+      "answer": "Yes",
+      "usage_count": 3,
+      "last_used": "2026-10-11T18:43:16.898250",
+      "field_type": "radio",
+      "created_at": "2026-10-11T18:43:01.583376",
+      "last_used_at": "2026-10-11T18:43:16.898250",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15161,
+      "question_key": "worked_as_full_time_employee_infoedge",
+      "question_text": "Have you worked as a full-time employee with InfoEdge?",
+      "answer": "No",
+      "usage_count": 2,
+      "last_used": "2026-10-11T18:48:18.907404",
+      "field_type": "radio",
+      "created_at": "2026-10-11T18:48:07.864909",
+      "last_used_at": "2026-10-11T18:48:18.907404",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15163,
+      "question_key": "if_yes_share_employee_code",
+      "question_text": "If Yes, Please share the Employee Code",
+      "answer": "N/A",
+      "usage_count": 2,
+      "last_used": "2026-10-11T18:48:35.286133",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-11T18:48:25.741512",
+      "last_used_at": "2026-10-11T18:48:35.286133",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15167,
+      "question_key": "exp_reactdotjs",
+      "question_text": "How many years of experience do you have in React.Js Or Nodejs?",
+      "answer": "1",
+      "usage_count": 2,
+      "last_used": "2026-10-11T18:56:29.230155",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-11T18:54:45.855066",
+      "last_used_at": "2026-10-11T18:56:29.230155",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15168,
+      "question_key": "exp_oauth",
+      "question_text": "How many years of experience do you have in OAuth?",
+      "answer": "0.5",
+      "usage_count": 1,
+      "last_used": "2026-10-11T18:55:16.200860",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-11T18:55:16.200860",
+      "last_used_at": "2026-10-11T18:55:16.200860",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15169,
+      "question_key": "exp_webapplication",
+      "question_text": "How many years of experience do you have in webapplication?",
+      "answer": "1.5",
+      "usage_count": 1,
+      "last_used": "2026-10-11T18:55:50.439771",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-11T18:55:50.439771",
+      "last_used_at": "2026-10-11T18:55:50.439771",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15171,
+      "question_key": "exp_predictive_modeling",
+      "question_text": "How many years of experience do you have in Predictive Modeling?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-10-11T18:58:10.832912",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-11T18:57:32.249093",
+      "last_used_at": "2026-10-11T18:58:10.832912",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 24,
     "limit": 15,
-    "total_records": 353,
+    "total_records": 360,
     "total_pages": 24
   }
 }

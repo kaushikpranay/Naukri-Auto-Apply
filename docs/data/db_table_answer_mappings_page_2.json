@@ -103,12 +103,20 @@
       "selected_option": "No",
       "tenant": "",
       "created_at": "2026-09-22T00:18:33.763421"
+    },
+    {
+      "id": 28,
+      "question_key": "relocation_city_preference__options__anywhere in india|gurugram|panchkula",
+      "raw_answer": "Noida",
+      "selected_option": "Gurugram",
+      "tenant": "",
+      "created_at": "2026-10-11T18:53:52.210103"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 27,
+    "total_records": 28,
     "total_pages": 2
   }
 }
