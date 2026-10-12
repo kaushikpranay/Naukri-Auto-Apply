@@ -157,16 +157,16 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "pending",
-      "retry_count": 2,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "GenAI Engineer",
       "search_location": "Bangalore",
       "created_at": "2026-10-02T19:12:03.078924",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-10-11T22:35:46.236298"
     },
     {
       "id": 46309,
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 24,
     "limit": 15,
-    "total_records": 774,
-    "total_pages": 52
+    "total_records": 924,
+    "total_pages": 62
   }
 }

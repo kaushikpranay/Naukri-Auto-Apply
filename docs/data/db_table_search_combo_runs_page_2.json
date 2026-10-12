@@ -12,111 +12,111 @@
       "id": 16,
       "keyword": "AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-11T18:01:24.664654",
+      "last_run_at": "2026-10-12T15:35:04.603334",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 2
     },
     {
       "id": 17,
       "keyword": "Agentic AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-10-01T22:24:57.960304",
+      "last_run_at": "2026-10-12T16:10:06.226295",
       "jobs_found": 20,
-      "jobs_inserted": 9
+      "jobs_inserted": 7
     },
     {
       "id": 18,
       "keyword": "Agentic AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-10-01T22:28:11.270357",
+      "last_run_at": "2026-10-12T16:13:38.867026",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 4
     },
     {
       "id": 19,
       "keyword": "Agentic AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-10-01T22:22:50.669358",
+      "last_run_at": "2026-10-12T16:07:44.426623",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 0
     },
     {
       "id": 20,
       "keyword": "Agentic AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-10-01T22:27:07.360842",
+      "last_run_at": "2026-10-12T16:12:28.358647",
       "jobs_found": 20,
-      "jobs_inserted": 8
+      "jobs_inserted": 3
     },
     {
       "id": 21,
       "keyword": "Agentic AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-10-01T22:29:48.934914",
-      "jobs_found": 9,
-      "jobs_inserted": 3
+      "last_run_at": "2026-10-12T16:15:27.838476",
+      "jobs_found": 10,
+      "jobs_inserted": 0
     },
     {
       "id": 22,
       "keyword": "Agentic AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-10-01T22:23:54.404887",
+      "last_run_at": "2026-10-12T16:08:55.760631",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 2
     },
     {
       "id": 23,
       "keyword": "Agentic AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-10-01T22:29:16.541602",
+      "last_run_at": "2026-10-12T16:14:50.037387",
       "jobs_found": 20,
-      "jobs_inserted": 8
+      "jobs_inserted": 2
     },
     {
       "id": 24,
       "keyword": "Agentic AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-10-01T22:21:46.502047",
+      "last_run_at": "2026-10-12T16:06:32.958379",
       "jobs_found": 20,
-      "jobs_inserted": 3
+      "jobs_inserted": 4
     },
     {
       "id": 25,
       "keyword": "Agentic AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-10-01T22:26:01.610958",
+      "last_run_at": "2026-10-12T16:11:16.779625",
       "jobs_found": 20,
-      "jobs_inserted": 7
+      "jobs_inserted": 2
     },
     {
       "id": 26,
       "keyword": "Agentic AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-01T22:20:41.366792",
+      "last_run_at": "2026-10-12T16:05:23.143367",
       "jobs_found": 20,
-      "jobs_inserted": 11
+      "jobs_inserted": 4
     },
     {
       "id": 28,
       "keyword": "GenAI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-10-11T17:48:54.838407",
+      "last_run_at": "2026-10-12T15:21:54.016548",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 2
     },
     {
       "id": 30,
       "keyword": "GenAI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-10-11T17:47:48.118225",
+      "last_run_at": "2026-10-12T15:20:42.441191",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 31,
       "keyword": "GenAI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-10-11T17:50:16.780741",
+      "last_run_at": "2026-10-12T15:23:22.183594",
       "jobs_found": 4,
       "jobs_inserted": 0
     },
@@ -124,7 +124,7 @@
       "id": 33,
       "keyword": "GenAI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-10-11T17:50:00.687598",
+      "last_run_at": "2026-10-12T15:23:04.689767",
       "jobs_found": 20,
       "jobs_inserted": 3
     }

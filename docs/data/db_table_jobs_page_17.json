@@ -109,8 +109,8 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
-      "retry_count": 0,
+      "status": "unknown",
+      "retry_count": 1,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Kolkata",
       "created_at": "2026-10-01T22:23:54.402070",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 17,
     "limit": 15,
-    "total_records": 774,
-    "total_pages": 52
+    "total_records": 924,
+    "total_pages": 62
   }
 }

@@ -12,41 +12,41 @@
       "id": 52,
       "keyword": "LLM Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-10-11T18:15:08.828103",
-      "jobs_found": 10,
-      "jobs_inserted": 4
+      "last_run_at": "2026-10-12T15:49:34.427889",
+      "jobs_found": 9,
+      "jobs_inserted": 0
     },
     {
       "id": 53,
       "keyword": "LLM Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-10-01T22:11:31.929957",
+      "last_run_at": "2026-10-12T15:55:28.398955",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 8
     },
     {
       "id": 54,
       "keyword": "LLM Engineer",
       "location": "Noida",
-      "last_run_at": "2026-10-11T18:13:27.098061",
+      "last_run_at": "2026-10-12T15:47:48.169697",
       "jobs_found": 20,
-      "jobs_inserted": 9
+      "jobs_inserted": 0
     },
     {
       "id": 55,
       "keyword": "LLM Engineer",
       "location": "Pune",
-      "last_run_at": "2026-10-11T18:17:20.347613",
+      "last_run_at": "2026-10-12T15:51:55.527687",
       "jobs_found": 20,
-      "jobs_inserted": 9
+      "jobs_inserted": 1
     },
     {
       "id": 56,
       "keyword": "LLM Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-11T18:12:21.149726",
-      "jobs_found": 19,
-      "jobs_inserted": 14
+      "last_run_at": "2026-10-12T15:46:37.610552",
+      "jobs_found": 17,
+      "jobs_inserted": 1
     },
     {
       "id": 57,
@@ -92,39 +92,39 @@
       "id": 62,
       "keyword": "Python Backend Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-01T22:30:54.996758",
+      "last_run_at": "2026-10-12T16:16:34.704339",
       "jobs_found": 20,
-      "jobs_inserted": 19
+      "jobs_inserted": 12
     },
     {
       "id": 63,
       "keyword": "RAG Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-10-01T22:15:11.332396",
+      "last_run_at": "2026-10-12T15:59:20.956624",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 6
     },
     {
       "id": 64,
       "keyword": "RAG Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-10-01T22:18:21.609252",
+      "last_run_at": "2026-10-12T16:02:53.425602",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 6
     },
     {
       "id": 65,
       "keyword": "RAG Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-10-01T22:13:58.752769",
-      "jobs_found": 14,
-      "jobs_inserted": 0
+      "last_run_at": "2026-10-12T15:57:56.990401",
+      "jobs_found": 13,
+      "jobs_inserted": 3
     },
     {
       "id": 66,
       "keyword": "RAG Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-10-01T22:17:17.403212",
+      "last_run_at": "2026-10-12T16:01:41.809461",
       "jobs_found": 20,
       "jobs_inserted": 8
     }

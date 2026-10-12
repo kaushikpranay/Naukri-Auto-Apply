@@ -79,13 +79,13 @@
       "job_description": "Design, develop, and deploy AI models and algorithms to solve complex problems.\n\n\nCollaborate with cross-functional teams to identify business needs and develop AI solutions.\n\n\nDevelop and maintain large-scale data pipelines and architectures.\n\n\nConduct research and stay updated on the latest AI trends and technologies.\n\n\nLead the development of predictive models and machine learning algorithms.\n\n\nWork closely with stakeholders to understand requirements and deliver high-quality results.\n\n\n\n\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-senior-ai-engineer-s04-systango-indore-4-to-9-years-220626503410",
       "normalized_url": "https://www.naukri.com/job-listings-senior-ai-engineer-s04-systango-indore-4-to-9-years-220626503410",
-      "apply_url": "",
+      "apply_url": "https://systango.keka.com/careers/jobdetails/146633",
       "experience_required": "4-9 Yrs",
       "location": "Indore",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
@@ -127,13 +127,13 @@
       "job_description": "Job Summary\n\nLocation: Indore, Madhya Pradesh.\nJob Type: Full-Time. Experience: 6 Months - 1 Year.\nWe are looking for an innovative and enthusiastic AI Full Stack Engineer who is passionate about building AI-powered SaaS applications and intelligent agent-based systems. The ideal candidate should have experience in both frontend and backend development along with a strong understanding of AI integrations, automation workflows, and modern web technologies.\n\n\nResponsibilities\n\nDevelop and maintain AI-powered SaaS applications and web platforms\nBuild intelligent agentic AI workflows using APIs, automation tools, and LLM integrations\nDevelop scalable frontend applications using React.js, Next.js, or similar frameworks\nBuild backend APIs and services using Python, Node.js, or FastAPI\nIntegrate AI models, chatbots, and third-party AI services such as OpenAI APIs\nWork with databases, cloud platforms, and authentication systems\nOptimize application performance, scalability, and security\nCollaborate with cross-functional teams to deliver high-quality AI solutions\nParticipate in testing, deployment, and maintenance of applications\n\n\nRequired Skills\n\nGood knowledge of Python, JavaScript, or TypeScript\nExperience with React.js, Next.js, or modern frontend frameworks\nUnderstanding of backend frameworks such as FastAPI, Flask, Django, or Node.js\nFamiliarity with AI tools, APIs, and LLM integrations\nKnowledge of REST APIs, authentication systems, and database management\nExperience with MongoDB, PostgreSQL, Firebase, or similar databases\nBasic understanding of cloud platforms and deployment workflows\nFamiliarity with Git/GitHub version control\n\n\nPreferred Qualifications\n\nExperience building AI chatbots, automation systems, or SaaS products\nUnderstanding of prompt engineering and AI workflow orchestration\nKnowledge of vector databases, embeddings, and AI agents is a plus\nExperience with tools like LangChain, OpenAI, Pinecone, or Firebase is an advantage\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-ai-full-stack-engineer-agentic-ai-saas-digiflex-pvt-ltd-indore-1-to-6-years-061026505098",
       "normalized_url": "https://www.naukri.com/job-listings-ai-full-stack-engineer-agentic-ai-saas-digiflex-pvt-ltd-indore-1-to-6-years-061026505098",
-      "apply_url": "",
+      "apply_url": "https://digiflex.ai/en/career/",
       "experience_required": "1-6 Yrs",
       "location": "Indore",
       "posted_date": "2 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Indore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 42,
     "limit": 15,
-    "total_records": 774,
-    "total_pages": 52
+    "total_records": 924,
+    "total_pages": 62
   }
 }

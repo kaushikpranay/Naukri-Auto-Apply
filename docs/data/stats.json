@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 774,
-    "naukri_jobs": 774,
+    "total_jobs": 924,
+    "naukri_jobs": 924,
     "external_jobs": 953,
-    "pending_review": 85,
-    "queued": 88,
+    "pending_review": 105,
+    "queued": 86,
     "applying": 0,
-    "applied": 146,
-    "failed": 8,
+    "applied": 161,
+    "failed": 19,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 1825.0,
-    "avg_ai_score": 40.2,
-    "today_jobs": 151,
-    "today_applications": 74
+    "success_rate": 847.4,
+    "avg_ai_score": 39.6,
+    "today_jobs": 150,
+    "today_applications": 59
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Crisil",
-      "job_title": "Senior AI Engineer GenAI & ML solutions",
-      "timestamp": "2026-10-11T19:02:21.691426",
+      "company_name": "Kanerika Software",
+      "job_title": "Senior AI/ML Engineer (LLM, Python)",
+      "timestamp": "2026-10-12T17:00:34.152956",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Alation",
+      "job_title": "DCX Agentic AI Engineer",
+      "timestamp": "2026-10-12T17:00:17.873792",
       "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Smartncode",
-      "job_title": "AI/GenAI Engineer (LLM Integration Specialist)",
-      "timestamp": "2026-10-11T19:02:17.312849",
-      "details": "Type: already_applied, Status: discovered"
+      "company_name": "ERM Placement Services",
+      "job_title": "Gen AI developer",
+      "timestamp": "2026-10-12T17:00:11.123739",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Sii Polska",
-      "job_title": "AI Engineer - GenAI & Cloud (f/m/x)",
-      "timestamp": "2026-10-11T19:02:09.607738",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "Tangentia",
+      "job_title": "AI AE Professional",
+      "timestamp": "2026-10-12T17:00:02.227826",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Flairdeck",
-      "job_title": "Gen AI Engineer",
-      "timestamp": "2026-10-11T19:01:48.751066",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Global Business Ser 4u",
-      "job_title": "Generative AI Engineer - Remote",
-      "timestamp": "2026-10-11T19:01:30.002278",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "Quantiphi Analytics Solutions",
+      "job_title": "Senior Machine Learning Engineer",
+      "timestamp": "2026-10-12T16:59:53.087239",
+      "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Operations Engineer",
-      "timestamp": "2026-10-11T18:36:40.349580",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "Beautiful Concepts",
+      "job_title": "Python Full Stack Developer",
+      "timestamp": "2026-10-12T16:33:47.986821",
+      "details": "Score: 90.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Operations Engineer",
-      "timestamp": "2026-10-11T18:36:22.857315",
-      "details": "Score: 75.0%, Action: apply"
+      "company_name": "LogiQuad Solutions",
+      "job_title": "Full Stack Developer",
+      "timestamp": "2026-10-12T16:33:36.811203",
+      "details": "Score: 55.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-11T18:36:12.884791",
+      "company_name": "Manbal.ai",
+      "job_title": "Backend Developer",
+      "timestamp": "2026-10-12T16:33:21.034115",
+      "details": "Score: 90.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Forage Ai",
+      "job_title": "Lead Software Engineer Platform Backend AWS, DevOps, Python",
+      "timestamp": "2026-10-12T16:33:13.408426",
       "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Full Stack Engineer",
-      "timestamp": "2026-10-11T18:36:12.879345",
+      "company_name": "Pocket Fm",
+      "job_title": "Backend Developer",
+      "timestamp": "2026-10-12T16:33:13.402985",
       "details": "Score: 75.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Operations Engineer",
-      "timestamp": "2026-10-11T18:35:58.637916",
-      "details": "Score: 85.0%, Action: apply"
     }
   ]
 }
