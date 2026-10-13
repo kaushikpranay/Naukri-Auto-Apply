@@ -37,7 +37,7 @@
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "pending",
       "retry_count": 0,
       "search_keyword": "Agentic AI Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 19,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

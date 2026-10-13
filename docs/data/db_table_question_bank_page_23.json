@@ -83,11 +83,11 @@
       "question_key": "interested_working_infosys",
       "question_text": "Are you interested working with infosys",
       "answer": "Yes",
-      "usage_count": 4,
-      "last_used": "2026-10-01T22:54:06.582721",
+      "usage_count": 5,
+      "last_used": "2026-10-13T18:10:50.467312",
       "field_type": "contenteditable",
       "created_at": "2026-09-24T23:01:04.355965",
-      "last_used_at": "2026-10-01T22:54:06.582721",
+      "last_used_at": "2026-10-13T18:10:50.467312",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 23,
     "limit": 15,
-    "total_records": 361,
+    "total_records": 366,
     "total_pages": 25
   }
 }

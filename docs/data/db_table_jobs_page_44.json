@@ -295,13 +295,13 @@
       "job_description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way youd like, where youll be supported and inspired bya collaborative community of colleagues around the world, and where youll be able to reimagine whats possible. Join us and help the worlds leading organizations\n\n\nYour Role\n\n\nStrong Python skills.\nExperience with deep learning frameworks (TensorFlow, PyTorch, JAX).\nKnowledge of NLP and ML.\nHands-on with GCP services: Vertex AI, Cloud Functions, Pub/Sub, BigQuery.\nPractical experience with Generative AI models (Gemini, Vertex Search).\nFamiliarity with prompt design/tuning, vector stores, embeddings.\nAbility to build endpoints using Flask/FastAPI.\n\n\n\n\nYour Profile\n\n\nProven experience delivering AI solutions on Vertex AI.\nKnowledge of Transformer models (BERT).\nProfessional ML Engineer certification preferred.\nProblem-solving and analytical skills.\n\n\n\n\nWhat youll love about working here\n\n\nWe recognise the significance of flexible work arrangements to provide support in hybrid mode, you will get an environment to maintain healthy work life balance\nOur focus will be your career growth professional development to support you in exploring the world of opportunities.\nEquip yourself with valuable certifications training programmes in the latest technologies such as Gen AI Vertex AI GCP Cloud.",
       "job_url": "https://www.naukri.com/job-listings-vertex-ai-engineer-capgemini-technology-services-india-limited-gurugram-2-to-5-years-230926930058",
       "normalized_url": "https://www.naukri.com/job-listings-vertex-ai-engineer-capgemini-technology-services-india-limited-gurugram-2-to-5-years-230926930058",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[230926930058]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22230926930058%22%3A200%7D&jobTitle=Vertex%20AI%20Engineer",
       "experience_required": "2-5 Yrs",
       "location": "Gurugram",
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Gurgaon",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 44,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

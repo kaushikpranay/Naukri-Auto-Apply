@@ -271,13 +271,13 @@
       "job_description": "Seeking an AI Engineer to optimize and deploy ML models across heterogeneous platforms (CPU, GPU, NPU). Work on scalable, production-ready AI systems across domains like robotics, healthcare, and automotive.\n\nJob Responsibilities / Day-to-Day Activities\n\nKey Responsibilities:\n\nOptimize diverse models: generative (LLMs, diffusion), vision (classification, detection, segmentation), multi-modal, and speech\nPort models across frameworks (e.g., PyTorch ONNX runtimes)\nDeploy on hardware accelerators (GPU/NPU) and optimize performance\nImprove inference latency, throughput, and memory (batching, caching, parallelism, fusion)\nApply quantization and model compression (FP32 lower precision)\nProfile and debug system and model performance\n\nRequired Skills:\n\nStrong in PyTorch (or similar), ONNX (or equivalent)\nProficient in Python and C++\nExperience with GPU/hardware acceleration (CUDA/ROCm or similar)\nSolid understanding of deep learning models (transformers, CNNs)\nKnowledge of optimization, quantization, and performance tuning\n\nGood to Have\n\nEdge AI or embedded deployment\nGenerative or multi-modal AI systems\nDistributed inference or streaming pipelines\n\n\nDisclaimer : This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-proxelera-bengaluru-1-to-4-years-030626502126",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-proxelera-bengaluru-1-to-4-years-030626502126",
-      "apply_url": "",
+      "apply_url": "https://proxelera.com/proxelera-careers/?job_id=z5G7h3l6a1kMvyS65NP3c29nXntU73LuJ-krBl4iOak=",
       "experience_required": "1-4 Yrs",
       "location": "Bengaluru",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Bangalore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 45,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

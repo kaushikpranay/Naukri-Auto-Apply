@@ -127,13 +127,13 @@
       "job_description": "Coforge is Hiring GEN AI Engineers\n\n\n\n\nStrong understanding of:\n\n\n\nLLMs\nRAG\nVector Databases\nAI Agents\nPrompt Engineering\nLLM Evaluation\nAI Observability\n\n\n\n\nLocation- Gretaer Noida/ Pune\n\nNP= Imm- 30 days\n\n\n\n\nJob Description:\n\nStrong hands-on experience with Python, FastAPI, LangChain, LangGraph, Semantic Kernel, AutoGen, MCP.\nExperience with Azure AI Foundry, OpenAI, AWS Bedrock or similar platforms.\nStrong understanding of:\nLLMs\nRAG\nVector Databases\nAI Agents\nPrompt Engineering\nLLM Evaluation\nAI Observability\nExperience with CI/CD, MLOps, containerization, and cloud-native deployments.\nStrong stakeholder communication and leadership abilities.\n\n\n\nKey responsibilities:\n\nLead end-to-end delivery of GenAI and Agentic AI solutions.\nDesign and implement RAG, AI Agents, MCP, multi-agent orchestration, and LLM-based applications.\nGuide teams in prompt engineering, evaluation frameworks, guardrails, observability, and performance optimization.\nTranslate business requirements into scalable AI solutions.\nEstablish coding standards, architecture patterns, and engineering best practices.\nConduct technical reviews and mentor GenAI engineers.\nCollaborate with architects, product owners, and business stakeholders.\nDrive production readiness, monitoring, security, and Responsible AI compliance",
       "job_url": "https://www.naukri.com/job-listings-coforge-is-hiring-gen-ai-engineers-coforge-pune-greater-noida-3-to-5-years-300926017085",
       "normalized_url": "https://www.naukri.com/job-listings-coforge-is-hiring-gen-ai-engineers-coforge-pune-greater-noida-3-to-5-years-300926017085",
-      "apply_url": "https://www.naukri.com/job-listings-coforge-is-hiring-gen-ai-engineers-coforge-pune-greater-noida-3-to-5-years-300926017085",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[300926017085]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22300926017085%22%3A200%7D&jobTitle=Coforge%20is%20Hiring%20GEN%20AI%20Engineers",
       "experience_required": "3-5 Yrs",
       "location": "Hybrid - Greater Noida, Pune",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "unknown",
+      "status": "applied_successfully",
       "retry_count": 2,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 11,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

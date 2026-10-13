@@ -103,13 +103,13 @@
       "job_description": "We are hiring a Full Stack Developer for our client. This is an excellent opportunity for a recent graduate to kick-start their career in software development, working closely with experienced professionals to build scalable, production-grade applications using in-demand technologies.\n\n\n\n\nRole & responsibilities\n\nDesign, develop, and maintain web applications using Java/Python (backend) and React.js (frontend)\nBuild and consume RESTful APIs and microservices\nWrite efficient, reusable, and well-tested code following OOP principles\nWork with relational and NoSQL databases (MySQL, PostgreSQL, MongoDB)\nDebug, troubleshoot, and optimize application performance\nCollaborate with QA, DevOps, and product teams in an Agile/Scrum environment\nAssist in deploying applications on cloud platforms (AWS/Azure)\nParticipate in code reviews and follow secure coding best practices\nContribute to CI/CD pipelines and version control workflows (Git)\nContinuously learn and adapt to new tools, frameworks, and industry practices\n\n\n\nPreferred candidate profile\n\nBachelor's degree in Computer Science, IT, or related field\nStrong knowledge of Java or Python, and Object-Oriented Programming (OOP)\nGood understanding of Data Structures & Algorithms\nBasic to intermediate knowledge of React.js, HTML5, CSS3, JavaScript\nUnderstanding of SQL and database concepts\nFamiliarity with REST APIs and microservices architecture\nBasic knowledge of Git/GitHub for version control\nStrong analytical, logical, and problem-solving skills\nGood communication and teamwork abilities",
       "job_url": "https://www.naukri.com/job-listings-fullstack-developer-jobaaj-com-noida-0-to-1-years-230926044420",
       "normalized_url": "https://www.naukri.com/job-listings-fullstack-developer-jobaaj-com-noida-0-to-1-years-230926044420",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[230926044420]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22230926044420%22%3A200%7D&jobTitle=Fullstack%20Developer",
       "experience_required": "0-1 Yrs",
       "location": "Noida",
       "posted_date": "1 week ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Noida",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 22,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

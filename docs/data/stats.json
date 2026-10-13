@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 924,
-    "naukri_jobs": 924,
+    "total_jobs": 949,
+    "naukri_jobs": 949,
     "external_jobs": 953,
     "pending_review": 105,
-    "queued": 86,
+    "queued": 37,
     "applying": 0,
-    "applied": 161,
-    "failed": 19,
+    "applied": 183,
+    "failed": 26,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 847.4,
+    "success_rate": 703.8,
     "avg_ai_score": 39.6,
-    "today_jobs": 150,
-    "today_applications": 59
+    "today_jobs": 25,
+    "today_applications": 54
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Kanerika Software",
-      "job_title": "Senior AI/ML Engineer (LLM, Python)",
-      "timestamp": "2026-10-12T17:00:34.152956",
+      "company_name": "Designcentric",
+      "job_title": "Software Developer",
+      "timestamp": "2026-10-13T18:12:47.994606",
       "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Alation",
-      "job_title": "DCX Agentic AI Engineer",
-      "timestamp": "2026-10-12T17:00:17.873792",
+      "company_name": "Yext",
+      "job_title": "Demo Engineer",
+      "timestamp": "2026-10-13T18:12:35.210223",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Accenture",
+      "job_title": "LLM Model Developer",
+      "timestamp": "2026-10-13T18:12:22.008369",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Two95 International",
+      "job_title": "GenAI / AI-ML Engineer",
+      "timestamp": "2026-10-13T18:12:03.987234",
       "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "ERM Placement Services",
-      "job_title": "Gen AI developer",
-      "timestamp": "2026-10-12T17:00:11.123739",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Tangentia",
-      "job_title": "AI AE Professional",
-      "timestamp": "2026-10-12T17:00:02.227826",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Quantiphi Analytics Solutions",
-      "job_title": "Senior Machine Learning Engineer",
-      "timestamp": "2026-10-12T16:59:53.087239",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Beautiful Concepts",
-      "job_title": "Python Full Stack Developer",
-      "timestamp": "2026-10-12T16:33:47.986821",
-      "details": "Score: 90.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "LogiQuad Solutions",
-      "job_title": "Full Stack Developer",
-      "timestamp": "2026-10-12T16:33:36.811203",
-      "details": "Score: 55.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Manbal.ai",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-10-12T16:33:21.034115",
-      "details": "Score: 90.0%, Action: apply"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Forage Ai",
-      "job_title": "Lead Software Engineer Platform Backend AWS, DevOps, Python",
-      "timestamp": "2026-10-12T16:33:13.408426",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
       "company_name": "Pocket Fm",
       "job_title": "Backend Developer",
-      "timestamp": "2026-10-12T16:33:13.402985",
-      "details": "Score: 75.0%, Action: apply"
+      "timestamp": "2026-10-13T18:11:55.953416",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Leading Client",
+      "job_title": "Gen AI Engineer",
+      "timestamp": "2026-10-13T16:19:42.753887",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Neotechie",
+      "job_title": "AI Prompt Engineer",
+      "timestamp": "2026-10-13T16:18:29.818745",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Hilink Ai",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-13T16:18:29.818745",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-10-13T16:16:31.374379",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-10-13T16:15:15.983286",
+      "details": null
     }
   ]
 }

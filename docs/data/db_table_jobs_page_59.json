@@ -295,13 +295,13 @@
       "job_description": "Role & responsibilities\n\nRequired Technical Skills\n\nGoogle CCAI Technologies\n\n\u2022 Google Contact Center AI (CCAI)\n\n\u2022 Dialogflow CX\n\n\u2022 Conversational AI\n\n\u2022 Virtual Agent Development\n\n\u2022 Contact Center Automation\n\nGECX / Generative AI\n\n\u2022 Google GenCX / GECX Playbooks\n\n\u2022 Gemini Models\n\n\u2022 Vertex AI\n\n\u2022 Prompt Engineering\n\n\u2022 Prompt Evaluation\n\n\u2022 LLM Integrations\n\n\u2022 AI Agent Design\n\nDevelopment\n\n\u2022 Python\n\n\n\n\n\u2022 REST APIs\n\n\u2022 gRPC\n\n\u2022 Webhook Development\n\n\u2022 Microservices Architecture\n\nCloud Technologies\n\n\u2022 Google Cloud Platform (GCP)\n\n\u2022 Cloud Functions\n\n\u2022 Cloud Run\n\n\u2022 BigQuery\n\n\u2022 Vertex AI\n\n\u2022 Pub/Sub\n\n\u2022 Cloud Storage\n\nDatabase & Tools\n\n\u2022 SQL\n\n\u2022 Postman\n\n\u2022 GitHub\n\n\u2022 GitLab\n\n\u2022 JIRA\n\n\n\n\nPreferred Skills\n\n\u2022 Experience with telecom, banking, healthcare, retail, or customer service contact centers.\n\n\u2022 Knowledge of speech analytics and conversational analytics.\n\n\u2022 Hands-on experience with RAG (Retrieval Augmented Generation) architectures.\n\n\u2022 Experience with LangChain, LangGraph, AI agents, and Agentic AI frameworks.\n\n\u2022 Exposure to omnichannel customer engagement platforms.\n\n\u2022 Understanding of IVR call flows, contact center operations, and customer experience\n\ntransformation programs.",
       "job_url": "https://www.naukri.com/job-listings-hiring-for-google-ccai-gecx-developer-glauben-technologies-hyderabad-chennai-bengaluru-4-to-9-years-180926012156",
       "normalized_url": "https://www.naukri.com/job-listings-hiring-for-google-ccai-gecx-developer-glauben-technologies-hyderabad-chennai-bengaluru-4-to-9-years-180926012156",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-hiring-for-google-ccai-gecx-developer-glauben-technologies-hyderabad-chennai-bengaluru-4-to-9-years-180926012156",
       "experience_required": "4-9 Yrs",
       "location": "Hybrid - Bengaluru, Chennai, Hyderabad",
       "posted_date": "3 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "RAG Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 59,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

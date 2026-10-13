@@ -157,7 +157,7 @@
       "posted_date": "Few hours ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Indore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 54,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }

@@ -23,6 +23,10 @@
     {
       "date": "2026-10-12",
       "count": 150
+    },
+    {
+      "date": "2026-10-13",
+      "count": 25
     }
   ],
   "ai_score_distribution": [
@@ -76,11 +80,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 65
+      "count": 68
     },
     {
       "status": "applied_successfully",
-      "count": 96
+      "count": 115
     },
     {
       "status": "easy_apply",
@@ -88,15 +92,15 @@
     },
     {
       "status": "evaluated",
-      "count": 571
+      "count": 522
     },
     {
       "status": "external_portal",
-      "count": 163
+      "count": 187
     },
     {
       "status": "failed",
-      "count": 18
+      "count": 25
     },
     {
       "status": "needs_human_review",
@@ -104,11 +108,11 @@
     },
     {
       "status": "pending",
-      "count": 1
+      "count": 26
     },
     {
       "status": "unknown",
-      "count": 5
+      "count": 1
     }
   ],
   "top_companies": [
@@ -118,11 +122,11 @@
     },
     {
       "name": "Accenture",
-      "count": 40
+      "count": 41
     },
     {
       "name": "Infosys",
-      "count": 38
+      "count": 40
     },
     {
       "name": "Sparix Global",
@@ -130,27 +134,27 @@
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 24
+      "count": 25
     },
     {
       "name": "Epam Systems",
       "count": 21
     },
     {
-      "name": "PwC",
-      "count": 16
+      "name": "Leading Client",
+      "count": 19
     },
     {
-      "name": "Leading Client",
-      "count": 12
+      "name": "PwC",
+      "count": 17
     },
     {
       "name": "Capgemini",
-      "count": 11
+      "count": 14
     },
     {
       "name": "EY",
-      "count": 8
+      "count": 9
     }
   ],
   "failure_reasons": [

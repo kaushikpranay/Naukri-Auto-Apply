@@ -199,13 +199,13 @@
       "job_description": "KEY RESPONSIBILITIES\n\n\n\u2022 Develop and maintain scalable, production-ready AI-powered applications.\n\u2022 Handle end-to-end development including design, development, testing, deployment, and maintenance.\n\u2022 Build frontend applications using React.js, Next.js, JavaScript, and TypeScript.\n\u2022 Develop backend services and REST APIs using Node.js, Express.js, and Python.\n\u2022 Integrate LLMs, AI APIs, Hugging Face models, AI agents, and automation workflows.\n\u2022 Work with MongoDB, MySQL, Redis, and NoSQL databases.\n\u2022 Integrate third-party APIs, webhooks, and real-time services.\n\u2022 Debug issues and deliver secure, scalable, and maintainable solutions.\n\u2022 Collaborate with AI, product, and engineering teams.\n\n\n\n\nREQUIRED SKILLS\n\n\n\u2022 Strong JavaScript and TypeScript fundamentals.\n\u2022 Hands-on experience with React.js, Node.js, Express.js, and REST APIs.\n\u2022 Working knowledge of Python and exposure to Java.\n\u2022 Experience with MongoDB, MySQL, and NoSQL databases.\n\u2022 Understanding of Git, APIs, authentication, debugging, and application architecture.\n\u2022 Practical knowledge of AI/LLMs and prompt-based applications.\n\u2022 Experience or familiarity with Hugging Face.\n\u2022 Ability to independently handle tasks and deliver projects end to end.\n\n\n\n\nGOOD TO HAVE\n\n\n\u2022 Next.js, Redis, WebSockets, and Microservices.\n\u2022 RAG, AI Agents, LangChain, Langflow, Ollama, or LlamaIndex.\n\u2022 AWS, Docker, Kubernetes, GraphQL, RabbitMQ, or CI/CD.\n\u2022 Agile/Scrum and AI automation workflows\n\n\n\n\nWHAT WERE LOOKING FOR\n\n\n\u2022 Strong problem-solving and analytical skills.\n\u2022 Good frontend and backend development knowledge.\n\u2022 Ability to build and deliver AI-powered applications.\n\u2022 Strong ownership and accountability.\n\u2022 Ability to work independently and collaboratively.\n\u2022 Good written and verbal English communication.\n\u2022 Willingness to learn and adapt to evolving AI technologies.",
       "job_url": "https://www.naukri.com/job-listings-fullstack-developer-codeacious-noida-1-to-3-years-200726010452",
       "normalized_url": "https://www.naukri.com/job-listings-fullstack-developer-codeacious-noida-1-to-3-years-200726010452",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-fullstack-developer-codeacious-noida-1-to-3-years-200726010452",
       "experience_required": "1-3 Yrs",
       "location": "Noida(Sector 142)",
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Noida",
@@ -343,13 +343,13 @@
       "job_description": "About the Profile\n\nWe are looking for seasoned DevOps Engineer with 2-5 years of prior relevant work experience in managing highly scalable web applications. You would be joining our core engineering team that is responsible to design, develop & maintain our entire suite of products. The work is challenging and will require you to work with multiple stakeholders simultaneously. Those who love to create a system from scratch and watch it scale right in front of their eyes would love this profile.\n\nAn Average Day For You\nCollaborate with Program Managers to freeze your project requirements\nDesign the architecture Databases, servers, backups, API optimizations, security, dashboards, server uptime, resource optimization etc.\nClosely work with the Backend Developers to optimize our platform for speed and quality\nCode, test, and deploy\nEnsure 99.99999% server uptime\nOur Requirements\nBachelor's degree in Computer Science or equivalent\n2-5 years of experience with Python other scripting languages such as Perl, Ruby etc\nData management skills\nexpert in PHP (Laravel), NodeJs, AWS\nComfort with collaboration, open communication and reaching across functional borders\nProficient in DevOps delivery pipeline and AWS cloud with experience in source code management\nGood knowledge and expertise on AWS infra architecting methods and best practices\nExperience in developing and maintaining CI/CD process for enterprise SaaS and on-prem applications using tools like Git, Gerrit, Jenkins, Maven, Gradle, etc\nExpertise in Linux System Admin and Bash Scripting\nExperience with configuration management tools such as Ansible, Chef, Fabric, Puppet or SaltStack\nExperience in designing and maintaining cloud-based solutions\nApplication and network security\nCloud deployment infrastructure\nWe would love to see\nA track record of successfully shipped software\nWebsites youve shipped on the store that youre proud to share\nExperience with growth projects and environments\nAn open source profile (such as Github) with some cool projects",
       "job_url": "https://www.naukri.com/job-listings-backend-developer-tagtaste-foods-pvt-ltd-noida-2-to-5-years-220925503867",
       "normalized_url": "https://www.naukri.com/job-listings-backend-developer-tagtaste-foods-pvt-ltd-noida-2-to-5-years-220925503867",
-      "apply_url": "",
+      "apply_url": "https://www.tagtaste.com/career",
       "experience_required": "2-5 Yrs",
       "location": "Noida",
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Python Backend Engineer",
       "search_location": "Noida",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 21,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 949,
+    "total_pages": 64
   }
 }
