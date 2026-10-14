@@ -80,11 +80,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 68
+      "count": 71
     },
     {
       "status": "applied_successfully",
-      "count": 115
+      "count": 129
     },
     {
       "status": "easy_apply",
@@ -92,15 +92,15 @@
     },
     {
       "status": "evaluated",
-      "count": 522
+      "count": 486
     },
     {
       "status": "external_portal",
-      "count": 187
+      "count": 202
     },
     {
       "status": "failed",
-      "count": 25
+      "count": 31
     },
     {
       "status": "needs_human_review",
@@ -108,11 +108,7 @@
     },
     {
       "status": "pending",
-      "count": 26
-    },
-    {
-      "status": "unknown",
-      "count": 1
+      "count": 25
     }
   ],
   "top_companies": [

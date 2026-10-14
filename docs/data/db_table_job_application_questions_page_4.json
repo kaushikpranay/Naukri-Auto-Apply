@@ -109,12 +109,62 @@
       "required": 0,
       "answer": "Yes",
       "detected_at": "2026-10-13T18:10:50.467312"
+    },
+    {
+      "id": 937,
+      "job_id": 45842,
+      "question_key": "willing_to_relocate_mumbai",
+      "question_text": "Are you currently residing in Mumbai or willing to relocate to Mumbai?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-14T15:34:57.055642"
+    },
+    {
+      "id": 938,
+      "job_id": 46785,
+      "question_key": "available_schedule_drive_10_oct_2026_face_face_interview",
+      "question_text": "Are you available for schedule drive on 10 Oct 2026 for face to face interview?",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-14T15:38:39.017708"
+    },
+    {
+      "id": 941,
+      "job_id": 46874,
+      "question_key": "worked_upon_llm_fine_tuning_model_benchmarking_nvidia",
+      "question_text": "Have you worked upon LLM Fine tuning , model benchmarking & NVIDIA?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-14T15:39:49.355381"
+    },
+    {
+      "id": 944,
+      "job_id": 48606,
+      "question_key": "exp_palantir",
+      "question_text": "How many years of experience do you have in Palantir?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-14T15:43:45.013417"
+    },
+    {
+      "id": 946,
+      "job_id": 46442,
+      "question_key": "notice_period",
+      "question_text": "Are you currently serving Notice Period? If yes, when is your LWD?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "45 days",
+      "detected_at": "2026-10-14T15:45:56.293592"
     }
   ],
   "pagination": {
     "page": 4,
     "limit": 15,
-    "total_records": 55,
-    "total_pages": 4
+    "total_records": 61,
+    "total_pages": 5
   }
 }

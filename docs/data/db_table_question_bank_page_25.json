@@ -90,12 +90,64 @@
       "last_used_at": "2026-10-13T18:10:18.048392",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 15528,
+      "question_key": "available_schedule_drive_10_oct_2026_face_face_interview",
+      "question_text": "Are you available for schedule drive on 10 Oct 2026 for face to face interview?",
+      "answer": "no",
+      "usage_count": 3,
+      "last_used": "2026-10-14T15:38:39.017708",
+      "field_type": "checkbox",
+      "created_at": "2026-10-14T15:37:38.374334",
+      "last_used_at": "2026-10-14T15:38:39.017708",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15531,
+      "question_key": "worked_upon_llm_fine_tuning_model_benchmarking_nvidia",
+      "question_text": "Have you worked upon LLM Fine tuning , model benchmarking & NVIDIA?",
+      "answer": "1.5",
+      "usage_count": 3,
+      "last_used": "2026-10-14T15:39:49.355381",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-14T15:39:00.604681",
+      "last_used_at": "2026-10-14T15:39:49.355381",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15534,
+      "question_key": "exp_palantir",
+      "question_text": "How many years of experience do you have in Palantir?",
+      "answer": "0.5",
+      "usage_count": 2,
+      "last_used": "2026-10-14T15:43:45.013417",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-14T15:43:36.358631",
+      "last_used_at": "2026-10-14T15:43:45.013417",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15537,
+      "question_key": "exp_subject_matter_expertise",
+      "question_text": "How many years of experience do you have in Subject Matter Expertise?",
+      "answer": "1.5",
+      "usage_count": 2,
+      "last_used": "2026-10-14T15:46:50.501307",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-14T15:46:41.746929",
+      "last_used_at": "2026-10-14T15:46:50.501307",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 25,
     "limit": 15,
-    "total_records": 366,
+    "total_records": 370,
     "total_pages": 25
   }
 }

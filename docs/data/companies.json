@@ -13,17 +13,17 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 41,
-    "applications_count": 22,
+    "applications_count": 25,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
   },
   {
     "name": "Infosys",
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 40,
-    "applications_count": 12,
-    "success_count": 9,
+    "applications_count": 13,
+    "success_count": 10,
     "failure_count": 0
   },
   {
@@ -31,8 +31,8 @@
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 26,
-    "applications_count": 5,
-    "success_count": 0,
+    "applications_count": 7,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -40,8 +40,8 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 25,
-    "applications_count": 3,
-    "success_count": 3,
+    "applications_count": 4,
+    "success_count": 4,
     "failure_count": 0
   },
   {
@@ -58,8 +58,8 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 19,
-    "applications_count": 9,
-    "success_count": 7,
+    "applications_count": 10,
+    "success_count": 8,
     "failure_count": 0
   },
   {
@@ -67,8 +67,8 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 17,
-    "applications_count": 7,
-    "success_count": 7,
+    "applications_count": 8,
+    "success_count": 8,
     "failure_count": 0
   },
   {
@@ -76,8 +76,8 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 14,
-    "applications_count": 5,
-    "success_count": 4,
+    "applications_count": 6,
+    "success_count": 5,
     "failure_count": 1
   },
   {
@@ -85,8 +85,8 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 9,
-    "applications_count": 2,
-    "success_count": 1,
+    "applications_count": 6,
+    "success_count": 4,
     "failure_count": 0
   },
   {
@@ -265,9 +265,9 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 3,
-    "applications_count": 1,
+    "applications_count": 2,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
   },
   {
     "name": "Third Essential It Solution",
@@ -346,7 +346,7 @@
     "ats_type": "Naukri",
     "priority": "low",
     "jobs_count": 3,
-    "applications_count": 1,
+    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -814,7 +814,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 2,
-    "applications_count": 1,
+    "applications_count": 2,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1183,8 +1183,8 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -1291,7 +1291,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1399,7 +1399,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1543,7 +1543,7 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -1768,7 +1768,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2137,7 +2137,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2164,9 +2164,9 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
   },
   {
     "name": "Otomeyt AI",
@@ -2380,7 +2380,7 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2497,9 +2497,9 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
   },
   {
     "name": "Mirafra",
@@ -2587,7 +2587,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2659,7 +2659,7 @@
     "ats_type": "Naukri",
     "priority": "medium",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2731,7 +2731,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2830,7 +2830,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -2839,9 +2839,9 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
   },
   {
     "name": "Ionixx Technologies",
@@ -3343,9 +3343,9 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
-    "failure_count": 0
+    "failure_count": 1
   },
   {
     "name": "Flexm",
@@ -3370,7 +3370,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -3740,7 +3740,7 @@
     "priority": "high",
     "jobs_count": 1,
     "applications_count": 1,
-    "success_count": 0,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -4063,7 +4063,7 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
+    "applications_count": 1,
     "success_count": 0,
     "failure_count": 0
   },
@@ -4396,8 +4396,8 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -4414,8 +4414,8 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {
@@ -4558,8 +4558,8 @@
     "ats_type": "Naukri",
     "priority": "high",
     "jobs_count": 1,
-    "applications_count": 0,
-    "success_count": 0,
+    "applications_count": 1,
+    "success_count": 1,
     "failure_count": 0
   },
   {

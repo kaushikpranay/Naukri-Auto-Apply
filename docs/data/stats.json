@@ -4,51 +4,51 @@
     "naukri_jobs": 949,
     "external_jobs": 953,
     "pending_review": 105,
-    "queued": 37,
+    "queued": 0,
     "applying": 0,
-    "applied": 183,
-    "failed": 26,
+    "applied": 200,
+    "failed": 32,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 703.8,
+    "success_rate": 625.0,
     "avg_ai_score": 39.6,
-    "today_jobs": 25,
-    "today_applications": 54
+    "today_jobs": 0,
+    "today_applications": 38
   },
   "recent_activity": [
     {
       "type": "applied",
-      "company_name": "Designcentric",
-      "job_title": "Software Developer",
-      "timestamp": "2026-10-13T18:12:47.994606",
+      "company_name": "Flyingcaps Technologies",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-14T15:48:40.712641",
       "details": "Type: unknown, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Yext",
-      "job_title": "Demo Engineer",
-      "timestamp": "2026-10-13T18:12:35.210223",
+      "company_name": "JPMorgan Chase Bank",
+      "job_title": "Software Engineer III - Java Full Stack Developer + GenAI / LLM + AWS",
+      "timestamp": "2026-10-14T15:48:18.220041",
+      "details": "Type: unknown, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "LogiQuad Solutions",
+      "job_title": "Full Stack Developer",
+      "timestamp": "2026-10-14T15:48:06.777835",
       "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Accenture",
-      "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-13T18:12:22.008369",
-      "details": "Type: external_portal, Status: discovered"
+      "company_name": "Infosys",
+      "job_title": "AI Engineer (Gen AI, Databricks)",
+      "timestamp": "2026-10-14T15:47:52.779804",
+      "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Two95 International",
-      "job_title": "GenAI / AI-ML Engineer",
-      "timestamp": "2026-10-13T18:12:03.987234",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Pocket Fm",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-10-13T18:11:55.953416",
+      "company_name": "Talent Toppers",
+      "job_title": "Full Stack Developer",
+      "timestamp": "2026-10-14T15:47:38.456732",
       "details": "Type: external_portal, Status: discovered"
     },
     {
