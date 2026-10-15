@@ -162,7 +162,7 @@
       "question_text": "interview_availability",
       "answer": "Yes",
       "usage_count": 0,
-      "last_used": "2026-10-14T15:33:34.356281",
+      "last_used": "2026-10-15T17:17:53.545086",
       "field_type": null,
       "created_at": null,
       "last_used_at": "2026-06-18T18:34:01",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 5,
     "limit": 15,
-    "total_records": 370,
+    "total_records": 371,
     "total_pages": 25
   }
 }

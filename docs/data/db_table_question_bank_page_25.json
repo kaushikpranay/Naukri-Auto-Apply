@@ -142,12 +142,25 @@
       "last_used_at": "2026-10-14T15:46:50.501307",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 15608,
+      "question_key": "willing_to_relocate_chennai_or_coimbatore",
+      "question_text": "Are you willing to relocate to Chennai or Coimbatore?",
+      "answer": null,
+      "usage_count": 1,
+      "last_used": "2026-10-15T18:16:48.278078",
+      "field_type": "radio",
+      "created_at": "2026-10-15T18:16:48.278078",
+      "last_used_at": "2026-10-15T18:16:48.278078",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 25,
     "limit": 15,
-    "total_records": 370,
+    "total_records": 371,
     "total_pages": 25
   }
 }

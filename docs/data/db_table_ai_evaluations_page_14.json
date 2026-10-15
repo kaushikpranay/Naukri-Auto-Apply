@@ -16,9 +16,9 @@
   ],
   "rows": [
     {
-      "id": 7295,
-      "job_id": 45818,
-      "run_id": "a2f0813a",
+      "id": 7446,
+      "job_id": 46299,
+      "run_id": "9aa0aa71",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
@@ -28,57 +28,72 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-01T22:38:28.224498"
+      "created_at": "2026-10-02T19:29:30.135209"
     },
     {
-      "id": 7296,
-      "job_id": 45836,
-      "run_id": "a2f0813a",
+      "id": 7447,
+      "job_id": 46303,
+      "run_id": "9aa0aa71",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 85.0,
+      "interview_probability": 90.0,
       "recommended_resume": "GENAI",
       "priority": "high",
       "action": "apply",
-      "confidence": 82.0,
+      "confidence": 85.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
-      "missing_skills": "[\"Azure OpenAI\", \"Docker\", \"MLflow\", \"Weights & Biases\"]",
-      "created_at": "2026-10-01T22:38:38.902780"
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-02T19:29:38.060276"
     },
     {
-      "id": 7297,
-      "job_id": 45837,
-      "run_id": "a2f0813a",
+      "id": 7448,
+      "job_id": 46304,
+      "run_id": "9aa0aa71",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-10-02T19:29:38.069411"
+    },
+    {
+      "id": 7449,
+      "job_id": 46307,
+      "run_id": "9aa0aa71",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-10-02T19:29:38.083335"
+    },
+    {
+      "id": 7450,
+      "job_id": 46308,
+      "run_id": "9aa0aa71",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 35.0,
+      "interview_probability": 80.0,
       "recommended_resume": "GENAI",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 70.0,
-      "reason": "Strong AI, RAG, and agentic experience but no Mendix background.",
-      "missing_skills": "[\"Mendix\"]",
-      "created_at": "2026-10-01T22:39:00.981204"
-    },
-    {
-      "id": 7298,
-      "job_id": 45842,
-      "run_id": "a2f0813a",
-      "model_name": "Groq[...ixmA]",
-      "prompt_version": "v2.0",
-      "interview_probability": 70.0,
-      "recommended_resume": "PYTHON",
       "priority": "high",
       "action": "apply",
-      "confidence": 75.0,
-      "reason": "Strong Python backend with FastAPI, transferable to Flask/Django, but missing front\u2011end and WordPress skills.",
-      "missing_skills": "[\"Node.js\", \"React.js\", \"WordPress\", \"Ubuntu/Linux\", \"Nginx/Apache\", \"SSL\", \"Git\"]",
-      "created_at": "2026-10-01T22:39:11.985990"
+      "confidence": 80.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-02T19:29:54.853356"
     },
     {
-      "id": 7299,
-      "job_id": 45913,
-      "run_id": "a2f0813a",
+      "id": 7451,
+      "job_id": 46309,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -88,12 +103,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:39:11.997113"
+      "created_at": "2026-10-02T19:29:54.864949"
     },
     {
-      "id": 7300,
-      "job_id": 45923,
-      "run_id": "a2f0813a",
+      "id": 7452,
+      "job_id": 46313,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -103,12 +118,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:39:12.016952"
+      "created_at": "2026-10-02T19:29:54.872771"
     },
     {
-      "id": 7301,
-      "job_id": 45347,
-      "run_id": "a2f0813a",
+      "id": 7453,
+      "job_id": 46314,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -118,12 +133,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:39:12.218656"
+      "created_at": "2026-10-02T19:29:54.883045"
     },
     {
-      "id": 7302,
-      "job_id": 45926,
-      "run_id": "a2f0813a",
+      "id": 7454,
+      "job_id": 46315,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -133,12 +148,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:39:12.221747"
+      "created_at": "2026-10-02T19:29:54.890862"
     },
     {
-      "id": 7303,
-      "job_id": 45937,
-      "run_id": "a2f0813a",
+      "id": 7455,
+      "job_id": 46324,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -148,27 +163,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:39:12.229428"
+      "created_at": "2026-10-02T19:29:54.898961"
     },
     {
-      "id": 7304,
-      "job_id": 45942,
-      "run_id": "a2f0813a",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-01T22:39:12.234843"
-    },
-    {
-      "id": 7305,
-      "job_id": 45947,
-      "run_id": "a2f0813a",
+      "id": 7456,
+      "job_id": 46327,
+      "run_id": "9aa0aa71",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
@@ -178,12 +178,12 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-01T22:39:40.487828"
+      "created_at": "2026-10-02T19:30:05.913347"
     },
     {
-      "id": 7306,
-      "job_id": 45948,
-      "run_id": "a2f0813a",
+      "id": 7457,
+      "job_id": 46329,
+      "run_id": "9aa0aa71",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
@@ -193,12 +193,12 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-01T22:40:00.807221"
+      "created_at": "2026-10-02T19:30:19.016834"
     },
     {
-      "id": 7307,
-      "job_id": 45952,
-      "run_id": "a2f0813a",
+      "id": 7458,
+      "job_id": 46333,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -208,12 +208,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:40:00.810921"
+      "created_at": "2026-10-02T19:30:19.069266"
     },
     {
-      "id": 7308,
-      "job_id": 45954,
-      "run_id": "a2f0813a",
+      "id": 7459,
+      "job_id": 46334,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -223,12 +223,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:40:00.814641"
+      "created_at": "2026-10-02T19:30:19.079926"
     },
     {
-      "id": 7309,
-      "job_id": 45959,
-      "run_id": "a2f0813a",
+      "id": 7460,
+      "job_id": 46335,
+      "run_id": "9aa0aa71",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -238,13 +238,13 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-01T22:40:00.822578"
+      "created_at": "2026-10-02T19:30:19.088079"
     }
   ],
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 924,
-    "total_pages": 62
+    "total_records": 948,
+    "total_pages": 64
   }
 }

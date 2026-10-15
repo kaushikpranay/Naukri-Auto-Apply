@@ -11,66 +11,6 @@
   ],
   "rows": [
     {
-      "id": 853,
-      "job_id": 44467,
-      "question_key": "exp_gen_ai",
-      "question_text": "How many years of experience do you have in Gen ai with Data Engineering?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-09-30T08:05:19.065389"
-    },
-    {
-      "id": 854,
-      "job_id": 44849,
-      "question_key": "notice_period",
-      "question_text": "What is your notice period? We need someone within 15 to 30days",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "45 days",
-      "detected_at": "2026-09-30T08:18:20.082795"
-    },
-    {
-      "id": 855,
-      "job_id": 44419,
-      "question_key": "exp_api_integration",
-      "question_text": "How many years of experience do you have in Api Integration?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-09-30T08:24:56.454325"
-    },
-    {
-      "id": 858,
-      "job_id": 44575,
-      "question_key": "ml_experience",
-      "question_text": "How many years of hands on professional experience do you have specifically in AI/ML?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-01T22:55:15.649035"
-    },
-    {
-      "id": 859,
-      "job_id": 44906,
-      "question_key": "exp_building_ai_agents",
-      "question_text": "Do you have experience in building AI Agents using frameworks Lang Graph, Langchain?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "1.5",
-      "detected_at": "2026-10-01T22:55:46.875446"
-    },
-    {
-      "id": 860,
-      "job_id": 44906,
-      "question_key": "current_location",
-      "question_text": "What is you current location?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Indore",
-      "detected_at": "2026-10-01T22:56:26.328200"
-    },
-    {
       "id": 861,
       "job_id": 46303,
       "question_key": "woman_professional_looking_restart_career_after_break_6_mont",
@@ -159,12 +99,72 @@
       "required": 0,
       "answer": null,
       "detected_at": "2026-10-08T18:34:24.266877"
+    },
+    {
+      "id": 872,
+      "job_id": 46439,
+      "question_key": "profile_links",
+      "question_text": "Please provide thee GitHub profile(URL) and LinkedIn URL",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "https://github.com/kaushikpranay",
+      "detected_at": "2026-10-08T18:36:38.166940"
+    },
+    {
+      "id": 875,
+      "job_id": 46476,
+      "question_key": "willing_to_relocate_bengaluru",
+      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-08T18:39:11.417032"
+    },
+    {
+      "id": 876,
+      "job_id": 46488,
+      "question_key": "current_company",
+      "question_text": "Current Company Name",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "TCS",
+      "detected_at": "2026-10-08T18:39:34.763982"
+    },
+    {
+      "id": 877,
+      "job_id": 46526,
+      "question_key": "2dot_experience_working_pandas_and_numpy_data_processing_and",
+      "question_text": "2. Do you have experience working with Pandas and NumPy for data processing and analysis?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-08T18:44:01.385548"
+    },
+    {
+      "id": 879,
+      "job_id": 46526,
+      "question_key": "5dot_familiar_model_evaluation_metrics_such_as_accuracy_prec",
+      "question_text": "5. Are you familiar with model evaluation metrics such as Accuracy, Precision, Recall, F1-Score, ROC-AUC, and RMSE?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-08T18:42:30.534029"
+    },
+    {
+      "id": 881,
+      "job_id": 46526,
+      "question_key": "exp_data_cleaning",
+      "question_text": "6. Do you have experience in Data Cleaning, Feature Engineering, and Exploratory Data Analysis (EDA)?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-08T18:42:45.322760"
     }
   ],
   "pagination": {
     "page": 1,
     "limit": 15,
-    "total_records": 61,
-    "total_pages": 5
+    "total_records": 60,
+    "total_pages": 4
   }
 }

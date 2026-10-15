@@ -11,66 +11,6 @@
   ],
   "rows": [
     {
-      "id": 872,
-      "job_id": 46439,
-      "question_key": "profile_links",
-      "question_text": "Please provide thee GitHub profile(URL) and LinkedIn URL",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "https://github.com/kaushikpranay",
-      "detected_at": "2026-10-08T18:36:38.166940"
-    },
-    {
-      "id": 875,
-      "job_id": 46476,
-      "question_key": "willing_to_relocate_bengaluru",
-      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-08T18:39:11.417032"
-    },
-    {
-      "id": 876,
-      "job_id": 46488,
-      "question_key": "current_company",
-      "question_text": "Current Company Name",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "TCS",
-      "detected_at": "2026-10-08T18:39:34.763982"
-    },
-    {
-      "id": 877,
-      "job_id": 46526,
-      "question_key": "2dot_experience_working_pandas_and_numpy_data_processing_and",
-      "question_text": "2. Do you have experience working with Pandas and NumPy for data processing and analysis?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-08T18:44:01.385548"
-    },
-    {
-      "id": 879,
-      "job_id": 46526,
-      "question_key": "5dot_familiar_model_evaluation_metrics_such_as_accuracy_prec",
-      "question_text": "5. Are you familiar with model evaluation metrics such as Accuracy, Precision, Recall, F1-Score, ROC-AUC, and RMSE?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-08T18:42:30.534029"
-    },
-    {
-      "id": 881,
-      "job_id": 46526,
-      "question_key": "exp_data_cleaning",
-      "question_text": "6. Do you have experience in Data Cleaning, Feature Engineering, and Exploratory Data Analysis (EDA)?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-08T18:42:45.322760"
-    },
-    {
       "id": 882,
       "job_id": 46526,
       "question_key": "8dot_worked_generative_ai_technologies_including_llms_prompt",
@@ -159,12 +99,72 @@
       "required": 0,
       "answer": "Yes",
       "detected_at": "2026-10-08T18:58:24.391140"
+    },
+    {
+      "id": 898,
+      "job_id": 46947,
+      "question_key": "exp_ai_agents",
+      "question_text": "How many years of experience do you have in AI Agents?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-08T19:00:22.310415"
+    },
+    {
+      "id": 900,
+      "job_id": 47050,
+      "question_key": "exp_agentic_ai_engineer",
+      "question_text": "How many years of experience do you have in Agentic AI Engineer?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "1.5",
+      "detected_at": "2026-10-11T18:39:40.270039"
+    },
+    {
+      "id": 901,
+      "job_id": 47123,
+      "question_key": "total_years_experience",
+      "question_text": "Do you have at least 3 years of relevant experience?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-11T18:41:11.687111"
+    },
+    {
+      "id": 902,
+      "job_id": 47151,
+      "question_key": "python_experience",
+      "question_text": "How many years of experience do you have in Python & AI Model Development?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-11T18:42:39.780253"
+    },
+    {
+      "id": 903,
+      "job_id": 47253,
+      "question_key": "willing_freelancer_role",
+      "question_text": "Are you willing for freelancer role",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-11T18:43:16.898250"
+    },
+    {
+      "id": 906,
+      "job_id": 47521,
+      "question_key": "worked_as_full_time_employee_infoedge",
+      "question_text": "Have you worked as a full-time employee with InfoEdge?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "No",
+      "detected_at": "2026-10-11T18:48:18.907404"
     }
   ],
   "pagination": {
     "page": 2,
     "limit": 15,
-    "total_records": 61,
-    "total_pages": 5
+    "total_records": 60,
+    "total_pages": 4
   }
 }

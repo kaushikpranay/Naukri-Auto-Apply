@@ -1,144 +1,5 @@
 [
   {
-    "id": 44384,
-    "company_name": "Sii Polska",
-    "job_title": "AI/ML Engineer (f/m/x)",
-    "location": "Remote",
-    "experience_required": "4-9 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-f-m-x-sii-poland-remote-4-to-9-years-280926500485",
-    "score": 75.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; meets core GenAI requirements.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Pinecone",
-      "Snowflake"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44513,
-    "company_name": "Go Digital Technology Consulting",
-    "job_title": "Senior GenAI Engineer",
-    "location": "Remote",
-    "experience_required": "4-7 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-senior-genai-engineer-go-digital-technology-consulting-mumbai-4-to-7-years-280926021527",
-    "score": 75.0,
-    "confidence": 78.0,
-    "reason": "Strong production RAG experience and transferable cloud skills.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Azure OpenAI"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44552,
-    "company_name": "Coforge",
-    "job_title": "Generative AI Engineer - immediate joiners",
-    "location": "Greater Noida, Pune, Hyderabad",
-    "experience_required": "3-8 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-immediate-joiners-coforge-hyderabad-pune-greater-noida-3-to-8-years-300626035690",
-    "score": 75.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG experience and transferable cloud skills.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Azure OpenAI"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44575,
-    "company_name": "MNC",
-    "job_title": "Artificial Intelligence Engineer",
-    "location": "Gurugram, New Delhi, Delhi / NCR",
-    "experience_required": "4-9 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-hr-hai-new-delhi-gurugram-delhi-ncr-4-to-9-years-290926028198",
-    "score": 75.0,
-    "confidence": 78.0,
-    "reason": "Strong production RAG experience and transferable cloud skills.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Azure OpenAI"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44681,
-    "company_name": "Hexaware Technologies",
-    "job_title": "Artificial Intelligence Engineer",
-    "location": "Chennai",
-    "experience_required": "4-9 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-hexaware-technologies-chennai-4-to-9-years-280926031129",
-    "score": 75.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core AI engineering needs.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "AI Assurance",
-      "Ragas",
-      "DeepEval",
-      "Arize",
-      "Langfuse",
-      "Haize Labs",
-      "Galileo",
-      "Okareo",
-      "LangSmith",
-      "Team Management"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44906,
-    "company_name": "Devlabs Alliance",
-    "job_title": "Ai Ml Engineer",
-    "location": "Gurugram, Delhi / NCR, Indore",
-    "experience_required": "4-7 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-ai-ml-engineer-devlabs-alliance-indore-gurugram-delhi-ncr-4-to-7-years-290926032101",
-    "score": 75.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; meets core AI requirements.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Azure OpenAI",
-      "Scikit-learn"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44997,
-    "company_name": "Accenture",
-    "job_title": "LLM Model Developer",
-    "location": "Bengaluru",
-    "experience_required": "2-5 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-bengaluru-2-to-5-years-290926936412",
-    "score": 75.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG experience and transferable cloud skills.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Azure OpenAI"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 45013,
-    "company_name": "Accenture",
-    "job_title": "LLM Operations Engineer",
-    "location": "Pune",
-    "experience_required": "3-8 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-pune-3-to-8-years-280926925716",
-    "score": 75.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG experience and transferable cloud skills.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Azure OpenAI"
-    ],
-    "priority": "high"
-  },
-  {
     "id": 45175,
     "company_name": "Coforge",
     "job_title": "Coforge is Hiring GEN AI Engineers",
@@ -1080,15 +941,15 @@
     "priority": "high"
   },
   {
-    "id": 44416,
-    "company_name": "Two95 International",
-    "job_title": "GenAI / AI-ML Engineer",
-    "location": "Gurugram",
-    "experience_required": "4-6 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-genai-ai-ml-engineer-two95-international-inc-gurugram-4-to-6-years-030826505802",
-    "score": 70.0,
-    "confidence": 75.0,
-    "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable cloud skills; location mismatch and limited years.",
+    "id": 49027,
+    "company_name": "Accenture",
+    "job_title": "Custom Software Engineer",
+    "location": "Mumbai",
+    "experience_required": "4-9 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-custom-software-engineer-accenture-solutions-pvt-ltd-mumbai-4-to-9-years-121026920373",
+    "score": 75.0,
+    "confidence": 78.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
     "recommended_resume": "GENAI",
     "missing_skills": [
       "Azure OpenAI"
@@ -1096,19 +957,67 @@
     "priority": "high"
   },
   {
-    "id": 44529,
-    "company_name": "Accenture",
-    "job_title": "LLM Model Developer",
-    "location": "Indore",
-    "experience_required": "2-5 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-llm-model-developer-accenture-solutions-pvt-ltd-indore-2-to-5-years-280926921432",
-    "score": 70.0,
-    "confidence": 80.0,
-    "reason": "Strong production RAG and LLM experience, transferable cloud skills, meets core requirements despite fewer years.",
+    "id": 49449,
+    "company_name": "Vlink",
+    "job_title": "Artificial Intelligence Engineer",
+    "location": "Gurugram",
+    "experience_required": "4-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-vlink-gurugram-4-to-7-years-270726032283",
+    "score": 75.0,
+    "confidence": 85.0,
+    "reason": "Strong production RAG experience and transferable cloud skills, but lacks Java.",
     "recommended_resume": "GENAI",
     "missing_skills": [
-      "Azure OpenAI",
-      "PyTorch"
+      "Java",
+      "Vulnerability Management"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49548,
+    "company_name": "Creditmantri Finserve",
+    "job_title": "Walk-in || Artificial Intelligence Engineer",
+    "location": "Chennai",
+    "experience_required": "",
+    "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-creditmantri-finserve-chennai-1-to-4-years-151026026873",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG experience and transferable cloud skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49569,
+    "company_name": "Focalworks Solutions",
+    "job_title": "Generative AI Engineer",
+    "location": "Mumbai",
+    "experience_required": "3-5 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-focalworks-private-limited-mumbai-3-to-5-years-110825504088",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks Azure OpenAI.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49888,
+    "company_name": "Accenture",
+    "job_title": "LLM Operations Engineer",
+    "location": "Pune",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-llm-operations-engineer-accenture-solutions-pvt-ltd-pune-3-to-8-years-280926925716",
+    "score": 75.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, meets GenAI focus.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Azure OpenAI"
     ],
     "priority": "high"
   },
@@ -1552,24 +1461,76 @@
     "priority": "high"
   },
   {
-    "id": 44876,
-    "company_name": "Leading Client",
-    "job_title": "AI Test Engineer",
-    "location": "Chennai",
+    "id": 49424,
+    "company_name": "Coforge",
+    "job_title": "Generative AI Engineer - immediate joiners",
+    "location": "Greater Noida, Pune, Hyderabad",
     "experience_required": "3-8 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-ai-test-engineer-golden-opportunities-pvt-ltd-chennai-3-to-8-years-290926930098",
-    "score": 65.0,
-    "confidence": 70.0,
-    "reason": "Strong production RAG and LangGraph experience, but lacks dedicated QA/testing framework experience.",
+    "job_url": "https://www.naukri.com/job-listings-generative-ai-engineer-immediate-joiners-coforge-hyderabad-pune-greater-noida-3-to-8-years-300626035690",
+    "score": 70.0,
+    "confidence": 80.0,
+    "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks Azure OpenAI.",
     "recommended_resume": "GENAI",
     "missing_skills": [
-      "LangSmith",
-      "Ragas",
-      "DeepEval",
-      "PromptFoo",
-      "Braintrust",
-      "Langfuse",
-      "MCP"
+      "Azure OpenAI"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49677,
+    "company_name": "Infilect",
+    "job_title": "AI Engineer",
+    "location": "Bengaluru",
+    "experience_required": "2-7 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-infilect-bengaluru-2-to-7-years-121026503965",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong deep learning CV experience with TensorFlow and production deployments, but lacks OpenCV/PyTorch.",
+    "recommended_resume": "ML",
+    "missing_skills": [
+      "OpenCV",
+      "PyTorch"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49713,
+    "company_name": "Luxoft",
+    "job_title": "Snowflake Cortex AI Engineer",
+    "location": "Pune, Chennai, Mumbai",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-snowflake-cortex-ai-engineer-luxoft-india-llp-mumbai-pune-chennai-3-to-8-years-131026927364",
+    "score": 70.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG and LLM experience, but lacks Snowflake expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Snowflake"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49845,
+    "company_name": "PwC",
+    "job_title": "Fullstack Developer",
+    "location": "Hybrid - Gurugram, Bengaluru, Hyderabad",
+    "experience_required": "4-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-fullstack-developer-pwc-hyderabad-gurugram-bengaluru-4-to-8-years-060826024742",
+    "score": 70.0,
+    "confidence": 75.0,
+    "reason": "Strong production RAG and FastAPI experience, but lacks core full\u2011stack and cloud infra skills.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "ReactJS",
+      "Streamlit",
+      "Django",
+      "Kubernetes",
+      "Terraform",
+      "Azure Service Bus",
+      "Kafka",
+      "Azure",
+      "GCP",
+      "Azure OpenAI"
     ],
     "priority": "high"
   },
@@ -1644,43 +1605,6 @@
       "C++",
       "PyTorch",
       "Edge Deployment"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44872,
-    "company_name": "Touchworld Technology",
-    "job_title": "AI Integration Engineer",
-    "location": "Chennai",
-    "experience_required": "1-2 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-ai-integration-engineer-touchworld-technology-chennai-1-to-2-years-300126506972",
-    "score": 60.0,
-    "confidence": 70.0,
-    "reason": "Strong production RAG and AI integration experience but lacks Node.js/Angular.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Node.js",
-      "Angular"
-    ],
-    "priority": "high"
-  },
-  {
-    "id": 44968,
-    "company_name": "PwC",
-    "job_title": "Palantir Developer",
-    "location": "Hybrid - Gurugram, Bengaluru, Hyderabad",
-    "experience_required": "4-8 Yrs",
-    "job_url": "https://www.naukri.com/job-listings-palantir-developer-pwc-hyderabad-gurugram-bengaluru-4-to-8-years-240826031310",
-    "score": 60.0,
-    "confidence": 75.0,
-    "reason": "Strong production RAG and LLM experience, but lacks Foundry and governance expertise.",
-    "recommended_resume": "GENAI",
-    "missing_skills": [
-      "Palantir Foundry",
-      "Workshop",
-      "Ontology",
-      "AIP",
-      "Governance"
     ],
     "priority": "high"
   },
@@ -1788,6 +1712,24 @@
     "priority": "medium"
   },
   {
+    "id": 49562,
+    "company_name": "Quantum Strides",
+    "job_title": "AI Engineer- Anthropic",
+    "location": "Chennai",
+    "experience_required": "3-4 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-ai-engineer-anthropic-quantum-strides-india-private-limited-chennai-3-to-4-years-131026502652",
+    "score": 50.0,
+    "confidence": 60.0,
+    "reason": "Strong production RAG and LangGraph experience but lacks Claude expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Anthropic Claude",
+      "Claude APIs",
+      "Pinecone"
+    ],
+    "priority": "medium"
+  },
+  {
     "id": 46208,
     "company_name": "Construe Labs",
     "job_title": "Full Stack Developer",
@@ -1846,6 +1788,25 @@
       "Snowflake",
       "Snowflake Cortex AI",
       "Capital Markets"
+    ],
+    "priority": "high"
+  },
+  {
+    "id": 49273,
+    "company_name": "Coforge",
+    "job_title": "Databricks Engineer",
+    "location": "Greater Noida, Pune",
+    "experience_required": "3-8 Yrs",
+    "job_url": "https://www.naukri.com/job-listings-databricks-engineer-coforge-pune-greater-noida-3-to-8-years-141026013231",
+    "score": 40.0,
+    "confidence": 70.0,
+    "reason": "Strong production RAG experience but lacks Databricks and Spark expertise.",
+    "recommended_resume": "GENAI",
+    "missing_skills": [
+      "Databricks",
+      "Apache Spark",
+      "Delta Lake",
+      "Unity Catalog"
     ],
     "priority": "high"
   },

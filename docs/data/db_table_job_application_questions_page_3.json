@@ -11,66 +11,6 @@
   ],
   "rows": [
     {
-      "id": 898,
-      "job_id": 46947,
-      "question_key": "exp_ai_agents",
-      "question_text": "How many years of experience do you have in AI Agents?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-08T19:00:22.310415"
-    },
-    {
-      "id": 900,
-      "job_id": 47050,
-      "question_key": "exp_agentic_ai_engineer",
-      "question_text": "How many years of experience do you have in Agentic AI Engineer?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "1.5",
-      "detected_at": "2026-10-11T18:39:40.270039"
-    },
-    {
-      "id": 901,
-      "job_id": 47123,
-      "question_key": "total_years_experience",
-      "question_text": "Do you have at least 3 years of relevant experience?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-11T18:41:11.687111"
-    },
-    {
-      "id": 902,
-      "job_id": 47151,
-      "question_key": "python_experience",
-      "question_text": "How many years of experience do you have in Python & AI Model Development?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-11T18:42:39.780253"
-    },
-    {
-      "id": 903,
-      "job_id": 47253,
-      "question_key": "willing_freelancer_role",
-      "question_text": "Are you willing for freelancer role",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-11T18:43:16.898250"
-    },
-    {
-      "id": 906,
-      "job_id": 47521,
-      "question_key": "worked_as_full_time_employee_infoedge",
-      "question_text": "Have you worked as a full-time employee with InfoEdge?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "No",
-      "detected_at": "2026-10-11T18:48:18.907404"
-    },
-    {
       "id": 908,
       "job_id": 47521,
       "question_key": "if_yes_share_employee_code",
@@ -159,12 +99,72 @@
       "required": 0,
       "answer": null,
       "detected_at": "2026-10-12T16:42:51.699471"
+    },
+    {
+      "id": 922,
+      "job_id": 46221,
+      "question_key": "exp_full_stack_development",
+      "question_text": "How many years of experience do you have in Full-Stack development?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-13T17:52:42.203862"
+    },
+    {
+      "id": 924,
+      "job_id": 46441,
+      "question_key": "willing_to_relocate_gurugram",
+      "question_text": "Are you currently residing in Gurugram or willing to relocate to Gurugram?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-13T17:55:05.650412"
+    },
+    {
+      "id": 925,
+      "job_id": 46689,
+      "question_key": "we_will_final_discussion_f2f_at_pune_baner_available",
+      "question_text": "We will have final discussion F2F at Pune(Baner) are you available ??",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-13T17:57:17.333112"
+    },
+    {
+      "id": 928,
+      "job_id": 46713,
+      "question_key": "python_experience",
+      "question_text": "Do you have hands-on experience building and deploying production-grade Python backend services/APIs? Share the number of experience on the same.",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-13T17:58:09.762227"
+    },
+    {
+      "id": 929,
+      "job_id": 47478,
+      "question_key": "exp_microservices",
+      "question_text": "How many years of experience do you have in Microservices & System Design?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-13T18:03:02.794579"
+    },
+    {
+      "id": 930,
+      "job_id": 47731,
+      "question_key": "comfortable_5_days_wfo_noida_location",
+      "question_text": "Are you comfortable for 5 Days WFO Noida location",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-13T18:04:29.036451"
     }
   ],
   "pagination": {
     "page": 3,
     "limit": 15,
-    "total_records": 61,
-    "total_pages": 5
+    "total_records": 60,
+    "total_pages": 4
   }
 }
