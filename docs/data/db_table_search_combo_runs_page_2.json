@@ -12,9 +12,9 @@
       "id": 16,
       "keyword": "AI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-15T17:39:23.816703",
+      "last_run_at": "2026-10-21T05:28:39.381410",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 8
     },
     {
       "id": 17,
@@ -100,23 +100,23 @@
       "id": 28,
       "keyword": "GenAI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-10-15T17:26:16.674619",
+      "last_run_at": "2026-10-21T05:12:50.865479",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 3
     },
     {
       "id": 30,
       "keyword": "GenAI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-10-15T17:25:05.936286",
+      "last_run_at": "2026-10-21T05:11:43.607685",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 5
     },
     {
       "id": 31,
       "keyword": "GenAI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-10-15T17:27:40.239264",
+      "last_run_at": "2026-10-21T05:17:43.875555",
       "jobs_found": 3,
       "jobs_inserted": 1
     },
@@ -124,9 +124,9 @@
       "id": 33,
       "keyword": "GenAI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-10-15T17:27:25.909038",
+      "last_run_at": "2026-10-21T05:17:31.211365",
       "jobs_found": 20,
-      "jobs_inserted": 7
+      "jobs_inserted": 10
     }
   ],
   "pagination": {

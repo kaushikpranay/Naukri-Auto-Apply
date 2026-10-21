@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 948,
-    "naukri_jobs": 948,
+    "total_jobs": 839,
+    "naukri_jobs": 839,
     "external_jobs": 953,
-    "pending_review": 103,
-    "queued": 18,
+    "pending_review": 97,
+    "queued": 60,
     "applying": 0,
-    "applied": 188,
-    "failed": 32,
+    "applied": 173,
+    "failed": 20,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 587.5,
-    "avg_ai_score": 38.1,
-    "today_jobs": 150,
-    "today_applications": 41
+    "success_rate": 865.0,
+    "avg_ai_score": 38.4,
+    "today_jobs": 211,
+    "today_applications": 74
   },
   "recent_activity": [
     {
       "type": "applied",
+      "company_name": "Iflowtech Solutions",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-21T06:34:44.854682",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
       "company_name": "Huron",
       "job_title": "AI Engineer",
-      "timestamp": "2026-10-15T18:25:14.090307",
-      "details": "Type: external_portal, Status: discovered"
+      "timestamp": "2026-10-21T06:34:29.923109",
+      "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Hilink Ai",
+      "company_name": "Prescient Healthcare Group",
       "job_title": "AI Engineer",
-      "timestamp": "2026-10-15T18:24:57.179868",
-      "details": "Type: external_portal, Status: discovered"
+      "timestamp": "2026-10-21T06:34:02.141890",
+      "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "PwC",
-      "job_title": "Generative AI Software Engineer",
-      "timestamp": "2026-10-15T18:24:40.880125",
-      "details": "Type: unknown, Status: discovered"
+      "company_name": "Leading Client",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-10-21T06:33:57.238179",
+      "details": "Type: applied_successfully, Status: discovered"
     },
     {
       "type": "applied",
-      "company_name": "Netcore Cloud",
-      "job_title": "Relevance Engineer",
-      "timestamp": "2026-10-15T18:24:21.676312",
-      "details": "Type: unknown, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "EY",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-10-15T18:23:59.484161",
+      "company_name": "VVT Solutions",
+      "job_title": "GenAI Developer",
+      "timestamp": "2026-10-21T06:33:37.646630",
       "details": "Type: already_applied, Status: discovered"
     },
     {
       "type": "ai_evaluated",
       "company_name": "Accenture",
       "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-15T18:10:25.994578",
-      "details": "Score: 0.0%, Action: skip"
+      "timestamp": "2026-10-21T06:15:25.584156",
+      "details": "Score: 80.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-10-15T18:10:25.985978",
-      "details": "Score: 0.0%, Action: skip"
-    },
-    {
-      "type": "ai_evaluated",
-      "company_name": "Tekskill",
-      "job_title": "AI/LLM Application Engineer",
-      "timestamp": "2026-10-15T18:10:25.947319",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Accenture",
+      "job_title": "LLM Operations Engineer",
+      "timestamp": "2026-10-21T06:15:12.998769",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
       "company_name": "Accenture",
       "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-15T18:10:25.920793",
-      "details": "Score: 85.0%, Action: apply"
+      "timestamp": "2026-10-21T06:14:53.123274",
+      "details": "Score: 80.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "AI/ML Ops Engineer : LLM Deployment & MLOps Specialist",
-      "timestamp": "2026-10-15T18:10:13.418052",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Accenture",
+      "job_title": "LLM Operations Engineer",
+      "timestamp": "2026-10-21T06:14:40.926233",
+      "details": "Score: 80.0%, Action: apply"
+    },
+    {
+      "type": "ai_evaluated",
+      "company_name": "Accenture",
+      "job_title": "LLM Model Developer",
+      "timestamp": "2026-10-21T06:14:24.281168",
+      "details": "Score: 70.0%, Action: apply"
     }
   ]
 }

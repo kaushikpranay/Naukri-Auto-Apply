@@ -11,160 +11,90 @@
   ],
   "rows": [
     {
-      "id": 908,
-      "job_id": 47521,
-      "question_key": "if_yes_share_employee_code",
-      "question_text": "If Yes, Please share the Employee Code",
-      "field_type": "contenteditable",
+      "id": 951,
+      "job_id": 49547,
+      "question_key": "willing_to_relocate_chennai_or_coimbatore",
+      "question_text": "Are you willing to relocate to Chennai or Coimbatore?",
+      "field_type": "radio",
       "required": 0,
-      "answer": "N/A",
-      "detected_at": "2026-10-11T18:48:35.286133"
+      "answer": null,
+      "detected_at": "2026-10-15T18:16:48.278078"
     },
     {
-      "id": 910,
-      "job_id": 47521,
+      "id": 952,
+      "job_id": 49635,
+      "question_key": "willing_to_relocate_gurugram",
+      "question_text": "Are you currently living in or ready to relocate to Gurugram ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-15T18:20:18.855067"
+    },
+    {
+      "id": 953,
+      "job_id": 49834,
+      "question_key": "current_location",
+      "question_text": "What is your Current Location?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Indore",
+      "detected_at": "2026-10-15T18:21:48.487120"
+    },
+    {
+      "id": 955,
+      "job_id": 50266,
+      "question_key": "comfortable_working_6_days",
+      "question_text": "Are you comfortable working for 6 days?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-21T06:21:49.383653"
+    },
+    {
+      "id": 958,
+      "job_id": 49917,
       "question_key": "current_location",
       "question_text": "Current Location",
       "field_type": "contenteditable",
       "required": 0,
       "answer": "Indore",
-      "detected_at": "2026-10-11T18:49:14.097049"
+      "detected_at": "2026-10-21T06:23:48.636212"
     },
     {
-      "id": 911,
-      "job_id": 45349,
-      "question_key": "relocation_city_preference",
-      "question_text": "Which of these locations are you willing to relocate to?",
-      "field_type": "checkbox",
-      "required": 0,
-      "answer": "Noida",
-      "detected_at": "2026-10-11T18:53:58.731629"
-    },
-    {
-      "id": 912,
-      "job_id": 45960,
-      "question_key": "exp_reactdotjs",
-      "question_text": "How many years of experience do you have in React.Js Or Nodejs?",
+      "id": 959,
+      "job_id": 49958,
+      "question_key": "exp_apis",
+      "question_text": "How many years of experience do you have in APIs?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": null,
-      "detected_at": "2026-10-11T18:56:29.230155"
+      "detected_at": "2026-10-21T06:25:24.202956"
     },
     {
-      "id": 913,
-      "job_id": 45960,
-      "question_key": "exp_oauth",
-      "question_text": "How many years of experience do you have in OAuth?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "0.5",
-      "detected_at": "2026-10-11T18:55:16.200860"
-    },
-    {
-      "id": 914,
-      "job_id": 45960,
-      "question_key": "exp_webapplication",
-      "question_text": "How many years of experience do you have in webapplication?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "1.5",
-      "detected_at": "2026-10-11T18:55:50.439771"
-    },
-    {
-      "id": 916,
-      "job_id": 46111,
-      "question_key": "exp_predictive_modeling",
-      "question_text": "How many years of experience do you have in Predictive Modeling?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-11T18:58:10.832912"
-    },
-    {
-      "id": 918,
-      "job_id": 46173,
-      "question_key": "willing_to_relocate",
-      "question_text": "Are you willing to relocate?",
+      "id": 961,
+      "job_id": 50208,
+      "question_key": "willing_to_relocate_chennai",
+      "question_text": "Are you currently residing in Chennai or willing to relocate to Chennai?",
       "field_type": "radio",
       "required": 0,
       "answer": "Yes",
-      "detected_at": "2026-10-11T18:59:02.887981"
+      "detected_at": "2026-10-21T06:29:25.366759"
     },
     {
-      "id": 921,
-      "job_id": 48260,
-      "question_key": "skills_and_technologies_worked",
-      "question_text": "What skills and technologies have you worked with?",
+      "id": 962,
+      "job_id": 50557,
+      "question_key": "exp_lean_six_sigma",
+      "question_text": "How many years of experience do you have in Lean Six Sigma?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": null,
-      "detected_at": "2026-10-12T16:42:51.699471"
-    },
-    {
-      "id": 922,
-      "job_id": 46221,
-      "question_key": "exp_full_stack_development",
-      "question_text": "How many years of experience do you have in Full-Stack development?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-13T17:52:42.203862"
-    },
-    {
-      "id": 924,
-      "job_id": 46441,
-      "question_key": "willing_to_relocate_gurugram",
-      "question_text": "Are you currently residing in Gurugram or willing to relocate to Gurugram?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-13T17:55:05.650412"
-    },
-    {
-      "id": 925,
-      "job_id": 46689,
-      "question_key": "we_will_final_discussion_f2f_at_pune_baner_available",
-      "question_text": "We will have final discussion F2F at Pune(Baner) are you available ??",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-13T17:57:17.333112"
-    },
-    {
-      "id": 928,
-      "job_id": 46713,
-      "question_key": "python_experience",
-      "question_text": "Do you have hands-on experience building and deploying production-grade Python backend services/APIs? Share the number of experience on the same.",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-13T17:58:09.762227"
-    },
-    {
-      "id": 929,
-      "job_id": 47478,
-      "question_key": "exp_microservices",
-      "question_text": "How many years of experience do you have in Microservices & System Design?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-13T18:03:02.794579"
-    },
-    {
-      "id": 930,
-      "job_id": 47731,
-      "question_key": "comfortable_5_days_wfo_noida_location",
-      "question_text": "Are you comfortable for 5 Days WFO Noida location",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-13T18:04:29.036451"
+      "detected_at": "2026-10-21T06:33:24.817966"
     }
   ],
   "pagination": {
     "page": 3,
     "limit": 15,
-    "total_records": 60,
-    "total_pages": 4
+    "total_records": 38,
+    "total_pages": 3
   }
 }

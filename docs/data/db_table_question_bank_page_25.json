@@ -155,12 +155,51 @@
       "last_used_at": "2026-10-15T18:16:48.278078",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 15745,
+      "question_key": "comfortable_working_6_days",
+      "question_text": "Are you comfortable working for 6 days?",
+      "answer": "Yes",
+      "usage_count": 4,
+      "last_used": "2026-10-21T06:21:49.383653",
+      "field_type": "radio",
+      "created_at": "2026-10-21T06:19:06.490355",
+      "last_used_at": "2026-10-21T06:21:49.383653",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15750,
+      "question_key": "exp_apis",
+      "question_text": "How many years of experience do you have in APIs?",
+      "answer": "1.5",
+      "usage_count": 2,
+      "last_used": "2026-10-21T06:25:24.202956",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-21T06:24:44.034670",
+      "last_used_at": "2026-10-21T06:25:24.202956",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15753,
+      "question_key": "exp_lean_six_sigma",
+      "question_text": "How many years of experience do you have in Lean Six Sigma?",
+      "answer": "1.2",
+      "usage_count": 2,
+      "last_used": "2026-10-21T06:33:24.817966",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-21T06:33:05.536765",
+      "last_used_at": "2026-10-21T06:33:24.817966",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 25,
     "limit": 15,
-    "total_records": 371,
+    "total_records": 374,
     "total_pages": 25
   }
 }
