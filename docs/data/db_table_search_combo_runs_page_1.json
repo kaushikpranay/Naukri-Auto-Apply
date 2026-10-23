@@ -12,121 +12,121 @@
       "id": 1,
       "keyword": "GenAI Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-21T05:05:25.988140",
-      "jobs_found": 9,
-      "jobs_inserted": 2
+      "last_run_at": "2026-10-23T07:22:00.486086",
+      "jobs_found": 8,
+      "jobs_inserted": 0
     },
     {
       "id": 2,
       "keyword": "GenAI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-10-21T05:06:33.212223",
+      "last_run_at": "2026-10-23T07:23:03.267641",
       "jobs_found": 20,
-      "jobs_inserted": 13
+      "jobs_inserted": 4
     },
     {
       "id": 3,
       "keyword": "GenAI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-10-21T05:07:40.117707",
+      "last_run_at": "2026-10-23T07:24:05.836450",
       "jobs_found": 20,
-      "jobs_inserted": 11
+      "jobs_inserted": 2
     },
     {
       "id": 4,
       "keyword": "GenAI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-10-21T05:08:21.881290",
-      "jobs_found": 12,
-      "jobs_inserted": 4
+      "last_run_at": "2026-10-23T07:24:50.792393",
+      "jobs_found": 14,
+      "jobs_inserted": 2
     },
     {
       "id": 5,
       "keyword": "GenAI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-10-21T05:09:30.609592",
+      "last_run_at": "2026-10-23T07:25:54.077146",
       "jobs_found": 20,
-      "jobs_inserted": 13
+      "jobs_inserted": 2
     },
     {
       "id": 6,
       "keyword": "GenAI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-10-21T05:10:35.138401",
+      "last_run_at": "2026-10-23T07:26:54.359765",
       "jobs_found": 19,
-      "jobs_inserted": 5
+      "jobs_inserted": 4
     },
     {
       "id": 7,
       "keyword": "AI Engineer",
       "location": "Bangalore",
-      "last_run_at": "2026-10-21T05:33:05.103881",
+      "last_run_at": "2026-10-23T07:45:51.474363",
       "jobs_found": 20,
-      "jobs_inserted": 7
+      "jobs_inserted": 2
     },
     {
       "id": 8,
       "keyword": "AI Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-10-21T05:36:23.087558",
+      "last_run_at": "2026-10-23T07:49:15.060944",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 3
     },
     {
       "id": 9,
       "keyword": "AI Engineer",
       "location": "Gurgaon",
-      "last_run_at": "2026-10-21T05:30:53.755703",
+      "last_run_at": "2026-10-23T07:43:38.568774",
       "jobs_found": 20,
-      "jobs_inserted": 7
+      "jobs_inserted": 1
     },
     {
       "id": 10,
       "keyword": "AI Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-10-21T05:35:16.839767",
+      "last_run_at": "2026-10-23T07:48:07.043038",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 1
     },
     {
       "id": 11,
       "keyword": "AI Engineer",
       "location": "Indore",
-      "last_run_at": "2026-10-21T05:38:34.565531",
+      "last_run_at": "2026-10-23T07:51:31.788591",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 2
     },
     {
       "id": 12,
       "keyword": "AI Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-10-21T05:31:59.210269",
+      "last_run_at": "2026-10-23T07:44:45.497384",
       "jobs_found": 20,
-      "jobs_inserted": 2
+      "jobs_inserted": 0
     },
     {
       "id": 13,
       "keyword": "AI Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-10-21T05:37:29.362597",
+      "last_run_at": "2026-10-23T07:50:24.229489",
       "jobs_found": 20,
-      "jobs_inserted": 1
+      "jobs_inserted": 0
     },
     {
       "id": 14,
       "keyword": "AI Engineer",
       "location": "Noida",
-      "last_run_at": "2026-10-21T05:29:45.823618",
+      "last_run_at": "2026-10-23T07:42:31.518750",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 1
     },
     {
       "id": 15,
       "keyword": "AI Engineer",
       "location": "Pune",
-      "last_run_at": "2026-10-21T05:34:11.940144",
+      "last_run_at": "2026-10-23T07:46:58.580463",
       "jobs_found": 20,
-      "jobs_inserted": 4
+      "jobs_inserted": 2
     }
   ],
   "pagination": {

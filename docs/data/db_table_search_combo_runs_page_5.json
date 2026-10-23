@@ -12,39 +12,39 @@
       "id": 67,
       "keyword": "RAG Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-10-12T16:03:59.683174",
-      "jobs_found": 18,
-      "jobs_inserted": 1
+      "last_run_at": "2026-10-23T08:08:49.101496",
+      "jobs_found": 15,
+      "jobs_inserted": 0
     },
     {
       "id": 68,
       "keyword": "RAG Engineer",
       "location": "Noida",
-      "last_run_at": "2026-10-12T15:57:09.011430",
-      "jobs_found": 16,
-      "jobs_inserted": 2
+      "last_run_at": "2026-10-23T08:02:25.896523",
+      "jobs_found": 14,
+      "jobs_inserted": 1
     },
     {
       "id": 69,
       "keyword": "RAG Engineer",
       "location": "Pune",
-      "last_run_at": "2026-10-12T16:00:31.010691",
+      "last_run_at": "2026-10-23T08:05:40.537609",
       "jobs_found": 20,
-      "jobs_inserted": 5
+      "jobs_inserted": 4
     },
     {
       "id": 70,
       "keyword": "RAG Engineer",
       "location": "Remote",
-      "last_run_at": "2026-10-12T15:56:10.819334",
-      "jobs_found": 3,
-      "jobs_inserted": 1
+      "last_run_at": "2026-10-23T08:01:37.244122",
+      "jobs_found": 4,
+      "jobs_inserted": 0
     },
     {
       "id": 114,
       "keyword": "RAG Engineer",
       "location": "Kolkata",
-      "last_run_at": "2026-10-12T15:58:11.179458",
+      "last_run_at": "2026-10-23T08:03:25.180605",
       "jobs_found": 3,
       "jobs_inserted": 0
     },
@@ -52,80 +52,80 @@
       "id": 120,
       "keyword": "RAG Engineer",
       "location": "Indore",
-      "last_run_at": "2026-10-12T16:04:10.290354",
-      "jobs_found": 2,
+      "last_run_at": "2026-10-23T08:09:02.767315",
+      "jobs_found": 3,
       "jobs_inserted": 0
     },
     {
       "id": 137,
       "keyword": "Python Backend Engineer",
       "location": "Hyderabad",
-      "last_run_at": "2026-08-24T16:56:07.635710",
-      "jobs_found": 20,
-      "jobs_inserted": 3
+      "last_run_at": "2026-10-23T08:17:14.844847",
+      "jobs_found": 0,
+      "jobs_inserted": 0
     },
     {
       "id": 138,
       "keyword": "Python Backend Engineer",
       "location": "Chennai",
-      "last_run_at": "2026-08-24T16:57:15.285536",
-      "jobs_found": 20,
-      "jobs_inserted": 2
+      "last_run_at": "2026-10-23T08:17:15.014425",
+      "jobs_found": 0,
+      "jobs_inserted": 0
     },
     {
       "id": 139,
       "keyword": "Python Backend Engineer",
       "location": "Mumbai",
-      "last_run_at": "2026-08-24T16:58:22.151410",
-      "jobs_found": 20,
-      "jobs_inserted": 1
+      "last_run_at": "2026-10-23T08:17:15.251787",
+      "jobs_found": 0,
+      "jobs_inserted": 0
     },
     {
       "id": 140,
       "keyword": "Python Backend Engineer",
       "location": "Indore",
-      "last_run_at": "2026-08-24T16:59:30.883301",
-      "jobs_found": 20,
-      "jobs_inserted": 1
+      "last_run_at": "2026-10-23T08:17:15.498795",
+      "jobs_found": 0,
+      "jobs_inserted": 0
     },
     {
       "id": 141,
       "keyword": "FastAPI Developer",
       "location": "Remote",
-      "last_run_at": "2026-08-24T16:59:41.447964",
-      "jobs_found": 2,
+      "last_run_at": "2026-10-23T08:17:15.679462",
+      "jobs_found": 0,
       "jobs_inserted": 0
     },
     {
       "id": 142,
       "keyword": "FastAPI Developer",
       "location": "Noida",
-      "last_run_at": "2026-08-24T17:00:49.382168",
-      "jobs_found": 20,
-      "jobs_inserted": 3
+      "last_run_at": "2026-10-23T08:17:15.865778",
+      "jobs_found": 0,
+      "jobs_inserted": 0
     },
     {
       "id": 143,
       "keyword": "FastAPI Developer",
       "location": "Gurgaon",
-      "last_run_at": "2026-08-24T17:01:09.447523",
-      "jobs_found": 5,
+      "last_run_at": "2026-10-23T08:17:16.037273",
+      "jobs_found": 0,
       "jobs_inserted": 0
     },
     {
       "id": 144,
       "keyword": "FastAPI Developer",
       "location": "Kolkata",
-      "last_run_at": "2026-08-24T17:02:17.248104",
-      "jobs_found": 20,
+      "last_run_at": "2026-10-23T08:17:16.195367",
+      "jobs_found": 0,
       "jobs_inserted": 0
     },
     {
       "id": 145,
       "keyword": "FastAPI Developer",
       "location": "Bangalore",
-      "last_run_at": "2026-08-24T17:03:25.019648",
-      "jobs_found": 20,
+      "last_run_at": "2026-10-23T08:17:16.399359",
+      "jobs_found": 0,
       "jobs_inserted": 0
     }
   ],

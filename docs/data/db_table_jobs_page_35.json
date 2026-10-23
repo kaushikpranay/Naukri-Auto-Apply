@@ -223,13 +223,13 @@
       "job_description": "Notice Period: Immediate Joiner\n\nExperience: 4-8 years\n\nLocation: Gurgaon, 5 Days WFO\n\nProject: BlackRock\n\n\n\n\nIf you meet the criteria, send your application at umang.jugran@vlinkinfo.com\n\n\n\n\n\nDesign, build, and maintain infrastructure and tooling for the TVAS remediation pipeline\nDevelop AI-assisted workflows to triage, prioritize, and support remediation of vulnerability/assessment findings\nBuild and integrate automation pipelines connecting AI tooling with existing enterprise/security systems\nCollaborate with platform, security, and risk teams to translate remediation requirements into scalable technical workflows\nWrite clean, production-grade code in Java\nContribute to CI/CD, deployment, and monitoring of the remediation factory infrastructure\nTroubleshoot and optimize performance of AI infrastructure components at scale\n\nRequired Skills\n\nStrong hands-on experience in Java\nExperience building AI/ML infrastructure, tooling, or automation pipelines\nFamiliarity with workflow orchestration and pipeline design\nUnderstanding of software engineering best practices (testing, CI/CD, version control)\nAbility to work independently in a distributed/offshore delivery model\n\nGood to Have\n\nExperience with LLM/GenAI frameworks (LangChain, RAG pipelines, prompt engineering)\nExposure to vulnerability management, security tooling, or risk/compliance systems\nCloud platform experience (AWS/Azure/GCP)\nExperience working in BFSI or large enterprise environments",
       "job_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-vlink-gurugram-4-to-7-years-270726032283",
       "normalized_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-vlink-gurugram-4-to-7-years-270726032283",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-artificial-intelligence-engineer-vlink-gurugram-4-to-7-years-270726032283",
       "experience_required": "4-7 Yrs",
       "location": "Gurugram",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Gurgaon",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 35,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

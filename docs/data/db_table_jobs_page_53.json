@@ -247,13 +247,13 @@
       "job_description": "Moveworks AI Engineer Enterprise AI Automation\n\n\n\n\nExperience: 4+ years\n\nLocation: Chennai, India\n\nRole Type: Full-Time\n\n\n\n\nAbout the Role\n\nWe are looking for a hands-on Moveworks AI Engineer to build and deploy enterprise AI agents, plugins, workflows, and integrations. This is primarily a development-focused role (80%), with some platform administration, governance, and production support responsibilities (20%).\n\n\n\n\nKey Responsibilities\n\nDesign, build, test and deploy Moveworks Agent Studio plugins, workflows, agents, and conversational experiences.\nDevelop REST API integrations, including JSON, OAuth/authentication, webhooks, data mapping, and error handling.\nBuild enterprise automation across platforms such as ServiceNow, Workday, Nextthink, Jira, or Zendesk.\nDevelop automation for ITSM, HR self-service, endpoint support, knowledge discovery, and employee workflows.\nConfigure conversation flows, triggers, activities, decision logic, confirmations, and access-aware responses.\nTroubleshoot production issues involving APIs, integrations, workflows, access, and bot responses.\nWork with business and technical stakeholders to convert requirements into production-ready AI automations.\nSupport testing, UAT, releases, documentation, and continuous improvement.\n\n\n\nMust-Have Skills\n\nHands-on Moveworks Agent Studio experience with evidence of building plugins/workflows, not just platform administration.\nStrong REST API / JSON / OAuth / Webhooks integration experience.\nExperience with at least one enterprise workflow platform such as ServiceNow, Workday, Nextthink, Jira or Zendesk.\nScripting experience in Python, JavaScript, or PowerShell.\nExperience taking integrations/automations through development testing production.\nStrong troubleshooting, documentation, and stakeholder-management skills.\n\n\n\nGood to Have\n\nNexthink, Snowflake, or Power BI\nMicrosoft Teams/bot deployment\nMicrosoft Entra ID / SSO / RBAC\nLLM and RAG concepts\nMoveworks, ServiceNow, or Microsoft Copilot Studio certification\nExperience with enterprise AI assistants, chatbots, or automation platforms.",
       "job_url": "https://www.naukri.com/job-listings-moveworks-ai-engineer-avaso-technology-solutions-chennai-2-to-7-years-161026010477",
       "normalized_url": "https://www.naukri.com/job-listings-moveworks-ai-engineer-avaso-technology-solutions-chennai-2-to-7-years-161026010477",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/job-listings-moveworks-ai-engineer-avaso-technology-solutions-chennai-2-to-7-years-161026010477",
       "experience_required": "2-7 Yrs",
       "location": "Chennai",
       "posted_date": "4 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 53,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

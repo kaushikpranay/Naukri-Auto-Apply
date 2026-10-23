@@ -247,13 +247,13 @@
       "job_description": "Job Summary\n\nInfilect, a leader in visual-intelligence for worldwide retail, is looking for candidates with engineering and deep learning experience of at least 2 years in the industry.\n\nResponsibilities\nReading research papers and implementing state-of-the-art techniques\nRapidly extending publicly available code modules to work on custom problems\nSoftware development of machine learning back-end\nRapid experimentation, analysis, and deployment of machine/deep learning models\nTraining and testing deep learning models at scale\nWorking on cutting-edge technology in object detection, object tracking, OCR in natural scenes, image classification, video analysis, and many more exciting techniques that form the basis of AI (artificial intelligence).\nSkills Required\nHands-on experience in deep/machine learning for computer vision of 2+ years (extensive experience with OpenCV, PyTorch, TensorFlow)\nHands-on experience in Python with 2+ years of in-depth system-building experience\nSmart programmers with strong analytical skills\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-infilect-bengaluru-2-to-7-years-121026503965",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-infilect-bengaluru-2-to-7-years-121026503965",
-      "apply_url": "",
+      "apply_url": "https://infilect.keka.com/careers/jobdetails/144013",
       "experience_required": "2-7 Yrs",
       "location": "Bengaluru",
       "posted_date": "2 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Bangalore",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 38,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

@@ -23,16 +23,20 @@
     {
       "date": "2026-10-21",
       "count": 211
+    },
+    {
+      "date": "2026-10-23",
+      "count": 149
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 434
+      "count": 520
     },
     {
       "score_range": 10,
-      "count": 5
+      "count": 7
     },
     {
       "score_range": 20,
@@ -40,7 +44,7 @@
     },
     {
       "score_range": 30,
-      "count": 3
+      "count": 4
     },
     {
       "score_range": 40,
@@ -52,19 +56,19 @@
     },
     {
       "score_range": 60,
-      "count": 6
+      "count": 9
     },
     {
       "score_range": 70,
-      "count": 83
+      "count": 93
     },
     {
       "score_range": 80,
-      "count": 242
+      "count": 280
     },
     {
       "score_range": 90,
-      "count": 54
+      "count": 63
     }
   ],
   "ats_distribution": [
@@ -76,11 +80,11 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 86
+      "count": 102
     },
     {
       "status": "applied_successfully",
-      "count": 87
+      "count": 106
     },
     {
       "status": "easy_apply",
@@ -88,45 +92,41 @@
     },
     {
       "status": "evaluated",
-      "count": 511
+      "count": 601
     },
     {
       "status": "external_portal",
-      "count": 130
+      "count": 152
     },
     {
       "status": "failed",
-      "count": 18
+      "count": 21
     },
     {
       "status": "needs_human_review",
       "count": 2
     },
     {
-      "status": "pending",
-      "count": 1
-    },
-    {
-      "status": "waiting_for_user",
+      "status": "walk_in",
       "count": 1
     }
   ],
   "top_companies": [
     {
       "name": "Accenture",
-      "count": 50
-    },
-    {
-      "name": "Infosys",
-      "count": 32
+      "count": 55
     },
     {
       "name": "CMMI Level 5 IT Company - MNC",
-      "count": 24
+      "count": 37
+    },
+    {
+      "name": "Infosys",
+      "count": 36
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 22
+      "count": 24
     },
     {
       "name": "Epam Systems",
@@ -134,23 +134,23 @@
     },
     {
       "name": "PwC",
-      "count": 16
+      "count": 17
     },
     {
       "name": "Sparix Global",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Leading Client",
-      "count": 14
+      "count": 15
     },
     {
       "name": "Capgemini",
-      "count": 13
+      "count": 15
     },
     {
       "name": "Fractal Analytics",
-      "count": 12
+      "count": 13
     }
   ],
   "failure_reasons": [

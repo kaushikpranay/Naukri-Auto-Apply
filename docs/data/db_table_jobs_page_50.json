@@ -109,7 +109,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Pune",
@@ -181,7 +181,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Hyderabad",
@@ -247,13 +247,13 @@
       "job_description": "Position: AI Engineer\n\nLocations: Hyderabad, Pune, Greater Noida, Bangalore ( Not Remote Job )\n\nMode: Hybrid\n\n\n\n\n\nKey Skills Required:\n\nPython\nGenerative AI / Large Language Models (LLMs)\nRetrieval-Augmented Generation (RAG)\nLangChain\nLangGraph\nOpenAI / Azure OpenAI\nVector Databases (Pinecone, ChromaDB, FAISS, Weaviate, Milvus)\nAgentic AI / AI Agents\nPrompt Engineering\nFastAPI / REST APIs\nCloud Platforms (Azure, AWS, GCP)\n\nJob Responsibilities:\n\nDesign, develop, and deploy AI-powered applications using LLMs and Generative AI technologies.\nBuild scalable RAG pipelines leveraging vector databases and knowledge retrieval frameworks.\nDevelop multi-agent workflows using LangGraph and LangChain.\nIntegrate OpenAI/Azure OpenAI models into enterprise applications.\nOptimize prompts, model performance, and AI workflows for production environments.\nCollaborate with cross-functional teams to deliver AI-driven business solutions.\n\nPreferred Experience:\n\n3+ years of overall software development experience.\nHands-on experience in building and deploying GenAI/LLM applications.\nStrong coding expertise in Python and API development.\nExperience with cloud platforms and MLOps practices is preferred.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-coforge-hyderabad-pune-bengaluru-4-to-9-years-191026016079",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-coforge-hyderabad-pune-bengaluru-4-to-9-years-191026016079",
-      "apply_url": "",
+      "apply_url": "https://www.naukri.com/myapply/saveApply?strJobsarr=[191026016079]&applytype=single&resId=246739362&ApplyMode=1&id=250426945&src=h&logstr=----F-0-1--------F-0-1---&applySrc=----F-0-1---&multiApplyResp=%7B%22191026016079%22%3A200%7D&jobTitle=AI%20Engineer",
       "experience_required": "4-9 Yrs",
       "location": "Hybrid - Bengaluru, Pune, Hyderabad",
       "posted_date": "1 day ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "applied_successfully",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Hyderabad",
@@ -349,7 +349,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Mumbai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 50,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

@@ -89,12 +89,82 @@
       "required": 0,
       "answer": null,
       "detected_at": "2026-10-21T06:33:24.817966"
+    },
+    {
+      "id": 964,
+      "job_id": 49724,
+      "question_key": "relocation_city_preference",
+      "question_text": "Please select the city you are currently residing or willing to relocate to",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": "Noida",
+      "detected_at": "2026-10-22T18:24:27.502667"
+    },
+    {
+      "id": 965,
+      "job_id": 50073,
+      "question_key": "exp_chatbot",
+      "question_text": "How many years of experience do you have in Chatbot?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-22T18:27:37.268151"
+    },
+    {
+      "id": 967,
+      "job_id": 50077,
+      "question_key": "cloud_experience",
+      "question_text": "How many years of experience do you have in Microsoft Azure?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-22T18:28:21.222414"
+    },
+    {
+      "id": 968,
+      "job_id": 50105,
+      "question_key": "relocation_city_preference",
+      "question_text": "Which of these locations are you willing to relocate to?",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": "Noida",
+      "detected_at": "2026-10-22T18:34:55.954844"
+    },
+    {
+      "id": 969,
+      "job_id": 49449,
+      "question_key": "willing_to_relocate_gurugram",
+      "question_text": "Are you currently residing in Gurugram, Haryana or willing to relocate to Gurugram, Haryana?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-22T18:39:28.295810"
+    },
+    {
+      "id": 970,
+      "job_id": 50393,
+      "question_key": "exp_movework",
+      "question_text": "How many years of experience do you have in Movework?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-22T18:41:07.726345"
+    },
+    {
+      "id": 972,
+      "job_id": 50566,
+      "question_key": "exp_ai",
+      "question_text": "Do you have working experience in AI, LLMs, and Generative AI?",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-22T18:44:26.544046"
     }
   ],
   "pagination": {
     "page": 3,
     "limit": 15,
-    "total_records": 38,
-    "total_pages": 3
+    "total_records": 46,
+    "total_pages": 4
   }
 }

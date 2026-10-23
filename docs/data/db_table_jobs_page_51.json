@@ -55,13 +55,13 @@
       "job_description": "JOB DESCRIPTION: Job Description\n\nFor years, Abbott s medical device businesses have offered technologies that are faster, more effective, and less invasive. Whether it s glucose monitoring systems, innovative therapies for treating heart disease, or products that help people with chronic pain or movement disorders, our medical device technologies are designed to help people live their lives better and healthier. Every day, our technologies help more than 10,000 people have healthier hearts, improve quality of life for thousands of people living with chronic pain and movement disorders, and liberate more than 500,000 people with diabetes.\n\nAbbott currently has an opportunity for AI Engineer. The AI Engineer will be responsible for working on complex problems in the field of life-saving implantable medical devices. He or she will use machine learning, artificial intelligence, statistical modeling, data mining, and visualization techniques to provide analytics solutions to a wide range of challenging projects. As a key leader on the team, the candidate will develop solutions to curate and analyze large quantities of medical data. The candidate will work on projects that provide solutions to internal and external stakeholders. The candidate will collaborate effectively with internal stakeholders and cross-functional teams in India and the US. He or she will present solutions and insights in a concise and effective manner to technical and non-technical audiences.\n\nResponsibilities\nundefined\nStandardize, curate, and extract deep insights from complex clinical datasets\nDesign, develop, and deploy scalable AI, ML, and GenAI applications on the Databricks platform.\nAutomate repetitive business processes, analytics workflows, reporting, and operational tasks using notebooks, workflows, jobs, and AI agents.\nBuild and operationalize machine learning and Generative AI solutions using MLflow, Model Serving, Mosaic AI, and MLOps best practices.\nDesign scalable and maintainable solution architectures integrating Databricks with enterprise data sources and business applications.\nDevelop reusable APIs, libraries, notebooks, and frameworks to accelerate AI solution development.\nOptimize AI applications for performance, scalability, reliability, and infrastructure cost.\nBuild and maintain robust data pipelines, orchestration workflows, and deployment pipelines within the Databricks ecosystem.\nMonitor production of AI applications, models, and workflows to ensure reliability, governance, security, and compliance.\nEvaluate and adopt emerging AI capabilities within the Databricks ecosystem to improve productivity and business value.\nCollaborate with Data Scientists, Data Engineers, Product Owners, and business stakeholders to deliver end-to-end AI products.\nDrive AI engineering with best practices, code quality, testing, documentation, and reusable solution patterns.\n\nMinimum Experience/Training\nundefined\nMinimum 4 years of work experience required, preferably working on GenAI focused projects\nBachelor s degree in engineering or science field (example: biomedical engineering, biotechnology, bioinformatics, biostatistics or similar) with a demonstrable focus on programming and data analysis\nFamiliarity with at least one programming language (Python, PySpark, SQL, R)\nKnowledge of at least one database software preferable but not required (Databricks/SQL)\nFamiliarity with AI tools\n\n\n\nWHAT WE OFFER\n\nAt Abbott, you can have a good job that can grow into a great career. We offer:\n\nTraining and career development, with onboarding programs for new employees and tuition assistance\nFinancial security through competitive compensation, incentives and retirement plans\nHealth care and well-being programs including medical, dental, vision, wellness and occupational health programs\nPaid time off\n401(k) retirement savings with a generous company match\nThe stability of a company with a record of strong financial performance and history of being actively involved in local communities\n\nThe base pay for this position is\n\nN/A\n\nIn specific locations, the pay range may vary from the range posted.\n\nJOB FAMILY: IT Business Relationship Management\n\nDIVISION: MD Medical Devices\n\nLOCATION: India > Mumbai : BKC Building\n\nADDITIONAL LOCATIONS:\n\nWORK SHIFT: Standard\n\nTRAVEL: Not specified\n\nMEDICAL SURVEILLANCE: Not Applicable\n\nSIGNIFICANT WORK ACTIVITIES: Continuous sitting for prolonged periods (more than 2 consecutive hours in an 8 hour day)\n\n\n\nDisclaimer: This job posting has been aggregated from external source. Role details, content, and availability are subject to change. Applicants are advised to confirm the latest information directly on the company website before applying.",
       "job_url": "https://www.naukri.com/job-listings-ai-engineer-abbott-healthcare-mumbai-4-to-9-years-161026503271",
       "normalized_url": "https://www.naukri.com/job-listings-ai-engineer-abbott-healthcare-mumbai-4-to-9-years-161026503271",
-      "apply_url": "",
+      "apply_url": "https://abbott.wd5.myworkdayjobs.com/en-US/abbottcareers/job/India--Mumbai--BKC-Building/AI-Engineer_31164947?q=India",
       "experience_required": "4-9 Yrs",
       "location": "Mumbai",
       "posted_date": "4 days ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "external_portal",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Mumbai",
@@ -181,7 +181,7 @@
       "posted_date": "3+ weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "AI Engineer",
       "search_location": "Remote",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 51,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

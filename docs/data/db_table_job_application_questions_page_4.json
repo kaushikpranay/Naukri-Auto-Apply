@@ -11,160 +11,20 @@
   ],
   "rows": [
     {
-      "id": 932,
-      "job_id": 47731,
-      "question_key": "current_location",
-      "question_text": "Mention your current location?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Indore",
-      "detected_at": "2026-10-13T18:05:09.150062"
-    },
-    {
-      "id": 933,
-      "job_id": 47766,
-      "question_key": "relocation_city_preference",
-      "question_text": "Please select the city you are currently residing or willing to relocate to",
-      "field_type": "checkbox",
-      "required": 0,
-      "answer": "Noida",
-      "detected_at": "2026-10-13T18:07:43.997340"
-    },
-    {
-      "id": 934,
-      "job_id": 48494,
-      "question_key": "exp_hcls",
-      "question_text": "How many years of experience do you have in HCLS?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-13T18:10:18.048392"
-    },
-    {
-      "id": 936,
-      "job_id": 48646,
-      "question_key": "interested_working_infosys",
-      "question_text": "Are you interested working with infosys",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-13T18:10:50.467312"
-    },
-    {
-      "id": 937,
-      "job_id": 45842,
-      "question_key": "willing_to_relocate_mumbai",
-      "question_text": "Are you currently residing in Mumbai or willing to relocate to Mumbai?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-14T15:34:57.055642"
-    },
-    {
-      "id": 938,
-      "job_id": 46785,
-      "question_key": "available_schedule_drive_10_oct_2026_face_face_interview",
-      "question_text": "Are you available for schedule drive on 10 Oct 2026 for face to face interview?",
-      "field_type": "checkbox",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-14T15:38:39.017708"
-    },
-    {
-      "id": 941,
-      "job_id": 46874,
-      "question_key": "worked_upon_llm_fine_tuning_model_benchmarking_nvidia",
-      "question_text": "Have you worked upon LLM Fine tuning , model benchmarking & NVIDIA?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-14T15:39:49.355381"
-    },
-    {
-      "id": 944,
-      "job_id": 48606,
-      "question_key": "exp_palantir",
-      "question_text": "How many years of experience do you have in Palantir?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-14T15:43:45.013417"
-    },
-    {
-      "id": 946,
-      "job_id": 46442,
+      "id": 974,
+      "job_id": 50096,
       "question_key": "notice_period",
       "question_text": "Are you currently serving Notice Period? If yes, when is your LWD?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": "45 days",
-      "detected_at": "2026-10-14T15:45:56.293592"
-    },
-    {
-      "id": 947,
-      "job_id": 46570,
-      "question_key": "exp_subject_matter_expertise",
-      "question_text": "How many years of experience do you have in Subject Matter Expertise?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-14T15:46:50.501307"
-    },
-    {
-      "id": 949,
-      "job_id": 49675,
-      "question_key": "willing_to_relocate_bengaluru",
-      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-15T18:13:17.778746"
-    },
-    {
-      "id": 950,
-      "job_id": 49343,
-      "question_key": "exp_gen_ai",
-      "question_text": "How many years of experience do you have in Gen ai with Data Engineering?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-15T18:15:15.346287"
-    },
-    {
-      "id": 951,
-      "job_id": 49547,
-      "question_key": "willing_to_relocate_chennai_or_coimbatore",
-      "question_text": "Are you willing to relocate to Chennai or Coimbatore?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-15T18:16:48.278078"
-    },
-    {
-      "id": 952,
-      "job_id": 49635,
-      "question_key": "willing_to_relocate_gurugram",
-      "question_text": "Are you currently living in or ready to relocate to Gurugram ?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-15T18:20:18.855067"
-    },
-    {
-      "id": 953,
-      "job_id": 49834,
-      "question_key": "current_location",
-      "question_text": "What is your Current Location?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Indore",
-      "detected_at": "2026-10-15T18:21:48.487120"
+      "detected_at": "2026-10-22T18:46:58.835829"
     }
   ],
   "pagination": {
     "page": 4,
     "limit": 15,
-    "total_records": 60,
+    "total_records": 46,
     "total_pages": 4
   }
 }

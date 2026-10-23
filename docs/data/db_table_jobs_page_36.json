@@ -301,16 +301,16 @@
       "posted_date": "3 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "waiting_for_user",
-      "retry_count": 1,
+      "status": "failed",
+      "retry_count": 3,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Chennai",
       "created_at": "2026-10-15T17:36:18.678248",
       "failure_type": null,
       "failure_category": null,
-      "failure_reason": null,
-      "last_fill_error": null,
-      "failed_at": null
+      "failure_reason": "max_retry_count exceeded",
+      "last_fill_error": "max_retry_count exceeded",
+      "failed_at": "2026-10-22T18:26:05.624069"
     },
     {
       "id": 49547,
@@ -349,7 +349,7 @@
       "posted_date": "Just now",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "walk_in",
       "retry_count": 0,
       "search_keyword": "Generative AI Engineer",
       "search_location": "Chennai",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 36,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

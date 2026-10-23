@@ -198,13 +198,13 @@
     {
       "id": 11503,
       "question_key": "willing_to_relocate_gurugram",
-      "question_text": "Are you currently living in or ready to relocate to Gurugram ?",
+      "question_text": "Are you currently residing in Gurugram, Haryana or willing to relocate to Gurugram, Haryana?",
       "answer": "Yes",
-      "usage_count": 6,
-      "last_used": "2026-10-21T05:16:27.840772",
+      "usage_count": 7,
+      "last_used": "2026-10-23T07:21:31.824197",
       "field_type": "radio",
       "created_at": "2026-08-09T19:28:09.070236",
-      "last_used_at": "2026-10-15T18:20:18.855067",
+      "last_used_at": "2026-10-22T18:39:28.295810",
       "confidence_score": 1.0,
       "updated_at": null
     }
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 15,
     "limit": 15,
-    "total_records": 374,
-    "total_pages": 25
+    "total_records": 377,
+    "total_pages": 26
   }
 }

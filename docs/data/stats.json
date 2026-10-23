@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 839,
-    "naukri_jobs": 839,
+    "total_jobs": 988,
+    "naukri_jobs": 988,
     "external_jobs": 953,
-    "pending_review": 97,
+    "pending_review": 111,
     "queued": 60,
     "applying": 0,
-    "applied": 173,
-    "failed": 20,
+    "applied": 208,
+    "failed": 23,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 865.0,
-    "avg_ai_score": 38.4,
-    "today_jobs": 211,
-    "today_applications": 74
+    "success_rate": 904.3,
+    "avg_ai_score": 37.7,
+    "today_jobs": 149,
+    "today_applications": 0
   },
   "recent_activity": [
     {
-      "type": "applied",
-      "company_name": "Iflowtech Solutions",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-21T06:34:44.854682",
-      "details": "Type: external_portal, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Huron",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-21T06:34:29.923109",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Prescient Healthcare Group",
-      "job_title": "AI Engineer",
-      "timestamp": "2026-10-21T06:34:02.141890",
-      "details": "Type: already_applied, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "Leading Client",
-      "job_title": "Generative AI Engineer",
-      "timestamp": "2026-10-21T06:33:57.238179",
-      "details": "Type: applied_successfully, Status: discovered"
-    },
-    {
-      "type": "applied",
-      "company_name": "VVT Solutions",
-      "job_title": "GenAI Developer",
-      "timestamp": "2026-10-21T06:33:37.646630",
-      "details": "Type: already_applied, Status: discovered"
+      "type": "ai_evaluated",
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-10-23T08:32:42.919982",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-21T06:15:25.584156",
-      "details": "Score: 80.0%, Action: apply"
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-10-23T08:32:42.905818",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Operations Engineer",
-      "timestamp": "2026-10-21T06:15:12.998769",
-      "details": "Score: 85.0%, Action: apply"
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Agentic AI Engineer / Architect (LLM, RAG & Multi-Agent Systems)",
+      "timestamp": "2026-10-23T08:32:42.889725",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-21T06:14:53.123274",
-      "details": "Score: 80.0%, Action: apply"
+      "company_name": "CMMI Level 5 IT Company - MNC",
+      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
+      "timestamp": "2026-10-23T08:32:42.885065",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Operations Engineer",
-      "timestamp": "2026-10-21T06:14:40.926233",
-      "details": "Score: 80.0%, Action: apply"
+      "company_name": "Tata Consultancy Services",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-10-23T08:32:42.868838",
+      "details": "Score: 0.0%, Action: skip"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Accenture",
-      "job_title": "LLM Model Developer",
-      "timestamp": "2026-10-21T06:14:24.281168",
-      "details": "Score: 70.0%, Action: apply"
+      "type": "job_discovered",
+      "company_name": "Alation",
+      "job_title": "DCX Agentic AI Engineer",
+      "timestamp": "2026-10-23T08:17:11.962085",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Hiringeye Solutions",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-10-23T08:17:11.962085",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Caratlane",
+      "job_title": "Lead AI Engineer",
+      "timestamp": "2026-10-23T08:17:11.962085",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Tata Consultancy Services",
+      "job_title": "Artificial Intelligence Engineer",
+      "timestamp": "2026-10-23T08:17:11.962085",
+      "details": null
+    },
+    {
+      "type": "job_discovered",
+      "company_name": "Sage IT",
+      "job_title": "Agentic AI Engineer",
+      "timestamp": "2026-10-23T08:16:44.399528",
+      "details": null
     }
   ]
 }

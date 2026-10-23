@@ -205,7 +205,7 @@
       "posted_date": "2 weeks ago",
       "recruiter_name": "",
       "recruiter_email": "",
-      "status": "evaluated",
+      "status": "already_applied",
       "retry_count": 0,
       "search_keyword": "GenAI Engineer",
       "search_location": "Noida",
@@ -388,7 +388,7 @@
   "pagination": {
     "page": 43,
     "limit": 15,
-    "total_records": 839,
-    "total_pages": 56
+    "total_records": 988,
+    "total_pages": 66
   }
 }

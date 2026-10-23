@@ -194,12 +194,25 @@
       "last_used_at": "2026-10-21T06:33:24.817966",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 15823,
+      "question_key": "exp_chatbot",
+      "question_text": "How many years of experience do you have in Chatbot?",
+      "answer": "1.7",
+      "usage_count": 2,
+      "last_used": "2026-10-22T18:27:37.268151",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-22T18:26:48.563922",
+      "last_used_at": "2026-10-22T18:27:37.268151",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 25,
     "limit": 15,
-    "total_records": 374,
-    "total_pages": 25
+    "total_records": 377,
+    "total_pages": 26
   }
 }
