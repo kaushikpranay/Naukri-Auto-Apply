@@ -11,160 +11,140 @@
   ],
   "rows": [
     {
-      "id": 951,
-      "job_id": 49547,
-      "question_key": "willing_to_relocate_chennai_or_coimbatore",
-      "question_text": "Are you willing to relocate to Chennai or Coimbatore?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-15T18:16:48.278078"
-    },
-    {
-      "id": 952,
-      "job_id": 49635,
-      "question_key": "willing_to_relocate_gurugram",
-      "question_text": "Are you currently living in or ready to relocate to Gurugram ?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-15T18:20:18.855067"
-    },
-    {
-      "id": 953,
-      "job_id": 49834,
-      "question_key": "current_location",
-      "question_text": "What is your Current Location?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Indore",
-      "detected_at": "2026-10-15T18:21:48.487120"
-    },
-    {
-      "id": 955,
-      "job_id": 50266,
-      "question_key": "comfortable_working_6_days",
-      "question_text": "Are you comfortable working for 6 days?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-21T06:21:49.383653"
-    },
-    {
-      "id": 958,
-      "job_id": 49917,
-      "question_key": "current_location",
-      "question_text": "Current Location",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "Indore",
-      "detected_at": "2026-10-21T06:23:48.636212"
-    },
-    {
-      "id": 959,
-      "job_id": 49958,
-      "question_key": "exp_apis",
-      "question_text": "How many years of experience do you have in APIs?",
+      "id": 975,
+      "job_id": 50872,
+      "question_key": "exp_git",
+      "question_text": "How many years of experience do you have in GIT?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": null,
-      "detected_at": "2026-10-21T06:25:24.202956"
+      "detected_at": "2026-10-24T08:27:46.497519"
     },
     {
-      "id": 961,
-      "job_id": 50208,
-      "question_key": "willing_to_relocate_chennai",
-      "question_text": "Are you currently residing in Chennai or willing to relocate to Chennai?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-21T06:29:25.366759"
-    },
-    {
-      "id": 962,
-      "job_id": 50557,
-      "question_key": "exp_lean_six_sigma",
-      "question_text": "How many years of experience do you have in Lean Six Sigma?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-21T06:33:24.817966"
-    },
-    {
-      "id": 964,
-      "job_id": 49724,
-      "question_key": "relocation_city_preference",
-      "question_text": "Please select the city you are currently residing or willing to relocate to",
-      "field_type": "checkbox",
-      "required": 0,
-      "answer": "Noida",
-      "detected_at": "2026-10-22T18:24:27.502667"
-    },
-    {
-      "id": 965,
-      "job_id": 50073,
-      "question_key": "exp_chatbot",
-      "question_text": "How many years of experience do you have in Chatbot?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-22T18:27:37.268151"
-    },
-    {
-      "id": 967,
-      "job_id": 50077,
-      "question_key": "cloud_experience",
-      "question_text": "How many years of experience do you have in Microsoft Azure?",
+      "id": 977,
+      "job_id": 52261,
+      "question_key": "sql_experience",
+      "question_text": "How many years of experience do you have in SQL Database?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": "2",
-      "detected_at": "2026-10-22T18:28:21.222414"
+      "detected_at": "2026-10-24T08:31:11.800859"
     },
     {
-      "id": 968,
-      "job_id": 50105,
-      "question_key": "relocation_city_preference",
-      "question_text": "Which of these locations are you willing to relocate to?",
-      "field_type": "checkbox",
+      "id": 978,
+      "job_id": 52275,
+      "question_key": "exp_artificial_intelligence",
+      "question_text": "How many years of experience do you have in Artificial Intelligence?",
+      "field_type": "contenteditable",
       "required": 0,
-      "answer": "Noida",
-      "detected_at": "2026-10-22T18:34:55.954844"
+      "answer": "2",
+      "detected_at": "2026-10-24T08:31:44.129414"
     },
     {
-      "id": 969,
-      "job_id": 49449,
-      "question_key": "willing_to_relocate_gurugram",
-      "question_text": "Are you currently residing in Gurugram, Haryana or willing to relocate to Gurugram, Haryana?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-22T18:39:28.295810"
-    },
-    {
-      "id": 970,
-      "job_id": 50393,
-      "question_key": "exp_movework",
-      "question_text": "How many years of experience do you have in Movework?",
+      "id": 979,
+      "job_id": 50799,
+      "question_key": "exp_agentic_workflows",
+      "question_text": "How many years of experience do you have in Agentic Workflows?",
       "field_type": "contenteditable",
       "required": 0,
       "answer": null,
-      "detected_at": "2026-10-22T18:41:07.726345"
+      "detected_at": "2026-10-24T08:36:28.612727"
     },
     {
-      "id": 972,
-      "job_id": 50566,
-      "question_key": "exp_ai",
-      "question_text": "Do you have working experience in AI, LLMs, and Generative AI?",
-      "field_type": "checkbox",
+      "id": 981,
+      "job_id": 50821,
+      "question_key": "exp_gen_ai_engineer",
+      "question_text": "How many years of experience do you have in Gen ai engineer?",
+      "field_type": "contenteditable",
       "required": 0,
       "answer": null,
-      "detected_at": "2026-10-22T18:44:26.544046"
+      "detected_at": "2026-10-24T08:37:23.714379"
+    },
+    {
+      "id": 983,
+      "job_id": 50914,
+      "question_key": "exp_python_development",
+      "question_text": "Experience with Python development?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-24T08:38:01.311536"
+    },
+    {
+      "id": 985,
+      "job_id": 51253,
+      "question_key": "willing_work_from_office_mode",
+      "question_text": "Are you willing to work from office mode?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-24T08:41:22.971056"
+    },
+    {
+      "id": 987,
+      "job_id": 51253,
+      "question_key": "willing_to_relocate_hyderabad",
+      "question_text": "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-24T08:42:01.427007"
+    },
+    {
+      "id": 988,
+      "job_id": 51279,
+      "question_key": "ml_experience",
+      "question_text": "How many years of experience do you have in AI/ML Engineer?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-24T08:43:11.424533"
+    },
+    {
+      "id": 989,
+      "job_id": 51762,
+      "question_key": "relocation_city_preference",
+      "question_text": "Which of these locations are you willing to relocate to?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Noida",
+      "detected_at": "2026-10-24T08:44:59.400299"
+    },
+    {
+      "id": 990,
+      "job_id": 52144,
+      "question_key": "python_experience",
+      "question_text": "How many years of experience do you have in Python & AI Model Development?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-24T08:47:53.650334"
+    },
+    {
+      "id": 991,
+      "job_id": 52581,
+      "question_key": "total_years_experience",
+      "question_text": "What is your Total experience?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-24T08:48:32.926105"
+    },
+    {
+      "id": 992,
+      "job_id": 52693,
+      "question_key": "exp_react",
+      "question_text": "How many years of experience do you have in React?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-24T08:53:38.783386"
     }
   ],
   "pagination": {
     "page": 3,
     "limit": 15,
-    "total_records": 46,
-    "total_pages": 4
+    "total_records": 43,
+    "total_pages": 3
   }
 }

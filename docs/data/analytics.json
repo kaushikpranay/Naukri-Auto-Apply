@@ -1,10 +1,6 @@
 {
   "applications_per_day": [
     {
-      "date": "2026-10-08",
-      "count": 152
-    },
-    {
       "date": "2026-10-11",
       "count": 151
     },
@@ -27,28 +23,32 @@
     {
       "date": "2026-10-23",
       "count": 149
+    },
+    {
+      "date": "2026-10-24",
+      "count": 150
     }
   ],
   "ai_score_distribution": [
     {
       "score_range": 0,
-      "count": 520
+      "count": 514
     },
     {
       "score_range": 10,
-      "count": 7
+      "count": 12
     },
     {
       "score_range": 20,
-      "count": 5
+      "count": 6
     },
     {
       "score_range": 30,
-      "count": 4
+      "count": 5
     },
     {
       "score_range": 40,
-      "count": 3
+      "count": 5
     },
     {
       "score_range": 50,
@@ -56,19 +56,19 @@
     },
     {
       "score_range": 60,
-      "count": 9
+      "count": 8
     },
     {
       "score_range": 70,
-      "count": 93
+      "count": 83
     },
     {
       "score_range": 80,
-      "count": 280
+      "count": 281
     },
     {
       "score_range": 90,
-      "count": 63
+      "count": 68
     }
   ],
   "ats_distribution": [
@@ -80,31 +80,39 @@
   "success_rates": [
     {
       "status": "already_applied",
-      "count": 102
+      "count": 116
     },
     {
       "status": "applied_successfully",
-      "count": 106
+      "count": 104
     },
     {
       "status": "easy_apply",
-      "count": 3
+      "count": 1
     },
     {
       "status": "evaluated",
-      "count": 601
+      "count": 585
     },
     {
       "status": "external_portal",
-      "count": 152
+      "count": 158
     },
     {
       "status": "failed",
-      "count": 21
+      "count": 17
     },
     {
       "status": "needs_human_review",
       "count": 2
+    },
+    {
+      "status": "pending",
+      "count": 1
+    },
+    {
+      "status": "unknown",
+      "count": 1
     },
     {
       "status": "walk_in",
@@ -114,7 +122,7 @@
   "top_companies": [
     {
       "name": "Accenture",
-      "count": 55
+      "count": 53
     },
     {
       "name": "CMMI Level 5 IT Company - MNC",
@@ -122,35 +130,35 @@
     },
     {
       "name": "Infosys",
-      "count": 36
+      "count": 32
     },
     {
       "name": "Tata Consultancy Services",
-      "count": 24
+      "count": 22
     },
     {
-      "name": "Epam Systems",
+      "name": "Leading Client",
       "count": 20
     },
     {
-      "name": "PwC",
-      "count": 17
+      "name": "Epam Systems",
+      "count": 19
     },
     {
       "name": "Sparix Global",
       "count": 16
     },
     {
-      "name": "Leading Client",
-      "count": 15
-    },
-    {
-      "name": "Capgemini",
-      "count": 15
+      "name": "PwC",
+      "count": 16
     },
     {
       "name": "Fractal Analytics",
       "count": 13
+    },
+    {
+      "name": "Capgemini",
+      "count": 12
     }
   ],
   "failure_reasons": [

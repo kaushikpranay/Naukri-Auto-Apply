@@ -1,90 +1,90 @@
 {
   "summary": {
-    "total_jobs": 988,
-    "naukri_jobs": 988,
+    "total_jobs": 986,
+    "naukri_jobs": 986,
     "external_jobs": 953,
-    "pending_review": 111,
-    "queued": 60,
+    "pending_review": 102,
+    "queued": 42,
     "applying": 0,
-    "applied": 208,
-    "failed": 23,
+    "applied": 220,
+    "failed": 19,
     "automation_applied": 0,
     "human_applied": 0,
-    "success_rate": 904.3,
+    "success_rate": 1157.9,
     "avg_ai_score": 37.7,
-    "today_jobs": 149,
-    "today_applications": 0
+    "today_jobs": 150,
+    "today_applications": 93
   },
   "recent_activity": [
     {
-      "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-10-23T08:32:42.919982",
-      "details": "Score: 0.0%, Action: skip"
+      "type": "applied",
+      "company_name": "Parkar Global Technologies",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-24T08:56:04.975486",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Unico Connect",
+      "job_title": "MLOps Engineer",
+      "timestamp": "2026-10-24T08:55:51.965002",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Ybrantworks",
+      "job_title": "NLP and LLM Engineer",
+      "timestamp": "2026-10-24T08:55:38.685958",
+      "details": "Type: already_applied, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Techcarrot Fz-llc",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-24T08:55:33.979504",
+      "details": "Type: external_portal, Status: discovered"
+    },
+    {
+      "type": "applied",
+      "company_name": "Incubit Global Business Services",
+      "job_title": "AI Engineer",
+      "timestamp": "2026-10-24T08:55:20.794030",
+      "details": "Type: external_portal, Status: discovered"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-10-23T08:32:42.905818",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Rarr Technologies",
+      "job_title": "Django Backend Developer",
+      "timestamp": "2026-10-24T08:25:15.493850",
+      "details": "Score: 70.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Agentic AI Engineer / Architect (LLM, RAG & Multi-Agent Systems)",
-      "timestamp": "2026-10-23T08:32:42.889725",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Pace Stock Broking Services",
+      "job_title": "Backend Developer",
+      "timestamp": "2026-10-24T08:25:01.693081",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "CMMI Level 5 IT Company - MNC",
-      "job_title": "Azure AI/ML Engineer : LLM & RAG Specialist",
-      "timestamp": "2026-10-23T08:32:42.885065",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "ZFW Hospitality",
+      "job_title": "Back End Developer",
+      "timestamp": "2026-10-24T08:24:52.406960",
+      "details": "Score: 85.0%, Action: apply"
     },
     {
       "type": "ai_evaluated",
-      "company_name": "Tata Consultancy Services",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-10-23T08:32:42.868838",
-      "details": "Score: 0.0%, Action: skip"
+      "company_name": "Leading Client",
+      "job_title": "Full Stack Developer | Leading IT Co.",
+      "timestamp": "2026-10-24T08:24:30.826675",
+      "details": "Score: 20.0%, Action: skip"
     },
     {
-      "type": "job_discovered",
-      "company_name": "Alation",
-      "job_title": "DCX Agentic AI Engineer",
-      "timestamp": "2026-10-23T08:17:11.962085",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Hiringeye Solutions",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-10-23T08:17:11.962085",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Caratlane",
-      "job_title": "Lead AI Engineer",
-      "timestamp": "2026-10-23T08:17:11.962085",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Tata Consultancy Services",
-      "job_title": "Artificial Intelligence Engineer",
-      "timestamp": "2026-10-23T08:17:11.962085",
-      "details": null
-    },
-    {
-      "type": "job_discovered",
-      "company_name": "Sage IT",
-      "job_title": "Agentic AI Engineer",
-      "timestamp": "2026-10-23T08:16:44.399528",
-      "details": null
+      "type": "ai_evaluated",
+      "company_name": "Thinkhub Technologies And Consulting",
+      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
+      "timestamp": "2026-10-24T08:24:18.977655",
+      "details": "Score: 75.0%, Action: apply"
     }
   ]
 }

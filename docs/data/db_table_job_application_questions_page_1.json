@@ -11,126 +11,6 @@
   ],
   "rows": [
     {
-      "id": 885,
-      "job_id": 46653,
-      "question_key": "available_face_face_10_oct_2026_pune_or_gurgaon_location",
-      "question_text": "Are you available for Face to face on 10 Oct 2026 in Pune or Gurgaon Location",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-08T18:50:31.625065"
-    },
-    {
-      "id": 888,
-      "job_id": 46682,
-      "question_key": "willing_meet_leadership_hiring_team_friday_9th_oct_bangalore",
-      "question_text": "Are you willing to Meet the Leadership Hiring Team on Friday(9th Oct)- Bangalore- Manyata Tech Park",
-      "field_type": "radio",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-08T18:51:08.203462"
-    },
-    {
-      "id": 891,
-      "job_id": 46790,
-      "question_key": "relocation_city_preference",
-      "question_text": "Please select the city you are currently residing or willing to relocate to",
-      "field_type": "checkbox",
-      "required": 0,
-      "answer": "Noida",
-      "detected_at": "2026-10-08T18:52:10.481716"
-    },
-    {
-      "id": 892,
-      "job_id": 46799,
-      "question_key": "notice_period",
-      "question_text": "What is your notice period or LWD?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "45 days",
-      "detected_at": "2026-10-08T18:53:14.300902"
-    },
-    {
-      "id": 893,
-      "job_id": 46878,
-      "question_key": "notice_period",
-      "question_text": "If serving notice, what is your LAST WORKING DAY ?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "45 days",
-      "detected_at": "2026-10-08T18:55:58.664914"
-    },
-    {
-      "id": 894,
-      "job_id": 46889,
-      "question_key": "intrested_towards_night_shift",
-      "question_text": "Are you intrested towards Night Shift ?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "No",
-      "detected_at": "2026-10-08T18:56:32.474389"
-    },
-    {
-      "id": 896,
-      "job_id": 46889,
-      "question_key": "sql_experience",
-      "question_text": "How many years of experience do you have in SQL Scripting?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-08T18:57:10.050527"
-    },
-    {
-      "id": 897,
-      "job_id": 46911,
-      "question_key": "available_person_interview_at_office_location",
-      "question_text": "Are You Available to Attend the F2F Interview at Hexaware Office on 10th Oct 2026?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "Yes",
-      "detected_at": "2026-10-08T18:58:24.391140"
-    },
-    {
-      "id": 898,
-      "job_id": 46947,
-      "question_key": "exp_ai_agents",
-      "question_text": "How many years of experience do you have in AI Agents?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": null,
-      "detected_at": "2026-10-08T19:00:22.310415"
-    },
-    {
-      "id": 900,
-      "job_id": 47050,
-      "question_key": "exp_agentic_ai_engineer",
-      "question_text": "How many years of experience do you have in Agentic AI Engineer?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "1.5",
-      "detected_at": "2026-10-11T18:39:40.270039"
-    },
-    {
-      "id": 901,
-      "job_id": 47123,
-      "question_key": "total_years_experience",
-      "question_text": "Do you have at least 3 years of relevant experience?",
-      "field_type": "radio",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-11T18:41:11.687111"
-    },
-    {
-      "id": 902,
-      "job_id": 47151,
-      "question_key": "python_experience",
-      "question_text": "How many years of experience do you have in Python & AI Model Development?",
-      "field_type": "contenteditable",
-      "required": 0,
-      "answer": "2",
-      "detected_at": "2026-10-11T18:42:39.780253"
-    },
-    {
       "id": 903,
       "job_id": 47253,
       "question_key": "willing_freelancer_role",
@@ -159,12 +39,132 @@
       "required": 0,
       "answer": "N/A",
       "detected_at": "2026-10-11T18:48:35.286133"
+    },
+    {
+      "id": 910,
+      "job_id": 47521,
+      "question_key": "current_location",
+      "question_text": "Current Location",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Indore",
+      "detected_at": "2026-10-11T18:49:14.097049"
+    },
+    {
+      "id": 921,
+      "job_id": 48260,
+      "question_key": "skills_and_technologies_worked",
+      "question_text": "What skills and technologies have you worked with?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-12T16:42:51.699471"
+    },
+    {
+      "id": 929,
+      "job_id": 47478,
+      "question_key": "exp_microservices",
+      "question_text": "How many years of experience do you have in Microservices & System Design?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-13T18:03:02.794579"
+    },
+    {
+      "id": 930,
+      "job_id": 47731,
+      "question_key": "comfortable_5_days_wfo_noida_location",
+      "question_text": "Are you comfortable for 5 Days WFO Noida location",
+      "field_type": "radio",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-13T18:04:29.036451"
+    },
+    {
+      "id": 932,
+      "job_id": 47731,
+      "question_key": "current_location",
+      "question_text": "Mention your current location?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Indore",
+      "detected_at": "2026-10-13T18:05:09.150062"
+    },
+    {
+      "id": 933,
+      "job_id": 47766,
+      "question_key": "relocation_city_preference",
+      "question_text": "Please select the city you are currently residing or willing to relocate to",
+      "field_type": "checkbox",
+      "required": 0,
+      "answer": "Noida",
+      "detected_at": "2026-10-13T18:07:43.997340"
+    },
+    {
+      "id": 934,
+      "job_id": 48494,
+      "question_key": "exp_hcls",
+      "question_text": "How many years of experience do you have in HCLS?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-13T18:10:18.048392"
+    },
+    {
+      "id": 936,
+      "job_id": 48646,
+      "question_key": "interested_working_infosys",
+      "question_text": "Are you interested working with infosys",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "Yes",
+      "detected_at": "2026-10-13T18:10:50.467312"
+    },
+    {
+      "id": 944,
+      "job_id": 48606,
+      "question_key": "exp_palantir",
+      "question_text": "How many years of experience do you have in Palantir?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-14T15:43:45.013417"
+    },
+    {
+      "id": 949,
+      "job_id": 49675,
+      "question_key": "willing_to_relocate_bengaluru",
+      "question_text": "Are you currently living in or ready to relocate to Bengaluru ?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-15T18:13:17.778746"
+    },
+    {
+      "id": 950,
+      "job_id": 49343,
+      "question_key": "exp_gen_ai",
+      "question_text": "How many years of experience do you have in Gen ai with Data Engineering?",
+      "field_type": "contenteditable",
+      "required": 0,
+      "answer": "2",
+      "detected_at": "2026-10-15T18:15:15.346287"
+    },
+    {
+      "id": 951,
+      "job_id": 49547,
+      "question_key": "willing_to_relocate_chennai_or_coimbatore",
+      "question_text": "Are you willing to relocate to Chennai or Coimbatore?",
+      "field_type": "radio",
+      "required": 0,
+      "answer": null,
+      "detected_at": "2026-10-15T18:16:48.278078"
     }
   ],
   "pagination": {
     "page": 1,
     "limit": 15,
-    "total_records": 46,
-    "total_pages": 4
+    "total_records": 43,
+    "total_pages": 3
   }
 }

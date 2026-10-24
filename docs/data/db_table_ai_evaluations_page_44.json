@@ -16,38 +16,38 @@
   ],
   "rows": [
     {
-      "id": 8216,
-      "job_id": 49927,
+      "id": 8368,
+      "job_id": 50450,
       "run_id": "dff84ec9",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 80.0,
+      "interview_probability": 75.0,
       "recommended_resume": "GENAI",
       "priority": "high",
       "action": "apply",
       "confidence": 80.0,
-      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; transferable skills align with GenAI role.",
-      "missing_skills": "[\"TypeScript\", \"JavaScript\", \"Docker\", \"Kubernetes\", \"Weaviate\"]",
-      "created_at": "2026-10-21T05:47:10.182462"
+      "reason": "Strong production RAG and LangGraph experience with prompt engineering and LLMs, plus transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-21T06:08:48.403083"
     },
     {
-      "id": 8217,
-      "job_id": 49928,
+      "id": 8369,
+      "job_id": 50454,
       "run_id": "dff84ec9",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 80.0,
+      "interview_probability": 90.0,
       "recommended_resume": "GENAI",
       "priority": "high",
       "action": "apply",
-      "confidence": 80.0,
+      "confidence": 85.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-21T05:47:29.651991"
+      "created_at": "2026-10-21T06:09:08.223685"
     },
     {
-      "id": 8218,
-      "job_id": 49929,
+      "id": 8370,
+      "job_id": 50461,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -58,11 +58,11 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.655164"
+      "created_at": "2026-10-21T06:09:08.229205"
     },
     {
-      "id": 8219,
-      "job_id": 49933,
+      "id": 8371,
+      "job_id": 50477,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -73,11 +73,41 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.658710"
+      "created_at": "2026-10-21T06:09:08.233123"
     },
     {
-      "id": 8220,
-      "job_id": 49935,
+      "id": 8372,
+      "job_id": 50491,
+      "run_id": "dff84ec9",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 75.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG and FastAPI experience with transferable cloud skills.",
+      "missing_skills": "[\"React.js\", \"MongoDB\", \"Docker\", \"CI/CD\", \"Azure OpenAI\"]",
+      "created_at": "2026-10-21T06:09:26.874911"
+    },
+    {
+      "id": 8373,
+      "job_id": 50498,
+      "run_id": "dff84ec9",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 70.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG, LangGraph, FastAPI, AWS experience; missing Azure OpenAI.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-21T06:09:37.579850"
+    },
+    {
+      "id": 8374,
+      "job_id": 50356,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -88,11 +118,11 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.661974"
+      "created_at": "2026-10-21T06:09:37.600415"
     },
     {
-      "id": 8221,
-      "job_id": 49938,
+      "id": 8375,
+      "job_id": 50435,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -103,11 +133,11 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.671638"
+      "created_at": "2026-10-21T06:09:37.604256"
     },
     {
-      "id": 8222,
-      "job_id": 49939,
+      "id": 8376,
+      "job_id": 50499,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -118,11 +148,11 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.675596"
+      "created_at": "2026-10-21T06:09:37.608034"
     },
     {
-      "id": 8223,
-      "job_id": 49940,
+      "id": 8377,
+      "job_id": 50505,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -133,86 +163,11 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.679868"
+      "created_at": "2026-10-21T06:09:37.611528"
     },
     {
-      "id": 8224,
-      "job_id": 49944,
-      "run_id": "dff84ec9",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.726867"
-    },
-    {
-      "id": 8225,
-      "job_id": 49947,
-      "run_id": "dff84ec9",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.731136"
-    },
-    {
-      "id": 8226,
-      "job_id": 49950,
-      "run_id": "dff84ec9",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.742454"
-    },
-    {
-      "id": 8227,
-      "job_id": 49951,
-      "run_id": "dff84ec9",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.746783"
-    },
-    {
-      "id": 8228,
-      "job_id": 49955,
-      "run_id": "dff84ec9",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:29.757790"
-    },
-    {
-      "id": 8229,
-      "job_id": 49958,
+      "id": 8378,
+      "job_id": 50508,
       "run_id": "dff84ec9",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
@@ -223,11 +178,56 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-21T05:47:42.351045"
+      "created_at": "2026-10-21T06:09:54.868335"
     },
     {
-      "id": 8230,
-      "job_id": 49960,
+      "id": 8379,
+      "job_id": 50516,
+      "run_id": "dff84ec9",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 80.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-21T06:10:08.978299"
+    },
+    {
+      "id": 8380,
+      "job_id": 50517,
+      "run_id": "dff84ec9",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 80.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 85.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-21T06:10:26.643117"
+    },
+    {
+      "id": 8381,
+      "job_id": 50531,
+      "run_id": "dff84ec9",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 70.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 75.0,
+      "reason": "Strong production RAG and LLM experience, transferable cloud skills, but missing Azure OpenAI.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-21T06:10:36.122594"
+    },
+    {
+      "id": 8382,
+      "job_id": 50541,
       "run_id": "dff84ec9",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
@@ -238,13 +238,13 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-21T05:47:42.355288"
+      "created_at": "2026-10-21T06:10:36.129740"
     }
   ],
   "pagination": {
     "page": 44,
     "limit": 15,
-    "total_records": 988,
+    "total_records": 986,
     "total_pages": 66
   }
 }

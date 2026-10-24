@@ -16,24 +16,9 @@
   ],
   "rows": [
     {
-      "id": 7886,
-      "job_id": 48034,
-      "run_id": "a3885b75",
-      "model_name": "Groq[...ixmA]",
-      "prompt_version": "v2.0",
-      "interview_probability": 35.0,
-      "recommended_resume": "GENAI",
-      "priority": "medium",
-      "action": "review",
-      "confidence": 60.0,
-      "reason": "Strong production RAG and LangGraph experience but lacks mandatory Azure AI certification and evaluation frameworks.",
-      "missing_skills": "[\"Azure AI Engineer Associate\", \"Microsoft Graph API\", \"Azure DevOps\", \"Jira\", \"TypeScript\", \"C#\", \"DeepEval\", \"RAGAS\"]",
-      "created_at": "2026-10-12T16:17:12.480146"
-    },
-    {
-      "id": 7887,
-      "job_id": 48047,
-      "run_id": "a3885b75",
+      "id": 8038,
+      "job_id": 49161,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -43,12 +28,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:12.485225"
+      "created_at": "2026-10-15T17:57:16.267957"
     },
     {
-      "id": 7888,
-      "job_id": 48048,
-      "run_id": "a3885b75",
+      "id": 8039,
+      "job_id": 49182,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -58,12 +43,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:12.487550"
+      "created_at": "2026-10-15T17:57:16.276518"
     },
     {
-      "id": 7889,
-      "job_id": 48051,
-      "run_id": "a3885b75",
+      "id": 8040,
+      "job_id": 49215,
+      "run_id": "f6bc3f23",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
@@ -73,12 +58,27 @@
       "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-12T16:17:43.400069"
+      "created_at": "2026-10-15T17:57:33.137449"
     },
     {
-      "id": 7890,
-      "job_id": 48058,
-      "run_id": "a3885b75",
+      "id": 8041,
+      "job_id": 49234,
+      "run_id": "f6bc3f23",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 80.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "apply",
+      "confidence": 80.0,
+      "reason": "Strong production RAG and LangGraph experience, transferable AWS skills, but lacks Azure OpenAI and ASR tools.",
+      "missing_skills": "[\"Azure OpenAI\", \"ASR tools\"]",
+      "created_at": "2026-10-15T17:57:43.877168"
+    },
+    {
+      "id": 8042,
+      "job_id": 49242,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -88,12 +88,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:43.406794"
+      "created_at": "2026-10-15T17:57:43.886396"
     },
     {
-      "id": 7891,
-      "job_id": 48061,
-      "run_id": "a3885b75",
+      "id": 8043,
+      "job_id": 49272,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -103,12 +103,27 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:43.409596"
+      "created_at": "2026-10-15T17:57:43.894247"
     },
     {
-      "id": 7892,
-      "job_id": 48100,
-      "run_id": "a3885b75",
+      "id": 8044,
+      "job_id": 49273,
+      "run_id": "f6bc3f23",
+      "model_name": "Groq[...ixmA]",
+      "prompt_version": "v2.0",
+      "interview_probability": 40.0,
+      "recommended_resume": "GENAI",
+      "priority": "high",
+      "action": "review",
+      "confidence": 70.0,
+      "reason": "Strong production RAG experience but lacks Databricks and Spark expertise.",
+      "missing_skills": "[\"Databricks\", \"Apache Spark\", \"Delta Lake\", \"Unity Catalog\"]",
+      "created_at": "2026-10-15T17:57:52.753461"
+    },
+    {
+      "id": 8045,
+      "job_id": 49274,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -118,12 +133,12 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:43.413540"
+      "created_at": "2026-10-15T17:57:52.759938"
     },
     {
-      "id": 7893,
-      "job_id": 48103,
-      "run_id": "a3885b75",
+      "id": 8046,
+      "job_id": 49277,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -133,57 +148,27 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:43.416838"
+      "created_at": "2026-10-15T17:57:52.768118"
     },
     {
-      "id": 7894,
-      "job_id": 48106,
-      "run_id": "a3885b75",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:43.420272"
-    },
-    {
-      "id": 7895,
-      "job_id": 48120,
-      "run_id": "a3885b75",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-12T16:17:43.423326"
-    },
-    {
-      "id": 7896,
-      "job_id": 48137,
-      "run_id": "a3885b75",
+      "id": 8047,
+      "job_id": 49279,
+      "run_id": "f6bc3f23",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
       "interview_probability": 85.0,
       "recommended_resume": "GENAI",
       "priority": "high",
       "action": "apply",
-      "confidence": 85.0,
+      "confidence": 82.0,
       "reason": "Strong production RAG experience and transferable cloud skills.",
       "missing_skills": "[\"Azure OpenAI\"]",
-      "created_at": "2026-10-12T16:18:00.071114"
+      "created_at": "2026-10-15T17:58:09.474868"
     },
     {
-      "id": 7897,
-      "job_id": 48143,
-      "run_id": "a3885b75",
+      "id": 8048,
+      "job_id": 49284,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -193,27 +178,57 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:18:00.075023"
+      "created_at": "2026-10-15T17:58:09.484552"
     },
     {
-      "id": 7898,
-      "job_id": 48149,
-      "run_id": "a3885b75",
+      "id": 8049,
+      "job_id": 49084,
+      "run_id": "f6bc3f23",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-10-15T17:58:09.574185"
+    },
+    {
+      "id": 8050,
+      "job_id": 49157,
+      "run_id": "f6bc3f23",
+      "model_name": "ExperienceFilter",
+      "prompt_version": "v2.0",
+      "interview_probability": 0.0,
+      "recommended_resume": "STARTUP",
+      "priority": "low",
+      "action": "skip",
+      "confidence": 100.0,
+      "reason": "Minimum experience exceeds target threshold",
+      "missing_skills": "[]",
+      "created_at": "2026-10-15T17:58:09.580223"
+    },
+    {
+      "id": 8051,
+      "job_id": 49291,
+      "run_id": "f6bc3f23",
       "model_name": "Groq[...ixmA]",
       "prompt_version": "v2.0",
-      "interview_probability": 75.0,
+      "interview_probability": 85.0,
       "recommended_resume": "GENAI",
       "priority": "high",
       "action": "apply",
-      "confidence": 80.0,
-      "reason": "Strong production RAG and prompt engineering experience, transferable cloud skills, but lacks direct ChatGPT experience.",
-      "missing_skills": "[\"ChatGPT\"]",
-      "created_at": "2026-10-12T16:18:32.021790"
+      "confidence": 82.0,
+      "reason": "Strong production RAG experience and transferable cloud skills.",
+      "missing_skills": "[\"Azure OpenAI\"]",
+      "created_at": "2026-10-15T17:58:47.769867"
     },
     {
-      "id": 7899,
-      "job_id": 47975,
-      "run_id": "a3885b75",
+      "id": 8052,
+      "job_id": 49302,
+      "run_id": "f6bc3f23",
       "model_name": "ExperienceFilter",
       "prompt_version": "v2.0",
       "interview_probability": 0.0,
@@ -223,28 +238,13 @@
       "confidence": 100.0,
       "reason": "Minimum experience exceeds target threshold",
       "missing_skills": "[]",
-      "created_at": "2026-10-12T16:18:32.048395"
-    },
-    {
-      "id": 7900,
-      "job_id": 48060,
-      "run_id": "a3885b75",
-      "model_name": "ExperienceFilter",
-      "prompt_version": "v2.0",
-      "interview_probability": 0.0,
-      "recommended_resume": "STARTUP",
-      "priority": "low",
-      "action": "skip",
-      "confidence": 100.0,
-      "reason": "Minimum experience exceeds target threshold",
-      "missing_skills": "[]",
-      "created_at": "2026-10-12T16:18:32.051301"
+      "created_at": "2026-10-15T17:58:47.779639"
     }
   ],
   "pagination": {
     "page": 22,
     "limit": 15,
-    "total_records": 988,
+    "total_records": 986,
     "total_pages": 66
   }
 }

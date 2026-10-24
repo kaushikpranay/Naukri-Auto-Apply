@@ -122,11 +122,11 @@
       "question_key": "willing_to_relocate_hyderabad",
       "question_text": "Are you currently residing in Hyderabad or willing to relocate to Hyderabad?",
       "answer": "Yes",
-      "usage_count": 1,
-      "last_used": "2026-10-23T07:21:31.824197",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:42:01.427007",
       "field_type": "radio",
       "created_at": "2026-07-10T23:50:57.344002",
-      "last_used_at": "2026-07-10T23:50:57.344002",
+      "last_used_at": "2026-10-24T08:42:01.427007",
       "confidence_score": 1.0,
       "updated_at": null
     },
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 14,
     "limit": 15,
-    "total_records": 377,
+    "total_records": 383,
     "total_pages": 26
   }
 }

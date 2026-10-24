@@ -201,7 +201,7 @@
       "question_text": "Are you currently residing in Gurugram, Haryana or willing to relocate to Gurugram, Haryana?",
       "answer": "Yes",
       "usage_count": 7,
-      "last_used": "2026-10-23T07:21:31.824197",
+      "last_used": "2026-10-24T07:05:12.040957",
       "field_type": "radio",
       "created_at": "2026-08-09T19:28:09.070236",
       "last_used_at": "2026-10-22T18:39:28.295810",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 15,
     "limit": 15,
-    "total_records": 377,
+    "total_records": 383,
     "total_pages": 26
   }
 }

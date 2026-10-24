@@ -68,13 +68,13 @@
     {
       "id": 6001,
       "question_key": "total_years_experience",
-      "question_text": "Do you have at least 3 years of relevant experience?",
+      "question_text": "What is your Total experience?",
       "answer": "2",
-      "usage_count": 29,
-      "last_used": "2026-10-11T18:41:11.687111",
-      "field_type": "radio",
+      "usage_count": 30,
+      "last_used": "2026-10-24T08:48:32.926105",
+      "field_type": "contenteditable",
       "created_at": "2026-06-08T03:43:52.159950",
-      "last_used_at": "2026-10-11T18:41:11.687111",
+      "last_used_at": "2026-10-24T08:48:32.926105",
       "confidence_score": 1.0,
       "updated_at": "2026-06-20T19:31:06"
     },
@@ -162,7 +162,7 @@
       "question_text": "interview_availability",
       "answer": "Yes",
       "usage_count": 0,
-      "last_used": "2026-10-23T07:21:31.824197",
+      "last_used": "2026-10-24T07:05:12.040957",
       "field_type": null,
       "created_at": null,
       "last_used_at": "2026-06-18T18:34:01",
@@ -212,7 +212,7 @@
   "pagination": {
     "page": 5,
     "limit": 15,
-    "total_records": 377,
+    "total_records": 383,
     "total_pages": 26
   }
 }

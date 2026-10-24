@@ -38,12 +38,90 @@
       "last_used_at": "2026-10-22T18:44:26.544046",
       "confidence_score": 1.0,
       "updated_at": null
+    },
+    {
+      "id": 15967,
+      "question_key": "exp_git",
+      "question_text": "How many years of experience do you have in GIT?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:27:46.497519",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-24T08:27:03.656237",
+      "last_used_at": "2026-10-24T08:27:46.497519",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15971,
+      "question_key": "exp_agentic_workflows",
+      "question_text": "How many years of experience do you have in Agentic Workflows?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:36:28.612727",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-24T08:36:15.268447",
+      "last_used_at": "2026-10-24T08:36:28.612727",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15973,
+      "question_key": "exp_gen_ai_engineer",
+      "question_text": "How many years of experience do you have in Gen ai engineer?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:37:23.714379",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-24T08:37:04.555783",
+      "last_used_at": "2026-10-24T08:37:23.714379",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15975,
+      "question_key": "exp_python_development",
+      "question_text": "Experience with Python development?",
+      "answer": "2",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:38:01.311536",
+      "field_type": "radio",
+      "created_at": "2026-10-24T08:37:52.797747",
+      "last_used_at": "2026-10-24T08:38:01.311536",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15977,
+      "question_key": "willing_work_from_office_mode",
+      "question_text": "Are you willing to work from office mode?",
+      "answer": "Yes",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:41:22.971056",
+      "field_type": "radio",
+      "created_at": "2026-10-24T08:41:12.559633",
+      "last_used_at": "2026-10-24T08:41:22.971056",
+      "confidence_score": 1.0,
+      "updated_at": null
+    },
+    {
+      "id": 15984,
+      "question_key": "exp_react",
+      "question_text": "How many years of experience do you have in React?",
+      "answer": "1",
+      "usage_count": 2,
+      "last_used": "2026-10-24T08:53:38.783386",
+      "field_type": "contenteditable",
+      "created_at": "2026-10-24T08:52:52.950411",
+      "last_used_at": "2026-10-24T08:53:38.783386",
+      "confidence_score": 1.0,
+      "updated_at": null
     }
   ],
   "pagination": {
     "page": 26,
     "limit": 15,
-    "total_records": 377,
+    "total_records": 383,
     "total_pages": 26
   }
 }
