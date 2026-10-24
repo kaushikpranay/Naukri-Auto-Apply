@@ -194,7 +194,12 @@ class JobCollector:
                 title_el = await card.query_selector(selector)
                 if title_el:
                     title_text = (await title_el.inner_text()).strip()
-                    job_url = await title_el.get_attribute("href") or ""
+                    href = await title_el.get_attribute("href")
+                    if not href:
+                        anchor = await title_el.query_selector("a[href]") or await card.query_selector("a[href*='job-listings'], a[href]")
+                        if anchor:
+                            href = await anchor.get_attribute("href")
+                    job_url = (href or "").strip()
                     break
             except Exception:
                 continue

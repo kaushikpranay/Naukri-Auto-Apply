@@ -857,6 +857,43 @@ def generate_db_explorer_data(conn):
     except Exception as e:
         print(f"Error generating database explorer data: {e}")
 
+def generate_triage_data():
+    import csv
+    out_csv = SCRIPT_DIR.parent / "out" / "all_classified.csv"
+    if not out_csv.exists():
+        out_csv = SCRIPT_DIR / "out" / "all_classified.csv"
+    
+    if not out_csv.exists():
+        write_json("triage.json", {
+            "total": 0,
+            "counts": {"QUEUE": 0, "REVIEW": 0, "DROP": 0, "DUPLICATE": 0, "APPLIED": 0},
+            "has_truncated": False,
+            "jobs": []
+        })
+        return
+
+    jobs = []
+    with open(out_csv, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for r in reader:
+            jobs.append(dict(r))
+
+    counts = {"QUEUE": 0, "REVIEW": 0, "DROP": 0, "DUPLICATE": 0, "APPLIED": 0}
+    has_truncated = False
+    for j in jobs:
+        st = j.get("status", "").upper()
+        if st in counts:
+            counts[st] += 1
+        if "truncated_url" in (j.get("reasons") or "") or "…" in (j.get("url") or "") or "..." in (j.get("url") or ""):
+            has_truncated = True
+
+    write_json("triage.json", {
+        "total": len(jobs),
+        "counts": counts,
+        "has_truncated": has_truncated,
+        "jobs": jobs
+    })
+
 def main():
     print("Generating Next.js Dashboard static JSON API exports...")
     setup_directories()
@@ -878,6 +915,7 @@ def main():
     generate_monitor(conn)
     generate_placeholders()
     generate_db_explorer_data(conn)
+    generate_triage_data()
     
     conn.close()
     print("Static JSON files successfully generated!")

@@ -443,12 +443,29 @@ async def main_async() -> None:
     # ── Stage: Export all reports ──────────────────────────────────────────
     logger.info("Starting report export stage...")
 
-    # 1. Collector Excel Export
+    # 1. Collector Excel Export & Triage Post-processing
     try:
         exporter = ExcelExporter(db_path, export_dir)
-        exporter.export()
+        exported_path = exporter.export()
+        if exported_path and Path(exported_path).exists():
+            import subprocess
+            repo_root = Path(__file__).resolve().parent.parent
+            triage_script = repo_root / "triage.py"
+            if not triage_script.exists():
+                triage_script = Path("triage.py").resolve()
+            if triage_script.exists():
+                cmd = [
+                    sys.executable,
+                    str(triage_script),
+                    str(exported_path),
+                    "--out", str(repo_root / "out"),
+                    "--state", str(repo_root / "state.json"),
+                ]
+                logger.info("Running triage: {}", " ".join(cmd))
+                subprocess.run(cmd, check=True, cwd=str(repo_root))
+                logger.info("Triage post-processing complete.")
     except Exception as exc:
-        logger.error("Excel export failed: {}", exc)
+        logger.error("Excel export / triage failed: {}", exc)
 
     # 2. Evaluation Excel Export
     try:

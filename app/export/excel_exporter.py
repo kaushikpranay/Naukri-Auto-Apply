@@ -75,6 +75,12 @@ class ExcelExporter:
         # Write to Excel with formatting using the shared utility
         write_excel(df_export, filepath, "Jobs")
 
-        logger.info("Excel export complete: {} ({} rows)", filepath.name, len(df_export))
+        # Keep an untouched raw copy of every export
+        raw_dir = self._export_dir / "raw"
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        import shutil
+        shutil.copy2(filepath, raw_dir / filename)
+
+        logger.info("Excel export complete: {} ({} rows) and raw backup saved", filepath.name, len(df_export))
         return filepath
 
