@@ -52,39 +52,39 @@
       "details": "Type: external_portal, Status: discovered"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Rarr Technologies",
-      "job_title": "Django Backend Developer",
-      "timestamp": "2026-10-24T08:25:15.493850",
-      "details": "Score: 70.0%, Action: apply"
+      "type": "failed",
+      "company_name": "Cerebra",
+      "job_title": "AI / ML Engineer",
+      "timestamp": "2026-10-24T08:47:53.653982",
+      "details": "Error: Form fill error on: relocation_city_preference: No checkbox option matched answer 'Noida'"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Pace Stock Broking Services",
-      "job_title": "Backend Developer",
-      "timestamp": "2026-10-24T08:25:01.693081",
-      "details": "Score: 85.0%, Action: apply"
+      "type": "failed",
+      "company_name": "Ecolab Global Services",
+      "job_title": "Lead AI Engineer",
+      "timestamp": "2026-10-24T08:39:58.306036",
+      "details": "Error: max_retry_count exceeded"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "ZFW Hospitality",
-      "job_title": "Back End Developer",
-      "timestamp": "2026-10-24T08:24:52.406960",
-      "details": "Score: 85.0%, Action: apply"
+      "type": "failed",
+      "company_name": "Synechron",
+      "job_title": "GenAI Engineer | LLMs, NLP & Cloud (MLOps)",
+      "timestamp": "2026-10-24T08:38:48.248256",
+      "details": "Error: max_retry_count exceeded"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Leading Client",
-      "job_title": "Full Stack Developer | Leading IT Co.",
-      "timestamp": "2026-10-24T08:24:30.826675",
-      "details": "Score: 20.0%, Action: skip"
+      "type": "failed",
+      "company_name": "Infosys",
+      "job_title": "Generative AI Engineer",
+      "timestamp": "2026-10-24T08:37:23.718391",
+      "details": "Error: Form fill error on: relocation_city_preference: No checkbox option matched answer 'Noida'"
     },
     {
-      "type": "ai_evaluated",
-      "company_name": "Thinkhub Technologies And Consulting",
-      "job_title": "Full Stack Developer (Python+ReactJS/VueJS)",
-      "timestamp": "2026-10-24T08:24:18.977655",
-      "details": "Score: 75.0%, Action: apply"
+      "type": "failed",
+      "company_name": "Krazy Mantra It",
+      "job_title": "LLM / Prompt Engineer",
+      "timestamp": "2026-10-24T08:31:58.190826",
+      "details": "Error: max_retry_count exceeded"
     }
   ]
 }

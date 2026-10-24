@@ -31,7 +31,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:34:55.952541",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -66,7 +65,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:17:46.407572",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -101,7 +99,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:27:37.266984",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -136,7 +133,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:27:16.898679",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -171,7 +167,6 @@
       "app_type": "easy_apply",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:28:21.220902",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -206,7 +201,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:27:34.079741",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -241,7 +235,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:40:15.584370",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -276,7 +269,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:41.822852",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -311,7 +303,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:46.742607",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -346,7 +337,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:51.542622",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -381,7 +371,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:56.441716",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -416,7 +405,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:27:01.139056",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -451,7 +439,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:27:06.349645",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -486,7 +473,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:27:11.862160",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -521,7 +507,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:22.268038",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -556,7 +541,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:25:47.350684",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -591,7 +575,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:04.643034",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -626,7 +609,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:09.729274",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -661,7 +643,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:26:11.410845",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -696,7 +677,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:26:14.426890",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -731,7 +711,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:40:09.682587",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -766,7 +745,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-22T18:25:57.254960",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -801,7 +779,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:25:24.194635",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -836,7 +813,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:25:29.070975",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -871,7 +847,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-21T06:25:34.089308",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     }

@@ -487,7 +487,6 @@ class JobRepository:
         )
         cursor.execute("DELETE FROM jobs WHERE id = ?", (job_id,))
         cursor.execute("DELETE FROM job_applications WHERE job_id = ?", (job_id,))
-        cursor.execute("DELETE FROM ats_applications WHERE job_id = ?", (job_id,))
         cursor.execute("DELETE FROM ai_evaluations WHERE job_id = ?", (job_id,))
         commit_with_retry(self._conn)
         return True

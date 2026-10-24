@@ -184,12 +184,11 @@ def generate_stats(conn):
         
     try:
         c.execute("""
-            SELECT 'failed' as type, j.company_name, j.job_title, aa.attempted_at as timestamp,
-                   'Error: ' || aa.error as details
-            FROM ats_applications aa
-            JOIN jobs j ON j.id = aa.job_id
-            WHERE aa.status = 'failed'
-            ORDER BY aa.attempted_at DESC LIMIT 5
+            SELECT 'failed' as type, j.company_name, j.job_title, COALESCE(j.failed_at, j.created_at) as timestamp,
+                   'Error: ' || COALESCE(j.failure_reason, j.last_fill_error, 'Failed') as details
+            FROM jobs j
+            WHERE j.status = 'failed'
+            ORDER BY j.created_at DESC LIMIT 5
         """)
         recent_failures = [dict(row) for row in c.fetchall()]
         activities.extend(recent_failures)
@@ -259,16 +258,15 @@ def generate_jobs_and_details(conn):
         SELECT j.*, 
                COALESCE(j.failure_type, 'OTHER') as failure_type,
                COALESCE(j.failure_category, 'DETERMINISTIC') as failure_category,
-               COALESCE(j.failure_reason, aa.error, a.quota_message, 'Automated form fill failed / timed out') as failure_reason,
+               COALESCE(j.failure_reason, a.quota_message, 'Automated form fill failed / timed out') as failure_reason,
                COALESCE(j.failed_at, j.created_at) as failed_at,
                COALESCE(j.retry_count, 0) as retry_count,
                e.interview_probability as ai_score, e.action as ai_action, e.priority as ai_priority, e.confidence as ai_confidence, e.reason as ai_reason,
                a.apply_type as app_type, a.status as app_status, a.detected_at as app_date,
-               aa.status as ats_status, COALESCE(aa.ats_type, 'Naukri') as ats_platform,
+               'Naukri' as ats_platform,
                CASE 
                    WHEN j.status = 'external_portal' 
                         OR a.apply_type = 'external_portal' 
-                        OR (aa.ats_type IS NOT NULL AND aa.ats_type != '' AND LOWER(aa.ats_type) != 'naukri') 
                         OR (j.apply_url IS NOT NULL AND j.apply_url != '' AND j.apply_url NOT LIKE '%naukri.com%') 
                    THEN 'EXTERNAL'
                    ELSE 'INTERNAL'
@@ -276,7 +274,6 @@ def generate_jobs_and_details(conn):
         FROM jobs j
         LEFT JOIN ai_evaluations e ON e.job_id = j.id
         LEFT JOIN job_applications a ON a.job_id = j.id
-        LEFT JOIN ats_applications aa ON aa.job_id = j.id
         WHERE (j.normalized_url NOT IN (SELECT normalized_url FROM excluded_jobs))
         ORDER BY j.created_at DESC
     """
@@ -413,14 +410,8 @@ def generate_jobs_and_details(conn):
         app_row = c.fetchone()
         application = dict(app_row) if app_row else None
         
-        # ATS Application details
+        # ATS Application details (obsolete, preserved as None for schema compatibility)
         ats_application = None
-        try:
-            c.execute("SELECT * FROM ats_applications WHERE job_id = ?", (job_id,))
-            ats_row = c.fetchone()
-            ats_application = dict(ats_row) if ats_row else None
-        except sqlite3.OperationalError:
-            pass
             
         # Application Session
         session = None
@@ -465,7 +456,6 @@ def generate_queue(conn):
     app_type_sql = """
         CASE 
             WHEN j.status = 'external_portal' 
-                 OR (aa.ats_type IS NOT NULL AND aa.ats_type != '' AND LOWER(aa.ats_type) != 'naukri') 
                  OR (j.apply_url IS NOT NULL AND j.apply_url != '' AND j.apply_url NOT LIKE '%naukri.com%') 
             THEN 'EXTERNAL'
             ELSE 'INTERNAL'
@@ -476,11 +466,10 @@ def generate_queue(conn):
     ready = []
     try:
         c.execute(f"""
-            SELECT j.id, j.company_name, j.job_title, j.experience_required, j.location, e.interview_probability as score, e.action, j.status, aa.ats_type,
+            SELECT j.id, j.company_name, j.job_title, j.experience_required, j.location, e.interview_probability as score, e.action, j.status, 'Naukri' as ats_type,
                    {app_type_sql}
             FROM jobs j
             JOIN ai_evaluations e ON e.job_id = j.id
-            LEFT JOIN ats_applications aa ON aa.job_id = j.id
             WHERE UPPER(e.action) = 'APPLY' AND (j.status IN ('evaluated', 'queued', 'pending') OR j.status IS NULL)
             ORDER BY e.interview_probability DESC LIMIT 20
         """)
@@ -492,11 +481,10 @@ def generate_queue(conn):
     applying = []
     try:
         c.execute(f"""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.ats_type, bs.current_url, bs.pipeline,
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, 'Naukri' as ats_type, bs.current_url, bs.pipeline,
                    {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
-            LEFT JOIN ats_applications aa ON aa.job_id = j.id
             LEFT JOIN browser_sessions bs ON bs.status = 'active'
             WHERE j.status IN ('submitting', 'applying')
         """)
@@ -508,11 +496,10 @@ def generate_queue(conn):
     waiting = []
     try:
         c.execute(f"""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.ats_type,
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, 'Naukri' as ats_type,
                    {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
-            LEFT JOIN ats_applications aa ON aa.job_id = j.id
             WHERE j.status IN ('unknown_question', 'waiting_otp', 'waiting_captcha', 'waiting_for_user')
         """)
         waiting = [dict(row) for row in c.fetchall()]
@@ -542,13 +529,12 @@ def generate_queue(conn):
     completed = []
     try:
         c.execute(f"""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.applied_at,
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, j.created_at as applied_at,
                    {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
-            LEFT JOIN ats_applications aa ON aa.job_id = j.id
             WHERE j.status IN ('applied', 'applied_successfully')
-            ORDER BY j.updated_at DESC LIMIT 20
+            ORDER BY j.created_at DESC LIMIT 20
         """)
         completed = [dict(row) for row in c.fetchall()]
     except sqlite3.OperationalError:
@@ -558,13 +544,13 @@ def generate_queue(conn):
     failed = []
     try:
         c.execute(f"""
-            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status, aa.error,
+            SELECT j.id, j.company_name, j.job_title, e.interview_probability as score, j.status,
+                   COALESCE(j.failure_reason, j.last_fill_error, 'Failed') as error,
                    {app_type_sql}
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
-            LEFT JOIN ats_applications aa ON aa.job_id = j.id
             WHERE j.status IN ('failed', 'discovery_failed')
-            ORDER BY j.updated_at DESC LIMIT 20
+            ORDER BY j.created_at DESC LIMIT 20
         """)
         failed = [dict(row) for row in c.fetchall()]
     except sqlite3.OperationalError:
@@ -624,7 +610,7 @@ def generate_companies(conn):
     try:
         c.execute("""
             SELECT j.company_name as name,
-                   COALESCE(aa.ats_type, 'Naukri') as ats_type,
+                   'Naukri' as ats_type,
                    MAX(COALESCE(e.priority, 'medium')) as priority,
                    COUNT(DISTINCT j.id) as jobs_count,
                    COUNT(DISTINCT a.id) as applications_count,
@@ -633,7 +619,6 @@ def generate_companies(conn):
             FROM jobs j
             LEFT JOIN ai_evaluations e ON e.job_id = j.id
             LEFT JOIN job_applications a ON a.job_id = j.id
-            LEFT JOIN ats_applications aa ON aa.job_id = j.id
             GROUP BY j.company_name
             ORDER BY jobs_count DESC
         """)
@@ -673,25 +658,14 @@ def generate_analytics(conn):
     except sqlite3.OperationalError:
         pass
         
-    # 3. ATS platform distribution
+    # 3. Platform distribution
     ats_distribution = []
     try:
-        c.execute("""
-            SELECT COALESCE(ats_type, 'naukri') as platform, COUNT(*) as count
-            FROM ats_applications
-            GROUP BY platform
-        """)
-        ats_distribution = [dict(row) for row in c.fetchall()]
+        c.execute("SELECT COUNT(*) FROM jobs")
+        total = c.fetchone()[0]
+        ats_distribution = [{"platform": "naukri", "count": total}]
     except sqlite3.OperationalError:
-        pass
-        
-    if not ats_distribution:
-        try:
-            c.execute("SELECT COUNT(*) FROM jobs")
-            total = c.fetchone()[0]
-            ats_distribution = [{"platform": "naukri", "count": total}]
-        except sqlite3.OperationalError:
-            ats_distribution = [{"platform": "naukri", "count": 0}]
+        ats_distribution = [{"platform": "naukri", "count": 0}]
             
     # 4. Success rates
     success_rates = []
@@ -723,9 +697,9 @@ def generate_analytics(conn):
     failure_reasons = []
     try:
         c.execute("""
-            SELECT COALESCE(error, 'Unknown') as reason, COUNT(*) as count
-            FROM ats_applications
-            WHERE status = 'failed' OR error IS NOT NULL
+            SELECT COALESCE(failure_reason, last_fill_error, 'Unknown') as reason, COUNT(*) as count
+            FROM jobs
+            WHERE status = 'failed' OR failure_reason IS NOT NULL
             GROUP BY reason
             ORDER BY count DESC
             LIMIT 10
@@ -824,7 +798,7 @@ def generate_monitor(conn):
 
 def generate_placeholders():
     write_json("status_placeholder.json", {"status": "success"})
-    write_json("db_placeholder.json", {"tables": ["jobs", "ai_evaluations", "job_applications", "question_bank", "ats_applications"]})
+    write_json("db_placeholder.json", {"tables": ["jobs", "ai_evaluations", "job_applications", "question_bank"]})
 
 def generate_db_explorer_data(conn):
     c = conn.cursor()

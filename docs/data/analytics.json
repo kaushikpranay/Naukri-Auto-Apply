@@ -73,8 +73,8 @@
   ],
   "ats_distribution": [
     {
-      "platform": "unknown",
-      "count": 26
+      "platform": "naukri",
+      "count": 986
     }
   ],
   "success_rates": [
@@ -163,8 +163,20 @@
   ],
   "failure_reasons": [
     {
-      "reason": "No handler implemented for this ATS platform",
-      "count": 26
+      "reason": "max_retry_count exceeded",
+      "count": 13
+    },
+    {
+      "reason": "Form fill error on: relocation_city_preference: No checkbox option matched answer 'Noida'",
+      "count": 3
+    },
+    {
+      "reason": "unmapped question requires human review",
+      "count": 2
+    },
+    {
+      "reason": "Form fill error on: llm_experience: No radio option matched '2' or verification failed",
+      "count": 1
     }
   ]
 }

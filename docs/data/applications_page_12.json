@@ -31,7 +31,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:51:16.862867",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -66,7 +65,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:51:22.457210",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -101,7 +99,6 @@
       "app_type": "unknown",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:55:41.944142",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -136,7 +133,6 @@
       "app_type": "unknown",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:53:25.046458",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -171,7 +167,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:40:25.192050",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -206,7 +201,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:49:33.825529",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -241,7 +235,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-13T18:11:06.726837",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -276,7 +269,6 @@
       "app_type": "unknown",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:53:08.068934",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -311,7 +303,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-13T18:10:50.465431",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -346,7 +337,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:38:17.229288",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -381,7 +371,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:56:53.989464",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -416,7 +405,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-14T15:43:04.303721",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -451,7 +439,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-14T15:43:45.008537",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -486,7 +473,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:38:00.992956",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -521,7 +507,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:48:35.969938",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -556,7 +541,6 @@
       "app_type": "already_applied",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:37:54.949474",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -591,7 +575,6 @@
       "app_type": "unknown",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:52:51.038389",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -626,7 +609,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:37:49.062865",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -661,7 +643,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:47:56.973008",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -696,7 +677,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:55:24.956733",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -731,7 +711,6 @@
       "app_type": "unknown",
       "app_status": "discovered",
       "app_date": "2026-10-12T17:00:34.152956",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -766,7 +745,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:37:11.914965",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     },
@@ -801,7 +779,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-14T15:42:50.115497",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -836,7 +813,6 @@
       "app_type": "applied_successfully",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:47:40.963147",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "INTERNAL"
     },
@@ -871,7 +847,6 @@
       "app_type": "external_portal",
       "app_status": "discovered",
       "app_date": "2026-10-12T16:37:30.362820",
-      "ats_status": null,
       "ats_platform": "Naukri",
       "application_type": "EXTERNAL"
     }

@@ -394,7 +394,6 @@ class ApplyDiscoveryRepository:
         )
         cursor.execute("DELETE FROM jobs WHERE id = ?", (job_id,))
         cursor.execute("DELETE FROM job_applications WHERE job_id = ?", (job_id,))
-        cursor.execute("DELETE FROM ats_applications WHERE job_id = ?", (job_id,))
         cursor.execute("DELETE FROM ai_evaluations WHERE job_id = ?", (job_id,))
         self._conn.commit()
         logger.info("Permanently destroyed job_id={} and added to excluded_jobs", job_id)
